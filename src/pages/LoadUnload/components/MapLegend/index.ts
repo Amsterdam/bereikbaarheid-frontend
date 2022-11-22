@@ -1,0 +1,1 @@
+export { LoadUnloadMapLegend } from './MapLegend'

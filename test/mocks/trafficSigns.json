@@ -1,0 +1,27 @@
+{
+	"features": [
+		{
+			"geometry": {
+				"coordinates": [
+					4.89159654,
+					52.379125744
+				],
+				"type": "Point"
+			},
+			"properties": {
+				"additional_info": "",
+				"category": "verbod",
+				"id": 13378482,
+				"label": "",
+				"label_as_value": 0,
+				"link_to_panoramic_image": "https://data.amsterdam.nl/data/geozoek/?heading=280&lagen=pano-pano2021bi%7Cpano-pano2020woz%7Cpano-pano2020bi%7Cpano-pano2019woz%7Cpano-pano2019bi%7Cpano-pano2018woz%7Cpano-pano2018bi%7Cpano-pano2017woz%7Cpano-pano2017bi%7Cpano-pano2016bi&locatie=52.3791109191417%2C4.89173392873863&pitch=7.868079730118292&zoom=12",
+				"network_link_id": 24677,
+				"street_name": "Brouwersgracht",
+				"traffic_decree_id": "",
+				"type": "C01",
+				"view_direction_in_degrees": 280
+			},
+			"type": "Feature"
+		}
+	]
+}

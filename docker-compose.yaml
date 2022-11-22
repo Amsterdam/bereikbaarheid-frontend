@@ -1,0 +1,16 @@
+version: '3.6'
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        - BUILD_ENV=development
+        - NGINX_CONF=nginx.dockercompose.conf
+    environment:
+      - TZ=Europe/Amsterdam
+    ipc: host
+    ports:
+      - "5000:80"
+networks:
+  default:
+    name: amsterdam-bereikbaarheid

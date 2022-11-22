@@ -1,0 +1,25 @@
+//
+// Amsterdam BAG Search api
+// https://api.data.amsterdam.nl/atlas/search/
+//
+
+import axios from 'axios'
+
+export interface AddressItem {
+  _display: string
+  centroid: number[]
+}
+
+export interface AddressItems {
+  results: AddressItem[] | []
+}
+
+export function address(searchString: string): Promise<AddressItems> {
+  return axios
+    .get('https://api.data.amsterdam.nl/atlas/search/adres/', {
+      params: {
+        q: searchString,
+      },
+    })
+    .then(response => response.data)
+}

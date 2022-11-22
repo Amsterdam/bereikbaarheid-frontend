@@ -1,0 +1,72 @@
+{
+    "_links": {
+        "schema": "https://schemas.data.amsterdam.nl/datasets/parkeervakken/dataset#parkeervakken",
+        "self": {
+            "href": "https://api.data.amsterdam.nl/v1/parkeervakken/parkeervakken/122028486875/",
+            "title": "122028486875",
+            "id": "122028486875"
+        }
+    },
+    "id": "122028486875",
+    "buurtcode": "A04i",
+    "straatnaam": "Jodenbreestraat",
+    "type": "Langs",
+    "soort": "MULDER",
+    "eType": "E7",
+    "aantal": 1.0,
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    4.903042423867479,
+                    52.36879561317013
+                ],
+                [
+                    4.903130626265323,
+                    52.36875921408222
+                ],
+                [
+                    4.9031098421578,
+                    52.368739715651394
+                ],
+                [
+                    4.903074443372613,
+                    52.36875431075736
+                ],
+                [
+                    4.903021344170274,
+                    52.36877629326937
+                ],
+                [
+                    4.903042423867479,
+                    52.36879561317013
+                ]
+            ]
+        ]
+    },
+    "regimes": [
+        {
+            "soort": "MULDER",
+            "eType": "E7",
+            "eTypeDescription": "Gelegenheid bestemd voor het onmiddellijk laden en lossen van goederen",
+            "aantal": 1.0,
+            "bord": "Laden & Lossen",
+            "kenteken": null,
+            "beginTijd": "00:00:00",
+            "eindTijd": "23:59:00",
+            "beginDatum": null,
+            "eindDatum": null,
+            "dagen": [
+                "ma",
+                "di",
+                "wo",
+                "do",
+                "vr",
+                "za",
+                "zo"
+            ],
+            "opmerking": ""
+        }
+    ]
+}
