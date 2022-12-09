@@ -19,7 +19,7 @@ import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
 
 import { LoadUnloadHeader } from './components/Header'
-import { LoadUnloadDetailFeature } from './components/DetailFeature/DetailFeature'
+import { LoadUnloadDetailFeature } from './components/DetailFeature'
 import { LoadUnloadMapLayers } from './components/MapLayers'
 import { LoadUnloadViewerContainer } from './components/ViewerContainer'
 import { LoadUnloadMapProvider } from './contexts/MapProvider'

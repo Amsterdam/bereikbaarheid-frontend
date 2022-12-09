@@ -1,0 +1,1 @@
+export { LoadUnloadDetailFeature } from './DetailFeature'

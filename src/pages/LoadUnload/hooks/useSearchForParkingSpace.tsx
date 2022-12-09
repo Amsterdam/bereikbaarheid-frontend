@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 
-import { useParkingSpaceInfo } from '../../../shared/hooks/useParkingSpaceInfo'
 import { useSearchAllDataSets } from '../../../shared/hooks/useSearchAllDataSets'
+import { useParkingSpaceInfo } from '../../../shared/hooks/useParkingSpaceInfo'
 
 import { DetailFeatureActionType } from '../contexts/detailFeatureReducer'
 import { useLoadUnloadMapContext } from '../contexts/MapContext'
 
-export const useDetailFeatureData = () => {
+export const useSearchForParkingSpace = () => {
   const { detailFeature, setDetailFeature } = useLoadUnloadMapContext()
 
   const searchResults = useSearchAllDataSets({
@@ -17,23 +17,28 @@ export const useDetailFeatureData = () => {
     radius: 0,
   })
 
+  let enabled = !!searchResults.data && searchResults.data.features.length > 0
   const parkingSpace = useParkingSpaceInfo({
-    enabled: Boolean(detailFeature.featureType === 'parkingSpace'),
-    id: detailFeature.featureId,
+    enabled: enabled,
+    id: enabled ? searchResults.data?.features[0].properties.id : undefined,
   })
 
   useEffect(() => {
-    if (searchResults.data && searchResults.data.features.length > 0) {
+    if (parkingSpace.data) {
       setDetailFeature({
         type: DetailFeatureActionType.SET_FEATURE,
-        featureId: searchResults.data.features[0].properties.id,
-        featureType: 'parkingSpace',
+        feature: {
+          id: parkingSpace.data.id,
+          data: parkingSpace.data,
+          type: 'parkingSpace',
+        },
       })
     }
-  }, [searchResults.data, setDetailFeature])
+  }, [parkingSpace.data, setDetailFeature])
 
   return {
-    searchResults,
-    parkingSpace,
+    isError: parkingSpace.isError || searchResults.isError,
+    isLoading: parkingSpace.isLoading || searchResults.isLoading,
+    results: searchResults,
   }
 }

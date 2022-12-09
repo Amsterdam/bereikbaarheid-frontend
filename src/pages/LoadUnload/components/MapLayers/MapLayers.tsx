@@ -1,14 +1,27 @@
 import { BaseLayer } from '@amsterdam/arm-core'
 
+import { HighlightedFeatureLayer } from '../../../../shared/components/HighlightedFeatureLayer'
 import { topoBlackWhite } from '../../../../shared/map/mapLayers'
 
-import { LoadUnloadHighlightedFeatureLayer } from './HighlightedFeatureLayer'
+import { useLoadUnloadMapContext } from '../../contexts/MapContext'
+import { LoadUnloadRoadSectionsLoadUnloadLayer } from './RoadSectionsLoadUnloadLayer'
 import { LoadUnloadLoadUnloadSpacesLayer } from './LoadUnloadSpacesLayer'
 
 export const LoadUnloadMapLayers = () => {
+  const { detailFeature } = useLoadUnloadMapContext()
+
   return (
     <>
-      <LoadUnloadHighlightedFeatureLayer />
+      {detailFeature.feature && (
+        <HighlightedFeatureLayer
+          detailFeature={{
+            id: detailFeature.feature.id,
+            geometry: detailFeature.feature.data.geometry,
+          }}
+        />
+      )}
+
+      <LoadUnloadRoadSectionsLoadUnloadLayer />
 
       <LoadUnloadLoadUnloadSpacesLayer />
 

@@ -1,10 +1,13 @@
 import { loadUnloadSpaces } from '../../../shared/map/mapLayers'
 
+export const roadSectionsLoadUnloadLayerId = 'roadSectionsLoadUnload'
+
 export const mapLayersInitialState = {
   [loadUnloadSpaces.id]: true,
+  [roadSectionsLoadUnloadLayerId]: true,
 }
 
-export const layerIds = ['loadUnloadSpaces'] as const
+export const layerIds = ['loadUnloadSpaces', 'roadSectionsLoadUnload'] as const
 
 export type mapLayerActionType = {
   type: 'TOGGLE'
