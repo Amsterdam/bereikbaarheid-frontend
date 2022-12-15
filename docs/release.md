@@ -1,13 +1,13 @@
 # Release
 To release a new version, please take the following steps:
 
-1. tag a new version:
+1. update changelog:
+   - the current 'Unreleased' section becomes the new version.
+   - create a new empty 'Unreleased' section
+2. tag a new version:
    - determine the new version by looking at the 'Unreleased' section of the changelog
    - `git tag -a <version-number> -m 'version <version-number>' <full-commit-id>`
    - `git push origin <version-number>`
-2. update changelog:
-   - the current 'Unreleased' section becomes the new version.
-   - create a new empty 'Unreleased' section
 3. [create a Github release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 4. Move open issues from the current milestone to the upcoming milestone:
    - menu item Issues > filter on current milestone
