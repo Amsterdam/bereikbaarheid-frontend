@@ -55,7 +55,10 @@ const LoadUnloadPage = () => {
 
         <MainContent data-testid="load-unload-page">
           <MapStyle />
-          <StyledMap options={defaultMapOptions} setInstance={setMapInstance}>
+          <StyledMap
+            options={{ ...defaultMapOptions, maxZoom: 21 }}
+            setInstance={setMapInstance}
+          >
             <LoadUnloadMapProvider>
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}
