@@ -1,51 +1,20 @@
 import { ChevronLeft } from '@amsterdam/asc-assets'
-import {
-  Button,
-  CompactThemeProvider,
-  ErrorMessage,
-  Input,
-  Link,
-  List,
-  ListItem,
-  styles,
-  themeColor,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { Button, ErrorMessage, Input } from '@amsterdam/asc-ui'
 import debounce from 'lodash/debounce'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import styled from 'styled-components'
+
+import { AddressSearchResults } from '../../../../shared/components/AddressSearchResults'
+import { FormLabel } from '../../../../shared/components/FormLabel'
+import { Address } from '../../../../types/address'
 
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
-import { FormLabel } from '../../../../shared/components/FormLabel'
-import { Address } from '../../types/address'
 
 import ScenarioWizardNav from './ScenarioWizardNav'
 import {
   address as addressApi,
   AddressItem,
 } from '../../../../api/atlas/search/address'
-
-const AddressOptionsContainer = styled.div`
-  min-height: 220px;
-
-  ${styles.ListStyle} {
-    border-color: ${themeColor('tint', 'level2')};
-    border-style: solid;
-    border-width: 0 1px 1px 1px;
-    padding: ${themeSpacing(1)} ${themeSpacing(2)};
-  }
-
-  ${styles.ListItemStyle} {
-    margin-bottom: ${themeSpacing(1)};
-  }
-`
-
-const AddressOptionsContainerFooter = styled(ListItem)`
-  color: ${themeColor('tint', 'level5')};
-  font-size: 14px;
-  margin-top: ${themeSpacing(1)};
-`
 
 const debouncedHandler = debounce((e, handler) => handler(e), 500)
 
@@ -144,30 +113,10 @@ const ProhibitorySignsFormScenarioAddress = () => {
         <ErrorMessage message={errors.searchAddress.message!} />
       )}
 
-      <AddressOptionsContainer>
-        {addressOptions.length > 0 && (
-          <CompactThemeProvider>
-            <List>
-              {addressOptions.map((item, index) => (
-                <ListItem key={index}>
-                  <Link
-                    data-lat={item.centroid[1]}
-                    data-lon={item.centroid[0]}
-                    href="#"
-                    onClick={onClickAddress}
-                    variant="inline"
-                  >
-                    {item._display}
-                  </Link>
-                </ListItem>
-              ))}
-              <AddressOptionsContainerFooter>
-                Selecteer een adres of type verder
-              </AddressOptionsContainerFooter>
-            </List>
-          </CompactThemeProvider>
-        )}
-      </AddressOptionsContainer>
+      <AddressSearchResults
+        addresses={addressOptions}
+        onClickAddress={onClickAddress}
+      />
 
       <ScenarioWizardNav>
         <Button
