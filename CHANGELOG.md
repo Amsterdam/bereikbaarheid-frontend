@@ -9,6 +9,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 - Load-Unload: address search
 
+### Changed
+- Load-Unload: increase max zoom level to 21
+
+
 ## [v2.2.1 - 2022-12-15](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.2...v2.2.1)
 Updated minor and patch dependencies.
 
