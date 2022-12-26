@@ -1,6 +1,7 @@
 import { BaseLayer } from '@amsterdam/arm-core'
 import { TileLayer } from '@amsterdam/react-maps'
 
+import { AddressMarker } from '../../../../shared/components/MapLayers/AddressMarker'
 import {
   aerialImages,
   linkIds,
@@ -12,7 +13,6 @@ import {
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 
-import ProhibitorySignsAddressMarker from './AddressMarker'
 import ProhibitorySignsLoadUnloadSpacesLayer from './LoadUnloadSpacesLayer'
 import ProhibitorySignsNearestRoadMarker from './NearestRoadMarker'
 import ProhibitorySignsParkingSpaceHighlight from './ParkingSpaceHighlight'
@@ -30,11 +30,11 @@ function selectedBaseLayer(id: string) {
 
 const ProhibitorySignsMapLayers = () => {
   const { activeBaseLayer } = useProhibitorySignsMapContext()
-  const { expertMode } = useProhibitorySignsPageContext()
+  const { address, expertMode } = useProhibitorySignsPageContext()
 
   return (
     <>
-      <ProhibitorySignsAddressMarker />
+      <AddressMarker address={address} />
 
       <ProhibitorySignsNearestRoadMarker />
 

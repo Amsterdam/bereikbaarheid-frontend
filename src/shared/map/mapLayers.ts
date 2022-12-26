@@ -45,6 +45,7 @@ export const loadUnloadSpaces = {
     categorie: 'laden_lossen',
     format: 'image/png',
     minZoom: 16, // this WMS only provides output from zoom level 16 onwards
+    maxZoom: 21,
     transparent: true,
     zIndex: 25,
   } as WMSOptions,
@@ -141,7 +142,7 @@ export const topoBlackWhite = {
       [56.1105896454882, 12.431727265021497],
     ],
     minZoom: 11,
-    maxZoom: 18,
+    maxZoom: 21,
     subdomains: ['t1', 't2', 't3', 't4'],
   } as TileLayerOptions,
   url: 'https://{s}.data.amsterdam.nl/topo_wm_zw/{z}/{x}/{y}.png',

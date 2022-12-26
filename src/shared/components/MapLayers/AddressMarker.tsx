@@ -1,13 +1,15 @@
 import { Marker, useMapInstance } from '@amsterdam/arm-core'
 import { useEffect } from 'react'
 
-import { defaultMapOptions } from '../../../../shared/map/mapDefaults'
+import { defaultMapOptions } from '../../map/mapDefaults'
+import { Address } from '../../../types/address'
 
-import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
+interface AddressMarkerProps {
+  address: Address
+}
 
-const ProhibitorySignsAddressMarker = () => {
+export const AddressMarker = ({ address }: AddressMarkerProps) => {
   const mapInstance = useMapInstance()
-  const { address } = useProhibitorySignsPageContext()
 
   // Center and zoom map to address
   useEffect(() => {
@@ -29,5 +31,3 @@ const ProhibitorySignsAddressMarker = () => {
     </>
   )
 }
-
-export default ProhibitorySignsAddressMarker
