@@ -4,8 +4,9 @@ import { Feature, FeatureCollection } from 'geojson'
 import { API_ROOT } from '../../index'
 
 export interface LoadUnloadRegime {
-  category: string
-  days: string | null
+  additional_info: string
+  days: [] | null
+  direction: string
   start_time: string | null
   end_time: string | null
 }
