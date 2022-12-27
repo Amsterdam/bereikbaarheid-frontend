@@ -13,8 +13,8 @@ export interface rdwGeneralInfo {
     isPrivateCar: boolean
     isTaxi: boolean
     length: number
-    maxAllowedWeight: number | undefined
-    payload: number | undefined
+    maxAllowedWeight: number
+    payload: number
     vehicleType: string
     width: number
   }
@@ -35,12 +35,7 @@ export const useRdwGeneralInfo = () => {
 
   const parsedItem = (item: rdwGeneralData): rdwGeneralInfo => {
     let curbWeight = Number(item.massa_rijklaar)
-
-    let maxAllowedWeight
-    // move calculation maxAllowedWeight and payload to form?
-    if (item.toegestane_maximum_massa_voertuig) {
-      maxAllowedWeight = Number(item.toegestane_maximum_massa_voertuig)
-    }
+    let maxAllowedWeight = Number(item.toegestane_maximum_massa_voertuig)
 
     if (
       vehicle.hasTrailer &&
@@ -59,15 +54,13 @@ export const useRdwGeneralInfo = () => {
         isBus: item.voertuigsoort === 'Bus',
         isCompanyCar: item.voertuigsoort === 'Bedrijfsauto',
         isHeavyGoodsVehicle: Boolean(
-          item.voertuigsoort === 'Bedrijfsauto' &&
-            maxAllowedWeight &&
-            maxAllowedWeight > 3500
+          item.voertuigsoort === 'Bedrijfsauto' && maxAllowedWeight > 3500
         ),
         isPrivateCar: item.voertuigsoort === 'Personenauto',
         isTaxi: item.taxi_indicator === 'Ja',
         length: item.lengte ? Number(item.lengte) / 100.0 : 0,
         maxAllowedWeight: maxAllowedWeight,
-        payload: !maxAllowedWeight ? undefined : maxAllowedWeight - curbWeight,
+        payload: maxAllowedWeight - curbWeight,
         vehicleType: item.voertuigsoort,
         width: item.breedte ? Number(item.breedte) / 100.0 : 0,
       },
