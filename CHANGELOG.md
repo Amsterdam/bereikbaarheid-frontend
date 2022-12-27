@@ -12,6 +12,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Changed
 - Load-Unload: increase max zoom level to 21
 
+### Fixed
+- Prohibitory signs: prevent undefined maxAllowedWeight for vehicle
+
 
 ## [v2.2.1 - 2022-12-15](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.2...v2.2.1)
 Updated minor and patch dependencies.
