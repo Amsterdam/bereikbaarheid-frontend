@@ -26,6 +26,14 @@ const isValidLicensePlate = async (val: string, ctx: z.RefinementCtx) => {
       message: 'Voer een kenteken in van een trekkend voertuig',
     })
   }
+
+  if (!rdwApi[0].toegestane_maximum_massa_voertuig) {
+    return ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: `RDW kent geen toegestaan maximum gewicht voor dit voertuig\
+        waardoor u deze kaart niet kan gebruiken. We werken aan een oplossing.`,
+    })
+  }
 }
 
 export const FormScenarioStartValidationSchema = z.object({
