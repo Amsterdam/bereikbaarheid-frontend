@@ -10,18 +10,19 @@ import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
 
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
-import { useDetailFeatureData } from '../../hooks/useDetailFeatureData'
+import { useSearchForParkingSpace } from '../../hooks/useSearchForParkingSpace'
+import { LoadUnloadDetailFeatureRoadSectionLoadUnload } from './RoadSectionLoadUnload'
 
 const { Overlay, SnapPoint } = mapPanelConstants
 
 export const LoadUnloadDetailFeature = () => {
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
   const { detailFeature, setDetailFeature } = useLoadUnloadMapContext()
+  const searchForParkingSpace = useSearchForParkingSpace()
   const [currentOverlay, setCurrentOverlay] = useState(Overlay.None)
-  const { parkingSpace, searchResults } = useDetailFeatureData()
 
   useEffect(() => {
-    if (!detailFeature.location && !detailFeature.featureId) {
+    if (!detailFeature.feature && !detailFeature.location) {
       setCurrentOverlay(Overlay.None)
     } else {
       setPositionFromSnapPoint(SnapPoint.Halfway)
@@ -32,15 +33,15 @@ export const LoadUnloadDetailFeature = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [detailFeature, setCurrentOverlay])
 
-  if (searchResults.isLoading || parkingSpace.isLoading) {
+  if (searchForParkingSpace.isLoading) {
     return <LoadingSpinner />
   }
 
-  if (parkingSpace.isError || searchResults.isError) {
+  if (searchForParkingSpace.isError) {
     return <div>Er ging helaas iets mis.</div>
   }
 
-  if (!detailFeature.location && !detailFeature.featureId) return null
+  if (!detailFeature.feature && !detailFeature.location) return null
 
   return (
     <MapPanelContent
@@ -50,15 +51,24 @@ export const LoadUnloadDetailFeature = () => {
         setDetailFeature({ type: DetailFeatureActionType.RESET })
       }}
     >
-      {searchResults.data && searchResults.data.features.length === 0 && (
-        <div>Geen objecten gevonden op deze locatie.</div>
-      )}
+      {searchForParkingSpace.results.data &&
+        searchForParkingSpace.results.data.features.length === 0 && (
+          <div>Geen objecten gevonden op deze locatie.</div>
+        )}
 
-      {parkingSpace.data && (
-        <DetailFeatureLoadUnloadSpace
-          parkingSpace={parkingSpace.data}
-        ></DetailFeatureLoadUnloadSpace>
-      )}
+      {detailFeature.feature &&
+        detailFeature.feature.type === 'parkingSpace' && (
+          <DetailFeatureLoadUnloadSpace
+            parkingSpace={detailFeature.feature.data}
+          ></DetailFeatureLoadUnloadSpace>
+        )}
+
+      {detailFeature.feature &&
+        detailFeature.feature.type === 'roadSectionLoadUnload' && (
+          <LoadUnloadDetailFeatureRoadSectionLoadUnload
+            roadSectionLoadUnload={detailFeature.feature.data}
+          ></LoadUnloadDetailFeatureRoadSectionLoadUnload>
+        )}
     </MapPanelContent>
   )
 }

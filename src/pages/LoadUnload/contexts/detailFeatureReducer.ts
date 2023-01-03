@@ -1,14 +1,12 @@
-export const detailFeatureTypes = ['parkingSpace'] as const
+import { LoadUnloadDetailFeature } from '../types/detailFeature'
 
 export type DetailFeatureState = {
-  featureId?: string
-  featureType?: typeof detailFeatureTypes[number]
+  feature?: LoadUnloadDetailFeature
   location?: [number, number]
 }
 
 export const detailFeatureInitialState = {
-  featureId: undefined,
-  featureType: undefined,
+  feature: undefined,
   location: undefined,
 }
 
@@ -22,8 +20,7 @@ export type DetailFeatureAction =
   | { type: DetailFeatureActionType.RESET }
   | {
       type: DetailFeatureActionType.SET_FEATURE
-      featureId: NonNullable<DetailFeatureState['featureId']>
-      featureType: NonNullable<DetailFeatureState['featureType']>
+      feature: NonNullable<DetailFeatureState['feature']>
     }
   | {
       type: DetailFeatureActionType.SET_LOCATION
@@ -36,24 +33,17 @@ export const detailFeatureReducer = (
 ): DetailFeatureState => {
   switch (action.type) {
     case DetailFeatureActionType.RESET:
-      return {
-        ...state,
-        featureId: undefined,
-        featureType: undefined,
-        location: undefined,
-      }
+      return detailFeatureInitialState
     case DetailFeatureActionType.SET_FEATURE:
       return {
         ...state,
-        featureId: action.featureId,
-        featureType: action.featureType,
+        feature: action.feature,
         location: undefined,
       }
     case DetailFeatureActionType.SET_LOCATION:
       return {
         ...state,
-        featureId: undefined,
-        featureType: undefined,
+        feature: undefined,
         location: action.location,
       }
     default: {

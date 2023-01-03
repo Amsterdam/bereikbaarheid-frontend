@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Added
 - Load-Unload: address search
+- Load-Unload: road sections with load-unload information
 
 ### Changed
 - Load-Unload: increase max zoom level to 21

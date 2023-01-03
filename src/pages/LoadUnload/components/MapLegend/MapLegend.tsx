@@ -6,6 +6,8 @@ import { loadUnloadSpaces } from '../../../../shared/map/mapLayers'
 
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
 
+import { LoadUnloadMapLegendRoadSectionsLoadUnload } from './RoadSectionsLoadUnload'
+
 export const LoadUnloadMapLegend = () => {
   const { activeMapLayers, updateActiveMapLayers } = useLoadUnloadMapContext()
 
@@ -22,6 +24,12 @@ export const LoadUnloadMapLegend = () => {
               })
             }
           />
+        </Column>
+      </Row>
+
+      <Row halign="flex-start" hasMargin={false}>
+        <Column span={12}>
+          <LoadUnloadMapLegendRoadSectionsLoadUnload />
         </Column>
       </Row>
     </MapLegend>

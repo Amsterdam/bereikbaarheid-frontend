@@ -20,7 +20,7 @@ import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
 
 import { LoadUnloadAddressForm } from './components/AddressForm'
 import { LoadUnloadHeader } from './components/Header'
-import { LoadUnloadDetailFeature } from './components/DetailFeature/DetailFeature'
+import { LoadUnloadDetailFeature } from './components/DetailFeature'
 import { LoadUnloadMapLayers } from './components/MapLayers'
 import { LoadUnloadViewerContainer } from './components/ViewerContainer'
 import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
