@@ -36,8 +36,8 @@ const ProhibitorySignsTrafficSignsLayer = () => {
       getTrafficSigns(
         trafficSignCategories,
         vehicle,
-        rdwGeneralData?.[0].derived.maxAllowedWeight!, // @todo maxAllowedWeight can be undefined
-        rdwGeneralData?.[0].derived.vehicleType!,
+        rdwGeneralData![0].derived.maxAllowedWeight,
+        rdwGeneralData![0].derived.vehicleType,
         signal
       ),
   })
