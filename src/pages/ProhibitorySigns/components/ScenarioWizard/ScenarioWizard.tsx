@@ -5,9 +5,9 @@ import styled from 'styled-components'
 
 import { Z_INDEX_MODAL } from '../../../../shared/constants'
 import ModalBlock from '../../../../shared/components/ModalBlock'
+import { Address } from '../../../../types/address'
 
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
-import { Address } from '../../types/address'
 import ProhibitorySignsFormScenarioStart from './FormScenarioStart'
 import ProhibitorySignsFormScenarioAddress from './FormScenarioAddress'
 import ProhibitorySignsFormScenarioRdwInfo from './FormRdwInfo'

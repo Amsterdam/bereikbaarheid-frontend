@@ -1,6 +1,6 @@
 import { createContext, Dispatch, SetStateAction, useContext } from 'react'
 
-import { Address } from '../types/address'
+import { Address } from '../../../types/address'
 import { Vehicle } from '../types/vehicle'
 
 export type ProhibitorySignsPageContextProps = {

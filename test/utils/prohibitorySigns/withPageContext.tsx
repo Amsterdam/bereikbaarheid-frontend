@@ -4,7 +4,7 @@ import {
   ProhibitorySignsPageContext,
   ProhibitorySignsPageContextProps,
 } from '../../../src/pages/ProhibitorySigns/contexts/PageContext'
-import { Address } from '../../../src/pages/ProhibitorySigns/types/address'
+import { Address } from '../../../src/types/address'
 import { Vehicle } from '../../../src/pages/ProhibitorySigns/types/vehicle'
 
 export const initialState: ProhibitorySignsPageContextProps = {

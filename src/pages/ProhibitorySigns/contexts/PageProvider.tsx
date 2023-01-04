@@ -1,7 +1,7 @@
 import { ReactNode, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
-import { Address } from '../types/address'
+import { Address } from '../../../types/address'
 import { Vehicle } from '../types/vehicle'
 
 import { ProhibitorySignsPageContext } from './PageContext'

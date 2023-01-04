@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Point } from 'geojson'
 
-import { Address } from '../../../pages/ProhibitorySigns/types/address'
+import { Address } from '../../../types/address'
 import { Vehicle } from '../../../pages/ProhibitorySigns/types/vehicle'
 
 import { API_ROOT } from '../index'
