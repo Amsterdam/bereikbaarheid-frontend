@@ -5,7 +5,7 @@ import { API_ROOT } from '../../index'
 
 export interface LoadUnloadRegime {
   additional_info: string
-  days: [] | null
+  days: string[] | null
   direction: string
   start_time: string | null
   end_time: string | null
