@@ -22,6 +22,7 @@ import { LoadUnloadAddressForm } from './components/AddressForm'
 import { LoadUnloadHeader } from './components/Header'
 import { LoadUnloadDetailFeature } from './components/DetailFeature'
 import { LoadUnloadMapLayers } from './components/MapLayers'
+import { ModalDateTime } from './components/ModalDateTime'
 import { LoadUnloadViewerContainer } from './components/ViewerContainer'
 import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
 import { LoadUnloadMapProvider } from './contexts/MapProvider'
@@ -46,6 +47,7 @@ const LoadUnloadPage = () => {
   useDocumentTitle('Laden en lossen')
 
   const [showAddressForm, setShowAddressForm] = useState(false)
+  const [showDateTimeModal, setShowDateTimeModal] = useState(false)
   const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
   const Element = showDesktopVariant ? MapPanel : MapPanelDrawer
 
@@ -74,6 +76,7 @@ const LoadUnloadPage = () => {
 
                   <LoadUnloadMapSettingsDisplay
                     setShowAddressForm={setShowAddressForm}
+                    setShowDateTimeModal={setShowDateTimeModal}
                   />
                 </Element>
 
@@ -94,6 +97,11 @@ const LoadUnloadPage = () => {
       >
         <LoadUnloadAddressForm setShowAddressForm={setShowAddressForm} />
       </Modal>
+
+      <ModalDateTime
+        showModal={showDateTimeModal}
+        setShowModal={setShowDateTimeModal}
+      />
 
       <FeedbackModal setOpen={setOpenFeedbackModal} open={openFeedbackModal} />
     </LoadUnloadPageProvider>

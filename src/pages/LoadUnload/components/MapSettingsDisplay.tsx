@@ -13,6 +13,11 @@ import { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
 import { useLoadUnloadPageContext } from '../contexts/PageContext'
+import { formatISODate } from '../../../shared/utils/formatDate'
+
+const DateTimeHeaderRow = styled(Row)`
+  margin-top: ${themeSpacing(4)};
+`
 
 const FiltersContainer = styled.div`
   background-color: ${themeColor('tint', 'level2')};
@@ -30,14 +35,17 @@ const EditSettingButton = styled(Button)`
 
 interface MapSettingsDisplayProps extends MapPanelContentProps {
   setShowAddressForm: Dispatch<SetStateAction<boolean>>
+  setShowDateTimeModal: Dispatch<SetStateAction<boolean>>
 }
 
 export const LoadUnloadMapSettingsDisplay = ({
   setShowAddressForm,
+  setShowDateTimeModal,
   ...otherProps
 }: MapSettingsDisplayProps) => {
-  const { address } = useLoadUnloadPageContext()
+  const { address, dateTime } = useLoadUnloadPageContext()
   const showAddressForm = () => setShowAddressForm(true)
+  const showDateTimeModal = () => setShowDateTimeModal(true)
 
   return (
     <MapPanelContent {...otherProps}>
@@ -57,6 +65,52 @@ export const LoadUnloadMapSettingsDisplay = ({
               <Paragraph gutterBottom={0}>
                 {address.label ?? 'Geen adres ingesteld'}
               </Paragraph>
+            </Column>
+          </Row>
+        </FiltersContainer>
+
+        <DateTimeHeaderRow halign="space-between" hasMargin={false}>
+          <Column span={12}>
+            <Heading as="h3">Datum en tijd</Heading>
+            <EditSettingButton variant="textButton" onClick={showDateTimeModal}>
+              wijzig
+            </EditSettingButton>
+          </Column>
+        </DateTimeHeaderRow>
+
+        <FiltersContainer>
+          <Row halign="flex-start" hasMargin={false}>
+            <Column span={4}>
+              <Paragraph gutterBottom={0} strong>
+                Datum
+              </Paragraph>
+            </Column>
+            <Column span={6}>
+              <Paragraph gutterBottom={0}>
+                {formatISODate(dateTime.date, 'dd-MM-yyyy')}
+              </Paragraph>
+            </Column>
+          </Row>
+
+          <Row halign="flex-start" hasMargin={false}>
+            <Column span={4}>
+              <Paragraph gutterBottom={0} strong>
+                Van
+              </Paragraph>
+            </Column>
+            <Column span={6}>
+              <Paragraph gutterBottom={0}>{dateTime.timeFrom}</Paragraph>
+            </Column>
+          </Row>
+
+          <Row halign="flex-start" hasMargin={false}>
+            <Column span={4}>
+              <Paragraph gutterBottom={0} strong>
+                Tot
+              </Paragraph>
+            </Column>
+            <Column span={6}>
+              <Paragraph gutterBottom={0}>{dateTime.timeTo}</Paragraph>
             </Column>
           </Row>
         </FiltersContainer>
