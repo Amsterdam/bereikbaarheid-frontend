@@ -14,8 +14,8 @@ export const LoadUnloadPageProvider = ({ children }: Props) => {
   const [address, setAddress] = useState({} as Address)
   const [dateTime, setDateTime] = useState<FormDateTimeValues>({
     date: format(new Date(), 'yyyy-MM-dd'),
-    timeFrom: '00:00',
-    timeTo: '23:59',
+    timeFrom: '09:00',
+    timeTo: '14:00',
   })
 
   return (
