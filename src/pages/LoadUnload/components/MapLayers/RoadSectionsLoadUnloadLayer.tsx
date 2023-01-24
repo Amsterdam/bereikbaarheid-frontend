@@ -33,7 +33,9 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
 
   const categorizeSection = useCallback(
     (feature: RoadSectionLoadUnload): PathOptions => {
-      const availableRegimes = feature?.properties.load_unload.filter(
+      let sectionColor = theme.colors.primary?.main
+
+      const fullyAvailableRegimes = feature?.properties.load_unload.filter(
         item =>
           item.start_time &&
           item.end_time &&
@@ -43,11 +45,26 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
           item.end_time >= `${dateTime.timeTo}:00`
       )
 
+      const partiallyAvailableRegimes = feature?.properties.load_unload.filter(
+        item =>
+          item.start_time &&
+          item.end_time &&
+          item.days &&
+          item.days.includes(requestedDayOfTheWeek) &&
+          ((item.start_time >= `${dateTime.timeFrom}:00` &&
+            item.start_time <= `${dateTime.timeTo}:00`) ||
+            (item.end_time >= `${dateTime.timeFrom}:00` &&
+              item.end_time <= `${dateTime.timeTo}:00`))
+      )
+
+      if (fullyAvailableRegimes.length > 0) {
+        sectionColor = theme.colors.supplement?.darkgreen
+      } else if (partiallyAvailableRegimes.length > 0) {
+        sectionColor = theme.colors.supplement?.lightblue
+      }
+
       return {
-        color:
-          availableRegimes.length > 0
-            ? theme.colors.supplement?.darkgreen
-            : theme.colors.primary?.main,
+        color: sectionColor,
         weight: 5,
       }
     },
