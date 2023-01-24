@@ -1,4 +1,5 @@
 import { Paragraph, themeSpacing } from '@amsterdam/asc-ui'
+import { ReactNode } from 'react'
 import styled from 'styled-components'
 
 const LegendItemWrapper = styled.div`
@@ -19,7 +20,7 @@ const LegendItemSymbol = styled.div<{ $color: string; $height: string }>`
 interface MapLegendItemProps {
   color: string
   height?: string
-  text: string
+  text: ReactNode
 }
 
 export const MapLegendItem = ({
