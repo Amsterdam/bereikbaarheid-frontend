@@ -1,23 +1,66 @@
 import { GeoJSON } from '@amsterdam/arm-core'
 import { DomEvent, PathOptions } from 'leaflet'
 import type L from 'leaflet'
+import { useCallback, useEffect, useState } from 'react'
 import { useQuery } from 'react-query'
 import { useTheme } from 'styled-components'
 
-import { getRoadSectionsLoadUnload } from '../../../../api/bereikbaarheid/road-sections/load-unload'
+import {
+  getRoadSectionsLoadUnload,
+  RoadSectionLoadUnload,
+} from '../../../../api/bereikbaarheid/road-sections/load-unload'
+import { useDateToDayOfTheWeek } from '../../../../shared/hooks/useDateToDayOfTheWeek'
 
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
 import { roadSectionsLoadUnloadLayerId } from '../../contexts/mapLayersReducer'
+import { useLoadUnloadPageContext } from '../../contexts/PageContext'
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
 
 export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
   const { activeMapLayers, setDetailFeature } = useLoadUnloadMapContext()
+  const { dateTime } = useLoadUnloadPageContext()
+  const requestedDayOfTheWeek = useDateToDayOfTheWeek(dateTime.date)
   const theme = useTheme()
+  const [roadSectionsLayer, setRoadSectionsLayer] = useState<L.GeoJSON | null>(
+    null
+  )
+
   const roadSectionsLoadUnload = useQuery({
     queryKey: ['road-sections', 'load-unload'],
     queryFn: ({ signal }) => getRoadSectionsLoadUnload(signal),
     staleTime: 1000 * 60 * 15,
   })
+
+  const categorizeSection = useCallback(
+    (feature: RoadSectionLoadUnload): PathOptions => {
+      const availableRegimes = feature?.properties.load_unload.filter(
+        item =>
+          item.start_time &&
+          item.end_time &&
+          item.days &&
+          item.days.includes(requestedDayOfTheWeek) &&
+          item.start_time <= `${dateTime.timeFrom}:00` &&
+          item.end_time >= `${dateTime.timeTo}:00`
+      )
+
+      return {
+        color:
+          availableRegimes.length > 0
+            ? theme.colors.supplement?.darkgreen
+            : theme.colors.primary?.main,
+        weight: 5,
+      }
+    },
+    [dateTime, requestedDayOfTheWeek, theme.colors]
+  )
+
+  useEffect(() => {
+    if (roadSectionsLayer) {
+      roadSectionsLayer.setStyle(feature =>
+        categorizeSection(feature as RoadSectionLoadUnload)
+      )
+    }
+  }, [roadSectionsLayer, categorizeSection])
 
   if (
     roadSectionsLoadUnload.isError &&
@@ -35,6 +78,7 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
   return (
     <GeoJSON
       args={[roadSectionsLoadUnload.data]}
+      setInstance={setRoadSectionsLayer}
       options={{
         onEachFeature: (feature, layer: L.GeoJSON) => {
           layer.on('click', e => {
@@ -49,12 +93,6 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
               },
             })
           })
-        },
-        style: (): PathOptions => {
-          return {
-            color: theme.colors.primary?.main,
-            weight: 5,
-          }
         },
       }}
     />

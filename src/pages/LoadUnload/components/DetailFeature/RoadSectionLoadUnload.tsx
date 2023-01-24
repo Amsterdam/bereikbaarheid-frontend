@@ -28,6 +28,7 @@ const Container = styled(PropertiesContainer)`
 `
 
 const DirectionContainer = styled.div`
+  margin-bottom: ${themeSpacing(4)};
   margin-top: ${themeSpacing(2)};
 
   ${styles.HeadingStyle} {
@@ -89,7 +90,6 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
                           <TableCell as="th">dagen</TableCell>
                           <TableCell as="th">van</TableCell>
                           <TableCell as="th">tot</TableCell>
-                          <TableCell as="th">additionele info</TableCell>
                         </TableRow>
                       </TableHeader>
 
@@ -111,10 +111,6 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
                                 <TableCell>
                                   {parseTime(item.end_time)}
                                 </TableCell>
-                              )}
-
-                              {item.additional_info && (
-                                <TableCell>{item.additional_info}</TableCell>
                               )}
                             </TableRow>
                           )
