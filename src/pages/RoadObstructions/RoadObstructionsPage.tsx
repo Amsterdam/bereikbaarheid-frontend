@@ -86,6 +86,7 @@ const RoadObstructionsPage = () => {
     <>
       <PageWrapper>
         <RoadObstructionsHeader
+          mapFilters={mapFilters}
           setOpenFeedbackModal={setOpenFeedbackModal}
           title={`Stremmingen op ${dateFormatted}`}
         />

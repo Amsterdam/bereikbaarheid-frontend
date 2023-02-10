@@ -4,13 +4,13 @@ import { useQuery } from 'react-query'
 import {
   getTrafficSigns,
   TrafficSign,
-  type TrafficSignCategoryApi,
 } from '../../../../api/bereikbaarheid/traffic-signs'
 
 import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { useRdwGeneralInfo } from '../../hooks/useRdwGeneralInfo'
+import { useTrafficSignCategories } from '../../hooks/useTrafficSignCategories'
 
 import { MarkerClusterGroup } from '../MarkerClusterGroup'
 import { TrafficSignMarker } from '../TrafficSignMarker'
@@ -22,22 +22,24 @@ const ProhibitorySignsTrafficSignsLayer = () => {
     useProhibitorySignsPageContext()
   const rdwGeneralInfo = useRdwGeneralInfo()
   const rdwGeneralData = rdwGeneralInfo.data
-
-  let trafficSignCategories: TrafficSignCategoryApi[] = [
-    'prohibition',
-    'prohibition with exception',
-  ]
-  if (expertMode) trafficSignCategories.push('prohibition ahead')
+  const trafficSignCategories = useTrafficSignCategories()
 
   const trafficSigns = useQuery({
     enabled: !!rdwGeneralData && !!vehicle.axleWeight && !!vehicle.weight,
     queryKey: ['trafficSigns'].concat(Object.values(vehicle)),
     queryFn: ({ signal }) =>
       getTrafficSigns(
-        trafficSignCategories,
-        vehicle,
-        rdwGeneralData![0].derived.maxAllowedWeight,
-        rdwGeneralData![0].derived.vehicleType,
+        {
+          trafficSignCategories,
+          vehicleAxleWeight: vehicle.axleWeight,
+          vehicleHasTrailer: vehicle.hasTrailer,
+          vehicleHeight: vehicle.height,
+          vehicleLength: vehicle.length,
+          vehicleMaxAllowedWeight: rdwGeneralData![0].derived.maxAllowedWeight,
+          vehicleTotalWeight: vehicle.weight,
+          vehicleType: rdwGeneralData![0].derived.vehicleType,
+          vehicleWidth: vehicle.width,
+        },
         signal
       ),
   })

@@ -1,10 +1,11 @@
-import axios from 'axios'
 import { Point } from 'geojson'
 
 import { Address } from '../../../types/address'
 import { Vehicle } from '../../../pages/ProhibitorySigns/types/vehicle'
 
-import { API_ROOT } from '../index'
+import { api } from '../index'
+
+const ENDPOINT = 'v1/permits'
 
 export interface PermitsByLocationData {
   data: {
@@ -31,8 +32,8 @@ export function getPermitsByLocation(
   permitLowEmissionZone: boolean,
   signal: AbortSignal | undefined
 ): Promise<PermitsByLocationData> {
-  return axios
-    .get(`${API_ROOT}v1/permits`, {
+  return api
+    .get(ENDPOINT, {
       params: {
         lat: address.lat,
         lon: address.lon,

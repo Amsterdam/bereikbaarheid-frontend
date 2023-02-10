@@ -1,9 +1,10 @@
-import axios from 'axios'
 import { Feature, FeatureCollection } from 'geojson'
 
 import { RoadObstruction } from '../road-obstructions'
 
-import { API_ROOT } from '../index'
+import { api } from '../index'
+
+const ENDPOINT = 'v1/road-elements/'
 
 interface TrafficCount {
   direction_1: string
@@ -43,7 +44,5 @@ export function getRoadSection(
     throw new Error('please provide a road section id')
   }
 
-  return axios
-    .get(`${API_ROOT}v1/road-elements/${id}`, { signal })
-    .then(response => response.data)
+  return api.get(ENDPOINT + id, { signal }).then(response => response.data)
 }
