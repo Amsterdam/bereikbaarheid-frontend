@@ -8,13 +8,19 @@ import {
   ListItem,
   Modal,
   Paragraph,
+  themeSpacing,
   TopBar,
 } from '@amsterdam/asc-ui'
 import { Dispatch, SetStateAction } from 'react'
+import styled from 'styled-components'
 
 import { Z_INDEX_MENU_MODAL } from '../../constants'
 import ModalBlock from '../ModalBlock'
 import { getMailtoLink } from './index'
+
+const StyledList = styled(List)`
+  margin-bottom: ${themeSpacing(0)};
+`
 
 interface DataLink {
   href: string
@@ -68,10 +74,12 @@ export const DataModal = ({ open, setOpen, dataLinks }: DataModalProps) => {
 
       <ModalBlock>
         <Heading as="h4">Getoonde data op de kaart</Heading>
+
         <Paragraph gutterBottom={4}>
           Download de getoonde data op de kaart via de volgende links:
         </Paragraph>
-        <List>
+
+        <StyledList>
           {dataLinks.map((item, index) => {
             return (
               <ListItem key={index}>
@@ -81,7 +89,12 @@ export const DataModal = ({ open, setOpen, dataLinks }: DataModalProps) => {
               </ListItem>
             )
           })}
-        </List>
+        </StyledList>
+
+        <Paragraph styleAs="small">
+          Bovenstaande API data is een beta versie. De structuur kan nog
+          veranderen.
+        </Paragraph>
       </ModalBlock>
 
       <Divider gutter />
