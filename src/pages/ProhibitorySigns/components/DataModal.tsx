@@ -35,7 +35,13 @@ export const ProhibitorySignsDataModal = ({
     })
   }
 
-  const dataLinks = [{ href: urlTrafficSigns(), title: 'Verkeersborden' }]
+  const dataLinks = [
+    {
+      href: 'https://data.amsterdam.nl/datasets/D6rMG5CdGBfp2Q/parkeervakken/',
+      title: 'Laad- en losplekken',
+    },
+    { beta: true, href: urlTrafficSigns(), title: 'Verbodsborden' },
+  ]
 
   if (showScenarioWizard) return null
 

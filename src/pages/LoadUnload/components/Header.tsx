@@ -20,7 +20,13 @@ export const LoadUnloadHeader = ({
   title,
 }: LoadUnloadHeaderProps) => {
   const [openDataModal, setOpenDataModal] = useState(false)
-  const dataLinks = [{ href: getUrl(), title: 'Wegvakken met venstertijden' }]
+  const dataLinks = [
+    {
+      href: 'https://data.amsterdam.nl/datasets/D6rMG5CdGBfp2Q/parkeervakken/',
+      title: 'Laad- en losplekken',
+    },
+    { beta: true, href: getUrl(), title: 'Wegvakken met venstertijden' },
+  ]
 
   return (
     <>

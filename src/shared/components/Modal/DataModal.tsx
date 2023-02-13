@@ -23,6 +23,7 @@ const StyledList = styled(List)`
 `
 
 interface DataLink {
+  beta?: boolean
   href: string
   title: string
 }
@@ -86,14 +87,14 @@ export const DataModal = ({ open, setOpen, dataLinks }: DataModalProps) => {
                 <Link href={item.href} target="_blank" inList>
                   {item.title}
                 </Link>
+                {item.beta && <sup>*</sup>}
               </ListItem>
             )
           })}
         </StyledList>
 
         <Paragraph styleAs="small">
-          Bovenstaande API data is een beta versie. De structuur kan nog
-          veranderen.
+          <sup>*</sup>Dit is een beta versie. Het format kan nog veranderen.
         </Paragraph>
       </ModalBlock>
 

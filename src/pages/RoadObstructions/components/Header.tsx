@@ -24,7 +24,13 @@ const RoadObstructionsHeader = ({
   title,
 }: RoadObstructionsHeaderProps) => {
   const [openDataModal, setOpenDataModal] = useState(false)
-  const dataLinks = [{ href: getUrl(mapFilters), title: 'Stremmingen' }]
+  const dataLinks = [
+    { beta: true, href: getUrl(mapFilters), title: 'Stremmingen' },
+    {
+      href: 'https://data.amsterdam.nl/datasets/1KYHXE2VnNZPvA/werkzaamheden-in-de-openbare-ruimte-wior/',
+      title: 'Werkzaamheden in de Openbare Ruimte (WIOR)',
+    },
+  ]
 
   return (
     <>
