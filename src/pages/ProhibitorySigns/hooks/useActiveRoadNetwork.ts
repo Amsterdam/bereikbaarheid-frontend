@@ -7,7 +7,7 @@ export const useActiveRoadNetwork = () => {
   const permitHeavyGoodsVehicleZone = usePermitHeavyGoodsVehicleZone()
   const permitLowEmissionZone = usePermitLowEmissionZone()
 
-  let activeRoadNetwork: typeof layerIds[number] = 'roadNetworkNoRestrictions'
+  let activeRoadNetwork: (typeof layerIds)[number] = 'roadNetworkNoRestrictions'
 
   if (!permitLowEmissionZone && permitHeavyGoodsVehicleZone) {
     activeRoadNetwork = 'roadNetworkHeavyGoodsVehicleZone'
