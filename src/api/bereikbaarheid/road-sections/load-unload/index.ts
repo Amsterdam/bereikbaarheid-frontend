@@ -1,7 +1,8 @@
-import axios from 'axios'
 import { Feature, FeatureCollection } from 'geojson'
 
-import { API_ROOT } from '../../index'
+import { api } from '../../index'
+
+const ENDPOINT = 'v1/road-sections/load-unload/'
 
 export interface LoadUnloadRegime {
   additional_info: string
@@ -26,9 +27,13 @@ export interface RoadSectionsLoadUnloadCollection extends FeatureCollection {
 export function getRoadSectionsLoadUnload(
   signal: AbortSignal | undefined
 ): Promise<RoadSectionsLoadUnloadCollection> {
-  return axios
-    .get(`${API_ROOT}v1/road-sections/load-unload/`, {
+  return api
+    .get(ENDPOINT, {
       signal,
     })
     .then(response => response.data)
+}
+
+export function getUrl() {
+  return api.getUri({ url: ENDPOINT })
 }

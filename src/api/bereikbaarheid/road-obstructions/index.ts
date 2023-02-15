@@ -1,7 +1,8 @@
-import axios from 'axios'
 import { Feature, FeatureCollection } from 'geojson'
 
-import { API_ROOT } from '../index'
+import { api } from '../index'
+
+const ENDPOINT = 'v1/road-obstructions/'
 
 export interface RoadObstruction {
   activity: string
@@ -34,10 +35,14 @@ export function getRoadObstructions(
   params: RoadObstructionParams,
   signal: AbortSignal | undefined
 ): Promise<RoadSectionObstructionsCollection> {
-  return axios
-    .get(`${API_ROOT}v1/road-obstructions/`, {
+  return api
+    .get(ENDPOINT, {
       params: params,
       signal,
     })
     .then(response => response.data)
+}
+
+export function getUrl(params: RoadObstructionParams) {
+  return api.getUri({ params: params, url: ENDPOINT })
 }

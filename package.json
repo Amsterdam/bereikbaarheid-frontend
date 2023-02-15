@@ -40,10 +40,10 @@
     "@types/styled-components": "^5.1.26",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "http-proxy-middleware": "^2.0.6",
     "msw": "^0.49.1",
     "prettier": "^2.8.1"
   },
-  "proxy": "http://localhost:8000",
   "scripts": {
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
     "lint": "eslint .",

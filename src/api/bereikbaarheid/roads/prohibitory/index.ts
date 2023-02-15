@@ -1,4 +1,3 @@
-import axios from 'axios'
 import {
   Feature,
   FeatureCollection,
@@ -8,7 +7,9 @@ import {
 
 import { Vehicle } from '../../../../pages/ProhibitorySigns/types/vehicle'
 
-import { API_ROOT } from '../../index'
+import { api } from '../../index'
+
+const ENDPOINT = 'v1/roads/prohibitory'
 
 interface ProhibitoryRoad extends Feature {
   geometry: LineString | MultiLineString
@@ -30,8 +31,8 @@ export function getProhibitoryRoads(
   vehicleType: string,
   signal: AbortSignal | undefined
 ): Promise<ProhibitoryRoadsFeatureCollection> {
-  return axios
-    .get(`${API_ROOT}v1/roads/prohibitory`, {
+  return api
+    .get(ENDPOINT, {
       params: {
         permitLowEmissionZone: permitLowEmissionZone,
         permitZzv: permitHeavyGoodsVehicleZone,

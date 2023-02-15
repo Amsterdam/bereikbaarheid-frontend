@@ -1,9 +1,9 @@
-import axios from 'axios'
 import { Feature, FeatureCollection, Point } from 'geojson'
 
 import { Vehicle } from '../../../pages/ProhibitorySigns/types/vehicle'
+import { api } from '../index'
 
-const API_ROOT = process.env.REACT_APP_API_ROOT
+const ENDPOINT = 'v1/traffic-signs'
 
 export type TrafficSignCategory =
   | 'verbod'
@@ -36,43 +36,33 @@ export type TrafficSignCategoryApi =
   | 'prohibition ahead'
   | 'prohibition with exception'
 
+interface TrafficSignsParams {
+  trafficSignCategories: TrafficSignCategoryApi[]
+  vehicleAxleWeight: Vehicle['axleWeight']
+  vehicleHasTrailer: Vehicle['hasTrailer']
+  vehicleHeight: Vehicle['height']
+  vehicleLength: Vehicle['length']
+  vehicleMaxAllowedWeight: number
+  vehicleTotalWeight: Vehicle['weight']
+  vehicleType: string
+  vehicleWidth: Vehicle['width']
+}
+
 export function getTrafficSigns(
-  trafficSignCategories: TrafficSignCategoryApi[],
-  vehicle: Vehicle,
-  vehicleMaxAllowedWeight: number,
-  vehicleType: string,
+  params: TrafficSignsParams,
   signal: AbortSignal | undefined
 ): Promise<TrafficSignsFeatureCollection> {
-  const trafficSignsRequest = axios.create({
-    // create an URL with repeated parameters,
-    // it is required for trafficSignCategories array
-    paramsSerializer: {
-      serialize: query => {
-        return Object.entries(query)
-          .map(([key, value], i) =>
-            Array.isArray(value)
-              ? `${key}=${value.join('&' + key + '=')}`
-              : `${key}=${value}`
-          )
-          .join('&')
-      },
-    },
-  })
-
-  return trafficSignsRequest
-    .get(`${API_ROOT}v1/traffic-signs`, {
-      params: {
-        trafficSignCategories: trafficSignCategories,
-        vehicleAxleWeight: vehicle.axleWeight,
-        vehicleHasTrailer: vehicle.hasTrailer,
-        vehicleHeight: vehicle.height,
-        vehicleLength: vehicle.length,
-        vehicleMaxAllowedWeight: vehicleMaxAllowedWeight,
-        vehicleTotalWeight: vehicle.weight,
-        vehicleType: vehicleType,
-        vehicleWidth: vehicle.width,
-      },
+  return api
+    .get(ENDPOINT, {
+      params: params,
       signal,
     })
     .then(response => response.data)
+}
+
+export function getUrl(params: TrafficSignsParams) {
+  return api.getUri({
+    params: params,
+    url: ENDPOINT,
+  })
 }
