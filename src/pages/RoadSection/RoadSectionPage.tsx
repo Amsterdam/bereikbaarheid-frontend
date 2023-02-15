@@ -1,5 +1,5 @@
 import { Column, Row } from '@amsterdam/asc-ui'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components'
 

@@ -1,8 +1,8 @@
 import { GeoJSON } from '@amsterdam/arm-core'
+import { useQuery } from '@tanstack/react-query'
 import { DomEvent, PathOptions } from 'leaflet'
 import type L from 'leaflet'
 import { useCallback, useEffect, useState } from 'react'
-import { useQuery } from 'react-query'
 import { useTheme } from 'styled-components'
 
 import {
