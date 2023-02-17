@@ -1,6 +1,6 @@
 {
   "name": "bereikbaarheid-frontend",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "private": true,
   "dependencies": {
     "@amsterdam/arm-core": "^1.0.0",

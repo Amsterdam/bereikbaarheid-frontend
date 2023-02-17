@@ -4,7 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.2.1...HEAD)
+## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.3.0...HEAD)
+
+
+## [v2.3.0 - 2023-02-17](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.2.1...v2.3.0)
 
 ### Added
 - Load-Unload: address search
@@ -13,10 +16,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Data menu item: provides an overview of the used data on a page
 
 ### Changed
-- Load-Unload: increase max zoom level to 21
+- Load-Unload: increase max zoom level of the map to 21
 
 ### Fixed
-- Prohibitory signs: prevent undefined maxAllowedWeight for vehicle
+- Prohibitory signs: prevent vehicles with an undefined maximum allowed weight from using the app
 
 
 ## [v2.2.1 - 2022-12-15](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.2...v2.2.1)
