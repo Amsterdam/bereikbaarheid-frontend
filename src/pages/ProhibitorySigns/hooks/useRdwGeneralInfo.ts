@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 import { getVehicle, rdwGeneralData } from '../../../api/rdw/vehicle'
 

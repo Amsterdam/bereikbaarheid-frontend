@@ -4,6 +4,7 @@ import {
   MIN_ZOOM_LEVEL,
   useMapInstance,
 } from '@amsterdam/arm-core'
+import { useQuery } from '@tanstack/react-query'
 import {
   DomEvent,
   GeoJSON as GeoJSONLayer,
@@ -12,7 +13,6 @@ import {
   PathOptions,
 } from 'leaflet'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
-import { useQuery } from 'react-query'
 import { useTheme } from 'styled-components'
 
 import { getWiorData } from '../../../api/wfs/wior'

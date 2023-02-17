@@ -34,9 +34,9 @@ export const layerIds = [
 ] as const
 
 export type mapLayerActionType =
-  | { type: 'ACTIVE_ROAD_NETWORK'; layerId: typeof layerIds[number] }
-  | { type: 'TOGGLE'; layerId: typeof layerIds[number] }
-  | { type: 'UPDATE'; layerId: typeof layerIds[number]; enabled: boolean }
+  | { type: 'ACTIVE_ROAD_NETWORK'; layerId: (typeof layerIds)[number] }
+  | { type: 'TOGGLE'; layerId: (typeof layerIds)[number] }
+  | { type: 'UPDATE'; layerId: (typeof layerIds)[number]; enabled: boolean }
 
 export const mapLayersReducer = (
   state: typeof mapLayersInitialState,

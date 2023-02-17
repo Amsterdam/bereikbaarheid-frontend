@@ -1,6 +1,6 @@
 import { GeoJSON } from '@amsterdam/arm-core'
+import { useQuery } from '@tanstack/react-query'
 import { PathOptions } from 'leaflet'
-import { useQuery } from 'react-query'
 
 import { getProhibitoryRoads } from '../../../../api/bereikbaarheid/roads/prohibitory'
 

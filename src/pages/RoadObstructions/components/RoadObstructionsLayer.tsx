@@ -4,10 +4,10 @@ import {
   MapPanelContext,
   usePanToLatLng,
 } from '@amsterdam/arm-core'
+import { useQuery } from '@tanstack/react-query'
 import { LatLngBounds, LatLngBoundsLiteral, PathOptions } from 'leaflet'
 import type L from 'leaflet'
 import { Dispatch, SetStateAction, useContext, useEffect } from 'react'
-import { useQuery } from 'react-query'
 import { useTheme } from 'styled-components'
 
 import { getRoadObstructions } from '../../../api/bereikbaarheid/road-obstructions'

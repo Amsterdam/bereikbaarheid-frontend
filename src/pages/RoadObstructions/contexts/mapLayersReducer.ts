@@ -10,7 +10,7 @@ export const layerIds = ['roadObstructions', 'wior'] as const
 
 export type mapLayerActionType = {
   type: 'TOGGLE'
-  layerId: typeof layerIds[number]
+  layerId: (typeof layerIds)[number]
 }
 
 export const mapLayersReducer = (

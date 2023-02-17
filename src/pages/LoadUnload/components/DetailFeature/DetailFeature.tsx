@@ -33,14 +33,6 @@ export const LoadUnloadDetailFeature = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [detailFeature, setCurrentOverlay])
 
-  if (searchForParkingSpace.isLoading) {
-    return <LoadingSpinner />
-  }
-
-  if (searchForParkingSpace.isError) {
-    return <div>Er ging helaas iets mis.</div>
-  }
-
   if (!detailFeature.feature && !detailFeature.location) return null
 
   return (
@@ -51,6 +43,10 @@ export const LoadUnloadDetailFeature = () => {
         setDetailFeature({ type: DetailFeatureActionType.RESET })
       }}
     >
+      {searchForParkingSpace.isInitialLoading && <LoadingSpinner />}
+
+      {searchForParkingSpace.isError && <div>Er ging helaas iets mis.</div>}
+
       {searchForParkingSpace.results.data &&
         searchForParkingSpace.results.data.features.length === 0 && (
           <div>Geen objecten gevonden op deze locatie.</div>
