@@ -46,7 +46,7 @@ const ScenarioDisplayResult = () => {
   const permitsByLocation = usePermitsByLocation()
   const [showRvvDetails, setShowRvvDetails] = useState(false)
 
-  if (permitsByLocation.isLoading) {
+  if (permitsByLocation.isInitialLoading) {
     return <LoadingSpinner />
   }
 

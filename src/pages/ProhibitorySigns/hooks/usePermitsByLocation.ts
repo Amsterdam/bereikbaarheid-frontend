@@ -41,6 +41,6 @@ export const usePermitsByLocation = () => {
 
   return {
     data: queryResult.data,
-    isLoading: queryResult.isLoading,
+    isInitialLoading: queryResult.isInitialLoading,
   }
 }
