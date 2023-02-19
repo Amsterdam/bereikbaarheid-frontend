@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.3.0...HEAD)
 
+### Fixed
+- Prohibitory signs: display results when no address given
+
 
 ## [v2.3.0 - 2023-02-17](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.2.1...v2.3.0)
 
