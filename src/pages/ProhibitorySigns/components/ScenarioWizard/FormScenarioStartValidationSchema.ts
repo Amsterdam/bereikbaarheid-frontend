@@ -9,31 +9,39 @@ function isPermittedVehicleType(vehicleType: string) {
   return permittedVehicleTypes.includes(vehicleType)
 }
 
-const isValidLicensePlate = async (val: string, ctx: z.RefinementCtx) => {
-  const rdwApi = await getVehicle(val)
+const isValidLicensePlate = (val: string, ctx: z.RefinementCtx) => {
+  return getVehicle(val)
+    .then(data => {
+      if (data.length === 0) {
+        return ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message:
+            'Kenteken niet gevonden bij RDW. Probeer het nog eens met een geldig Nederlands kenteken',
+        })
+      }
 
-  if (rdwApi.length === 0) {
-    return ctx.addIssue({
-      code: z.ZodIssueCode.custom,
-      message:
-        'Kenteken niet gevonden bij RDW. Probeer het nog eens met een geldig Nederlands kenteken',
-    })
-  }
+      if (!isPermittedVehicleType(data[0].voertuigsoort)) {
+        return ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: 'Voer een kenteken in van een trekkend voertuig',
+        })
+      }
 
-  if (!isPermittedVehicleType(rdwApi[0].voertuigsoort)) {
-    return ctx.addIssue({
-      code: z.ZodIssueCode.custom,
-      message: 'Voer een kenteken in van een trekkend voertuig',
+      if (!data[0].toegestane_maximum_massa_voertuig) {
+        return ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: `RDW kent geen toegestaan maximum gewicht voor dit voertuig\
+            waardoor u deze kaart niet kan gebruiken. We werken aan een oplossing.`,
+        })
+      }
     })
-  }
-
-  if (!rdwApi[0].toegestane_maximum_massa_voertuig) {
-    return ctx.addIssue({
-      code: z.ZodIssueCode.custom,
-      message: `RDW kent geen toegestaan maximum gewicht voor dit voertuig\
-        waardoor u deze kaart niet kan gebruiken. We werken aan een oplossing.`,
+    .catch(() => {
+      return ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message:
+          'De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.',
+      })
     })
-  }
 }
 
 export const FormScenarioStartValidationSchema = z.object({

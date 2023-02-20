@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+export const API_URL = 'https://opendata.rdw.nl/api/id/m9d7-ebf2.json'
+
 export interface rdwGeneralData {
   breedte: string
   datum_eerste_toelating: string
@@ -15,7 +17,7 @@ export interface rdwGeneralData {
 
 export function getVehicle(licensePlate: string): Promise<rdwGeneralData[]> {
   return axios
-    .get('https://opendata.rdw.nl/api/id/m9d7-ebf2.json', {
+    .get(API_URL, {
       params: { kenteken: licensePlate },
     })
     .then(response => response.data)

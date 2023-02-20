@@ -51,7 +51,7 @@ const VehicleHeightStyledInput = styled(Input)`
 
 const debouncedHandler = debounce((e, handler) => handler(e), 500)
 
-interface ProhibitorySignsFormScenarioStartProps {
+export interface ProhibitorySignsFormScenarioStartProps {
   addressInputEnabled: boolean
   setAddressInputEnabled: Dispatch<SetStateAction<boolean>>
 }
@@ -109,12 +109,13 @@ const ProhibitorySignsFormScenarioStart = ({
         bereikbaar is.
       </StyledParagraph>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} data-testid="form-scenario-start">
         <FormFieldWrapper>
           <LicensePlateInnerContainer>
             <div>
               <FormLabel htmlFor="licensePlate" label="Kenteken" />
               <FormInputLicensePlate
+                aria-label="Kenteken"
                 id="licensePlate"
                 error={Boolean(errors.licensePlate)}
                 onChange={e => debouncedHandler(e, onChange)}
@@ -140,6 +141,7 @@ const ProhibitorySignsFormScenarioStart = ({
           <FormLabel htmlFor="vehicleHeight" label="Hoogte van uw voertuig" />
           <InputWithSuffix suffix="m">
             <VehicleHeightStyledInput
+              aria-label="Hoogte van uw voertuig"
               id="vehicleHeight"
               error={Boolean(errors.vehicleHeight)}
               placeholder="0.00"
