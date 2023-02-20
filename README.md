@@ -17,7 +17,8 @@ Deze folder is als volgt ingedeeld:
 
 ### To have a look around
 - Make sure the API is running locally, for more info see the [bereikbaarheid-backend repo](https://github.com/Amsterdam/bereikbaarheid-backend).
-- Run the docker container: `docker-compose up --build`.
+- Run the docker container: `docker compose up --build`.
+- View the app at [http://localhost:5000](http://localhost:5000)
 
 ### Om aanpassingen aan de frontend te maken
 1. Installeer [Node.js](https://nodejs.org/en/)
@@ -38,6 +39,11 @@ De frontend is gescaffold met [Create React App](https://github.com/facebook/cre
 ### Hoe is het CORS issue opgelost in de verschillende scenario's?
 - Tijdens ontwikkeling van de frontend zorgt CRA voor de proxy, zie `package.json`. 
 - Om CORS issues in de docker-compose setup te vermijden, wordt een aparte NGINX setup (`nginx.dockercompose.conf`) gebruikt. Via een build argument wordt bepaald welke nginx configuratie wordt geladen.
+
+## CI/CD
+On every pull request and push to the `main` branch, the application is [linted and tested if it can be build](./.github/workflows/ci.yml).
+
+Additionally the app is deployed to the acceptance environment on push to the `main` branch, see [the `Jenkinsfile`](./Jenkinsfile).
 
 ## Available Scripts
 In this directory, you can run:
