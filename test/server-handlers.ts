@@ -2,6 +2,7 @@ import { rest } from 'msw'
 
 import { API_URL as API_URL_GEOSEARCH } from '../src/api/geosearch'
 import { API_URL as API_URL_PARKEERVAKKEN } from '../src/api/parkeervakken'
+import { API_URL as API_URL_RDW_VEHICLE } from '../src/api/rdw/vehicle'
 
 export const handlers = [
   rest.get(API_URL_GEOSEARCH, (req, res, ctx) => {
@@ -21,6 +22,25 @@ export const handlers = [
     const parkingSpaceMock = require('./mocks/parkingSpace-122028486875.json')
 
     return res(ctx.status(200), ctx.json(parkingSpaceMock))
+  }),
+
+  rest.get(API_URL_RDW_VEHICLE, (req, res, ctx) => {
+    const licensePlate = req.url.searchParams.get('kenteken')
+    let searchResultMock
+
+    if (licensePlate === 'API429') {
+      return res(ctx.status(429), ctx.json({}))
+    }
+
+    if (licensePlate === 'API500') {
+      return res(ctx.status(500), ctx.json({}))
+    }
+
+    if (licensePlate === 'OT77FJ') {
+      searchResultMock = require('./mocks/rdw/oplegger.json')
+    }
+
+    return res(ctx.status(200), ctx.json(searchResultMock))
   }),
 ]
 
