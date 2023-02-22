@@ -1,4 +1,5 @@
 import { screen, waitFor } from '@testing-library/react'
+import { BrowserRouter } from 'react-router-dom'
 
 import { withPageContext } from '../../../../test/utils/prohibitorySigns/withPageContext'
 import { withQueryClient } from '../../../../test/utils/withQueryClient'
@@ -12,9 +13,14 @@ describe('ProhibitorySignsHeader', () => {
 
   it('renders correctly', async () => {
     const { rerender } = withQueryClient(
-      withPageContext(<ProhibitorySignsHeader {...props} />, {
-        showScenarioWizard: true,
-      })
+      withPageContext(
+        <BrowserRouter>
+          <ProhibitorySignsHeader {...props} />
+        </BrowserRouter>,
+        {
+          showScenarioWizard: true,
+        }
+      )
     )
 
     // wait until the info has been fetched from the API

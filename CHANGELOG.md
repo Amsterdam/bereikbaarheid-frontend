@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.3.0...HEAD)
 
+### Added
+- Header menu: add links to the three main pages
+
+### Changed 
+- Header menu: make the menu usable on mobile devices
+
 ### Fixed
 - Prohibitory signs: display results when no address given
 

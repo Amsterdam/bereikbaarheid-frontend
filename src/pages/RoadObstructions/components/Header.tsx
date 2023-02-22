@@ -1,9 +1,8 @@
-import { Link, MenuButton, MenuInline, MenuItem } from '@amsterdam/asc-ui'
+import { Link, MenuButton, MenuItem } from '@amsterdam/asc-ui'
 import { Dispatch, SetStateAction, useState } from 'react'
-import styled from 'styled-components'
 
 import { getUrl } from '../../../api/bereikbaarheid/road-obstructions'
-import Header, { HeaderProps } from '../../../shared/components/Header'
+import { Header, HeaderProps } from '../../../shared/components/Header'
 import { DataModal } from '../../../shared/components/Modal'
 
 import { RoadObstructionMapFilters } from '../types/roadObstructionMapFilters'
@@ -12,11 +11,6 @@ interface RoadObstructionsHeaderProps extends HeaderProps {
   mapFilters: RoadObstructionMapFilters
   setOpenFeedbackModal: Dispatch<SetStateAction<boolean>>
 }
-
-const StyledHrefLink = styled(Link)`
-  display: inherit;
-  font-size: inherit;
-`
 
 const RoadObstructionsHeader = ({
   mapFilters,
@@ -36,11 +30,11 @@ const RoadObstructionsHeader = ({
     <>
       <Header
         title={title}
-        navigation={
-          <MenuInline>
+        additionalMenuItems={
+          <>
             <MenuItem>
               <MenuButton
-                as={StyledHrefLink}
+                as={Link}
                 data-testid="header-menu-data-link"
                 onClick={() => setOpenDataModal(true)}
               >
@@ -50,14 +44,14 @@ const RoadObstructionsHeader = ({
 
             <MenuItem>
               <MenuButton
-                as={StyledHrefLink}
+                as={Link}
                 data-testid="header-menu-contact-link"
                 onClick={() => setOpenFeedbackModal(true)}
               >
                 Contact
               </MenuButton>
             </MenuItem>
-          </MenuInline>
+          </>
         }
       />
 
