@@ -1,19 +1,13 @@
-import { Link, MenuButton, MenuInline, MenuItem } from '@amsterdam/asc-ui'
+import { Link, MenuButton, MenuItem } from '@amsterdam/asc-ui'
 import { Dispatch, SetStateAction, useState } from 'react'
-import styled from 'styled-components'
 
 import { getUrl } from '../../../api/bereikbaarheid/road-sections/load-unload'
-import Header, { HeaderProps } from '../../../shared/components/Header'
+import { Header, HeaderProps } from '../../../shared/components/Header'
 import { DataModal } from '../../../shared/components/Modal'
 
 interface LoadUnloadHeaderProps extends HeaderProps {
   setOpenFeedbackModal: Dispatch<SetStateAction<boolean>>
 }
-
-const StyledHrefLink = styled(Link)`
-  display: inherit;
-  font-size: inherit;
-`
 
 export const LoadUnloadHeader = ({
   setOpenFeedbackModal,
@@ -32,11 +26,11 @@ export const LoadUnloadHeader = ({
     <>
       <Header
         title={title}
-        navigation={
-          <MenuInline>
+        additionalMenuItems={
+          <>
             <MenuItem>
               <MenuButton
-                as={StyledHrefLink}
+                as={Link}
                 data-testid="header-menu-data-link"
                 onClick={() => setOpenDataModal(true)}
               >
@@ -46,7 +40,7 @@ export const LoadUnloadHeader = ({
 
             <MenuItem>
               <MenuButton
-                as={StyledHrefLink}
+                as={Link}
                 data-testid="header-menu-contact-link"
                 onClick={() => {
                   setOpenFeedbackModal(true)
@@ -55,7 +49,7 @@ export const LoadUnloadHeader = ({
                 Contact
               </MenuButton>
             </MenuItem>
-          </MenuInline>
+          </>
         }
       />
 
