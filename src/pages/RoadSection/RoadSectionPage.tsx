@@ -9,8 +9,8 @@ import { Header } from '../../shared/components/Header'
 import LoadingSpinner from '../../shared/components/LoadingSpinner'
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
 
-import RoadSectionDetails from './components/Details'
-import RoadSectionMap from './components/Map'
+import { RoadSectionDetails } from './components/Details'
+import { RoadSectionMap } from './components/Map'
 
 const StyledColumn = styled(Column)`
   flex-direction: column;

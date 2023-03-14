@@ -3,8 +3,15 @@ import { rest } from 'msw'
 import { API_URL as API_URL_GEOSEARCH } from '../src/api/geosearch'
 import { API_URL as API_URL_PARKEERVAKKEN } from '../src/api/parkeervakken'
 import { API_URL as API_URL_RDW_VEHICLE } from '../src/api/rdw/vehicle'
+import { ENDPOINT as ENDPOINT_ROAD_SECTION } from '../src/api/bereikbaarheid/road-elements'
 
 export const handlers = [
+  rest.get(`/${ENDPOINT_ROAD_SECTION}:roadSectionId`, (req, res, ctx) => {
+    const { roadSectionId } = req.params
+    const roadSectionMock = getRoadSection(roadSectionId)
+    return res(ctx.status(200), ctx.json(roadSectionMock))
+  }),
+
   rest.get(API_URL_GEOSEARCH, (req, res, ctx) => {
     const datasets = req.url.searchParams.get('datasets')
     const lat = req.url.searchParams.get('lat')
@@ -54,4 +61,16 @@ const getParkingSpaceResults = (lat: string | null, lon: string | null) => {
   }
 
   return console.error('no parking spaces mock found.')
+}
+
+const getRoadSection = (id: string | ReadonlyArray<string>) => {
+  if (id === '24115') {
+    return require('./mocks/bereikbaarheid/road-elements/241115-withRoadObstructions.json')
+  }
+
+  if (id === '404404') {
+    return require('./mocks/bereikbaarheid/road-elements/not-found.json')
+  }
+
+  return console.error('no roadSection mock found.')
 }
