@@ -1,16 +1,34 @@
 version: '3.6'
 services:
   frontend:
-    build:
+    build: &build-config
       context: .
       args:
         - BUILD_ENV=development
         - NGINX_CONF=nginx.dockercompose.conf
-    environment:
+    environment: &environment
       - TZ=Europe/Amsterdam
     ipc: host
     ports:
       - "5000:80"
+
+  test:
+    build:
+      <<: *build-config
+      target: test
+    environment: *environment
+    command: npm run test
+
+  upgrade:
+    build:
+      <<: *build-config
+      target: upgrade
+    environment: *environment
+    volumes:
+      - ./package.json:/app/package.json
+      - ./package-lock.json:/app/package-lock.json
+    command: ncu -u --doctor --target minor
+
 networks:
   default:
     name: amsterdam-bereikbaarheid

@@ -17,7 +17,8 @@ Deze folder is als volgt ingedeeld:
 
 ### To have a look around
 - Make sure the API is running locally, for more info see the [bereikbaarheid-backend repo](https://github.com/Amsterdam/bereikbaarheid-backend).
-- Run the docker container: `docker compose up --build`.
+- Create the docker images: `make build`
+- Run the docker container: `make app`
 - View the app at [http://localhost:5000](http://localhost:5000)
 
 ### Om aanpassingen aan de frontend te maken
@@ -49,6 +50,7 @@ Additionally the app is deployed to the acceptance environment on push to the `m
 In this directory, you can run:
 
 - `npm start`: runs the app in the development mode. For more info, see 'Getting started'.
-- `npm test`: launches the test runner in the interactive watch mode.
+- `npm test`: launches the test runner in a non-interactive watch mode.
+- `npm test:watch`: launches the test runner in an interactive watch mode.
 - `npm run build`: builds the app for production to the `build` folder.
 - `npm run eject`: this app is currently **not** ejected.
