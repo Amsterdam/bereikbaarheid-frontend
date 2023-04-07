@@ -1,4 +1,4 @@
-import { screen, waitFor } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { generatePath } from 'react-router-dom'
 
 import { getPathTo } from '../../routes'
@@ -9,11 +9,10 @@ describe('RoadSectionPage', () => {
     const pathToPage = generatePath(getPathTo('ROAD_SECTION_DETAIL_PAGE'), {
       id: 24115,
     })
-    const { rerender } = withApp(pathToPage)
 
-    // wait until the info has been fetched from the API
-    await waitFor(() => rerender)
-    // and the page is rendered
+    withApp(pathToPage)
+
+    // wait until the page is rendered
     await screen.findByText(/Wegvak/)
 
     // two h1's are rendered: logo & page title
@@ -29,13 +28,13 @@ describe('RoadSectionPage', () => {
     const pathToPage = generatePath(getPathTo('ROAD_SECTION_DETAIL_PAGE'), {
       id: 404404,
     })
-    const { rerender } = withApp(pathToPage)
+
+    withApp(pathToPage)
 
     // on render of the page, the error is logged to the console.
     jest.spyOn(console, 'error').mockImplementation(() => {})
 
-    // wait until the info has been fetched from the API
-    await waitFor(() => rerender)
+    // wait until the page is rendered
     await screen.findByText(/Wegvak niet gevonden/)
 
     expect(screen.getByText(/Wegvak niet gevonden/)).toBeInTheDocument()
