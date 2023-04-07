@@ -13,10 +13,10 @@ import {
 } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
-import LinkInTable from '../../../shared/components/LinkInTable'
-import { formatISODate } from '../../../shared/utils/formatDate'
-import { RoadObstruction } from '../../../api/bereikbaarheid/road-obstructions'
-import { RoadSection } from '../../../api/bereikbaarheid/road-elements'
+import LinkInTable from '../../../../shared/components/LinkInTable'
+import { formatISODate } from '../../../../shared/utils/formatDate'
+import { RoadObstruction } from '../../../../api/bereikbaarheid/road-obstructions'
+import { RoadSection } from '../../../../api/bereikbaarheid/road-elements'
 
 const StyledH1 = styled(Heading)`
   margin-bottom: ${themeSpacing(5)};
@@ -42,7 +42,7 @@ function formatActivity(item: RoadObstruction) {
   )
 }
 
-const RoadSectionDetails = ({
+export const RoadSectionDetails = ({
   properties,
 }: Pick<RoadSection, 'properties'>) => {
   return (
@@ -141,5 +141,3 @@ const RoadSectionDetails = ({
     </>
   )
 }
-
-export default RoadSectionDetails

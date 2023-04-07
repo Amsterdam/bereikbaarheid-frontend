@@ -29,8 +29,8 @@ it('shows the parking space info of the selected location', async () => {
 
   // wait until the info has been fetched from the API
   await waitFor(() => rerender)
+  const parkingSpaceId = await screen.findByText(parkingSpace.id)
 
-  const parkingSpaceId = screen.getByText(parkingSpace.id)
   expect(parkingSpaceId).toBeInTheDocument()
 })
 
@@ -45,6 +45,7 @@ it('shows no results message if no parking space is found at the selected locati
 
   // wait until the info has been fetched from the API
   await waitFor(() => rerender)
+  await screen.findByText(/parkeerplaats/)
 
   const message = screen.getByText(
     /Geen parkeerplaats gevonden op deze locatie/i

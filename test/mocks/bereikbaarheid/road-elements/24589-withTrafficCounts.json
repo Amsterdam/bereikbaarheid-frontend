@@ -1,0 +1,88 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    [
+                        [
+                            4.888520183313168,
+                            52.417606995159154
+                        ],
+                        [
+                            4.889488772808549,
+                            52.41761359539875
+                        ]
+                    ]
+                ],
+                "type": "MultiLineString"
+            },
+            "properties": {
+                "id": 24589,
+                "length_in_m": 66,
+                "max_speed_in_km": null,
+                "street_name": "Molenwijk",
+                "traffic_counts": [
+                    {
+                        "direction_1": "Oost (richting Marnixstraat)",
+                        "direction_2": "West (richting Nassaukade)",
+                        "known_interruptions": "Geen;",
+                        "langzaam_verkeer": true,
+                        "link_to_file": "https://verkeeramsterdam.nl/verkeerstellingen/1825.Tweede_Hugo_de_Grootstraat.Tel2016.xls",
+                        "location_name": "Telpunt 1825: Tweede Hugo de Grootstraat",
+                        "measures_between": "Nassaukade - Marnixstraat",
+                        "method": "Telslang",
+                        "remarks": "Geen;",
+                        "snelverkeer": true,
+                        "traffic_type": "beide",
+                        "year": 2016
+                    },
+                    {
+                        "direction_1": "Oost (richting Marnixstraat)",
+                        "direction_2": "West (richting Nassaukade)",
+                        "known_interruptions": "Geen;",
+                        "langzaam_verkeer": true,
+                        "link_to_file": "https://verkeeramsterdam.nl/verkeerstellingen/1825.Tweede_Hugo_de_Grootstraat.Tel2015.xls",
+                        "location_name": "Telpunt 1825: Tweede Hugo de Grootstraat",
+                        "measures_between": "Nassaukade - Marnixstraat",
+                        "method": "Telslang",
+                        "remarks": "Geen;",
+                        "snelverkeer": true,
+                        "traffic_type": "beide",
+                        "year": 2015
+                    },
+                    {
+                        "direction_1": "Oost (richting Marnixstraat)",
+                        "direction_2": "West (richting NAssaukade)",
+                        "known_interruptions": "Geen;",
+                        "langzaam_verkeer": true,
+                        "link_to_file": "https://verkeeramsterdam.nl/verkeerstellingen/1825.Tweede_Hugo_de_Grootstraat.Tel2013_1001034.xls",
+                        "location_name": "Telpunt 1825: Tweede Hugo de Grootstraat",
+                        "measures_between": "Marnixstraat - Nassaukade",
+                        "method": "Telslang",
+                        "remarks": "Geen;",
+                        "snelverkeer": true,
+                        "traffic_type": "beide",
+                        "year": 2013
+                    },
+                    {
+                        "direction_1": "Oost (richting Marnixstraat)",
+                        "direction_2": "West (richting Nassaukade)",
+                        "known_interruptions": "Geen;",
+                        "langzaam_verkeer": true,
+                        "link_to_file": "https://verkeeramsterdam.nl/verkeerstellingen/1825.Tweede_Hugo_de_Grootstraat.Tel2011.xls",
+                        "location_name": "Telpunt 1825: Tweede Hugo de Grootstraat",
+                        "measures_between": "Marnixstraat - Nassaukade",
+                        "method": "Telslang",
+                        "remarks": "Geen;",
+                        "snelverkeer": true,
+                        "traffic_type": "beide",
+                        "year": 2011
+                    }
+                ],
+                "traffic_obstructions": []
+            },
+            "type": "Feature"
+        }
+    ],
+    "type": "FeatureCollection"
+}

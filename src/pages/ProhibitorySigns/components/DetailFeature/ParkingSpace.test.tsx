@@ -11,6 +11,6 @@ it('renders the parking space info', async () => {
   // wait until the info has been fetched from the API
   await waitFor(() => rerender)
 
-  const linkElement = screen.getByText(parkingSpaceId)
+  const linkElement = await screen.findByText(parkingSpaceId)
   expect(linkElement).toBeInTheDocument()
 })

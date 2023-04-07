@@ -4,7 +4,7 @@ import { RoadObstruction } from '../road-obstructions'
 
 import { api } from '../index'
 
-const ENDPOINT = 'v1/road-elements/'
+export const ENDPOINT = 'v1/road-elements/'
 
 interface TrafficCount {
   direction_1: string
