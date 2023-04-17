@@ -49,7 +49,8 @@
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
     "lint": "eslint .",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false",
+    "test:watch": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

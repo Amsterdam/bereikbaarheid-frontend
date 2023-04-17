@@ -2,3 +2,5 @@ node_modules
 
 .dockerignore
 .nvmrc
+Jenkinsfile
+Makefile
