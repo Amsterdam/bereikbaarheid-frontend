@@ -35,6 +35,7 @@ export const RoadObstructionsDetailFeatureWior = ({
   return (
     <MapPanelContent
       title={`WIOR ${detailFeature.data.properties.wior_nummer}`}
+      data-testid="detail-feature-wior"
       animate
       stackOrder={currentOverlay === mapPanelConstants.Overlay.Results ? 2 : 1}
       onClose={() => {

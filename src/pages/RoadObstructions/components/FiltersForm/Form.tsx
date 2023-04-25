@@ -13,11 +13,11 @@ import { Dispatch, SetStateAction } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import styled from 'styled-components'
 
-import { FormLabel } from '../../../shared/components/FormLabel'
-import ModalBlock from '../../../shared/components/ModalBlock'
+import { FormLabel } from '../../../../shared/components/FormLabel'
+import ModalBlock from '../../../../shared/components/ModalBlock'
 
-import { RoadObstructionMapFilters } from '../types/roadObstructionMapFilters'
-import { RoadObstructionsFiltersValidationSchema } from './FiltersValidationSchema'
+import { RoadObstructionMapFilters } from '../../types/roadObstructionMapFilters'
+import { RoadObstructionsFiltersValidationSchema } from './ValidationSchema'
 
 const FormFieldWrapper = styled.div`
   margin-bottom: ${themeSpacing(3)};
@@ -31,17 +31,17 @@ const SubmitButton = styled(Button)`
   margin-top: ${themeSpacing(4)};
 `
 
-interface FiltersFormProps {
+export interface RoadObstructionsFiltersFormProps {
   mapFilters: RoadObstructionMapFilters
   setMapFilters: Dispatch<SetStateAction<RoadObstructionMapFilters>>
   setShowMapFiltersForm: Dispatch<SetStateAction<boolean>>
 }
 
-const RoadObstructionsFiltersForm = ({
+export const RoadObstructionsFiltersForm = ({
   mapFilters,
   setMapFilters,
   setShowMapFiltersForm,
-}: FiltersFormProps) => {
+}: RoadObstructionsFiltersFormProps) => {
   const {
     register,
     handleSubmit,
@@ -71,6 +71,7 @@ const RoadObstructionsFiltersForm = ({
           <FormFieldWrapper>
             <FormLabel htmlFor="date" label="Kies een datum" />
             <Input
+              data-testid="date-input"
               defaultValue={mapFilters.date}
               error={Boolean(errors.date)}
               type="date"
@@ -82,6 +83,7 @@ const RoadObstructionsFiltersForm = ({
           <FormFieldWrapper>
             <FormLabel htmlFor="timeFrom" label="Van" />
             <Input
+              data-testid="time-from-input"
               defaultValue={mapFilters.timeFrom}
               error={Boolean(errors.timeFrom)}
               type="time"
@@ -95,6 +97,7 @@ const RoadObstructionsFiltersForm = ({
           <FormFieldWrapper>
             <FormLabel htmlFor="timeTo" label="Tot" />
             <Input
+              data-testid="time-to-input"
               defaultValue={mapFilters.timeTo}
               error={Boolean(errors.timeTo)}
               type="time"
@@ -111,5 +114,3 @@ const RoadObstructionsFiltersForm = ({
     </>
   )
 }
-
-export default RoadObstructionsFiltersForm

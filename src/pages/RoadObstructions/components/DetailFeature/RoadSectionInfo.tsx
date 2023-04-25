@@ -56,6 +56,7 @@ const RoadSectionInfo = ({
   return (
     <MapPanelContent
       title={`Wegvak ${detailFeature.data.properties.road_element_id}`}
+      data-testid="detail-feature-road-section"
       animate
       stackOrder={currentOverlay === mapPanelConstants.Overlay.Results ? 2 : 1}
       onClose={() => {

@@ -2,7 +2,7 @@ import { Feature, FeatureCollection } from 'geojson'
 
 import { api } from '../index'
 
-const ENDPOINT = 'v1/road-obstructions/'
+export const ENDPOINT = 'v1/road-obstructions/'
 
 export interface RoadObstruction {
   activity: string

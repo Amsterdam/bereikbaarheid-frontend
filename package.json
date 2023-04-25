@@ -42,6 +42,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "http-proxy-middleware": "^2.0.6",
+    "mq-polyfill": "^1.1.8",
     "msw": "^1.0.1",
     "prettier": "^2.8.4"
   },

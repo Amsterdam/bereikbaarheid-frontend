@@ -1,6 +1,8 @@
 import axios from 'axios'
 import { Feature, FeatureCollection } from 'geojson'
 
+export const ENDPOINT = 'https://api.data.amsterdam.nl/v1/wfs/wior/'
+
 export interface WiorFeature extends Feature {
   properties: {
     id: string
@@ -24,7 +26,7 @@ export function getWiorData(
   signal: AbortSignal | undefined
 ): Promise<WiorFeatureCollection> {
   return axios
-    .get('https://api.data.amsterdam.nl/v1/wfs/wior/', {
+    .get(ENDPOINT, {
       params: {
         SERVICE: 'WFS',
         VERSION: '2.0.0',
