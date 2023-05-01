@@ -58,7 +58,7 @@ const RoadObstructionsFiltersDisplay = ({
         </Column>
       </StyledRow>
 
-      <FiltersContainer>
+      <FiltersContainer data-testid="map-filters">
         <StyledRow halign="flex-start">
           <Column span={4}>
             <Paragraph gutterBottom={0} strong>

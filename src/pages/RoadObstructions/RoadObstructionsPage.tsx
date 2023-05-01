@@ -28,7 +28,7 @@ import {
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
 
 import RoadObstructionsFiltersDisplay from './components/FiltersDisplay'
-import RoadObstructionsFiltersForm from './components/FiltersForm'
+import { RoadObstructionsFiltersForm } from './components/FiltersForm'
 import RoadObstructionsHeader from './components/Header'
 import RoadObstructionsLayer from './components/RoadObstructionsLayer'
 import RoadObstructionsViewerContainer from './components/ViewerContainer'

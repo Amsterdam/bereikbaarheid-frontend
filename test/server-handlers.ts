@@ -4,12 +4,24 @@ import { API_URL as API_URL_GEOSEARCH } from '../src/api/geosearch'
 import { API_URL as API_URL_PARKEERVAKKEN } from '../src/api/parkeervakken'
 import { API_URL as API_URL_RDW_VEHICLE } from '../src/api/rdw/vehicle'
 import { ENDPOINT as ENDPOINT_ROAD_SECTION } from '../src/api/bereikbaarheid/road-elements'
+import { ENDPOINT as ENDPOINT_ROAD_OBSTRUCTIONS } from '../src/api/bereikbaarheid/road-obstructions'
+import { ENDPOINT as ENDPOINT_WFS_WIOR } from '../src/api/wfs/wior'
 
 export const handlers = [
+  rest.get(`/${ENDPOINT_ROAD_OBSTRUCTIONS}`, (req, res, ctx) => {
+    const roadObstructionsMock = getRoadObstructions(req.url.searchParams)
+    return res(ctx.status(200), ctx.json(roadObstructionsMock))
+  }),
+
   rest.get(`/${ENDPOINT_ROAD_SECTION}:roadSectionId`, (req, res, ctx) => {
     const { roadSectionId } = req.params
     const roadSectionMock = getRoadSection(roadSectionId)
     return res(ctx.status(200), ctx.json(roadSectionMock))
+  }),
+
+  rest.get(ENDPOINT_WFS_WIOR, (req, res, ctx) => {
+    const wiorFeaturesMock = require('./mocks/wfs/wior/data.json')
+    return res(ctx.status(200), ctx.json(wiorFeaturesMock))
   }),
 
   rest.get(API_URL_GEOSEARCH, (req, res, ctx) => {
@@ -61,6 +73,16 @@ const getParkingSpaceResults = (lat: string | null, lon: string | null) => {
   }
 
   return console.error('no parking spaces mock found.')
+}
+
+const getRoadObstructions = (params: URLSearchParams) => {
+  let result = require('./mocks/bereikbaarheid/road-obstructions/data.json')
+
+  if (params.get('date') === '2023-06-15') {
+    result = require('./mocks/bereikbaarheid/road-obstructions/data-2023-06-15.json')
+  }
+
+  return result
 }
 
 const getRoadSection = (id: string | ReadonlyArray<string>) => {

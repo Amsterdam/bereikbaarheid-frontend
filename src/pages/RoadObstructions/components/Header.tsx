@@ -7,7 +7,7 @@ import { DataModal } from '../../../shared/components/Modal'
 
 import { RoadObstructionMapFilters } from '../types/roadObstructionMapFilters'
 
-interface RoadObstructionsHeaderProps extends HeaderProps {
+export interface RoadObstructionsHeaderProps extends HeaderProps {
   mapFilters: RoadObstructionMapFilters
   setOpenFeedbackModal: Dispatch<SetStateAction<boolean>>
 }

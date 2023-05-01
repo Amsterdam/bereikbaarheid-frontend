@@ -1,7 +1,7 @@
 import { isBefore, isMatch, parse } from 'date-fns'
 import { z } from 'zod'
 
-import { RoadObstructionMapFilters } from '../types/roadObstructionMapFilters'
+import { RoadObstructionMapFilters } from '../../types/roadObstructionMapFilters'
 
 const timeFromIsBeforeTimeTo = (data: RoadObstructionMapFilters) => {
   // ignore this check when no date is selected
