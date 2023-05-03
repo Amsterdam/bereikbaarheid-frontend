@@ -3,11 +3,23 @@ import { rest } from 'msw'
 import { API_URL as API_URL_GEOSEARCH } from '../src/api/geosearch'
 import { API_URL as API_URL_PARKEERVAKKEN } from '../src/api/parkeervakken'
 import { API_URL as API_URL_RDW_VEHICLE } from '../src/api/rdw/vehicle'
+import { ENDPOINT as ENDPOINT_ADDRESS_SEARCH } from '../src/api/atlas/search/address'
+import { ENDPOINT as ENDPOINT_LOAD_UNLOAD } from '../src/api/bereikbaarheid/road-sections/load-unload'
 import { ENDPOINT as ENDPOINT_ROAD_SECTION } from '../src/api/bereikbaarheid/road-elements'
 import { ENDPOINT as ENDPOINT_ROAD_OBSTRUCTIONS } from '../src/api/bereikbaarheid/road-obstructions'
 import { ENDPOINT as ENDPOINT_WFS_WIOR } from '../src/api/wfs/wior'
 
 export const handlers = [
+  rest.get(ENDPOINT_ADDRESS_SEARCH, (req, res, ctx) => {
+    const searchResultsMock = require('./mocks/atlas/search/address/data.json')
+    return res(ctx.status(200), ctx.json(searchResultsMock))
+  }),
+
+  rest.get(`/${ENDPOINT_LOAD_UNLOAD}`, (req, res, ctx) => {
+    const loadUnloadMock = require('./mocks/bereikbaarheid/road-sections/load-unload/data.json')
+    return res(ctx.status(200), ctx.json(loadUnloadMock))
+  }),
+
   rest.get(`/${ENDPOINT_ROAD_OBSTRUCTIONS}`, (req, res, ctx) => {
     const roadObstructionsMock = getRoadObstructions(req.url.searchParams)
     return res(ctx.status(200), ctx.json(roadObstructionsMock))

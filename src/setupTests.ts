@@ -8,6 +8,8 @@ import matchMediaPolyfill from 'mq-polyfill'
 
 import { server } from './../test/server'
 
+require('jest-canvas-mock')
+
 let createElementNSOrig = global.document.createElementNS
 
 // @ts-ignore

@@ -48,12 +48,16 @@ export const LoadUnloadMapSettingsDisplay = ({
   const showDateTimeModal = () => setShowDateTimeModal(true)
 
   return (
-    <MapPanelContent {...otherProps}>
+    <MapPanelContent data-testid="map-settings" {...otherProps}>
       <CompactThemeProvider>
         <Row halign="space-between" hasMargin={false}>
           <Column span={12}>
             <Heading as="h3">Adres</Heading>
-            <EditSettingButton variant="textButton" onClick={showAddressForm}>
+            <EditSettingButton
+              data-testid="change-address"
+              variant="textButton"
+              onClick={showAddressForm}
+            >
               wijzig
             </EditSettingButton>
           </Column>
@@ -72,7 +76,11 @@ export const LoadUnloadMapSettingsDisplay = ({
         <DateTimeHeaderRow halign="space-between" hasMargin={false}>
           <Column span={12}>
             <Heading as="h3">Datum en tijd</Heading>
-            <EditSettingButton variant="textButton" onClick={showDateTimeModal}>
+            <EditSettingButton
+              data-testid="change-date-time"
+              variant="textButton"
+              onClick={showDateTimeModal}
+            >
               wijzig
             </EditSettingButton>
           </Column>

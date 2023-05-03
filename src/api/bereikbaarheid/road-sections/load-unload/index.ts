@@ -2,7 +2,7 @@ import { Feature, FeatureCollection } from 'geojson'
 
 import { api } from '../../index'
 
-const ENDPOINT = 'v1/road-sections/load-unload/'
+export const ENDPOINT = 'v1/road-sections/load-unload/'
 
 export interface LoadUnloadRegime {
   additional_info: string

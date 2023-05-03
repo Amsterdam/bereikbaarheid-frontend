@@ -149,7 +149,7 @@ export const LoadUnloadAddressForm = ({
       </TopBar>
       <Divider />
       <ModalBlock>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form data-testid="address-form" onSubmit={handleSubmit(onSubmit)}>
           <FormLabel htmlFor="searchAddress" label="Adres van uw bestemming" />
           <Input
             id="searchAddress"

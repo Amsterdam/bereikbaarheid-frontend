@@ -61,7 +61,7 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
   }
 
   return (
-    <Container>
+    <Container data-testid="detail-feature-road-section">
       <CompactThemeProvider>
         <Row halign="flex-start" hasMargin={false} valign="center">
           <Column span={6}>Wegvak ID</Column>
