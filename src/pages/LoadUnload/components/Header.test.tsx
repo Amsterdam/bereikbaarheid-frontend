@@ -8,7 +8,7 @@ import { LoadUnloadHeader, LoadUnloadHeaderProps } from './Header'
 describe('LoadUnloadHeader', () => {
   const props: LoadUnloadHeaderProps = {
     setOpenFeedbackModal: jest.fn(),
-    title: 'Laden en lossen'
+    title: 'Laden en lossen',
   }
 
   it('renders correctly', async () => {
@@ -42,17 +42,17 @@ describe('LoadUnloadHeader', () => {
     await user.click(screen.getByText('Data'))
 
     expect(
-      within(within(screen.getByRole('dialog')).getByRole('list'))
-        .getByRole('link', {
-          name: 'Laad- en losplekken',
-        })
+      within(within(screen.getByRole('dialog')).getByRole('list')).getByRole(
+        'link',
+        { name: 'Laad- en losplekken' }
+      )
     ).toBeVisible()
 
     expect(
-      within(within(screen.getByRole('dialog')).getByRole('list'))
-        .getByRole('link', {
-          name: 'Wegvakken met venstertijden',
-        })
+      within(within(screen.getByRole('dialog')).getByRole('list')).getByRole(
+        'link',
+        { name: 'Wegvakken met venstertijden' }
+      )
     ).toBeVisible()
   })
 })
