@@ -38,7 +38,7 @@ describe('WiorLayer', () => {
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
-    // zoom in 2x - map starts at zoomlevel 14 and wior is visible from 16
+    // zoom in 2x - map starts at zoomlevel 13 and wior is visible from 15
     const buttonZoomIn = screen.getByTitle('Inzoomen')
     await user.click(buttonZoomIn)
     await user.click(buttonZoomIn)

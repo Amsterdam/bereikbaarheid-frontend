@@ -5,6 +5,8 @@
 
 import axios from 'axios'
 
+export const ENDPOINT = 'https://api.data.amsterdam.nl/atlas/search/adres/'
+
 export interface AddressItem {
   _display: string
   centroid: number[]
@@ -16,7 +18,7 @@ export interface AddressItems {
 
 export function address(searchString: string): Promise<AddressItems> {
   return axios
-    .get('https://api.data.amsterdam.nl/atlas/search/adres/', {
+    .get(ENDPOINT, {
       params: {
         q: searchString,
       },

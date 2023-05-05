@@ -5,7 +5,7 @@ import { getUrl } from '../../../api/bereikbaarheid/road-sections/load-unload'
 import { Header, HeaderProps } from '../../../shared/components/Header'
 import { DataModal } from '../../../shared/components/Modal'
 
-interface LoadUnloadHeaderProps extends HeaderProps {
+export interface LoadUnloadHeaderProps extends HeaderProps {
   setOpenFeedbackModal: Dispatch<SetStateAction<boolean>>
 }
 
