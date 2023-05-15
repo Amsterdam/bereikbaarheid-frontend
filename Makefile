@@ -4,7 +4,7 @@
 # VERSION = 2020.01.29
 .PHONY: test
 
-dc = docker compose
+dc = docker-compose
 run = $(dc) run --rm
 
 help:                               ## Show this help.
