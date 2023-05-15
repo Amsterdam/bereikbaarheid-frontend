@@ -4,10 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.4.0...HEAD)
+## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.5.0...HEAD)
+
+
+## [v2.5.0 - 2023-05-15](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.4.0...v2.5.0)
 
 ### Added
-- RoadSection page: add tests
+- Load-Unload: add test suite
+- Road obstructions: add test suite
+- Road section: add test suite
+
+## Fixed
+- updated dependencies to latest minor and patch versions
+- updated `@hookform/resolvers` to version 3
 
 
 ## [v2.4.0 - 2023-02-26](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.3.0...v2.4.0)
