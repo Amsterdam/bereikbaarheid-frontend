@@ -9,7 +9,7 @@ import { Vehicle } from '../../../../pages/ProhibitorySigns/types/vehicle'
 
 import { api } from '../../index'
 
-const ENDPOINT = 'v1/roads/prohibitory'
+export const ENDPOINT = 'v1/roads/prohibitory'
 
 interface ProhibitoryRoad extends Feature {
   geometry: LineString | MultiLineString

@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const API_URL = 'https://opendata.rdw.nl/api/id/m9d7-ebf2.json'
+export const ENDPOINT = 'https://opendata.rdw.nl/api/id/m9d7-ebf2.json'
 
 export interface rdwGeneralData {
   breedte: string
@@ -17,7 +17,7 @@ export interface rdwGeneralData {
 
 export function getVehicle(licensePlate: string): Promise<rdwGeneralData[]> {
   return axios
-    .get(API_URL, {
+    .get(ENDPOINT, {
       params: { kenteken: licensePlate },
     })
     .then(response => response.data)

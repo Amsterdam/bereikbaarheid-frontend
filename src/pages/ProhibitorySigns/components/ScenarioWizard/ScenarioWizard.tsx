@@ -8,8 +8,8 @@ import ModalBlock from '../../../../shared/components/ModalBlock'
 import { Address } from '../../../../types/address'
 
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
-import ProhibitorySignsFormScenarioStart from './FormScenarioStart'
-import ProhibitorySignsFormScenarioAddress from './FormScenarioAddress'
+import { ProhibitorySignsFormScenarioStart } from './FormScenarioStart'
+import { ProhibitorySignsFormScenarioAddress } from './FormScenarioAddress'
 import ProhibitorySignsFormScenarioRdwInfo from './FormRdwInfo'
 
 const FeedbackButton = styled(Button)`

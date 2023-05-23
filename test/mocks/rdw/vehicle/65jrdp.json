@@ -1,0 +1,19 @@
+[
+    {
+        "kenteken": "65JRDP",
+        "voertuigsoort": "Personenauto",
+        "merk": "LONDON TAXIS INT.",
+        "handelsbenaming": "2 AXLE RIGID BODY",
+        "inrichting": "sedan",
+        "aantal_cilinders": "4",
+        "massa_ledig_voertuig": "910",
+        "massa_rijklaar": "1010",
+        "datum_eerste_toelating": "19960630",
+        "datum_eerste_tenaamstelling_in_nederland": "20020702",
+        "aantal_wielen": "4",
+        "europese_voertuigcategorie": "M1",
+        "wielbasis": "282",
+        "taxi_indicator": "Nee",
+        "maximum_last_onder_de_vooras_sen_tezamen_koppeling": "0"
+    }
+]

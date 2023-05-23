@@ -49,6 +49,7 @@ const FormRdwInfoVehicleLength = ({
       <RdwInfoFormColumn span={4}>
         <InputWithSuffix suffix="m">
           <Input
+            data-testid="rdw-form-vehicle-length"
             id="vehicleLength"
             error={Boolean(errors.vehicleLength)}
             placeholder="0.00"

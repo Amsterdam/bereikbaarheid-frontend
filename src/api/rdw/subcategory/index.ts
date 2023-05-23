@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+export const ENDPOINT = 'https://opendata.rdw.nl/resource/2ba7-embk.json'
+
 export interface rdwSubcategoryData {
   subcategorie_voertuig_europees: string
 }
@@ -9,7 +11,7 @@ export function getVehicleSubcategory(
   signal: AbortSignal | undefined
 ): Promise<rdwSubcategoryData[]> {
   return axios
-    .get('https://opendata.rdw.nl/resource/2ba7-embk.json', {
+    .get(ENDPOINT, {
       params: { kenteken: licensePlate },
       signal,
     })

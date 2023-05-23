@@ -4,17 +4,17 @@ import debounce from 'lodash/debounce'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
-import { AddressSearchResults } from '../../../../shared/components/AddressSearchResults'
-import { FormLabel } from '../../../../shared/components/FormLabel'
-import { Address } from '../../../../types/address'
+import { AddressSearchResults } from '../../../../../shared/components/AddressSearchResults'
+import { FormLabel } from '../../../../../shared/components/FormLabel'
+import { Address } from '../../../../../types/address'
 
-import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
+import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 
-import ScenarioWizardNav from './ScenarioWizardNav'
+import ScenarioWizardNav from '../ScenarioWizardNav'
 import {
   address as addressApi,
   AddressItem,
-} from '../../../../api/atlas/search/address'
+} from '../../../../../api/atlas/search/address'
 
 const debouncedHandler = debounce((e, handler) => handler(e), 500)
 
@@ -22,7 +22,7 @@ type FormScenarioAddressInputs = {
   searchAddress: Address['label']
 }
 
-const ProhibitorySignsFormScenarioAddress = () => {
+export const ProhibitorySignsFormScenarioAddress = () => {
   const { setActiveStepWizard, address, setAddress } =
     useProhibitorySignsPageContext()
   const [addressOptions, setAddressOptions] = useState<AddressItem[] | []>([])
@@ -135,5 +135,3 @@ const ProhibitorySignsFormScenarioAddress = () => {
     </form>
   )
 }
-
-export default ProhibitorySignsFormScenarioAddress

@@ -15,7 +15,7 @@ export const ROUTES: RouteObject[] = [
   {
     /* the url /verbodsborden is used for communication purposes */
     path: '/verbodsborden',
-    id: 'PROHIBITORY_SIGNS_REDIRECT',
+    id: 'PROHIBITORY_SIGNS_PAGE',
     element: <Navigate replace to="/" />,
   },
   {

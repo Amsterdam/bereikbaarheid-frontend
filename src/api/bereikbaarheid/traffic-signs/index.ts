@@ -3,7 +3,7 @@ import { Feature, FeatureCollection, Point } from 'geojson'
 import { Vehicle } from '../../../pages/ProhibitorySigns/types/vehicle'
 import { api } from '../index'
 
-const ENDPOINT = 'v1/traffic-signs'
+export const ENDPOINT = 'v1/traffic-signs'
 
 export type TrafficSignCategory =
   | 'verbod'
