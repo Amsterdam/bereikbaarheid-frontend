@@ -10,7 +10,7 @@ services:
       - TZ=Europe/Amsterdam
     ipc: host
     ports:
-      - "5000:80"
+      - "5000:8080"
 
   test:
     build:

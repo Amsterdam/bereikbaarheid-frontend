@@ -29,7 +29,7 @@ COPY .env.${BUILD_ENV} /app/.env
 RUN npm run build
 
 # Deploy
-FROM nginx:stable-alpine
+FROM nginxinc/nginx-unprivileged:mainline-alpine-slim
 COPY --from=builder /app/build/. /var/www/html/
 
 ARG NGINX_CONF=nginx.default.conf
