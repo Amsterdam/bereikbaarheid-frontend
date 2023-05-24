@@ -68,6 +68,7 @@ const FormRdwInfoVehicleTotalWeight = ({
       <RdwInfoFormColumn span={4}>
         <InputWithSuffix displayAsText suffix="kg">
           <Input
+            data-testid="rdw-form-vehicle-total-weight"
             id="vehicleTotalWeight"
             disabled
             error={Boolean(errors.vehicleTotalWeight)}

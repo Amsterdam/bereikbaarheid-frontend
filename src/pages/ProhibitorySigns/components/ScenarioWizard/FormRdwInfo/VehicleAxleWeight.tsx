@@ -59,6 +59,7 @@ const FormRdwInfoVehicleAxleWeight = ({
       <RdwInfoFormColumn span={4}>
         <InputWithSuffix suffix="kg">
           <Input
+            data-testid="rdw-form-vehicle-axle-weight"
             id="vehicleAxleWeight"
             error={Boolean(errors.vehicleAxleWeight)}
             {...registerAxleWeight}

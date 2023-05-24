@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
-import { getVehicle } from '../../../../api/rdw/vehicle'
-import { zToNumber } from '../../../../shared/utils/zodPreprocess'
+import { getVehicle } from '../../../../../api/rdw/vehicle'
+import { zToNumber } from '../../../../../shared/utils/zodPreprocess'
 
 function isPermittedVehicleType(vehicleType: string) {
   const permittedVehicleTypes = ['Bedrijfsauto', 'Bus', 'Personenauto']

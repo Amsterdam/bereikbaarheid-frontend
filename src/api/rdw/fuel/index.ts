@@ -1,5 +1,7 @@
 import axios from 'axios'
 
+export const ENDPOINT = 'https://opendata.rdw.nl/resource/8ys7-d773.json'
+
 export interface rdwFuelData {
   brandstof_omschrijving: string
   emissiecode_omschrijving: string
@@ -10,7 +12,7 @@ export function getFuelInfo(
   signal: AbortSignal | undefined
 ): Promise<rdwFuelData[]> {
   return axios
-    .get('https://opendata.rdw.nl/resource/8ys7-d773.json', {
+    .get(ENDPOINT, {
       params: { kenteken: licensePlate },
       signal,
     })

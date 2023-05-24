@@ -1,0 +1,119 @@
+{
+    "features": [
+        {
+            "geometry": {
+                "coordinates": [
+                    4.759063803,
+                    52.381229155
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "additional_info": "",
+                "category": "verbod",
+                "id": 13479031,
+                "label": "2,2",
+                "label_as_value": 2.2,
+                "link_to_panoramic_image": "https://data.amsterdam.nl/data/geozoek/?heading=135&lagen=pano-pano2021bi%7Cpano-pano2020woz%7Cpano-pano2020bi%7Cpano-pano2019woz%7Cpano-pano2019bi%7Cpano-pano2018woz%7Cpano-pano2018bi%7Cpano-pano2017woz%7Cpano-pano2017bi%7Cpano-pano2016bi&locatie=52.3812895241456%2C4.75896515029827&pitch=7.868079730118292&zoom=12",
+                "network_link_id": 1955,
+                "street_name": "Osdorperweg",
+                "traffic_decree_id": "",
+                "type": "C18",
+                "view_direction_in_degrees": 135
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.759063803,
+                    52.381229155
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "additional_info": "",
+                "category": "verbod",
+                "id": 13479030,
+                "label": "4,8\u00a0t",
+                "label_as_value": 4800,
+                "link_to_panoramic_image": "https://data.amsterdam.nl/data/geozoek/?heading=135&lagen=pano-pano2021bi%7Cpano-pano2020woz%7Cpano-pano2020bi%7Cpano-pano2019woz%7Cpano-pano2019bi%7Cpano-pano2018woz%7Cpano-pano2018bi%7Cpano-pano2017woz%7Cpano-pano2017bi%7Cpano-pano2016bi&locatie=52.3812895241456%2C4.75896515029827&pitch=7.868079730118292&zoom=12",
+                "network_link_id": 1955,
+                "street_name": "Osdorperweg",
+                "traffic_decree_id": "",
+                "type": "C20",
+                "view_direction_in_degrees": 135
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.759063803,
+                    52.381229155
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "additional_info": "",
+                "category": "verbod",
+                "id": 13479031,
+                "label": "2,2",
+                "label_as_value": 2.2,
+                "link_to_panoramic_image": "https://data.amsterdam.nl/data/geozoek/?heading=135&lagen=pano-pano2021bi%7Cpano-pano2020woz%7Cpano-pano2020bi%7Cpano-pano2019woz%7Cpano-pano2019bi%7Cpano-pano2018woz%7Cpano-pano2018bi%7Cpano-pano2017woz%7Cpano-pano2017bi%7Cpano-pano2016bi&locatie=52.3812895241456%2C4.75896515029827&pitch=7.868079730118292&zoom=12",
+                "network_link_id": 1955,
+                "street_name": "Osdorperweg",
+                "traffic_decree_id": "",
+                "type": "C18",
+                "view_direction_in_degrees": 135
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.759063803,
+                    52.381229155
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "additional_info": "",
+                "category": "verbod",
+                "id": 13479030,
+                "label": "4,8\u00a0t",
+                "label_as_value": 4800,
+                "link_to_panoramic_image": "https://data.amsterdam.nl/data/geozoek/?heading=135&lagen=pano-pano2021bi%7Cpano-pano2020woz%7Cpano-pano2020bi%7Cpano-pano2019woz%7Cpano-pano2019bi%7Cpano-pano2018woz%7Cpano-pano2018bi%7Cpano-pano2017woz%7Cpano-pano2017bi%7Cpano-pano2016bi&locatie=52.3812895241456%2C4.75896515029827&pitch=7.868079730118292&zoom=12",
+                "network_link_id": 1955,
+                "street_name": "Osdorperweg",
+                "traffic_decree_id": "",
+                "type": "C20",
+                "view_direction_in_degrees": 135
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    4.759063803,
+                    52.381229155
+                ],
+                "type": "Point"
+            },
+            "properties": {
+                "additional_info": "",
+                "category": "verbod",
+                "id": 13479031,
+                "label": "2,2",
+                "label_as_value": 2.2,
+                "link_to_panoramic_image": "https://data.amsterdam.nl/data/geozoek/?heading=135&lagen=pano-pano2021bi%7Cpano-pano2020woz%7Cpano-pano2020bi%7Cpano-pano2019woz%7Cpano-pano2019bi%7Cpano-pano2018woz%7Cpano-pano2018bi%7Cpano-pano2017woz%7Cpano-pano2017bi%7Cpano-pano2016bi&locatie=52.3812895241456%2C4.75896515029827&pitch=7.868079730118292&zoom=12",
+                "network_link_id": 1955,
+                "street_name": "Osdorperweg",
+                "traffic_decree_id": "",
+                "type": "C18",
+                "view_direction_in_degrees": 135
+            },
+            "type": "Feature"
+        }
+    ]
+}

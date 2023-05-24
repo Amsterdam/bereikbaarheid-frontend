@@ -15,18 +15,18 @@ import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import styled from 'styled-components'
 import { z } from 'zod'
 
-import { FormLabel } from '../../../../shared/components/FormLabel'
-import InputWithSuffix from '../../../../shared/components/InputWithSuffix'
-import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
+import { FormLabel } from '../../../../../shared/components/FormLabel'
+import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
+import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 
-import { Vehicle } from '../../types/vehicle'
+import { Vehicle } from '../../../types/vehicle'
 import {
   FormInputLicensePlate,
   FormInputLicensePlateWidth,
-} from './FormInputLicensePlate/Style'
-import FormScenarioStartSampleLicensePlates from './FormScenarioStartSampleLicensePlates'
-import { FormScenarioStartValidationSchema } from './FormScenarioStartValidationSchema'
-import ScenarioWizardNav from './ScenarioWizardNav'
+} from '../FormInputLicensePlate/Style'
+import { FormScenarioStartSampleLicensePlates } from './SampleLicensePlates'
+import { FormScenarioStartValidationSchema } from './ValidationSchema'
+import ScenarioWizardNav from '../ScenarioWizardNav'
 
 const FormFieldWrapper = styled.div`
   margin-bottom: ${themeSpacing(3)};
@@ -63,7 +63,7 @@ export type FormScenarioStartInputs = {
   vehicleHeight: Vehicle['height']
 }
 
-const ProhibitorySignsFormScenarioStart = ({
+export const ProhibitorySignsFormScenarioStart = ({
   addressInputEnabled,
   setAddressInputEnabled,
 }: ProhibitorySignsFormScenarioStartProps) => {
@@ -206,5 +206,3 @@ const ProhibitorySignsFormScenarioStart = ({
     </>
   )
 }
-
-export default ProhibitorySignsFormScenarioStart

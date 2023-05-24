@@ -1,0 +1,27 @@
+[
+    {
+        "kenteken": "BXLS14",
+        "voertuigsoort": "Bedrijfsauto",
+        "merk": "DAF",
+        "handelsbenaming": "ETE11",
+        "inrichting": "vuilniswagen",
+        "aantal_zitplaatsen": "3",
+        "aantal_cilinders": "0",
+        "massa_ledig_voertuig": "16810",
+        "toegestane_maximum_massa_voertuig": "26500",
+        "massa_rijklaar": "16910",
+        "datum_eerste_toelating": "20100330",
+        "datum_eerste_tenaamstelling_in_nederland": "20100330",
+        "laadvermogen": "9690",
+        "aantal_wielen": "6",
+        "lengte": "823",
+        "breedte": "255",
+        "europese_voertuigcategorie": "N3",
+        "plaats_chassisnummer": "r. balk by vooras",
+        "technische_max_massa_voertuig": "26500",
+        "vermogen_massarijklaar": "0.01",
+        "wielbasis": "480",
+        "taxi_indicator": "Nee",
+        "maximum_last_onder_de_vooras_sen_tezamen_koppeling": "0"
+    }
+]
