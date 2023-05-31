@@ -5,8 +5,8 @@ import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
 
-import { FormRdwInfoInputProps, FormRdwInfoInputs } from './FormRdwInfo'
-import { RdwInfoFormColumn, RdwInfoFormRow } from './FormRdwInfoStyle'
+import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
+import { RdwInfoFormColumn, RdwInfoFormRow } from './FormStyle'
 
 const FormRdwInfoVehicleWidth = ({
   errors,

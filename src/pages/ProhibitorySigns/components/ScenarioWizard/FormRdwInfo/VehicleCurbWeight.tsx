@@ -5,12 +5,12 @@ import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
 
-import { FormRdwInfoInputProps, FormRdwInfoInputs } from './FormRdwInfo'
+import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
 import {
   RdwInfoFormColumn,
   RdwInfoFormLabelHelpText,
   RdwInfoFormRow,
-} from './FormRdwInfoStyle'
+} from './FormStyle'
 import styled from 'styled-components'
 
 const StyledFormRow = styled(RdwInfoFormRow)`

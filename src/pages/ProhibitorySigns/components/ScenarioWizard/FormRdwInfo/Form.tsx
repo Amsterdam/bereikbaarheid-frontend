@@ -23,7 +23,7 @@ import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
 import ScenarioWizardNav from './../ScenarioWizardNav'
 
-import { RdwInfoFormInnerContainer, RdwInfoFormRow } from './FormRdwInfoStyle'
+import { RdwInfoFormInnerContainer, RdwInfoFormRow } from './FormStyle'
 import FormRdwInfoIntroText from './IntroText'
 import FormRdwInfoVehicleAxleWeight from './VehicleAxleWeight'
 import FormRdwInfoVehicleCurbWeight from './VehicleCurbWeight'
@@ -48,11 +48,11 @@ export interface FormRdwInfoInputProps<TFormValues extends FieldValues> {
   register: UseFormRegister<TFormValues>
 }
 
-interface ProhibitorySignsFormScenarioRdwInfoProps {
+export interface ProhibitorySignsFormScenarioRdwInfoProps {
   addressInputEnabled: boolean
 }
 
-const ProhibitorySignsFormScenarioRdwInfo = ({
+export const ProhibitorySignsFormScenarioRdwInfo = ({
   addressInputEnabled,
 }: ProhibitorySignsFormScenarioRdwInfoProps) => {
   const { setActiveStepWizard, setShowScenarioWizard, vehicle, setVehicle } =
@@ -104,7 +104,10 @@ const ProhibitorySignsFormScenarioRdwInfo = ({
 
           <FormRdwInfoIntroText />
 
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            data-testid="form-scenario-rdw-info"
+          >
             <RdwInfoFormInnerContainer>
               <RdwInfoFormRow hasMargin={false}>
                 <Column push={4} span={4}>
@@ -165,5 +168,3 @@ const ProhibitorySignsFormScenarioRdwInfo = ({
     </CompactThemeProvider>
   )
 }
-
-export default ProhibitorySignsFormScenarioRdwInfo
