@@ -152,6 +152,7 @@ const getVehicle = (params: URLSearchParams) => {
   const mocks: Record<string, string> = {
     '24BJL7': require('./mocks/rdw/vehicle/24bjl7.json'), // vehicle + trailer use case
     '65JRDP': require('./mocks/rdw/vehicle/65jrdp.json'), // no maximum allowed weight
+    '85BPF2': require('./mocks/rdw/vehicle/85bpf2.json'), // mobile crane
     BXLS14: require('./mocks/rdw/vehicle/bxls14.json'), // valid vehicle
     OT77FJ: require('./mocks/rdw/vehicle/ot77fj.json'), // trailer
   }

@@ -1,1 +1,1 @@
-export { default } from './FormRdwInfo'
+export { ProhibitorySignsFormScenarioRdwInfo } from './Form'
