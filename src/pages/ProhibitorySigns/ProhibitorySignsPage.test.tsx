@@ -82,4 +82,47 @@ describe('ProhibitorySignsPage', () => {
       prohibitoryRoadSectionsData.features.length
     )
   })
+
+  // the expert mode of the page provides additional functionality for
+  // checking the content of the page (e.g network, traffic signs, etc)
+  // it can be activated by adding the URL parameter expertMode=true
+  it('provides extra functionality when using the page in expert mode', async () => {
+    const pathToPage = generatePath(getPathTo('HOME'))
+    const user = userEvent.setup()
+
+    withApp(`${pathToPage}?expertMode=true`)
+
+    // wait until page is rendered
+    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+
+    // fill out the first form
+    // in expert mode a number of vehicles can be selected from a dropdown
+    await user.selectOptions(screen.getByTestId('vehicle-select-list'), [
+      'Vuilniswagen',
+    ])
+
+    expect(screen.getByLabelText('Kenteken')).toHaveValue('BXLS14')
+
+    // ... but uncheck the address option
+    await user.click(await screen.findByLabelText('Ik wil een adres invoeren'))
+
+    await user.click(screen.getByText('Volgende', { selector: 'button' }))
+
+    // the next step should be the form with RDW information
+    expect(
+      await within(screen.getByRole('dialog')).findByText('RDW gegevens')
+    ).toBeVisible()
+
+    // complete the wizard
+    await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
+
+    // wait for the map to load
+    await waitFor(() =>
+      // eslint-disable-next-line testing-library/no-node-access
+      document.querySelectorAll('.leaflet-overlay-pane svg path')
+    )
+
+    // an extra baselayer - topography with color style - is available
+    expect(screen.getByLabelText(/topografie kleur/i)).toBeVisible()
+  })
 })

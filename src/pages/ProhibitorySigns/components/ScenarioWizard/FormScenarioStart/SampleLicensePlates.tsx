@@ -86,6 +86,7 @@ export const FormScenarioStartSampleLicensePlates = ({
   return (
     <StyledSelect
       id="expertModeLicensePlate"
+      data-testid="vehicle-select-list"
       defaultValue={selected}
       onChange={presetFormValues}
     >

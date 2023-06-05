@@ -1,58 +1,96 @@
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
 
 import { withMapContext } from '../../../../../test/utils/prohibitorySigns/withMapContext'
 import { withQueryClient } from '../../../../../test/utils/withQueryClient'
+import ProhibitorySignsPageProvider from '../../contexts/PageProvider'
 import DetailFeature from './DetailFeature'
 
 const parkingSpace = require('./../../../../../test/mocks/parkingSpace-122028486875.json')
-const trafficSigns = require('./../../../../../test/mocks/trafficSigns.json')
+const trafficSigns = require('./../../../../../test/mocks/bereikbaarheid/traffic-signs/data.json')
 
-it('renders the traffic sign info', async () => {
-  const mapContextProps = {
-    currentTrafficSign: trafficSigns.features[0],
-  }
+describe('ProhibitorySignsDetailFeature', () => {
+  it('renders the traffic sign info', async () => {
+    const mapContextProps = {
+      currentTrafficSign: trafficSigns.features[0],
+    }
 
-  render(withMapContext(<DetailFeature />, mapContextProps))
+    render(withMapContext(<DetailFeature />, mapContextProps))
 
-  const trafficSignId = screen.getByText(trafficSigns.features[0].properties.id)
-  expect(trafficSignId).toBeInTheDocument()
-})
+    expect(
+      screen.getByText(trafficSigns.features[0].properties.id)
+    ).toBeVisible()
+  })
 
-it('shows the parking space info of the selected location', async () => {
-  const mapContextProps = {
-    location: [52.36876459937893, 4.903081749692417] as [number, number],
-  }
+  it('renders additional traffic sign info when in expert mode', async () => {
+    const mapContextProps = {
+      currentTrafficSign: trafficSigns.features[0],
+    }
 
-  const { rerender } = withQueryClient(
-    withMapContext(<DetailFeature />, mapContextProps)
-  )
+    render(
+      withMapContext(
+        <MemoryRouter initialEntries={['/?expertMode=true']}>
+          <ProhibitorySignsPageProvider>
+            <DetailFeature />
+          </ProhibitorySignsPageProvider>
+        </MemoryRouter>,
+        mapContextProps
+      )
+    )
 
-  // wait until the info has been fetched from the API
-  await waitFor(() => rerender)
-  const parkingSpaceId = await screen.findByText(parkingSpace.id)
+    expect(screen.getByText('Link nummer')).toBeVisible()
+    expect(screen.getByText('Bekijk foto')).toBeVisible()
+  })
 
-  expect(parkingSpaceId).toBeInTheDocument()
-})
+  it('shows the parking space info of the selected location', async () => {
+    const mapContextProps = {
+      location: [52.36876459937893, 4.903081749692417] as [number, number],
+    }
 
-it('shows no results message if no parking space is found at the selected location', async () => {
-  const mapContextProps = {
-    location: [52.37953213655618, 4.893368482589723] as [number, number],
-  }
+    withQueryClient(withMapContext(<DetailFeature />, mapContextProps))
 
-  const { rerender } = withQueryClient(
-    withMapContext(<DetailFeature />, mapContextProps)
-  )
+    // wait until the info has been fetched from the API
+    await screen.findByText(parkingSpace.id)
 
-  // wait until the info has been fetched from the API
-  await waitFor(() => rerender)
-  await screen.findByText(/parkeerplaats/)
+    expect(screen.getByText(parkingSpace.id)).toBeVisible()
+  })
 
-  const message = screen.getByText(
-    /Geen parkeerplaats gevonden op deze locatie/i
-  )
-  expect(message).toBeInTheDocument()
-})
+  it('shows no results message if no parking space is found at the selected location', async () => {
+    const mapContextProps = {
+      location: [52.37953213655618, 4.893368482589723] as [number, number],
+    }
 
-it.skip('info about a selected location takes precedence over a displayed traffic sign', async () => {
-  // see issue 414
+    withQueryClient(withMapContext(<DetailFeature />, mapContextProps))
+
+    await screen.findByText(/parkeerplaats/)
+
+    expect(
+      screen.getByText(/Geen parkeerplaats gevonden op deze locatie/i)
+    ).toBeVisible()
+  })
+
+  it('info about a selected location takes precedence over a displayed traffic sign', async () => {
+    const { rerender } = withQueryClient(
+      withMapContext(<DetailFeature />, {
+        currentTrafficSign: trafficSigns.features[0],
+      })
+    )
+
+    expect(
+      screen.getByText(trafficSigns.features[0].properties.id)
+    ).toBeVisible()
+
+    rerender(
+      withMapContext(<DetailFeature />, {
+        location: [52.36876459937893, 4.903081749692417] as [number, number],
+      })
+    )
+
+    await screen.findByText(parkingSpace.id)
+
+    expect(screen.getByText(parkingSpace.id)).toBeVisible()
+    expect(
+      screen.queryByText(trafficSigns.features[0].properties.id)
+    ).not.toBeInTheDocument()
+  })
 })

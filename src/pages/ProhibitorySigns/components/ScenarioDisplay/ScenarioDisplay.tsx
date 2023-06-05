@@ -25,7 +25,7 @@ const ScenarioDisplay = ({ ...otherProps }: MapPanelContentProps) => {
   }, [setPositionFromSnapPoint, showScenarioWizard])
 
   return (
-    <MapPanelContent {...otherProps}>
+    <MapPanelContent data-testid="scenario-display" {...otherProps}>
       {/* only display scenario outcome when needed info is available
           for hooks embedded in included components */}
       {!showScenarioWizard && (
