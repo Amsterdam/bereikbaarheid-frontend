@@ -56,7 +56,11 @@ const ScenarioDisplayRdwInfo = () => {
       <HeaderRow halign="space-between" hasMargin={false}>
         <Column span={12}>
           <Heading as="h4">Uw invoer, stap 2</Heading>
-          <EditFiltersButton variant="textButton" onClick={showScenarioWizard}>
+          <EditFiltersButton
+            data-testid="change-rdw-info"
+            variant="textButton"
+            onClick={showScenarioWizard}
+          >
             wijzig
           </EditFiltersButton>
         </Column>
