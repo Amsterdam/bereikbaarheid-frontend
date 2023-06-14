@@ -4,7 +4,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.5.0...HEAD)
+## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.6.0...HEAD)
+
+
+## [v2.6.0 - 2023-06-13](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.5.0...v2.6.0)
+
+### Added
+- Prohibitory signs: add test suite
+
+### Changed
+- Switch to non-root nginx docker image
+
+### Fixed
+- updated dependencies to latest minor and patch versions
 
 
 ## [v2.5.0 - 2023-05-15](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.4.0...v2.5.0)
@@ -14,7 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Road obstructions: add test suite
 - Road section: add test suite
 
-## Fixed
+### Fixed
 - updated dependencies to latest minor and patch versions
 - updated `@hookform/resolvers` to version 3
 
