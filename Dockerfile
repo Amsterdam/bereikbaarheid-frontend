@@ -1,4 +1,4 @@
-FROM node:16-stretch AS base
+FROM node:18 AS base
 
 ENV BROWSER=none
 
