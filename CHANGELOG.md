@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.6.0...HEAD)
 
+### Fixed
+- upgrade Node to version 18
+
 
 ## [v2.6.0 - 2023-06-13](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.5.0...v2.6.0)
 
