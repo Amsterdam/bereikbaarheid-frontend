@@ -24,7 +24,12 @@ const ProhibitorySignsDetailFeatureTrafficSignImage = () => {
   const isZonalSign = endsWith(signType, 'zb')
   const signCategory = currentTrafficSign?.properties.category
   const imageText = () => {
-    let text = currentTrafficSign?.properties.label.replace(/t|m|/g, '').trim()
+    let text = currentTrafficSign?.properties.label
+
+    if (typeof text === 'string') {
+      text = text.replace(/t|m|/g, '').trim()
+    }
+
     return text !== 'None' ? text : null
   }
 
