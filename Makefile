@@ -19,7 +19,7 @@ app:                                ## Run app
 test:                               ## Execute tests
 	$(run) test $(ARGS)
 
-upgrade:                            ## Upgrade dependencies
+requirements:                       ## Upgrade dependencies
 	$(run) upgrade $(ARGS)
 
 clean:                              ## Clean docker stuff
