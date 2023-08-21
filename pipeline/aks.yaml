@@ -1,0 +1,32 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+  tags:
+    include:
+      - "*.*.*"
+
+variables:
+  # Debugging
+  System.Debug: true
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: opdrachten/templates
+      ref: main
+
+extends:
+  template: pipelines/aks/template.yaml@templates
+  parameters:
+    name: bereikbaarheid-frontend
+    dev:
+      pool: Opdrachten
+      namespace: ns-ccc-opdr-ont-01-bereikbaarheid
+      kubernetesServiceConnection: "SCN-K8S-ns-ccc-opdr-ont-01-bereikbaarheid"
+    test:
+      pool: Opdrachten
+      namespace: ns-ccc-opdr-tst-01-bereikbaarheid
+      kubernetesServiceConnection: "SCN-K8S-ns-ccc-opdr-tst-01-bereikbaarheid"

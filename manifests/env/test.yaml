@@ -1,0 +1,28 @@
+tenantId: 72fca1b1-2c2e-4376-a445-294d80196804
+
+# Default keyvault for getting secrets
+keyVaultName: bereikbaarheid-t-qstb5ip
+
+# Identity AppID (clientId) used to authenticate with the keyvault
+workloadIdentity: 88fb36b5-8b76-419a-91ae-a5868ec88f74
+
+# We must select the nodepool to run the pods on
+nodepool: cccopdrtst01
+
+# Default host for the ingress resources
+host: bereikbaarheid.opdr-t.azure.amsterdam.nl
+
+# Some default environment variables to inject in all containers
+env:
+  AZURE_KEY_VAULT: "https://bereikbaarheid-t-qstb5ip.vault.azure.net/"
+  # Shared cluster managed identity (same for all applications)
+  AZURE_MANAGED_IDENTITY_CLIENTID: 42fbed0f-0af4-440d-8e5a-35a2c46aa314
+
+# Specify the keyvault that has the certificate
+secrets:
+  certificate:
+    keyVaultName: shared-t-ddxsibl3lrdai
+
+ingress:
+  app:
+    className: nginx-internal

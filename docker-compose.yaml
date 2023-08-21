@@ -6,6 +6,7 @@ services:
       args:
         - BUILD_ENV=development
         - NGINX_CONF=nginx.dockercompose.conf
+    image: ${REGISTRY:-docker-registry.data.amsterdam.nl}/${REPOSITORY:-opdrachten/bereikbaarheid-frontend}:${VERSION:-latest}
     environment: &environment
       - TZ=Europe/Amsterdam
     ipc: host
