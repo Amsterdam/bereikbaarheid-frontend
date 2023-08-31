@@ -22,6 +22,9 @@ extends:
   template: pipelines/aks/template.yaml@templates
   parameters:
     name: bereikbaarheid-frontend
+    build:
+      analyzeImages:
+      - opdrachten/bereikbaarheid-frontend
     dev:
       pool: Opdrachten
       namespace: ns-ccc-opdr-ont-01-bereikbaarheid
