@@ -1,5 +1,5 @@
 //
-// api.data.amsterdam.nl/bereikbaarheid API
+// bereikbaarheid.amsterdam.nl/api/ API
 //
 
 import axios from 'axios'
