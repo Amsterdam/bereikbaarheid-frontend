@@ -11,6 +11,7 @@ import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
 
 import { RoadSectionDetails } from './components/Details'
 import { RoadSectionMap } from './components/Map'
+import AnalyticsProvider from '../ProhibitorySigns/contexts/AnalyticsProvider'
 
 const StyledColumn = styled(Column)`
   flex-direction: column;
@@ -37,7 +38,7 @@ const RoadSectionPage = () => {
   }
 
   return (
-    <>
+    <AnalyticsProvider>
       <Header />
 
       <main data-testid="road-section-page">
@@ -55,7 +56,7 @@ const RoadSectionPage = () => {
           </Row>
         </ContentContainer>
       </main>
-    </>
+    </AnalyticsProvider>
   )
 }
 
