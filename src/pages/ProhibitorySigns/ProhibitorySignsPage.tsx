@@ -32,6 +32,12 @@ const StyledMap = styled(Map<typeof Map>)`
   flex-grow: 1;
 `
 
+const StyledMapPanelDrawer = styled(MapPanelDrawer)`
+  & > div > div {
+    z-index: 1;
+  }
+`
+
 const ProhibitorySignsPage = () => {
   const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
 
@@ -45,7 +51,7 @@ const ProhibitorySignsPage = () => {
     }
   }, [mapInstance])
 
-  const Element = showDesktopVariant ? MapPanel : MapPanelDrawer
+  const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   return (
     <PageWrapper>
