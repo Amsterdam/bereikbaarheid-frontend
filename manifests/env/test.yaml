@@ -12,12 +12,6 @@ nodepool: cccopdrtst01
 # Default host for the ingress resources
 host: bereikbaarheid.opdr-t.azure.amsterdam.nl
 
-# Some default environment variables to inject in all containers
-env:
-  AZURE_KEY_VAULT: "https://bereikbaarheid-t-qstb5ip.vault.azure.net/"
-  # Shared cluster managed identity (same for all applications)
-  AZURE_MANAGED_IDENTITY_CLIENTID: 42fbed0f-0af4-440d-8e5a-35a2c46aa314
-
 # Specify the keyvault that has the certificate
 secrets:
   certificate:
