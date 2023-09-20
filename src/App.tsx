@@ -24,7 +24,7 @@ const piwikInstance = createInstance({
   siteId: '3',
   disabled: !isProd,
   heartBeat: {
-    active: !isProd,
+    active: true,
     seconds: 10,
   },
 })
