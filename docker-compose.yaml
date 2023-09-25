@@ -32,5 +32,4 @@ services:
 
 networks:
   default:
-    external: true
     name: amsterdam-bereikbaarheid
