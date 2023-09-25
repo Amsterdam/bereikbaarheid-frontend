@@ -6,7 +6,7 @@
 .pnp.js
 
 # build
-docker-compose.override.yml
+docker-compose.override.yaml
 
 # testing
 /coverage
