@@ -87,7 +87,9 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
   return (
     <>
       {parkingSigns?.length ? (
-        <PaddedImageContainer>{parkingSigns}</PaddedImageContainer>
+        <PaddedImageContainer data-testid="detail-feature-road-section-sign">
+          {parkingSigns}
+        </PaddedImageContainer>
       ) : (
         <></>
       )}
