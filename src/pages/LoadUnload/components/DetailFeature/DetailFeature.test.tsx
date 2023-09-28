@@ -31,7 +31,7 @@ describe('DetailFeature', () => {
     const page = withApp(pathToPage)
     const user = userEvent.setup()
 
-    jest.spyOn(window, 'scrollTo').mockImplementation(() => { })
+    jest.spyOn(window, 'scrollTo').mockImplementation(() => {})
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
@@ -56,7 +56,7 @@ describe('DetailFeature', () => {
     const page = withApp(pathToPage)
     const user = userEvent.setup()
 
-    jest.spyOn(window, 'scrollTo').mockImplementation(() => { })
+    jest.spyOn(window, 'scrollTo').mockImplementation(() => {})
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
