@@ -31,7 +31,7 @@ describe('DetailFeature', () => {
     const page = withApp(pathToPage)
     const user = userEvent.setup()
 
-    jest.spyOn(window, 'scrollTo').mockImplementation(() => {})
+    jest.spyOn(window, 'scrollTo').mockImplementation(() => { })
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
@@ -51,12 +51,12 @@ describe('DetailFeature', () => {
     ).toBeInTheDocument()
   })
 
-  it('shows road section detail info with stopping forbidden sign when clicking on a feature', async () => {
+  it('shows road section detail pane with forbidden to stop sign when clicking on a feature', async () => {
     const pathToPage = generatePath(getPathTo('LOAD_UNLOAD_PAGE'))
     const page = withApp(pathToPage)
     const user = userEvent.setup()
 
-    jest.spyOn(window, 'scrollTo').mockImplementation(() => {})
+    jest.spyOn(window, 'scrollTo').mockImplementation(() => { })
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
@@ -69,7 +69,7 @@ describe('DetailFeature', () => {
       '.leaflet-overlay-pane svg path'
     )
 
-    // TODO: this may fail if the API data changes. We need to attach traffice sign data on leaflet elements that have them.
+    // TODO: this may fail when the API data changes. We need to attach traffic sign data on the leaflet elements that have them.
     await user.click(roadSections[0])
 
     expect(
