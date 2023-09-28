@@ -33,6 +33,23 @@ export const HeaderMenuItems = () => {
       <MenuItem>
         <MenuButton
           as={Link}
+          to={generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))}
+          active={
+            matchPath(
+              location.pathname,
+              generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+            )
+              ? 'true'
+              : undefined
+          }
+        >
+          Verbodsborden
+        </MenuButton>
+      </MenuItem>
+
+      <MenuItem>
+        <MenuButton
+          as={Link}
           to={generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))}
           active={
             matchPath(

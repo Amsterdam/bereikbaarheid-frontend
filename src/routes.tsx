@@ -1,22 +1,22 @@
-import { Navigate, RouteObject } from 'react-router-dom'
+import { RouteObject } from 'react-router-dom'
 
 import ErrorPage from './pages/ErrorPage'
 import LoadUnloadPage from './pages/LoadUnload/LoadUnloadPage'
 import ProhibitorySignsPage from './pages/ProhibitorySigns/ProhibitorySignsPage'
 import RoadObstructionsPage from './pages/RoadObstructions/RoadObstructionsPage'
 import RoadSectionPage from './pages/RoadSection/RoadSectionPage'
+import HomePage from './pages/Home/HomePage'
 
 export const ROUTES: RouteObject[] = [
   {
     path: '/',
     id: 'HOME',
-    element: <ProhibitorySignsPage />,
+    element: <HomePage />,
   },
   {
-    /* the url /verbodsborden is used for communication purposes */
     path: '/verbodsborden',
     id: 'PROHIBITORY_SIGNS_PAGE',
-    element: <Navigate replace to="/" />,
+    element: <ProhibitorySignsPage />,
   },
   {
     path: '/laden-lossen',

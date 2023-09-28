@@ -7,7 +7,7 @@ import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ProhibitorySignsWideRoads', () => {
   it('enables the wide roads map layer for large and/or heavy vehicles', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
     const user = userEvent.setup()
 
     const { container } = withApp(pathToPage)

@@ -7,7 +7,7 @@ import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ScenarioDisplay', () => {
   it('displays the result after finishing the scenario wizard', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
@@ -49,7 +49,7 @@ describe('ScenarioDisplay', () => {
   })
 
   it('updates the result when input is changed after finishing the initial scenario wizard', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
