@@ -42,11 +42,11 @@ export const ROUTES: RouteObject[] = [
 ]
 
 export function getPathTo(routeId: string): string {
-  let route = ROUTES.filter(r => r.id === routeId)
+  let route = ROUTES.find(r => r.id === routeId)
 
   if (!route) {
     throw new Error(`Route with ID ${routeId} not found.`)
   }
 
-  return route[0].path!
+  return route.path!
 }
