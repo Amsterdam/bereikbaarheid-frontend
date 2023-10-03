@@ -1,4 +1,4 @@
-import { format, parseISO } from 'date-fns'
+import { format, parse, parseISO } from 'date-fns'
 
 const defaultFormat = 'dd-MM-yyyy HH:mm'
 
@@ -10,4 +10,8 @@ const defaultFormat = 'dd-MM-yyyy HH:mm'
  */
 export function formatISODate(date: string, formatString = defaultFormat) {
   return format(parseISO(date), formatString)
+}
+
+export function formatTime(time: string) {
+  return format(parse(time, 'HH:mm:ss', new Date()), 'HH:mm')
 }

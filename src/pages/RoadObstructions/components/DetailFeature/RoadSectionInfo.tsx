@@ -14,7 +14,7 @@ import { generatePath, Link as RouterLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { getPathTo } from '../../../../routes'
-import { formatISODate } from '../../../../shared/utils/formatDate'
+import { formatISODate } from '../../../../shared/utils/dateTime'
 
 import {
   DetailFeature,

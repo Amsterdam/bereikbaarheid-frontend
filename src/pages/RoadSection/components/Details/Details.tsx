@@ -14,7 +14,7 @@ import {
 import styled from 'styled-components'
 
 import LinkInTable from '../../../../shared/components/LinkInTable'
-import { formatISODate } from '../../../../shared/utils/formatDate'
+import { formatISODate } from '../../../../shared/utils/dateTime'
 import { RoadObstruction } from '../../../../api/bereikbaarheid/road-obstructions'
 import { RoadSection } from '../../../../api/bereikbaarheid/road-elements'
 

@@ -13,7 +13,7 @@ import { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
 import { useLoadUnloadPageContext } from '../contexts/PageContext'
-import { formatISODate } from '../../../shared/utils/formatDate'
+import { formatISODate } from '../../../shared/utils/dateTime'
 
 const DateTimeHeaderRow = styled(Row)`
   margin-top: ${themeSpacing(4)};

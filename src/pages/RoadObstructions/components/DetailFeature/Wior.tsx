@@ -7,7 +7,7 @@ import {
 import { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
-import { formatISODate } from '../../../../shared/utils/formatDate'
+import { formatISODate } from '../../../../shared/utils/dateTime'
 
 import { DetailFeature, DetailFeatureWior } from '../../types/detailFeature'
 

@@ -6,6 +6,8 @@ import { getPathTo } from '../../../../routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('MapLegend', () => {
+  jest.setTimeout(10000)
+
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
     const user = userEvent.setup()

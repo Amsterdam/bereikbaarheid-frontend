@@ -15,7 +15,7 @@ import {
 import { format, isAfter, parse, startOfYesterday } from 'date-fns'
 import styled from 'styled-components'
 
-import { formatISODate } from '../../utils/formatDate'
+import { formatISODate } from '../../utils/dateTime'
 
 import {
   ImageContainer,
