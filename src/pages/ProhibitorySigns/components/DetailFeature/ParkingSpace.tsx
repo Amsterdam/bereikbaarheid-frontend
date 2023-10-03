@@ -16,7 +16,7 @@ import { isAfter, parse, startOfYesterday } from 'date-fns'
 import styled from 'styled-components'
 
 import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
-import { formatISODate } from '../../../../shared/utils/formatDate'
+import { formatISODate } from '../../../../shared/utils/dateTime'
 import { useParkingSpaceInfo } from '../../hooks/useParkingSpaceInfo'
 
 import {
