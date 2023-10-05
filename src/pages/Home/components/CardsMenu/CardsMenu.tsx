@@ -23,6 +23,13 @@ const StyledCard = styled(Card)`
 
 const StyledCardMedia = styled(CardMedia)`
   height: 100%;
+
+  &:hover,
+  &:focus {
+    img {
+      transform: scale(2) rotate(15deg);
+    }
+  }
 `
 
 const StyledCardContent = styled(CardContent)`
@@ -39,6 +46,10 @@ const StyledHeading = styled(Heading)`
   }
 `
 
+const StyledImage = styled(Image)`
+  transition: transform 500ms linear;
+`
+
 const CardsMenu = () => {
   const cardDataWithPaths = useMemo<CardDataWithPath[]>(() => {
     return cardData.map(card => {
@@ -47,6 +58,18 @@ const CardsMenu = () => {
       if (card.path) cardWithPath.path = card.path
       if (card.route) cardWithPath.path = generatePath(getPathTo(card.route))
       if (card.target) cardWithPath.target = card.target
+
+      try {
+        if (card.image) cardWithPath.image = require(`./images/${card.image}`)
+        if (card.imageFallback) {
+          cardWithPath.imageFallback = require(`./images/${card.imageFallback}`)
+        }
+      } catch (error) {
+        console.error(
+          'Requested image could not be loaded. Does it exist at "./images/"?'
+        )
+        console.error((error as Error).message)
+      }
 
       return cardWithPath
     })
@@ -63,7 +86,15 @@ const CardsMenu = () => {
         >
           <StyledCard maxWidth={300} backgroundColor="level2" shadow>
             <StyledCardMedia>
-              <Image src="https://picsum.photos/300/200/" alt={card.title} />
+              <picture>
+                <source srcSet={card.image} type="image/webp" />
+                <StyledImage
+                  src={card.imageFallback}
+                  alt={card.title}
+                  width="300"
+                  height="200"
+                />
+              </picture>
             </StyledCardMedia>
             <StyledCardContent>
               <StyledHeading as="h4">

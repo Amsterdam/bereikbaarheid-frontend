@@ -14,6 +14,7 @@ enum RouteIds {
   ROAD_OBSTRUCTIONS_PAGE = 'ROAD_OBSTRUCTIONS_PAGE',
   LOAD_UNLOAD_PAGE = 'LOAD_UNLOAD_PAGE',
   ROAD_SECTION_DETAIL_PAGE = 'ROAD_SECTION_DETAIL_PAGE',
+  DATA = 'DATA',
   CONTACT = 'CONTACT',
   PAGE_NOT_FOUND = 'PAGE_NOT_FOUND',
 }
@@ -51,6 +52,11 @@ const ROUTES: RouteObjectWithPredefinedIds[] = [
     id: RouteIds.ROAD_SECTION_DETAIL_PAGE,
     element: <RoadSectionPage />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: '/data',
+    id: RouteIds.DATA,
+    element: <HomePage />,
   },
   {
     path: '/contact',
