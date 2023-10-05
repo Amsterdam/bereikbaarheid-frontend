@@ -20,11 +20,11 @@ export const HeaderMenuItems = () => {
       <MenuItem>
         <MenuButton
           as={Link}
-          to={generatePath(getPathTo(RouteIds.PROHIBITORY_SIGNS_PAGE))}
+          to={generatePath(getPathTo(RouteIds.LICENCE_PLATE_PAGE))}
           active={
             matchPath(
               location.pathname,
-              generatePath(getPathTo(RouteIds.PROHIBITORY_SIGNS_PAGE))
+              generatePath(getPathTo(RouteIds.LICENCE_PLATE_PAGE))
             )
               ? 'true'
               : undefined

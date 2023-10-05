@@ -9,7 +9,7 @@ describe('ProhibitorySignsWideRoads', () => {
   jest.setTimeout(10000)
 
   it('enables the wide roads map layer for large and/or heavy vehicles', async () => {
-    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     const { container } = withApp(pathToPage)

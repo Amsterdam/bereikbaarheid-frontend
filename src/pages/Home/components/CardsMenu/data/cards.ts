@@ -17,7 +17,7 @@ interface CardDataWithPath extends CardDataBase {
 const cardData: CardDataRaw[] = [
   {
     title: 'Bereikbaarheid op kenteken',
-    route: 'PROHIBITORY_SIGNS_PAGE' as RouteIds,
+    route: 'LICENCE_PLATE_PAGE' as RouteIds,
   },
   {
     title: 'Stremmingen',

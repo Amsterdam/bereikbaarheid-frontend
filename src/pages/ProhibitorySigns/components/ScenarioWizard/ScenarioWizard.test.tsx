@@ -9,7 +9,7 @@ describe('ScenarioWizard', () => {
   jest.setTimeout(10000)
 
   it('an address it not required to complete the wizard', async () => {
-    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
@@ -43,7 +43,7 @@ describe('ScenarioWizard', () => {
   })
 
   it('adjusts the RDW form when choosing the vehicle + trailer option', async () => {
-    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
     const vehicle = require('./../../../../../test/mocks/rdw/vehicle/24bjl7.json')
 

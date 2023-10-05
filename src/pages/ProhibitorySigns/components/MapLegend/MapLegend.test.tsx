@@ -9,7 +9,7 @@ describe('MapLegend', () => {
   jest.setTimeout(10000)
 
   it('renders correctly', async () => {
-    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
@@ -57,7 +57,7 @@ describe('MapLegend', () => {
   // item and the loading & enabling of the map layer makes use of
   // the same - mapInstance based - mechanism.
   it('enables the load/unload spaces layer when zooming in', async () => {
-    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)

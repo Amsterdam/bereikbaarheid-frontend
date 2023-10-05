@@ -9,7 +9,7 @@ describe('ProhibitorySignsPage', () => {
   jest.setTimeout(10000)
 
   it('renders correctly', async () => {
-    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
 
     withApp(pathToPage)
 
@@ -34,7 +34,7 @@ describe('ProhibitorySignsPage', () => {
   })
 
   // it('renders the map when the wizard is completed', async () => {
-  //   const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+  //   const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
   //   const page = withApp(pathToPage)
   //   const prohibitoryRoadSectionsData = require('../../../test/mocks/bereikbaarheid/roads/prohibitory/data.json')
   //   const user = userEvent.setup()
@@ -89,7 +89,7 @@ describe('ProhibitorySignsPage', () => {
   // checking the content of the page (e.g network, traffic signs, etc)
   // it can be activated by adding the URL parameter expertMode=true
   it('provides extra functionality when using the page in expert mode', async () => {
-    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(`${pathToPage}?expertMode=true`)

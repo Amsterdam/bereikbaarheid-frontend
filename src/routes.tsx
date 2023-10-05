@@ -1,4 +1,4 @@
-import { RouteObject } from 'react-router-dom'
+import { Navigate, RouteObject } from 'react-router-dom'
 
 import ErrorPage from './pages/ErrorPage'
 import LoadUnloadPage from './pages/LoadUnload/LoadUnloadPage'
@@ -9,6 +9,7 @@ import HomePage from './pages/Home/HomePage'
 
 enum RouteIds {
   HOME = 'HOME',
+  LICENCE_PLATE_PAGE = 'LICENCE_PLATE_PAGE',
   PROHIBITORY_SIGNS_PAGE = 'PROHIBITORY_SIGNS_PAGE',
   ROAD_OBSTRUCTIONS_PAGE = 'ROAD_OBSTRUCTIONS_PAGE',
   LOAD_UNLOAD_PAGE = 'LOAD_UNLOAD_PAGE',
@@ -26,9 +27,14 @@ const ROUTES: RouteObjectWithPredefinedIds[] = [
     element: <HomePage />,
   },
   {
+    path: '/op-kenteken',
+    id: RouteIds.LICENCE_PLATE_PAGE,
+    element: <ProhibitorySignsPage />,
+  },
+  {
     path: '/verbodsborden',
     id: RouteIds.PROHIBITORY_SIGNS_PAGE,
-    element: <ProhibitorySignsPage />,
+    element: <Navigate replace to="/op-kenteken" />,
   },
   {
     path: '/stremmingen',

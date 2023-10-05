@@ -9,7 +9,7 @@ describe('ScenarioDisplay', () => {
   jest.setTimeout(10000)
 
   it('displays the result after finishing the scenario wizard', async () => {
-    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
@@ -51,7 +51,7 @@ describe('ScenarioDisplay', () => {
   })
 
   it('updates the result when input is changed after finishing the initial scenario wizard', async () => {
-    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
