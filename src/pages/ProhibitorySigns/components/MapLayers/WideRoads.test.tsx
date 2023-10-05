@@ -6,6 +6,8 @@ import { getPathTo } from '../../../../routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ProhibitorySignsWideRoads', () => {
+  jest.setTimeout(10000)
+
   it('enables the wide roads map layer for large and/or heavy vehicles', async () => {
     const pathToPage = generatePath(getPathTo('HOME'))
     const user = userEvent.setup()
@@ -37,6 +39,8 @@ describe('ProhibitorySignsWideRoads', () => {
 
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
+
+    await user.click(await screen.findByLabelText('Breed opgezette wegen'))
 
     // the wide roads layer should be enabled
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access

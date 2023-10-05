@@ -1,27 +1,31 @@
 # Bereikbaarheid frontend
-Deze folder bevat de Bereikbaarheid frontend zoals zichtbaar op https://acc.bereikbaarheid.amsterdam.nl/ (acceptatie) en https://bereikbaarheid.amsterdam.nl/ (productie).
 
-Een werkkaart kun je activeren met de parameter `expertMode=true`, bijv. https://acc.bereikbaarheid.amsterdam.nl/?expertMode=true . Hiermee heb je toegang tot extra functionaliteit wat het makkelijker maakt om de content van de kaart te checken.
+Deze folder bevat de Bereikbaarheid frontend zoals zichtbaar op [https://acc.bereikbaarheid.amsterdam.nl/](https://acc.bereikbaarheid.amsterdam.nl/) (acceptatie) en [https://bereikbaarheid.amsterdam.nl/](https://bereikbaarheid.amsterdam.nl/) (productie).
+
+Een werkkaart kun je activeren met de parameter `expertMode=true`, bijv. [https://acc.bereikbaarheid.amsterdam.nl/?expertMode=true](https://acc.bereikbaarheid.amsterdam.nl/?expertMode=true). Hiermee heb je toegang tot extra functionaliteit wat het makkelijker maakt om de content van de kaart te checken.
 
 ## Mappen & bestanden
+
 Deze folder is als volgt ingedeeld:
 
-* `public`: bevat static files; worden meegenomen in `npm run build`
-* `src`: bevat de React applicatie.
-* `test`: bevat test utils. Deze worden gebruikt in `npm run test`
-* `.env.*`: env variables voor de diverse omgevingen. Worden ingesteld door `npm run start` of via de `Jenkinsfile` in de root folder.
-* `Dockerfile` bevat config voor de Docker omgeving.
-* `nginx.*.conf`; bevat nginx configuraties voor diverse omgevingen.
+- `public`: bevat static files; worden meegenomen in `npm run build`
+- `src`: bevat de React applicatie.
+- `test`: bevat test utils. Deze worden gebruikt in `npm run test`
+- `.env.*`: env variables voor de diverse omgevingen. Worden ingesteld door `npm run start` of via de `Jenkinsfile` in de root folder.
+- `Dockerfile` bevat config voor de Docker omgeving.
+- `nginx.*.conf`; bevat nginx configuraties voor diverse omgevingen.
 
 ## Getting Started
 
 ### To have a look around
+
 - Make sure the API is running locally, for more info see the [bereikbaarheid-backend repo](https://github.com/Amsterdam/bereikbaarheid-backend).
 - Create the docker images: `make build`
 - Run the docker container: `make app`
 - View the app at [http://localhost:5000](http://localhost:5000)
 
 ### Om aanpassingen aan de frontend te maken
+
 1. Installeer [Node.js](https://nodejs.org/en/)
 2. Installeer [NVM](https://github.com/nvm-sh/nvm) om te kunnen werken met verschillende Node versies op je lokale machine
 3. Configureer je IDE zodat de volgende zaken ondersteund, bijv. dmv plugins:
@@ -38,15 +42,18 @@ Een hot-reloaded versie van de frontend is beschikbaar via [http://localhost:300
 De frontend is gescaffold met [Create React App](https://github.com/facebook/create-react-app) en afgestemd op [Amsterdam frontend-react-template](https://github.com/Amsterdam/frontend-react-template).
 
 ### Hoe is het CORS issue opgelost in de verschillende scenario's?
-- Tijdens ontwikkeling van de frontend zorgt CRA voor de proxy, zie `package.json`. 
+
+- Tijdens ontwikkeling van de frontend zorgt CRA voor de proxy, zie `package.json`.
 - Om CORS issues in de docker-compose setup te vermijden, wordt een aparte NGINX setup (`nginx.dockercompose.conf`) gebruikt. Via een build argument wordt bepaald welke nginx configuratie wordt geladen.
 
 ## CI/CD
+
 On every pull request and push to the `main` branch, the application is [linted and tested if it can be build](./.github/workflows/ci.yml).
 
-Additionally the app is deployed to the acceptance environment on push to the `main` branch, see [the `Jenkinsfile`](./Jenkinsfile).
+Additionally, the app is deployed to the acceptance environment on push to the `main` branch, see [the `Jenkinsfile`](./Jenkinsfile).
 
 ## Available Scripts
+
 In this directory, you can run:
 
 - `npm start`: runs the app in the development mode. For more info, see 'Getting started'.

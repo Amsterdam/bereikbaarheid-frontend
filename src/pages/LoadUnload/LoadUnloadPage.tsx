@@ -35,6 +35,12 @@ const StyledMap = styled(Map<typeof Map>)`
   flex-grow: 1;
 `
 
+const StyledMapPanelDrawer = styled(MapPanelDrawer)`
+  & > div > div {
+    z-index: 1;
+  }
+`
+
 const LoadUnloadPage = () => {
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
@@ -50,7 +56,7 @@ const LoadUnloadPage = () => {
   const [showAddressForm, setShowAddressForm] = useState(false)
   const [showDateTimeModal, setShowDateTimeModal] = useState(false)
   const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
-  const Element = showDesktopVariant ? MapPanel : MapPanelDrawer
+  const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   return (
     <AnalyticsProvider>

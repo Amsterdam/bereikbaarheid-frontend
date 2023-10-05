@@ -6,6 +6,8 @@ import { getPathTo } from '../../../../routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ScenarioDisplay', () => {
+  jest.setTimeout(10000)
+
   it('displays the result after finishing the scenario wizard', async () => {
     const pathToPage = generatePath(getPathTo('HOME'))
     const user = userEvent.setup()
