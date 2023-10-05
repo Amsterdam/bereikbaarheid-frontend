@@ -58,7 +58,7 @@ const ProhibitorySignsPage = () => {
       <ProhibitorySignsPageProvider>
         <ProhibitorySignsHeader
           setOpenFeedbackModal={setOpenFeedbackModal}
-          title="Bereikbaarheid Amsterdam op Kenteken"
+          title="Bereikbaarheid op kenteken"
         />
 
         <MainContent data-testid="prohibitory-signs-page">

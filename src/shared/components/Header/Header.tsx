@@ -31,7 +31,7 @@ export interface HeaderProps {
 }
 
 export const Header = ({ additionalMenuItems, title, zIndex }: HeaderProps) => {
-  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
+  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'laptop' })
 
   return (
     <ASCHeader

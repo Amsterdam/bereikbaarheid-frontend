@@ -7,41 +7,58 @@ import RoadObstructionsPage from './pages/RoadObstructions/RoadObstructionsPage'
 import RoadSectionPage from './pages/RoadSection/RoadSectionPage'
 import HomePage from './pages/Home/HomePage'
 
-export const ROUTES: RouteObject[] = [
+enum RouteIds {
+  HOME = 'HOME',
+  PROHIBITORY_SIGNS_PAGE = 'PROHIBITORY_SIGNS_PAGE',
+  ROAD_OBSTRUCTIONS_PAGE = 'ROAD_OBSTRUCTIONS_PAGE',
+  LOAD_UNLOAD_PAGE = 'LOAD_UNLOAD_PAGE',
+  ROAD_SECTION_DETAIL_PAGE = 'ROAD_SECTION_DETAIL_PAGE',
+  CONTACT = 'CONTACT',
+  PAGE_NOT_FOUND = 'PAGE_NOT_FOUND',
+}
+
+type RouteObjectWithPredefinedIds = RouteObject & { id: RouteIds }
+
+const ROUTES: RouteObjectWithPredefinedIds[] = [
   {
     path: '/',
-    id: 'HOME',
+    id: RouteIds.HOME,
     element: <HomePage />,
   },
   {
     path: '/verbodsborden',
-    id: 'PROHIBITORY_SIGNS_PAGE',
+    id: RouteIds.PROHIBITORY_SIGNS_PAGE,
     element: <ProhibitorySignsPage />,
   },
   {
-    path: '/laden-lossen',
-    id: 'LOAD_UNLOAD_PAGE',
-    element: <LoadUnloadPage />,
-  },
-  {
     path: '/stremmingen',
-    id: 'ROAD_OBSTRUCTIONS_PAGE',
+    id: RouteIds.ROAD_OBSTRUCTIONS_PAGE,
     element: <RoadObstructionsPage />,
   },
   {
+    path: '/laden-lossen',
+    id: RouteIds.LOAD_UNLOAD_PAGE,
+    element: <LoadUnloadPage />,
+  },
+  {
     path: '/wegvak/:id',
-    id: 'ROAD_SECTION_DETAIL_PAGE',
+    id: RouteIds.ROAD_SECTION_DETAIL_PAGE,
     element: <RoadSectionPage />,
     errorElement: <ErrorPage />,
   },
   {
+    path: '/contact',
+    id: RouteIds.CONTACT,
+    element: <HomePage />,
+  },
+  {
     path: '*',
-    id: 'PAGE_NOT_FOUND',
+    id: RouteIds.PAGE_NOT_FOUND,
     element: <p>Pagina niet gevonden.</p>,
   },
 ]
 
-export function getPathTo(routeId: string): string {
+function getPathTo(routeId: string): string {
   let route = ROUTES.find(r => r.id === routeId)
 
   if (!route) {
@@ -50,3 +67,5 @@ export function getPathTo(routeId: string): string {
 
   return route.path!
 }
+
+export { RouteIds, ROUTES, getPathTo }
