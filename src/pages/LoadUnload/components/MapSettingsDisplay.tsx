@@ -6,6 +6,8 @@ import {
   Heading,
   Paragraph,
   Row,
+  Tab,
+  Tabs,
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
@@ -14,6 +16,9 @@ import styled from 'styled-components'
 
 import { useLoadUnloadPageContext } from '../contexts/PageContext'
 import { formatISODate } from '../../../shared/utils/dateTime'
+import { LoadUnloadPageProvider } from '../contexts/PageProvider'
+import { DataSourcesAside } from '../../Data/components/DataSources'
+import dataLinks from '../data/dataLinks'
 
 const DateTimeHeaderRow = styled(Row)`
   margin-top: ${themeSpacing(4)};
@@ -49,80 +54,92 @@ export const LoadUnloadMapSettingsDisplay = ({
 
   return (
     <MapPanelContent data-testid="map-settings" {...otherProps}>
-      <CompactThemeProvider>
-        <Row halign="space-between" hasMargin={false}>
-          <Column span={12}>
-            <Heading as="h3">Adres</Heading>
-            <EditSettingButton
-              data-testid="change-address"
-              variant="textButton"
-              onClick={showAddressForm}
-            >
-              wijzig
-            </EditSettingButton>
-          </Column>
-        </Row>
+      <Tabs label="Voer adres en moment in of bekijk dataverantwoording">
+        <Tab id="input" label="Invoer">
+          <CompactThemeProvider>
+            <Row halign="space-between" hasMargin={false}>
+              <Column span={12}>
+                <Heading as="h3" style={{ marginTop: 16 }}>
+                  Adres
+                </Heading>
+                <EditSettingButton
+                  data-testid="change-address"
+                  variant="textButton"
+                  onClick={showAddressForm}
+                >
+                  wijzig
+                </EditSettingButton>
+              </Column>
+            </Row>
 
-        <FiltersContainer>
-          <Row halign="flex-start" hasMargin={false}>
-            <Column span={12}>
-              <Paragraph gutterBottom={0}>
-                {address.label ?? 'Geen adres ingesteld'}
-              </Paragraph>
-            </Column>
-          </Row>
-        </FiltersContainer>
+            <FiltersContainer>
+              <Row halign="flex-start" hasMargin={false}>
+                <Column span={12}>
+                  <Paragraph gutterBottom={0}>
+                    {address.label ?? 'Geen adres ingesteld'}
+                  </Paragraph>
+                </Column>
+              </Row>
+            </FiltersContainer>
 
-        <DateTimeHeaderRow halign="space-between" hasMargin={false}>
-          <Column span={12}>
-            <Heading as="h3">Datum en tijd</Heading>
-            <EditSettingButton
-              data-testid="change-date-time"
-              variant="textButton"
-              onClick={showDateTimeModal}
-            >
-              wijzig
-            </EditSettingButton>
-          </Column>
-        </DateTimeHeaderRow>
+            <DateTimeHeaderRow halign="space-between" hasMargin={false}>
+              <Column span={12}>
+                <Heading as="h3">Datum en tijd</Heading>
+                <EditSettingButton
+                  data-testid="change-date-time"
+                  variant="textButton"
+                  onClick={showDateTimeModal}
+                >
+                  wijzig
+                </EditSettingButton>
+              </Column>
+            </DateTimeHeaderRow>
 
-        <FiltersContainer>
-          <Row halign="flex-start" hasMargin={false}>
-            <Column span={4}>
-              <Paragraph gutterBottom={0} strong>
-                Datum
-              </Paragraph>
-            </Column>
-            <Column span={6}>
-              <Paragraph gutterBottom={0}>
-                {formatISODate(dateTime.date, 'dd-MM-yyyy')}
-              </Paragraph>
-            </Column>
-          </Row>
+            <FiltersContainer>
+              <Row halign="flex-start" hasMargin={false}>
+                <Column span={4}>
+                  <Paragraph gutterBottom={0} strong>
+                    Datum
+                  </Paragraph>
+                </Column>
+                <Column span={6}>
+                  <Paragraph gutterBottom={0}>
+                    {formatISODate(dateTime.date, 'dd-MM-yyyy')}
+                  </Paragraph>
+                </Column>
+              </Row>
 
-          <Row halign="flex-start" hasMargin={false}>
-            <Column span={4}>
-              <Paragraph gutterBottom={0} strong>
-                Van
-              </Paragraph>
-            </Column>
-            <Column span={6}>
-              <Paragraph gutterBottom={0}>{dateTime.timeFrom}</Paragraph>
-            </Column>
-          </Row>
+              <Row halign="flex-start" hasMargin={false}>
+                <Column span={4}>
+                  <Paragraph gutterBottom={0} strong>
+                    Van
+                  </Paragraph>
+                </Column>
+                <Column span={6}>
+                  <Paragraph gutterBottom={0}>{dateTime.timeFrom}</Paragraph>
+                </Column>
+              </Row>
 
-          <Row halign="flex-start" hasMargin={false}>
-            <Column span={4}>
-              <Paragraph gutterBottom={0} strong>
-                Tot
-              </Paragraph>
-            </Column>
-            <Column span={6}>
-              <Paragraph gutterBottom={0}>{dateTime.timeTo}</Paragraph>
-            </Column>
-          </Row>
-        </FiltersContainer>
-      </CompactThemeProvider>
+              <Row halign="flex-start" hasMargin={false}>
+                <Column span={4}>
+                  <Paragraph gutterBottom={0} strong>
+                    Tot
+                  </Paragraph>
+                </Column>
+                <Column span={6}>
+                  <Paragraph gutterBottom={0}>{dateTime.timeTo}</Paragraph>
+                </Column>
+              </Row>
+            </FiltersContainer>
+          </CompactThemeProvider>
+        </Tab>
+
+        <Tab id="data" label="Brondata">
+          <LoadUnloadPageProvider>
+            <DataSourcesAside dataLinks={dataLinks} />
+          </LoadUnloadPageProvider>
+        </Tab>
+      </Tabs>
     </MapPanelContent>
   )
 }
