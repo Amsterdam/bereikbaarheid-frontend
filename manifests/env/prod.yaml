@@ -1,0 +1,22 @@
+tenantId: 72fca1b1-2c2e-4376-a445-294d80196804
+
+# Default keyvault for getting secrets
+keyVaultName: bereikbaarheid-p-3codib2
+
+# Identity AppID (clientId) used to authenticate with the keyvault
+workloadIdentity: 93bfb4da-7d05-456b-8a8f-cbe571f8237a
+
+# We must select the nodepool to run the pods on
+nodepool: cccopdrprd01
+
+# Default host for the ingress resources
+host: bereikbaarheid.opdr.azure.amsterdam.nl
+
+# Specify the keyvault that has the certificate
+secrets:
+  certificate:
+    keyVaultName: shared-p-fvzhzurrbxcfc
+
+ingress:
+  app:
+    className: nginx-internal

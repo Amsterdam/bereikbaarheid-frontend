@@ -33,3 +33,11 @@ extends:
       pool: Opdrachten
       namespace: ns-ccc-opdr-tst-01-bereikbaarheid
       kubernetesServiceConnection: "SCN-K8S-ns-ccc-opdr-tst-01-bereikbaarheid"
+    acc:
+      pool: Opdrachten
+      namespace: ns-ccc-opdr-acc-01-bereikbaarheid
+      kubernetesServiceConnection: "SCN-K8S-ns-ccc-opdr-acc-01-bereikbaarheid"
+    prod:
+      pool: Opdrachten
+      namespace: ns-ccc-opdr-prd-01-bereikbaarheid
+      kubernetesServiceConnection: "SCN-K8S-ns-ccc-opdr-prd-01-bereikbaarheid"
