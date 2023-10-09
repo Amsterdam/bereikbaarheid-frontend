@@ -23,7 +23,7 @@ extends:
   parameters:
     name: bereikbaarheid-frontend
     build:
-      analyzeImages:
+      producedImages:
       - opdrachten/bereikbaarheid-frontend
     dev:
       pool: Opdrachten
