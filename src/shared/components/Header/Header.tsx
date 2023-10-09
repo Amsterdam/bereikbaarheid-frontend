@@ -6,7 +6,6 @@ import {
   styles,
   useMatchMedia,
 } from '@amsterdam/asc-ui'
-import type { ReactNode } from 'react'
 import styled from 'styled-components'
 
 import { HEADER_HEIGHT, Z_INDEX_HEADER } from '../../constants'
@@ -25,12 +24,11 @@ const StyledMenu = styled(MenuInline)`
 `
 
 export interface HeaderProps {
-  additionalMenuItems?: ReactNode
   title?: string
   zIndex?: number
 }
 
-export const Header = ({ additionalMenuItems, title, zIndex }: HeaderProps) => {
+export const Header = ({ title, zIndex }: HeaderProps) => {
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'laptop' })
 
   return (
@@ -46,12 +44,10 @@ export const Header = ({ additionalMenuItems, title, zIndex }: HeaderProps) => {
           {!showDesktopVariant ? (
             <MenuToggle align="right">
               <HeaderMenuItems></HeaderMenuItems>
-              {additionalMenuItems}
             </MenuToggle>
           ) : (
             <StyledMenu>
               <HeaderMenuItems></HeaderMenuItems>
-              {additionalMenuItems}
             </StyledMenu>
           )}
         </>
@@ -65,7 +61,7 @@ export const Header = ({ additionalMenuItems, title, zIndex }: HeaderProps) => {
 
         // Header title
         & h1 a:nth-of-type(2) {
-          font-size: 1.125rem;
+          font-size: 1.25rem;
         }
       `}
     />

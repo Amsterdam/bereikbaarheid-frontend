@@ -6,6 +6,8 @@ import ProhibitorySignsPage from './pages/ProhibitorySigns/ProhibitorySignsPage'
 import RoadObstructionsPage from './pages/RoadObstructions/RoadObstructionsPage'
 import RoadSectionPage from './pages/RoadSection/RoadSectionPage'
 import HomePage from './pages/Home/HomePage'
+import DataPage from './pages/Data/DataPage'
+import ContactPage from './pages/Contact/ContactPage'
 
 enum RouteIds {
   HOME = 'HOME',
@@ -56,12 +58,12 @@ const ROUTES: RouteObjectWithPredefinedIds[] = [
   {
     path: '/data',
     id: RouteIds.DATA,
-    element: <HomePage />,
+    element: <DataPage />,
   },
   {
     path: '/contact',
     id: RouteIds.CONTACT,
-    element: <HomePage />,
+    element: <ContactPage />,
   },
   {
     path: '*',

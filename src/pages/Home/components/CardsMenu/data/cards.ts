@@ -36,20 +36,20 @@ const cardData: CardDataRaw[] = [
     imageFallback: 'laden-en-lossen.jpg',
   },
   {
-    title: 'Tour Buzz',
+    title: 'Touringcars (Tour Buzz)',
     path: 'https://tourbuzz.amsterdam.nl/',
     target: '_blank',
     image: 'tour-buzz.webp',
     imageFallback: 'tour-buzz.jpg',
   },
   {
-    title: 'API & data',
+    title: 'Databronnen',
     route: 'DATA' as RouteIds,
     image: 'json.webp',
     imageFallback: 'json.jpg',
   },
   {
-    title: 'Contact & feedback',
+    title: 'Contact en hulp',
     route: 'CONTACT' as RouteIds,
   },
 ]

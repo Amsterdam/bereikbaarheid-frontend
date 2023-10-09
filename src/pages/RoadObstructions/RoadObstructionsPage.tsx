@@ -16,7 +16,6 @@ import styled from 'styled-components'
 import 'leaflet/dist/leaflet.css'
 
 import { HEADER_HEIGHT, Z_INDEX_MODAL } from '../../shared/constants'
-import FeedbackModal from '../../shared/components/FeedbackModal'
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import { MapStyle } from '../../shared/map/mapStyle'
 import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
@@ -29,7 +28,6 @@ import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
 
 import RoadObstructionsFiltersDisplay from './components/FiltersDisplay'
 import { RoadObstructionsFiltersForm } from './components/FiltersForm'
-import RoadObstructionsHeader from './components/Header'
 import RoadObstructionsLayer from './components/RoadObstructionsLayer'
 import RoadObstructionsViewerContainer from './components/ViewerContainer'
 import { DetailFeature } from './types/detailFeature'
@@ -38,6 +36,7 @@ import WiorLayer from './components/WiorLayer'
 import RoadObstructionsMapProvider from './contexts/MapProvider'
 import RoadObstructionsDetailFeature from './components/DetailFeature'
 import { RoadObstructionsHighlightedFeatureLayer } from './components/HighlightedFeature'
+import { Header } from '../../shared/components/Header'
 
 const { SnapPoint } = mapPanelConstants
 
@@ -85,17 +84,12 @@ const RoadObstructionsPage = () => {
 
   useDocumentTitle(`Stremmingen op ${dateFormatted}`)
 
-  const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   return (
     <>
       <PageWrapper>
-        <RoadObstructionsHeader
-          mapFilters={mapFilters}
-          setOpenFeedbackModal={setOpenFeedbackModal}
-          title={`Stremmingen op ${dateFormatted}`}
-        />
+        <Header title={`Stremmingen op ${dateFormatted}`} />
 
         <MainContent data-testid="road-obstructions-page">
           <MapStyle />
@@ -168,8 +162,6 @@ const RoadObstructionsPage = () => {
           setShowMapFiltersForm={setShowMapFiltersForm}
         />
       </Modal>
-
-      <FeedbackModal setOpen={setOpenFeedbackModal} open={openFeedbackModal} />
     </>
   )
 }

@@ -1,10 +1,8 @@
-import { useState } from 'react'
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
-import { CARD_WIDTH_PX, CardsMenu } from './components/CardsMenu'
+import { Header } from '../../shared/components/Header'
+import CardsMenu, { CARD_WIDTH_PX } from './components/CardsMenu'
 
-import HomeHeader from './components/Header'
 import styled from 'styled-components'
-import FeedbackModal from '../../shared/components/FeedbackModal'
 
 const GRID_GAP_PX = 32
 
@@ -23,20 +21,13 @@ const StyledMainContent = styled(MainContent)`
 `
 
 const HomePage = () => {
-  const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
-
   return (
     <PageWrapper>
-      <HomeHeader
-        setOpenFeedbackModal={setOpenFeedbackModal}
-        title="Bereikbaarheid"
-      />
+      <Header title="Bereikbaarheid" />
 
       <StyledMainContent data-testid="home-page">
         <CardsMenu />
       </StyledMainContent>
-
-      <FeedbackModal setOpen={setOpenFeedbackModal} open={openFeedbackModal} />
     </PageWrapper>
   )
 }

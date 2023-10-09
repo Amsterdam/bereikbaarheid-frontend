@@ -1,4 +1,3 @@
-import { Link, MenuButton, MenuItem } from '@amsterdam/asc-ui'
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 
@@ -45,23 +44,5 @@ describe('Header', () => {
     expect(screen.getByText('Home')).toBeInTheDocument()
     expect(screen.getByText('Stremmingen')).toBeInTheDocument()
     expect(screen.getByText('Laden en lossen')).toBeInTheDocument()
-  })
-
-  it('contains any additional menu items', () => {
-    const additionalMenuItem = (
-      <MenuItem>
-        <MenuButton as={Link}>Additional item</MenuButton>
-      </MenuItem>
-    )
-
-    render(
-      withAppContext(
-        <BrowserRouter>
-          <Header additionalMenuItems={additionalMenuItem} />
-        </BrowserRouter>
-      )
-    )
-
-    expect(screen.getByText('Additional item')).toBeInTheDocument()
   })
 })
