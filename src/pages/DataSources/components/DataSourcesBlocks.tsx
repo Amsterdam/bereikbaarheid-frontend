@@ -152,7 +152,7 @@ const DataSourcesAside = ({ dataLinks }: DataSourcesLinksBlockProps) => {
   )
 }
 
-const DataSources = ({ dataLinks }: DataSourcesLinksBlockProps) => {
+const DataSourcesBlocks = ({ dataLinks }: DataSourcesLinksBlockProps) => {
   return (
     <>
       <DataSourcesLinks dataLinks={dataLinks} />
@@ -171,4 +171,4 @@ export {
   DataSourcesQuestions,
   DataSourcesAside,
 }
-export default DataSources
+export default DataSourcesBlocks

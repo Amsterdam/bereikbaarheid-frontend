@@ -11,7 +11,7 @@ import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import {
   DataLink,
   DataSourcesAside,
-} from '../../../Data/components/DataSources'
+} from '../../../DataSources/components/DataSourcesBlocks'
 
 import ScenarioDisplayRdwInfo from './RdwInfo'
 import ScenarioDisplayResult from './Result'

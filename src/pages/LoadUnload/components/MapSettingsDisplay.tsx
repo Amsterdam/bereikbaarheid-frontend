@@ -17,7 +17,7 @@ import styled from 'styled-components'
 import { useLoadUnloadPageContext } from '../contexts/PageContext'
 import { formatISODate } from '../../../shared/utils/dateTime'
 import { LoadUnloadPageProvider } from '../contexts/PageProvider'
-import { DataSourcesAside } from '../../Data/components/DataSources'
+import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
 import dataLinks from '../data/dataLinks'
 
 const DateTimeHeaderRow = styled(Row)`

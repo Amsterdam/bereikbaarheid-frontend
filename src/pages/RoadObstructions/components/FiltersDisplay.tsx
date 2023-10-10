@@ -14,7 +14,7 @@ import { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
 import { RoadObstructionMapFilters } from '../types/roadObstructionMapFilters'
-import { DataSourcesAside } from '../../Data/components/DataSources'
+import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
 import ProhibitorySignsPageProvider from '../../ProhibitorySigns/contexts/PageProvider'
 import dataLinks from '../data/dataLinks'
 

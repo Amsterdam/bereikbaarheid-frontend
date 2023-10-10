@@ -1,6 +1,6 @@
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 
-import DataSources from './components/DataSources'
+import DataSourcesBlocks from './components/DataSourcesBlocks'
 import styled from 'styled-components'
 import { themeSpacing } from '@amsterdam/asc-ui'
 import { format } from 'date-fns'
@@ -38,7 +38,7 @@ const DataPage = () => {
       <Header title="Databronnen" />
 
       <StyledMainContent data-testid="data-page">
-        <DataSources dataLinks={dataLinks} />
+        <DataSourcesBlocks dataLinks={dataLinks} />
       </StyledMainContent>
     </PageWrapper>
   )
