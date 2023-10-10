@@ -10,8 +10,8 @@ import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { ProhibitorySignsFormScenarioStart } from './FormScenarioStart'
 import { ProhibitorySignsFormScenarioAddress } from './FormScenarioAddress'
 import { ProhibitorySignsFormScenarioRdwInfo } from './FormRdwInfo'
-import { RouteIds, getPathTo } from '../../../../routes'
-import { generatePath } from 'react-router-dom'
+import { RouteIds } from '../../../../routes'
+import { getGeneratedPath } from '../../../../shared/utils/path'
 
 const AnimatedModalBlock = animated(ModalBlock)
 
@@ -55,7 +55,7 @@ const ProhibitorySignsScenarioWizard = () => {
       <TopBar>
         <Heading as="h2">Invoer gegevens</Heading>
 
-        <Link href={generatePath(getPathTo(RouteIds.CONTACT))} target="_blank">
+        <Link href={getGeneratedPath(RouteIds.CONTACT)} target="_blank">
           Feedback
         </Link>
       </TopBar>
