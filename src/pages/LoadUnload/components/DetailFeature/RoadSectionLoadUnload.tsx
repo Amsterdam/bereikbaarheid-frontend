@@ -14,7 +14,7 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import groupBy from 'lodash/groupBy'
-import { formatTime } from '../../../../shared/utils/dateTime'
+import { stripSecondsFromTime } from '../../../../shared/utils/dateTime'
 import styled from 'styled-components'
 
 import {
@@ -137,13 +137,13 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
 
                                 {item.start_time && (
                                   <TableCell>
-                                    {formatTime(item.start_time)}
+                                    {stripSecondsFromTime(item.start_time)}
                                   </TableCell>
                                 )}
 
                                 {item.end_time && (
                                   <TableCell>
-                                    {formatTime(item.end_time)}
+                                    {stripSecondsFromTime(item.end_time)}
                                   </TableCell>
                                 )}
 
