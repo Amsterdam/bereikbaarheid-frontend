@@ -4,7 +4,7 @@ import { generatePath } from 'react-router-dom'
 import { getPathTo } from '../../routes'
 import { withApp } from '../../../test/utils/withApp'
 
-describe('DataPage', () => {
+describe('DataSourcesPage', () => {
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('DATA'))
 

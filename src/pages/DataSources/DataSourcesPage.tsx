@@ -20,7 +20,7 @@ const StyledMainContent = styled(MainContent)`
   max-width: 1200px;
 `
 
-const DataPage = () => {
+const DataSourcesPage = () => {
   const { urlTrafficSigns } = useUrlTrafficSigns(DUMMY_VEHICLE)
 
   const dataLinks = [
@@ -44,4 +44,4 @@ const DataPage = () => {
   )
 }
 
-export default DataPage
+export default DataSourcesPage
