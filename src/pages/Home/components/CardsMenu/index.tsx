@@ -11,7 +11,10 @@ import {
 import styled from 'styled-components'
 import { getPathTo } from '../../../../routes'
 import { generatePath } from 'react-router-dom'
-import { CardDataWithPath, cardData } from './data/cards'
+import {
+  MenuOrCardItemData as CardItemData,
+  menuOrCardItems as cardItems,
+} from '../../../../shared/utils/menuOrCardItems'
 import { useMemo } from 'react'
 import { ExternalLink } from '@amsterdam/asc-assets'
 
@@ -58,11 +61,16 @@ const StyledImage = styled(Image)`
 `
 
 const CardsMenu = () => {
-  const cardDataWithPaths = useMemo<CardDataWithPath[]>(() => {
-    return cardData.map(card => {
-      const cardWithPath: CardDataWithPath = { title: card.title, path: '' }
+  const cardItemsWithPaths = useMemo<CardItemData[]>(() => {
+    return cardItems.map(card => {
+      const cardWithPath: CardItemData = {
+        title: card.title,
+        description:
+          card.description ??
+          'In irure do consequat eiusmod eiusmod incididunt velit quis sint officia enim duis. Velit sunt veniam cillum culpa deserunt sit occaecat cillum enim consequat ea sit sunt.',
+        path: card.path ?? '',
+      }
 
-      if (card.path) cardWithPath.path = card.path
       if (card.route) cardWithPath.path = generatePath(getPathTo(card.route))
       if (card.target) cardWithPath.target = card.target
 
@@ -84,7 +92,7 @@ const CardsMenu = () => {
 
   return (
     <>
-      {cardDataWithPaths.map(card => (
+      {cardItemsWithPaths.map(card => (
         <CardLink
           key={card.title}
           href={card.path}

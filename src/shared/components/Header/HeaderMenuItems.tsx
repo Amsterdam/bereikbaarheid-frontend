@@ -1,17 +1,56 @@
-// No check because typing of asc-ui is not correct.
-// @ts-nocheck
-// this is the reason why the menu items are located in this separate file
-// which is an effort to keep unchecked code to a minimum
-//
-// a block-scoped ignore in Header.tsx would be a more elegant solution
-// however TS does not offer a block-scoped ignore at the time of writing
-// see https://github.com/Microsoft/TypeScript/issues/19573
-
+import { useMemo } from 'react'
 import { Icon, MenuButton, MenuItem, themeColor } from '@amsterdam/asc-ui'
-import { generatePath, Link, matchPath, useLocation } from 'react-router-dom'
-import { RouteIds, getPathTo } from '../../../routes'
+import { Link, matchPath, useLocation } from 'react-router-dom'
 import { ExternalLink } from '@amsterdam/asc-assets'
 import styled from 'styled-components'
+import {
+  MenuOrCardItemData as MenuItemData,
+  menuOrCardItems as menuItems,
+} from '../../utils/menuOrCardItems'
+import { getGeneratedPath } from '../../utils/path'
+
+function mapMenuItems(item: MenuItemData) {
+  const itemWithPath: MenuItemData = {
+    title: item.titleShort ?? item.title,
+    path: item.path ?? '',
+  }
+
+  if (item.description) itemWithPath.description = item.description
+  if (item.route) itemWithPath.path = getGeneratedPath(item.route)
+  if (item.target) itemWithPath.target = item.target
+  if (item.secondary) itemWithPath.secondary = item.secondary
+
+  return itemWithPath
+}
+
+function HeaderMenuItem({ item }: { item: MenuItemData }) {
+  const location = useLocation()
+
+  return (
+    <MenuItem key={item.path}>
+      <MenuButton
+        forwardedAs={Link}
+        to={item.path}
+        target={item.target}
+        iconRight={
+          item.target === '_blank' && (
+            <Icon size={13} style={{ marginLeft: -2 }}>
+              <ExternalLink />
+            </Icon>
+          )
+        }
+        title={`${item.title}${
+          item.description ? `- ${item.description}` : ''
+        }`}
+        // @ts-ignore
+        active={matchPath(location.pathname, item.path) ? 'true' : undefined}
+        style={item.secondary ? { fontWeight: 'normal' } : {}}
+      >
+        {item.title}
+      </MenuButton>
+    </MenuItem>
+  )
+}
 
 const MenuDivider = styled.hr`
   height: 2rem;
@@ -19,111 +58,28 @@ const MenuDivider = styled.hr`
   border: 1px solid ${themeColor('tint', 'level3')};
 `
 
-export const HeaderMenuItems = () => {
-  const location = useLocation()
+function HeaderMenuItems() {
+  const primaryMenuItemsWithPaths = useMemo<MenuItemData[]>(() => {
+    return menuItems.filter(item => !item.secondary).map(mapMenuItems)
+  }, [])
+
+  const secondaryMenuItemsWithPaths = useMemo<MenuItemData[]>(() => {
+    return menuItems.filter(item => item.secondary).map(mapMenuItems)
+  }, [])
 
   return (
     <>
-      <MenuItem>
-        <MenuButton
-          forwardedAs={Link}
-          to={generatePath(getPathTo(RouteIds.LICENCE_PLATE_PAGE))}
-          active={
-            matchPath(
-              location.pathname,
-              generatePath(getPathTo(RouteIds.LICENCE_PLATE_PAGE))
-            )
-              ? 'true'
-              : undefined
-          }
-        >
-          Op kenteken
-        </MenuButton>
-      </MenuItem>
-
-      <MenuItem>
-        <MenuButton
-          forwardedAs={Link}
-          to={generatePath(getPathTo(RouteIds.ROAD_OBSTRUCTIONS_PAGE))}
-          active={
-            matchPath(
-              location.pathname,
-              generatePath(getPathTo(RouteIds.ROAD_OBSTRUCTIONS_PAGE))
-            )
-              ? 'true'
-              : undefined
-          }
-        >
-          Stremmingen
-        </MenuButton>
-      </MenuItem>
-
-      <MenuItem>
-        <MenuButton
-          forwardedAs={Link}
-          to={generatePath(getPathTo(RouteIds.LOAD_UNLOAD_PAGE))}
-          active={
-            matchPath(
-              location.pathname,
-              generatePath(getPathTo(RouteIds.LOAD_UNLOAD_PAGE))
-            )
-              ? 'true'
-              : undefined
-          }
-        >
-          Laden en lossen
-        </MenuButton>
-      </MenuItem>
-
-      <MenuItem>
-        <MenuButton
-          forwardedAs={Link}
-          to="https://tourbuzz.amsterdam.nl/"
-          target="_blank"
-          iconRight={
-            <Icon size={13} style={{ marginLeft: -2 }}>
-              <ExternalLink />
-            </Icon>
-          }
-        >
-          Touringcars
-        </MenuButton>
-      </MenuItem>
+      {primaryMenuItemsWithPaths.map(item => (
+        <HeaderMenuItem key={item.path} item={item} />
+      ))}
 
       <MenuDivider />
 
-      <MenuItem>
-        <MenuButton
-          forwardedAs={Link}
-          to={generatePath(getPathTo(RouteIds.DATA))}
-          active={
-            matchPath(location.pathname, generatePath(getPathTo(RouteIds.DATA)))
-              ? 'true'
-              : undefined
-          }
-          style={{ fontWeight: 'normal' }}
-        >
-          Databronnen
-        </MenuButton>
-      </MenuItem>
-
-      <MenuItem>
-        <MenuButton
-          forwardedAs={Link}
-          to={generatePath(getPathTo(RouteIds.CONTACT))}
-          active={
-            matchPath(
-              location.pathname,
-              generatePath(getPathTo(RouteIds.CONTACT))
-            )
-              ? 'true'
-              : undefined
-          }
-          style={{ fontWeight: 'normal' }}
-        >
-          Contact en hulp
-        </MenuButton>
-      </MenuItem>
+      {secondaryMenuItemsWithPaths.map(item => (
+        <HeaderMenuItem key={item.path} item={item} />
+      ))}
     </>
   )
 }
+
+export default HeaderMenuItems

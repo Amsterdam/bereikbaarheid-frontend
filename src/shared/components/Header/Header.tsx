@@ -9,7 +9,7 @@ import {
 import styled from 'styled-components'
 
 import { HEADER_HEIGHT, Z_INDEX_HEADER } from '../../constants'
-import { HeaderMenuItems } from './HeaderMenuItems'
+import HeaderMenuItems from './HeaderMenuItems'
 
 const StyledLogo = styled(AmsterdamLogo)`
   height: 44px;
