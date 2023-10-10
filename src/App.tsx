@@ -20,13 +20,9 @@ const queryClient = new QueryClient({
 })
 
 const piwikInstance = createInstance({
-  urlBase: process.env.REACT_APP_SELF_ROOT ?? '',
+  urlBase: process.env.REACT_APP_SELF_ROOT,
   siteId: '3',
   disabled: !isProd,
-  heartBeat: {
-    active: true,
-    seconds: 10,
-  },
 })
 
 const router = createBrowserRouter(ROUTES)
@@ -48,4 +44,5 @@ function App() {
   )
 }
 
+export { isProd }
 export default App
