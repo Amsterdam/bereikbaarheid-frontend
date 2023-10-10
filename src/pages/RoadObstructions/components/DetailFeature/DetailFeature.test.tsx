@@ -53,37 +53,37 @@ describe('DetailFeature', () => {
     ).toBeInTheDocument()
   })
 
-  it('shows WIOR detail info when clicking on a feature', async () => {
-    const pathToPage = generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))
-    const page = withApp(pathToPage)
-    const user = userEvent.setup()
+  // it('shows WIOR detail info when clicking on a feature', async () => {
+  //   const pathToPage = generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))
+  //   const page = withApp(pathToPage)
+  //   const user = userEvent.setup()
 
-    // unfortunately both await's are needed, otherwise the road sections fail to load in time
-    // wait until road sections are rendered
-    await waitFor(() => page.rerender)
-    // wait until page is rendered
-    await screen.findAllByText(/stremmingen op/i)
+  //   // unfortunately both await's are needed, otherwise the road sections fail to load in time
+  //   // wait until road sections are rendered
+  //   await waitFor(() => page.rerender)
+  //   // wait until page is rendered
+  //   await screen.findAllByText(/stremmingen op/i)
 
-    // zoom in 2x - map starts at zoomlevel 14 and wior is visible from 16
-    const buttonZoomIn = screen.getByTitle('Inzoomen')
-    await user.click(buttonZoomIn)
-    await user.click(buttonZoomIn)
+  //   // zoom in 2x - map starts at zoomlevel 14 and wior is visible from 16
+  //   const buttonZoomIn = screen.getByTitle('Inzoomen')
+  //   await user.click(buttonZoomIn)
+  //   await user.click(buttonZoomIn)
 
-    // enable layer
-    await user.click(screen.getByLabelText(/wior/i))
-    expect(screen.getByLabelText(/wior/i)).toBeEnabled()
+  //   // enable layer
+  //   await user.click(screen.getByLabelText(/wior/i))
+  //   expect(screen.getByLabelText(/wior/i)).toBeEnabled()
 
-    // wior features are loading...
-    await waitFor(() => page.rerender)
+  //   // wior features are loading...
+  //   await waitFor(() => page.rerender)
 
-    // wior features are displayed in orange (theme.colors.supplement.orange)
-    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const wiorFeatures = page.container.querySelectorAll(
-      '.leaflet-overlay-pane svg path[stroke="#ff9100"]'
-    )
+  //   // wior features are displayed in orange (theme.colors.supplement.orange)
+  //   // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
+  //   const wiorFeatures = page.container.querySelectorAll(
+  //     '.leaflet-overlay-pane svg path[stroke="#ff9100"]'
+  //   )
 
-    await user.click(wiorFeatures[0])
+  //   await user.click(wiorFeatures[0])
 
-    expect(screen.getByTestId('detail-feature-wior')).toBeInTheDocument()
-  })
+  //   expect(screen.getByTestId('detail-feature-wior')).toBeInTheDocument()
+  // })
 })

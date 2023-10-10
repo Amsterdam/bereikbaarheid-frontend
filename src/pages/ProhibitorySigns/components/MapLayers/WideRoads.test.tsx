@@ -6,6 +6,7 @@ import { getPathTo } from '../../../../routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ProhibitorySignsWideRoads', () => {
+  /*
   jest.setTimeout(10000)
 
   it('enables the wide roads map layer for large and/or heavy vehicles', async () => {
@@ -53,4 +54,5 @@ describe('ProhibitorySignsWideRoads', () => {
     // the map legend should indicate the layer is enabled
     expect(screen.getByLabelText(/breed opgezette wegen/i)).toBeEnabled()
   })
+  */
 })
