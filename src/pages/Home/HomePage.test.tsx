@@ -1,12 +1,11 @@
 import { screen, within } from '@testing-library/react'
-import { generatePath } from 'react-router-dom'
-
-import { getPathTo } from '../../routes'
 import { withApp } from '../../../test/utils/withApp'
+import { getGeneratedPath } from '../../shared/utils/path'
+import { RouteIds } from '../../routes'
 
 describe('HomePage', () => {
   it('renders correctly', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = getGeneratedPath(RouteIds.HOME)
 
     withApp(pathToPage)
 

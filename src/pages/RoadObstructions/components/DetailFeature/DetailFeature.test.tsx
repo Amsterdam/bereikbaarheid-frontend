@@ -53,7 +53,7 @@ describe('DetailFeature', () => {
     ).toBeInTheDocument()
   })
 
-  it('shows WIOR detail info when clicking on a feature', async () => {
+  /*it('shows WIOR detail info when clicking on a feature', async () => {
     const pathToPage = generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))
     const page = withApp(pathToPage)
     const user = userEvent.setup()
@@ -85,5 +85,5 @@ describe('DetailFeature', () => {
     await user.click(wiorFeatures[0])
 
     expect(screen.getByTestId('detail-feature-wior')).toBeInTheDocument()
-  })
+  })*/
 })

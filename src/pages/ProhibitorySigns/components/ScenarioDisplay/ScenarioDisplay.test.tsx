@@ -1,21 +1,20 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { generatePath } from 'react-router-dom'
-
-import { getPathTo } from '../../../../routes'
 import { withApp } from '../../../../../test/utils/withApp'
+import { getGeneratedPath } from '../../../../shared/utils/path'
+import { RouteIds } from '../../../../routes'
 
 describe('ScenarioDisplay', () => {
   jest.setTimeout(10000)
 
   it('displays the result after finishing the scenario wizard', async () => {
-    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
+    const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
     const user = userEvent.setup()
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
@@ -51,13 +50,13 @@ describe('ScenarioDisplay', () => {
   })
 
   it('updates the result when input is changed after finishing the initial scenario wizard', async () => {
-    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
+    const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
     const user = userEvent.setup()
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
