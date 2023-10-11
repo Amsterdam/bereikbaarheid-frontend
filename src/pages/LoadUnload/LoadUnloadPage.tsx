@@ -27,6 +27,7 @@ import { LoadUnloadViewerContainer } from './components/ViewerContainer'
 import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
 import { LoadUnloadMapProvider } from './contexts/MapProvider'
 import { LoadUnloadPageProvider } from './contexts/PageProvider'
+import AnalyticsProvider from '../ProhibitorySigns/contexts/AnalyticsProvider'
 
 const { SnapPoint } = mapPanelConstants
 
@@ -58,59 +59,64 @@ const LoadUnloadPage = () => {
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   return (
-    <LoadUnloadPageProvider>
-      <PageWrapper>
-        <LoadUnloadHeader
-          setOpenFeedbackModal={setOpenFeedbackModal}
-          title="Laden en lossen"
+    <AnalyticsProvider>
+      <LoadUnloadPageProvider>
+        <PageWrapper>
+          <LoadUnloadHeader
+            setOpenFeedbackModal={setOpenFeedbackModal}
+            title="Laden en lossen"
+          />
+
+          <MainContent data-testid="load-unload-page">
+            <MapStyle />
+            <StyledMap
+              options={{ ...defaultMapOptions, maxZoom: 21 }}
+              setInstance={setMapInstance}
+            >
+              <LoadUnloadMapProvider>
+                <MapPanelProvider
+                  variant={showDesktopVariant ? 'panel' : 'drawer'}
+                  initialPosition={SnapPoint.Halfway}
+                  topOffset={HEADER_HEIGHT}
+                >
+                  <Element>
+                    <LoadUnloadDetailFeature />
+
+                    <LoadUnloadMapSettingsDisplay
+                      setShowAddressForm={setShowAddressForm}
+                      setShowDateTimeModal={setShowDateTimeModal}
+                    />
+                  </Element>
+
+                  <LoadUnloadViewerContainer {...{ showDesktopVariant }} />
+                </MapPanelProvider>
+
+                <LoadUnloadMapLayers />
+              </LoadUnloadMapProvider>
+            </StyledMap>
+          </MainContent>
+        </PageWrapper>
+
+        <Modal
+          aria-labelledby="modal"
+          disablePortal // to prevent findDOMNode warning, see https://github.com/Amsterdam/amsterdam-styled-components/issues/2389
+          open={showAddressForm}
+          zIndexOffset={Z_INDEX_MODAL}
+        >
+          <LoadUnloadAddressForm setShowAddressForm={setShowAddressForm} />
+        </Modal>
+
+        <ModalDateTime
+          showModal={showDateTimeModal}
+          setShowModal={setShowDateTimeModal}
         />
 
-        <MainContent data-testid="load-unload-page">
-          <MapStyle />
-          <StyledMap
-            options={{ ...defaultMapOptions, maxZoom: 21 }}
-            setInstance={setMapInstance}
-          >
-            <LoadUnloadMapProvider>
-              <MapPanelProvider
-                variant={showDesktopVariant ? 'panel' : 'drawer'}
-                initialPosition={SnapPoint.Halfway}
-                topOffset={HEADER_HEIGHT}
-              >
-                <Element>
-                  <LoadUnloadDetailFeature />
-
-                  <LoadUnloadMapSettingsDisplay
-                    setShowAddressForm={setShowAddressForm}
-                    setShowDateTimeModal={setShowDateTimeModal}
-                  />
-                </Element>
-
-                <LoadUnloadViewerContainer {...{ showDesktopVariant }} />
-              </MapPanelProvider>
-
-              <LoadUnloadMapLayers />
-            </LoadUnloadMapProvider>
-          </StyledMap>
-        </MainContent>
-      </PageWrapper>
-
-      <Modal
-        aria-labelledby="modal"
-        disablePortal // to prevent findDOMNode warning, see https://github.com/Amsterdam/amsterdam-styled-components/issues/2389
-        open={showAddressForm}
-        zIndexOffset={Z_INDEX_MODAL}
-      >
-        <LoadUnloadAddressForm setShowAddressForm={setShowAddressForm} />
-      </Modal>
-
-      <ModalDateTime
-        showModal={showDateTimeModal}
-        setShowModal={setShowDateTimeModal}
-      />
-
-      <FeedbackModal setOpen={setOpenFeedbackModal} open={openFeedbackModal} />
-    </LoadUnloadPageProvider>
+        <FeedbackModal
+          setOpen={setOpenFeedbackModal}
+          open={openFeedbackModal}
+        />
+      </LoadUnloadPageProvider>
+    </AnalyticsProvider>
   )
 }
 

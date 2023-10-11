@@ -38,6 +38,7 @@ import WiorLayer from './components/WiorLayer'
 import RoadObstructionsMapProvider from './contexts/MapProvider'
 import RoadObstructionsDetailFeature from './components/DetailFeature'
 import { RoadObstructionsHighlightedFeatureLayer } from './components/HighlightedFeature'
+import AnalyticsProvider from '../ProhibitorySigns/contexts/AnalyticsProvider'
 
 const { SnapPoint } = mapPanelConstants
 
@@ -89,7 +90,7 @@ const RoadObstructionsPage = () => {
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   return (
-    <>
+    <AnalyticsProvider>
       <PageWrapper>
         <RoadObstructionsHeader
           mapFilters={mapFilters}
@@ -170,7 +171,7 @@ const RoadObstructionsPage = () => {
       </Modal>
 
       <FeedbackModal setOpen={setOpenFeedbackModal} open={openFeedbackModal} />
-    </>
+    </AnalyticsProvider>
   )
 }
 
