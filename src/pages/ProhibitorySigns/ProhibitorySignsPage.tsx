@@ -16,6 +16,7 @@ import FeedbackModal from '../../shared/components/FeedbackModal'
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import { MapStyle } from '../../shared/map/mapStyle'
 import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 import ProhibitorySignsHeader from './components/Header'
 import ProhibitorySignsDetailFeature from './components/DetailFeature'
@@ -25,7 +26,6 @@ import ProhibitorySignsViewerContainer from './components/ViewerContainer'
 import ProhibitorySignsPageProvider from './contexts/PageProvider'
 import ScenarioDisplay from './components/ScenarioDisplay'
 import ProhibitorySignsMapProvider from './contexts/MapProvider'
-import AnalyticsProvider from './contexts/AnalyticsProvider'
 
 const { SnapPoint } = mapPanelConstants
 
@@ -53,53 +53,51 @@ const ProhibitorySignsPage = () => {
     }
   }, [mapInstance])
 
+  const { trackPageVisit } = useAnalytics()
+  useEffect(() => {
+    trackPageVisit()
+  })
+
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   return (
-    <AnalyticsProvider>
-      <PageWrapper>
-        <ProhibitorySignsPageProvider>
-          <ProhibitorySignsHeader
-            setOpenFeedbackModal={setOpenFeedbackModal}
-            title="Bereikbaarheid Amsterdam op Kenteken"
-          />
-
-          <MainContent data-testid="prohibitory-signs-page">
-            <MapStyle />
-            <StyledMap options={defaultMapOptions} setInstance={setMapInstance}>
-              <ProhibitorySignsMapProvider>
-                <MapPanelProvider
-                  variant={showDesktopVariant ? 'panel' : 'drawer'}
-                  initialPosition={SnapPoint.Closed}
-                  topOffset={HEADER_HEIGHT}
-                >
-                  <Element>
-                    <ScenarioDisplay />
-
-                    <ProhibitorySignsDetailFeature />
-                  </Element>
-
-                  <ProhibitorySignsViewerContainer
-                    {...{ showDesktopVariant }}
-                  />
-                </MapPanelProvider>
-
-                <ProhibitorySignsMapLayers />
-              </ProhibitorySignsMapProvider>
-            </StyledMap>
-          </MainContent>
-
-          <ProhibitorySignsScenarioWizard
-            setShowFeedbackModal={setOpenFeedbackModal}
-          />
-        </ProhibitorySignsPageProvider>
-
-        <FeedbackModal
-          setOpen={setOpenFeedbackModal}
-          open={openFeedbackModal}
+    <PageWrapper>
+      <ProhibitorySignsPageProvider>
+        <ProhibitorySignsHeader
+          setOpenFeedbackModal={setOpenFeedbackModal}
+          title="Bereikbaarheid Amsterdam op Kenteken"
         />
-      </PageWrapper>
-    </AnalyticsProvider>
+
+        <MainContent data-testid="prohibitory-signs-page">
+          <MapStyle />
+          <StyledMap options={defaultMapOptions} setInstance={setMapInstance}>
+            <ProhibitorySignsMapProvider>
+              <MapPanelProvider
+                variant={showDesktopVariant ? 'panel' : 'drawer'}
+                initialPosition={SnapPoint.Closed}
+                topOffset={HEADER_HEIGHT}
+              >
+                <Element>
+                  <ScenarioDisplay />
+
+                  <ProhibitorySignsDetailFeature />
+                </Element>
+
+                <ProhibitorySignsViewerContainer {...{ showDesktopVariant }} />
+              </MapPanelProvider>
+
+              <ProhibitorySignsMapLayers />
+            </ProhibitorySignsMapProvider>
+          </StyledMap>
+        </MainContent>
+
+        <ProhibitorySignsScenarioWizard
+          setShowFeedbackModal={setOpenFeedbackModal}
+        />
+      </ProhibitorySignsPageProvider>
+
+      <FeedbackModal setOpen={setOpenFeedbackModal} open={openFeedbackModal} />
+    </PageWrapper>
   )
 }
 

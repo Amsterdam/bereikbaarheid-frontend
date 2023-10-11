@@ -26,6 +26,7 @@ import {
   topoBlackWhite,
 } from '../../shared/map/mapLayers'
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 import RoadObstructionsFiltersDisplay from './components/FiltersDisplay'
 import { RoadObstructionsFiltersForm } from './components/FiltersForm'
@@ -38,7 +39,6 @@ import WiorLayer from './components/WiorLayer'
 import RoadObstructionsMapProvider from './contexts/MapProvider'
 import RoadObstructionsDetailFeature from './components/DetailFeature'
 import { RoadObstructionsHighlightedFeatureLayer } from './components/HighlightedFeature'
-import AnalyticsProvider from '../ProhibitorySigns/contexts/AnalyticsProvider'
 
 const { SnapPoint } = mapPanelConstants
 
@@ -89,8 +89,13 @@ const RoadObstructionsPage = () => {
   const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
+  const { trackPageVisit } = useAnalytics()
+  useEffect(() => {
+    trackPageVisit()
+  })
+
   return (
-    <AnalyticsProvider>
+    <>
       <PageWrapper>
         <RoadObstructionsHeader
           mapFilters={mapFilters}
@@ -171,7 +176,7 @@ const RoadObstructionsPage = () => {
       </Modal>
 
       <FeedbackModal setOpen={setOpenFeedbackModal} open={openFeedbackModal} />
-    </AnalyticsProvider>
+    </>
   )
 }
 

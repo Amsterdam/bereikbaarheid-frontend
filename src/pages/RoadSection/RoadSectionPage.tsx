@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Column, Row } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
@@ -8,10 +9,10 @@ import ContentContainer from '../../shared/components/ContentContainer'
 import { Header } from '../../shared/components/Header'
 import LoadingSpinner from '../../shared/components/LoadingSpinner'
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 import { RoadSectionDetails } from './components/Details'
 import { RoadSectionMap } from './components/Map'
-import AnalyticsProvider from '../ProhibitorySigns/contexts/AnalyticsProvider'
 
 const StyledColumn = styled(Column)`
   flex-direction: column;
@@ -26,6 +27,11 @@ const RoadSectionPage = () => {
     useErrorBoundary: true,
   })
 
+  const { trackPageVisit } = useAnalytics()
+  useEffect(() => {
+    trackPageVisit()
+  })
+
   if (roadSection.isLoading) {
     return <LoadingSpinner />
   }
@@ -38,7 +44,7 @@ const RoadSectionPage = () => {
   }
 
   return (
-    <AnalyticsProvider>
+    <>
       <Header />
 
       <main data-testid="road-section-page">
@@ -56,7 +62,7 @@ const RoadSectionPage = () => {
           </Row>
         </ContentContainer>
       </main>
-    </AnalyticsProvider>
+    </>
   )
 }
 
