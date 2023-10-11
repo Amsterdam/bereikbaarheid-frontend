@@ -1,15 +1,13 @@
+import { useState } from 'react'
 import { GlobalStyle, ThemeProvider } from '@amsterdam/asc-ui'
-import { PiwikProvider, createInstance } from '@amsterdam/piwik-tracker-react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { useState } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
+import useAnalytics from './shared/hooks/useAnalytics'
 import { ROUTES } from './routes'
 import Disclaimer from './shared/components/Disclaimer'
 
 const isProd = process.env.NODE_ENV === 'production'
-const siteId = process.env.REACT_APP_PIWIK_SITE_ID
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,24 +18,19 @@ const queryClient = new QueryClient({
   },
 })
 
-const piwikInstance = createInstance({
-  urlBase: process.env.REACT_APP_SELF_ROOT,
-  siteId: siteId ?? '0',
-  disabled: !isProd || !siteId,
-})
-
 const router = createBrowserRouter(ROUTES)
 
 function App() {
+  const { createPiwikInstance } = useAnalytics()
+  createPiwikInstance(isProd)
+
   const [showDisclaimer, setShowDisclaimer] = useState(true)
 
   return (
     <ThemeProvider>
       <GlobalStyle />
       <QueryClientProvider client={queryClient}>
-        <PiwikProvider value={piwikInstance}>
-          <RouterProvider router={router} />
-        </PiwikProvider>
+        <RouterProvider router={router} />
 
         {showDisclaimer && <Disclaimer setShowDisclaimer={setShowDisclaimer} />}
         <ReactQueryDevtools />
