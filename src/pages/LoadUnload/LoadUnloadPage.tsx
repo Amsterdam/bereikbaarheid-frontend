@@ -58,9 +58,7 @@ const LoadUnloadPage = () => {
   const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
 
   const { trackPageVisit } = useAnalytics()
-  useEffect(() => {
-    trackPageVisit()
-  })
+  useEffect(trackPageVisit)
 
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 

@@ -16,9 +16,7 @@ const ErrorPage = () => {
   console.error(error)
 
   const { trackPageVisit } = useAnalytics()
-  useEffect(() => {
-    trackPageVisit()
-  })
+  useEffect(() => trackPageVisit('404'))
 
   return (
     <Container data-testid="error-page">

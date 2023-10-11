@@ -90,9 +90,7 @@ const RoadObstructionsPage = () => {
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   const { trackPageVisit } = useAnalytics()
-  useEffect(() => {
-    trackPageVisit()
-  })
+  useEffect(trackPageVisit)
 
   return (
     <>

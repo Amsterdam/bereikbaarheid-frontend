@@ -25,18 +25,21 @@ function useAnalytics() {
     }
   }
 
-  const trackPageVisit = useCallback(() => {
-    const path = window?.location?.href
+  const trackPageVisit = useCallback(
+    (msg?: string) => {
+      const path = window?.location?.href.split(/[?#]/)[0]
 
-    if (!PiwikInstance || !path) return
-    if (prevLocation === path) return
+      if (!PiwikInstance || !path) return
+      if (prevLocation === path) return
 
-    setPrevLocation(path)
+      setPrevLocation(path)
 
-    console.info(`Track page view to: ${path}`)
+      console.info(`Track page view to: ${msg ?? path}`)
 
-    trackPageView({ href: path.split(/[?#]/)[0] })
-  }, [prevLocation, trackPageView])
+      trackPageView({ href: msg ?? path })
+    },
+    [prevLocation, trackPageView]
+  )
 
   return { createPiwikInstance, trackPageVisit }
 }

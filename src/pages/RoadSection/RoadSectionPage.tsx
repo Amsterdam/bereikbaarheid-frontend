@@ -28,9 +28,7 @@ const RoadSectionPage = () => {
   })
 
   const { trackPageVisit } = useAnalytics()
-  useEffect(() => {
-    trackPageVisit()
-  })
+  useEffect(trackPageVisit)
 
   if (roadSection.isLoading) {
     return <LoadingSpinner />
