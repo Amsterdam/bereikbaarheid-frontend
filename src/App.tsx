@@ -22,7 +22,7 @@ const queryClient = new QueryClient({
 
 const piwikInstance = createInstance({
   urlBase: process.env.REACT_APP_SELF_ROOT,
-  siteId: process.env.REACT_APP_PIWIK_SITE_ID ?? '',
+  siteId: process.env.REACT_APP_PIWIK_SITE_ID ?? '0',
   disabled: !isProd || !siteId,
 })
 
