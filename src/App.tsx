@@ -21,7 +21,7 @@ const queryClient = new QueryClient({
 
 const piwikInstance = createInstance({
   urlBase: process.env.REACT_APP_SELF_ROOT,
-  siteId: '3',
+  siteId: 'e63312c0-0efe-4c4f-bba1-3ca1f05374a8',
   disabled: !isProd,
 })
 
@@ -37,6 +37,7 @@ function App() {
         <PiwikProvider value={piwikInstance}>
           <RouterProvider router={router} />
         </PiwikProvider>
+
         {showDisclaimer && <Disclaimer setShowDisclaimer={setShowDisclaimer} />}
         <ReactQueryDevtools />
       </QueryClientProvider>
