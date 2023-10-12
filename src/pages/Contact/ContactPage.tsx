@@ -2,7 +2,7 @@ import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 
 import { Button, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
-import { Header } from '../../shared/components/Header'
+import Header from '../../shared/components/Header'
 
 const FEEDBACK_RECIPIENT = 'stadsloket.centrum.vergunningen.dvl@amsterdam.nl'
 const FEEDBACK_SUBJECT = 'Terugmelding bereikbaarheid.amsterdam.nl'
@@ -41,7 +41,7 @@ const ContentBlock = styled.div`
 const ContactPage = () => {
   return (
     <PageWrapper>
-      <Header title="Contact en hulp" />
+      <Header title="Contact en uitleg" />
 
       <StyledMainContent>
         <ContentBlock>

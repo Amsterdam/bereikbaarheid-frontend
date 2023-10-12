@@ -13,9 +13,9 @@ describe('ContactPage', () => {
     await screen.findAllByText(/overige vragen/i)
 
     const pageTitle = screen.getByRole('heading', { level: 1 })
-    const links = within(pageTitle).getAllByText(/contact en hulp/i)
+    const links = within(pageTitle).getAllByText(/contact en uitleg/i)
 
     // The first element is the alt tag of the logo; the second one the title.
-    expect(links[1]).toHaveTextContent('Contact en hulp')
+    expect(links[1]).toHaveTextContent('Contact en uitleg')
   })
 })
