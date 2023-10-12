@@ -41,12 +41,9 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
 
 const ProhibitorySignsPage = () => {
   const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
-
-  // Variables concerning the map.
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
 
-  // Set the map's default config.
   useEffect(() => {
     if (mapInstance) {
       setMapDefaults(mapInstance)
