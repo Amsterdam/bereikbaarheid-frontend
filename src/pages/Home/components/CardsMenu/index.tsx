@@ -21,15 +21,23 @@ import { ExternalLink } from '@amsterdam/asc-assets'
 const CARD_WIDTH_PX = 300
 
 const CardLink = styled(Link)`
+  padding: 0;
+
   &:hover,
   &:focus {
+    color: ${themeColor('secondary')};
+
+    & > div {
+      box-shadow: none;
+    }
+
     img {
       transform: scale(2) rotate(15deg);
     }
   }
 
   &:focus {
-    outline: 2px solid ${themeColor('primary')};
+    outline: 1px solid ${themeColor('secondary')};
   }
 `
 
@@ -60,7 +68,7 @@ const StyledImage = styled(Image)`
   transition: transform 500ms ease-out;
 `
 
-const CardsMenu = () => {
+function CardsMenu() {
   const cardItemsWithPaths = useMemo<CardItemData[]>(() => {
     return cardItems.map(card => {
       const cardWithPath: CardItemData = {
