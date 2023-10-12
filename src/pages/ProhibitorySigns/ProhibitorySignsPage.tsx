@@ -16,6 +16,7 @@ import FeedbackModal from '../../shared/components/FeedbackModal'
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import { MapStyle } from '../../shared/map/mapStyle'
 import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 import ProhibitorySignsHeader from './components/Header'
 import ProhibitorySignsDetailFeature from './components/DetailFeature'
@@ -40,8 +41,6 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
 
 const ProhibitorySignsPage = () => {
   const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
-
-  // variables concerning the map
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
 
@@ -50,6 +49,9 @@ const ProhibitorySignsPage = () => {
       setMapDefaults(mapInstance)
     }
   }, [mapInstance])
+
+  const { trackPageVisit } = useAnalytics()
+  useEffect(trackPageVisit)
 
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 

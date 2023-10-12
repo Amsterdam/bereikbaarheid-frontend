@@ -1,6 +1,8 @@
+import { useEffect } from 'react'
 import { Column, Heading, Paragraph, Row } from '@amsterdam/asc-ui'
 import { useRouteError } from 'react-router-dom'
 import styled from 'styled-components'
+import useAnalytics from '../shared/hooks/useAnalytics'
 import { Header } from '../shared/components/Header'
 
 const Container = styled.main`
@@ -27,6 +29,11 @@ const ErrorPage = () => {
   }
 
   console.error(error)
+
+  const { trackPageVisit } = useAnalytics()
+  useEffect(() => {
+    trackPageVisit(error instanceof Response ? `${error.status}` : '404')
+  })
 
   return (
     <>

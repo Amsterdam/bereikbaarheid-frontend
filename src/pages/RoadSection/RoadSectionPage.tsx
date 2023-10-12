@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Column, Row } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import { useParams } from 'react-router-dom'
@@ -8,6 +9,7 @@ import ContentContainer from '../../shared/components/ContentContainer'
 import { Header } from '../../shared/components/Header'
 import LoadingSpinner from '../../shared/components/LoadingSpinner'
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 import { RoadSectionDetails } from './components/Details'
 import { RoadSectionMap } from './components/Map'
@@ -24,6 +26,9 @@ const RoadSectionPage = () => {
     queryFn: ({ signal }) => getRoadSection(roadSectionId, signal),
     useErrorBoundary: true,
   })
+
+  const { trackPageVisit } = useAnalytics()
+  useEffect(trackPageVisit)
 
   if (roadSection.isLoading) {
     return <LoadingSpinner />
