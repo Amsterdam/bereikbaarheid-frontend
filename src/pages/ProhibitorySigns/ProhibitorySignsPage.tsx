@@ -15,6 +15,7 @@ import { HEADER_HEIGHT } from '../../shared/constants'
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import { MapStyle } from '../../shared/map/mapStyle'
 import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 import ProhibitorySignsDetailFeature from './components/DetailFeature'
 import ProhibitorySignsMapLayers from './components/MapLayers'
@@ -41,11 +42,15 @@ const ProhibitorySignsPage = () => {
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
 
+  // Set the map's default config.
   useEffect(() => {
     if (mapInstance) {
       setMapDefaults(mapInstance)
     }
   }, [mapInstance])
+
+  const { trackPageVisit } = useAnalytics()
+  useEffect(trackPageVisit)
 
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 

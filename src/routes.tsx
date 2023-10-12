@@ -68,7 +68,7 @@ const ROUTES: RouteObjectWithPredefinedIds[] = [
   {
     path: '*',
     id: RouteIds.PAGE_NOT_FOUND,
-    element: <p>Pagina niet gevonden.</p>,
+    element: <ErrorPage />,
   },
 ]
 

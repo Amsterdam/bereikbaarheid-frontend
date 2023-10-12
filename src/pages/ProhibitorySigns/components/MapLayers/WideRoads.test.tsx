@@ -1,10 +1,9 @@
-import { screen } from '@testing-library/react'
-import { getGeneratedPath } from '../../../../shared/utils/path'
-import { withApp } from '../../../../../test/utils/withApp'
-import { RouteIds } from '../../../../routes'
-/*
+import { screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-*/
+import { withApp } from '../../../../../test/utils/withApp'
+import { generatePath } from 'react-router-dom'
+import { RouteIds, getPathTo } from '../../../../routes'
+import { getGeneratedPath } from '../../../../shared/utils/path'
 
 describe('ProhibitorySignsWideRoads', () => {
   it('"Breed opgezette wegen" layer is disabled in map legend', async () => {
@@ -18,7 +17,7 @@ describe('ProhibitorySignsWideRoads', () => {
     expect(screen.getByLabelText(/breed opgezette wegen/i)).toBeEnabled()
   })
 
-  /*jest.setTimeout(10000)
+  jest.setTimeout(10000)
 
   it('enables the wide roads map layer for large and/or heavy vehicles', async () => {
     const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
@@ -52,7 +51,7 @@ describe('ProhibitorySignsWideRoads', () => {
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
 
-    await user.click(await screen.findByLabelText('Breed opgezette wegen'))
+    await screen.findAllByText(/uw invoer/i)
 
     // the wide roads layer should be enabled
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
@@ -64,5 +63,5 @@ describe('ProhibitorySignsWideRoads', () => {
 
     // the map legend should indicate the layer is enabled
     expect(screen.getByLabelText(/breed opgezette wegen/i)).toBeEnabled()
-  })*/
+  })
 })

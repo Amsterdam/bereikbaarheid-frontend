@@ -1,9 +1,9 @@
-import { screen, waitFor } from '@testing-library/react'
+/* eslint-disable testing-library/no-unnecessary-act */
+import { act, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { generatePath } from 'react-router-dom'
-
-import { getPathTo } from '../../../../routes'
 import { withApp } from '../../../../../test/utils/withApp'
+import { generatePath } from 'react-router-dom'
+import { getPathTo } from '../../../../routes'
 
 describe('DetailFeature', () => {
   it('renders correctly', async () => {
@@ -12,7 +12,9 @@ describe('DetailFeature', () => {
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
-    await waitFor(() => page.rerender)
+    await act(async () => {
+      await waitFor(() => page.rerender)
+    })
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
@@ -30,11 +32,15 @@ describe('DetailFeature', () => {
     const user = userEvent.setup()
 
     // on click of a road section, the viewport is centered on the feature
-    jest.spyOn(window, 'scrollTo').mockImplementation(() => {})
+    act(() => {
+      jest.spyOn(window, 'scrollTo').mockImplementation(() => {})
+    })
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
-    await waitFor(() => page.rerender)
+    await act(async () => {
+      await waitFor(() => page.rerender)
+    })
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
@@ -44,9 +50,13 @@ describe('DetailFeature', () => {
       '.leaflet-overlay-pane svg path[stroke="#004699"]'
     )
 
-    await user.click(roadSections[0])
+    await act(async () => {
+      await user.click(roadSections[0])
+    })
 
-    expect(window.scrollTo).toHaveBeenCalled()
+    act(() => {
+      expect(window.scrollTo).toHaveBeenCalled()
+    })
 
     expect(
       screen.getByTestId('detail-feature-road-section')
