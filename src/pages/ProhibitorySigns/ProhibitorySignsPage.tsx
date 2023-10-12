@@ -42,7 +42,6 @@ const ProhibitorySignsPage = () => {
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
 
-  // Set the map's default config.
   useEffect(() => {
     if (mapInstance) {
       setMapDefaults(mapInstance)

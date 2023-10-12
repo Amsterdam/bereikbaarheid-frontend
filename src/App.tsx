@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import useAnalytics from './shared/hooks/useAnalytics'
 import { ROUTES } from './routes'
 import Disclaimer from './shared/components/Disclaimer'
-
 const isProd = process.env.NODE_ENV === 'production'
 
 const queryClient = new QueryClient({
