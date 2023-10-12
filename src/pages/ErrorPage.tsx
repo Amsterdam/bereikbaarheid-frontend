@@ -1,6 +1,7 @@
 import { Column, Heading, Paragraph, Row } from '@amsterdam/asc-ui'
 import { useRouteError } from 'react-router-dom'
 import styled from 'styled-components'
+import { Header } from '../shared/components/Header'
 
 const Container = styled.main`
   display: flex;
@@ -9,32 +10,54 @@ const Container = styled.main`
   justify-content: center;
 `
 
+const StyledColumn = styled(Column)`
+  padding-block-start: 1em;
+  flex-direction: column;
+  align-items: center;
+`
+
 const ErrorPage = () => {
-  const error = useRouteError()
+  let error = useRouteError()
+
+  if (!error) {
+    error = new Response('Not Found', {
+      status: 404,
+      statusText: 'De pagina kon niet worden gevonden.',
+    })
+  }
+
   console.error(error)
 
   return (
-    <Container data-testid="error-page">
-      <Row>
-        <Column span={12}>
-          <Heading as="h1">Helaas</Heading>
-        </Column>
-      </Row>
+    <>
+      <Header title="Bereikbaarheid Amsterdam op Kenteken" />
 
-      <Row>
-        <Column span={12}>
-          {error instanceof Response && error.status === 404 && (
-            <Paragraph>
-              {error.statusText ?? 'De pagina kon niet worden gevonden.'}
-            </Paragraph>
-          )}
+      <Container data-testid="error-page">
+        <Row>
+          <Column span={12}>
+            <Heading as="h1">Helaas</Heading>
+          </Column>
+        </Row>
 
-          {!(error instanceof Response) && (
-            <Paragraph>Er ging iets fout.</Paragraph>
-          )}
-        </Column>
-      </Row>
-    </Container>
+        <Row>
+          <StyledColumn span={12}>
+            {error instanceof Response && error.status === 404 && (
+              <Paragraph>
+                {error.statusText ?? 'De pagina kon niet worden gevonden.'}
+              </Paragraph>
+            )}
+
+            {error instanceof Response && error.status && (
+              <Paragraph>Status code: {error.status}</Paragraph>
+            )}
+
+            {!(error instanceof Response) && (
+              <Paragraph>Er ging iets fout.</Paragraph>
+            )}
+          </StyledColumn>
+        </Row>
+      </Container>
+    </>
   )
 }
 

@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
 import { format } from 'date-fns'
 
 import { withAppContext } from '../../../../../test/utils/withAppContext'
@@ -31,7 +31,9 @@ describe('RoadObstructionsFiltersForm', () => {
     fireEvent.submit(screen.getByRole('button'))
 
     expect(await screen.findAllByRole('alert')).toHaveLength(3)
-    expect(props.setShowMapFiltersForm).not.toBeCalled()
+    act(() => {
+      expect(props.setShowMapFiltersForm).not.toBeCalled()
+    })
   })
 
   it('displays an error message when date is invalid', async () => {
@@ -58,7 +60,9 @@ describe('RoadObstructionsFiltersForm', () => {
     fireEvent.submit(screen.getByRole('button'))
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(props.setMapFilters).not.toBeCalled()
+    act(() => {
+      expect(props.setMapFilters).not.toBeCalled()
+    })
     expect(screen.getByTestId('time-from-input')).toHaveValue(
       defaultFormValues.timeFrom
     )
@@ -91,7 +95,9 @@ describe('RoadObstructionsFiltersForm', () => {
     fireEvent.submit(screen.getByRole('button'))
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(props.setMapFilters).not.toBeCalled()
+    act(() => {
+      expect(props.setMapFilters).not.toBeCalled()
+    })
     expect(screen.getByTestId('date-input')).toHaveValue(defaultFormValues.date)
     expect(screen.getByTestId('time-to-input')).toHaveValue(
       defaultFormValues.timeTo
@@ -125,7 +131,9 @@ describe('RoadObstructionsFiltersForm', () => {
     // - invalid end time and because of this
     // - the validation rule 'begin time is not before end time' is triggered
     expect(await screen.findAllByRole('alert')).toHaveLength(2)
-    expect(props.setMapFilters).not.toBeCalled()
+    act(() => {
+      expect(props.setMapFilters).not.toBeCalled()
+    })
     expect(screen.getByTestId('date-input')).toHaveValue(defaultFormValues.date)
     expect(screen.getByTestId('time-from-input')).toHaveValue(
       defaultFormValues.timeFrom
@@ -156,7 +164,9 @@ describe('RoadObstructionsFiltersForm', () => {
     fireEvent.submit(screen.getByRole('button'))
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(props.setMapFilters).not.toBeCalled()
+    act(() => {
+      expect(props.setMapFilters).not.toBeCalled()
+    })
   })
 
   it('displays no errors when all values are valid', async () => {
@@ -183,7 +193,9 @@ describe('RoadObstructionsFiltersForm', () => {
     fireEvent.submit(screen.getByRole('button'))
 
     await waitFor(() => expect(screen.queryAllByRole('alert')).toHaveLength(0))
-    expect(props.setMapFilters).toBeCalled()
+    act(() => {
+      expect(props.setMapFilters).toBeCalled()
+    })
     expect(screen.getByTestId('date-input')).toHaveValue(defaultFormValues.date)
     expect(screen.getByTestId('time-from-input')).toHaveValue(
       defaultFormValues.timeFrom

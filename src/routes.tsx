@@ -37,7 +37,7 @@ export const ROUTES: RouteObject[] = [
   {
     path: '*',
     id: 'PAGE_NOT_FOUND',
-    element: <p>Pagina niet gevonden.</p>,
+    element: <ErrorPage />,
   },
 ]
 

@@ -1,4 +1,4 @@
-import { screen, waitFor, within } from '@testing-library/react'
+import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { format } from 'date-fns'
 import { generatePath } from 'react-router-dom'
@@ -55,7 +55,9 @@ describe('RoadObstructionsPage', () => {
     expect(dateInFiltersDisplay).toBeVisible()
 
     // open filters modal and check if date is preset on the form
-    await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    await act(async () => {
+      await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    })
     const dateInput = screen.getByTestId('date-input')
 
     expect(dateInput).toBeVisible()
@@ -84,16 +86,24 @@ describe('RoadObstructionsPage', () => {
     expect(roadSectionsSvg.length).toBe(roadSections.features.length)
 
     // open filters modal
-    await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    await act(async () => {
+      await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    })
 
     // change date
     const date = '2023-06-15'
-    await user.clear(screen.getByTestId('date-input'))
-    await user.type(screen.getByTestId('date-input'), date)
+    await act(async () => {
+      await user.clear(screen.getByTestId('date-input'))
+      await user.type(screen.getByTestId('date-input'), date)
+    })
     expect(screen.getByTestId('date-input')).toHaveValue(date)
 
     // close filters modal
-    await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
+    await act(async () => {
+      await user.click(
+        screen.getByText('Kaart bekijken', { selector: 'button' })
+      )
+    })
 
     await waitFor(() => page.rerender)
 

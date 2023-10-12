@@ -1,17 +1,82 @@
 import { format, parse, parseISO } from 'date-fns'
+import nlLocale from 'date-fns/locale/nl'
 
-const defaultFormat = 'dd-MM-yyyy HH:mm'
+type Year = `${number}${number}${number}${number}`
+type Month = `${number}${number}`
+type Day = `${number}${number}`
+type Hours = `${number}${number}`
+type Minutes = `${number}${number}`
+type Seconds = `${number}${number}`
+type FractionOfSecond = `${number}${number}${number}`
+
+type DateHumanReadable_Year_Month_Day = `${Year}-${Month}-${Day}`
+type DateHumanReadable_Day_Month_Year = `${Day}-${Month}-${Year}`
+
+type TimeHumanReadable_Hours_Minutes = `${Hours}:${Minutes}`
+type TimeHumanReadable_Hours_Minutes_Seconds =
+  `${TimeHumanReadable_Hours_Minutes}:${Seconds}`
+type TimeHumanReadable_Hours_Minutes_Seconds_FractionOfSecond =
+  `${TimeHumanReadable_Hours_Minutes_Seconds}:${FractionOfSecond}`
+
+type DateTimeHumanReadable_dd_MM_yyyy_HH_mm =
+  `${DateHumanReadable_Day_Month_Year} ${TimeHumanReadable_Hours_Minutes}`
+
+type DateTimeISO_UTCString =
+  `${DateHumanReadable_Year_Month_Day}T${TimeHumanReadable_Hours_Minutes_Seconds_FractionOfSecond}Z`
+
+const DATETIME_FORMAT_DEFAULT = 'dd-MM-yyyy HH:mm'
+
+const DATE_FNS_OPTIONS = { locale: nlLocale }
 
 /**
  * Format a ISO 8601 date string to a human-readable version.
  *
- * @param date The date to format.
+ * @param dateTimeString The date to format.
  * @param formatString The format, for options see https://date-fns.org/v2.28.0/docs/format.
  */
-export function formatISODate(date: string, formatString = defaultFormat) {
-  return format(parseISO(date), formatString)
+function formatISODate(
+  dateTimeString: string,
+  formatString = DATETIME_FORMAT_DEFAULT
+): DateTimeHumanReadable_dd_MM_yyyy_HH_mm {
+  const dateTimeISO = dateTimeString as DateTimeISO_UTCString
+
+  return format(
+    parseISO(dateTimeISO),
+    formatString,
+    DATE_FNS_OPTIONS
+  ) as DateTimeHumanReadable_dd_MM_yyyy_HH_mm
 }
 
-export function formatTime(time: string) {
-  return format(parse(time, 'HH:mm:ss', new Date()), 'HH:mm')
+/**
+ * Strip seconds from a human-readable time format.
+ *
+ * @param time - Format: 'HH:mm:ss'
+ * @returns time - Format: 'HH:mm'
+ */
+function stripSecondsFromTime(
+  time: TimeHumanReadable_Hours_Minutes_Seconds
+): TimeHumanReadable_Hours_Minutes {
+  return format(
+    parse(time, 'HH:mm:ss', new Date()),
+    'HH:mm',
+    DATE_FNS_OPTIONS
+  ) as TimeHumanReadable_Hours_Minutes
 }
+
+export type {
+  Year,
+  Month,
+  Day,
+  Hours,
+  Minutes,
+  Seconds,
+  FractionOfSecond,
+  DateHumanReadable_Year_Month_Day,
+  DateHumanReadable_Day_Month_Year,
+  TimeHumanReadable_Hours_Minutes,
+  TimeHumanReadable_Hours_Minutes_Seconds,
+  TimeHumanReadable_Hours_Minutes_Seconds_FractionOfSecond,
+  DateTimeHumanReadable_dd_MM_yyyy_HH_mm,
+  DateTimeISO_UTCString,
+}
+export { formatISODate, stripSecondsFromTime }
