@@ -1,4 +1,4 @@
-import { screen, within } from '@testing-library/react'
+import { act, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ReactNode } from 'react'
 import { MemoryRouter } from 'react-router-dom'
@@ -34,15 +34,17 @@ describe('ProhibitorySignsFormScenarioAddress', () => {
   })
 
   it('renders a list of address options', async () => {
-    const { user } = setup(<ProhibitorySignsFormScenarioAddress />)
+    await act(async () => {
+      const { user } = setup(<ProhibitorySignsFormScenarioAddress />)
 
-    // search for (part of) an address
-    await user.type(
-      screen.getByRole('textbox', {
-        name: /adres van uw bestemming/i,
-      }),
-      'Groenb'
-    )
+      // search for (part of) an address
+      await user.type(
+        screen.getByRole('textbox', {
+          name: /adres van uw bestemming/i,
+        }),
+        'Groenb'
+      )
+    })
 
     // wait for search results
     await screen.findByRole('list')
@@ -55,19 +57,23 @@ describe('ProhibitorySignsFormScenarioAddress', () => {
   it('shows an error message if no address is selected', async () => {
     const { user } = setup(<ProhibitorySignsFormScenarioAddress />)
 
-    // search for (part of) an address
-    await user.type(
-      screen.getByRole('textbox', {
-        name: /adres van uw bestemming/i,
-      }),
-      'Groenb'
-    )
+    await act(async () => {
+      // search for (part of) an address
+      await user.type(
+        screen.getByRole('textbox', {
+          name: /adres van uw bestemming/i,
+        }),
+        'Groenb'
+      )
+    })
 
     // wait for search results
     await screen.findByRole('list')
 
-    // try to submit the form
-    await user.click(screen.getByText('Volgende', { selector: 'button' }))
+    await act(async () => {
+      // try to submit the form
+      await user.click(screen.getByText('Volgende', { selector: 'button' }))
+    })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
     expect(screen.getByText('Selecteer een adres uit de lijst')).toBeVisible()
@@ -76,39 +82,45 @@ describe('ProhibitorySignsFormScenarioAddress', () => {
   it('shows an error message if the search input contains less than 4 characters', async () => {
     const { user } = setup(<ProhibitorySignsFormScenarioAddress />)
 
-    // search for (part of) an address
-    await user.type(
-      screen.getByRole('textbox', {
-        name: /adres van uw bestemming/i,
-      }),
-      'Gro'
-    )
+    await act(async () => {
+      // search for (part of) an address
+      await user.type(
+        screen.getByRole('textbox', {
+          name: /adres van uw bestemming/i,
+        }),
+        'Gro'
+      )
+    })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
     expect(screen.getByText('Voer tenminste 4 letters in')).toBeVisible()
 
     // type the 4th character - the input now contains 'Groe'
-    await user.type(
-      screen.getByRole('textbox', {
-        name: /adres van uw bestemming/i,
-      }),
-      'e'
-    )
+    await act(async () => {
+      await user.type(
+        screen.getByRole('textbox', {
+          name: /adres van uw bestemming/i,
+        }),
+        'e'
+      )
+    })
 
     // a list with search results should be visible
     expect(await screen.findByRole('list')).toBeVisible()
   })
 
   it('shows an error message if an address is not found', async () => {
-    const { user } = setup(<ProhibitorySignsFormScenarioAddress />)
+    await act(async () => {
+      const { user } = setup(<ProhibitorySignsFormScenarioAddress />)
 
-    // search for (part of) an address
-    await user.type(
-      screen.getByRole('textbox', {
-        name: /adres van uw bestemming/i,
-      }),
-      'Noresults'
-    )
+      // search for (part of) an address
+      await user.type(
+        screen.getByRole('textbox', {
+          name: /adres van uw bestemming/i,
+        }),
+        'Noresults'
+      )
+    })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
     expect(screen.getByText('Geen adres gevonden')).toBeVisible()

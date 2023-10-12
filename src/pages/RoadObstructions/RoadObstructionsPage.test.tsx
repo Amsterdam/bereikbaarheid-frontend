@@ -1,4 +1,5 @@
-import { screen, waitFor, within } from '@testing-library/react'
+/* eslint-disable testing-library/no-unnecessary-act */
+import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { format } from 'date-fns'
 import { generatePath } from 'react-router-dom'
@@ -15,7 +16,9 @@ describe('RoadObstructionsPage', () => {
 
     // unfortunately both await are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
-    await waitFor(() => page.rerender)
+    await act(async () => {
+      await waitFor(() => page.rerender)
+    })
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
@@ -43,7 +46,9 @@ describe('RoadObstructionsPage', () => {
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
-    await waitFor(() => page.rerender)
+    await act(async () => {
+      await waitFor(() => page.rerender)
+    })
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
@@ -55,7 +60,9 @@ describe('RoadObstructionsPage', () => {
     expect(dateInFiltersDisplay).toBeVisible()
 
     // open filters modal and check if date is preset on the form
-    await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    await act(async () => {
+      await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    })
     const dateInput = screen.getByTestId('date-input')
 
     expect(dateInput).toBeVisible()
@@ -71,7 +78,9 @@ describe('RoadObstructionsPage', () => {
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
-    await waitFor(() => page.rerender)
+    await act(async () => {
+      await waitFor(() => page.rerender)
+    })
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
@@ -84,18 +93,26 @@ describe('RoadObstructionsPage', () => {
     expect(roadSectionsSvg.length).toBe(roadSections.features.length)
 
     // open filters modal
-    await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    await act(async () => {
+      await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    })
 
     // change date
     const date = '2023-06-15'
-    await user.clear(screen.getByTestId('date-input'))
-    await user.type(screen.getByTestId('date-input'), date)
+    await act(async () => {
+      await user.clear(screen.getByTestId('date-input'))
+      await user.type(screen.getByTestId('date-input'), date)
+    })
     expect(screen.getByTestId('date-input')).toHaveValue(date)
 
     // close filters modal
-    await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
+    await act(async () => {
+      await user.click(
+        screen.getByText('Kaart bekijken', { selector: 'button' })
+      )
 
-    await waitFor(() => page.rerender)
+      await waitFor(() => page.rerender)
+    })
 
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
     const roadSectionsSvgUpdated = page.container.querySelectorAll(

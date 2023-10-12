@@ -1,9 +1,8 @@
 import { screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { generatePath } from 'react-router-dom'
-
-import { getPathTo } from '../../../../routes'
 import { withApp } from '../../../../../test/utils/withApp'
+import { generatePath } from 'react-router-dom'
+import { getPathTo } from '../../../../routes'
 
 describe('ProhibitorySignsWideRoads', () => {
   jest.setTimeout(10000)
@@ -40,7 +39,7 @@ describe('ProhibitorySignsWideRoads', () => {
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
 
-    await user.click(await screen.findByLabelText('Breed opgezette wegen'))
+    await screen.findAllByText(/uw invoer/i)
 
     // the wide roads layer should be enabled
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access

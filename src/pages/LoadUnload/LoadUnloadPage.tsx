@@ -17,6 +17,7 @@ import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import { MapStyle } from '../../shared/map/mapStyle'
 import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 import { LoadUnloadAddressForm } from './components/AddressForm'
 import { LoadUnloadHeader } from './components/Header'
@@ -55,6 +56,10 @@ const LoadUnloadPage = () => {
   const [showAddressForm, setShowAddressForm] = useState(false)
   const [showDateTimeModal, setShowDateTimeModal] = useState(false)
   const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
+
+  const { trackPageVisit } = useAnalytics()
+  useEffect(trackPageVisit)
+
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   return (

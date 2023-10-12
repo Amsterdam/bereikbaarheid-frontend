@@ -14,7 +14,7 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import groupBy from 'lodash/groupBy'
-import { formatTime } from '../../../../shared/utils/dateTime'
+import { stripSecondsFromTime } from '../../../../shared/utils/dateTime'
 import styled from 'styled-components'
 
 import {
@@ -63,14 +63,14 @@ const SignCodeToImg = { E01: E01, E02: E02 }
 export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
   roadSectionLoadUnload,
 }: LoadUnloadDetailFeatureRoadSectionLoadUnloadProps) => {
-  const loadUnloadByDirection = (): [string, LoadUnloadRegime[]][] => {
+  const loadUnloadByDirection = useMemo<[string, LoadUnloadRegime[]][]>(() => {
     const grouped: Record<string, LoadUnloadRegime[]> = groupBy(
       roadSectionLoadUnload.properties.load_unload,
       item => item.direction
     )
 
     return Object.entries(grouped)
-  }
+  }, [roadSectionLoadUnload.properties.load_unload])
 
   const parkingSigns = useMemo(() => {
     return roadSectionLoadUnload.properties.load_unload
@@ -112,7 +112,7 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
             <>
               <TableTitle as="h3">Venstertijden</TableTitle>
 
-              {loadUnloadByDirection().map(([key, items]) => {
+              {loadUnloadByDirection.map(([key, items]) => {
                 return (
                   <DirectionContainer key={key}>
                     <Heading as="h4">Richting {key}</Heading>
@@ -123,6 +123,7 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
                             <TableCell as="th">dagen</TableCell>
                             <TableCell as="th">van</TableCell>
                             <TableCell as="th">tot</TableCell>
+                            <TableCell as="th"></TableCell>
                           </TableRow>
                         </TableHeader>
 
@@ -136,14 +137,30 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
 
                                 {item.start_time && (
                                   <TableCell>
-                                    {formatTime(item.start_time)}
+                                    {stripSecondsFromTime(item.start_time)}
                                   </TableCell>
                                 )}
 
                                 {item.end_time && (
                                   <TableCell>
-                                    {formatTime(item.end_time)}
+                                    {stripSecondsFromTime(item.end_time)}
                                   </TableCell>
+                                )}
+
+                                {item.additional_info === 'E01' ||
+                                item.additional_info === 'E02' ? (
+                                  <TableCell>
+                                    <Image
+                                      src={SignCodeToImg[item.additional_info]}
+                                      style={{
+                                        marginTop: '4px',
+                                        width: '28px',
+                                        height: '28px',
+                                      }}
+                                    />
+                                  </TableCell>
+                                ) : (
+                                  <></>
                                 )}
                               </TableRow>
                             )

@@ -26,6 +26,7 @@ import {
   topoBlackWhite,
 } from '../../shared/map/mapLayers'
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 import RoadObstructionsFiltersDisplay from './components/FiltersDisplay'
 import { RoadObstructionsFiltersForm } from './components/FiltersForm'
@@ -87,6 +88,9 @@ const RoadObstructionsPage = () => {
 
   const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
+
+  const { trackPageVisit } = useAnalytics()
+  useEffect(trackPageVisit)
 
   return (
     <>
