@@ -1,5 +1,5 @@
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
-import { Header } from '../../shared/components/Header'
+import Header from '../../shared/components/Header'
 import CardsMenu, { CARD_WIDTH_PX } from './components/CardsMenu'
 
 import styled from 'styled-components'
@@ -20,7 +20,7 @@ const StyledMainContent = styled(MainContent)`
   gap: ${GRID_GAP_PX}px;
 `
 
-const HomePage = () => {
+function HomePage() {
   return (
     <PageWrapper>
       <Header title="Bereikbaarheid" />

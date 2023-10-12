@@ -23,12 +23,12 @@ const StyledMenu = styled(MenuInline)`
   }
 `
 
-export interface HeaderProps {
+interface HeaderProps {
   title?: string
   zIndex?: number
 }
 
-export const Header = ({ title, zIndex }: HeaderProps) => {
+function Header({ title, zIndex }: HeaderProps) {
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'laptop' })
 
   return (
@@ -67,3 +67,5 @@ export const Header = ({ title, zIndex }: HeaderProps) => {
     />
   )
 }
+
+export default Header

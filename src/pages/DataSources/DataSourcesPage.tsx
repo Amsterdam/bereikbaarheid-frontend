@@ -9,7 +9,7 @@ import { DUMMY_VEHICLE } from '../ProhibitorySigns/hooks/useRdwGeneralInfo'
 import loadUnloadLinks from '../LoadUnload/data/dataLinks'
 import { trafficSignsLink } from '../ProhibitorySigns/data/dataLinks'
 import obstructionsLinks from '../RoadObstructions/data/dataLinks'
-import { Header } from '../../shared/components/Header'
+import Header from '../../shared/components/Header'
 
 const INITIAL_DATE = format(new Date(), 'yyyy-MM-dd')
 

@@ -26,7 +26,7 @@ import { LoadUnloadViewerContainer } from './components/ViewerContainer'
 import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
 import { LoadUnloadMapProvider } from './contexts/MapProvider'
 import { LoadUnloadPageProvider } from './contexts/PageProvider'
-import { Header } from '../../shared/components/Header'
+import Header from '../../shared/components/Header'
 
 const { SnapPoint } = mapPanelConstants
 

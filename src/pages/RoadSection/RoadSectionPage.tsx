@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 import { getRoadSection } from '../../api/bereikbaarheid/road-elements'
 import ContentContainer from '../../shared/components/ContentContainer'
-import { Header } from '../../shared/components/Header'
+import Header from '../../shared/components/Header'
 import LoadingSpinner from '../../shared/components/LoadingSpinner'
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
 import useAnalytics from '../../shared/hooks/useAnalytics'

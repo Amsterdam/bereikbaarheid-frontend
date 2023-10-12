@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import { withAppContext } from '../../../../test/utils/withAppContext'
 
-import { Header } from './Header'
+import Header from '.'
 
 describe('Header', () => {
   it('renders correctly', () => {

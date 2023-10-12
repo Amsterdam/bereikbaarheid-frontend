@@ -37,7 +37,7 @@ import WiorLayer from './components/WiorLayer'
 import RoadObstructionsMapProvider from './contexts/MapProvider'
 import RoadObstructionsDetailFeature from './components/DetailFeature'
 import { RoadObstructionsHighlightedFeatureLayer } from './components/HighlightedFeature'
-import { Header } from '../../shared/components/Header'
+import Header from '../../shared/components/Header'
 
 const { SnapPoint } = mapPanelConstants
 

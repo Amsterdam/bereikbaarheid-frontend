@@ -24,7 +24,7 @@ import ProhibitorySignsViewerContainer from './components/ViewerContainer'
 import ProhibitorySignsPageProvider from './contexts/PageProvider'
 import ScenarioDisplay from './components/ScenarioDisplay'
 import ProhibitorySignsMapProvider from './contexts/MapProvider'
-import { Header } from '../../shared/components/Header'
+import Header from '../../shared/components/Header'
 
 const { SnapPoint } = mapPanelConstants
 
