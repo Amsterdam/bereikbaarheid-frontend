@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import {
   Card,
   CardContent,
@@ -8,15 +9,13 @@ import {
   Link,
   themeColor,
 } from '@amsterdam/asc-ui'
+import { ExternalLink } from '@amsterdam/asc-assets'
 import styled from 'styled-components'
-import { getPathTo } from '../../../../routes'
-import { generatePath } from 'react-router-dom'
 import {
   MenuOrCardItemData as CardItemData,
   menuOrCardItems as cardItems,
 } from '../../../../shared/utils/menuOrCardItems'
-import { useMemo } from 'react'
-import { ExternalLink } from '@amsterdam/asc-assets'
+import { getGeneratedPath } from '../../../../shared/utils/path'
 
 const CARD_WIDTH_PX = 300
 
@@ -79,7 +78,7 @@ function CardsMenu() {
         path: card.path ?? '',
       }
 
-      if (card.route) cardWithPath.path = generatePath(getPathTo(card.route))
+      if (card.route) cardWithPath.path = getGeneratedPath(card.route)
       if (card.target) cardWithPath.target = card.target
 
       try {
