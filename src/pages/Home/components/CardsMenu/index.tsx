@@ -12,11 +12,10 @@ import {
 import { ExternalLink } from '@amsterdam/asc-assets'
 import styled from 'styled-components'
 import {
-  MenuOrCardItemData as CardItemData,
+  MenuOrCardItemWithPath as CardItemWithPath,
   menuOrCardItems as cardItems,
+  mapPathsToMenuOrCardItems,
 } from '../../../../shared/utils/menuOrCardItems'
-import { getGeneratedPath } from '../../../../shared/utils/path'
-
 const CARD_WIDTH_PX = 300
 
 const CardLink = styled(Link)`
@@ -68,36 +67,8 @@ const StyledImage = styled(Image)`
 `
 
 function CardsMenu() {
-  const cardItemsWithPaths = useMemo<CardItemData[]>(() => {
-    return cardItems.map(card => {
-      const cardWithPath: CardItemData = {
-        ...card,
-        description:
-          card.description ??
-          // TODO: replace Lorem Ipsum with actual descriptions.
-          'In irure do consequat eiusmod eiusmod incididunt velit quis sint officia enim duis. Velit sunt veniam cillum culpa deserunt sit occaecat cillum enim consequat ea sit sunt.',
-      }
-
-      if (!card.path && card.route) {
-        cardWithPath.path = getGeneratedPath(card.route)
-      }
-
-      try {
-        if (card.image) {
-          cardWithPath.image = require(`./images/${card.image}`)
-        }
-        if (card.imageFallback) {
-          cardWithPath.imageFallback = require(`./images/${card.imageFallback}`)
-        }
-      } catch (error) {
-        console.error(
-          'Requested image could not be loaded. Does it exist at "./images/"?',
-          error
-        )
-      }
-
-      return cardWithPath
-    })
+  const cardItemsWithPaths = useMemo<CardItemWithPath[]>(() => {
+    return mapPathsToMenuOrCardItems(cardItems, { preferShortTitles: false })
   }, [])
 
   return (
@@ -107,6 +78,7 @@ function CardsMenu() {
           key={card.title}
           href={card.path}
           target={card.target}
+          data-testid={card.target && 'card-with-external-link'}
           tabIndex="0"
         >
           <StyledCard maxWidth={300} backgroundColor="level2" shadow>
@@ -116,6 +88,7 @@ function CardsMenu() {
                 <StyledImage
                   src={card.imageFallback}
                   alt={card.title}
+                  data-testid={card.image && 'card-with-image'}
                   width="300"
                   height="200"
                 />

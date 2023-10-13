@@ -4,25 +4,12 @@ import { Link, matchPath, useLocation } from 'react-router-dom'
 import { ExternalLink } from '@amsterdam/asc-assets'
 import styled from 'styled-components'
 import {
-  MenuOrCardItemData as MenuItemData,
+  MenuOrCardItemWithPath as MenuItemWithPath,
   menuOrCardItems as menuItems,
+  mapPathsToMenuOrCardItems as mapPathsToMenuItems,
 } from '../../utils/menuOrCardItems'
-import { getGeneratedPath } from '../../utils/path'
 
-function mapMenuItems(item: MenuItemData) {
-  const itemWithPath: MenuItemData = {
-    ...item,
-    title: item.titleShort ?? item.title,
-  }
-
-  if (!item.path && item.route) {
-    itemWithPath.path = getGeneratedPath(item.route)
-  }
-
-  return itemWithPath
-}
-
-function HeaderMenuItem({ item }: { item: MenuItemData }) {
+function HeaderMenuItem({ item }: { item: MenuItemWithPath }) {
   const location = useLocation()
 
   return (
@@ -58,12 +45,12 @@ const MenuDivider = styled.hr`
 `
 
 function HeaderMenuItems() {
-  const primaryMenuItemsWithPaths = useMemo<MenuItemData[]>(() => {
-    return menuItems.filter(item => !item.secondary).map(mapMenuItems)
+  const primaryMenuItemsWithPaths = useMemo<MenuItemWithPath[]>(() => {
+    return mapPathsToMenuItems(menuItems.filter(item => !item.secondary))
   }, [])
 
-  const secondaryMenuItemsWithPaths = useMemo<MenuItemData[]>(() => {
-    return menuItems.filter(item => item.secondary).map(mapMenuItems)
+  const secondaryMenuItemsWithPaths = useMemo<MenuItemWithPath[]>(() => {
+    return mapPathsToMenuItems(menuItems.filter(item => item.secondary))
   }, [])
 
   return (
