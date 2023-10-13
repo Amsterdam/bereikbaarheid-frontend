@@ -4,7 +4,7 @@ import { createPiwikInstance } from './shared/hooks/useAnalytics'
 
 import App, { isProd } from './App'
 
-createPiwikInstance(true || isProd)
+createPiwikInstance(isProd)
 
 ReactDOM.render(
   <React.StrictMode>
