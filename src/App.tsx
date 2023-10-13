@@ -7,7 +7,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import { ROUTES } from './routes'
 import Disclaimer from './shared/components/Disclaimer'
-import useAnalytics from './shared/hooks/useAnalytics'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -23,9 +22,6 @@ const queryClient = new QueryClient({
 const router = createBrowserRouter(ROUTES)
 
 function App() {
-  const { createPiwikInstance } = useAnalytics()
-  createPiwikInstance(isProd)
-
   const [showDisclaimer, setShowDisclaimer] = useState(true)
 
   return (
