@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 const GRID_GAP_PX = 32
 
-const StyledMainContent = styled(MainContent)`
+const Grid = styled(MainContent)`
   display: grid;
   flex-grow: 0;
   grid-template-columns: repeat(auto-fill, ${CARD_WIDTH_PX}px);
@@ -15,7 +15,6 @@ const StyledMainContent = styled(MainContent)`
   justify-content: center;
   padding: ${GRID_GAP_PX}px ${GRID_GAP_PX / 2}px;
   width: 100%;
-  // Maximum width is 4 cards including the spacing around them.
   max-width: ${CARD_WIDTH_PX * 4 + GRID_GAP_PX * 4}px;
   gap: ${GRID_GAP_PX}px;
 `
@@ -25,9 +24,9 @@ function HomePage() {
     <PageWrapper>
       <Header title="Bereikbaarheid" />
 
-      <StyledMainContent data-testid="home-page">
+      <Grid data-testid="home-page">
         <CardsMenu />
-      </StyledMainContent>
+      </Grid>
     </PageWrapper>
   )
 }
