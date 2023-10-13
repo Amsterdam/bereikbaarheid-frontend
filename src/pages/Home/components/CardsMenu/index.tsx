@@ -71,26 +71,29 @@ function CardsMenu() {
   const cardItemsWithPaths = useMemo<CardItemData[]>(() => {
     return cardItems.map(card => {
       const cardWithPath: CardItemData = {
-        title: card.title,
+        ...card,
         description:
           card.description ??
+          // TODO: replace Lorem Ipsum with actual descriptions.
           'In irure do consequat eiusmod eiusmod incididunt velit quis sint officia enim duis. Velit sunt veniam cillum culpa deserunt sit occaecat cillum enim consequat ea sit sunt.',
-        path: card.path ?? '',
       }
 
-      if (card.route) cardWithPath.path = getGeneratedPath(card.route)
-      if (card.target) cardWithPath.target = card.target
+      if (!card.path && card.route) {
+        cardWithPath.path = getGeneratedPath(card.route)
+      }
 
       try {
-        if (card.image) cardWithPath.image = require(`./images/${card.image}`)
+        if (card.image) {
+          cardWithPath.image = require(`./images/${card.image}`)
+        }
         if (card.imageFallback) {
           cardWithPath.imageFallback = require(`./images/${card.imageFallback}`)
         }
       } catch (error) {
         console.error(
-          'Requested image could not be loaded. Does it exist at "./images/"?'
+          'Requested image could not be loaded. Does it exist at "./images/"?',
+          error
         )
-        console.error((error as Error).message)
       }
 
       return cardWithPath

@@ -11,14 +11,13 @@ import { getGeneratedPath } from '../../utils/path'
 
 function mapMenuItems(item: MenuItemData) {
   const itemWithPath: MenuItemData = {
+    ...item,
     title: item.titleShort ?? item.title,
-    path: item.path ?? '',
   }
 
-  if (item.description) itemWithPath.description = item.description
-  if (item.route) itemWithPath.path = getGeneratedPath(item.route)
-  if (item.target) itemWithPath.target = item.target
-  if (item.secondary) itemWithPath.secondary = item.secondary
+  if (!item.path && item.route) {
+    itemWithPath.path = getGeneratedPath(item.route)
+  }
 
   return itemWithPath
 }

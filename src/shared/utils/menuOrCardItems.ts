@@ -5,7 +5,7 @@ interface MenuItemData {
   titleShort?: string
   description?: string
   route?: RouteIds
-  path: string
+  path?: string
   target?: string
   secondary?: boolean
 }
@@ -20,21 +20,18 @@ const menuOrCardItems: MenuOrCardItemData[] = [
     title: 'Bereikbaarheid op kenteken',
     titleShort: 'Op kenteken',
     route: 'LICENCE_PLATE_PAGE' as RouteIds,
-    path: '',
     image: 'bereikbaarheid-op-kenteken.webp',
     imageFallback: 'bereikbaarheid-op-kenteken.jpg',
   },
   {
     title: 'Stremmingen',
     route: 'ROAD_OBSTRUCTIONS_PAGE' as RouteIds,
-    path: '',
     image: 'stremmingen.webp',
     imageFallback: 'stremmingen.jpg',
   },
   {
     title: 'Laden en lossen',
     route: 'LOAD_UNLOAD_PAGE' as RouteIds,
-    path: '',
     image: 'laden-en-lossen.webp',
     imageFallback: 'laden-en-lossen.jpg',
   },
@@ -49,7 +46,6 @@ const menuOrCardItems: MenuOrCardItemData[] = [
   {
     title: 'Databronnen',
     route: 'DATA' as RouteIds,
-    path: '',
     image: 'json.webp',
     imageFallback: 'json.jpg',
     secondary: true,
@@ -57,7 +53,6 @@ const menuOrCardItems: MenuOrCardItemData[] = [
   {
     title: 'Contact en uitleg',
     route: 'CONTACT' as RouteIds,
-    path: '',
     secondary: true,
   },
 ]
