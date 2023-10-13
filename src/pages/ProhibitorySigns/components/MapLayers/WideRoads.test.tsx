@@ -6,7 +6,9 @@ import { RouteIds, getPathTo } from '../../../../routes'
 import { getGeneratedPath } from '../../../../shared/utils/path'
 
 describe('ProhibitorySignsWideRoads', () => {
-  it('"Breed opgezette wegen" layer is disabled in map legend', async () => {
+  jest.setTimeout(10000)
+
+  it('"Breed opgezette wegen" layer is enabled in map legend', async () => {
     const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
 
     withApp(pathToPage)
@@ -16,8 +18,6 @@ describe('ProhibitorySignsWideRoads', () => {
 
     expect(screen.getByLabelText(/breed opgezette wegen/i)).toBeEnabled()
   })
-
-  jest.setTimeout(10000)
 
   it('enables the wide roads map layer for large and/or heavy vehicles', async () => {
     const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
