@@ -1,4 +1,3 @@
-/* eslint-disable testing-library/no-unnecessary-act */
 import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { format } from 'date-fns'
@@ -16,9 +15,7 @@ describe('RoadObstructionsPage', () => {
 
     // unfortunately both await are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
-    await act(async () => {
-      await waitFor(() => page.rerender)
-    })
+    await waitFor(() => page.rerender)
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
@@ -46,9 +43,7 @@ describe('RoadObstructionsPage', () => {
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
-    await act(async () => {
-      await waitFor(() => page.rerender)
-    })
+    await waitFor(() => page.rerender)
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
@@ -78,9 +73,7 @@ describe('RoadObstructionsPage', () => {
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
-    await act(async () => {
-      await waitFor(() => page.rerender)
-    })
+    await waitFor(() => page.rerender)
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
@@ -110,9 +103,9 @@ describe('RoadObstructionsPage', () => {
       await user.click(
         screen.getByText('Kaart bekijken', { selector: 'button' })
       )
-
-      await waitFor(() => page.rerender)
     })
+
+    await waitFor(() => page.rerender)
 
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
     const roadSectionsSvgUpdated = page.container.querySelectorAll(
