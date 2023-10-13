@@ -2,9 +2,9 @@ import { icons } from '@amsterdam/arm-core'
 import L from 'leaflet'
 import endsWith from 'lodash/endsWith'
 
-import { TrafficSign } from '../../../../api/bereikbaarheid/traffic-signs'
-
 import { trafficSignBackgrounds } from './backgrounds'
+
+import { TrafficSign } from '../../../../api/bereikbaarheid/traffic-signs'
 
 const TrafficSignIcon = (item: TrafficSign) => {
   const signType = item.properties.type.toLowerCase()

@@ -10,12 +10,10 @@ import {
   roadNetworkLowEmissionZone,
   roadNetworkHeavyGoodsVehicleAndLowEmissionZone,
 } from '../../../../shared/map/mapLayers'
-
-import { prohibitoryRoadsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
+import { prohibitoryRoadsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { useActiveRoadNetwork } from '../../hooks/useActiveRoadNetwork'
-
 import { prohibitoryRoadsColors } from '../MapLayers/ProhibitoryRoadsLayer'
 
 const ProhibitorySignsMapLegendRoadNetwork = () => {

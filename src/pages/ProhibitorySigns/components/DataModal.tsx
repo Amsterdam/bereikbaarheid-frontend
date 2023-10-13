@@ -1,10 +1,10 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import { getUrl } from '../../../api/bereikbaarheid/traffic-signs'
 import { DataModal } from '../../../shared/components/Modal'
-
 import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 import { useRdwGeneralInfo } from '../hooks/useRdwGeneralInfo'
 import { useTrafficSignCategories } from '../hooks/useTrafficSignCategories'
-import { Dispatch, SetStateAction } from 'react'
 
 interface ProhibitorySignsDataModalProps {
   open: boolean

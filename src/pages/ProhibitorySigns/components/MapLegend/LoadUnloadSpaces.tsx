@@ -1,10 +1,10 @@
+import { useEffect, useState } from 'react'
+
 import { useMapInstance } from '@amsterdam/arm-core'
 import { Checkbox, Label, themeSpacing } from '@amsterdam/asc-ui'
-import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import { loadUnloadSpaces } from '../../../../shared/map/mapLayers'
-
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 
 // Colors taken from MapServer map file

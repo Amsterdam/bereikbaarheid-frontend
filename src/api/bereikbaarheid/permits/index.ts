@@ -1,8 +1,7 @@
 import { Point } from 'geojson'
 
-import { Address } from '../../../types/address'
 import { Vehicle } from '../../../pages/ProhibitorySigns/types/vehicle'
-
+import { Address } from '../../../types/address'
 import { api } from '../index'
 
 const ENDPOINT = 'v1/permits'

@@ -1,12 +1,12 @@
+import { useEffect, useState } from 'react'
+
+import { useMapInstance } from '@amsterdam/arm-core'
 import { Checkbox, Label, themeSpacing } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
 import { LegendWrapper } from '../../../../shared/components/MapLegendStyles'
-
 import { useRoadObstructionsMapContext } from '../../contexts/MapContext'
 import { wiorLayerId } from '../../contexts/mapLayersReducer'
-import { useMapInstance } from '@amsterdam/arm-core'
-import { useEffect, useState } from 'react'
 
 const Legend = styled.div`
   background-color: rgba(255, 145, 0, 0.2);

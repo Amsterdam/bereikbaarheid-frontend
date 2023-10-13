@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+
 import {
   Column,
   CompactThemeProvider,
@@ -14,8 +15,10 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import groupBy from 'lodash/groupBy'
-import { stripSecondsFromTime } from '../../../../shared/utils/dateTime'
 import styled from 'styled-components'
+
+import E01 from './images/E01.png'
+import E02 from './images/E02.png'
 
 import {
   LoadUnloadRegime,
@@ -26,9 +29,7 @@ import {
   Image,
   PropertiesContainer,
 } from '../../../../shared/components/DetailFeature/DetailFeatureStyles'
-
-import E01 from './images/E01.png'
-import E02 from './images/E02.png'
+import { stripSecondsFromTime } from '../../../../shared/utils/dateTime'
 
 const PaddedImageContainer = styled(ImageContainer)`
   margin-bottom: 1em;

@@ -1,9 +1,10 @@
 import { render, screen, within } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
 import userEvent from '@testing-library/user-event'
+import { MemoryRouter } from 'react-router-dom'
+
+import { LoadUnloadHeader, LoadUnloadHeaderProps } from './Header'
 
 import { withAppContext } from '../../../../test/utils/withAppContext'
-import { LoadUnloadHeader, LoadUnloadHeaderProps } from './Header'
 
 describe('LoadUnloadHeader', () => {
   const props: LoadUnloadHeaderProps = {

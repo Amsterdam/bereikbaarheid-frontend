@@ -1,7 +1,8 @@
 import { screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { withApp } from '../../../../../test/utils/withApp'
 import { generatePath } from 'react-router-dom'
+
+import { withApp } from '../../../../../test/utils/withApp'
 import { getPathTo } from '../../../../routes'
 
 describe('ProhibitorySignsWideRoads', () => {

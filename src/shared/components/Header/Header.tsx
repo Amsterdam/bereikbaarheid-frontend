@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 import {
   AmsterdamLogo,
   Header as ASCHeader,
@@ -6,11 +8,11 @@ import {
   styles,
   useMatchMedia,
 } from '@amsterdam/asc-ui'
-import type { ReactNode } from 'react'
 import styled from 'styled-components'
 
-import { HEADER_HEIGHT, Z_INDEX_HEADER } from '../../constants'
 import { HeaderMenuItems } from './HeaderMenuItems'
+
+import { HEADER_HEIGHT, Z_INDEX_HEADER } from '../../constants'
 
 const StyledLogo = styled(AmsterdamLogo)`
   height: 44px;

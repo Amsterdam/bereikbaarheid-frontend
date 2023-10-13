@@ -4,8 +4,8 @@ import {
   detailFeatureReducer,
   detailFeatureInitialState,
 } from './detailFeatureReducer'
-import { mapLayersReducer, mapLayersInitialState } from './mapLayersReducer'
 import { LoadUnloadMapContext } from './MapContext'
+import { mapLayersReducer, mapLayersInitialState } from './mapLayersReducer'
 
 type Props = {
   children: ReactNode

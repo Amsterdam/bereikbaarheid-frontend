@@ -1,7 +1,7 @@
+import ProhibitorySignsDetailFeatureParkingSpace from './ParkingSpace'
+
 import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
 import { useSearchAllDataSets } from '../../../../shared/hooks/useSearchAllDataSets'
-
-import ProhibitorySignsDetailFeatureParkingSpace from './ParkingSpace'
 
 interface FeatureSearchResultsProps {
   lat: number

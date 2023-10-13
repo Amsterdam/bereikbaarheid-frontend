@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import {
   breakpoint,
   Button,
@@ -10,22 +12,21 @@ import {
 } from '@amsterdam/asc-ui'
 import { zodResolver } from '@hookform/resolvers/zod'
 import debounce from 'lodash/debounce'
-import { Dispatch, SetStateAction } from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import styled from 'styled-components'
 import { z } from 'zod'
 
+import { FormScenarioStartSampleLicensePlates } from './SampleLicensePlates'
+import { FormScenarioStartValidationSchema } from './ValidationSchema'
+
 import { FormLabel } from '../../../../../shared/components/FormLabel'
 import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
-
 import { Vehicle } from '../../../types/vehicle'
 import {
   FormInputLicensePlate,
   FormInputLicensePlateWidth,
 } from '../FormInputLicensePlate/Style'
-import { FormScenarioStartSampleLicensePlates } from './SampleLicensePlates'
-import { FormScenarioStartValidationSchema } from './ValidationSchema'
 import ScenarioWizardNav from '../ScenarioWizardNav'
 
 const FormFieldWrapper = styled.div`

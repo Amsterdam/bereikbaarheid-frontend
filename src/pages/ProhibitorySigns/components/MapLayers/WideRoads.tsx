@@ -1,12 +1,12 @@
-import { TileLayer } from '@amsterdam/react-maps'
 import { useEffect } from 'react'
 
-import { wideRoads } from '../../../../shared/map/mapLayers'
+import { TileLayer } from '@amsterdam/react-maps'
 
+import { wideRoads } from '../../../../shared/map/mapLayers'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
-import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
 import { usePermitHeavyGoodsVehicleZone } from '../../hooks/usePermitHeavyGoodsVehicleZone'
+import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
 
 const ProhibitorySignsWideRoads = () => {
   const permitsByLocation = usePermitsByLocation()

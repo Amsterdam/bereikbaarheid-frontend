@@ -15,16 +15,16 @@ import {
 import { isAfter, parse, startOfYesterday } from 'date-fns'
 import styled from 'styled-components'
 
-import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
-import { formatISODate } from '../../../../shared/utils/dateTime'
-import { useParkingSpaceInfo } from '../../hooks/useParkingSpaceInfo'
-
 import {
   ImageContainer,
   Image,
   PropertiesContainer,
 } from './DetailFeatureStyles'
 import trafficSignE07 from './images/traffic-sign-E07.png'
+
+import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
+import { formatISODate } from '../../../../shared/utils/dateTime'
+import { useParkingSpaceInfo } from '../../hooks/useParkingSpaceInfo'
 
 const TableTitle = styled(Heading)`
   margin-bottom: 0;

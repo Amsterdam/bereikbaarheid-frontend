@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react'
+
 import {
   CompactThemeProvider,
   Link,
@@ -7,7 +9,6 @@ import {
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { MouseEventHandler } from 'react'
 import styled from 'styled-components'
 
 import { AddressItem } from '../../api/atlas/search/address'

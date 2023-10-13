@@ -8,13 +8,12 @@ import {
 } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
-import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
-
-import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
-import { useRdwInfo } from '../../../hooks/useRdwInfo'
-
 import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
 import { RdwInfoFormColumn, RdwInfoFormRow } from './FormStyle'
+
+import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
+import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
+import { useRdwInfo } from '../../../hooks/useRdwInfo'
 
 const StyledFormRow = styled(RdwInfoFormRow)`
   border-top: 1px solid ${props => props.theme.colors.tint?.level6};

@@ -2,9 +2,9 @@ import { Link, MenuButton, MenuItem } from '@amsterdam/asc-ui'
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 
-import { withAppContext } from '../../../../test/utils/withAppContext'
-
 import { Header } from './Header'
+
+import { withAppContext } from '../../../../test/utils/withAppContext'
 
 describe('Header', () => {
   it('renders correctly', () => {

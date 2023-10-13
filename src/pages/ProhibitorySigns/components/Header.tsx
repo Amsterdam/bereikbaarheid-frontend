@@ -1,10 +1,11 @@
-import { Link, MenuButton, MenuItem } from '@amsterdam/asc-ui'
 import { Dispatch, SetStateAction, useState } from 'react'
 
-import { Header, HeaderProps } from '../../../shared/components/Header'
+import { Link, MenuButton, MenuItem } from '@amsterdam/asc-ui'
 
-import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 import { ProhibitorySignsDataModal } from './DataModal'
+
+import { Header, HeaderProps } from '../../../shared/components/Header'
+import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 
 export interface ProhibitorySignsHeaderProps extends HeaderProps {
   setOpenFeedbackModal: Dispatch<SetStateAction<boolean>>

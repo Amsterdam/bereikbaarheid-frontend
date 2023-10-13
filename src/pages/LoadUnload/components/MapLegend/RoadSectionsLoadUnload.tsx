@@ -6,7 +6,6 @@ import {
   LegendItemsWrapper,
   LegendWrapper,
 } from '../../../../shared/components/MapLegendStyles'
-
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
 import { roadSectionsLoadUnloadLayerId } from '../../contexts/mapLayersReducer'
 

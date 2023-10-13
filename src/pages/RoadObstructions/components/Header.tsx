@@ -1,10 +1,10 @@
-import { Link, MenuButton, MenuItem } from '@amsterdam/asc-ui'
 import { Dispatch, SetStateAction, useState } from 'react'
+
+import { Link, MenuButton, MenuItem } from '@amsterdam/asc-ui'
 
 import { getUrl } from '../../../api/bereikbaarheid/road-obstructions'
 import { Header, HeaderProps } from '../../../shared/components/Header'
 import { DataModal } from '../../../shared/components/Modal'
-
 import { RoadObstructionMapFilters } from '../types/roadObstructionMapFilters'
 
 export interface RoadObstructionsHeaderProps extends HeaderProps {

@@ -1,7 +1,7 @@
 import { Button, Link, Paragraph } from '@amsterdam/asc-ui'
 
-import { linkToPermitCheck } from '../RvvDetail'
 import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
+import { linkToPermitCheck } from '../RvvDetail'
 
 const ScenarioDisplayResultPermitRVV = () => {
   const permitsByLocation = usePermitsByLocation()

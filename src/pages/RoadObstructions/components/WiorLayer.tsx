@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+
 import {
   GeoJSON,
   MAX_ZOOM_LEVEL,
@@ -12,11 +14,9 @@ import {
   Map,
   PathOptions,
 } from 'leaflet'
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { useTheme } from 'styled-components'
 
 import { getWiorData } from '../../../api/wfs/wior'
-
 import { useRoadObstructionsMapContext } from '../contexts/MapContext'
 import { wiorLayerId } from '../contexts/mapLayersReducer'
 import { DetailFeature } from '../types/detailFeature'

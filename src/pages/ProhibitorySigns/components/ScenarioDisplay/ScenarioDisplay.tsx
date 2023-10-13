@@ -1,16 +1,17 @@
+import { useContext, useEffect } from 'react'
+
 import {
   mapPanelConstants,
   MapPanelContent,
   MapPanelContentProps,
   MapPanelContext,
 } from '@amsterdam/arm-core'
-import { useContext, useEffect } from 'react'
-
-import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 
 import ScenarioDisplayRdwInfo from './RdwInfo'
 import ScenarioDisplayResult from './Result'
 import ScenarioDisplayStartAndAddress from './StartAndAddress'
+
+import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 
 const ScenarioDisplay = ({ ...otherProps }: MapPanelContentProps) => {
   const { showScenarioWizard } = useProhibitorySignsPageContext()

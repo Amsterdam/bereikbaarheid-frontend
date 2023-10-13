@@ -1,5 +1,6 @@
-import { TileLayer } from '@amsterdam/react-maps'
 import { useEffect } from 'react'
+
+import { TileLayer } from '@amsterdam/react-maps'
 
 import {
   roadNetworkHeavyGoodsVehicleZone,
@@ -7,7 +8,6 @@ import {
   roadNetworkHeavyGoodsVehicleAndLowEmissionZone,
   roadNetworkNoRestrictions,
 } from '../../../../shared/map/mapLayers'
-
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { useActiveRoadNetwork } from '../../hooks/useActiveRoadNetwork'

@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import { Close } from '@amsterdam/asc-assets'
 import {
   Button,
@@ -11,11 +13,11 @@ import {
   themeSpacing,
   TopBar,
 } from '@amsterdam/asc-ui'
-import { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
 import { Z_INDEX_MENU_MODAL } from '../../constants'
 import ModalBlock from '../ModalBlock'
+
 import { getMailtoLink } from './index'
 
 const StyledList = styled(List)`

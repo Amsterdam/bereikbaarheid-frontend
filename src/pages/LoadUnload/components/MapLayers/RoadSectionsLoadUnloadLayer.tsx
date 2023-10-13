@@ -1,8 +1,9 @@
+import { useCallback, useEffect, useState } from 'react'
+
 import { GeoJSON } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
 import { DomEvent, PathOptions } from 'leaflet'
 import type L from 'leaflet'
-import { useCallback, useEffect, useState } from 'react'
 import { useTheme } from 'styled-components'
 
 import {
@@ -10,11 +11,10 @@ import {
   RoadSectionLoadUnload,
 } from '../../../../api/bereikbaarheid/road-sections/load-unload'
 import { useDateToDayOfTheWeek } from '../../../../shared/hooks/useDateToDayOfTheWeek'
-
+import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
 import { roadSectionsLoadUnloadLayerId } from '../../contexts/mapLayersReducer'
 import { useLoadUnloadPageContext } from '../../contexts/PageContext'
-import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
 
 export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
   const { activeMapLayers, setDetailFeature } = useLoadUnloadMapContext()

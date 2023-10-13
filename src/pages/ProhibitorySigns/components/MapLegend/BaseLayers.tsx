@@ -5,7 +5,6 @@ import {
   topoBlackWhite,
   topoColorLight,
 } from '../../../../shared/map/mapLayers'
-
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 

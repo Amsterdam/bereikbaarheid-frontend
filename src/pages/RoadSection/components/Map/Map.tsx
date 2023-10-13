@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 import {
   BaseLayer,
   GeoJSON,
@@ -7,13 +9,11 @@ import {
 } from '@amsterdam/arm-core'
 import { breakpoint, themeSpacing } from '@amsterdam/asc-ui'
 import { TileLayer } from '@amsterdam/react-maps'
-import { useEffect, useState } from 'react'
-import styled, { useTheme } from 'styled-components'
 import type L from 'leaflet'
+import styled, { useTheme } from 'styled-components'
 import 'leaflet/dist/leaflet.css'
 
 import { RoadSection } from '../../../../api/bereikbaarheid/road-elements'
-import { MapStyle } from '../../../../shared/map/mapStyle'
 import {
   defaultMapOptions,
   setMapDefaults,
@@ -23,6 +23,7 @@ import {
   roadNetworkNoRestrictions,
   topoBlackWhite,
 } from '../../../../shared/map/mapLayers'
+import { MapStyle } from '../../../../shared/map/mapStyle'
 
 const StyledMap = styled(Map<typeof Map>)`
   height: 450px;

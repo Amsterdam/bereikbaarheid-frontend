@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import { Close } from '@amsterdam/asc-assets'
 import {
   Button,
@@ -7,10 +9,10 @@ import {
   Paragraph,
   TopBar,
 } from '@amsterdam/asc-ui'
-import { Dispatch, SetStateAction } from 'react'
+
+import ModalBlock from './ModalBlock'
 
 import { Z_INDEX_MENU_MODAL } from '../constants'
-import ModalBlock from './ModalBlock'
 
 const FEEDBACK_RECIPIENT = 'stadsloket.centrum.vergunningen.dvl@amsterdam.nl'
 const FEEDBACK_SUBJECT = 'Terugmelding bereikbaarheid.amsterdam.nl'

@@ -1,5 +1,5 @@
-import { useRdwGeneralInfo } from './useRdwGeneralInfo'
 import { useRdwFuelInfo } from './useRdwFuelInfo'
+import { useRdwGeneralInfo } from './useRdwGeneralInfo'
 
 /**
  * Determine if a permit for the Low Emission Zone is needed

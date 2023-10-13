@@ -1,5 +1,4 @@
 import { TrafficSignCategoryApi } from '../../../api/bereikbaarheid/traffic-signs'
-
 import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 
 export const useTrafficSignCategories = () => {

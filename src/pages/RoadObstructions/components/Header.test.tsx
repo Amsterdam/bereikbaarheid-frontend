@@ -1,10 +1,11 @@
 import { render, screen, within } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
 import userEvent from '@testing-library/user-event'
+import { MemoryRouter } from 'react-router-dom'
 
-import { getUrl } from '../../../api/bereikbaarheid/road-obstructions'
-import { withAppContext } from '../../../../test/utils/withAppContext'
 import RoadObstructionsHeader, { RoadObstructionsHeaderProps } from './Header'
+
+import { withAppContext } from '../../../../test/utils/withAppContext'
+import { getUrl } from '../../../api/bereikbaarheid/road-obstructions'
 
 describe('RoadObstructionsHeader', () => {
   const props: RoadObstructionsHeaderProps = {

@@ -1,14 +1,14 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
 import {
   DescriptionList,
   DescriptionListItem,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
 import { formatISODate } from '../../../../shared/utils/dateTime'
-
 import { DetailFeature, DetailFeatureWior } from '../../types/detailFeature'
 
 const StyledDescriptionList = styled(DescriptionList)`

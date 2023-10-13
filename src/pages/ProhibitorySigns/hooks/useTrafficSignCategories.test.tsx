@@ -1,9 +1,11 @@
-import { renderHook } from '@testing-library/react-hooks'
 import { ReactNode } from 'react'
+
+import { renderHook } from '@testing-library/react-hooks'
 import { MemoryRouter } from 'react-router-dom'
 
-import ProhibitorySignsPageProvider from '../contexts/PageProvider'
 import { useTrafficSignCategories } from './useTrafficSignCategories'
+
+import ProhibitorySignsPageProvider from '../contexts/PageProvider'
 
 describe('useTrafficSignCategories', () => {
   it('renders correctly', () => {

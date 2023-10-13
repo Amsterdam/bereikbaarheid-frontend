@@ -1,10 +1,11 @@
-import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
 import { useEffect, useState } from 'react'
 
-import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
+import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
 
 import ProhibitorySignsDetailFeatureSearchResults from './DetailFeatureSearchResults'
 import ProhibitorySignsDetailFeatureTrafficSign from './TrafficSign'
+
+import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 
 const { Overlay } = mapPanelConstants
 

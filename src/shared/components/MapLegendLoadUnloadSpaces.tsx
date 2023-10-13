@@ -1,6 +1,7 @@
+import { ChangeEvent, useEffect, useState } from 'react'
+
 import { useMapInstance } from '@amsterdam/arm-core'
 import { Checkbox, Label, themeSpacing } from '@amsterdam/asc-ui'
-import { ChangeEvent, useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import { loadUnloadSpaces } from '../map/mapLayers'

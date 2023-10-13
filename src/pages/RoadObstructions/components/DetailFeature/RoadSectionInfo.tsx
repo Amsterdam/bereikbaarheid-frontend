@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
 import {
   Card,
@@ -9,18 +11,16 @@ import {
   Paragraph,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { Dispatch, SetStateAction } from 'react'
 import { generatePath, Link as RouterLink } from 'react-router-dom'
 import styled from 'styled-components'
 
+import { RoadObstruction } from '../../../../api/bereikbaarheid/road-obstructions'
 import { getPathTo } from '../../../../routes'
 import { formatISODate } from '../../../../shared/utils/dateTime'
-
 import {
   DetailFeature,
   DetailFeatureRoadSection,
 } from '../../types/detailFeature'
-import { RoadObstruction } from '../../../../api/bereikbaarheid/road-obstructions'
 
 function formatActivity(item: RoadObstruction) {
   if (!item.url) {

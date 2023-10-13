@@ -1,15 +1,14 @@
 import { BaseLayer } from '@amsterdam/arm-core'
 import { TileLayer } from '@amsterdam/react-maps'
 
-import { AddressMarker } from '../../../../shared/components/MapLayers/AddressMarker'
-import { HighlightedFeatureLayer } from '../../../../shared/components/HighlightedFeatureLayer'
-import { oneWayArrows, topoBlackWhite } from '../../../../shared/map/mapLayers'
+import { LoadUnloadLoadUnloadSpacesLayer } from './LoadUnloadSpacesLayer'
+import { LoadUnloadRoadSectionsLoadUnloadLayer } from './RoadSectionsLoadUnloadLayer'
 
+import { HighlightedFeatureLayer } from '../../../../shared/components/HighlightedFeatureLayer'
+import { AddressMarker } from '../../../../shared/components/MapLayers/AddressMarker'
+import { oneWayArrows, topoBlackWhite } from '../../../../shared/map/mapLayers'
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
 import { useLoadUnloadPageContext } from '../../contexts/PageContext'
-
-import { LoadUnloadRoadSectionsLoadUnloadLayer } from './RoadSectionsLoadUnloadLayer'
-import { LoadUnloadLoadUnloadSpacesLayer } from './LoadUnloadSpacesLayer'
 
 export const LoadUnloadMapLayers = () => {
   const { detailFeature } = useLoadUnloadMapContext()

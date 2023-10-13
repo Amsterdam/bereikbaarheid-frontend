@@ -13,10 +13,10 @@ import {
 } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
+import { RoadSection } from '../../../../api/bereikbaarheid/road-elements'
+import { RoadObstruction } from '../../../../api/bereikbaarheid/road-obstructions'
 import LinkInTable from '../../../../shared/components/LinkInTable'
 import { formatISODate } from '../../../../shared/utils/dateTime'
-import { RoadObstruction } from '../../../../api/bereikbaarheid/road-obstructions'
-import { RoadSection } from '../../../../api/bereikbaarheid/road-elements'
 
 const StyledH1 = styled(Heading)`
   margin-bottom: ${themeSpacing(5)};

@@ -1,12 +1,12 @@
 import { Column, Divider, Row } from '@amsterdam/asc-ui'
 
-import { MapLegend } from '../../../../shared/components/MapLegend'
-
 import ProhibitorySignsMapLegendBaseLayers from './BaseLayers'
 import ProhibitorySignsMapLegendLoadUnloadSpaces from './LoadUnloadSpaces'
 import ProhibitorySignsMapLegendRoadNetwork from './RoadNetwork'
 import ProhibitorySignsMapLegendTrafficSigns from './TrafficSigns'
 import ProhibitorySignsMapLegendWideRoads from './WideRoads'
+
+import { MapLegend } from '../../../../shared/components/MapLegend'
 
 const ProhibitorySignsMapLegend = () => {
   return (

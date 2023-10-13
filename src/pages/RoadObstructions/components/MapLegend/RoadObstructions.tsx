@@ -6,7 +6,6 @@ import {
   LegendWrapper,
   LegendItemsWrapper,
 } from '../../../../shared/components/MapLegendStyles'
-
 import { useRoadObstructionsMapContext } from '../../contexts/MapContext'
 import { roadObstructionsLayerId } from '../../contexts/mapLayersReducer'
 

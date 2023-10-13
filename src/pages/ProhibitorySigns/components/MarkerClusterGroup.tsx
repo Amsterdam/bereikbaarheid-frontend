@@ -1,11 +1,12 @@
 // this file is largely copied from
 // https://github.com/Amsterdam/amsterdam-react-maps/blob/master/packages/arm-cluster/src/components/MarkerClusterGroup.tsx
 
+import { useEffect, useMemo } from 'react'
+
 import { useMapInstance } from '@amsterdam/arm-core'
 import { themeColor } from '@amsterdam/asc-ui'
 import L, { LeafletEventHandlerFnMap, Marker } from 'leaflet'
 import 'leaflet.markercluster'
-import { useEffect, useMemo } from 'react'
 import { createGlobalStyle, useTheme } from 'styled-components'
 
 const Styles = createGlobalStyle`

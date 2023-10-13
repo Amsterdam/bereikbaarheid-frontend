@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react'
+
 import PiwikTracker from '@amsterdam/piwik-tracker'
 import { UserOptions } from '@amsterdam/piwik-tracker/lib/types'
 import { usePiwik } from '@amsterdam/piwik-tracker-react'

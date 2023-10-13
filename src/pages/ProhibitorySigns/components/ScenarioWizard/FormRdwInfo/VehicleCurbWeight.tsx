@@ -1,9 +1,5 @@
 import { Input, Label, Paragraph } from '@amsterdam/asc-ui'
-
-import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
-
-import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
-import { useRdwInfo } from '../../../hooks/useRdwInfo'
+import styled from 'styled-components'
 
 import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
 import {
@@ -11,7 +7,10 @@ import {
   RdwInfoFormLabelHelpText,
   RdwInfoFormRow,
 } from './FormStyle'
-import styled from 'styled-components'
+
+import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
+import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
+import { useRdwInfo } from '../../../hooks/useRdwInfo'
 
 const StyledFormRow = styled(RdwInfoFormRow)`
   margin-bottom: 0;

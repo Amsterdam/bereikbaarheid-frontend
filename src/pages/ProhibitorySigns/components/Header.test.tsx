@@ -1,10 +1,10 @@
 import { screen, waitFor } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 
+import ProhibitorySignsHeader, { ProhibitorySignsHeaderProps } from './Header'
+
 import { withPageContext } from '../../../../test/utils/prohibitorySigns/withPageContext'
 import { withQueryClient } from '../../../../test/utils/withQueryClient'
-
-import ProhibitorySignsHeader, { ProhibitorySignsHeaderProps } from './Header'
 
 describe('ProhibitorySignsHeader', () => {
   const props: ProhibitorySignsHeaderProps = {

@@ -1,17 +1,16 @@
-import { useQuery } from '@tanstack/react-query'
 import { useEffect } from 'react'
+
+import { useQuery } from '@tanstack/react-query'
 
 import {
   getTrafficSigns,
   TrafficSign,
 } from '../../../../api/bereikbaarheid/traffic-signs'
-
-import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
+import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { useRdwGeneralInfo } from '../../hooks/useRdwGeneralInfo'
 import { useTrafficSignCategories } from '../../hooks/useTrafficSignCategories'
-
 import { MarkerClusterGroup } from '../MarkerClusterGroup'
 import { TrafficSignMarker } from '../TrafficSignMarker'
 
