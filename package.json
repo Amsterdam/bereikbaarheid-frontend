@@ -59,9 +59,10 @@
   "scripts": {
     "prepare": "husky install",
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
-    "lint": "eslint --cache --fix .",
+    "lint": "eslint --cache .",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --passWithNoTests",
+    "test:staged": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --bail --findRelatedTests",
     "test:watch": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-scripts eject"
   },
@@ -73,7 +74,7 @@
     ]
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": ["npm run lint"]
+    "src/**/*.{js,jsx,ts,tsx}": ["npm run lint", "npm run test:staged"]
   },
   "prettier": {
     "arrowParens": "avoid",
