@@ -1,33 +1,25 @@
 import { useCallback, useState } from 'react'
-import PiwikTracker from '@amsterdam/piwik-tracker'
-import { UserOptions } from '@amsterdam/piwik-tracker/lib/types'
-import { usePiwik } from '@amsterdam/piwik-tracker-react'
+import PiwikPro, { PageViews } from '@piwikpro/react-piwik-pro'
 
 const rootUrl = process.env.REACT_APP_SELF_ROOT
-const siteId = process.env.REACT_APP_PIWIK_SITE_ID ?? ''
-const hasSiteId = !!process.env.REACT_APP_PIWIK_SITE_ID
+const hasPiwikSiteId = !!process.env.REACT_APP_PIWIK_SITE_ID
+const piwikSiteId = process.env.REACT_APP_PIWIK_SITE_ID ?? ''
 
-let PiwikInstance: PiwikTracker
+let PiwikInstance = false
 
-const PiwikTrackerConfig: UserOptions = {
-  urlBase: rootUrl,
-  siteId,
+function createPiwikInstance(isEnabled: boolean = true) {
+  if (isEnabled && hasPiwikSiteId && rootUrl && !PiwikInstance) {
+    PiwikPro.initialize(piwikSiteId, rootUrl)
+    PiwikInstance = true
+  }
 }
 
 function useAnalytics() {
-  const { trackPageView } = usePiwik()
-
   const [prevLocation, setPrevLocation] = useState('')
-
-  const createPiwikInstance = (isEnabled: boolean = true) => {
-    if (isEnabled && hasSiteId && !PiwikInstance) {
-      PiwikInstance = new PiwikTracker(PiwikTrackerConfig)
-    }
-  }
 
   const trackPageVisit = useCallback(
     (msg?: string) => {
-      const path = window?.location?.href.split(/[?#]/)[0]
+      const path = window?.location.href.split(/[?#]/)[0]
 
       if (!PiwikInstance || !path) return
       if (prevLocation === path) return
@@ -36,12 +28,13 @@ function useAnalytics() {
 
       console.info(`Track page view to: ${msg ?? path}`)
 
-      trackPageView({ href: msg ?? path })
+      PageViews.trackPageView(msg ?? path)
     },
-    [prevLocation, trackPageView]
+    [prevLocation]
   )
 
-  return { createPiwikInstance, trackPageVisit }
+  return { trackPageVisit }
 }
 
+export { piwikSiteId, hasPiwikSiteId, createPiwikInstance }
 export default useAnalytics
