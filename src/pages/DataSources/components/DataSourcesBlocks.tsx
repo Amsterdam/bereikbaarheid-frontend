@@ -10,6 +10,7 @@ import {
 import styled from 'styled-components'
 import { ContentWrapper } from '@amsterdam/asc-ui/lib/components/Alert/AlertStyle'
 import { RouteIds, getPathTo } from '../../../routes'
+import { getMailtoLink } from '../../../shared/utils/email'
 
 interface DataLink {
   beta?: boolean
@@ -34,11 +35,6 @@ const QUESTION_BODY = `Beschrijf zo volledig mogelijk waar je tegenaan loopt:
   - Als je een probleem ondervindt, welke melding zie je op het scherm?
   - Heb je een suggestie hoe het anders zou kunnen?
 `
-
-const getMailtoLink = (recipient: string, subject: string, body: string) =>
-  `mailto:${recipient}?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(body)}`
 
 const ContentBlock = styled(ContentWrapper)<{ isCompact?: boolean }>`
   padding-block-end: ${themeSpacing(4)};

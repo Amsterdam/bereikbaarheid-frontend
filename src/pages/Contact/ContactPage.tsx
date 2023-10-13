@@ -3,6 +3,7 @@ import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import { Button, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 import Header from '../../shared/components/Header'
+import { getMailtoLink } from '../../shared/utils/email'
 
 const FEEDBACK_RECIPIENT = 'stadsloket.centrum.vergunningen.dvl@amsterdam.nl'
 const FEEDBACK_SUBJECT = 'Terugmelding bereikbaarheid.amsterdam.nl'
@@ -21,11 +22,6 @@ const QUESTION_BODY = `Beschrijf zo volledig mogelijk waar je tegenaan loopt:
   - Wat zie je op het scherm als je een probleem ondervindt?
   - Heb je een suggestie hoe het anders zou kunnen?
 `
-
-const getMailtoLink = (recipient: string, subject: string, body: string) =>
-  `mailto:${recipient}?subject=${encodeURIComponent(
-    subject
-  )}&body=${encodeURIComponent(body)}`
 
 const StyledMainContent = styled(MainContent)`
   align-self: center;
