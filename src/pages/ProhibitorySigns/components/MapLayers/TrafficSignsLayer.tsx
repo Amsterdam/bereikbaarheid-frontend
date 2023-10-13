@@ -75,8 +75,9 @@ const ProhibitorySignsTrafficSignsLayer = () => {
     })
   }
 
-  if (trafficSigns.isError && trafficSigns.error instanceof Error)
+  if (trafficSigns.isError && trafficSigns.error instanceof Error) {
     console.error(trafficSigns.error.message)
+  }
 
   if (trafficSigns.isLoading || !trafficSigns.data) return null
 

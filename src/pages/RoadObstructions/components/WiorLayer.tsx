@@ -98,8 +98,9 @@ const RoadObstructionsWiorLayer = ({
     }
   }, [layerInstance])
 
-  if (wiorData.isError && wiorData.error instanceof Error)
+  if (wiorData.isError && wiorData.error instanceof Error) {
     console.error(wiorData.error.message)
+  }
 
   if (wiorData.isLoading || !wiorData.data) return null
 

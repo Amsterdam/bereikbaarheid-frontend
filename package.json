@@ -107,7 +107,8 @@
             "builtin"
           ]
         }
-      ]
+      ],
+      "nonblock-statement-body-position": "error"
     }
   },
   "lint-staged": {

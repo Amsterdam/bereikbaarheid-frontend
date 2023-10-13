@@ -56,8 +56,9 @@ const ProhibitorySignsProhibitoryRoadsLayer = () => {
     })
   }, [prohibitoryRoads.data, updateActiveMapLayers])
 
-  if (prohibitoryRoads.isError && prohibitoryRoads.error instanceof Error)
+  if (prohibitoryRoads.isError && prohibitoryRoads.error instanceof Error) {
     console.error(prohibitoryRoads.error.message)
+  }
 
   if (prohibitoryRoads.isLoading) return null
 
