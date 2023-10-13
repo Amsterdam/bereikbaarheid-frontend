@@ -8,14 +8,14 @@ To release a new version, please take the following steps:
    - The current 'Unreleased' section becomes the new version.
    - Create a new empty 'Unreleased' section
 
-2. Increase the version in `package.json`: `npm version <valid semver string> --no-git-tag-version --force` where `<valid semver string>` is e.g 'patch' or 'minor'
+2. Increase the version in `package.json`: `npm version <VALID_SEMVER_STRING> --no-git-tag-version --force` where `<VALID_SEMVER_STRING>` is e.g 'patch' or 'minor'
 
 3. Commit the changelog update & version increase
 
-4. Tag a new version:
+4. Tag a new version where `<VERSION_NUMBER>` is of format `v1.2.3`:
 
-   - `git tag -a <version-number> -m 'version <version-number>' <full-commit-id>`
-   - `git push origin <version-number>`
+   - `git tag -a <VERSION_NUMBER> -m 'release: version <VERSION_NUMBER>' <full-commit-id>`
+   - `git push origin <VERSION_NUMBER>`
 
 5. [Create a GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 
