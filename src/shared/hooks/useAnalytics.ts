@@ -7,10 +7,19 @@ const piwikSiteId = process.env.REACT_APP_PIWIK_SITE_ID
 let PiwikInstance = false
 
 function createPiwikInstance(isEnabled: boolean = true) {
-  if (isEnabled && !!piwikSiteId && dapUrl && !PiwikInstance) {
-    PiwikPro.initialize(piwikSiteId, dapUrl)
-    PiwikInstance = true
+  if (!isEnabled || PiwikInstance) return
+
+  if (!piwikSiteId) {
+    // TODO: notify developers via monitoring tool.
+    console.error(
+      'No Piwik siteId provided. Please, either disable Piwik instantiation for this environment or include a siteId as an environment variable.'
+    )
+
+    return
   }
+
+  PiwikPro.initialize(piwikSiteId, dapUrl)
+  PiwikInstance = true
 }
 
 function useAnalytics() {
@@ -35,5 +44,5 @@ function useAnalytics() {
   return { trackPageVisit }
 }
 
-export { piwikSiteId, createPiwikInstance }
+export { createPiwikInstance }
 export default useAnalytics
