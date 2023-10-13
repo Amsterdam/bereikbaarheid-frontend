@@ -6,7 +6,7 @@ const piwikSiteId = process.env.REACT_APP_PIWIK_SITE_ID
 
 let PiwikInstance = false
 
-function createPiwikInstance(isEnabled: boolean = true) {
+function createPiwikInstance(isEnabled = true) {
   if (!isEnabled || PiwikInstance) return
 
   if (!piwikSiteId) {
@@ -26,7 +26,7 @@ function useAnalytics() {
   const [prevLocation, setPrevLocation] = useState('')
 
   const trackPageVisit = useCallback(
-    (msg?: string) => {
+    (message?: string) => {
       const path = window?.location.href.split(/[?#]/)[0]
 
       if (!PiwikInstance || !path) return
@@ -34,9 +34,9 @@ function useAnalytics() {
 
       setPrevLocation(path)
 
-      console.info(`Track page view to: ${msg ?? path}`)
+      console.info(`Track page view to: ${message ?? path}`)
 
-      PageViews.trackPageView(msg ?? path)
+      PageViews.trackPageView(message ?? path)
     },
     [prevLocation]
   )
