@@ -49,8 +49,8 @@ const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
     imageFallback: 'laden-en-lossen.jpg',
   },
   {
-    title: 'Touringcars (Tour Buzz)',
-    titleShort: 'Touringcars',
+    title: 'Touringcar (Tour Buzz)',
+    titleShort: 'Touringcar',
     path: 'https://tourbuzz.amsterdam.nl/',
     target: '_blank',
     image: 'tour-buzz.webp',

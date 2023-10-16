@@ -9,8 +9,8 @@ const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
     route: RouteIds.LICENCE_PLATE_PAGE,
   },
   {
-    title: 'Touringcars (Tour Buzz)',
-    titleShort: 'Touringcars',
+    title: 'Touringcar (Tour Buzz)',
+    titleShort: 'Touringcar',
     path: 'https://tourbuzz.amsterdam.nl/',
     target: '_blank',
   },
@@ -29,8 +29,8 @@ test('give back correct menu or card objects', () => {
       path: getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE),
     },
     {
-      title: 'Touringcars',
-      titleShort: 'Touringcars',
+      title: 'Touringcar',
+      titleShort: 'Touringcar',
       path: 'https://tourbuzz.amsterdam.nl/',
       target: '_blank',
     },
@@ -50,8 +50,8 @@ test('give back correct menu or card objects', () => {
       path: getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE),
     },
     {
-      title: 'Touringcars (Tour Buzz)',
-      titleShort: 'Touringcars',
+      title: 'Touringcar (Tour Buzz)',
+      titleShort: 'Touringcar',
       path: 'https://tourbuzz.amsterdam.nl/',
       target: '_blank',
     },

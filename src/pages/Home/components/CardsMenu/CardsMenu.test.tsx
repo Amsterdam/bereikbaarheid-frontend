@@ -4,14 +4,14 @@ import { getGeneratedPath } from '../../../../shared/utils/path'
 import { RouteIds } from '../../../../routes'
 
 describe('CardsMenu', () => {
-  it('has card with external link to Touringcars', async () => {
+  it('has card with external link to Touringcar', async () => {
     const pathToPage = getGeneratedPath(RouteIds.HOME)
 
     withApp(pathToPage)
 
     const cardWithExternalLink = screen.getByTestId('card-with-external-link')
 
-    expect(cardWithExternalLink).toHaveTextContent('Touringcars (Tour Buzz)')
+    expect(cardWithExternalLink).toHaveTextContent('Touringcar (Tour Buzz)')
   })
 
   it('has card with src attribute', async () => {
