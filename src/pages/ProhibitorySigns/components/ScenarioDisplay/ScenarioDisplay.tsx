@@ -7,17 +7,17 @@ import {
   MapPanelContext,
 } from '@amsterdam/arm-core'
 import { Tab, Tabs } from '@amsterdam/asc-ui'
+import {
+  DataLink,
+  DataSourcesAside,
+} from 'pages/DataSources/components/DataSourcesBlocks'
+import { useProhibitorySignsPageContext } from 'pages/ProhibitorySigns/contexts/PageContext'
 import styled from 'styled-components'
 
 import ScenarioDisplayRdwInfo from './RdwInfo'
 import ScenarioDisplayResult from './Result'
 import ScenarioDisplayStartAndAddress from './StartAndAddress'
 
-import {
-  DataLink,
-  DataSourcesAside,
-} from '../../../DataSources/components/DataSourcesBlocks'
-import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import getDataLinks, { loadUnloadLink } from '../../data/dataLinks'
 import useUrlTrafficSigns from '../../hooks/useUrlTrafficSigns'
 

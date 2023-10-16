@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { Divider, Heading, Modal, TopBar, Link } from '@amsterdam/asc-ui'
+import { Link, Divider, Heading, Modal, TopBar } from '@amsterdam/asc-ui'
 import { useSpring, animated } from '@react-spring/web'
 import { RouteIds } from 'routes'
 import ModalBlock from 'shared/components/ModalBlock'

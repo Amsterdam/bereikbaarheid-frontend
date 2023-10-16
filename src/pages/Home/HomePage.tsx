@@ -1,8 +1,12 @@
-import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
-import Header from 'shared/components/Header'
+import { useEffect } from 'react'
+
 import styled from 'styled-components'
 
 import CardsMenu, { CARD_WIDTH_PX } from './components/CardsMenu'
+
+import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
+import Header from '../../shared/components/Header'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 const GRID_GAP_PX = 32
 
@@ -20,6 +24,9 @@ const Grid = styled(MainContent)`
 `
 
 function HomePage() {
+  const { trackPageVisit } = useAnalytics()
+  useEffect(trackPageVisit)
+
   return (
     <PageWrapper>
       <Header title="Bereikbaarheid" />

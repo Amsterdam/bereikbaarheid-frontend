@@ -1,7 +1,10 @@
+import { useEffect } from 'react'
+
 import { themeSpacing } from '@amsterdam/asc-ui'
 import { format } from 'date-fns'
 import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
 import Header from 'shared/components/Header'
+import useAnalytics from 'shared/hooks/useAnalytics'
 import styled from 'styled-components'
 
 import DataSourcesBlocks from './components/DataSourcesBlocks'
@@ -33,6 +36,9 @@ const DataSourcesPage = () => {
     }),
     ...loadUnloadLinks,
   ]
+
+  const { trackPageVisit } = useAnalytics()
+  useEffect(trackPageVisit)
 
   return (
     <PageWrapper>
