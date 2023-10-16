@@ -1,28 +1,26 @@
 import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { generatePath } from 'react-router-dom'
 
-import { getPathTo } from '../../routes'
+import { RouteIds } from '../../routes'
 import { withApp } from '../../../test/utils/withApp'
+import { getGeneratedPath } from '../../shared/utils/path'
 
 describe('ProhibitorySignsPage', () => {
   jest.setTimeout(10000)
 
   it('renders correctly', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     const pageTitle = screen.getByRole('heading', { level: 1 })
-    const links = within(pageTitle).getAllByText(
-      /bereikbaarheid amsterdam op kenteken/i
-    )
+    const links = within(pageTitle).getAllByText(/bereikbaarheid op kenteken/i)
 
     // the first element is the alt tag of the logo, the second one the title
-    expect(links[1]).toHaveTextContent('Bereikbaarheid Amsterdam op Kenteken')
+    expect(links[1]).toHaveTextContent('Bereikbaarheid op kenteken')
 
     // the scenario wizard should be visible
     const scenarioWizardModal = screen.getByRole('dialog')
@@ -34,14 +32,14 @@ describe('ProhibitorySignsPage', () => {
   })
 
   it('renders the map when the wizard is completed', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
     const page = withApp(pathToPage)
 
     const user = userEvent.setup()
     const prohibitoryRoadSectionsData = require('../../../test/mocks/bereikbaarheid/roads/prohibitory/data.json')
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     await act(async () => {
       // fill out the first form
@@ -98,13 +96,13 @@ describe('ProhibitorySignsPage', () => {
   // checking the content of the page (e.g network, traffic signs, etc)
   // it can be activated by adding the URL parameter expertMode=true
   it('provides extra functionality when using the page in expert mode', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
     const user = userEvent.setup()
 
     withApp(`${pathToPage}?expertMode=true`)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     await act(async () => {
       // fill out the first form

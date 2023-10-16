@@ -11,7 +11,7 @@ export const usePermitsByLocation = () => {
   const { address, vehicle } = useProhibitorySignsPageContext()
   const needsPermitHeavyGoodsVehicleZone = usePermitHeavyGoodsVehicleZone()
   const needsPermitLowEmissionZone = usePermitLowEmissionZone()
-  const rdwGeneralInfo = useRdwGeneralInfo()
+  const rdwGeneralInfo = useRdwGeneralInfo(vehicle)
   const rdwGeneralData = rdwGeneralInfo.data
 
   // setting a higher stale time, so that if the user works with the
