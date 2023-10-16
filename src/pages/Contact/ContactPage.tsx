@@ -1,9 +1,11 @@
+import { useEffect } from 'react'
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 
 import { Button, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 import Header from '../../shared/components/Header'
 import { getMailtoLink } from '../../shared/utils/email'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 const FEEDBACK_RECIPIENT = 'stadsloket.centrum.vergunningen.dvl@amsterdam.nl'
 const FEEDBACK_SUBJECT = 'Terugmelding bereikbaarheid.amsterdam.nl'
@@ -35,6 +37,9 @@ const ContentBlock = styled.div`
 `
 
 const ContactPage = () => {
+  const { trackPageVisit } = useAnalytics()
+  useEffect(trackPageVisit)
+
   return (
     <PageWrapper>
       <Header title="Contact en uitleg" />
