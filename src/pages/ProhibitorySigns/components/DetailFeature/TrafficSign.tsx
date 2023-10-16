@@ -8,13 +8,14 @@ import {
   Row,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { generatePath, Link as RouterLink } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { PropertiesContainer } from './DetailFeatureStyles'
 import ProhibitorySignsDetailFeatureTrafficSignImage from './TrafficSignImage'
 
-import { getPathTo } from '../../../../routes'
+import { RouteIds } from '../../../../routes'
+import { getGeneratedPath } from '../../../../shared/utils/path'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import {
@@ -108,7 +109,7 @@ const ProhibitorySignsDetailFeatureTrafficSign = () => {
                 <Link
                   variant="inline"
                   as={RouterLink}
-                  to={generatePath(getPathTo('ROAD_SECTION_DETAIL_PAGE'), {
+                  to={getGeneratedPath(RouteIds.ROAD_SECTION_DETAIL_PAGE, {
                     id: String(
                       Math.abs(currentTrafficSign!.properties.network_link_id)
                     ),

@@ -1,21 +1,33 @@
 import { screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
+import { RouteIds, getPathTo } from 'routes'
+import { getGeneratedPath } from 'shared/utils/path'
 
 import { withApp } from '../../../../../test/utils/withApp'
-import { getPathTo } from '../../../../routes'
 
 describe('ProhibitorySignsWideRoads', () => {
   jest.setTimeout(10000)
 
+  it('"Breed opgezette wegen" layer is enabled in map legend', async () => {
+    const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
+
+    withApp(pathToPage)
+
+    // wait until page is rendered
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
+
+    expect(screen.getByLabelText(/breed opgezette wegen/i)).toBeEnabled()
+  })
+
   it('enables the wide roads map layer for large and/or heavy vehicles', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     const { container } = withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form
     // choose a vehicle which should trigger the wide roads requirements:

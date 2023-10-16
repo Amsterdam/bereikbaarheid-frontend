@@ -19,9 +19,9 @@ const ProhibitorySignsTrafficSignsLayer = () => {
     useProhibitorySignsMapContext()
   const { expertMode, showScenarioWizard, vehicle } =
     useProhibitorySignsPageContext()
-  const rdwGeneralInfo = useRdwGeneralInfo()
+  const rdwGeneralInfo = useRdwGeneralInfo(vehicle)
   const rdwGeneralData = rdwGeneralInfo.data
-  const trafficSignCategories = useTrafficSignCategories()
+  const trafficSignCategories = useTrafficSignCategories(expertMode)
 
   const trafficSigns = useQuery({
     enabled: !!rdwGeneralData && !!vehicle.axleWeight && !!vehicle.weight,

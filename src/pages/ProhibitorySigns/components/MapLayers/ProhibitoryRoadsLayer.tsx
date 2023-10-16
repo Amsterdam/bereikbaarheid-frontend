@@ -32,7 +32,7 @@ const ProhibitorySignsProhibitoryRoadsLayer = () => {
   const { showScenarioWizard, vehicle } = useProhibitorySignsPageContext()
   const needsPermitHeavyGoodsVehicleZone = usePermitHeavyGoodsVehicleZone()
   const needsPermitLowEmissionZone = usePermitLowEmissionZone()
-  const rdwGeneralInfo = useRdwGeneralInfo()
+  const rdwGeneralInfo = useRdwGeneralInfo(vehicle)
   const rdwGeneralData = rdwGeneralInfo.data
   const prohibitoryRoads = useQuery({
     enabled: !!rdwGeneralData && !!vehicle.axleWeight && !!vehicle.weight,

@@ -10,7 +10,7 @@ import { RoadSectionMap } from './components/Map'
 
 import { getRoadSection } from '../../api/bereikbaarheid/road-elements'
 import ContentContainer from '../../shared/components/ContentContainer'
-import { Header } from '../../shared/components/Header'
+import Header from '../../shared/components/Header'
 import LoadingSpinner from '../../shared/components/LoadingSpinner'
 import useAnalytics from '../../shared/hooks/useAnalytics'
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'

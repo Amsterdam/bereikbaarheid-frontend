@@ -7,11 +7,16 @@ import {
   Heading,
   Paragraph,
   Row,
+  Tab,
+  Tabs,
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
+import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
+import ProhibitorySignsPageProvider from '../../ProhibitorySigns/contexts/PageProvider'
+import dataLinks from '../data/dataLinks'
 import { RoadObstructionMapFilters } from '../types/roadObstructionMapFilters'
 
 const FiltersContainer = styled.div`
@@ -50,49 +55,63 @@ const RoadObstructionsFiltersDisplay = ({
 
   return (
     <MapPanelContent {...otherProps}>
-      <StyledRow halign="space-between">
-        <Column span={12}>
-          <Heading as="h3">Filters</Heading>
-          <EditFiltersButton variant="textButton" onClick={showMapFiltersForm}>
-            wijzig
-          </EditFiltersButton>
-        </Column>
-      </StyledRow>
+      <Tabs label="Voer datum en tijd in of bekijk dataverantwoording">
+        <Tab id="input" label="Invoer">
+          <StyledRow halign="space-between">
+            <Column span={12}>
+              <Heading as="h3"></Heading>
+              <EditFiltersButton
+                variant="textButton"
+                onClick={showMapFiltersForm}
+                style={{ marginTop: 16 }}
+              >
+                wijzig
+              </EditFiltersButton>
+            </Column>
+          </StyledRow>
 
-      <FiltersContainer data-testid="map-filters">
-        <StyledRow halign="flex-start">
-          <Column span={4}>
-            <Paragraph gutterBottom={0} strong>
-              Datum
-            </Paragraph>
-          </Column>
-          <Column span={6}>
-            <Paragraph gutterBottom={0}>{dateFormatted}</Paragraph>
-          </Column>
-        </StyledRow>
+          <FiltersContainer data-testid="map-filters">
+            <StyledRow halign="flex-start">
+              <Column span={4}>
+                <Paragraph gutterBottom={0} strong>
+                  Datum
+                </Paragraph>
+              </Column>
+              <Column span={6}>
+                <Paragraph gutterBottom={0}>{dateFormatted}</Paragraph>
+              </Column>
+            </StyledRow>
 
-        <StyledRow halign="flex-start">
-          <Column span={4}>
-            <Paragraph gutterBottom={0} strong>
-              Van
-            </Paragraph>
-          </Column>
-          <Column span={6}>
-            <Paragraph gutterBottom={0}>{mapFilters.timeFrom}</Paragraph>
-          </Column>
-        </StyledRow>
+            <StyledRow halign="flex-start">
+              <Column span={4}>
+                <Paragraph gutterBottom={0} strong>
+                  Van
+                </Paragraph>
+              </Column>
+              <Column span={6}>
+                <Paragraph gutterBottom={0}>{mapFilters.timeFrom}</Paragraph>
+              </Column>
+            </StyledRow>
 
-        <StyledRow halign="flex-start">
-          <Column span={4}>
-            <Paragraph gutterBottom={0} strong>
-              Tot
-            </Paragraph>
-          </Column>
-          <Column span={6}>
-            <Paragraph gutterBottom={0}>{mapFilters.timeTo}</Paragraph>
-          </Column>
-        </StyledRow>
-      </FiltersContainer>
+            <StyledRow halign="flex-start">
+              <Column span={4}>
+                <Paragraph gutterBottom={0} strong>
+                  Tot
+                </Paragraph>
+              </Column>
+              <Column span={6}>
+                <Paragraph gutterBottom={0}>{mapFilters.timeTo}</Paragraph>
+              </Column>
+            </StyledRow>
+          </FiltersContainer>
+        </Tab>
+
+        <Tab id="data" label="Brondata">
+          <ProhibitorySignsPageProvider>
+            <DataSourcesAside dataLinks={dataLinks(mapFilters)} />
+          </ProhibitorySignsPageProvider>
+        </Tab>
+      </Tabs>
     </MapPanelContent>
   )
 }

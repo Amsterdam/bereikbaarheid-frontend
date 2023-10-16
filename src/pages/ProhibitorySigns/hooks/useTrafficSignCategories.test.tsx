@@ -30,7 +30,9 @@ describe('useTrafficSignCategories', () => {
       </MemoryRouter>
     )
 
-    const { result } = renderHook(() => useTrafficSignCategories(), { wrapper })
+    const { result } = renderHook(() => useTrafficSignCategories(true), {
+      wrapper,
+    })
 
     expect(result.current).toStrictEqual([
       'prohibition',

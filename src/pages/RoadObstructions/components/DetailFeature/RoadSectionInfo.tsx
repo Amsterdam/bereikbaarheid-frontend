@@ -11,12 +11,13 @@ import {
   Paragraph,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { generatePath, Link as RouterLink } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { RoadObstruction } from '../../../../api/bereikbaarheid/road-obstructions'
-import { getPathTo } from '../../../../routes'
+import { RouteIds } from '../../../../routes'
 import { formatISODate } from '../../../../shared/utils/dateTime'
+import { getGeneratedPath } from '../../../../shared/utils/path'
 import {
   DetailFeature,
   DetailFeatureRoadSection,
@@ -71,7 +72,7 @@ const RoadSectionInfo = ({
         <Link
           variant="inline"
           as={RouterLink}
-          to={generatePath(getPathTo('ROAD_SECTION_DETAIL_PAGE'), {
+          to={getGeneratedPath(RouteIds.ROAD_SECTION_DETAIL_PAGE, {
             id: String(detailFeature.data.properties.road_element_id),
           })}
         >

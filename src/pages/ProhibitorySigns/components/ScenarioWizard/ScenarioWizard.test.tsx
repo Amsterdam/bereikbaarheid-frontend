@@ -9,13 +9,13 @@ describe('ScenarioWizard', () => {
   jest.setTimeout(10000)
 
   it('an address it not required to complete the wizard', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form...
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
@@ -43,14 +43,14 @@ describe('ScenarioWizard', () => {
   })
 
   it('adjusts the RDW form when choosing the vehicle + trailer option', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
     const vehicle = require('./../../../../../test/mocks/rdw/vehicle/24bjl7.json')
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form...
     await user.type(await screen.findByLabelText('Kenteken'), '24BJL7')

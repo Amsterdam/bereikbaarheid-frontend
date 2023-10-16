@@ -1,31 +1,22 @@
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-import { Button, Divider, Heading, Modal, TopBar } from '@amsterdam/asc-ui'
+import { Divider, Heading, Modal, TopBar, Link } from '@amsterdam/asc-ui'
 import { useSpring, animated } from '@react-spring/web'
-import styled from 'styled-components'
 
 import { ProhibitorySignsFormScenarioRdwInfo } from './FormRdwInfo'
 import { ProhibitorySignsFormScenarioAddress } from './FormScenarioAddress'
 import { ProhibitorySignsFormScenarioStart } from './FormScenarioStart'
 
+import { RouteIds } from '../../../../routes'
 import ModalBlock from '../../../../shared/components/ModalBlock'
 import { Z_INDEX_MODAL } from '../../../../shared/constants'
+import { getGeneratedPath } from '../../../../shared/utils/path'
 import { Address } from '../../../../types/address'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 
-const FeedbackButton = styled(Button)`
-  align-self: stretch;
-`
-
 const AnimatedModalBlock = animated(ModalBlock)
 
-interface ProhibitorySignsScenarioWizardProps {
-  setShowFeedbackModal: Dispatch<SetStateAction<boolean>>
-}
-
-const ProhibitorySignsScenarioWizard = ({
-  setShowFeedbackModal,
-}: ProhibitorySignsScenarioWizardProps) => {
+const ProhibitorySignsScenarioWizard = () => {
   const { activeStepWizard, setAddress, showScenarioWizard } =
     useProhibitorySignsPageContext()
   const [addressInputEnabled, setAddressInputEnabled] = useState(true)
@@ -65,12 +56,9 @@ const ProhibitorySignsScenarioWizard = ({
       <TopBar>
         <Heading as="h2">Invoer gegevens</Heading>
 
-        <FeedbackButton
-          variant="textButton"
-          onClick={() => setShowFeedbackModal(true)}
-        >
+        <Link href={getGeneratedPath(RouteIds.CONTACT)} target="_blank">
           Feedback
-        </FeedbackButton>
+        </Link>
       </TopBar>
 
       <Divider />

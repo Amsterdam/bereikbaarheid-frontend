@@ -17,8 +17,8 @@ import {
 import groupBy from 'lodash/groupBy'
 import styled from 'styled-components'
 
-import E01 from './images/E01.png'
-import E02 from './images/E02.png'
+import E01 from './images/E01.svg'
+import E02 from './images/E02.svg'
 
 import {
   LoadUnloadRegime,
