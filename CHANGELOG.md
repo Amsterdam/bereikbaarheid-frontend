@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.0.0...HEAD)
 
+### Added
+
+- Default Amsterdam municipality favicons and app icons for various platforms (Android, iOS, Windows)
+
 ## [v3.0.0 - 2023-10-16](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.7.0...v3.0.0)
 
 ### Added
