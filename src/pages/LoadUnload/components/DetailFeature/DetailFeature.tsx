@@ -5,11 +5,11 @@ import {
   MapPanelContent,
   MapPanelContext,
 } from '@amsterdam/arm-core'
+import { DetailFeatureLoadUnloadSpace } from 'shared/components/DetailFeature/LoadUnloadSpace'
+import LoadingSpinner from 'shared/components/LoadingSpinner'
 
 import { LoadUnloadDetailFeatureRoadSectionLoadUnload } from './RoadSectionLoadUnload'
 
-import { DetailFeatureLoadUnloadSpace } from '../../../../shared/components/DetailFeature/LoadUnloadSpace'
-import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
 import { useSearchForParkingSpace } from '../../hooks/useSearchForParkingSpace'

@@ -1,5 +1,5 @@
-import { RoadSectionObstructions } from '../../../api/bereikbaarheid/road-obstructions'
-import { WiorFeature } from '../../../api/wfs/wior'
+import { RoadSectionObstructions } from 'api/bereikbaarheid/road-obstructions'
+import { WiorFeature } from 'api/wfs/wior'
 
 export type DetailFeatureRoadSection = {
   data: RoadSectionObstructions

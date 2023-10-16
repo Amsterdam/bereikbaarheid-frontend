@@ -1,11 +1,11 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
-import { useTheme } from 'styled-components'
-
-import { MapLegendItem } from '../../../../shared/components/MapLegendItem'
+import { MapLegendItem } from 'shared/components/MapLegendItem'
 import {
   LegendWrapper,
   LegendItemsWrapper,
-} from '../../../../shared/components/MapLegendStyles'
+} from 'shared/components/MapLegendStyles'
+import { useTheme } from 'styled-components'
+
 import { useRoadObstructionsMapContext } from '../../contexts/MapContext'
 import { roadObstructionsLayerId } from '../../contexts/mapLayersReducer'
 

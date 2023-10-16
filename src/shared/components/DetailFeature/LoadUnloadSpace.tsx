@@ -12,6 +12,7 @@ import {
   TableRow,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import { ParkingSpace } from 'api/parkeervakken'
 import { format, isAfter, parse, startOfYesterday } from 'date-fns'
 import styled from 'styled-components'
 
@@ -22,7 +23,6 @@ import {
 } from './DetailFeatureStyles'
 import trafficSignE07 from './images/traffic-sign-E07.png'
 
-import { ParkingSpace } from '../../../api/parkeervakken'
 import { formatISODate } from '../../utils/dateTime'
 
 const TableTitle = styled(Heading)`

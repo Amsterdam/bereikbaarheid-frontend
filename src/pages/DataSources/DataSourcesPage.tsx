@@ -1,11 +1,11 @@
 import { themeSpacing } from '@amsterdam/asc-ui'
 import { format } from 'date-fns'
+import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
+import Header from 'shared/components/Header'
 import styled from 'styled-components'
 
 import DataSourcesBlocks from './components/DataSourcesBlocks'
 
-import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
-import Header from '../../shared/components/Header'
 import loadUnloadLinks from '../LoadUnload/data/dataLinks'
 import { trafficSignsLink } from '../ProhibitorySigns/data/dataLinks'
 import { DUMMY_VEHICLE } from '../ProhibitorySigns/hooks/useRdwGeneralInfo'

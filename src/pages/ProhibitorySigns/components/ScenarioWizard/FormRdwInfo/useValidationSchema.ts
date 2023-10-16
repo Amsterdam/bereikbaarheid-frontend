@@ -1,6 +1,6 @@
+import { zToNumber } from 'shared/utils/zodPreprocess'
 import { z } from 'zod'
 
-import { zToNumber } from '../../../../../shared/utils/zodPreprocess'
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
 

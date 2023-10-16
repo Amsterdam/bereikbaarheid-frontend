@@ -1,3 +1,5 @@
+import { TrafficSignCategory } from 'api/bereikbaarheid/traffic-signs'
+
 import c01ProhibitionException from './images/C01--verbod-met-uitzondering.png'
 import c01Prohibition from './images/C01--verbod.png'
 import c01ProhibitionAhead from './images/C01--vooraankondiging-verbod.png'
@@ -33,8 +35,6 @@ import c21Prohibition from './images/C21--verbod.png'
 import c21ProhibitionAhead from './images/C21--vooraankondiging-verbod.png'
 import c21zbProhibition from './images/C21ZB--verbod.png'
 import c22Prohibition from './images/C22--verbod.png'
-
-import { TrafficSignCategory } from '../../../../api/bereikbaarheid/traffic-signs'
 
 export type TrafficSignBackground = Record<
   string,

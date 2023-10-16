@@ -15,6 +15,7 @@ import {
   useForm,
   UseFormRegister,
 } from 'react-hook-form'
+import LoadingSpinner from 'shared/components/LoadingSpinner'
 import { z } from 'zod'
 
 import ScenarioWizardNav from './../ScenarioWizardNav'
@@ -29,7 +30,6 @@ import FormRdwInfoVehicleSummary from './VehicleSummary'
 import FormRdwInfoVehicleTotalWeight from './VehicleTotalWeight'
 import FormRdwInfoVehicleWidth from './VehicleWidth'
 
-import LoadingSpinner from '../../../../../shared/components/LoadingSpinner'
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
 

@@ -2,16 +2,16 @@ import { useEffect, useState } from 'react'
 
 import { Divider, Heading, Modal, TopBar, Link } from '@amsterdam/asc-ui'
 import { useSpring, animated } from '@react-spring/web'
+import { RouteIds } from 'routes'
+import ModalBlock from 'shared/components/ModalBlock'
+import { Z_INDEX_MODAL } from 'shared/constants'
+import { getGeneratedPath } from 'shared/utils/path'
+import { Address } from 'types/address'
 
 import { ProhibitorySignsFormScenarioRdwInfo } from './FormRdwInfo'
 import { ProhibitorySignsFormScenarioAddress } from './FormScenarioAddress'
 import { ProhibitorySignsFormScenarioStart } from './FormScenarioStart'
 
-import { RouteIds } from '../../../../routes'
-import ModalBlock from '../../../../shared/components/ModalBlock'
-import { Z_INDEX_MODAL } from '../../../../shared/constants'
-import { getGeneratedPath } from '../../../../shared/utils/path'
-import { Address } from '../../../../types/address'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 
 const AnimatedModalBlock = animated(ModalBlock)

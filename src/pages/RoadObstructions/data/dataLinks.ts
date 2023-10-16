@@ -1,4 +1,5 @@
-import { getUrl } from '../../../api/bereikbaarheid/road-obstructions'
+import { getUrl } from 'api/bereikbaarheid/road-obstructions'
+
 import { RoadObstructionMapFilters } from '../types/roadObstructionMapFilters'
 
 const obstructionsLink = (mapFilters: RoadObstructionMapFilters) => {

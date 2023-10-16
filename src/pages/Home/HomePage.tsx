@@ -1,9 +1,8 @@
+import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
+import Header from 'shared/components/Header'
 import styled from 'styled-components'
 
 import CardsMenu, { CARD_WIDTH_PX } from './components/CardsMenu'
-
-import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
-import Header from '../../shared/components/Header'
 
 const GRID_GAP_PX = 32
 

@@ -2,18 +2,17 @@ import { useEffect } from 'react'
 
 import { Column, Row } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
+import { getRoadSection } from 'api/bereikbaarheid/road-elements'
 import { useParams } from 'react-router-dom'
+import ContentContainer from 'shared/components/ContentContainer'
+import Header from 'shared/components/Header'
+import LoadingSpinner from 'shared/components/LoadingSpinner'
+import useAnalytics from 'shared/hooks/useAnalytics'
+import { useDocumentTitle } from 'shared/hooks/useDocumentTitle'
 import styled from 'styled-components'
 
 import { RoadSectionDetails } from './components/Details'
 import { RoadSectionMap } from './components/Map'
-
-import { getRoadSection } from '../../api/bereikbaarheid/road-elements'
-import ContentContainer from '../../shared/components/ContentContainer'
-import Header from '../../shared/components/Header'
-import LoadingSpinner from '../../shared/components/LoadingSpinner'
-import useAnalytics from '../../shared/hooks/useAnalytics'
-import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
 
 const StyledColumn = styled(Column)`
   flex-direction: column;

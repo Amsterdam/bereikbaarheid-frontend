@@ -1,11 +1,11 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
-
-import { ProhibitorySignsMapLegendTrafficSignsLegendItem as LegendItem } from './TrafficSignsLegendItem'
-
 import {
   LegendWrapper,
   LegendItemsWrapper,
-} from '../../../../shared/components/MapLegendStyles'
+} from 'shared/components/MapLegendStyles'
+
+import { ProhibitorySignsMapLegendTrafficSignsLegendItem as LegendItem } from './TrafficSignsLegendItem'
+
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'

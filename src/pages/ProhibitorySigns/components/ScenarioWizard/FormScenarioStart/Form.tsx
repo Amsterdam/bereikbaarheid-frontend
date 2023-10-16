@@ -13,14 +13,14 @@ import {
 import { zodResolver } from '@hookform/resolvers/zod'
 import debounce from 'lodash/debounce'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
+import { FormLabel } from 'shared/components/FormLabel'
+import InputWithSuffix from 'shared/components/InputWithSuffix'
 import styled from 'styled-components'
 import { z } from 'zod'
 
 import { FormScenarioStartSampleLicensePlates } from './SampleLicensePlates'
 import { FormScenarioStartValidationSchema } from './ValidationSchema'
 
-import { FormLabel } from '../../../../../shared/components/FormLabel'
-import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { Vehicle } from '../../../types/vehicle'
 import {

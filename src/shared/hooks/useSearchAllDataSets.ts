@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-
-import { SearchAllDatasetsProps, searchAllDatasets } from '../../api/geosearch'
+import { SearchAllDatasetsProps, searchAllDatasets } from 'api/geosearch'
 
 interface UseSearchAllDataSetsProps extends SearchAllDatasetsProps {
   enabled: boolean

@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 
 import { GeoJSON } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
+import { getProhibitoryRoads } from 'api/bereikbaarheid/roads/prohibitory'
 import { PathOptions } from 'leaflet'
 
-import { getProhibitoryRoads } from '../../../../api/bereikbaarheid/roads/prohibitory'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { prohibitoryRoadsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'

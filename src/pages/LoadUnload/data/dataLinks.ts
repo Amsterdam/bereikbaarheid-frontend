@@ -1,4 +1,4 @@
-import { getUrl } from '../../../api/bereikbaarheid/road-sections/load-unload'
+import { getUrl } from 'api/bereikbaarheid/road-sections/load-unload'
 
 const loadUnloadLink = {
   href: 'https://data.amsterdam.nl/datasets/D6rMG5CdGBfp2Q/parkeervakken/',

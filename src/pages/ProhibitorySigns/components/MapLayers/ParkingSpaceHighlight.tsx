@@ -1,7 +1,7 @@
 import { GeoJSON } from '@amsterdam/arm-core'
+import { useSearchAllDataSets } from 'shared/hooks/useSearchAllDataSets'
 import { useTheme } from 'styled-components'
 
-import { useSearchAllDataSets } from '../../../../shared/hooks/useSearchAllDataSets'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useParkingSpaceInfo } from '../../hooks/useParkingSpaceInfo'
 

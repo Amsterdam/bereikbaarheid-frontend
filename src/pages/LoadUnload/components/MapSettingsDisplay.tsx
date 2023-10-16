@@ -13,9 +13,9 @@ import {
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import { formatISODate } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
-import { formatISODate } from '../../../shared/utils/dateTime'
 import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
 import { useLoadUnloadPageContext } from '../contexts/PageContext'
 import { LoadUnloadPageProvider } from '../contexts/PageProvider'

@@ -9,13 +9,13 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import { Link as RouterLink } from 'react-router-dom'
+import { RouteIds } from 'routes'
+import { getGeneratedPath } from 'shared/utils/path'
 import styled from 'styled-components'
 
 import { PropertiesContainer } from './DetailFeatureStyles'
 import ProhibitorySignsDetailFeatureTrafficSignImage from './TrafficSignImage'
 
-import { RouteIds } from '../../../../routes'
-import { getGeneratedPath } from '../../../../shared/utils/path'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import {

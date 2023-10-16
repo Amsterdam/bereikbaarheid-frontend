@@ -12,12 +12,12 @@ import {
 } from '@amsterdam/asc-ui'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { FormLabel } from 'shared/components/FormLabel'
+import ModalBlock from 'shared/components/ModalBlock'
 import styled from 'styled-components'
 
 import { RoadObstructionsFiltersValidationSchema } from './ValidationSchema'
 
-import { FormLabel } from '../../../../shared/components/FormLabel'
-import ModalBlock from '../../../../shared/components/ModalBlock'
 import { RoadObstructionMapFilters } from '../../types/roadObstructionMapFilters'
 
 const FormFieldWrapper = styled.div`

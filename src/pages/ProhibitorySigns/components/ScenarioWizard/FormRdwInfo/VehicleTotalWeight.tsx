@@ -6,12 +6,12 @@ import {
   styles,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import InputWithSuffix from 'shared/components/InputWithSuffix'
 import styled from 'styled-components'
 
 import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
 import { RdwInfoFormColumn, RdwInfoFormRow } from './FormStyle'
 
-import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
 

@@ -1,7 +1,7 @@
 import { Checkbox, Label, themeSpacing } from '@amsterdam/asc-ui'
+import { wideRoads } from 'shared/map/mapLayers'
 import styled from 'styled-components'
 
-import { wideRoads } from '../../../../shared/map/mapLayers'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 
 // Colors taken from MapServer map file

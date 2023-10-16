@@ -9,6 +9,12 @@ import {
 } from '@amsterdam/arm-core'
 import { useMatchMedia } from '@amsterdam/asc-ui'
 import L from 'leaflet'
+import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
+import Header from 'shared/components/Header'
+import { HEADER_HEIGHT } from 'shared/constants'
+import useAnalytics from 'shared/hooks/useAnalytics'
+import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
+import { MapStyle } from 'shared/map/mapStyle'
 import styled from 'styled-components'
 import 'leaflet/dist/leaflet.css'
 
@@ -19,13 +25,6 @@ import ProhibitorySignsScenarioWizard from './components/ScenarioWizard'
 import ProhibitorySignsViewerContainer from './components/ViewerContainer'
 import ProhibitorySignsMapProvider from './contexts/MapProvider'
 import ProhibitorySignsPageProvider from './contexts/PageProvider'
-
-import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
-import Header from '../../shared/components/Header'
-import { HEADER_HEIGHT } from '../../shared/constants'
-import useAnalytics from '../../shared/hooks/useAnalytics'
-import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
-import { MapStyle } from '../../shared/map/mapStyle'
 
 const { SnapPoint } = mapPanelConstants
 

@@ -1,9 +1,8 @@
 import { Button, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
+import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
+import Header from 'shared/components/Header'
+import { getMailtoLink } from 'shared/utils/email'
 import styled from 'styled-components'
-
-import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
-import Header from '../../shared/components/Header'
-import { getMailtoLink } from '../../shared/utils/email'
 
 const FEEDBACK_RECIPIENT = 'stadsloket.centrum.vergunningen.dvl@amsterdam.nl'
 const FEEDBACK_SUBJECT = 'Terugmelding bereikbaarheid.amsterdam.nl'

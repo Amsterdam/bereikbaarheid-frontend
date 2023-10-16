@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
+import { getPermitsByLocation } from 'api/bereikbaarheid/permits'
 
 import { usePermitHeavyGoodsVehicleZone } from './usePermitHeavyGoodsVehicleZone'
 import { usePermitLowEmissionZone } from './usePermitLowEmissionZone'
 import { useRdwGeneralInfo } from './useRdwGeneralInfo'
 
-import { getPermitsByLocation } from '../../../api/bereikbaarheid/permits'
 import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 
 export const usePermitsByLocation = () => {

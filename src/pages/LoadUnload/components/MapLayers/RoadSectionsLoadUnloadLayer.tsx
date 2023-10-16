@@ -2,15 +2,15 @@ import { useCallback, useEffect, useState } from 'react'
 
 import { GeoJSON } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
-import { DomEvent, PathOptions } from 'leaflet'
-import type L from 'leaflet'
-import { useTheme } from 'styled-components'
-
 import {
   getRoadSectionsLoadUnload,
   RoadSectionLoadUnload,
-} from '../../../../api/bereikbaarheid/road-sections/load-unload'
-import { useDateToDayOfTheWeek } from '../../../../shared/hooks/useDateToDayOfTheWeek'
+} from 'api/bereikbaarheid/road-sections/load-unload'
+import { DomEvent, PathOptions } from 'leaflet'
+import type L from 'leaflet'
+import { useDateToDayOfTheWeek } from 'shared/hooks/useDateToDayOfTheWeek'
+import { useTheme } from 'styled-components'
+
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
 import { roadSectionsLoadUnloadLayerId } from '../../contexts/mapLayersReducer'

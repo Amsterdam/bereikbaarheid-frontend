@@ -2,10 +2,9 @@ import { useEffect } from 'react'
 
 import { Column, Heading, Paragraph, Row } from '@amsterdam/asc-ui'
 import { useRouteError } from 'react-router-dom'
+import Header from 'shared/components/Header'
+import useAnalytics from 'shared/hooks/useAnalytics'
 import styled from 'styled-components'
-
-import Header from '../shared/components/Header'
-import useAnalytics from '../shared/hooks/useAnalytics'
 
 const Container = styled.main`
   display: flex;

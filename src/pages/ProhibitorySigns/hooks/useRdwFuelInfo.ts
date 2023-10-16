@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
+import { getFuelInfo, rdwFuelData } from 'api/rdw/fuel'
 
-import { getFuelInfo, rdwFuelData } from '../../../api/rdw/fuel'
 import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 
 export interface rdwFuelInfo {

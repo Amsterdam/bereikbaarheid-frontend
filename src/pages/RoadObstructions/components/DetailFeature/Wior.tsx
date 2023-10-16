@@ -6,9 +6,9 @@ import {
   DescriptionListItem,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import { formatISODate } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
-import { formatISODate } from '../../../../shared/utils/dateTime'
 import { DetailFeature, DetailFeatureWior } from '../../types/detailFeature'
 
 const StyledDescriptionList = styled(DescriptionList)`

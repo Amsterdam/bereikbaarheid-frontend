@@ -7,6 +7,7 @@ import {
   useMapInstance,
 } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
+import { getWiorData } from 'api/wfs/wior'
 import {
   DomEvent,
   GeoJSON as GeoJSONLayer,
@@ -16,7 +17,6 @@ import {
 } from 'leaflet'
 import { useTheme } from 'styled-components'
 
-import { getWiorData } from '../../../api/wfs/wior'
 import { useRoadObstructionsMapContext } from '../contexts/MapContext'
 import { wiorLayerId } from '../contexts/mapLayersReducer'
 import { DetailFeature } from '../types/detailFeature'

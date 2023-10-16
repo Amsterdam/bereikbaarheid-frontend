@@ -9,9 +9,8 @@ import {
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import { AddressItem } from 'api/atlas/search/address'
 import styled from 'styled-components'
-
-import { AddressItem } from '../../api/atlas/search/address'
 
 const AddressSearchResultsContainer = styled.div`
   min-height: 220px;

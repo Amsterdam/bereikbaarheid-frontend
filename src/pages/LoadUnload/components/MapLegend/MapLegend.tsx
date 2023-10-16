@@ -1,10 +1,10 @@
 import { Column, Row } from '@amsterdam/asc-ui'
+import { MapLegend } from 'shared/components/MapLegend'
+import { MapLegendLoadUnloadSpaces } from 'shared/components/MapLegendLoadUnloadSpaces'
+import { loadUnloadSpaces } from 'shared/map/mapLayers'
 
 import { LoadUnloadMapLegendRoadSectionsLoadUnload } from './RoadSectionsLoadUnload'
 
-import { MapLegend } from '../../../../shared/components/MapLegend'
-import { MapLegendLoadUnloadSpaces } from '../../../../shared/components/MapLegendLoadUnloadSpaces'
-import { loadUnloadSpaces } from '../../../../shared/map/mapLayers'
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
 
 export const LoadUnloadMapLegend = () => {

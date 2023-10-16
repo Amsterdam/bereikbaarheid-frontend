@@ -11,13 +11,13 @@ import {
   Paragraph,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import { RoadObstruction } from 'api/bereikbaarheid/road-obstructions'
 import { Link as RouterLink } from 'react-router-dom'
+import { RouteIds } from 'routes'
+import { formatISODate } from 'shared/utils/dateTime'
+import { getGeneratedPath } from 'shared/utils/path'
 import styled from 'styled-components'
 
-import { RoadObstruction } from '../../../../api/bereikbaarheid/road-obstructions'
-import { RouteIds } from '../../../../routes'
-import { formatISODate } from '../../../../shared/utils/dateTime'
-import { getGeneratedPath } from '../../../../shared/utils/path'
 import {
   DetailFeature,
   DetailFeatureRoadSection,

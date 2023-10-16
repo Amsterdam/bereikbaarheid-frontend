@@ -1,11 +1,8 @@
 import { useEffect } from 'react'
 
 import { useQuery } from '@tanstack/react-query'
+import { getTrafficSigns, TrafficSign } from 'api/bereikbaarheid/traffic-signs'
 
-import {
-  getTrafficSigns,
-  TrafficSign,
-} from '../../../../api/bereikbaarheid/traffic-signs'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'

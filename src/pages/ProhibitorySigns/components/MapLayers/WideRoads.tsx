@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 
 import { TileLayer } from '@amsterdam/react-maps'
+import { wideRoads } from 'shared/map/mapLayers'
 
-import { wideRoads } from '../../../../shared/map/mapLayers'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { usePermitHeavyGoodsVehicleZone } from '../../hooks/usePermitHeavyGoodsVehicleZone'

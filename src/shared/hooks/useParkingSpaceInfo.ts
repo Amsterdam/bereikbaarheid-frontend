@@ -1,9 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-
-import {
-  getParkingSpaceById,
-  GetParkingSpaceProps,
-} from '../../api/parkeervakken'
+import { getParkingSpaceById, GetParkingSpaceProps } from 'api/parkeervakken'
 
 interface UseParkingSpaceInfoProps extends GetParkingSpaceProps {
   enabled: boolean

@@ -20,6 +20,12 @@ import { HEADER_HEIGHT, Z_INDEX_MODAL } from 'shared/constants'
 import useAnalytics from 'shared/hooks/useAnalytics'
 import { useDocumentTitle } from 'shared/hooks/useDocumentTitle'
 import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
+import {
+  oneWayArrows,
+  roadNetworkNoRestrictions,
+  topoBlackWhite,
+} from 'shared/map/mapLayers'
+import { MapStyle } from 'shared/map/mapStyle'
 import styled from 'styled-components'
 
 import RoadObstructionsDetailFeature from './components/DetailFeature'
@@ -32,13 +38,6 @@ import WiorLayer from './components/WiorLayer'
 import RoadObstructionsMapProvider from './contexts/MapProvider'
 import { DetailFeature } from './types/detailFeature'
 import { RoadObstructionMapFilters } from './types/roadObstructionMapFilters'
-
-import {
-  oneWayArrows,
-  roadNetworkNoRestrictions,
-  topoBlackWhite,
-} from '../../shared/map/mapLayers'
-import { MapStyle } from '../../shared/map/mapStyle'
 
 const { SnapPoint } = mapPanelConstants
 

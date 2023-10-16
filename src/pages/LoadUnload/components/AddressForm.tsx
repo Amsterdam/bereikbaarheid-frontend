@@ -18,18 +18,15 @@ import {
   themeSpacing,
   TopBar,
 } from '@amsterdam/asc-ui'
+import { address as addressApi, AddressItem } from 'api/atlas/search/address'
 import debounce from 'lodash/debounce'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { AddressSearchResults } from 'shared/components/AddressSearchResults'
+import { FormLabel } from 'shared/components/FormLabel'
+import ModalBlock from 'shared/components/ModalBlock'
 import styled from 'styled-components'
+import { Address } from 'types/address'
 
-import {
-  address as addressApi,
-  AddressItem,
-} from '../../../api/atlas/search/address'
-import { AddressSearchResults } from '../../../shared/components/AddressSearchResults'
-import { FormLabel } from '../../../shared/components/FormLabel'
-import ModalBlock from '../../../shared/components/ModalBlock'
-import { Address } from '../../../types/address'
 import { useLoadUnloadPageContext } from '../contexts/PageContext'
 
 const FormFooter = styled.div`

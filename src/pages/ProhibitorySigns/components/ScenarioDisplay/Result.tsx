@@ -9,6 +9,8 @@ import {
   Row,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import LoadingSpinner from 'shared/components/LoadingSpinner'
+import { ReactComponent as DistanceToDestinationIcon } from 'shared/icons/bootstrap-icon-flag-fill.svg'
 import styled from 'styled-components'
 
 import ScenarioDisplayResultIntro from './ResultIntro'
@@ -17,8 +19,6 @@ import ScenarioDisplayResultPermitLowEmissionZone from './ResultPermitLowEmissio
 import ScenarioDisplayResultPermitRVV from './ResultPermitRVV'
 import { FiltersContainer } from './ScenarioDisplayStyle'
 
-import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
-import { ReactComponent as DistanceToDestinationIcon } from '../../../../shared/icons/bootstrap-icon-flag-fill.svg'
 import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
 import { RvvDetailExplanation, RvvDetailToggle } from '../RvvDetail'
 

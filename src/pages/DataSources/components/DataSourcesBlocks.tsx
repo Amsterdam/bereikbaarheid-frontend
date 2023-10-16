@@ -7,10 +7,9 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import { ContentWrapper } from '@amsterdam/asc-ui/lib/components/Alert/AlertStyle'
+import { RouteIds, getPathTo } from 'routes'
+import { getMailtoLink } from 'shared/utils/email'
 import styled from 'styled-components'
-
-import { RouteIds, getPathTo } from '../../../routes'
-import { getMailtoLink } from '../../../shared/utils/email'
 
 interface DataLink {
   beta?: boolean

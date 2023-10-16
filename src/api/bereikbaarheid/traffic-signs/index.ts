@@ -1,6 +1,6 @@
 import { Feature, FeatureCollection, Point } from 'geojson'
+import { Vehicle } from 'pages/ProhibitorySigns/types/vehicle'
 
-import { Vehicle } from '../../../pages/ProhibitorySigns/types/vehicle'
 import { api } from '../index'
 
 export const ENDPOINT = 'v1/traffic-signs'

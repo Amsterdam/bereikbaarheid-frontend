@@ -1,9 +1,9 @@
 import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { RouteIds } from 'routes'
+import { getGeneratedPath } from 'shared/utils/path'
 
 import { withApp } from '../../../test/utils/withApp'
-import { RouteIds } from '../../routes'
-import { getGeneratedPath } from '../../shared/utils/path'
 
 describe('ProhibitorySignsPage', () => {
   jest.setTimeout(10000)

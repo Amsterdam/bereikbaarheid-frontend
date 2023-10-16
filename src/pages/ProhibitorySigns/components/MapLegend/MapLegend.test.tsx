@@ -1,9 +1,9 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
+import { getPathTo } from 'routes'
 
 import { withApp } from '../../../../../test/utils/withApp'
-import { getPathTo } from '../../../../routes'
 
 describe('MapLegend', () => {
   jest.setTimeout(10000)
