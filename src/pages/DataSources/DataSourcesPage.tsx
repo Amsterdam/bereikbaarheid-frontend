@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 
 import DataSourcesBlocks from './components/DataSourcesBlocks'
@@ -10,6 +11,7 @@ import loadUnloadLinks from '../LoadUnload/data/dataLinks'
 import { trafficSignsLink } from '../ProhibitorySigns/data/dataLinks'
 import obstructionsLinks from '../RoadObstructions/data/dataLinks'
 import Header from '../../shared/components/Header'
+import useAnalytics from '../../shared/hooks/useAnalytics'
 
 const INITIAL_DATE = format(new Date(), 'yyyy-MM-dd')
 
@@ -32,6 +34,9 @@ const DataSourcesPage = () => {
     }),
     ...loadUnloadLinks,
   ]
+
+  const { trackPageVisit } = useAnalytics()
+  useEffect(trackPageVisit)
 
   return (
     <PageWrapper>
