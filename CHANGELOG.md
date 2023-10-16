@@ -6,20 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.7.0...HEAD)
 
+## [v3.0.0 - 2023-10-16](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.7.0...v3.0.0)
+
 ### Added
 
 - Forbidden to park or stop traffic signs to each window time row in table
-- Analytics with Piwik PRO: currently only track page visits
+- Analytics with Piwik PRO: currently only tracking page visits
 - Landing page with cards (corresponds to main menu)
+- New pages: Data Sources and Contact and assistance
 
 ### Changed
 
 - Bereikbaarheid API URL
-- Reworked routing and main menu
-
-### Fixed
-
-- Some test framework warnings and added TODO's for temporarily disabled tests
+- Updated routes and main menu with new links and naming
 
 ## [v2.7.0 - 2023-10-11](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.6.0...v2.7.0)
 
@@ -52,7 +51,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - updated dependencies to latest minor and patch versions
 
-
 ## [v2.5.0 - 2023-05-15](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.4.0...v2.5.0)
 
 ### Added
@@ -65,7 +63,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - updated dependencies to latest minor and patch versions
 - updated `@hookform/resolvers` to version 3
-
 
 ## [v2.4.0 - 2023-02-26](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.3.0...v2.4.0)
 
@@ -80,7 +77,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Fixed
 
 - Prohibitory signs: display results when no address given
-
 
 ## [v2.3.0 - 2023-02-17](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.2.1...v2.3.0)
 
@@ -99,10 +95,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - Prohibitory signs: prevent vehicles with an undefined maximum allowed weight from using the app
 
-
 ## [v2.2.1 - 2022-12-15](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.2...v2.2.1)
-Updated minor and patch dependencies.
 
+Updated minor and patch dependencies.
 
 ## v2.2 - 2022-12-09
 
@@ -116,9 +111,7 @@ This release makes the code available through Github, and semantic versioning ha
 
 - default font to Amsterdam Sans
 
-
 The versions below this line are for historical reasons. The application was open-sourced with version 2.2, so only tags >= v2.2 are available in this repository.
-
 
 ## v2.1 - 2022-10-14
 
@@ -133,13 +126,11 @@ The versions below this line are for historical reasons. The application was ope
 - Prohibitory signs: overflow of traffic sign exception text in sidebar
 - Prohibitory signs: reset location or trafficSign variables on click
 
-
 ## v2.0 - 2022-06-13
 
 ### Added
 
 - Road obstructions page at `/stremmingen`
-
 
 ## v1.9 - 2022-05-30
 
@@ -150,7 +141,6 @@ The versions below this line are for historical reasons. The application was ope
 ### Changed
 
 - synced styling LoadUnload spaces map layer with [colors used in mapserver repo](https://github.com/Amsterdam/mapserver)
-
 
 ## v1.8 - 2022-05-11
 
@@ -168,7 +158,6 @@ The versions below this line are for historical reasons. The application was ope
 
 - Prohibitory signs: take vehicle type into account when determining permit low emission zone
 
-
 ## v1.7 - 2022-03-21
 
 ### Added
@@ -185,7 +174,6 @@ The versions below this line are for historical reasons. The application was ope
 - Prohibitory signs: replace test vehicle Bus Euro 5
 - Prohibitory signs: display one-way arrows map layer on top of prohibitory roads
 
-
 ## v1.6 - 2022-01-27
 
 ### Added
@@ -199,7 +187,6 @@ The versions below this line are for historical reasons. The application was ope
 - Prohibitory signs: feedback email address
 - Prohibitory signs: adjust low emission zone to requirements 2022
 - Prohibitory signs: update wide roads legend
-
 
 ## v1.5 - 2021-12-01
 
@@ -219,7 +206,6 @@ The versions below this line are for historical reasons. The application was ope
 
 - take electric vehicles into account when parsing emission standard
 
-
 ## v1.4 - 2021-11-01
 
 ### Added
@@ -231,7 +217,6 @@ The versions below this line are for historical reasons. The application was ope
 
 - add bounding boxes to map tiles
 - improve visualization zonal traffic signs
-
 
 ## v1.3 - 2021-10-02
 
@@ -253,7 +238,6 @@ The versions below this line are for historical reasons. The application was ope
 
 - exclude trailers when validating license plate
 
-
 ## v1.2 - 2021-09-06
 
 ### Added
@@ -273,10 +257,10 @@ The versions below this line are for historical reasons. The application was ope
 - fix bug in detecting Bus when determining permits
 - improve display RDW info in case of empty values
 
-
 ## v1.1 - 2021-08-06
+
 Second public beta used for 2nd round of UX sessions.
 
-
 ## v1.0 - 2021-06-30
+
 First public beta used for 1st round of UX sessions.
