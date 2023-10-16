@@ -44,6 +44,6 @@ describe('Header', () => {
     expect(screen.getByText('Stremmingen')).toBeInTheDocument()
     expect(screen.getByText('Laden en lossen')).toBeInTheDocument()
 
-    expect(screen.getByTestId('header')).toHaveTextContent('Touringcars')
+    expect(screen.getByTestId('header')).toHaveTextContent('Touringcar')
   })
 })
