@@ -44,7 +44,7 @@ const ScenarioDisplayRdwInfo = () => {
   const { setActiveStepWizard, setShowScenarioWizard, vehicle } =
     useProhibitorySignsPageContext()
 
-  const rdwGeneralInfo = useRdwGeneralInfo()
+  const rdwGeneralInfo = useRdwGeneralInfo(vehicle)
 
   const showScenarioWizard = () => {
     setActiveStepWizard(2)

@@ -12,7 +12,6 @@ import styled from 'styled-components'
 import 'leaflet/dist/leaflet.css'
 
 import { HEADER_HEIGHT, Z_INDEX_MODAL } from '../../shared/constants'
-import FeedbackModal from '../../shared/components/FeedbackModal'
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import { MapStyle } from '../../shared/map/mapStyle'
 import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
@@ -20,7 +19,6 @@ import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
 import useAnalytics from '../../shared/hooks/useAnalytics'
 
 import { LoadUnloadAddressForm } from './components/AddressForm'
-import { LoadUnloadHeader } from './components/Header'
 import { LoadUnloadDetailFeature } from './components/DetailFeature'
 import { LoadUnloadMapLayers } from './components/MapLayers'
 import { ModalDateTime } from './components/ModalDateTime'
@@ -28,6 +26,7 @@ import { LoadUnloadViewerContainer } from './components/ViewerContainer'
 import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
 import { LoadUnloadMapProvider } from './contexts/MapProvider'
 import { LoadUnloadPageProvider } from './contexts/PageProvider'
+import Header from '../../shared/components/Header'
 
 const { SnapPoint } = mapPanelConstants
 
@@ -55,7 +54,6 @@ const LoadUnloadPage = () => {
 
   const [showAddressForm, setShowAddressForm] = useState(false)
   const [showDateTimeModal, setShowDateTimeModal] = useState(false)
-  const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
 
   const { trackPageVisit } = useAnalytics()
   useEffect(trackPageVisit)
@@ -65,10 +63,7 @@ const LoadUnloadPage = () => {
   return (
     <LoadUnloadPageProvider>
       <PageWrapper>
-        <LoadUnloadHeader
-          setOpenFeedbackModal={setOpenFeedbackModal}
-          title="Laden en lossen"
-        />
+        <Header title="Laden en lossen" />
 
         <MainContent data-testid="load-unload-page">
           <MapStyle />
@@ -113,8 +108,6 @@ const LoadUnloadPage = () => {
         showModal={showDateTimeModal}
         setShowModal={setShowDateTimeModal}
       />
-
-      <FeedbackModal setOpen={setOpenFeedbackModal} open={openFeedbackModal} />
     </LoadUnloadPageProvider>
   )
 }

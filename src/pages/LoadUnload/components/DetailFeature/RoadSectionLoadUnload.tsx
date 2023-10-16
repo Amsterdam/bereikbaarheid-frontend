@@ -27,8 +27,8 @@ import {
   PropertiesContainer,
 } from '../../../../shared/components/DetailFeature/DetailFeatureStyles'
 
-import E01 from './images/E01.png'
-import E02 from './images/E02.png'
+import E01 from './images/E01.svg'
+import E02 from './images/E02.svg'
 
 const PaddedImageContainer = styled(ImageContainer)`
   margin-bottom: 1em;

@@ -1,12 +1,15 @@
 import { useRdwGeneralInfo } from './useRdwGeneralInfo'
 import { useRdwFuelInfo } from './useRdwFuelInfo'
+import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 
 /**
  * Determine if a permit for the Low Emission Zone is needed
  */
 export const usePermitLowEmissionZone = (): boolean => {
+  const { vehicle } = useProhibitorySignsPageContext()
+
   const rdwFuelInfo = useRdwFuelInfo()
-  const rdwGeneralInfo = useRdwGeneralInfo()
+  const rdwGeneralInfo = useRdwGeneralInfo(vehicle)
 
   // vehicles not running on diesel do not need a permit
   if (rdwFuelInfo.data?.[0].server.brandstof_omschrijving !== 'Diesel') {

@@ -12,13 +12,11 @@ import styled from 'styled-components'
 import 'leaflet/dist/leaflet.css'
 
 import { HEADER_HEIGHT } from '../../shared/constants'
-import FeedbackModal from '../../shared/components/FeedbackModal'
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import { MapStyle } from '../../shared/map/mapStyle'
 import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
 import useAnalytics from '../../shared/hooks/useAnalytics'
 
-import ProhibitorySignsHeader from './components/Header'
 import ProhibitorySignsDetailFeature from './components/DetailFeature'
 import ProhibitorySignsMapLayers from './components/MapLayers'
 import ProhibitorySignsScenarioWizard from './components/ScenarioWizard'
@@ -26,6 +24,7 @@ import ProhibitorySignsViewerContainer from './components/ViewerContainer'
 import ProhibitorySignsPageProvider from './contexts/PageProvider'
 import ScenarioDisplay from './components/ScenarioDisplay'
 import ProhibitorySignsMapProvider from './contexts/MapProvider'
+import Header from '../../shared/components/Header'
 
 const { SnapPoint } = mapPanelConstants
 
@@ -40,7 +39,6 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
 `
 
 const ProhibitorySignsPage = () => {
-  const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
 
@@ -58,10 +56,7 @@ const ProhibitorySignsPage = () => {
   return (
     <PageWrapper>
       <ProhibitorySignsPageProvider>
-        <ProhibitorySignsHeader
-          setOpenFeedbackModal={setOpenFeedbackModal}
-          title="Bereikbaarheid Amsterdam op Kenteken"
-        />
+        <Header title="Bereikbaarheid op kenteken" />
 
         <MainContent data-testid="prohibitory-signs-page">
           <MapStyle />
@@ -86,12 +81,8 @@ const ProhibitorySignsPage = () => {
           </StyledMap>
         </MainContent>
 
-        <ProhibitorySignsScenarioWizard
-          setShowFeedbackModal={setOpenFeedbackModal}
-        />
+        <ProhibitorySignsScenarioWizard />
       </ProhibitorySignsPageProvider>
-
-      <FeedbackModal setOpen={setOpenFeedbackModal} open={openFeedbackModal} />
     </PageWrapper>
   )
 }

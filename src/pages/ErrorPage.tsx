@@ -3,7 +3,7 @@ import { Column, Heading, Paragraph, Row } from '@amsterdam/asc-ui'
 import { useRouteError } from 'react-router-dom'
 import styled from 'styled-components'
 import useAnalytics from '../shared/hooks/useAnalytics'
-import { Header } from '../shared/components/Header'
+import Header from '../shared/components/Header'
 
 const Container = styled.main`
   display: flex;
@@ -37,7 +37,7 @@ const ErrorPage = () => {
 
   return (
     <>
-      <Header title="Bereikbaarheid Amsterdam op Kenteken" />
+      <Header title="Er ging iets fout" />
 
       <Container data-testid="error-page">
         <Row>

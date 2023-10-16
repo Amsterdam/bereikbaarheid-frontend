@@ -6,11 +6,10 @@ import {
   styles,
   useMatchMedia,
 } from '@amsterdam/asc-ui'
-import type { ReactNode } from 'react'
 import styled from 'styled-components'
 
 import { HEADER_HEIGHT, Z_INDEX_HEADER } from '../../constants'
-import { HeaderMenuItems } from './HeaderMenuItems'
+import HeaderMenuItems from './HeaderMenuItems'
 
 const StyledLogo = styled(AmsterdamLogo)`
   height: 44px;
@@ -24,14 +23,13 @@ const StyledMenu = styled(MenuInline)`
   }
 `
 
-export interface HeaderProps {
-  additionalMenuItems?: ReactNode
+interface HeaderProps {
   title?: string
   zIndex?: number
 }
 
-export const Header = ({ additionalMenuItems, title, zIndex }: HeaderProps) => {
-  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
+function Header({ title, zIndex }: HeaderProps) {
+  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'laptop' })
 
   return (
     <ASCHeader
@@ -46,12 +44,10 @@ export const Header = ({ additionalMenuItems, title, zIndex }: HeaderProps) => {
           {!showDesktopVariant ? (
             <MenuToggle align="right">
               <HeaderMenuItems></HeaderMenuItems>
-              {additionalMenuItems}
             </MenuToggle>
           ) : (
             <StyledMenu>
               <HeaderMenuItems></HeaderMenuItems>
-              {additionalMenuItems}
             </StyledMenu>
           )}
         </>
@@ -65,9 +61,11 @@ export const Header = ({ additionalMenuItems, title, zIndex }: HeaderProps) => {
 
         // Header title
         & h1 a:nth-of-type(2) {
-          font-size: 1.125rem;
+          font-size: 1.25rem;
         }
       `}
     />
   )
 }
+
+export default Header

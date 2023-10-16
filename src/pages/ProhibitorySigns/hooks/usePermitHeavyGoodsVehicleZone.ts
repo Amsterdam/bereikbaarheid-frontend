@@ -6,7 +6,7 @@ import { useRdwGeneralInfo } from './useRdwGeneralInfo'
  */
 export const usePermitHeavyGoodsVehicleZone = (): boolean => {
   const { vehicle } = useProhibitorySignsPageContext()
-  const rdwGeneralInfo = useRdwGeneralInfo()
+  const rdwGeneralInfo = useRdwGeneralInfo(vehicle)
 
   if (rdwGeneralInfo.data?.[0].derived.isBus) {
     return false

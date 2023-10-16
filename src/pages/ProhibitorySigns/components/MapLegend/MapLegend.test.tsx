@@ -9,13 +9,13 @@ describe('MapLegend', () => {
   jest.setTimeout(10000)
 
   it('renders correctly', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
@@ -57,13 +57,13 @@ describe('MapLegend', () => {
   // item and the loading & enabling of the map layer makes use of
   // the same - mapInstance based - mechanism.
   it('enables the load/unload spaces layer when zooming in', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
