@@ -1,5 +1,6 @@
-import { Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { ReactNode } from 'react'
+
+import { Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
 const LegendItemWrapper = styled.div`

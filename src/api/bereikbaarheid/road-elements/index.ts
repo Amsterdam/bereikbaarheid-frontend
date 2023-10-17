@@ -1,8 +1,7 @@
 import { Feature, FeatureCollection } from 'geojson'
 
-import { RoadObstruction } from '../road-obstructions'
-
 import { api } from '../index'
+import { RoadObstruction } from '../road-obstructions'
 
 export const ENDPOINT = 'v1/road-elements/'
 

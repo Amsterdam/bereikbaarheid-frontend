@@ -13,11 +13,9 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import { isAfter, parse, startOfYesterday } from 'date-fns'
+import LoadingSpinner from 'shared/components/LoadingSpinner'
+import { formatISODate } from 'shared/utils/dateTime'
 import styled from 'styled-components'
-
-import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
-import { formatISODate } from '../../../../shared/utils/dateTime'
-import { useParkingSpaceInfo } from '../../hooks/useParkingSpaceInfo'
 
 import {
   ImageContainer,
@@ -25,6 +23,8 @@ import {
   PropertiesContainer,
 } from './DetailFeatureStyles'
 import trafficSignE07 from './images/traffic-sign-E07.png'
+
+import { useParkingSpaceInfo } from '../../hooks/useParkingSpaceInfo'
 
 const TableTitle = styled(Heading)`
   margin-bottom: 0;

@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import {
   Button,
   Column,
@@ -6,10 +8,13 @@ import {
   Row,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { useState } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
+import { RouteIds } from 'routes'
+import { getGeneratedPath } from 'shared/utils/path'
 import styled from 'styled-components'
-import { getGeneratedPath } from '../../../../shared/utils/path'
+
+import { PropertiesContainer } from './DetailFeatureStyles'
+import ProhibitorySignsDetailFeatureTrafficSignImage from './TrafficSignImage'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
@@ -18,10 +23,6 @@ import {
   RvvDetailExplanation,
   RvvDetailToggle,
 } from '../RvvDetail'
-
-import { PropertiesContainer } from './DetailFeatureStyles'
-import ProhibitorySignsDetailFeatureTrafficSignImage from './TrafficSignImage'
-import { RouteIds } from '../../../../routes'
 
 const AdditionalInfo = styled.div`
   border: 1px solid ${props => props.theme.colors.tint?.level5};

@@ -1,4 +1,4 @@
-import { TrafficSignCategoryApi } from '../../../api/bereikbaarheid/traffic-signs'
+import { TrafficSignCategoryApi } from 'api/bereikbaarheid/traffic-signs'
 
 export const useTrafficSignCategories = (expertMode = false) => {
   let trafficSignCategories: TrafficSignCategoryApi[] = [

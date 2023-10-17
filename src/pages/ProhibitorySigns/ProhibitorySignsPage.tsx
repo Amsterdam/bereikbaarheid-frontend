@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 import {
   Map,
   MapPanel,
@@ -7,24 +9,22 @@ import {
 } from '@amsterdam/arm-core'
 import { useMatchMedia } from '@amsterdam/asc-ui'
 import L from 'leaflet'
-import { useEffect, useState } from 'react'
+import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
+import Header from 'shared/components/Header'
+import { HEADER_HEIGHT } from 'shared/constants'
+import useAnalytics from 'shared/hooks/useAnalytics'
+import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
+import { MapStyle } from 'shared/map/mapStyle'
 import styled from 'styled-components'
 import 'leaflet/dist/leaflet.css'
 
-import { HEADER_HEIGHT } from '../../shared/constants'
-import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
-import { MapStyle } from '../../shared/map/mapStyle'
-import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
-import useAnalytics from '../../shared/hooks/useAnalytics'
-
 import ProhibitorySignsDetailFeature from './components/DetailFeature'
 import ProhibitorySignsMapLayers from './components/MapLayers'
+import ScenarioDisplay from './components/ScenarioDisplay'
 import ProhibitorySignsScenarioWizard from './components/ScenarioWizard'
 import ProhibitorySignsViewerContainer from './components/ViewerContainer'
-import ProhibitorySignsPageProvider from './contexts/PageProvider'
-import ScenarioDisplay from './components/ScenarioDisplay'
 import ProhibitorySignsMapProvider from './contexts/MapProvider'
-import Header from '../../shared/components/Header'
+import ProhibitorySignsPageProvider from './contexts/PageProvider'
 
 const { SnapPoint } = mapPanelConstants
 

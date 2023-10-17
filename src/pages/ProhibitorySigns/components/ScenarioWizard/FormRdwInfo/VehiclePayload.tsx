@@ -1,9 +1,8 @@
+import { FormEvent } from 'react'
+
 import { ErrorMessage, Input, Label, Paragraph } from '@amsterdam/asc-ui'
-
-import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
-
-import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
-import { useRdwInfo } from '../../../hooks/useRdwInfo'
+import { FieldValues, UseFormSetValue } from 'react-hook-form'
+import InputWithSuffix from 'shared/components/InputWithSuffix'
 
 import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
 import {
@@ -11,8 +10,9 @@ import {
   RdwInfoFormLabelHelpText,
   RdwInfoFormRow,
 } from './FormStyle'
-import { FormEvent } from 'react'
-import { FieldValues, UseFormSetValue } from 'react-hook-form'
+
+import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
+import { useRdwInfo } from '../../../hooks/useRdwInfo'
 
 interface FormRdwInfoVehiclePayloadProps<TFormValues extends FieldValues>
   extends FormRdwInfoInputProps<TFormValues> {

@@ -1,4 +1,4 @@
-import { loadUnloadSpaces } from '../../../shared/map/mapLayers'
+import { loadUnloadSpaces } from 'shared/map/mapLayers'
 
 export const roadSectionsLoadUnloadLayerId = 'roadSectionsLoadUnload'
 

@@ -1,21 +1,19 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
-
-import { MapLegendItem } from '../../../../shared/components/MapLegendItem'
+import { MapLegendItem } from 'shared/components/MapLegendItem'
 import {
   LegendWrapper,
   LegendItemsWrapper,
-} from '../../../../shared/components/MapLegendStyles'
+} from 'shared/components/MapLegendStyles'
 import {
   roadNetworkHeavyGoodsVehicleZone,
   roadNetworkLowEmissionZone,
   roadNetworkHeavyGoodsVehicleAndLowEmissionZone,
-} from '../../../../shared/map/mapLayers'
+} from 'shared/map/mapLayers'
 
-import { prohibitoryRoadsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
+import { prohibitoryRoadsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { useActiveRoadNetwork } from '../../hooks/useActiveRoadNetwork'
-
 import { prohibitoryRoadsColors } from '../MapLayers/ProhibitoryRoadsLayer'
 
 const ProhibitorySignsMapLegendRoadNetwork = () => {

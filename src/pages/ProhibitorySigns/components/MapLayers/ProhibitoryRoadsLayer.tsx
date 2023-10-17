@@ -1,16 +1,16 @@
+import { useEffect } from 'react'
+
 import { GeoJSON } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
+import { getProhibitoryRoads } from 'api/bereikbaarheid/roads/prohibitory'
 import { PathOptions } from 'leaflet'
 
-import { getProhibitoryRoads } from '../../../../api/bereikbaarheid/roads/prohibitory'
-
-import { prohibitoryRoadsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
+import { prohibitoryRoadsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { usePermitHeavyGoodsVehicleZone } from '../../hooks/usePermitHeavyGoodsVehicleZone'
 import { usePermitLowEmissionZone } from '../../hooks/usePermitLowEmissionZone'
 import { useRdwGeneralInfo } from '../../hooks/useRdwGeneralInfo'
-import { useEffect } from 'react'
 
 export const prohibitoryRoadsColors = {
   heavyGoodsRvv: '#ff9701',
@@ -56,8 +56,9 @@ const ProhibitorySignsProhibitoryRoadsLayer = () => {
     })
   }, [prohibitoryRoads.data, updateActiveMapLayers])
 
-  if (prohibitoryRoads.isError && prohibitoryRoads.error instanceof Error)
+  if (prohibitoryRoads.isError && prohibitoryRoads.error instanceof Error) {
     console.error(prohibitoryRoads.error.message)
+  }
 
   if (prohibitoryRoads.isLoading) return null
 

@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react'
+
 import PiwikPro, { PageViews } from '@piwikpro/react-piwik-pro'
 
 const piwikUrl = process.env.REACT_APP_PIWIK_URL

@@ -1,4 +1,3 @@
-import { mapPanelConstants, MapPanelContext } from '@amsterdam/arm-core'
 import {
   Dispatch,
   SetStateAction,
@@ -7,9 +6,12 @@ import {
   useState,
 } from 'react'
 
-import { DetailFeature } from '../../types/detailFeature'
+import { mapPanelConstants, MapPanelContext } from '@amsterdam/arm-core'
+
 import RoadSectionInfo from './RoadSectionInfo'
 import { RoadObstructionsDetailFeatureWior } from './Wior'
+
+import { DetailFeature } from '../../types/detailFeature'
 
 const { Overlay } = mapPanelConstants
 

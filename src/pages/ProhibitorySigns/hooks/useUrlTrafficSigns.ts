@@ -1,7 +1,10 @@
 import { useCallback } from 'react'
+
+import { getUrl } from 'api/bereikbaarheid/traffic-signs'
+
 import { useRdwGeneralInfo } from './useRdwGeneralInfo'
 import { useTrafficSignCategories } from './useTrafficSignCategories'
-import { getUrl } from '../../../api/bereikbaarheid/traffic-signs'
+
 import { Vehicle } from '../types/vehicle'
 
 const useUrlTrafficSigns = (vehicle: Vehicle) => {

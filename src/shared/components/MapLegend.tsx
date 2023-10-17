@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 import {
   Accordion,
   Divider,
@@ -6,7 +8,6 @@ import {
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { ReactNode } from 'react'
 import styled from 'styled-components'
 
 const legendGrey = '#aaa' // @todo refactor to tint level4?

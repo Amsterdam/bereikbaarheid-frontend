@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react'
 
-import { withAppContext } from '../test/utils/withAppContext'
 import App from './App'
+
+import { withAppContext } from '../test/utils/withAppContext'
 
 test('renders the app correctly', () => {
   render(withAppContext(<App />))

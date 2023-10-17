@@ -1,7 +1,8 @@
 import { screen, within } from '@testing-library/react'
+
 import { withApp } from '../../../test/utils/withApp'
-import { getGeneratedPath } from '../../shared/utils/path'
 import { RouteIds } from '../../routes'
+import { getGeneratedPath } from '../../shared/utils/path'
 
 describe('ContactPage', () => {
   it('renders correctly', async () => {

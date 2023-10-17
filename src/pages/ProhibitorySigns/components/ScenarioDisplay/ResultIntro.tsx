@@ -1,10 +1,10 @@
 import { Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
+import ArmMarkerIcon from './ArmMarkerIcon'
+
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
-
-import ArmMarkerIcon from './ArmMarkerIcon'
 
 const IntroWrapper = styled(Paragraph)`
   margin-bottom: ${themeSpacing(2)};

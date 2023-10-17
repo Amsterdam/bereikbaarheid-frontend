@@ -1,8 +1,9 @@
 import React from 'react'
+
 import ReactDOM from 'react-dom'
-import { createPiwikInstance } from './shared/hooks/useAnalytics'
 
 import App, { isProd } from './App'
+import { createPiwikInstance } from './shared/hooks/useAnalytics'
 
 createPiwikInstance(isProd)
 

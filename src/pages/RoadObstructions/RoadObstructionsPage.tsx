@@ -1,3 +1,5 @@
+import { useEffect, useMemo, useState } from 'react'
+
 import {
   BaseLayer,
   Map,
@@ -10,34 +12,32 @@ import { Modal, useMatchMedia } from '@amsterdam/asc-ui'
 import { TileLayer } from '@amsterdam/react-maps'
 import { format, parse } from 'date-fns'
 import type L from 'leaflet'
-import { useEffect, useMemo, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
-import styled from 'styled-components'
 import 'leaflet/dist/leaflet.css'
-
-import { HEADER_HEIGHT, Z_INDEX_MODAL } from '../../shared/constants'
-import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
-import { MapStyle } from '../../shared/map/mapStyle'
-import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
+import { useSearchParams } from 'react-router-dom'
+import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
+import Header from 'shared/components/Header'
+import { HEADER_HEIGHT, Z_INDEX_MODAL } from 'shared/constants'
+import useAnalytics from 'shared/hooks/useAnalytics'
+import { useDocumentTitle } from 'shared/hooks/useDocumentTitle'
+import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
 import {
   oneWayArrows,
   roadNetworkNoRestrictions,
   topoBlackWhite,
-} from '../../shared/map/mapLayers'
-import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
-import useAnalytics from '../../shared/hooks/useAnalytics'
+} from 'shared/map/mapLayers'
+import { MapStyle } from 'shared/map/mapStyle'
+import styled from 'styled-components'
 
+import RoadObstructionsDetailFeature from './components/DetailFeature'
 import RoadObstructionsFiltersDisplay from './components/FiltersDisplay'
 import { RoadObstructionsFiltersForm } from './components/FiltersForm'
+import { RoadObstructionsHighlightedFeatureLayer } from './components/HighlightedFeature'
 import RoadObstructionsLayer from './components/RoadObstructionsLayer'
 import RoadObstructionsViewerContainer from './components/ViewerContainer'
-import { DetailFeature } from './types/detailFeature'
-import { RoadObstructionMapFilters } from './types/roadObstructionMapFilters'
 import WiorLayer from './components/WiorLayer'
 import RoadObstructionsMapProvider from './contexts/MapProvider'
-import RoadObstructionsDetailFeature from './components/DetailFeature'
-import { RoadObstructionsHighlightedFeatureLayer } from './components/HighlightedFeature'
-import Header from '../../shared/components/Header'
+import { DetailFeature } from './types/detailFeature'
+import { RoadObstructionMapFilters } from './types/roadObstructionMapFilters'
 
 const { SnapPoint } = mapPanelConstants
 

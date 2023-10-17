@@ -1,8 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { withApp } from '../../../../test/utils/withApp'
 import { generatePath } from 'react-router-dom'
-import { getPathTo } from '../../../routes'
+import { getPathTo } from 'routes'
+
+import { withApp } from '../../../../test/utils/withApp'
 
 describe('WiorLayer', () => {
   it('renders correctly', async () => {

@@ -1,9 +1,8 @@
 import { Marker } from '@amsterdam/arm-core'
 import L from 'leaflet'
+import highlightIconImage from 'shared/icons/highlight.png'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
-
-import highlightIconImage from '../../../../shared/icons/highlight.png'
 
 let highlightIcon = L.icon({
   iconUrl: highlightIconImage,

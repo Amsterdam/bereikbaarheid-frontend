@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import { MapPanelContent, MapPanelContentProps } from '@amsterdam/arm-core'
 import {
   Button,
@@ -10,13 +12,12 @@ import {
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
-import { RoadObstructionMapFilters } from '../types/roadObstructionMapFilters'
 import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
 import ProhibitorySignsPageProvider from '../../ProhibitorySigns/contexts/PageProvider'
 import dataLinks from '../data/dataLinks'
+import { RoadObstructionMapFilters } from '../types/roadObstructionMapFilters'
 
 const FiltersContainer = styled.div`
   background-color: ${themeColor('tint', 'level2')};

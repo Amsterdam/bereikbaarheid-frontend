@@ -1,8 +1,8 @@
 import { screen, waitFor } from '@testing-library/react'
 
-import { withQueryClient } from '../../../../../test/utils/withQueryClient'
-
 import ParkingSpace from './ParkingSpace'
+
+import { withQueryClient } from '../../../../../test/utils/withQueryClient'
 
 it('renders the parking space info', async () => {
   const parkingSpaceId = '122028486875'

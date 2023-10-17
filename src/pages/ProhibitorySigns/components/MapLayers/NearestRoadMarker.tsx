@@ -1,9 +1,10 @@
-import { Marker, useMapInstance } from '@amsterdam/arm-core'
-import L from 'leaflet'
 import { useEffect, useState } from 'react'
 
+import { Marker, useMapInstance } from '@amsterdam/arm-core'
+import L from 'leaflet'
+import DistanceToDestinationIconImage from 'shared/icons/bootstrap-icon-flag-fill.svg'
+
 import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
-import DistanceToDestinationIconImage from '../../../../shared/icons/bootstrap-icon-flag-fill.svg'
 
 let flagIcon = L.icon({
   iconUrl: DistanceToDestinationIconImage,

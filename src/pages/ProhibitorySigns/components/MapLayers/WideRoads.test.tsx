@@ -1,9 +1,10 @@
 import { screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { withApp } from '../../../../../test/utils/withApp'
 import { generatePath } from 'react-router-dom'
-import { RouteIds, getPathTo } from '../../../../routes'
-import { getGeneratedPath } from '../../../../shared/utils/path'
+import { RouteIds, getPathTo } from 'routes'
+import { getGeneratedPath } from 'shared/utils/path'
+
+import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ProhibitorySignsWideRoads', () => {
   jest.setTimeout(10000)

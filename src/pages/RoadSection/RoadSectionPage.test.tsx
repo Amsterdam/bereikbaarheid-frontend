@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import { generatePath } from 'react-router-dom'
+import { getPathTo } from 'routes'
 
-import { getPathTo } from '../../routes'
 import { withApp } from '../../../test/utils/withApp'
 
 describe('RoadSectionPage', () => {

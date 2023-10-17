@@ -2,8 +2,9 @@ import { Paragraph } from '@amsterdam/asc-ui'
 import endsWith from 'lodash/endsWith'
 import styled from 'styled-components'
 
-import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { ImageContainer, Image } from './DetailFeatureStyles'
+
+import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { trafficSignBackgrounds } from '../TrafficSignMarker/backgrounds'
 
 const imageTextPadding: Record<string, string> = {

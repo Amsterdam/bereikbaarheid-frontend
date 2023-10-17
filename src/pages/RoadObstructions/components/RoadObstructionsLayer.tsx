@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction, useContext, useEffect } from 'react'
+
 import {
   GeoJSON,
   mapPanelConstants,
@@ -5,12 +7,10 @@ import {
   usePanToLatLng,
 } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
+import { getRoadObstructions } from 'api/bereikbaarheid/road-obstructions'
 import { LatLngBounds, LatLngBoundsLiteral, PathOptions } from 'leaflet'
 import type L from 'leaflet'
-import { Dispatch, SetStateAction, useContext, useEffect } from 'react'
 import { useTheme } from 'styled-components'
-
-import { getRoadObstructions } from '../../../api/bereikbaarheid/road-obstructions'
 
 import { useRoadObstructionsMapContext } from '../contexts/MapContext'
 import { roadObstructionsLayerId } from '../contexts/mapLayersReducer'

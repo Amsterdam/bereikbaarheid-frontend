@@ -1,7 +1,7 @@
 import { ReactNode, useReducer } from 'react'
 
-import { mapLayersInitialState, mapLayersReducer } from './mapLayersReducer'
 import { RoadObstructionsMapContext } from './MapContext'
+import { mapLayersInitialState, mapLayersReducer } from './mapLayersReducer'
 
 type Props = {
   children: ReactNode

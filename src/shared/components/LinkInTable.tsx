@@ -4,8 +4,9 @@
 // screens, so this helper resets it to normal size.
 //
 
-import { Link } from '@amsterdam/asc-ui'
 import { ComponentProps, ReactNode } from 'react'
+
+import { Link } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
 const StyledLink = styled(Link)`

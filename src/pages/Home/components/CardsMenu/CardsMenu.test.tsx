@@ -1,7 +1,8 @@
 import { screen } from '@testing-library/react'
+import { RouteIds } from 'routes'
+import { getGeneratedPath } from 'shared/utils/path'
+
 import { withApp } from '../../../../../test/utils/withApp'
-import { getGeneratedPath } from '../../../../shared/utils/path'
-import { RouteIds } from '../../../../routes'
 
 describe('CardsMenu', () => {
   it('has card with external link to Touringcar', async () => {

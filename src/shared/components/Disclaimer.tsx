@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import {
   Alert,
   CompactThemeProvider,
@@ -5,7 +7,6 @@ import {
   Paragraph,
   themeColor,
 } from '@amsterdam/asc-ui'
-import { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
 import { Z_INDEX_HEADER } from '../constants'

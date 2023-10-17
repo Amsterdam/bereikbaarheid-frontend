@@ -1,5 +1,6 @@
-import { MapPanelContext, ViewerContainer, Zoom } from '@amsterdam/arm-core'
 import { useContext } from 'react'
+
+import { MapPanelContext, ViewerContainer, Zoom } from '@amsterdam/arm-core'
 import styled, { css } from 'styled-components'
 
 import RoadObstructionsMapLegend from './MapLegend'

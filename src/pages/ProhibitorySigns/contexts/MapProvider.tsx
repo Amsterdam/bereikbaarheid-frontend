@@ -1,10 +1,10 @@
 import { ReactNode, useReducer, useState } from 'react'
 
-import { TrafficSign } from '../../../api/bereikbaarheid/traffic-signs'
-import { topoBlackWhite } from '../../../shared/map/mapLayers'
+import { TrafficSign } from 'api/bereikbaarheid/traffic-signs'
+import { topoBlackWhite } from 'shared/map/mapLayers'
 
-import { mapLayersInitialState, mapLayersReducer } from './mapLayersReducer'
 import { ProhibitorySignsMapContext } from './MapContext'
+import { mapLayersInitialState, mapLayersReducer } from './mapLayersReducer'
 
 type Props = {
   children: ReactNode

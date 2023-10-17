@@ -1,10 +1,9 @@
 import { Label, Radio, RadioGroup } from '@amsterdam/asc-ui'
-
 import {
   aerialImages,
   topoBlackWhite,
   topoColorLight,
-} from '../../../../shared/map/mapLayers'
+} from 'shared/map/mapLayers'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'

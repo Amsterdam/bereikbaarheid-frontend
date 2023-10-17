@@ -15,24 +15,23 @@ import {
   useForm,
   UseFormRegister,
 } from 'react-hook-form'
+import LoadingSpinner from 'shared/components/LoadingSpinner'
 import { z } from 'zod'
 
-import LoadingSpinner from '../../../../../shared/components/LoadingSpinner'
-
-import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
-import { useRdwInfo } from '../../../hooks/useRdwInfo'
 import ScenarioWizardNav from './../ScenarioWizardNav'
-
 import { RdwInfoFormInnerContainer, RdwInfoFormRow } from './FormStyle'
 import FormRdwInfoIntroText from './IntroText'
+import { useRdwInfoValidationSchema } from './useValidationSchema'
 import FormRdwInfoVehicleAxleWeight from './VehicleAxleWeight'
 import FormRdwInfoVehicleCurbWeight from './VehicleCurbWeight'
 import FormRdwInfoVehicleLength from './VehicleLength'
+import FormRdwInfoVehiclePayload from './VehiclePayload'
 import FormRdwInfoVehicleSummary from './VehicleSummary'
 import FormRdwInfoVehicleTotalWeight from './VehicleTotalWeight'
 import FormRdwInfoVehicleWidth from './VehicleWidth'
-import { useRdwInfoValidationSchema } from './useValidationSchema'
-import FormRdwInfoVehiclePayload from './VehiclePayload'
+
+import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
+import { useRdwInfo } from '../../../hooks/useRdwInfo'
 
 export type FormRdwInfoInputs = {
   vehicleCurbWeight: number

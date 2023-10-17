@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import { MapPanelContent, MapPanelContentProps } from '@amsterdam/arm-core'
 import {
   Button,
@@ -11,13 +13,12 @@ import {
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { Dispatch, SetStateAction } from 'react'
+import { formatISODate } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
-import { useLoadUnloadPageContext } from '../contexts/PageContext'
-import { formatISODate } from '../../../shared/utils/dateTime'
-import { LoadUnloadPageProvider } from '../contexts/PageProvider'
 import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
+import { useLoadUnloadPageContext } from '../contexts/PageContext'
+import { LoadUnloadPageProvider } from '../contexts/PageProvider'
 import dataLinks from '../data/dataLinks'
 
 const DateTimeHeaderRow = styled(Row)`

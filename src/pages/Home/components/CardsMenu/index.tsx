@@ -1,4 +1,6 @@
 import { useMemo } from 'react'
+
+import { ExternalLink } from '@amsterdam/asc-assets'
 import {
   Card,
   CardContent,
@@ -9,13 +11,13 @@ import {
   Link,
   themeColor,
 } from '@amsterdam/asc-ui'
-import { ExternalLink } from '@amsterdam/asc-assets'
-import styled from 'styled-components'
 import {
   MenuOrCardItemWithPath as CardItemWithPath,
   menuOrCardItems as cardItems,
   mapPathsToMenuOrCardItems,
-} from '../../../../shared/utils/menuOrCardItems'
+} from 'shared/utils/menuOrCardItems'
+import styled from 'styled-components'
+
 const CARD_WIDTH_PX = 300
 
 const CardLink = styled(Link)`

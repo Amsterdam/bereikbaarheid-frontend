@@ -1,17 +1,13 @@
-import { useQuery } from '@tanstack/react-query'
 import { useEffect } from 'react'
 
-import {
-  getTrafficSigns,
-  TrafficSign,
-} from '../../../../api/bereikbaarheid/traffic-signs'
+import { useQuery } from '@tanstack/react-query'
+import { getTrafficSigns, TrafficSign } from 'api/bereikbaarheid/traffic-signs'
 
-import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
+import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { useRdwGeneralInfo } from '../../hooks/useRdwGeneralInfo'
 import { useTrafficSignCategories } from '../../hooks/useTrafficSignCategories'
-
 import { MarkerClusterGroup } from '../MarkerClusterGroup'
 import { TrafficSignMarker } from '../TrafficSignMarker'
 
@@ -76,8 +72,9 @@ const ProhibitorySignsTrafficSignsLayer = () => {
     })
   }
 
-  if (trafficSigns.isError && trafficSigns.error instanceof Error)
+  if (trafficSigns.isError && trafficSigns.error instanceof Error) {
     console.error(trafficSigns.error.message)
+  }
 
   if (trafficSigns.isLoading || !trafficSigns.data) return null
 

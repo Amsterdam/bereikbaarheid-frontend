@@ -1,6 +1,8 @@
-import { MenuOrCardItemWithPathOrRoute, mapPathsToMenuOrCardItems } from '.'
-import { RouteIds } from '../../../routes'
+import { RouteIds } from 'routes'
+
 import { getGeneratedPath } from '../path'
+
+import { MenuOrCardItemWithPathOrRoute, mapPathsToMenuOrCardItems } from '.'
 
 const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
   {

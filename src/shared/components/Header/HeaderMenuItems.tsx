@@ -1,8 +1,10 @@
 import { useMemo } from 'react'
+
+import { ExternalLink } from '@amsterdam/asc-assets'
 import { Icon, MenuButton, MenuItem, themeColor } from '@amsterdam/asc-ui'
 import { Link, matchPath, useLocation } from 'react-router-dom'
-import { ExternalLink } from '@amsterdam/asc-assets'
 import styled from 'styled-components'
+
 import {
   MenuOrCardItemWithPath as MenuItemWithPath,
   menuOrCardItems as menuItems,

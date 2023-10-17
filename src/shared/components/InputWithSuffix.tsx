@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
-import styled, { css } from 'styled-components'
+
 import { styles, themeSpacing } from '@amsterdam/asc-ui'
+import styled, { css } from 'styled-components'
 
 const InputGroupWrapper = styled.div`
   display: flex;

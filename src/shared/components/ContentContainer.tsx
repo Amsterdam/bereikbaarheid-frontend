@@ -1,6 +1,7 @@
+import { ReactNode } from 'react'
+
 import { breakpoint, themeSpacing } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
-import { ReactNode } from 'react'
 
 const StyledContainer = styled.div`
   background-color: white;

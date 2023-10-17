@@ -1,17 +1,13 @@
 import { BaseLayer } from '@amsterdam/arm-core'
 import { TileLayer } from '@amsterdam/react-maps'
-
-import { AddressMarker } from '../../../../shared/components/MapLayers/AddressMarker'
+import { AddressMarker } from 'shared/components/MapLayers/AddressMarker'
 import {
   aerialImages,
   linkIds,
   oneWayArrows,
   topoBlackWhite,
   topoColorLight,
-} from '../../../../shared/map/mapLayers'
-
-import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
-import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
+} from 'shared/map/mapLayers'
 
 import ProhibitorySignsLoadUnloadSpacesLayer from './LoadUnloadSpacesLayer'
 import ProhibitorySignsNearestRoadMarker from './NearestRoadMarker'
@@ -21,6 +17,9 @@ import ProhibitorySignsRoadNetwork from './RoadNetwork'
 import ProhibitorySignsTrafficSignHighlightMarker from './TrafficSignHighlightMarker'
 import ProhibitorySignsTrafficSignsLayer from './TrafficSignsLayer'
 import ProhibitorySignsWideRoads from './WideRoads'
+
+import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
+import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 
 function selectedBaseLayer(id: string) {
   return [aerialImages, topoBlackWhite, topoColorLight].find(

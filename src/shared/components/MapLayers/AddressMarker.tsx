@@ -1,8 +1,9 @@
-import { Marker, useMapInstance } from '@amsterdam/arm-core'
 import { useEffect } from 'react'
 
+import { Marker, useMapInstance } from '@amsterdam/arm-core'
+import { Address } from 'types/address'
+
 import { defaultMapOptions } from '../../map/mapDefaults'
-import { Address } from '../../../types/address'
 
 interface AddressMarkerProps {
   address: Address

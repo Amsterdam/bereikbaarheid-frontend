@@ -2,8 +2,8 @@ import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { format } from 'date-fns'
 import { generatePath } from 'react-router-dom'
+import { getPathTo } from 'routes'
 
-import { getPathTo } from '../../routes'
 import { withApp } from '../../../test/utils/withApp'
 
 describe('RoadObstructionsPage', () => {

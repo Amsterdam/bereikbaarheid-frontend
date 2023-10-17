@@ -1,10 +1,13 @@
 import { useState } from 'react'
+
 import { GlobalStyle, ThemeProvider } from '@amsterdam/asc-ui'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 import { ROUTES } from './routes'
 import Disclaimer from './shared/components/Disclaimer'
+
 const isProd = process.env.NODE_ENV === 'production'
 
 const queryClient = new QueryClient({

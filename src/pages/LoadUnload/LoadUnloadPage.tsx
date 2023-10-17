@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 import {
   Map,
   MapPanel,
@@ -7,26 +9,24 @@ import {
 } from '@amsterdam/arm-core'
 import { Modal, useMatchMedia } from '@amsterdam/asc-ui'
 import type L from 'leaflet'
-import { useEffect, useState } from 'react'
-import styled from 'styled-components'
 import 'leaflet/dist/leaflet.css'
-
-import { HEADER_HEIGHT, Z_INDEX_MODAL } from '../../shared/constants'
-import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
-import { MapStyle } from '../../shared/map/mapStyle'
-import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
-import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
-import useAnalytics from '../../shared/hooks/useAnalytics'
+import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
+import Header from 'shared/components/Header'
+import { HEADER_HEIGHT, Z_INDEX_MODAL } from 'shared/constants'
+import useAnalytics from 'shared/hooks/useAnalytics'
+import { useDocumentTitle } from 'shared/hooks/useDocumentTitle'
+import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
+import { MapStyle } from 'shared/map/mapStyle'
+import styled from 'styled-components'
 
 import { LoadUnloadAddressForm } from './components/AddressForm'
 import { LoadUnloadDetailFeature } from './components/DetailFeature'
 import { LoadUnloadMapLayers } from './components/MapLayers'
+import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
 import { ModalDateTime } from './components/ModalDateTime'
 import { LoadUnloadViewerContainer } from './components/ViewerContainer'
-import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
 import { LoadUnloadMapProvider } from './contexts/MapProvider'
 import { LoadUnloadPageProvider } from './contexts/PageProvider'
-import Header from '../../shared/components/Header'
 
 const { SnapPoint } = mapPanelConstants
 

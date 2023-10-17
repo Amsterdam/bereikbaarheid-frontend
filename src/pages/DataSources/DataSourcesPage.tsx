@@ -1,17 +1,19 @@
 import { useEffect } from 'react'
-import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 
-import DataSourcesBlocks from './components/DataSourcesBlocks'
-import styled from 'styled-components'
 import { themeSpacing } from '@amsterdam/asc-ui'
 import { format } from 'date-fns'
-import useUrlTrafficSigns from '../ProhibitorySigns/hooks/useUrlTrafficSigns'
-import { DUMMY_VEHICLE } from '../ProhibitorySigns/hooks/useRdwGeneralInfo'
+import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
+import Header from 'shared/components/Header'
+import useAnalytics from 'shared/hooks/useAnalytics'
+import styled from 'styled-components'
+
+import DataSourcesBlocks from './components/DataSourcesBlocks'
+
 import loadUnloadLinks from '../LoadUnload/data/dataLinks'
 import { trafficSignsLink } from '../ProhibitorySigns/data/dataLinks'
+import { DUMMY_VEHICLE } from '../ProhibitorySigns/hooks/useRdwGeneralInfo'
+import useUrlTrafficSigns from '../ProhibitorySigns/hooks/useUrlTrafficSigns'
 import obstructionsLinks from '../RoadObstructions/data/dataLinks'
-import Header from '../../shared/components/Header'
-import useAnalytics from '../../shared/hooks/useAnalytics'
 
 const INITIAL_DATE = format(new Date(), 'yyyy-MM-dd')
 

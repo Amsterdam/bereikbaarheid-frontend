@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
-import { useSearchAllDataSets } from '../../../shared/hooks/useSearchAllDataSets'
-import { useParkingSpaceInfo } from '../../../shared/hooks/useParkingSpaceInfo'
+import { useParkingSpaceInfo } from 'shared/hooks/useParkingSpaceInfo'
+import { useSearchAllDataSets } from 'shared/hooks/useSearchAllDataSets'
 
 import { DetailFeatureActionType } from '../contexts/detailFeatureReducer'
 import { useLoadUnloadMapContext } from '../contexts/MapContext'
