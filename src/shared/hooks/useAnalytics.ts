@@ -28,7 +28,9 @@ function useAnalytics() {
 
   const trackPageVisit = useCallback(
     (message?: string) => {
-      const path = window?.location.href.split(/[?#]/)[0]
+      let path = window?.location.href.split(/[?#]/)[0]
+
+      if (!path.endsWith('/')) path = `${path}/`
 
       if (!PiwikInstance || !path) return
       if (prevLocation === path) return
