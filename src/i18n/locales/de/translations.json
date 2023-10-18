@@ -1,0 +1,31 @@
+{
+  "appTitle": "Erreichbarkeit",
+  "input": "Eingang",
+  "dataSource": "Quelldaten",
+  "on": "auf",
+  "_error": {
+    "somethingWentWrong": "Something went wrong",
+    "unfortunately": "Bedauerlicherweise",
+    "pageCouldNotBeFound": "The page could not be found."
+  },
+  "_pageLicencePlate": {
+    "title": "Erreichbarkeit mit Kennzeichen",
+    "titleShort": "Mit Kennzeichen"
+  },
+  "_pageRoadObstructions": {
+    "title": "Straßenbehinderungen"
+  },
+  "_pageLoadUnload": {
+    "title": "Laden und entladen"
+  },
+  "_pageTouringCar": {
+    "title": "Tourenwagen (Tour Buzz)",
+    "titleShort": "Tourenwagen"
+  },
+  "_pageData": {
+    "title": "Datenquellen"
+  },
+  "_pageContact": {
+    "title": "Kontakt und Erklärung"
+  }
+}

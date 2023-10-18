@@ -1,0 +1,31 @@
+{
+  "appTitle": "Reachability",
+  "input": "Input",
+  "dataSource": "Data source",
+  "on": "on",
+  "_error": {
+    "somethingWentWrong": "Something went wrong",
+    "unfortunately": "Unfortunately",
+    "pageCouldNotBeFound": "The page could not be found."
+  },
+  "_pageLicencePlate": {
+    "title": "Reachability by licence plate",
+    "titleShort": "By licence plate"
+  },
+  "_pageRoadObstructions": {
+    "title": "Road obstructions"
+  },
+  "_pageLoadUnload": {
+    "title": "Load and unload"
+  },
+  "_pageTouringCar": {
+    "title": "Coach (Tour Buzz)",
+    "titleShort": "Coach"
+  },
+  "_pageData": {
+    "title": "Data sources"
+  },
+  "_pageContact": {
+    "title": "Contact and explanation"
+  }
+}

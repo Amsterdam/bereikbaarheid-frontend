@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './i18n'
 import ReactDOM from 'react-dom'
 
 import App, { isProd } from './App'
