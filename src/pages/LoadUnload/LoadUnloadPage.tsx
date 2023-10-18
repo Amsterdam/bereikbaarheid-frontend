@@ -8,7 +8,6 @@ import {
   MapPanelProvider,
 } from '@amsterdam/arm-core'
 import { Modal, useMatchMedia } from '@amsterdam/asc-ui'
-import { t } from 'i18next'
 import type L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { useTranslation } from 'react-i18next'

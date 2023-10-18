@@ -13,7 +13,6 @@ import {
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { t } from 'i18next'
 import { useTranslation } from 'react-i18next'
 import { formatISODate } from 'shared/utils/dateTime'
 import styled from 'styled-components'
