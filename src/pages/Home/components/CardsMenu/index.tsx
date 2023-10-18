@@ -11,6 +11,7 @@ import {
   Link,
   themeColor,
 } from '@amsterdam/asc-ui'
+import { useTranslation } from 'react-i18next'
 import {
   MenuOrCardItemWithPath as CardItemWithPath,
   menuOrCardItems as cardItems,
@@ -69,6 +70,8 @@ const StyledImage = styled(Image)`
 `
 
 function CardsMenu() {
+  const { t } = useTranslation()
+
   const cardItemsWithPaths = useMemo<CardItemWithPath[]>(() => {
     return mapPathsToMenuOrCardItems(cardItems, { preferShortTitles: false })
   }, [])
@@ -77,7 +80,7 @@ function CardsMenu() {
     <>
       {cardItemsWithPaths.map(card => (
         <CardLink
-          key={card.title}
+          key={t(card.title)}
           href={card.path}
           target={card.target}
           data-testid={card.target && 'card-with-external-link'}
@@ -89,7 +92,7 @@ function CardsMenu() {
                 <source srcSet={card.image} type="image/webp" />
                 <StyledImage
                   src={card.imageFallback}
-                  alt={card.title}
+                  alt={t(card.title)}
                   data-testid={card.image && 'card-with-image'}
                   width="300"
                   height="200"
@@ -99,7 +102,7 @@ function CardsMenu() {
 
             <StyledCardContent>
               <StyledHeading as="h4">
-                {card.title}
+                {t(card.title)}
                 {card.target === '_blank' ? (
                   <Icon>
                     <ExternalLink />

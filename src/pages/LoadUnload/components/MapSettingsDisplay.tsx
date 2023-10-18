@@ -13,6 +13,8 @@ import {
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import { t } from 'i18next'
+import { useTranslation } from 'react-i18next'
 import { formatISODate } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
@@ -49,6 +51,7 @@ export const LoadUnloadMapSettingsDisplay = ({
   setShowDateTimeModal,
   ...otherProps
 }: MapSettingsDisplayProps) => {
+  const { t } = useTranslation()
   const { address, dateTime } = useLoadUnloadPageContext()
   const showAddressForm = () => setShowAddressForm(true)
   const showDateTimeModal = () => setShowDateTimeModal(true)
@@ -56,7 +59,7 @@ export const LoadUnloadMapSettingsDisplay = ({
   return (
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label="Voer adres en moment in of bekijk dataverantwoording">
-        <Tab id="input" label="Invoer">
+        <Tab id="input" label={t('input')}>
           <CompactThemeProvider>
             <Row halign="space-between" hasMargin={false}>
               <Column span={12}>
@@ -135,7 +138,7 @@ export const LoadUnloadMapSettingsDisplay = ({
           </CompactThemeProvider>
         </Tab>
 
-        <Tab id="data" label="Brondata">
+        <Tab id="data" label={t('dataSource')}>
           <LoadUnloadPageProvider>
             <DataSourcesAside dataLinks={dataLinks} />
           </LoadUnloadPageProvider>

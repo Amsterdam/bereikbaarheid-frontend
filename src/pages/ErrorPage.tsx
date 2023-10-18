@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 
 import { Column, Heading, Paragraph, Row } from '@amsterdam/asc-ui'
+import { useTranslation } from 'react-i18next'
 import { useRouteError } from 'react-router-dom'
 import Header from 'shared/components/Header'
 import useAnalytics from 'shared/hooks/useAnalytics'
@@ -20,12 +21,14 @@ const StyledColumn = styled(Column)`
 `
 
 const ErrorPage = () => {
+  const { t } = useTranslation()
+
   let error = useRouteError()
 
   if (!error) {
     error = new Response('Not Found', {
       status: 404,
-      statusText: 'De pagina kon niet worden gevonden.',
+      statusText: t('_error.pageCouldNotBeFound'),
     })
   }
 
@@ -38,12 +41,12 @@ const ErrorPage = () => {
 
   return (
     <>
-      <Header title="Er ging iets fout" />
+      <Header title={t('_error.somethingWentWrong')} />
 
       <Container data-testid="error-page">
         <Row>
           <Column span={12}>
-            <Heading as="h1">Helaas</Heading>
+            <Heading as="h1">{t('_error.unfortunately')}</Heading>
           </Column>
         </Row>
 
@@ -51,7 +54,7 @@ const ErrorPage = () => {
           <StyledColumn span={12}>
             {error instanceof Response && error.status === 404 && (
               <Paragraph>
-                {error.statusText ?? 'De pagina kon niet worden gevonden.'}
+                {error.statusText ?? t('_error.pageCouldNotBeFound')}
               </Paragraph>
             )}
 
@@ -60,7 +63,7 @@ const ErrorPage = () => {
             )}
 
             {!(error instanceof Response) && (
-              <Paragraph>Er ging iets fout.</Paragraph>
+              <Paragraph>{t('_error.somethingWentWrong')}.</Paragraph>
             )}
           </StyledColumn>
         </Row>

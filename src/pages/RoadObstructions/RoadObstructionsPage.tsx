@@ -13,6 +13,7 @@ import { TileLayer } from '@amsterdam/react-maps'
 import { format, parse } from 'date-fns'
 import type L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import { useTranslation } from 'react-i18next'
 import { useSearchParams } from 'react-router-dom'
 import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
 import Header from 'shared/components/Header'
@@ -52,6 +53,8 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
 `
 
 const RoadObstructionsPage = () => {
+  const { t } = useTranslation()
+
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [detailFeature, setDetailFeature] = useState<DetailFeature | undefined>(
     undefined
@@ -93,7 +96,11 @@ const RoadObstructionsPage = () => {
   return (
     <>
       <PageWrapper>
-        <Header title={`Stremmingen op ${dateFormatted}`} />
+        <Header
+          title={`${t('_pageRoadObstructions.title')} ${t(
+            'on'
+          )} ${dateFormatted}`}
+        />
 
         <MainContent data-testid="road-obstructions-page">
           <MapStyle />

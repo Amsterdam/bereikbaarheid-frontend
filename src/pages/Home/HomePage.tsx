@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import CardsMenu, { CARD_WIDTH_PX } from './components/CardsMenu'
@@ -24,12 +25,14 @@ const Grid = styled(MainContent)`
 `
 
 function HomePage() {
+  const { t } = useTranslation()
+
   const { trackPageVisit } = useAnalytics()
   useEffect(trackPageVisit)
 
   return (
     <PageWrapper>
-      <Header title="Bereikbaarheid" />
+      <Header title={t('appTitle')} />
 
       <Grid data-testid="home-page">
         <CardsMenu />

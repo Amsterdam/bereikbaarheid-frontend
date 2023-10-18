@@ -8,8 +8,10 @@ import {
   MapPanelProvider,
 } from '@amsterdam/arm-core'
 import { Modal, useMatchMedia } from '@amsterdam/asc-ui'
+import { t } from 'i18next'
 import type L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import { useTranslation } from 'react-i18next'
 import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
 import Header from 'shared/components/Header'
 import { HEADER_HEIGHT, Z_INDEX_MODAL } from 'shared/constants'
@@ -41,6 +43,8 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
 `
 
 const LoadUnloadPage = () => {
+  const { t } = useTranslation()
+
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
 
@@ -63,7 +67,7 @@ const LoadUnloadPage = () => {
   return (
     <LoadUnloadPageProvider>
       <PageWrapper>
-        <Header title="Laden en lossen" />
+        <Header title={t('_pageLoadUnload.title')} />
 
         <MainContent data-testid="load-unload-page">
           <MapStyle />
