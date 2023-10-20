@@ -91,4 +91,5 @@ const ContactPage = () => {
   )
 }
 
+export { QUESTION_RECIPIENT, QUESTION_SUBJECT, QUESTION_BODY }
 export default ContactPage
