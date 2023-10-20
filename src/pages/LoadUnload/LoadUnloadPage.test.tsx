@@ -12,9 +12,9 @@ describe('LoadUnloadPage', () => {
 
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('LOAD_UNLOAD_PAGE'))
-    const view = await withApp(pathToPage)
+    const page = await withApp(pathToPage)
 
-    expect(view).toMatchSnapshot()
+    expect(page).toMatchSnapshot()
   })
 
   it('re-categorizes the map on changing the date and time', async () => {

@@ -9,7 +9,7 @@ describe('routes', () => {
   it('redirects /verbodsborden to the /op-kenteken', async () => {
     const pathToPage = getGeneratedPath(RouteIds.PROHIBITORY_SIGNS_PAGE)
 
-    await withApp(pathToPage)
+    withApp(pathToPage)
 
     expect(
       await screen.findByTestId('prohibitory-signs-page')

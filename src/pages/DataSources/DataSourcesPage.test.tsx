@@ -7,8 +7,8 @@ describe('DataSourcesPage', () => {
 
   it('renders correctly', async () => {
     const pathToPage = getGeneratedPath(RouteIds.DATA)
-    const view = await withApp(pathToPage)
+    const page = await withApp(pathToPage)
 
-    expect(view).toMatchSnapshot()
+    expect(page).toMatchSnapshot()
   })
 })

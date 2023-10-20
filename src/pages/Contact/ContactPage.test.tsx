@@ -5,8 +5,8 @@ import { getGeneratedPath } from '../../shared/utils/path'
 describe('ContactPage', () => {
   it('renders correctly', async () => {
     const pathToPage = getGeneratedPath(RouteIds.CONTACT)
-    const view = await withApp(pathToPage)
+    const page = await withApp(pathToPage)
 
-    expect(view).toMatchSnapshot()
+    expect(page).toMatchSnapshot()
   })
 })
