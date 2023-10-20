@@ -1,8 +1,11 @@
 {
   "appTitle": "Erreichbarkeit",
-  "input": "Eingang",
-  "dataSource": "Quelldaten",
-  "on": "auf",
+  "_generic": {
+    "_mapPanel": {
+      "dataSource": "Quelldaten",
+      "input": "Eingang"
+    }
+  },
   "_error": {
     "somethingWentWrong": "Something went wrong",
     "unfortunately": "Bedauerlicherweise",
@@ -13,7 +16,8 @@
     "titleShort": "Mit Kennzeichen"
   },
   "_pageRoadObstructions": {
-    "title": "Straßenbehinderungen"
+    "title": "Straßenbehinderungen",
+    "roadObstructionsOn": "Straßenbehinderungen auf"
   },
   "_pageLoadUnload": {
     "title": "Laden und entladen"

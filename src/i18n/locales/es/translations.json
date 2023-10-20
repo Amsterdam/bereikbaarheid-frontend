@@ -1,8 +1,11 @@
 {
   "appTitle": "Accesibilidad",
-  "input": "Aporte",
-  "dataSource": "Fuente de datos",
-  "on": "en",
+  "_generic": {
+    "_mapPanel": {
+      "dataSource": "Fuente de datos",
+      "input": "Aporte"
+    }
+  },
   "_error": {
     "somethingWentWrong": "Something went wrong",
     "unfortunately": "Desafortunadamente",
@@ -13,7 +16,8 @@
     "titleShort": "Con matrícula"
   },
   "_pageRoadObstructions": {
-    "title": "Obstrucciones en la carretera"
+    "title": "Obstrucciones en la carretera",
+    "roadObstructionsOn": "Obstrucciones en"
   },
   "_pageLoadUnload": {
     "title": "Cargar y descargar"
