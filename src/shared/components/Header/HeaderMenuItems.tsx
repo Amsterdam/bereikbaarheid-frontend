@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 
 import { ExternalLink } from '@amsterdam/asc-assets'
 import { Icon, MenuButton, MenuItem, themeColor } from '@amsterdam/asc-ui'
+import { useTranslation } from 'react-i18next'
 import { Link, matchPath, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
 
@@ -13,6 +14,7 @@ import {
 
 function HeaderMenuItem({ item }: { item: MenuItemWithPath }) {
   const location = useLocation()
+  const { t } = useTranslation()
 
   return (
     <MenuItem key={item.path}>
@@ -27,14 +29,14 @@ function HeaderMenuItem({ item }: { item: MenuItemWithPath }) {
             </Icon>
           )
         }
-        title={`${item.title}${
+        title={`${t(item.title)}${
           item.description ? `- ${item.description}` : ''
         }`}
         // @ts-ignore
         active={matchPath(location.pathname, item.path) ? 'true' : undefined}
         style={item.secondary ? { fontWeight: 'normal' } : {}}
       >
-        {item.title}
+        {t(item.title)}
       </MenuButton>
     </MenuItem>
   )

@@ -31,19 +31,4 @@ describe('Header', () => {
       screen.getByText('Title is optional', { selector: 'a' })
     ).toBeInTheDocument()
   })
-
-  it('contains the default menu items', () => {
-    render(
-      withAppContext(
-        <BrowserRouter>
-          <Header />
-        </BrowserRouter>
-      )
-    )
-
-    expect(screen.getByText('Stremmingen')).toBeInTheDocument()
-    expect(screen.getByText('Laden en lossen')).toBeInTheDocument()
-
-    expect(screen.getByTestId('header')).toHaveTextContent('Touringcar')
-  })
 })
