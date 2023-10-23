@@ -1,8 +1,11 @@
 {
   "appTitle": "Reachability",
-  "input": "Input",
-  "dataSource": "Data source",
-  "on": "on",
+  "_generic": {
+    "_mapPanel": {
+      "dataSource": "Data source",
+      "input": "Input"
+    }
+  },
   "_error": {
     "somethingWentWrong": "Something went wrong",
     "unfortunately": "Unfortunately",
@@ -13,7 +16,8 @@
     "titleShort": "By licence plate"
   },
   "_pageRoadObstructions": {
-    "title": "Road obstructions"
+    "title": "Road obstructions",
+    "roadObstructionsOn": "Road obstructions on"
   },
   "_pageLoadUnload": {
     "title": "Load and unload"

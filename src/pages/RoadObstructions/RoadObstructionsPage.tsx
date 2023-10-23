@@ -97,8 +97,8 @@ const RoadObstructionsPage = () => {
     <>
       <PageWrapper>
         <Header
-          title={`${t('_pageRoadObstructions.title')} ${t(
-            'on'
+          title={`${t(
+            '_pageRoadObstructions.roadObstructionsOn'
           )} ${dateFormatted}`}
         />
 

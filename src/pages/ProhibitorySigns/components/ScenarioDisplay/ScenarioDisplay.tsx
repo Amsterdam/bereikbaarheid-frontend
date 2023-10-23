@@ -54,8 +54,8 @@ const ScenarioDisplay = ({ ...otherProps }: MapPanelContentProps) => {
   return (
     <MapPanelContent data-testid="scenario-display" {...otherProps}>
       {!showScenarioWizard && (
-        <Tabs label="Voer voertuiggegevens in of bekijk dataverantwoording">
-          <Tab id="input" label={t('input')}>
+        <Tabs label={t('_pageLicencePlate._mapPanel.label')}>
+          <Tab id="input" label={t('_generic._mapPanel.input')}>
             <Spacer />
 
             <ScenarioDisplayStartAndAddress />
@@ -65,7 +65,7 @@ const ScenarioDisplay = ({ ...otherProps }: MapPanelContentProps) => {
             <ScenarioDisplayResult />
           </Tab>
 
-          <Tab id="data" label={t('dataSource')}>
+          <Tab id="data" label={t('_generic._mapPanel.dataSource')}>
             <DataSourcesAside dataLinks={dataLinks} />
           </Tab>
         </Tabs>

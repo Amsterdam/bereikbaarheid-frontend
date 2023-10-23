@@ -1,8 +1,11 @@
 {
   "appTitle": "Bereikbaarheid",
-  "input": "Invoer",
-  "dataSource": "Brondata",
-  "on": "op",
+  "_generic": {
+    "_mapPanel": {
+      "dataSource": "Brondata",
+      "input": "Invoer"
+    }
+  },
   "_error": {
     "somethingWentWrong": "Er ging iets fout",
     "unfortunately": "Helaas",
@@ -10,13 +13,23 @@
   },
   "_pageLicencePlate": {
     "title": "Bereikbaarheid op kenteken",
-    "titleShort": "Op kenteken"
+    "titleShort": "Op kenteken",
+    "_mapPanel": {
+      "label": "Voer voertuiggegevens in of bekijk dataverantwoording"
+    }
   },
   "_pageRoadObstructions": {
-    "title": "Stremmingen"
+    "title": "Stremmingen",
+    "roadObstructionsOn": "Stremmingen op",
+    "_mapPanel": {
+      "label": "Voer datum en tijd in of bekijk dataverantwoording"
+    }
   },
   "_pageLoadUnload": {
-    "title": "Laden en lossen"
+    "title": "Laden en lossen",
+    "_mapPanel": {
+      "label": "Voer adres en moment in of bekijk dataverantwoording"
+    }
   },
   "_pageTouringCar": {
     "title": "Touringcar (Tour Buzz)",

@@ -1,3 +1,4 @@
+import { isProd } from 'App'
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
@@ -29,7 +30,7 @@ i18n.use(initReactI18next).init({
   }, {}),
   ns: ['translations'],
   defaultNS: 'translations',
-  // debug: true,
+  debug: !isProd,
   interpolation: {
     escapeValue: false,
   },

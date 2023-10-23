@@ -57,8 +57,8 @@ export const LoadUnloadMapSettingsDisplay = ({
 
   return (
     <MapPanelContent data-testid="map-settings" {...otherProps}>
-      <Tabs label="Voer adres en moment in of bekijk dataverantwoording">
-        <Tab id="input" label={t('input')}>
+      <Tabs label={t('_pageLoadUnload._mapPanel.label')}>
+        <Tab id="input" label={t('_generic._mapPanel.input')}>
           <CompactThemeProvider>
             <Row halign="space-between" hasMargin={false}>
               <Column span={12}>
@@ -137,7 +137,7 @@ export const LoadUnloadMapSettingsDisplay = ({
           </CompactThemeProvider>
         </Tab>
 
-        <Tab id="data" label={t('dataSource')}>
+        <Tab id="data" label={t('_generic._mapPanel.dataSource')}>
           <LoadUnloadPageProvider>
             <DataSourcesAside dataLinks={dataLinks} />
           </LoadUnloadPageProvider>
