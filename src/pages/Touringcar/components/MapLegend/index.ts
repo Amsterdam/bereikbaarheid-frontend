@@ -1,0 +1,1 @@
+export { TouringcarParkingSpacesMapLegend } from './MapLegend'

@@ -1,3 +1,4 @@
+import TouringcarPage from 'pages/Touringcar/TouringcarPage'
 import { Navigate, RouteObject } from 'react-router-dom'
 
 import ContactPage from './pages/Contact/ContactPage'
@@ -15,6 +16,7 @@ enum RouteIds {
   PROHIBITORY_SIGNS_PAGE = 'PROHIBITORY_SIGNS_PAGE',
   ROAD_OBSTRUCTIONS_PAGE = 'ROAD_OBSTRUCTIONS_PAGE',
   LOAD_UNLOAD_PAGE = 'LOAD_UNLOAD_PAGE',
+  TOURINGCAR_PAGE = 'TOURINGCAR_PAGE',
   ROAD_SECTION_DETAIL_PAGE = 'ROAD_SECTION_DETAIL_PAGE',
   DATA = 'DATA',
   CONTACT = 'CONTACT',
@@ -48,6 +50,11 @@ const ROUTES: RouteObjectWithPredefinedIds[] = [
     path: '/laden-lossen',
     id: RouteIds.LOAD_UNLOAD_PAGE,
     element: <LoadUnloadPage />,
+  },
+  {
+    path: '/touringcar',
+    id: RouteIds.TOURINGCAR_PAGE,
+    element: <TouringcarPage />,
   },
   {
     path: '/wegvak/:id',
