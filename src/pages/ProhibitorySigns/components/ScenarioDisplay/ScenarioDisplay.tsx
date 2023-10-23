@@ -12,6 +12,7 @@ import {
   DataSourcesAside,
 } from 'pages/DataSources/components/DataSourcesBlocks'
 import { useProhibitorySignsPageContext } from 'pages/ProhibitorySigns/contexts/PageContext'
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import ScenarioDisplayRdwInfo from './RdwInfo'
@@ -26,6 +27,7 @@ const Spacer = styled.div`
 `
 
 const ScenarioDisplay = ({ ...otherProps }: MapPanelContentProps) => {
+  const { t } = useTranslation()
   const { showScenarioWizard, vehicle } = useProhibitorySignsPageContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
 
@@ -52,8 +54,8 @@ const ScenarioDisplay = ({ ...otherProps }: MapPanelContentProps) => {
   return (
     <MapPanelContent data-testid="scenario-display" {...otherProps}>
       {!showScenarioWizard && (
-        <Tabs label="Voer voertuiggegevens in of bekijk dataverantwoording">
-          <Tab id="input" label="Invoer">
+        <Tabs label={t('_pageLicencePlate._mapPanel.label')}>
+          <Tab id="input" label={t('_generic._mapPanel.input')}>
             <Spacer />
 
             <ScenarioDisplayStartAndAddress />
@@ -63,7 +65,7 @@ const ScenarioDisplay = ({ ...otherProps }: MapPanelContentProps) => {
             <ScenarioDisplayResult />
           </Tab>
 
-          <Tab id="data" label="Brondata">
+          <Tab id="data" label={t('_generic._mapPanel.dataSource')}>
             <DataSourcesAside dataLinks={dataLinks} />
           </Tab>
         </Tabs>

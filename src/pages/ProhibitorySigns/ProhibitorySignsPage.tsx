@@ -9,6 +9,7 @@ import {
 } from '@amsterdam/arm-core'
 import { useMatchMedia } from '@amsterdam/asc-ui'
 import L from 'leaflet'
+import { useTranslation } from 'react-i18next'
 import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
 import Header from 'shared/components/Header'
 import { HEADER_HEIGHT } from 'shared/constants'
@@ -39,6 +40,8 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
 `
 
 const ProhibitorySignsPage = () => {
+  const { t } = useTranslation()
+
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
 
@@ -56,7 +59,7 @@ const ProhibitorySignsPage = () => {
   return (
     <PageWrapper>
       <ProhibitorySignsPageProvider>
-        <Header title="Bereikbaarheid op kenteken" />
+        <Header title={t('_pageLicencePlate.title')} />
 
         <MainContent data-testid="prohibitory-signs-page">
           <MapStyle />

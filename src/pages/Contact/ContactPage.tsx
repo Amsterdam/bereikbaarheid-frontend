@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 
 import { Button, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
@@ -38,12 +39,14 @@ const ContentBlock = styled.div`
 `
 
 const ContactPage = () => {
+  const { t } = useTranslation()
+
   const { trackPageVisit } = useAnalytics()
   useEffect(trackPageVisit)
 
   return (
     <PageWrapper>
-      <Header title="Contact en uitleg" />
+      <Header title={t('_pageContact.title')} />
 
       <StyledMainContent>
         <ContentBlock>
