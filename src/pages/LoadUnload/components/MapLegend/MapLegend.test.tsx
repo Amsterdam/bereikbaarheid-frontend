@@ -1,5 +1,6 @@
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
+import { act } from 'react-dom/test-utils'
 import { generatePath } from 'react-router-dom'
 import { getPathTo } from 'routes'
 
@@ -38,11 +39,13 @@ describe('MapLegend', () => {
     // wait until page is rendered
     await screen.findAllByText(/laden en lossen/i)
 
-    // zoom in 3x - map starts at zoomlevel 13 and layer is visible from 16
     const buttonZoomIn = screen.getByTitle('Inzoomen')
-    await user.click(buttonZoomIn)
-    await user.click(buttonZoomIn)
-    await user.click(buttonZoomIn)
+    await act(async () => {
+      // zoom in 3x - map starts at zoomlevel 13 and layer is visible from 16
+      await user.click(buttonZoomIn)
+      await user.click(buttonZoomIn)
+      await user.click(buttonZoomIn)
+    })
 
     expect(screen.getByLabelText(/laad- en losplekken/i)).toBeEnabled()
   })
