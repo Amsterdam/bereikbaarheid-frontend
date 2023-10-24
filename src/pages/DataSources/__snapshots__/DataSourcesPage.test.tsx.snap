@@ -209,14 +209,14 @@ Object {
           </header>
         </div>
         <main
-          class="sc-bfhvDw sc-bOhtcR cMHqqc iKzsJs"
+          class="sc-bfhvDw sc-bddgXz cMHqqc fWRwnL"
           data-testid="data-page"
         >
           <div
-            class="sc-imwsjW sc-eXsaLi gphTiw jlurAH"
+            class="sc-imwsjW sc-bOQTJJ gphTiw jONncd"
           >
             <h2
-              class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-gEkIjz iyTDvP"
+              class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-eXsaLi bSKoUV"
             >
               Getoonde data op de kaart
             </h2>
@@ -226,7 +226,7 @@ Object {
               Bekijk en download de getoonde data op de kaart via de volgende links:
             </p>
             <ul
-              class="sc-kdBSHD cHWVcp sc-hoLEA hOCpuV"
+              class="sc-kdBSHD cHWVcp sc-gEkIjz lmfjbS"
             >
               <li
                 class="sc-lcIPJg ddQxr"
@@ -266,7 +266,7 @@ Object {
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="v1/road-obstructions/?date=2023-10-23&timeFrom=00:00&timeTo=23:59"
+                  href="v1/road-obstructions/?date=2023-10-25&timeFrom=00:00&timeTo=23:59"
                   target="_blank"
                 >
                   <span
@@ -398,10 +398,10 @@ Object {
             </p>
           </div>
           <div
-            class="sc-imwsjW sc-eXsaLi gphTiw jlurAH"
+            class="sc-imwsjW sc-bOQTJJ gphTiw jONncd"
           >
             <h2
-              class="sc-gEkIjz iyTDvP"
+              class="sc-eXsaLi bSKoUV"
             >
               Amsterdams Wegenbestand
             </h2>
@@ -422,10 +422,10 @@ Object {
             </p>
           </div>
           <div
-            class="sc-imwsjW sc-eXsaLi gphTiw jlurAH"
+            class="sc-imwsjW sc-bOQTJJ gphTiw jONncd"
           >
             <h2
-              class="sc-gEkIjz iyTDvP"
+              class="sc-eXsaLi bSKoUV"
             >
               Vragen?
             </h2>
@@ -653,14 +653,14 @@ Object {
         </header>
       </div>
       <main
-        class="sc-bfhvDw sc-bOhtcR cMHqqc iKzsJs"
+        class="sc-bfhvDw sc-bddgXz cMHqqc fWRwnL"
         data-testid="data-page"
       >
         <div
-          class="sc-imwsjW sc-eXsaLi gphTiw jlurAH"
+          class="sc-imwsjW sc-bOQTJJ gphTiw jONncd"
         >
           <h2
-            class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-gEkIjz iyTDvP"
+            class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-eXsaLi bSKoUV"
           >
             Getoonde data op de kaart
           </h2>
@@ -670,7 +670,7 @@ Object {
             Bekijk en download de getoonde data op de kaart via de volgende links:
           </p>
           <ul
-            class="sc-kdBSHD cHWVcp sc-hoLEA hOCpuV"
+            class="sc-kdBSHD cHWVcp sc-gEkIjz lmfjbS"
           >
             <li
               class="sc-lcIPJg ddQxr"
@@ -710,7 +710,7 @@ Object {
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="v1/road-obstructions/?date=2023-10-23&timeFrom=00:00&timeTo=23:59"
+                href="v1/road-obstructions/?date=2023-10-25&timeFrom=00:00&timeTo=23:59"
                 target="_blank"
               >
                 <span
@@ -842,10 +842,10 @@ Object {
           </p>
         </div>
         <div
-          class="sc-imwsjW sc-eXsaLi gphTiw jlurAH"
+          class="sc-imwsjW sc-bOQTJJ gphTiw jONncd"
         >
           <h2
-            class="sc-gEkIjz iyTDvP"
+            class="sc-eXsaLi bSKoUV"
           >
             Amsterdams Wegenbestand
           </h2>
@@ -866,10 +866,10 @@ Object {
           </p>
         </div>
         <div
-          class="sc-imwsjW sc-eXsaLi gphTiw jlurAH"
+          class="sc-imwsjW sc-bOQTJJ gphTiw jONncd"
         >
           <h2
-            class="sc-gEkIjz iyTDvP"
+            class="sc-eXsaLi bSKoUV"
           >
             Vragen?
           </h2>

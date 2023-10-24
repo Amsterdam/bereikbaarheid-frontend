@@ -121,7 +121,7 @@ Object {
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="https://tourbuzz.amsterdam.nl/"
                     target="_blank"
-                    title="_pageTouringCar.titleShort"
+                    title="_linkTourBuzz.titleShort"
                     variant="blank"
                   >
                     <span
@@ -130,7 +130,7 @@ Object {
                       <span
                         class="sc-eZYNyq"
                       >
-                        _pageTouringCar.titleShort
+                        _linkTourBuzz.titleShort
                       </span>
                     </span>
                     <span
@@ -208,19 +208,19 @@ Object {
           </header>
         </div>
         <main
-          class="sc-bfhvDw sc-eHsDsR cMHqqc gBUgdz"
+          class="sc-bfhvDw sc-bvgPty cMHqqc fXgSTC"
           data-testid="home-page"
         >
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             href="/op-kenteken"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -232,7 +232,7 @@ Object {
                     />
                     <img
                       alt="_pageLicencePlate.title"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       data-testid="card-with-image"
                       height="200"
                       src="bereikbaarheid-op-kenteken.jpg"
@@ -242,10 +242,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   _pageLicencePlate.title
                 </h4>
@@ -253,15 +253,15 @@ Object {
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             href="/stremmingen"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -273,7 +273,7 @@ Object {
                     />
                     <img
                       alt="_pageRoadObstructions.title"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       data-testid="card-with-image"
                       height="200"
                       src="stremmingen.jpg"
@@ -283,10 +283,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   _pageRoadObstructions.title
                 </h4>
@@ -294,15 +294,15 @@ Object {
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             href="/laden-lossen"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -314,7 +314,7 @@ Object {
                     />
                     <img
                       alt="_pageLoadUnload.title"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       data-testid="card-with-image"
                       height="200"
                       src="laden-en-lossen.jpg"
@@ -324,10 +324,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   _pageLoadUnload.title
                 </h4>
@@ -335,17 +335,17 @@ Object {
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             data-testid="card-with-external-link"
             href="https://tourbuzz.amsterdam.nl/"
             tabindex="0"
             target="_blank"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -356,8 +356,8 @@ Object {
                       type="image/webp"
                     />
                     <img
-                      alt="_pageTouringCar.title"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      alt="_linkTourBuzz.title"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       data-testid="card-with-image"
                       height="200"
                       src="tour-buzz.jpg"
@@ -367,12 +367,12 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
-                  _pageTouringCar.title
+                  _linkTourBuzz.title
                   <span
                     class="sc-aXZVg cycjMX"
                   >
@@ -393,15 +393,15 @@ Object {
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             href="/data"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -413,7 +413,7 @@ Object {
                     />
                     <img
                       alt="_pageData.title"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       data-testid="card-with-image"
                       height="200"
                       src="json.jpg"
@@ -423,10 +423,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   _pageData.title
                 </h4>
@@ -434,15 +434,15 @@ Object {
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             href="/contact"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -453,7 +453,7 @@ Object {
                     />
                     <img
                       alt="_pageContact.title"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       height="200"
                       width="300"
                     />
@@ -461,10 +461,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   _pageContact.title
                 </h4>
@@ -475,7 +475,7 @@ Object {
       </div>
       <div
         aria-live="polite"
-        class="sc-dJiZtA eSFrxK sc-fzQBhs eeMEil"
+        class="sc-dJiZtA eSFrxK sc-cYYuRe coZBbA"
         role="alert"
         tabindex="0"
       >
@@ -509,7 +509,7 @@ Object {
             </button>
           </div>
           <p
-            class="sc-jEACwC sc-gFqAkR hTPJXj kBZfau sc-cDvQBt hmzEhV"
+            class="sc-jEACwC sc-gFqAkR hTPJXj kBZfau sc-eFRcpv CCeCP"
           >
             De gemeente Amsterdam verwerkt uw persoonsgegevens op een zorgvuldige en veilige manier in overeenstemming met de geldende wet- en regelgeving. Dat betekent onder meer dat uw gegevens niet voor een ander doel worden gebruikt dan waarvoor u ze heeft verstrekt. Meer informatie over de bescherming van uw persoonsgegevens kunt u vinden in 
             <a
@@ -652,7 +652,7 @@ Object {
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="https://tourbuzz.amsterdam.nl/"
                   target="_blank"
-                  title="_pageTouringCar.titleShort"
+                  title="_linkTourBuzz.titleShort"
                   variant="blank"
                 >
                   <span
@@ -661,7 +661,7 @@ Object {
                     <span
                       class="sc-eZYNyq"
                     >
-                      _pageTouringCar.titleShort
+                      _linkTourBuzz.titleShort
                     </span>
                   </span>
                   <span
@@ -739,19 +739,19 @@ Object {
         </header>
       </div>
       <main
-        class="sc-bfhvDw sc-eHsDsR cMHqqc gBUgdz"
+        class="sc-bfhvDw sc-bvgPty cMHqqc fXgSTC"
         data-testid="home-page"
       >
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           href="/op-kenteken"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -763,7 +763,7 @@ Object {
                   />
                   <img
                     alt="_pageLicencePlate.title"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     data-testid="card-with-image"
                     height="200"
                     src="bereikbaarheid-op-kenteken.jpg"
@@ -773,10 +773,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 _pageLicencePlate.title
               </h4>
@@ -784,15 +784,15 @@ Object {
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           href="/stremmingen"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -804,7 +804,7 @@ Object {
                   />
                   <img
                     alt="_pageRoadObstructions.title"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     data-testid="card-with-image"
                     height="200"
                     src="stremmingen.jpg"
@@ -814,10 +814,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 _pageRoadObstructions.title
               </h4>
@@ -825,15 +825,15 @@ Object {
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           href="/laden-lossen"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -845,7 +845,7 @@ Object {
                   />
                   <img
                     alt="_pageLoadUnload.title"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     data-testid="card-with-image"
                     height="200"
                     src="laden-en-lossen.jpg"
@@ -855,10 +855,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 _pageLoadUnload.title
               </h4>
@@ -866,17 +866,17 @@ Object {
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           data-testid="card-with-external-link"
           href="https://tourbuzz.amsterdam.nl/"
           tabindex="0"
           target="_blank"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -887,8 +887,8 @@ Object {
                     type="image/webp"
                   />
                   <img
-                    alt="_pageTouringCar.title"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    alt="_linkTourBuzz.title"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     data-testid="card-with-image"
                     height="200"
                     src="tour-buzz.jpg"
@@ -898,12 +898,12 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
-                _pageTouringCar.title
+                _linkTourBuzz.title
                 <span
                   class="sc-aXZVg cycjMX"
                 >
@@ -924,15 +924,15 @@ Object {
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           href="/data"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -944,7 +944,7 @@ Object {
                   />
                   <img
                     alt="_pageData.title"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     data-testid="card-with-image"
                     height="200"
                     src="json.jpg"
@@ -954,10 +954,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 _pageData.title
               </h4>
@@ -965,15 +965,15 @@ Object {
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           href="/contact"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -984,7 +984,7 @@ Object {
                   />
                   <img
                     alt="_pageContact.title"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     height="200"
                     width="300"
                   />
@@ -992,10 +992,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 _pageContact.title
               </h4>
@@ -1006,7 +1006,7 @@ Object {
     </div>
     <div
       aria-live="polite"
-      class="sc-dJiZtA eSFrxK sc-fzQBhs eeMEil"
+      class="sc-dJiZtA eSFrxK sc-cYYuRe coZBbA"
       role="alert"
       tabindex="0"
     >
@@ -1040,7 +1040,7 @@ Object {
           </button>
         </div>
         <p
-          class="sc-jEACwC sc-gFqAkR hTPJXj kBZfau sc-cDvQBt hmzEhV"
+          class="sc-jEACwC sc-gFqAkR hTPJXj kBZfau sc-eFRcpv CCeCP"
         >
           De gemeente Amsterdam verwerkt uw persoonsgegevens op een zorgvuldige en veilige manier in overeenstemming met de geldende wet- en regelgeving. Dat betekent onder meer dat uw gegevens niet voor een ander doel worden gebruikt dan waarvoor u ze heeft verstrekt. Meer informatie over de bescherming van uw persoonsgegevens kunt u vinden in 
           <a

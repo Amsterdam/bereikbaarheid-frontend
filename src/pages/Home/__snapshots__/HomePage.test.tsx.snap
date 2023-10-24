@@ -208,19 +208,19 @@ Object {
           </header>
         </div>
         <main
-          class="sc-bfhvDw sc-eHsDsR cMHqqc gBUgdz"
+          class="sc-bfhvDw sc-bvgPty cMHqqc fXgSTC"
           data-testid="home-page"
         >
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             href="/op-kenteken"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -232,7 +232,7 @@ Object {
                     />
                     <img
                       alt="Bereikbaarheid op kenteken"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       data-testid="card-with-image"
                       height="200"
                       src="bereikbaarheid-op-kenteken.jpg"
@@ -242,10 +242,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   Bereikbaarheid op kenteken
                 </h4>
@@ -253,15 +253,15 @@ Object {
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             href="/stremmingen"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -273,7 +273,7 @@ Object {
                     />
                     <img
                       alt="Stremmingen"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       data-testid="card-with-image"
                       height="200"
                       src="stremmingen.jpg"
@@ -283,10 +283,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   Stremmingen
                 </h4>
@@ -294,15 +294,15 @@ Object {
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             href="/laden-lossen"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -314,7 +314,7 @@ Object {
                     />
                     <img
                       alt="Laden en lossen"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       data-testid="card-with-image"
                       height="200"
                       src="laden-en-lossen.jpg"
@@ -324,10 +324,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   Laden en lossen
                 </h4>
@@ -335,17 +335,17 @@ Object {
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             data-testid="card-with-external-link"
             href="https://tourbuzz.amsterdam.nl/"
             tabindex="0"
             target="_blank"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -357,7 +357,7 @@ Object {
                     />
                     <img
                       alt="Touringcar (Tour Buzz)"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       data-testid="card-with-image"
                       height="200"
                       src="tour-buzz.jpg"
@@ -367,10 +367,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   Touringcar (Tour Buzz)
                   <span
@@ -393,15 +393,15 @@ Object {
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             href="/data"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -413,7 +413,7 @@ Object {
                     />
                     <img
                       alt="Databronnen"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       data-testid="card-with-image"
                       height="200"
                       src="json.jpg"
@@ -423,10 +423,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   Databronnen
                 </h4>
@@ -434,15 +434,15 @@ Object {
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
             href="/contact"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+              class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
             >
               <div
-                class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+                class="sc-eldPxv AglKV sc-cspYLC biRlTE"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -453,7 +453,7 @@ Object {
                     />
                     <img
                       alt="Contact en uitleg"
-                      class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                      class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                       height="200"
                       width="300"
                     />
@@ -461,10 +461,10 @@ Object {
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+                class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
               >
                 <h4
-                  class="sc-bddgXz cMVdoc"
+                  class="sc-BQMaI ipCJJp"
                 >
                   Contact en uitleg
                 </h4>
@@ -679,19 +679,19 @@ Object {
         </header>
       </div>
       <main
-        class="sc-bfhvDw sc-eHsDsR cMHqqc gBUgdz"
+        class="sc-bfhvDw sc-bvgPty cMHqqc fXgSTC"
         data-testid="home-page"
       >
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           href="/op-kenteken"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -703,7 +703,7 @@ Object {
                   />
                   <img
                     alt="Bereikbaarheid op kenteken"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     data-testid="card-with-image"
                     height="200"
                     src="bereikbaarheid-op-kenteken.jpg"
@@ -713,10 +713,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 Bereikbaarheid op kenteken
               </h4>
@@ -724,15 +724,15 @@ Object {
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           href="/stremmingen"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -744,7 +744,7 @@ Object {
                   />
                   <img
                     alt="Stremmingen"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     data-testid="card-with-image"
                     height="200"
                     src="stremmingen.jpg"
@@ -754,10 +754,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 Stremmingen
               </h4>
@@ -765,15 +765,15 @@ Object {
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           href="/laden-lossen"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -785,7 +785,7 @@ Object {
                   />
                   <img
                     alt="Laden en lossen"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     data-testid="card-with-image"
                     height="200"
                     src="laden-en-lossen.jpg"
@@ -795,10 +795,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 Laden en lossen
               </h4>
@@ -806,17 +806,17 @@ Object {
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           data-testid="card-with-external-link"
           href="https://tourbuzz.amsterdam.nl/"
           tabindex="0"
           target="_blank"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -828,7 +828,7 @@ Object {
                   />
                   <img
                     alt="Touringcar (Tour Buzz)"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     data-testid="card-with-image"
                     height="200"
                     src="tour-buzz.jpg"
@@ -838,10 +838,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 Touringcar (Tour Buzz)
                 <span
@@ -864,15 +864,15 @@ Object {
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           href="/data"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -884,7 +884,7 @@ Object {
                   />
                   <img
                     alt="Databronnen"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     data-testid="card-with-image"
                     height="200"
                     src="json.jpg"
@@ -894,10 +894,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 Databronnen
               </h4>
@@ -905,15 +905,15 @@ Object {
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-camqpD hmYwEu"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-jdkBTo kjhRBU"
           href="/contact"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-gweoQa fDacGI"
+            class="sc-dAbbOL ITqKK sc-fmzyuX hyVccL"
           >
             <div
-              class="sc-eldPxv AglKV sc-eIcdZJ Gdvlt"
+              class="sc-eldPxv AglKV sc-cspYLC biRlTE"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -924,7 +924,7 @@ Object {
                   />
                   <img
                     alt="Contact en uitleg"
-                    class="sc-JrDLc hYVxgF sc-fyVfxW ekYkIo"
+                    class="sc-JrDLc hYVxgF sc-epqpcT bECwzH"
                     height="200"
                     width="300"
                   />
@@ -932,10 +932,10 @@ Object {
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-jdUcAg fcKzgX"
+              class="sc-ikkxIA dKESuo sc-dwalKd OKdA"
             >
               <h4
-                class="sc-bddgXz cMVdoc"
+                class="sc-BQMaI ipCJJp"
               >
                 Contact en uitleg
               </h4>
