@@ -1,18 +1,17 @@
-import { useEffect, useState } from 'react'
-
-import { GeoJSON } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarParkingSpaces from 'api/touringcar/parking-spaces'
-import { DomEvent } from 'leaflet'
-import { useTheme } from 'styled-components'
+import getTouringcarParkingSpaces, {
+  TouringcarParkingSpace,
+} from 'api/touringcar/parking-spaces'
+import { useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
+import { touringcarParkingSpacesLayerId } from 'pages/Touringcar/contexts/mapLayersReducer'
+import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGroup'
+
+import { TouringcarParkingSpaceMarker } from '../ParkingSpaceMarker/ParkingSpaceMarker'
 
 export const ParkingSpacesLayer = () => {
-  const theme = useTheme()
+  const { activeMapLayers } = useTouringcarMapContext()
 
-  const [touringcarParkingSpacesLayer, setTouringcarParkingSpacesLayer] =
-    useState<L.GeoJSON | null>(null)
-
-  const touringcarParkingSpaces = useQuery({
+  const { isLoading, error, isError, data } = useQuery({
     enabled: true,
     queryKey: ['touringcarParkingSpaces'],
     queryFn: () =>
@@ -21,41 +20,29 @@ export const ParkingSpacesLayer = () => {
       }),
   })
 
-  console.log(touringcarParkingSpaces.data)
+  const createClusterMarkers = () => {
+    return data!.features.map((item: TouringcarParkingSpace) => {
+      const marker = TouringcarParkingSpaceMarker(item)
 
-  useEffect(() => {
-    if (touringcarParkingSpacesLayer) {
-      touringcarParkingSpacesLayer.setStyle(feature => {
-        return {
-          color: theme.colors.primary?.main,
-          weight: 5,
-        }
-      })
-    }
-  }, [theme.colors.primary?.main, touringcarParkingSpacesLayer])
+      let tooltipText = `<strong>${item.properties?.omschrijving}</strong><br>Plaatsen: ${item.properties?.plaatsen}`
 
-  if (
-    touringcarParkingSpaces.isError &&
-    touringcarParkingSpaces.error instanceof Error
-  ) {
-    console.error(touringcarParkingSpaces.error.message)
+      marker.bindTooltip(tooltipText)
+
+      // marker.on('click', () => findTrafficSign(item.properties.id))
+
+      return marker
+    })
   }
 
-  if (touringcarParkingSpaces.isLoading || !touringcarParkingSpaces.data) {
+  if (isError && error instanceof Error) {
+    console.error(error.message)
+  }
+
+  if (isLoading || !data) {
     return null
   }
 
-  return (
-    <GeoJSON
-      args={[touringcarParkingSpaces.data]}
-      setInstance={setTouringcarParkingSpacesLayer}
-      options={{
-        onEachFeature: (feature, layer: L.GeoJSON) => {
-          layer.on('click', e => {
-            DomEvent.stopPropagation(e)
-          })
-        },
-      }}
-    />
-  )
+  if (!activeMapLayers[touringcarParkingSpacesLayerId]) return null
+
+  return <MarkerClusterGroup markers={createClusterMarkers()} />
 }

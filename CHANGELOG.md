@@ -9,6 +9,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ### Added
 
 - Default Amsterdam municipality favicons and app icons for various platforms (Android, iOS, Windows)
+- Internationalization with i18next
+- Translations for some UI elements to Dutch, English, German and Spanish (but there is not yet a way for the user to switch languages)
+- "Touringcar" page (hidden) with "Parking spaces" data and legend item
 
 ## [v3.0.0 - 2023-10-16](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.7.0...v3.0.0)
 

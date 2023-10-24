@@ -28,7 +28,17 @@
   },
   "_pageTouringcar": {
     "title": "Coach (Tour Buzz)",
-    "titleShort": "Coach"
+    "titleShort": "Coach",
+    "_legend": {
+      "messages": "Messages",
+      "stops": "Stops",
+      "parking": "Parking",
+      "maxVehicleHeight": "Maximum vehicle height",
+      "destinationTraffic": "Destination traffic",
+      "recommendedRoutes": "Recommended routes",
+      "mandatoryRoutes": "Mandatory routes (> 7.5t)",
+      "environmentalZone": "Environmental zone"
+    }
   },
   "_pageData": {
     "title": "Data sources"

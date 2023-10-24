@@ -20,11 +20,11 @@ import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
 import { MapStyle } from 'shared/map/mapStyle'
 import styled from 'styled-components'
 
-import { LoadUnloadMapLayers } from './components/MapLayers'
+import TouringcarMapLayers from './components/MapLayers'
 import ParkingSpacesMapSettingsDisplay from './components/MapSettingsDisplay'
-import { LoadUnloadViewerContainer } from './components/ViewerContainer'
-import { LoadUnloadMapProvider } from './contexts/MapProvider'
-import { LoadUnloadPageProvider } from './contexts/PageProvider'
+import { TouringcarViewerContainer } from './components/ViewerContainer'
+import { TouringcarMapProvider } from './contexts/MapProvider'
+import { TouringcarPageProvider } from './contexts/PageProvider'
 
 const { SnapPoint } = mapPanelConstants
 
@@ -38,37 +38,36 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
   }
 `
 
-const LoadUnloadPage = () => {
+const TouringcarPage = () => {
   const { t } = useTranslation()
+  useDocumentTitle(t('_pageTouringcar.title'))
 
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
-  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
-
   useEffect(() => {
     if (mapInstance) {
       setMapDefaults(mapInstance)
     }
   }, [mapInstance])
 
-  useDocumentTitle('Laden en lossen')
+  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
+  const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   const { trackPageVisit } = useAnalytics()
   useEffect(trackPageVisit)
 
-  const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
-
   return (
-    <LoadUnloadPageProvider>
+    <TouringcarPageProvider>
       <PageWrapper>
-        <Header title={t('_pageLoadUnload.title')} />
+        <Header title={t('_pageTouringcar.title')} />
 
         <MainContent data-testid="load-unload-page">
           <MapStyle />
+
           <StyledMap
             options={{ ...defaultMapOptions, maxZoom: 21 }}
             setInstance={setMapInstance}
           >
-            <LoadUnloadMapProvider>
+            <TouringcarMapProvider>
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}
                 initialPosition={SnapPoint.Halfway}
@@ -78,16 +77,16 @@ const LoadUnloadPage = () => {
                   <ParkingSpacesMapSettingsDisplay />
                 </Element>
 
-                <LoadUnloadViewerContainer {...{ showDesktopVariant }} />
+                <TouringcarViewerContainer {...{ showDesktopVariant }} />
               </MapPanelProvider>
 
-              <LoadUnloadMapLayers />
-            </LoadUnloadMapProvider>
+              <TouringcarMapLayers />
+            </TouringcarMapProvider>
           </StyledMap>
         </MainContent>
       </PageWrapper>
-    </LoadUnloadPageProvider>
+    </TouringcarPageProvider>
   )
 }
 
-export default LoadUnloadPage
+export default TouringcarPage

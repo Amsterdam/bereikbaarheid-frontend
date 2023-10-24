@@ -3,22 +3,22 @@ import { createContext, Dispatch, SetStateAction, useContext } from 'react'
 import type { FormDateTimeValues } from 'shared/components/FormDateTime'
 import { Address } from 'types/address'
 
-export type LoadUnloadPageContextProps = {
+export type TouringcarPageContextProps = {
   address: Address
   setAddress: Dispatch<SetStateAction<Address>>
   dateTime: FormDateTimeValues
   setDateTime: Dispatch<SetStateAction<FormDateTimeValues>>
 }
 
-export const LoadUnloadPageContext = createContext<
-  LoadUnloadPageContextProps | undefined
+export const TouringcarPageContext = createContext<
+  TouringcarPageContextProps | undefined
 >(undefined)
 
-export function useLoadUnloadPageContext() {
-  const context = useContext(LoadUnloadPageContext)
+export function useTouringcarPageContext() {
+  const context = useContext(TouringcarPageContext)
   if (context === undefined) {
     throw new Error(
-      'useLoadUnloadPageContext must be within LoadUnloadPageProvider'
+      'useTouringcarPageContext must be within TouringcarPageProvider'
     )
   }
 

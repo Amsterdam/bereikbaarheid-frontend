@@ -28,7 +28,17 @@
   },
   "_pageTouringcar": {
     "title": "Auto turístico (Tour Buzz)",
-    "titleShort": "Auto turístico"
+    "titleShort": "Auto turístico",
+    "_legend": {
+      "messages": "Mensajes",
+      "stops": "Paradas de autobús",
+      "parking": "Aparcamiento",
+      "maxVehicleHeight": "Altura libre",
+      "destinationTraffic": "Tráfico de destino",
+      "recommendedRoutes": "Rutas recomendadas",
+      "mandatoryRoutes": "Ruta obligatoria (> 7,5t)",
+      "environmentalZone": "Zona ambiental"
+    }
   },
   "_pageData": {
     "title": "Fuentes de datos"

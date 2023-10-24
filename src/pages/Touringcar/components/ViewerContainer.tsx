@@ -32,14 +32,14 @@ const StyledViewerContainer = styled(
     `}
 `
 
-interface LoadUnloadViewerContainerProps {
+interface TouringcarViewerContainerProps {
   showDesktopVariant: boolean
 }
 
-export const LoadUnloadViewerContainer = ({
+export const TouringcarViewerContainer = ({
   showDesktopVariant,
   ...otherProps
-}: LoadUnloadViewerContainerProps) => {
+}: TouringcarViewerContainerProps) => {
   const { draggable } = useContext(MapPanelContext)
 
   return (

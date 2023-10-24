@@ -1,7 +1,7 @@
 import { getUrl } from 'api/touringcar/parking-spaces'
 
 const touringcarParkingSpacesLink = {
-  href: getUrl({ _format: 'geojson' }),
+  href: getUrl(),
   title: 'Parkeerplekken voor touringcars',
 }
 

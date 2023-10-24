@@ -4,13 +4,13 @@ import { format } from 'date-fns'
 import type { FormDateTimeValues } from 'shared/components/FormDateTime'
 import { Address } from 'types/address'
 
-import { LoadUnloadPageContext } from './PageContext'
+import { TouringcarPageContext } from './PageContext'
 
 type Props = {
   children: ReactNode
 }
 
-export const LoadUnloadPageProvider = ({ children }: Props) => {
+export const TouringcarPageProvider = ({ children }: Props) => {
   const [address, setAddress] = useState({} as Address)
   const [dateTime, setDateTime] = useState<FormDateTimeValues>({
     date: format(new Date(), 'yyyy-MM-dd'),
@@ -19,7 +19,7 @@ export const LoadUnloadPageProvider = ({ children }: Props) => {
   })
 
   return (
-    <LoadUnloadPageContext.Provider
+    <TouringcarPageContext.Provider
       value={{
         address,
         setAddress,
@@ -28,6 +28,6 @@ export const LoadUnloadPageProvider = ({ children }: Props) => {
       }}
     >
       {children}
-    </LoadUnloadPageContext.Provider>
+    </TouringcarPageContext.Provider>
   )
 }

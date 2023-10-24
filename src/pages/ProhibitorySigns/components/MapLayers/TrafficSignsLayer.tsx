@@ -3,12 +3,12 @@ import { useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { getTrafficSigns, TrafficSign } from 'api/bereikbaarheid/traffic-signs'
 
+import { MarkerClusterGroup } from '../../../../shared/components/MapLayers/MarkerClusterGroup'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { useRdwGeneralInfo } from '../../hooks/useRdwGeneralInfo'
 import { useTrafficSignCategories } from '../../hooks/useTrafficSignCategories'
-import { MarkerClusterGroup } from '../MarkerClusterGroup'
 import { TrafficSignMarker } from '../TrafficSignMarker'
 
 const ProhibitorySignsTrafficSignsLayer = () => {

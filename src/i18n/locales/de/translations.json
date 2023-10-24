@@ -28,7 +28,17 @@
   },
   "_pageTouringcar": {
     "title": "Tourenwagen (Tour Buzz)",
-    "titleShort": "Tourenwagen"
+    "titleShort": "Tourenwagen",
+    "_legend": {
+      "messages": "Berichte",
+      "stops": "Bushaltestellen",
+      "parking": "Parkplatz",
+      "maxVehicleHeight": "Fahrhöhe",
+      "destinationTraffic": "Zielverkehr",
+      "recommendedRoutes": "Empfohlene Routen",
+      "mandatoryRoutes": "Obligatorische Route (> 7,5t)",
+      "environmentalZone": "Umweltzone"
+    }
   },
   "_pageData": {
     "title": "Datenquellen"

@@ -5,10 +5,10 @@ import { oneWayArrows, topoBlackWhite } from 'shared/map/mapLayers'
 
 import { ParkingSpacesLayer } from './ParkingSpacesLayer'
 
-import { useLoadUnloadPageContext } from '../../contexts/PageContext'
+import { useTouringcarPageContext } from '../../contexts/PageContext'
 
-export const LoadUnloadMapLayers = () => {
-  const { address } = useLoadUnloadPageContext()
+const TouringcarMapLayers = () => {
+  const { address } = useTouringcarPageContext()
 
   return (
     <>
@@ -25,3 +25,5 @@ export const LoadUnloadMapLayers = () => {
     </>
   )
 }
+
+export default TouringcarMapLayers

@@ -2,20 +2,20 @@ import { createContext, Dispatch, useContext } from 'react'
 
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 
-export type LoadUnloadMapContextProps = {
+export type TouringcarContextProps = {
   activeMapLayers: typeof mapLayersInitialState
   updateActiveMapLayers: Dispatch<mapLayerActionType>
 }
 
-export const LoadUnloadMapContext = createContext<
-  LoadUnloadMapContextProps | undefined
+export const TouringcarMapContext = createContext<
+  TouringcarContextProps | undefined
 >(undefined)
 
-export function useLoadUnloadMapContext() {
-  const context = useContext(LoadUnloadMapContext)
+export function useTouringcarMapContext() {
+  const context = useContext(TouringcarMapContext)
   if (context === undefined) {
     throw new Error(
-      'useLoadUnloadMapContext must be within LoadUnloadMapProvider'
+      'useTouringcarMapContext must be within TouringcarMapProvider'
     )
   }
 

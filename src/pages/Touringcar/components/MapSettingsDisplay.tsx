@@ -1,9 +1,9 @@
 import { MapPanelContent, MapPanelContentProps } from '@amsterdam/arm-core'
-import { CompactThemeProvider, Tab, Tabs } from '@amsterdam/asc-ui'
+import { Paragraph, Tab, Tabs } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 
 import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
-import { LoadUnloadPageProvider } from '../contexts/PageProvider'
+import { TouringcarPageProvider } from '../contexts/PageProvider'
 import dataLinks from '../data/dataLinks'
 
 interface MapSettingsDisplayProps extends MapPanelContentProps {}
@@ -15,15 +15,24 @@ function ParkingSpacesMapSettingsDisplay({
 
   return (
     <MapPanelContent data-testid="map-settings" {...otherProps}>
-      <Tabs label={t('_pageLoadUnload._mapPanel.label')}>
-        <Tab id="input" label={t('_generic._mapPanel.input')}>
-          <CompactThemeProvider>Even niets te zien hier!</CompactThemeProvider>
+      <Tabs label={t('_pageTouringcar._mapPanel.label')}>
+        <Tab id="messages" label={t('_pageTouringcar._mapPanel.messages')}>
+          <br />
+          <Paragraph>Here be messages!</Paragraph>
+        </Tab>
+
+        <Tab id="routeInfo" label={t('_pageTouringcar._mapPanel.routeInfo')}>
+          <br />
+          <Paragraph>
+            Weergave van de aanbevolen en verplichte routes voor touringcars.
+            Let op de doorrijhoogtes.
+          </Paragraph>
         </Tab>
 
         <Tab id="data" label={t('_generic._mapPanel.dataSource')}>
-          <LoadUnloadPageProvider>
+          <TouringcarPageProvider>
             <DataSourcesAside dataLinks={dataLinks} />
-          </LoadUnloadPageProvider>
+          </TouringcarPageProvider>
         </Tab>
       </Tabs>
     </MapPanelContent>
