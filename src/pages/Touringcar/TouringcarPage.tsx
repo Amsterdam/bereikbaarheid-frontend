@@ -21,6 +21,7 @@ import { MapStyle } from 'shared/map/mapStyle'
 import styled from 'styled-components'
 
 import TouringcarMapLayers from './components/MapLayers'
+import TouringcarMapPanel from './components/MapPanel'
 import ParkingSpacesMapSettingsDisplay from './components/MapSettingsDisplay'
 import { TouringcarViewerContainer } from './components/ViewerContainer'
 import { TouringcarMapProvider } from './contexts/MapProvider'
@@ -75,6 +76,8 @@ const TouringcarPage = () => {
               >
                 <Element>
                   <ParkingSpacesMapSettingsDisplay />
+
+                  <TouringcarMapPanel />
                 </Element>
 
                 <TouringcarViewerContainer {...{ showDesktopVariant }} />

@@ -1,4 +1,6 @@
-import { ReactNode, useReducer } from 'react'
+import { ReactNode, useReducer, useState } from 'react'
+
+import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 
 import { TouringcarMapContext } from './MapContext'
 import { mapLayersReducer, mapLayersInitialState } from './mapLayersReducer'
@@ -13,11 +15,23 @@ export const TouringcarMapProvider = ({ children }: Props) => {
     mapLayersInitialState
   )
 
+  const [currentParkingSpace, setCurrentParkingSpace] = useState<
+    TouringcarParkingSpace | undefined
+  >(undefined)
+
+  const [location, setLocation] = useState<[number, number] | undefined>(
+    undefined
+  )
+
   return (
     <TouringcarMapContext.Provider
       value={{
         activeMapLayers,
         updateActiveMapLayers,
+        currentParkingSpace,
+        setCurrentParkingSpace,
+        location,
+        setLocation,
       }}
     >
       {children}

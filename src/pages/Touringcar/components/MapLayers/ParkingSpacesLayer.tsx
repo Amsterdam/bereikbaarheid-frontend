@@ -9,7 +9,7 @@ import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGro
 import { TouringcarParkingSpaceMarker } from '../ParkingSpaceMarker/ParkingSpaceMarker'
 
 export const ParkingSpacesLayer = () => {
-  const { activeMapLayers } = useTouringcarMapContext()
+  const { activeMapLayers, setCurrentParkingSpace } = useTouringcarMapContext()
 
   const { isLoading, error, isError, data } = useQuery({
     enabled: true,
@@ -20,6 +20,12 @@ export const ParkingSpacesLayer = () => {
       }),
   })
 
+  const findParkingSpace = (id: number) => {
+    let parkingSpace = data?.features.find(item => item.properties?.id === id)
+
+    setCurrentParkingSpace(parkingSpace)
+  }
+
   const createClusterMarkers = () => {
     return data!.features.map((item: TouringcarParkingSpace) => {
       const marker = TouringcarParkingSpaceMarker(item)
@@ -28,7 +34,7 @@ export const ParkingSpacesLayer = () => {
 
       marker.bindTooltip(tooltipText)
 
-      // marker.on('click', () => findTrafficSign(item.properties.id))
+      marker.on('click', () => findParkingSpace(item.properties?.id))
 
       return marker
     })
