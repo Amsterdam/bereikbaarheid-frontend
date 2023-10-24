@@ -1,13 +1,13 @@
 import { screen } from '@testing-library/react'
-import { generatePath } from 'react-router-dom'
+import { getGeneratedPath } from 'shared/utils/path'
 
-import { getPathTo } from './routes'
+import { RouteIds } from './routes'
 
 import { withApp } from '../test/utils/withApp'
 
 describe('routes', () => {
   it('redirects /verbodsborden to the /op-kenteken', async () => {
-    const pathToPage = generatePath(getPathTo('PROHIBITORY_SIGNS_PAGE'))
+    const pathToPage = getGeneratedPath(RouteIds.PROHIBITORY_SIGNS_PAGE)
 
     withApp(pathToPage)
 
