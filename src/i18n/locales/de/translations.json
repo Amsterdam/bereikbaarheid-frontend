@@ -22,7 +22,11 @@
   "_pageLoadUnload": {
     "title": "Laden und entladen"
   },
-  "_pageTouringCar": {
+  "_linkTourBuzz": {
+    "title": "Tourenwagen (Tour Buzz)",
+    "titleShort": "Tourenwagen"
+  },
+  "_pageTouringcar": {
     "title": "Tourenwagen (Tour Buzz)",
     "titleShort": "Tourenwagen"
   },

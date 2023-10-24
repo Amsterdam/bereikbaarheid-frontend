@@ -22,7 +22,11 @@
   "_pageLoadUnload": {
     "title": "Load and unload"
   },
-  "_pageTouringCar": {
+  "_linkTourBuzz": {
+    "title": "Coach (Tour Buzz)",
+    "titleShort": "Coach"
+  },
+  "_pageTouringcar": {
     "title": "Coach (Tour Buzz)",
     "titleShort": "Coach"
   },

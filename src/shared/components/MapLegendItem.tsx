@@ -24,11 +24,7 @@ interface MapLegendItemProps {
   text: ReactNode
 }
 
-export const MapLegendItem = ({
-  color,
-  height = '8px',
-  text,
-}: MapLegendItemProps) => {
+function MapLegendItem({ color, height = '8px', text }: MapLegendItemProps) {
   return (
     <LegendItemWrapper>
       <LegendItemSymbol $color={color} $height={height} />
@@ -36,3 +32,5 @@ export const MapLegendItem = ({
     </LegendItemWrapper>
   )
 }
+
+export default MapLegendItem

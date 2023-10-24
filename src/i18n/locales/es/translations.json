@@ -22,7 +22,11 @@
   "_pageLoadUnload": {
     "title": "Cargar y descargar"
   },
-  "_pageTouringCar": {
+  "_linkTourBuzz": {
+    "title": "Auto turístico (Tour Buzz)",
+    "titleShort": "Auto turístico"
+  },
+  "_pageTouringcar": {
     "title": "Auto turístico (Tour Buzz)",
     "titleShort": "Auto turístico"
   },
