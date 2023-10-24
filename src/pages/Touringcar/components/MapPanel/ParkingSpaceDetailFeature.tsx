@@ -6,8 +6,6 @@ import {
 } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
-import { PropertiesContainer } from './DetailFeatureStyles'
-
 import { useTouringcarMapContext } from '../../contexts/MapContext'
 
 const AdditionalInfo = styled.div`

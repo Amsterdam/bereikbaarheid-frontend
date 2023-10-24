@@ -16,10 +16,10 @@ function ParkingSpacesMapSettingsDisplay({
   return (
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label={t('_pageTouringcar._mapPanel.label')}>
-        <Tab id="messages" label={t('_pageTouringcar._mapPanel.messages')}>
+        {/* <Tab id="messages" label={t('_pageTouringcar._mapPanel.messages')}>
           <br />
           <Paragraph>Here be messages!</Paragraph>
-        </Tab>
+        </Tab> */}
 
         <Tab id="routeInfo" label={t('_pageTouringcar._mapPanel.routeInfo')}>
           <br />
