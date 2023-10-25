@@ -4914,6 +4914,7 @@ __metadata:
     typescript: "npm:^4.9.5"
     zod: "npm:^3.22.2"
   peerDependencies:
+    "@babel/plugin-proposal-private-property-in-object": "*"
     "@babel/plugin-transform-private-property-in-object": "*"
     "@testing-library/dom": "*"
   languageName: unknown

@@ -64,6 +64,7 @@
     "react-is": "^18.2.0"
   },
   "peerDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "*",
     "@babel/plugin-transform-private-property-in-object": "*",
     "@testing-library/dom": "*"
   },
