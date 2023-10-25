@@ -3,6 +3,7 @@ import { RouteIds } from '../../routes'
 import { getGeneratedPath } from '../../shared/utils/path'
 
 describe('DataSourcesPage', () => {
+  jest.useFakeTimers()
   jest.setSystemTime(new Date('2023-10-20T10:58:17.683Z'))
 
   it('renders correctly', async () => {

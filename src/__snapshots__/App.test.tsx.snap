@@ -38,14 +38,14 @@ Object {
                 <span
                   class="sc-dAlyuH dEvjcu"
                 >
-                  appTitle
+                  Bereikbaarheid
                 </span>
               </a>
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-gfoqjT iUsCIO"
                 href="/"
               >
-                appTitle
+                Bereikbaarheid
               </a>
             </h1>
             <nav
@@ -60,7 +60,7 @@ Object {
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/op-kenteken"
-                    title="_pageLicencePlate.titleShort"
+                    title="Op kenteken"
                     variant="blank"
                   >
                     <span
@@ -69,7 +69,7 @@ Object {
                       <span
                         class="sc-eZYNyq"
                       >
-                        _pageLicencePlate.titleShort
+                        Op kenteken
                       </span>
                     </span>
                   </a>
@@ -80,7 +80,7 @@ Object {
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/stremmingen"
-                    title="_pageRoadObstructions.title"
+                    title="Stremmingen"
                     variant="blank"
                   >
                     <span
@@ -89,7 +89,7 @@ Object {
                       <span
                         class="sc-eZYNyq"
                       >
-                        _pageRoadObstructions.title
+                        Stremmingen
                       </span>
                     </span>
                   </a>
@@ -100,7 +100,7 @@ Object {
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/laden-lossen"
-                    title="_pageLoadUnload.title"
+                    title="Laden en lossen"
                     variant="blank"
                   >
                     <span
@@ -109,7 +109,7 @@ Object {
                       <span
                         class="sc-eZYNyq"
                       >
-                        _pageLoadUnload.title
+                        Laden en lossen
                       </span>
                     </span>
                   </a>
@@ -121,7 +121,7 @@ Object {
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="https://tourbuzz.amsterdam.nl/"
                     target="_blank"
-                    title="_linkTourBuzz.titleShort"
+                    title="Touringcar"
                     variant="blank"
                   >
                     <span
@@ -130,7 +130,7 @@ Object {
                       <span
                         class="sc-eZYNyq"
                       >
-                        _linkTourBuzz.titleShort
+                        Touringcar
                       </span>
                     </span>
                     <span
@@ -165,7 +165,7 @@ Object {
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/data"
                     style="font-weight: normal;"
-                    title="_pageData.title"
+                    title="Databronnen"
                     variant="blank"
                   >
                     <span
@@ -174,7 +174,7 @@ Object {
                       <span
                         class="sc-eZYNyq"
                       >
-                        _pageData.title
+                        Databronnen
                       </span>
                     </span>
                   </a>
@@ -186,7 +186,7 @@ Object {
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/contact"
                     style="font-weight: normal;"
-                    title="_pageContact.title"
+                    title="Contact en uitleg"
                     variant="blank"
                   >
                     <span
@@ -195,7 +195,7 @@ Object {
                       <span
                         class="sc-eZYNyq"
                       >
-                        _pageContact.title
+                        Contact en uitleg
                       </span>
                     </span>
                   </a>
@@ -231,7 +231,7 @@ Object {
                       type="image/webp"
                     />
                     <img
-                      alt="_pageLicencePlate.title"
+                      alt="Bereikbaarheid op kenteken"
                       class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                       data-testid="card-with-image"
                       height="200"
@@ -247,7 +247,7 @@ Object {
                 <h4
                   class="sc-cyRcrZ hBCmDQ"
                 >
-                  _pageLicencePlate.title
+                  Bereikbaarheid op kenteken
                 </h4>
               </div>
             </div>
@@ -272,7 +272,7 @@ Object {
                       type="image/webp"
                     />
                     <img
-                      alt="_pageRoadObstructions.title"
+                      alt="Stremmingen"
                       class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                       data-testid="card-with-image"
                       height="200"
@@ -288,7 +288,7 @@ Object {
                 <h4
                   class="sc-cyRcrZ hBCmDQ"
                 >
-                  _pageRoadObstructions.title
+                  Stremmingen
                 </h4>
               </div>
             </div>
@@ -313,7 +313,7 @@ Object {
                       type="image/webp"
                     />
                     <img
-                      alt="_pageLoadUnload.title"
+                      alt="Laden en lossen"
                       class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                       data-testid="card-with-image"
                       height="200"
@@ -329,7 +329,7 @@ Object {
                 <h4
                   class="sc-cyRcrZ hBCmDQ"
                 >
-                  _pageLoadUnload.title
+                  Laden en lossen
                 </h4>
               </div>
             </div>
@@ -356,7 +356,7 @@ Object {
                       type="image/webp"
                     />
                     <img
-                      alt="_linkTourBuzz.title"
+                      alt="Touringcar (Tour Buzz)"
                       class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                       data-testid="card-with-image"
                       height="200"
@@ -372,7 +372,7 @@ Object {
                 <h4
                   class="sc-cyRcrZ hBCmDQ"
                 >
-                  _linkTourBuzz.title
+                  Touringcar (Tour Buzz)
                   <span
                     class="sc-aXZVg cycjMX"
                   >
@@ -412,7 +412,7 @@ Object {
                       type="image/webp"
                     />
                     <img
-                      alt="_pageData.title"
+                      alt="Databronnen"
                       class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                       data-testid="card-with-image"
                       height="200"
@@ -428,7 +428,7 @@ Object {
                 <h4
                   class="sc-cyRcrZ hBCmDQ"
                 >
-                  _pageData.title
+                  Databronnen
                 </h4>
               </div>
             </div>
@@ -452,7 +452,7 @@ Object {
                       type="image/webp"
                     />
                     <img
-                      alt="_pageContact.title"
+                      alt="Contact en uitleg"
                       class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                       height="200"
                       width="300"
@@ -466,7 +466,7 @@ Object {
                 <h4
                   class="sc-cyRcrZ hBCmDQ"
                 >
-                  _pageContact.title
+                  Contact en uitleg
                 </h4>
               </div>
             </div>
@@ -569,14 +569,14 @@ Object {
               <span
                 class="sc-dAlyuH dEvjcu"
               >
-                appTitle
+                Bereikbaarheid
               </span>
             </a>
             <a
               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-gfoqjT iUsCIO"
               href="/"
             >
-              appTitle
+              Bereikbaarheid
             </a>
           </h1>
           <nav
@@ -591,7 +591,7 @@ Object {
                 <a
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/op-kenteken"
-                  title="_pageLicencePlate.titleShort"
+                  title="Op kenteken"
                   variant="blank"
                 >
                   <span
@@ -600,7 +600,7 @@ Object {
                     <span
                       class="sc-eZYNyq"
                     >
-                      _pageLicencePlate.titleShort
+                      Op kenteken
                     </span>
                   </span>
                 </a>
@@ -611,7 +611,7 @@ Object {
                 <a
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/stremmingen"
-                  title="_pageRoadObstructions.title"
+                  title="Stremmingen"
                   variant="blank"
                 >
                   <span
@@ -620,7 +620,7 @@ Object {
                     <span
                       class="sc-eZYNyq"
                     >
-                      _pageRoadObstructions.title
+                      Stremmingen
                     </span>
                   </span>
                 </a>
@@ -631,7 +631,7 @@ Object {
                 <a
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/laden-lossen"
-                  title="_pageLoadUnload.title"
+                  title="Laden en lossen"
                   variant="blank"
                 >
                   <span
@@ -640,7 +640,7 @@ Object {
                     <span
                       class="sc-eZYNyq"
                     >
-                      _pageLoadUnload.title
+                      Laden en lossen
                     </span>
                   </span>
                 </a>
@@ -652,7 +652,7 @@ Object {
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="https://tourbuzz.amsterdam.nl/"
                   target="_blank"
-                  title="_linkTourBuzz.titleShort"
+                  title="Touringcar"
                   variant="blank"
                 >
                   <span
@@ -661,7 +661,7 @@ Object {
                     <span
                       class="sc-eZYNyq"
                     >
-                      _linkTourBuzz.titleShort
+                      Touringcar
                     </span>
                   </span>
                   <span
@@ -696,7 +696,7 @@ Object {
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/data"
                   style="font-weight: normal;"
-                  title="_pageData.title"
+                  title="Databronnen"
                   variant="blank"
                 >
                   <span
@@ -705,7 +705,7 @@ Object {
                     <span
                       class="sc-eZYNyq"
                     >
-                      _pageData.title
+                      Databronnen
                     </span>
                   </span>
                 </a>
@@ -717,7 +717,7 @@ Object {
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/contact"
                   style="font-weight: normal;"
-                  title="_pageContact.title"
+                  title="Contact en uitleg"
                   variant="blank"
                 >
                   <span
@@ -726,7 +726,7 @@ Object {
                     <span
                       class="sc-eZYNyq"
                     >
-                      _pageContact.title
+                      Contact en uitleg
                     </span>
                   </span>
                 </a>
@@ -762,7 +762,7 @@ Object {
                     type="image/webp"
                   />
                   <img
-                    alt="_pageLicencePlate.title"
+                    alt="Bereikbaarheid op kenteken"
                     class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                     data-testid="card-with-image"
                     height="200"
@@ -778,7 +778,7 @@ Object {
               <h4
                 class="sc-cyRcrZ hBCmDQ"
               >
-                _pageLicencePlate.title
+                Bereikbaarheid op kenteken
               </h4>
             </div>
           </div>
@@ -803,7 +803,7 @@ Object {
                     type="image/webp"
                   />
                   <img
-                    alt="_pageRoadObstructions.title"
+                    alt="Stremmingen"
                     class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                     data-testid="card-with-image"
                     height="200"
@@ -819,7 +819,7 @@ Object {
               <h4
                 class="sc-cyRcrZ hBCmDQ"
               >
-                _pageRoadObstructions.title
+                Stremmingen
               </h4>
             </div>
           </div>
@@ -844,7 +844,7 @@ Object {
                     type="image/webp"
                   />
                   <img
-                    alt="_pageLoadUnload.title"
+                    alt="Laden en lossen"
                     class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                     data-testid="card-with-image"
                     height="200"
@@ -860,7 +860,7 @@ Object {
               <h4
                 class="sc-cyRcrZ hBCmDQ"
               >
-                _pageLoadUnload.title
+                Laden en lossen
               </h4>
             </div>
           </div>
@@ -887,7 +887,7 @@ Object {
                     type="image/webp"
                   />
                   <img
-                    alt="_linkTourBuzz.title"
+                    alt="Touringcar (Tour Buzz)"
                     class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                     data-testid="card-with-image"
                     height="200"
@@ -903,7 +903,7 @@ Object {
               <h4
                 class="sc-cyRcrZ hBCmDQ"
               >
-                _linkTourBuzz.title
+                Touringcar (Tour Buzz)
                 <span
                   class="sc-aXZVg cycjMX"
                 >
@@ -943,7 +943,7 @@ Object {
                     type="image/webp"
                   />
                   <img
-                    alt="_pageData.title"
+                    alt="Databronnen"
                     class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                     data-testid="card-with-image"
                     height="200"
@@ -959,7 +959,7 @@ Object {
               <h4
                 class="sc-cyRcrZ hBCmDQ"
               >
-                _pageData.title
+                Databronnen
               </h4>
             </div>
           </div>
@@ -983,7 +983,7 @@ Object {
                     type="image/webp"
                   />
                   <img
-                    alt="_pageContact.title"
+                    alt="Contact en uitleg"
                     class="sc-JrDLc hYVxgF sc-kUdmhA hPexuO"
                     height="200"
                     width="300"
@@ -997,7 +997,7 @@ Object {
               <h4
                 class="sc-cyRcrZ hBCmDQ"
               >
-                _pageContact.title
+                Contact en uitleg
               </h4>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { format, parse, parseISO } from 'date-fns'
+import { format, getDay, parse, parseISO } from 'date-fns'
 import nlLocale from 'date-fns/locale/nl'
 
 type Year = `${number}${number}${number}${number}`
@@ -25,8 +25,9 @@ type DateTimeISO_UTCString =
   `${DateHumanReadable_Year_Month_Day}T${TimeHumanReadable_Hours_Minutes_Seconds_FractionOfSecond}Z`
 
 const DATETIME_FORMAT_DEFAULT = 'dd-MM-yyyy HH:mm'
-
+const DATE_FORMAT_REVERSED = 'yyyy-MM-dd'
 const DATE_FNS_OPTIONS = { locale: nlLocale }
+const INDEX_TO_DUTCH_ABBR = ['zo', 'ma', 'di', 'wo', 'do', 'vr', 'za']
 
 /**
  * Format a ISO 8601 date string to a human-readable version.
@@ -63,6 +64,20 @@ function stripSecondsFromTime(
   ) as TimeHumanReadable_Hours_Minutes
 }
 
+/**
+ * Translates a date to a Dutch abbrevation of the day of the week.
+ *
+ * @param date The date to translate
+ * @param format The date format. By default the format 'yyyy-MM-dd' is used.
+ *   For more options see https://date-fns.org/v2.28.0/docs/format.
+ * @returns 'zo', 'ma', 'di', 'wo', 'do', 'vr' or 'za'
+ */
+function getDayOfTheWeekInDutch(date: string, format = DATE_FORMAT_REVERSED) {
+  const dayIndex = getDay(parse(date, format, new Date()))
+
+  return INDEX_TO_DUTCH_ABBR[dayIndex]
+}
+
 export type {
   Year,
   Month,
@@ -79,4 +94,4 @@ export type {
   DateTimeHumanReadable_dd_MM_yyyy_HH_mm,
   DateTimeISO_UTCString,
 }
-export { formatISODate, stripSecondsFromTime }
+export { formatISODate, stripSecondsFromTime, getDayOfTheWeekInDutch }
