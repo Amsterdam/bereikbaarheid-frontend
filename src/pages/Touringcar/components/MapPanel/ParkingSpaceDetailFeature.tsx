@@ -1,9 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import {
   CompactThemeProvider,
   Heading,
-  Image,
   Link,
   Paragraph,
   themeSpacing,
@@ -11,6 +10,8 @@ import {
 import { useQuery } from '@tanstack/react-query'
 import getPanoramaThumbnail from 'api/panorama/thumbnail'
 import styled from 'styled-components'
+
+import ImageWithLoading from './ImageWithLoading'
 
 import { useTouringcarMapContext } from '../../contexts/MapContext'
 
@@ -35,6 +36,8 @@ const PaddedContainer = styled.div`
 
 const ParkingSpaceDetailFeature = () => {
   const { currentParkingSpace } = useTouringcarMapContext()
+
+  const [imageLoading, setImageLoading] = useState(false)
 
   const {
     isLoading,
@@ -61,7 +64,11 @@ const ParkingSpaceDetailFeature = () => {
 
   useEffect(() => {
     if (currentParkingSpace) {
-      refetch()
+      ;(async () => {
+        setImageLoading(true)
+        await refetch()
+        setImageLoading(false)
+      })()
     }
   }, [currentParkingSpace, refetch])
 
@@ -83,12 +90,12 @@ const ParkingSpaceDetailFeature = () => {
         </PaddedContainer>
 
         {!isLoading && !error && !isError && panoramaThumbnail && (
-          <Image
+          <ImageWithLoading
+            loading={isLoading || imageLoading}
             src={panoramaThumbnail}
             alt={currentParkingSpace?.properties?.omschrijving}
             width={PANORAMA_WIDTH_PX}
             height={PANORAMA_WIDTH_PX / PANORAMA_ASPECT_RATIO}
-            style={{ height: PANORAMA_WIDTH_PX / PANORAMA_ASPECT_RATIO }}
           />
         )}
 
@@ -117,6 +124,7 @@ const ParkingSpaceDetailFeature = () => {
                 <Link
                   href={currentParkingSpace.properties.meerInformatie}
                   target="_blank"
+                  variant="inline"
                 >
                   {currentParkingSpace.properties.meerInformatie}
                 </Link>
