@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_AMS_API_ROOT,
+  baseURL: process.env.REACT_APP_API_DATA_AMS_ROOT,
 
   // create an URL with repeated parameters,
   // e.g. ?category=foo&category=bar&category=baz

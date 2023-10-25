@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react'
 
 import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
+import styled from 'styled-components'
 
 import ParkingSpaceDetailFeature from './ParkingSpaceDetailFeature'
 
 import { useTouringcarMapContext } from '../../contexts/MapContext'
 
 const { Overlay } = mapPanelConstants
+
+const StyledMapPanelContent = styled(MapPanelContent)`
+  padding: 0;
+`
 
 const TouringcarMapPanel = () => {
   const { currentParkingSpace, setCurrentParkingSpace } =
@@ -24,17 +29,15 @@ const TouringcarMapPanel = () => {
   if (!currentParkingSpace) return null
 
   return (
-    <MapPanelContent
+    <StyledMapPanelContent
       animate
       stackOrder={currentOverlay === mapPanelConstants.Overlay.Results ? 2 : 1}
       onClose={() => {
         setCurrentParkingSpace(undefined)
       }}
     >
-      {currentParkingSpace && <ParkingSpaceDetailFeature />}
-
-      {!currentParkingSpace && <ParkingSpaceDetailFeature />}
-    </MapPanelContent>
+      <ParkingSpaceDetailFeature />
+    </StyledMapPanelContent>
   )
 }
 

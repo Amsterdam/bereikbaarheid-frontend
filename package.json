@@ -140,8 +140,8 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "$_ run lint",
-      "$_ run test:staged"
+      "npm run lint",
+      "npm run test:staged"
     ]
   },
   "prettier": {

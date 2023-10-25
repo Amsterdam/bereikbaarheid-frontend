@@ -1,3 +1,6 @@
+import { useCallback, useContext } from 'react'
+
+import { MapPanelContext, mapPanelConstants } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
 import getTouringcarParkingSpaces, {
   TouringcarParkingSpace,
@@ -10,6 +13,7 @@ import { TouringcarParkingSpaceMarker } from '../ParkingSpaceMarker/ParkingSpace
 
 export const ParkingSpacesLayer = () => {
   const { activeMapLayers, setCurrentParkingSpace } = useTouringcarMapContext()
+  const { setPositionFromSnapPoint } = useContext(MapPanelContext)
 
   const { isLoading, error, isError, data } = useQuery({
     enabled: true,
@@ -20,11 +24,14 @@ export const ParkingSpacesLayer = () => {
       }),
   })
 
-  const findParkingSpace = (id: number) => {
-    let parkingSpace = data?.features.find(item => item.properties?.id === id)
+  const findParkingSpace = useCallback(
+    (id: number) => {
+      let parkingSpace = data?.features.find(item => item.properties?.id === id)
 
-    setCurrentParkingSpace(parkingSpace)
-  }
+      setCurrentParkingSpace(parkingSpace)
+    },
+    [data?.features, setCurrentParkingSpace]
+  )
 
   const createClusterMarkers = () => {
     return data!.features.map((item: TouringcarParkingSpace) => {
@@ -34,7 +41,10 @@ export const ParkingSpacesLayer = () => {
 
       marker.bindTooltip(tooltipText)
 
-      marker.on('click', () => findParkingSpace(item.properties?.id))
+      marker.on('click', () => {
+        findParkingSpace(item.properties?.id)
+        setPositionFromSnapPoint(mapPanelConstants.SnapPoint.Halfway)
+      })
 
       return marker
     })
