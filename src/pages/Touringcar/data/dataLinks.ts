@@ -1,11 +1,17 @@
-import { getUrl } from 'api/touringcar/parking-spaces'
+import { getUrl as getTouringcarParkingSpacesUrl } from 'api/touringcar/parking-spaces'
+import { getUrl as getTouringcarRoutesMandatoryUrl } from 'api/touringcar/routes-mandatory'
 
 const touringcarParkingSpacesLink = {
-  href: getUrl(),
+  href: getTouringcarParkingSpacesUrl(),
   title: 'Parkeerplekken voor touringcars',
 }
 
-const dataLinks = [touringcarParkingSpacesLink]
+const touringcarRoutesMandatoryLink = {
+  href: getTouringcarRoutesMandatoryUrl(),
+  title: 'Parkeerplekken voor touringcars',
+}
 
-export { touringcarParkingSpacesLink }
+const dataLinks = [touringcarParkingSpacesLink, touringcarRoutesMandatoryLink]
+
+export { touringcarParkingSpacesLink, touringcarRoutesMandatoryLink }
 export default dataLinks
