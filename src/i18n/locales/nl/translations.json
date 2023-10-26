@@ -1,0 +1,44 @@
+{
+  "appTitle": "Bereikbaarheid",
+  "_generic": {
+    "_mapPanel": {
+      "dataSource": "Brondata",
+      "input": "Invoer"
+    }
+  },
+  "_error": {
+    "somethingWentWrong": "Er ging iets fout",
+    "unfortunately": "Helaas",
+    "pageCouldNotBeFound": "De pagina kon niet worden gevonden."
+  },
+  "_pageLicencePlate": {
+    "title": "Bereikbaarheid op kenteken",
+    "titleShort": "Op kenteken",
+    "_mapPanel": {
+      "label": "Voer voertuiggegevens in of bekijk dataverantwoording"
+    }
+  },
+  "_pageRoadObstructions": {
+    "title": "Stremmingen",
+    "roadObstructionsOn": "Stremmingen op",
+    "_mapPanel": {
+      "label": "Voer datum en tijd in of bekijk dataverantwoording"
+    }
+  },
+  "_pageLoadUnload": {
+    "title": "Laden en lossen",
+    "_mapPanel": {
+      "label": "Voer adres en moment in of bekijk dataverantwoording"
+    }
+  },
+  "_pageTouringCar": {
+    "title": "Touringcar (Tour Buzz)",
+    "titleShort": "Touringcar"
+  },
+  "_pageData": {
+    "title": "Databronnen"
+  },
+  "_pageContact": {
+    "title": "Contact en uitleg"
+  }
+}

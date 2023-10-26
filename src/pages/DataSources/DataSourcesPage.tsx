@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 
 import { themeSpacing } from '@amsterdam/asc-ui'
 import { format } from 'date-fns'
+import { useTranslation } from 'react-i18next'
 import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
 import Header from 'shared/components/Header'
 import useAnalytics from 'shared/hooks/useAnalytics'
@@ -25,6 +26,8 @@ const StyledMainContent = styled(MainContent)`
 `
 
 const DataSourcesPage = () => {
+  const { t } = useTranslation()
+
   const { urlTrafficSigns } = useUrlTrafficSigns(DUMMY_VEHICLE)
 
   const dataLinks = [
@@ -42,7 +45,7 @@ const DataSourcesPage = () => {
 
   return (
     <PageWrapper>
-      <Header title="Databronnen" />
+      <Header title={t('_pageData.title')} />
 
       <StyledMainContent data-testid="data-page">
         <DataSourcesBlocks dataLinks={dataLinks} />

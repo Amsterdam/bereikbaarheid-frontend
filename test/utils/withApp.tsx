@@ -1,5 +1,7 @@
+import { I18nextProvider } from 'react-i18next'
 import { createMemoryRouter, RouterProvider } from 'react-router-dom'
 
+import i18n from '../../src/i18n'
 import { ROUTES } from '../../src/routes'
 
 import { withAppContext } from './withAppContext'
@@ -10,5 +12,13 @@ export const withApp = (path: string) => {
     initialEntries: [path],
   })
 
-  return withQueryClient(withAppContext(<RouterProvider router={router} />))
+  i18n.changeLanguage('nl')
+
+  return withQueryClient(
+    withAppContext(
+      <I18nextProvider i18n={i18n}>
+        <RouterProvider router={router} />
+      </I18nextProvider>
+    )
+  )
 }

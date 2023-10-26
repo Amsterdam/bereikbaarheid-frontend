@@ -1,12 +1,10 @@
-import { getMailtoLink } from './email'
+import {
+  QUESTION_BODY,
+  QUESTION_RECIPIENT,
+  QUESTION_SUBJECT,
+} from 'pages/Contact/ContactPage'
 
-const QUESTION_RECIPIENT = 'stadsloket.centrum.vergunningen.dvl@amsterdam.nl'
-const QUESTION_SUBJECT = `Probleem melden of suggestie voor bereikbaarheid.amsterdam.nl`
-const QUESTION_BODY = `Beschrijf zo volledig mogelijk waar je tegenaan loopt:
-  - Om welk onderdeel van de pagina gaat het?
-  - Wat zie je op het scherm als je een probleem ondervindt?
-  - Heb je een suggestie hoe het anders zou kunnen?
-`
+import { getMailtoLink } from './email'
 
 test('correctly formatted mailto link', () => {
   expect(

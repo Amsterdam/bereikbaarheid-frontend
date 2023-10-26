@@ -1,0 +1,35 @@
+{
+  "appTitle": "Accesibilidad",
+  "_generic": {
+    "_mapPanel": {
+      "dataSource": "Fuente de datos",
+      "input": "Aporte"
+    }
+  },
+  "_error": {
+    "somethingWentWrong": "Something went wrong",
+    "unfortunately": "Desafortunadamente",
+    "pageCouldNotBeFound": "The page could not be found."
+  },
+  "_pageLicencePlate": {
+    "title": "Accesibilidad con matrícula",
+    "titleShort": "Con matrícula"
+  },
+  "_pageRoadObstructions": {
+    "title": "Obstrucciones en la carretera",
+    "roadObstructionsOn": "Obstrucciones en"
+  },
+  "_pageLoadUnload": {
+    "title": "Cargar y descargar"
+  },
+  "_pageTouringCar": {
+    "title": "Auto turístico (Tour Buzz)",
+    "titleShort": "Auto turístico"
+  },
+  "_pageData": {
+    "title": "Fuentes de datos"
+  },
+  "_pageContact": {
+    "title": "Contacto y explicación"
+  }
+}

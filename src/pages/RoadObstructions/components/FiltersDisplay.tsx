@@ -12,6 +12,7 @@ import {
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
@@ -49,14 +50,16 @@ const RoadObstructionsFiltersDisplay = ({
   setShowMapFiltersForm,
   ...otherProps
 }: FiltersDisplayProps) => {
+  const { t } = useTranslation()
+
   function showMapFiltersForm() {
     setShowMapFiltersForm(true)
   }
 
   return (
     <MapPanelContent {...otherProps}>
-      <Tabs label="Voer datum en tijd in of bekijk dataverantwoording">
-        <Tab id="input" label="Invoer">
+      <Tabs label={t('_pageRoadObstructions._mapPanel.label')}>
+        <Tab id="input" label={t('_generic._mapPanel.input')}>
           <StyledRow halign="space-between">
             <Column span={12}>
               <Heading as="h3"></Heading>
@@ -106,7 +109,7 @@ const RoadObstructionsFiltersDisplay = ({
           </FiltersContainer>
         </Tab>
 
-        <Tab id="data" label="Brondata">
+        <Tab id="data" label={t('_generic._mapPanel.dataSource')}>
           <ProhibitorySignsPageProvider>
             <DataSourcesAside dataLinks={dataLinks(mapFilters)} />
           </ProhibitorySignsPageProvider>
