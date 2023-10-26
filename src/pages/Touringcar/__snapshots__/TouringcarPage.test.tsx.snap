@@ -212,7 +212,7 @@ Object {
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-jdUcAg jkpnfb bftzyN leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-bddgXz jkpnfb labFtI leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -475,7 +475,7 @@ Object {
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-eIcdZJ cvxYNc"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-jdUcAg ginaLN"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -559,6 +559,42 @@ Object {
                           checked=""
                           class="sc-fUnMCh cQYVve"
                           id="touringcarParkingSpaces"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
+                    <label
+                      class="sc-gFVvzn jmImEg"
+                      for="touringcarRoutesMandatory"
+                    >
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Verplichte routes (&gt; 7,5t)
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb sc-eIcdZJ jstSCP"
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarRoutesMandatory"
                           type="checkbox"
                         />
                       </span>
@@ -842,7 +878,7 @@ Object {
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-jdUcAg jkpnfb bftzyN leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-bddgXz jkpnfb labFtI leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1105,7 +1141,7 @@ Object {
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-eIcdZJ cvxYNc"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-jdUcAg ginaLN"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -1189,6 +1225,42 @@ Object {
                         checked=""
                         class="sc-fUnMCh cQYVve"
                         id="touringcarParkingSpaces"
+                        type="checkbox"
+                      />
+                    </span>
+                  </label>
+                  <label
+                    class="sc-gFVvzn jmImEg"
+                    for="touringcarRoutesMandatory"
+                  >
+                    <span
+                      class="sc-brPLxw dGBiZJ"
+                    >
+                      Verplichte routes (&gt; 7,5t)
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb sc-eIcdZJ jstSCP"
+                    >
+                      <span
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
+                      >
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarRoutesMandatory"
                         type="checkbox"
                       />
                     </span>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoadUnloadPage renders correctly 1`] = `
+exports[`ParkingSpaceDetails renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -38,14 +38,14 @@ Object {
                 <span
                   class="sc-dAlyuH dEvjcu"
                 >
-                  Laden en lossen
+                  Touringcar (Tour Buzz)
                 </span>
               </a>
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-gfoqjT iUsCIO"
                 href="/"
               >
-                Laden en lossen
+                Touringcar (Tour Buzz)
               </a>
             </h1>
             <nav
@@ -98,8 +98,7 @@ Object {
                   class="sc-ejfMa-d fymHSF"
                 >
                   <a
-                    active="true"
-                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/laden-lossen"
                     title="Laden en lossen"
                     variant="blank"
@@ -213,7 +212,7 @@ Object {
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-iowXnY jkpnfb jBjdFB leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-bddgXz jkpnfb labFtI leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -230,12 +229,12 @@ Object {
                 >
                   <div
                     class="leaflet-tile-container leaflet-zoom-animated"
-                    style="z-index: 21; left: 0px; top: 0px;"
+                    style="z-index: 18; left: 0px; top: 0px;"
                   >
                     <img
                       alt=""
                       class="leaflet-tile"
-                      src="https://t4.data.amsterdam.nl/topo_wm_zw/13/4207/2692.png"
+                      src="https://t1.data.amsterdam.nl/topo_wm_light/13/4207/2692.png"
                       style="width: 256px; height: 256px; left: -90px; top: -24px;"
                     />
                   </div>
@@ -245,23 +244,160 @@ Object {
                 class="leaflet-pane leaflet-overlay-pane"
               >
                 <div
-                  class="leaflet-image-layer"
-                  style="z-index: 25; opacity: 1; visibility: hidden;"
-                >
-                  <canvas
-                    class="leaflet-image-layer leaflet-zoom-hide"
-                  />
-                  <canvas
-                    class="leaflet-image-layer leaflet-zoom-hide"
-                    height="0"
-                    style="left: 0px; top: 0px;"
-                    width="0"
-                  />
-                </div>
-                <div
                   class="leaflet-layer "
                   style="z-index: 250;"
                 />
+                <svg
+                  class="leaflet-zoom-animated"
+                  height="0"
+                  pointer-events="none"
+                  style="left: 0px; top: 0px;"
+                  viewBox="0 0 0 0"
+                  width="0"
+                >
+                  <g>
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                  </g>
+                </svg>
               </div>
               <div
                 class="leaflet-pane leaflet-shadow-pane"
@@ -314,7 +450,7 @@ Object {
           </div>
           <div
             class="MapPanelStyle--13h7umc hfJLIU"
-            style="width: 480px;"
+            style="width: 30px;"
           >
             <div
               class="MapPanelContent--10qv8ot dWqMO"
@@ -323,26 +459,26 @@ Object {
                 class="MapDrawerContentStyle--15grfz7 jHdtJb"
               >
                 <div
-                  class="StyledContainer--qabx89 zPppQ"
+                  class="StyledContainer--qabx89 ftUCHE"
                 >
                   <div
                     class="Content--1ku427e jPTlQg"
                     data-testid="map-settings"
                   >
                     <div
-                      aria-label="Voer adres en moment in of bekijk dataverantwoording"
+                      aria-label="Bekijk de berichten, meer routeinformatie of de dataverantwoording"
                       class="sc-eifrsQ dcAOqe"
                       role="tablist"
                     >
                       <button
-                        aria-controls="panel-input"
+                        aria-controls="panel-routeInfo"
                         aria-selected="true"
                         class="sc-lbJcrp jfaesJ"
-                        id="tab-input"
+                        id="tab-routeInfo"
                         role="tab"
                         tabindex="0"
                       >
-                        Invoer
+                        Routeinformatie
                       </button>
                       <button
                         aria-controls="panel-data"
@@ -356,138 +492,18 @@ Object {
                       </button>
                     </div>
                     <div
-                      aria-labelledby="tab-input"
+                      aria-labelledby="tab-routeInfo"
                       class="sc-fKWMtX"
-                      id="panel-input"
+                      id="panel-routeInfo"
                       role="tabpanel"
                       tabindex="0"
                     >
-                      <div
-                        class="sc-hwdzOV dQyAaL"
+                      <br />
+                      <p
+                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
                       >
-                        <div
-                          class="sc-krNlru ISieu"
-                        >
-                          <h3
-                            class="sc-jEACwC LPIJD sc-kOPcWz btvUtM"
-                            style="margin-top: 16px;"
-                          >
-                            Adres
-                          </h3>
-                          <button
-                            class="sc-dcJsrY gIANEL sc-rPWID gnytmG"
-                            data-testid="change-address"
-                          >
-                            wijzig
-                          </button>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-dChVcU bsvXQv"
-                      >
-                        <div
-                          class="sc-hwdzOV juUYFW"
-                        >
-                          <div
-                            class="sc-krNlru ISieu"
-                          >
-                            <p
-                              class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                            >
-                              Geen adres ingesteld
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-hwdzOV dQyAaL sc-gJCZQp kJcekM"
-                      >
-                        <div
-                          class="sc-krNlru ISieu"
-                        >
-                          <h3
-                            class="sc-jEACwC LPIJD sc-kOPcWz btvUtM"
-                          >
-                            Datum en tijd
-                          </h3>
-                          <button
-                            class="sc-dcJsrY gIANEL sc-rPWID gnytmG"
-                            data-testid="change-date-time"
-                          >
-                            wijzig
-                          </button>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-dChVcU bsvXQv"
-                      >
-                        <div
-                          class="sc-hwdzOV juUYFW"
-                        >
-                          <div
-                            class="sc-krNlru bvYAiT"
-                          >
-                            <p
-                              class="sc-jEACwC sc-gFqAkR fFUgok kBZfau"
-                            >
-                              Datum
-                            </p>
-                          </div>
-                          <div
-                            class="sc-krNlru cEegyK"
-                          >
-                            <p
-                              class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                            >
-                              26-10-2023
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="sc-hwdzOV juUYFW"
-                        >
-                          <div
-                            class="sc-krNlru bvYAiT"
-                          >
-                            <p
-                              class="sc-jEACwC sc-gFqAkR fFUgok kBZfau"
-                            >
-                              Van
-                            </p>
-                          </div>
-                          <div
-                            class="sc-krNlru cEegyK"
-                          >
-                            <p
-                              class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                            >
-                              11:00
-                            </p>
-                          </div>
-                        </div>
-                        <div
-                          class="sc-hwdzOV juUYFW"
-                        >
-                          <div
-                            class="sc-krNlru bvYAiT"
-                          >
-                            <p
-                              class="sc-jEACwC sc-gFqAkR fFUgok kBZfau"
-                            >
-                              Tot
-                            </p>
-                          </div>
-                          <div
-                            class="sc-krNlru cEegyK"
-                          >
-                            <p
-                              class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                            >
-                              13:00
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                        Weergave van de aanbevolen en verplichte routes voor touringcars. Let op de doorrijhoogtes.
+                      </p>
                     </div>
                     <div
                       aria-labelledby="tab-data"
@@ -518,7 +534,7 @@ Object {
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="https://data.amsterdam.nl/datasets/D6rMG5CdGBfp2Q/parkeervakken/"
+                              href="v1/touringcars/parkeerplaatsen"
                               target="_blank"
                             >
                               <span
@@ -539,7 +555,7 @@ Object {
                               <span
                                 class="sc-fhzFiK iRpqvs"
                               >
-                                Laad- en losplekken
+                                Parkeerplekken voor touringcars
                               </span>
                             </a>
                           </li>
@@ -548,7 +564,7 @@ Object {
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="v1/road-sections/load-unload/"
+                              href="v1/touringcars/verplichteroutes"
                               target="_blank"
                             >
                               <span
@@ -569,22 +585,11 @@ Object {
                               <span
                                 class="sc-fhzFiK iRpqvs"
                               >
-                                Wegvakken met venstertijden
+                                Parkeerplekken voor touringcars
                               </span>
                             </a>
-                            <sup>
-                              *
-                            </sup>
                           </li>
                         </ul>
-                        <p
-                          class="sc-jEACwC sc-gFqAkR iKBNCE kBZfau"
-                        >
-                          <sup>
-                            *
-                          </sup>
-                          Dit is een beta versie. Het format kan nog veranderen.
-                        </p>
                       </div>
                       <a
                         class="sc-jEACwC gTqerM sc-jxOSlx dqUuuV"
@@ -598,7 +603,7 @@ Object {
               </div>
             </div>
             <button
-              class="sc-dcJsrY ekQDyO Handle--qoocaz hqURud"
+              class="sc-dcJsrY ekQDyO Handle--qoocaz cjiUXM"
               size="32"
               title="Open legenda"
               type="button"
@@ -613,7 +618,7 @@ Object {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="m22.857 32-16-16 16-16 2.9 2.91L12.677 16l13.08 13.09z"
+                    d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
                     fill-rule="evenodd"
                   />
                 </svg>
@@ -621,7 +626,7 @@ Object {
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-lmUcrn dpQcWE"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-jdUcAg ginaLN"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -671,153 +676,80 @@ Object {
                   id="legend"
                 >
                   <div
-                    class="sc-hwdzOV juUYFW"
+                    class="sc-gweoQa iNoOcl"
                   >
-                    <div
-                      class="sc-krNlru ISieu"
+                    <label
+                      class="sc-gFVvzn jmImEg"
+                      for="touringcarParkingSpaces"
                     >
-                      <label
-                        class="sc-gFVvzn xLgwd sc-jlGgGc dZEvOZ"
-                        disabled=""
-                        for="mapLegendLoadUnloadSpaces"
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Parkeren
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb"
                       >
                         <span
-                          class="sc-brPLxw dGBiZJ"
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
                         >
-                          Laad- en losplekken
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
                         </span>
-                        <div
-                          class="sc-gtJxfw jKdFHC"
-                          disabled=""
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarParkingSpaces"
+                          type="checkbox"
                         />
-                        <span
-                          aria-disabled="true"
-                          class="sc-fHjqPf bzXOXV"
-                          disabled=""
-                        >
-                          <span
-                            class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
-                            data-testid="checkboxIcon"
-                            disabled=""
-                          >
-                            <svg
-                              focusable="false"
-                              role="img"
-                              viewBox="0 0 32 32"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
-                                fill-rule="evenodd"
-                              />
-                            </svg>
-                          </span>
-                          <input
-                            checked=""
-                            class="sc-fUnMCh cQYVve"
-                            disabled=""
-                            id="mapLegendLoadUnloadSpaces"
-                            type="checkbox"
-                          />
-                        </span>
-                      </label>
-                    </div>
-                  </div>
-                  <div
-                    class="sc-hwdzOV juUYFW"
-                  >
-                    <div
-                      class="sc-krNlru ISieu"
+                      </span>
+                    </label>
+                    <label
+                      class="sc-gFVvzn jmImEg"
+                      for="touringcarRoutesMandatory"
                     >
-                      <div
-                        class="sc-camqpD JBIs"
+                      <span
+                        class="sc-brPLxw dGBiZJ"
                       >
-                        <label
-                          class="sc-gFVvzn jmImEg"
-                          for="mapLegendRoadSectionsLoadUnload"
+                        Verplichte routes (&gt; 7,5t)
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb sc-eIcdZJ jstSCP"
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
                         >
-                          <span
-                            class="sc-brPLxw dGBiZJ"
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
                           >
-                            Wegvakken
-                          </span>
-                          <span
-                            class="sc-fHjqPf jSNdCb"
-                          >
-                            <span
-                              class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
-                              data-testid="checkboxIcon"
-                            >
-                              <svg
-                                focusable="false"
-                                role="img"
-                                viewBox="0 0 32 32"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
-                                  fill-rule="evenodd"
-                                />
-                              </svg>
-                            </span>
-                            <input
-                              checked=""
-                              class="sc-fUnMCh cQYVve"
-                              id="mapLegendRoadSectionsLoadUnload"
-                              type="checkbox"
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
                             />
-                          </span>
-                        </label>
-                        <div
-                          class="sc-gweoQa iNoOcl"
-                        >
-                          <div
-                            class="sc-gplwa-d hjYTlV"
-                          >
-                            <div
-                              class="sc-cTTdyq OvFcD"
-                            />
-                            <p
-                              class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                            >
-                              <span>
-                                venstertijd tijdens 
-                                <br />
-                                ingestelde tijdvak
-                              </span>
-                            </p>
-                          </div>
-                          <div
-                            class="sc-gplwa-d hjYTlV"
-                          >
-                            <div
-                              class="sc-cTTdyq hXsXUh"
-                            />
-                            <p
-                              class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                            >
-                              <span>
-                                venstertijd tijdens een deel 
-                                <br />
-                                van ingestelde tijdvak
-                              </span>
-                            </p>
-                          </div>
-                          <div
-                            class="sc-gplwa-d hjYTlV"
-                          >
-                            <div
-                              class="sc-cTTdyq lbXQKg"
-                            />
-                            <p
-                              class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                            >
-                              venstertijd valt buiten tijdvak
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                          </svg>
+                        </span>
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarRoutesMandatory"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -923,14 +855,14 @@ Object {
               <span
                 class="sc-dAlyuH dEvjcu"
               >
-                Laden en lossen
+                Touringcar (Tour Buzz)
               </span>
             </a>
             <a
               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-gfoqjT iUsCIO"
               href="/"
             >
-              Laden en lossen
+              Touringcar (Tour Buzz)
             </a>
           </h1>
           <nav
@@ -983,8 +915,7 @@ Object {
                 class="sc-ejfMa-d fymHSF"
               >
                 <a
-                  active="true"
-                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
+                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/laden-lossen"
                   title="Laden en lossen"
                   variant="blank"
@@ -1098,7 +1029,7 @@ Object {
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-iowXnY jkpnfb jBjdFB leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-bddgXz jkpnfb labFtI leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1115,12 +1046,12 @@ Object {
               >
                 <div
                   class="leaflet-tile-container leaflet-zoom-animated"
-                  style="z-index: 21; left: 0px; top: 0px;"
+                  style="z-index: 18; left: 0px; top: 0px;"
                 >
                   <img
                     alt=""
                     class="leaflet-tile"
-                    src="https://t4.data.amsterdam.nl/topo_wm_zw/13/4207/2692.png"
+                    src="https://t1.data.amsterdam.nl/topo_wm_light/13/4207/2692.png"
                     style="width: 256px; height: 256px; left: -90px; top: -24px;"
                   />
                 </div>
@@ -1130,23 +1061,160 @@ Object {
               class="leaflet-pane leaflet-overlay-pane"
             >
               <div
-                class="leaflet-image-layer"
-                style="z-index: 25; opacity: 1; visibility: hidden;"
-              >
-                <canvas
-                  class="leaflet-image-layer leaflet-zoom-hide"
-                />
-                <canvas
-                  class="leaflet-image-layer leaflet-zoom-hide"
-                  height="0"
-                  style="left: 0px; top: 0px;"
-                  width="0"
-                />
-              </div>
-              <div
                 class="leaflet-layer "
                 style="z-index: 250;"
               />
+              <svg
+                class="leaflet-zoom-animated"
+                height="0"
+                pointer-events="none"
+                style="left: 0px; top: 0px;"
+                viewBox="0 0 0 0"
+                width="0"
+              >
+                <g>
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                </g>
+              </svg>
             </div>
             <div
               class="leaflet-pane leaflet-shadow-pane"
@@ -1199,7 +1267,7 @@ Object {
         </div>
         <div
           class="MapPanelStyle--13h7umc hfJLIU"
-          style="width: 480px;"
+          style="width: 30px;"
         >
           <div
             class="MapPanelContent--10qv8ot dWqMO"
@@ -1208,26 +1276,26 @@ Object {
               class="MapDrawerContentStyle--15grfz7 jHdtJb"
             >
               <div
-                class="StyledContainer--qabx89 zPppQ"
+                class="StyledContainer--qabx89 ftUCHE"
               >
                 <div
                   class="Content--1ku427e jPTlQg"
                   data-testid="map-settings"
                 >
                   <div
-                    aria-label="Voer adres en moment in of bekijk dataverantwoording"
+                    aria-label="Bekijk de berichten, meer routeinformatie of de dataverantwoording"
                     class="sc-eifrsQ dcAOqe"
                     role="tablist"
                   >
                     <button
-                      aria-controls="panel-input"
+                      aria-controls="panel-routeInfo"
                       aria-selected="true"
                       class="sc-lbJcrp jfaesJ"
-                      id="tab-input"
+                      id="tab-routeInfo"
                       role="tab"
                       tabindex="0"
                     >
-                      Invoer
+                      Routeinformatie
                     </button>
                     <button
                       aria-controls="panel-data"
@@ -1241,138 +1309,18 @@ Object {
                     </button>
                   </div>
                   <div
-                    aria-labelledby="tab-input"
+                    aria-labelledby="tab-routeInfo"
                     class="sc-fKWMtX"
-                    id="panel-input"
+                    id="panel-routeInfo"
                     role="tabpanel"
                     tabindex="0"
                   >
-                    <div
-                      class="sc-hwdzOV dQyAaL"
+                    <br />
+                    <p
+                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
                     >
-                      <div
-                        class="sc-krNlru ISieu"
-                      >
-                        <h3
-                          class="sc-jEACwC LPIJD sc-kOPcWz btvUtM"
-                          style="margin-top: 16px;"
-                        >
-                          Adres
-                        </h3>
-                        <button
-                          class="sc-dcJsrY gIANEL sc-rPWID gnytmG"
-                          data-testid="change-address"
-                        >
-                          wijzig
-                        </button>
-                      </div>
-                    </div>
-                    <div
-                      class="sc-dChVcU bsvXQv"
-                    >
-                      <div
-                        class="sc-hwdzOV juUYFW"
-                      >
-                        <div
-                          class="sc-krNlru ISieu"
-                        >
-                          <p
-                            class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                          >
-                            Geen adres ingesteld
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="sc-hwdzOV dQyAaL sc-gJCZQp kJcekM"
-                    >
-                      <div
-                        class="sc-krNlru ISieu"
-                      >
-                        <h3
-                          class="sc-jEACwC LPIJD sc-kOPcWz btvUtM"
-                        >
-                          Datum en tijd
-                        </h3>
-                        <button
-                          class="sc-dcJsrY gIANEL sc-rPWID gnytmG"
-                          data-testid="change-date-time"
-                        >
-                          wijzig
-                        </button>
-                      </div>
-                    </div>
-                    <div
-                      class="sc-dChVcU bsvXQv"
-                    >
-                      <div
-                        class="sc-hwdzOV juUYFW"
-                      >
-                        <div
-                          class="sc-krNlru bvYAiT"
-                        >
-                          <p
-                            class="sc-jEACwC sc-gFqAkR fFUgok kBZfau"
-                          >
-                            Datum
-                          </p>
-                        </div>
-                        <div
-                          class="sc-krNlru cEegyK"
-                        >
-                          <p
-                            class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                          >
-                            26-10-2023
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-hwdzOV juUYFW"
-                      >
-                        <div
-                          class="sc-krNlru bvYAiT"
-                        >
-                          <p
-                            class="sc-jEACwC sc-gFqAkR fFUgok kBZfau"
-                          >
-                            Van
-                          </p>
-                        </div>
-                        <div
-                          class="sc-krNlru cEegyK"
-                        >
-                          <p
-                            class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                          >
-                            11:00
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        class="sc-hwdzOV juUYFW"
-                      >
-                        <div
-                          class="sc-krNlru bvYAiT"
-                        >
-                          <p
-                            class="sc-jEACwC sc-gFqAkR fFUgok kBZfau"
-                          >
-                            Tot
-                          </p>
-                        </div>
-                        <div
-                          class="sc-krNlru cEegyK"
-                        >
-                          <p
-                            class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                          >
-                            13:00
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                      Weergave van de aanbevolen en verplichte routes voor touringcars. Let op de doorrijhoogtes.
+                    </p>
                   </div>
                   <div
                     aria-labelledby="tab-data"
@@ -1403,7 +1351,7 @@ Object {
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="https://data.amsterdam.nl/datasets/D6rMG5CdGBfp2Q/parkeervakken/"
+                            href="v1/touringcars/parkeerplaatsen"
                             target="_blank"
                           >
                             <span
@@ -1424,7 +1372,7 @@ Object {
                             <span
                               class="sc-fhzFiK iRpqvs"
                             >
-                              Laad- en losplekken
+                              Parkeerplekken voor touringcars
                             </span>
                           </a>
                         </li>
@@ -1433,7 +1381,7 @@ Object {
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="v1/road-sections/load-unload/"
+                            href="v1/touringcars/verplichteroutes"
                             target="_blank"
                           >
                             <span
@@ -1454,22 +1402,11 @@ Object {
                             <span
                               class="sc-fhzFiK iRpqvs"
                             >
-                              Wegvakken met venstertijden
+                              Parkeerplekken voor touringcars
                             </span>
                           </a>
-                          <sup>
-                            *
-                          </sup>
                         </li>
                       </ul>
-                      <p
-                        class="sc-jEACwC sc-gFqAkR iKBNCE kBZfau"
-                      >
-                        <sup>
-                          *
-                        </sup>
-                        Dit is een beta versie. Het format kan nog veranderen.
-                      </p>
                     </div>
                     <a
                       class="sc-jEACwC gTqerM sc-jxOSlx dqUuuV"
@@ -1483,7 +1420,7 @@ Object {
             </div>
           </div>
           <button
-            class="sc-dcJsrY ekQDyO Handle--qoocaz hqURud"
+            class="sc-dcJsrY ekQDyO Handle--qoocaz cjiUXM"
             size="32"
             title="Open legenda"
             type="button"
@@ -1498,7 +1435,7 @@ Object {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="m22.857 32-16-16 16-16 2.9 2.91L12.677 16l13.08 13.09z"
+                  d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -1506,7 +1443,7 @@ Object {
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-lmUcrn dpQcWE"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-jdUcAg ginaLN"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -1556,153 +1493,80 @@ Object {
                 id="legend"
               >
                 <div
-                  class="sc-hwdzOV juUYFW"
+                  class="sc-gweoQa iNoOcl"
                 >
-                  <div
-                    class="sc-krNlru ISieu"
+                  <label
+                    class="sc-gFVvzn jmImEg"
+                    for="touringcarParkingSpaces"
                   >
-                    <label
-                      class="sc-gFVvzn xLgwd sc-jlGgGc dZEvOZ"
-                      disabled=""
-                      for="mapLegendLoadUnloadSpaces"
+                    <span
+                      class="sc-brPLxw dGBiZJ"
+                    >
+                      Parkeren
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb"
                     >
                       <span
-                        class="sc-brPLxw dGBiZJ"
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
                       >
-                        Laad- en losplekken
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
                       </span>
-                      <div
-                        class="sc-gtJxfw jKdFHC"
-                        disabled=""
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarParkingSpaces"
+                        type="checkbox"
                       />
-                      <span
-                        aria-disabled="true"
-                        class="sc-fHjqPf bzXOXV"
-                        disabled=""
-                      >
-                        <span
-                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
-                          data-testid="checkboxIcon"
-                          disabled=""
-                        >
-                          <svg
-                            focusable="false"
-                            role="img"
-                            viewBox="0 0 32 32"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
-                              fill-rule="evenodd"
-                            />
-                          </svg>
-                        </span>
-                        <input
-                          checked=""
-                          class="sc-fUnMCh cQYVve"
-                          disabled=""
-                          id="mapLegendLoadUnloadSpaces"
-                          type="checkbox"
-                        />
-                      </span>
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="sc-hwdzOV juUYFW"
-                >
-                  <div
-                    class="sc-krNlru ISieu"
+                    </span>
+                  </label>
+                  <label
+                    class="sc-gFVvzn jmImEg"
+                    for="touringcarRoutesMandatory"
                   >
-                    <div
-                      class="sc-camqpD JBIs"
+                    <span
+                      class="sc-brPLxw dGBiZJ"
                     >
-                      <label
-                        class="sc-gFVvzn jmImEg"
-                        for="mapLegendRoadSectionsLoadUnload"
+                      Verplichte routes (&gt; 7,5t)
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb sc-eIcdZJ jstSCP"
+                    >
+                      <span
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
                       >
-                        <span
-                          class="sc-brPLxw dGBiZJ"
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          Wegvakken
-                        </span>
-                        <span
-                          class="sc-fHjqPf jSNdCb"
-                        >
-                          <span
-                            class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
-                            data-testid="checkboxIcon"
-                          >
-                            <svg
-                              focusable="false"
-                              role="img"
-                              viewBox="0 0 32 32"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
-                                fill-rule="evenodd"
-                              />
-                            </svg>
-                          </span>
-                          <input
-                            checked=""
-                            class="sc-fUnMCh cQYVve"
-                            id="mapLegendRoadSectionsLoadUnload"
-                            type="checkbox"
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
                           />
-                        </span>
-                      </label>
-                      <div
-                        class="sc-gweoQa iNoOcl"
-                      >
-                        <div
-                          class="sc-gplwa-d hjYTlV"
-                        >
-                          <div
-                            class="sc-cTTdyq OvFcD"
-                          />
-                          <p
-                            class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                          >
-                            <span>
-                              venstertijd tijdens 
-                              <br />
-                              ingestelde tijdvak
-                            </span>
-                          </p>
-                        </div>
-                        <div
-                          class="sc-gplwa-d hjYTlV"
-                        >
-                          <div
-                            class="sc-cTTdyq hXsXUh"
-                          />
-                          <p
-                            class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                          >
-                            <span>
-                              venstertijd tijdens een deel 
-                              <br />
-                              van ingestelde tijdvak
-                            </span>
-                          </p>
-                        </div>
-                        <div
-                          class="sc-gplwa-d hjYTlV"
-                        >
-                          <div
-                            class="sc-cTTdyq lbXQKg"
-                          />
-                          <p
-                            class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
-                          >
-                            venstertijd valt buiten tijdvak
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                        </svg>
+                      </span>
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarRoutesMandatory"
+                        type="checkbox"
+                      />
+                    </span>
+                  </label>
                 </div>
               </div>
             </div>

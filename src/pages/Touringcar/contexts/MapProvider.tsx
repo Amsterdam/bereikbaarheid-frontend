@@ -3,7 +3,7 @@ import { ReactNode, useReducer, useState } from 'react'
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 
 import { TouringcarMapContext } from './MapContext'
-import { mapLayersReducer, mapLayersInitialState } from './mapLayersReducer'
+import mapLayersReducer, { mapLayersInitialState } from './mapLayersReducer'
 
 type Props = {
   children: ReactNode

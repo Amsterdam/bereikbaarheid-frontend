@@ -1,20 +1,32 @@
-export const touringcarParkingSpacesLayerId = 'touringcarParkingSpaces'
-
-export const mapLayersInitialState = {
-  [touringcarParkingSpacesLayerId]: true,
+enum LayerId {
+  touringcarParkingSpacesLayerId = 'touringcarParkingSpaces',
+  touringcarRoutesMandatoryLayerId = 'touringcarRoutesMandatory',
 }
 
-export const layerIds = [touringcarParkingSpacesLayerId] as const
-
-export type mapLayerActionType = {
+type mapLayerActionType = {
   type: 'TOGGLE'
-  layerId: (typeof layerIds)[number]
+  layerId: LayerId
 }
 
-export const mapLayersReducer = (
+const layerFeatureProps = {
+  [LayerId.touringcarParkingSpacesLayerId]: {
+    color: '#000000',
+  },
+  [LayerId.touringcarRoutesMandatoryLayerId]: {
+    color: '#00a03c',
+    strokeWidth: 6,
+  },
+}
+
+const mapLayersInitialState = {
+  [LayerId.touringcarParkingSpacesLayerId]: true,
+  [LayerId.touringcarRoutesMandatoryLayerId]: true,
+}
+
+function mapLayersReducer(
   state: typeof mapLayersInitialState,
   action: mapLayerActionType
-) => {
+) {
   switch (action.type) {
     case 'TOGGLE':
       return {
@@ -25,3 +37,7 @@ export const mapLayersReducer = (
       return state
   }
 }
+
+export { LayerId as layerIds, layerFeatureProps, mapLayersInitialState }
+export type { mapLayerActionType }
+export default mapLayersReducer

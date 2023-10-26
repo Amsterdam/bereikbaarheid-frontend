@@ -6,7 +6,7 @@ import getTouringcarParkingSpaces, {
   TouringcarParkingSpace,
 } from 'api/touringcar/parking-spaces'
 import { useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
-import { touringcarParkingSpacesLayerId } from 'pages/Touringcar/contexts/mapLayersReducer'
+import { layerIds } from 'pages/Touringcar/contexts/mapLayersReducer'
 import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGroup'
 
 import { TouringcarParkingSpaceMarker } from '../ParkingSpaceMarker/ParkingSpaceMarker'
@@ -58,7 +58,7 @@ export const ParkingSpacesLayer = () => {
     return null
   }
 
-  if (!activeMapLayers[touringcarParkingSpacesLayerId]) return null
+  if (!activeMapLayers[layerIds.touringcarParkingSpacesLayerId]) return null
 
   return <MarkerClusterGroup markers={createClusterMarkers()} />
 }
