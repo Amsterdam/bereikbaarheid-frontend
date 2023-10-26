@@ -8,7 +8,7 @@ import dataLinks from '../data/dataLinks'
 
 interface MapSettingsDisplayProps extends MapPanelContentProps {}
 
-function ParkingSpacesMapSettingsDisplay({
+function TouringcarMapSettingsDisplay({
   ...otherProps
 }: MapSettingsDisplayProps) {
   const { t } = useTranslation()
@@ -39,4 +39,4 @@ function ParkingSpacesMapSettingsDisplay({
   )
 }
 
-export default ParkingSpacesMapSettingsDisplay
+export default TouringcarMapSettingsDisplay

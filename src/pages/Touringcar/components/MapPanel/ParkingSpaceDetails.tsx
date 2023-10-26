@@ -34,7 +34,7 @@ const PaddedContainer = styled.div`
   padding: 1em;
 `
 
-const ParkingSpaceDetailFeature = () => {
+const ParkingSpaceDetails = () => {
   const { currentParkingSpace } = useTouringcarMapContext()
 
   const [imageLoading, setImageLoading] = useState(false)
@@ -139,4 +139,4 @@ const ParkingSpaceDetailFeature = () => {
   )
 }
 
-export default ParkingSpaceDetailFeature
+export default ParkingSpaceDetails

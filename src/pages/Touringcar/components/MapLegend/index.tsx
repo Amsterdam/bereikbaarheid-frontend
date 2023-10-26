@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { MapLegend } from 'shared/components/MapLegend'
 import { LegendItemsWrapper } from 'shared/components/MapLegendStyles'
 
-export const TouringcarParkingSpacesMapLegend = () => {
+function TouringcarMapLegend() {
   const { t } = useTranslation()
   const { activeMapLayers, updateActiveMapLayers } = useTouringcarMapContext()
 
@@ -31,3 +31,5 @@ export const TouringcarParkingSpacesMapLegend = () => {
     </MapLegend>
   )
 }
+
+export default TouringcarMapLegend

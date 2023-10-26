@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { MapPanelContext, ViewerContainer, Zoom } from '@amsterdam/arm-core'
 import styled, { css } from 'styled-components'
 
-import { TouringcarParkingSpacesMapLegend } from './MapLegend'
+import TouringcarMapLegend from './MapLegend'
 
 type StyledViewerContainerProps = {
   leftOffset?: string
@@ -51,7 +51,7 @@ export const TouringcarViewerContainer = ({
           {...otherProps}
           ignoreTransition={draggable}
           bottomRight={<Zoom />}
-          topRight={<TouringcarParkingSpacesMapLegend />}
+          topRight={<TouringcarMapLegend />}
         />
       )}
     </>
