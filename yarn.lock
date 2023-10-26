@@ -5000,6 +5000,7 @@ __metadata:
     jest-canvas-mock: "npm:^2.5.2"
     leaflet: "npm:^1.9.4"
     leaflet.markercluster: "npm:^1.5.3"
+    leaflet.nontiledlayer: "npm:^1.0.9"
     lint-staged: "npm:^14.0.1"
     lodash: "npm:^4.17.21"
     mq-polyfill: "npm:^1.1.8"
@@ -10279,7 +10280,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"leaflet@npm:^1.9.4":
+"leaflet.nontiledlayer@npm:^1.0.9":
+  version: 1.0.9
+  resolution: "leaflet.nontiledlayer@npm:1.0.9"
+  dependencies:
+    leaflet: "npm:^1.6.0"
+  checksum: 8dcd490b56f486f22257d43b3bbdc50e13380258bc653e40c54f76adbc195a5e80da23a4dfc55b16d9bdf4992a971be49f3330fad31632019257c600b181ca61
+  languageName: node
+  linkType: hard
+
+"leaflet@npm:^1.6.0, leaflet@npm:^1.9.4":
   version: 1.9.4
   resolution: "leaflet@npm:1.9.4"
   checksum: f639441dbb7eb9ae3fcd29ffd7d3508f6c6106892441634b0232fafb9ffb1588b05a8244ec7085de2c98b5ed703894df246898477836cfd0ce5b96d4717b5ca1

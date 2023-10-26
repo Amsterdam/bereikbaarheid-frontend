@@ -16,9 +16,9 @@ import { FormLabel } from 'shared/components/FormLabel'
 import ModalBlock from 'shared/components/ModalBlock'
 import styled from 'styled-components'
 
-import { RoadObstructionsFiltersValidationSchema } from './ValidationSchema'
-
 import { RoadObstructionMapFilters } from '../../types/roadObstructionMapFilters'
+
+import { RoadObstructionsFiltersValidationSchema } from './ValidationSchema'
 
 const FormFieldWrapper = styled.div`
   margin-bottom: ${themeSpacing(3)};

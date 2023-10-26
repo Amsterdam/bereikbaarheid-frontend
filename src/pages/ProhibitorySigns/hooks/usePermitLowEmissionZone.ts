@@ -1,7 +1,7 @@
+import { useProhibitorySignsPageContext } from '../contexts/PageContext'
+
 import { useRdwFuelInfo } from './useRdwFuelInfo'
 import { useRdwGeneralInfo } from './useRdwGeneralInfo'
-
-import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 
 /**
  * Determine if a permit for the Low Emission Zone is needed

@@ -1,12 +1,12 @@
 import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
 import { format } from 'date-fns'
 
+import { withAppContext } from '../../../../../test/utils/withAppContext'
+
 import {
   RoadObstructionsFiltersForm,
   RoadObstructionsFiltersFormProps,
 } from './Form'
-
-import { withAppContext } from '../../../../../test/utils/withAppContext'
 
 const defaultFormValues = {
   date: format(new Date(), 'yyyy-MM-dd'),

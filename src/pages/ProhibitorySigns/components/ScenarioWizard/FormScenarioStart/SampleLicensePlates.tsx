@@ -4,9 +4,9 @@ import { Select, themeSpacing } from '@amsterdam/asc-ui'
 import { UseFormSetValue } from 'react-hook-form'
 import styled from 'styled-components'
 
-import { FormScenarioStartInputs } from './Form'
-
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
+
+import { FormScenarioStartInputs } from './Form'
 
 const licensePlates = [
   {

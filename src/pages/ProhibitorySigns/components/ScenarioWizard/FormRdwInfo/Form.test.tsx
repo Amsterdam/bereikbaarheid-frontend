@@ -4,14 +4,14 @@ import { act, screen } from '@testing-library/react'
 import userEvent, { UserEvent } from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 
+import { withPageContext } from '../../../../../../test/utils/prohibitorySigns/withPageContext'
+import { withQueryClient } from '../../../../../../test/utils/withQueryClient'
+import { Vehicle } from '../../../types/vehicle'
+
 import {
   ProhibitorySignsFormScenarioRdwInfo,
   ProhibitorySignsFormScenarioRdwInfoProps,
 } from './Form'
-
-import { withPageContext } from '../../../../../../test/utils/prohibitorySigns/withPageContext'
-import { withQueryClient } from '../../../../../../test/utils/withQueryClient'
-import { Vehicle } from '../../../types/vehicle'
 
 describe('ProhibitorySignsFormScenarioRdwInfo', () => {
   const props: ProhibitorySignsFormScenarioRdwInfoProps = {

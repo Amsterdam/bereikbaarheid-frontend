@@ -9,10 +9,10 @@ import {
 } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
-import { EditFiltersButton, FiltersContainer } from './ScenarioDisplayStyle'
-
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { useRdwGeneralInfo } from '../../hooks/useRdwGeneralInfo'
+
+import { EditFiltersButton, FiltersContainer } from './ScenarioDisplayStyle'
 
 const RdwInfoFiltersContainer = styled(FiltersContainer)`
   > ${styles.RowStyle}.scenario-display-payload {

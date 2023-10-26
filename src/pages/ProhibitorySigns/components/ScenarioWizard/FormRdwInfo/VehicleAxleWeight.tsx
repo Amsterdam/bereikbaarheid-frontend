@@ -1,11 +1,11 @@
 import { ErrorMessage, Input, Label, Paragraph } from '@amsterdam/asc-ui'
 import InputWithSuffix from 'shared/components/InputWithSuffix'
 
-import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
-import { RdwInfoFormColumn, RdwInfoFormRow } from './FormStyle'
-
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
+
+import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
+import { RdwInfoFormColumn, RdwInfoFormRow } from './FormStyle'
 
 const FormRdwInfoVehicleAxleWeight = ({
   errors,

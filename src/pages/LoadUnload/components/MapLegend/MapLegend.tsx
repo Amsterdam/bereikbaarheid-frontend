@@ -3,9 +3,9 @@ import { MapLegend } from 'shared/components/MapLegend'
 import { MapLegendLoadUnloadSpaces } from 'shared/components/MapLegendLoadUnloadSpaces'
 import { loadUnloadSpaces } from 'shared/map/mapLayers'
 
-import { LoadUnloadMapLegendRoadSectionsLoadUnload } from './RoadSectionsLoadUnload'
-
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
+
+import { LoadUnloadMapLegendRoadSectionsLoadUnload } from './RoadSectionsLoadUnload'
 
 export const LoadUnloadMapLegend = () => {
   const { activeMapLayers, updateActiveMapLayers } = useLoadUnloadMapContext()

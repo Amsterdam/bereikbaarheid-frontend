@@ -9,6 +9,9 @@ import {
   topoColorLight,
 } from 'shared/map/mapLayers'
 
+import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
+import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
+
 import ProhibitorySignsLoadUnloadSpacesLayer from './LoadUnloadSpacesLayer'
 import ProhibitorySignsNearestRoadMarker from './NearestRoadMarker'
 import ProhibitorySignsParkingSpaceHighlight from './ParkingSpaceHighlight'
@@ -17,9 +20,6 @@ import ProhibitorySignsRoadNetwork from './RoadNetwork'
 import ProhibitorySignsTrafficSignHighlightMarker from './TrafficSignHighlightMarker'
 import ProhibitorySignsTrafficSignsLayer from './TrafficSignsLayer'
 import ProhibitorySignsWideRoads from './WideRoads'
-
-import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
-import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 
 function selectedBaseLayer(id: string) {
   return [aerialImages, topoBlackWhite, topoColorLight].find(

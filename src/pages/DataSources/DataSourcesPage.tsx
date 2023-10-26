@@ -7,13 +7,13 @@ import Header from 'shared/components/Header'
 import useAnalytics from 'shared/hooks/useAnalytics'
 import styled from 'styled-components'
 
-import DataSourcesBlocks from './components/DataSourcesBlocks'
-
 import loadUnloadLinks from '../LoadUnload/data/dataLinks'
 import { trafficSignsLink } from '../ProhibitorySigns/data/dataLinks'
 import { DUMMY_VEHICLE } from '../ProhibitorySigns/hooks/useRdwGeneralInfo'
 import useUrlTrafficSigns from '../ProhibitorySigns/hooks/useUrlTrafficSigns'
 import obstructionsLinks from '../RoadObstructions/data/dataLinks'
+
+import DataSourcesBlocks from './components/DataSourcesBlocks'
 
 const INITIAL_DATE = format(new Date(), 'yyyy-MM-dd')
 

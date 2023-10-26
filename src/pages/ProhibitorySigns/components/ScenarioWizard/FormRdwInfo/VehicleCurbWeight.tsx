@@ -2,15 +2,15 @@ import { Input, Label, Paragraph } from '@amsterdam/asc-ui'
 import InputWithSuffix from 'shared/components/InputWithSuffix'
 import styled from 'styled-components'
 
+import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
+import { useRdwInfo } from '../../../hooks/useRdwInfo'
+
 import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
 import {
   RdwInfoFormColumn,
   RdwInfoFormLabelHelpText,
   RdwInfoFormRow,
 } from './FormStyle'
-
-import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
-import { useRdwInfo } from '../../../hooks/useRdwInfo'
 
 const StyledFormRow = styled(RdwInfoFormRow)`
   margin-bottom: 0;

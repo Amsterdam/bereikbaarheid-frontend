@@ -4,14 +4,14 @@ import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 
+import { withAppContext } from '../../../../../../test/utils/withAppContext'
+import { withQueryClient } from '../../../../../../test/utils/withQueryClient'
+import ProhibitorySignsPageProvider from '../../../contexts/PageProvider'
+
 import {
   ProhibitorySignsFormScenarioStart,
   ProhibitorySignsFormScenarioStartProps,
 } from './Form'
-
-import { withAppContext } from '../../../../../../test/utils/withAppContext'
-import { withQueryClient } from '../../../../../../test/utils/withQueryClient'
-import ProhibitorySignsPageProvider from '../../../contexts/PageProvider'
 
 describe('ProhibitorySignsFormScenarioStart', () => {
   const props: ProhibitorySignsFormScenarioStartProps = {
