@@ -1,7 +1,7 @@
+import { layerIds } from '../contexts/mapLayersReducer'
+
 import { usePermitHeavyGoodsVehicleZone } from './usePermitHeavyGoodsVehicleZone'
 import { usePermitLowEmissionZone } from './usePermitLowEmissionZone'
-
-import { layerIds } from '../contexts/mapLayersReducer'
 
 export const useActiveRoadNetwork = () => {
   const permitHeavyGoodsVehicleZone = usePermitHeavyGoodsVehicleZone()

@@ -4,11 +4,11 @@ import { act, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 
-import { ProhibitorySignsFormScenarioAddress } from './Form'
-
 import { withAppContext } from '../../../../../../test/utils/withAppContext'
 import { withQueryClient } from '../../../../../../test/utils/withQueryClient'
 import ProhibitorySignsPageProvider from '../../../contexts/PageProvider'
+
+import { ProhibitorySignsFormScenarioAddress } from './Form'
 
 describe('ProhibitorySignsFormScenarioAddress', () => {
   const setup = (children: ReactNode) => {

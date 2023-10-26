@@ -11,9 +11,9 @@ import { useQuery } from '@tanstack/react-query'
 import getPanoramaThumbnail from 'api/panorama/thumbnail'
 import styled from 'styled-components'
 
-import ImageWithLoading from './ImageWithLoading'
-
 import { useTouringcarMapContext } from '../../contexts/MapContext'
+
+import ImageWithLoading from './ImageWithLoading'
 
 const PANORAMA_WIDTH_PX = 450
 const PANORAMA_ASPECT_RATIO = 1.5

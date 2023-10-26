@@ -8,9 +8,9 @@ import {
 } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
-import HeaderMenuItems from './HeaderMenuItems'
-
 import { HEADER_HEIGHT, Z_INDEX_HEADER } from '../../constants'
+
+import HeaderMenuItems from './HeaderMenuItems'
 
 const StyledLogo = styled(AmsterdamLogo)`
   height: 44px;

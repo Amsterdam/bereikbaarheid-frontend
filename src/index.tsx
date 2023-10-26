@@ -3,9 +3,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import App, { isProd } from './App'
-import { createPiwikInstance } from './shared/hooks/useAnalytics'
-
 import './i18n'
+import { createPiwikInstance } from './shared/hooks/useAnalytics'
 
 createPiwikInstance(isProd)
 

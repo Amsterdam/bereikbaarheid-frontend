@@ -120,20 +120,23 @@
           "groups": [
             "builtin",
             "external",
-            "sibling",
+            "internal",
             "parent",
-            "index"
+            "sibling",
+            "index",
+            "object"
           ],
           "pathGroups": [
             {
               "pattern": "react",
-              "group": "external",
+              "group": "builtin",
               "position": "before"
             }
           ],
           "pathGroupsExcludedImportTypes": [
             "builtin"
-          ]
+          ],
+          "warnOnUnassignedImports": true
         }
       ],
       "nonblock-statement-body-position": "error"

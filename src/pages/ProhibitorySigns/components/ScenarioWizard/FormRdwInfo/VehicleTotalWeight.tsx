@@ -9,11 +9,11 @@ import {
 import InputWithSuffix from 'shared/components/InputWithSuffix'
 import styled from 'styled-components'
 
-import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
-import { RdwInfoFormColumn, RdwInfoFormRow } from './FormStyle'
-
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
+
+import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
+import { RdwInfoFormColumn, RdwInfoFormRow } from './FormStyle'
 
 const StyledFormRow = styled(RdwInfoFormRow)`
   border-top: 1px solid ${props => props.theme.colors.tint?.level6};

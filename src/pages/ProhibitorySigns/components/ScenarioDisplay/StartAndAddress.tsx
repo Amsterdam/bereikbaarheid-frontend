@@ -6,9 +6,9 @@ import {
   Row,
 } from '@amsterdam/asc-ui'
 
-import { EditFiltersButton, FiltersContainer } from './ScenarioDisplayStyle'
-
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
+
+import { EditFiltersButton, FiltersContainer } from './ScenarioDisplayStyle'
 
 const ScenarioDisplayStartAndAddress = () => {
   const { setActiveStepWizard, address, setShowScenarioWizard, vehicle } =

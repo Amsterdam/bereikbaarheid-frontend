@@ -1,9 +1,9 @@
+import { useProhibitorySignsPageContext } from '../contexts/PageContext'
+
 import { useRdwAxlesInfo } from './useRdwAxlesInfo'
 import { useRdwFuelInfo } from './useRdwFuelInfo'
 import { useRdwGeneralInfo } from './useRdwGeneralInfo'
 import { useRdwSubcategoryInfo } from './useRdwSubcategoryInfo'
-
-import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 
 export const useRdwInfo = () => {
   const { vehicle } = useProhibitorySignsPageContext()

@@ -13,14 +13,14 @@ import LoadingSpinner from 'shared/components/LoadingSpinner'
 import { ReactComponent as DistanceToDestinationIcon } from 'shared/icons/bootstrap-icon-flag-fill.svg'
 import styled from 'styled-components'
 
+import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
+import { RvvDetailExplanation, RvvDetailToggle } from '../RvvDetail'
+
 import ScenarioDisplayResultIntro from './ResultIntro'
 import ScenarioDisplayResultPermitHeavyGoodsVehicleZone from './ResultPermitHeavyGoodsVehicleZone'
 import ScenarioDisplayResultPermitLowEmissionZone from './ResultPermitLowEmissionZone'
 import ScenarioDisplayResultPermitRVV from './ResultPermitRVV'
 import { FiltersContainer } from './ScenarioDisplayStyle'
-
-import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
-import { RvvDetailExplanation, RvvDetailToggle } from '../RvvDetail'
 
 const HeaderRow = styled(Row)`
   margin-top: ${themeSpacing(4)};
