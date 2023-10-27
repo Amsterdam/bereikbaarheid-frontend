@@ -1,13 +1,15 @@
+import { Email } from '@amsterdam/asc-assets'
 import {
-  Heading,
+  Icon,
   Link,
   List,
   ListItem,
   Paragraph,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { ContentWrapper } from '@amsterdam/asc-ui/lib/components/Alert/AlertStyle'
+import { useTranslation } from 'react-i18next'
 import { RouteIds, getPathTo } from 'routes'
+import { ContentBlock, PretendHeading } from 'shared/components/CompactElements'
 import { getMailtoLink } from 'shared/utils/email'
 import styled from 'styled-components'
 
@@ -35,21 +37,6 @@ const QUESTION_BODY = `Beschrijf zo volledig mogelijk waar je tegenaan loopt:
   - Heb je een suggestie hoe het anders zou kunnen?
 `
 
-const ContentBlock = styled(ContentWrapper)<{ isCompact?: boolean }>`
-  padding-block-end: ${themeSpacing(4)};
-
-  ${props =>
-    props.isCompact
-      ? `&:first-of-type {
-        padding-block-start: 1rem;
-    }`
-      : ''}
-`
-
-const PretendHeading = styled(Heading)<{ isCompact?: boolean }>`
-  ${props => (props.isCompact ? `font-size: 18px;` : '')}
-`
-
 const StyledList = styled(List)`
   margin-bottom: ${themeSpacing(0)};
 `
@@ -58,16 +45,18 @@ const DataSourcesLinks = ({
   dataLinks = [],
   isCompact = false,
 }: DataSourcesBlockProps & DataSourcesLinksBlockProps) => {
+  const { t } = useTranslation()
+
   const dataLinksAll: DataLink[] = [...dataLinks]
 
   return (
     <ContentBlock isCompact={isCompact}>
       <PretendHeading forwardedAs="h2" isCompact={isCompact}>
-        Getoonde data op de kaart
+        {t('_generic._dataSources.dataShownOnMap')}
       </PretendHeading>
 
       <Paragraph gutterBottom={4}>
-        Bekijk en download de getoonde data op de kaart via de volgende links:
+        {t('_generic._dataSources.viewAndDownloadShownDataLinks')}
       </Paragraph>
 
       <StyledList>
@@ -75,7 +64,7 @@ const DataSourcesLinks = ({
           return (
             <ListItem key={index}>
               <Link href={item.href} target="_blank" inList>
-                {item.title}
+                {t(item.title)}
               </Link>
               {item.beta && <sup>*</sup>}
             </ListItem>
@@ -85,7 +74,8 @@ const DataSourcesLinks = ({
 
       {dataLinksAll.find(item => item.beta) && (
         <Paragraph styleAs="small">
-          <sup>*</sup>Dit is een beta versie. Het format kan nog veranderen.
+          <sup>*</sup>
+          {t('_generic._dataSources.betaVersionFormatCanChange')}
         </Paragraph>
       )}
     </ContentBlock>
@@ -93,31 +83,31 @@ const DataSourcesLinks = ({
 }
 
 const DataSourcesRoads = () => {
+  const { t } = useTranslation()
+
   return (
     <ContentBlock>
-      <PretendHeading as="h2">Amsterdams Wegenbestand</PretendHeading>
-
-      <Paragraph>
-        Op{' '}
-        <Link href={URL_ALL_DATA} target="_blank" variant="inline">
-          deze pagina
-        </Link>{' '}
-        kunt u de volledige dataset en de bijbehorende documentatie downloaden.
-      </Paragraph>
+      <PretendHeading as="h2">
+        {t('_generic._dataSources.amsterdamRoadDatabase')}
+      </PretendHeading>
+      <Link href={URL_ALL_DATA} target="_blank" inList>
+        {t('_generic._dataSources.downloadFullDatasetAndDocs')}
+      </Link>{' '}
     </ContentBlock>
   )
 }
 
 const DataSourcesQuestions = ({ isCompact = false }: DataSourcesBlockProps) => {
+  const { t } = useTranslation()
+
   return (
     <ContentBlock>
       <PretendHeading as="h2" isCompact={isCompact}>
-        Vragen?
+        {t('_generic._dataSources.questions')}
       </PretendHeading>
 
       <Paragraph>
-        Heeft u suggesties? Of vragen over het format of het gebruik van de
-        data?{' '}
+        {t('_generic._dataSources.doYouHaveSuggestionsOrQuestions')}{' '}
         <Link
           href={getMailtoLink(
             QUESTION_RECIPIENT,
@@ -127,7 +117,10 @@ const DataSourcesQuestions = ({ isCompact = false }: DataSourcesBlockProps) => {
           target="_blank"
           variant="inline"
         >
-          Laat het ons weten
+          {t('_generic._dataSources.letUsKnow')}
+          <Icon size={18} style={{ margin: '4px 0 0 .25em' }}>
+            <Email />
+          </Icon>
         </Link>
         .
       </Paragraph>
@@ -136,12 +129,14 @@ const DataSourcesQuestions = ({ isCompact = false }: DataSourcesBlockProps) => {
 }
 
 const DataSourcesAside = ({ dataLinks }: DataSourcesLinksBlockProps) => {
+  const { t } = useTranslation()
+
   return (
     <>
       <DataSourcesLinks dataLinks={dataLinks} isCompact={true} />
 
       <Link href={getPathTo(RouteIds.DATA)} variant="inline">
-        Meer over de gebruikte API's en datasets
+        {t('_generic._dataSources.moreAboutUsedApisAndDatasets')}
       </Link>
     </>
   )

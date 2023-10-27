@@ -2,7 +2,7 @@ import { ReactNode, useReducer, useState } from 'react'
 
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 
-import { TouringcarMapContext } from './MapContext'
+import { MapPanelTab, TouringcarMapContext } from './MapContext'
 import mapLayersReducer, { mapLayersInitialState } from './mapLayersReducer'
 
 type Props = {
@@ -19,6 +19,8 @@ export const TouringcarMapProvider = ({ children }: Props) => {
     TouringcarParkingSpace | undefined
   >(undefined)
 
+  const [activeTab, setActiveTab] = useState<MapPanelTab | undefined>(undefined)
+
   const [location, setLocation] = useState<[number, number] | undefined>(
     undefined
   )
@@ -30,6 +32,8 @@ export const TouringcarMapProvider = ({ children }: Props) => {
         updateActiveMapLayers,
         currentParkingSpace,
         setCurrentParkingSpace,
+        activeTab,
+        setActiveTab,
         location,
         setLocation,
       }}

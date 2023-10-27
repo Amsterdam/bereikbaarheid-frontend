@@ -66,9 +66,15 @@ const ParkingSpaceDetails = () => {
     if (currentParkingSpace) {
       ;(async () => {
         setImageLoading(true)
-        await refetch()
+        await refetch({ cancelRefetch: true })
         setImageLoading(false)
+        return
       })()
+    }
+
+    return () => {
+      setImageLoading(false)
+      refetch({ cancelRefetch: true })
     }
   }, [currentParkingSpace, refetch])
 

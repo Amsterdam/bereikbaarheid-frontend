@@ -1,13 +1,22 @@
-import { GeoJSON } from '@amsterdam/arm-core'
+import { useContext } from 'react'
+
+import { GeoJSON, MapPanelContext } from '@amsterdam/arm-core'
+import { SnapPoint } from '@amsterdam/arm-core/lib/components/MapPanel/constants'
 import { useQuery } from '@tanstack/react-query'
 import getTouringcarRoutesMandatory from 'api/touringcar/routes-mandatory'
-import { useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
+import { DomEvent } from 'leaflet'
+import {
+  MapPanelTab,
+  useTouringcarMapContext,
+} from 'pages/Touringcar/contexts/MapContext'
 import {
   layerFeatureProps,
   layerIds,
 } from 'pages/Touringcar/contexts/mapLayersReducer'
 
 export const RoutesMandatoryLayer = () => {
+  const { setCurrentParkingSpace, setActiveTab } = useTouringcarMapContext()
+  const { setPositionFromSnapPoint } = useContext(MapPanelContext)
   const { activeMapLayers } = useTouringcarMapContext()
 
   const { isLoading, error, isError, data } = useQuery({
@@ -39,6 +48,15 @@ export const RoutesMandatoryLayer = () => {
           weight:
             layerFeatureProps[layerIds.touringcarRoutesMandatoryLayerId]
               .strokeWidth,
+        },
+        onEachFeature: (_feature, layer: L.GeoJSON) => {
+          layer.on('click', e => {
+            DomEvent.stopPropagation(e)
+
+            setCurrentParkingSpace(undefined)
+            setActiveTab(MapPanelTab.ROUTE_INFO)
+            setPositionFromSnapPoint(SnapPoint.Halfway)
+          })
         },
       }}
     />

@@ -1,9 +1,21 @@
 {
   "appTitle": "Bereikbaarheid",
   "_generic": {
+    "legend": "Legenda",
     "_mapPanel": {
       "dataSource": "Brondata",
       "input": "Invoer"
+    },
+    "_dataSources": {
+      "dataShownOnMap": "Getoonde data op de kaart",
+      "viewAndDownloadShownDataLinks": "Bekijk en download de getoonde data op de kaart via de volgende links:",
+      "betaVersionFormatCanChange": "Dit is een beta versie. Het format kan nog veranderen.",
+      "moreAboutUsedApisAndDatasets": "Meer over de gebruikte API's en datasets",
+      "amsterdamRoadDatabase": "Amsterdams Wegenbestand",
+      "downloadFullDatasetAndDocs": "Download de volledige dataset en de bijbehorende documentatie",
+      "questions": "Vragen?",
+      "doYouHaveSuggestionsOrQuestions": "Heeft u suggesties? Of vragen over het format of het gebruik van de data?",
+      "letUsKnow": "Laat het ons weten via e-mail"
     }
   },
   "_error": {
@@ -41,7 +53,10 @@
     "_mapPanel": {
       "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
       "messages": "Berichten",
-      "routeInfo": "Routeinformatie"
+      "routeInfo": "Routeinformatie",
+      "recommendedAndMandatoryRoutes": "Aanbevolen en verplichte routes",
+      "displayOfRecommendedAndMandatoryRoutes": "Weergave van de aanbevolen en verplichte routes voor touringcars.",
+      "payAttentionToVerhicleHeights": "Let op de doorrijhoogtes."
     },
     "_legend": {
       "messages": "Berichten",
@@ -52,6 +67,10 @@
       "recommendedRoutes": "Aanbevolen routes",
       "mandatoryRoutes": "Verplichte routes (> 7,5t)",
       "environmentalZone": "Milieuzone"
+    },
+    "_dataSources": {
+      "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
+      "mandatoryRoutes": "Verplichte routes (> 7,5t)"
     }
   },
   "_pageData": {

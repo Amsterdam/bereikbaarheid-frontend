@@ -320,12 +320,22 @@ Object {
                       role="tablist"
                     >
                       <button
-                        aria-controls="panel-routeInfo"
+                        aria-controls="panel-messages"
                         aria-selected="true"
                         class="sc-lbJcrp jfaesJ"
-                        id="tab-routeInfo"
+                        id="tab-messages"
                         role="tab"
                         tabindex="0"
+                      >
+                        Berichten
+                      </button>
+                      <button
+                        aria-controls="panel-routeInfo"
+                        aria-selected="false"
+                        class="sc-lbJcrp gjLVTq"
+                        id="tab-routeInfo"
+                        role="tab"
+                        tabindex="-1"
                       >
                         Routeinformatie
                       </button>
@@ -341,9 +351,9 @@ Object {
                       </button>
                     </div>
                     <div
-                      aria-labelledby="tab-routeInfo"
+                      aria-labelledby="tab-messages"
                       class="sc-fKWMtX"
-                      id="panel-routeInfo"
+                      id="panel-messages"
                       role="tabpanel"
                       tabindex="0"
                     >
@@ -351,7 +361,33 @@ Object {
                       <p
                         class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
                       >
-                        Weergave van de aanbevolen en verplichte routes voor touringcars. Let op de doorrijhoogtes.
+                        Berichten
+                      </p>
+                    </div>
+                    <div
+                      aria-labelledby="tab-routeInfo"
+                      class="sc-fKWMtX"
+                      hidden=""
+                      id="panel-routeInfo"
+                      role="tabpanel"
+                      tabindex="0"
+                    >
+                      <br />
+                      <h2
+                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR fnZuME"
+                      >
+                        Aanbevolen en verplichte routes
+                      </h2>
+                      <p
+                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+                        style="margin-block-end: .5em;"
+                      >
+                        Weergave van de aanbevolen en verplichte routes voor touringcars.
+                      </p>
+                      <p
+                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+                      >
+                        Let op de doorrijhoogtes.
                       </p>
                     </div>
                     <div
@@ -407,6 +443,9 @@ Object {
                                 Parkeerplekken voor touringcars
                               </span>
                             </a>
+                            <sup>
+                              *
+                            </sup>
                           </li>
                           <li
                             class="sc-lcIPJg ddQxr"
@@ -434,11 +473,22 @@ Object {
                               <span
                                 class="sc-fhzFiK iRpqvs"
                               >
-                                Parkeerplekken voor touringcars
+                                Verplichte routes (&gt; 7,5t)
                               </span>
                             </a>
+                            <sup>
+                              *
+                            </sup>
                           </li>
                         </ul>
+                        <p
+                          class="sc-jEACwC sc-gFqAkR iKBNCE kBZfau"
+                        >
+                          <sup>
+                            *
+                          </sup>
+                          Dit is een beta versie. Het format kan nog veranderen.
+                        </p>
                       </div>
                       <a
                         class="sc-jEACwC gTqerM sc-jxOSlx dqUuuV"
@@ -986,12 +1036,22 @@ Object {
                     role="tablist"
                   >
                     <button
-                      aria-controls="panel-routeInfo"
+                      aria-controls="panel-messages"
                       aria-selected="true"
                       class="sc-lbJcrp jfaesJ"
-                      id="tab-routeInfo"
+                      id="tab-messages"
                       role="tab"
                       tabindex="0"
+                    >
+                      Berichten
+                    </button>
+                    <button
+                      aria-controls="panel-routeInfo"
+                      aria-selected="false"
+                      class="sc-lbJcrp gjLVTq"
+                      id="tab-routeInfo"
+                      role="tab"
+                      tabindex="-1"
                     >
                       Routeinformatie
                     </button>
@@ -1007,9 +1067,9 @@ Object {
                     </button>
                   </div>
                   <div
-                    aria-labelledby="tab-routeInfo"
+                    aria-labelledby="tab-messages"
                     class="sc-fKWMtX"
-                    id="panel-routeInfo"
+                    id="panel-messages"
                     role="tabpanel"
                     tabindex="0"
                   >
@@ -1017,7 +1077,33 @@ Object {
                     <p
                       class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
                     >
-                      Weergave van de aanbevolen en verplichte routes voor touringcars. Let op de doorrijhoogtes.
+                      Berichten
+                    </p>
+                  </div>
+                  <div
+                    aria-labelledby="tab-routeInfo"
+                    class="sc-fKWMtX"
+                    hidden=""
+                    id="panel-routeInfo"
+                    role="tabpanel"
+                    tabindex="0"
+                  >
+                    <br />
+                    <h2
+                      class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR fnZuME"
+                    >
+                      Aanbevolen en verplichte routes
+                    </h2>
+                    <p
+                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+                      style="margin-block-end: .5em;"
+                    >
+                      Weergave van de aanbevolen en verplichte routes voor touringcars.
+                    </p>
+                    <p
+                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+                    >
+                      Let op de doorrijhoogtes.
                     </p>
                   </div>
                   <div
@@ -1073,6 +1159,9 @@ Object {
                               Parkeerplekken voor touringcars
                             </span>
                           </a>
+                          <sup>
+                            *
+                          </sup>
                         </li>
                         <li
                           class="sc-lcIPJg ddQxr"
@@ -1100,11 +1189,22 @@ Object {
                             <span
                               class="sc-fhzFiK iRpqvs"
                             >
-                              Parkeerplekken voor touringcars
+                              Verplichte routes (&gt; 7,5t)
                             </span>
                           </a>
+                          <sup>
+                            *
+                          </sup>
                         </li>
                       </ul>
+                      <p
+                        class="sc-jEACwC sc-gFqAkR iKBNCE kBZfau"
+                      >
+                        <sup>
+                          *
+                        </sup>
+                        Dit is een beta versie. Het format kan nog veranderen.
+                      </p>
                     </div>
                     <a
                       class="sc-jEACwC gTqerM sc-jxOSlx dqUuuV"

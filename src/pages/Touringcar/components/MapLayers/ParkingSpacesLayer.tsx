@@ -5,14 +5,18 @@ import { useQuery } from '@tanstack/react-query'
 import getTouringcarParkingSpaces, {
   TouringcarParkingSpace,
 } from 'api/touringcar/parking-spaces'
-import { useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
+import {
+  MapPanelTab,
+  useTouringcarMapContext,
+} from 'pages/Touringcar/contexts/MapContext'
 import { layerIds } from 'pages/Touringcar/contexts/mapLayersReducer'
 import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGroup'
 
 import { TouringcarParkingSpaceMarker } from '../ParkingSpaceMarker/ParkingSpaceMarker'
 
 export const ParkingSpacesLayer = () => {
-  const { activeMapLayers, setCurrentParkingSpace } = useTouringcarMapContext()
+  const { activeMapLayers, setCurrentParkingSpace, setActiveTab } =
+    useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
 
   const { isLoading, error, isError, data } = useQuery({
@@ -42,6 +46,7 @@ export const ParkingSpacesLayer = () => {
       marker.bindTooltip(tooltipText)
 
       marker.on('click', () => {
+        setActiveTab(MapPanelTab.MESSAGES)
         findParkingSpace(item.properties?.id)
         setPositionFromSnapPoint(mapPanelConstants.SnapPoint.Halfway)
       })
