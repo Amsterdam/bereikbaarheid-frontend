@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 
+import { Email } from '@amsterdam/asc-assets'
 import { Button, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
@@ -59,6 +60,7 @@ function ContactPage() {
           <Button
             as="a"
             variant="primary"
+            iconLeft={<Email />}
             href={getMailtoLink(
               FEEDBACK_RECIPIENT,
               FEEDBACK_SUBJECT,
@@ -80,6 +82,7 @@ function ContactPage() {
           <Button
             as="a"
             variant="primary"
+            iconLeft={<Email />}
             href={getMailtoLink(
               QUESTION_RECIPIENT,
               QUESTION_SUBJECT,

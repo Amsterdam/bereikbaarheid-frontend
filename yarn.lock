@@ -4943,8 +4943,9 @@ __metadata:
     react-hook-form: "npm:^7.46.2"
     react-i18next: "npm:^13.3.0"
     react-is: "npm:^18.2.0"
+    react-router: "npm:^6.17.0"
     react-router-dom: "npm:^6.17.0"
-    react-scripts: "npm:5.0.1"
+    react-scripts: "npm:^5.0.1"
     styled-components: "npm:^5.3.11"
     typescript: "npm:^4.9.5"
     zod: "npm:^3.22.2"
@@ -12898,7 +12899,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:6.17.0":
+"react-router@npm:6.17.0, react-router@npm:^6.17.0":
   version: 6.17.0
   resolution: "react-router@npm:6.17.0"
   dependencies:
@@ -12909,7 +12910,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-scripts@npm:5.0.1":
+"react-scripts@npm:^5.0.1":
   version: 5.0.1
   resolution: "react-scripts@npm:5.0.1"
   dependencies:

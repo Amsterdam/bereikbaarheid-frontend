@@ -8,6 +8,7 @@ import {
   themeColor,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 const legendGrey = '#aaa' // @todo refactor to tint level4?
@@ -39,9 +40,11 @@ interface MapLegendProps {
 }
 
 export const MapLegend = ({ children }: MapLegendProps) => {
+  const { t } = useTranslation()
+
   return (
     <MapLegendStyle>
-      <Accordion id="legend" isOpen title="Legenda">
+      <Accordion id="legend" isOpen title={t('_generic.legend')}>
         {children}
       </Accordion>
     </MapLegendStyle>

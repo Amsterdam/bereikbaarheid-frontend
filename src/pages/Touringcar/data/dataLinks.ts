@@ -1,11 +1,19 @@
-import { getUrl } from 'api/touringcar/parking-spaces'
+import { getUrl as getTouringcarParkingSpacesUrl } from 'api/touringcar/parking-spaces'
+import { getUrl as getTouringcarRoutesMandatoryUrl } from 'api/touringcar/routes-mandatory'
 
 const touringcarParkingSpacesLink = {
-  href: getUrl(),
-  title: 'Parkeerplekken voor touringcars',
+  href: getTouringcarParkingSpacesUrl(),
+  title: '_pageTouringcar._dataSources.parkingSpacesForCoaches',
+  beta: true,
 }
 
-const dataLinks = [touringcarParkingSpacesLink]
+const touringcarRoutesMandatoryLink = {
+  href: getTouringcarRoutesMandatoryUrl(),
+  title: '_pageTouringcar._dataSources.mandatoryRoutes',
+  beta: true,
+}
 
-export { touringcarParkingSpacesLink }
+const dataLinks = [touringcarParkingSpacesLink, touringcarRoutesMandatoryLink]
+
+export { touringcarParkingSpacesLink, touringcarRoutesMandatoryLink }
 export default dataLinks

@@ -22,7 +22,7 @@ import styled from 'styled-components'
 
 import TouringcarMapLayers from './components/MapLayers'
 import TouringcarMapPanel from './components/MapPanel'
-import ParkingSpacesMapSettingsDisplay from './components/MapSettingsDisplay'
+import TouringcarMapSettingsDisplay from './components/MapSettingsDisplay'
 import { TouringcarViewerContainer } from './components/ViewerContainer'
 import { TouringcarMapProvider } from './contexts/MapProvider'
 import { TouringcarPageProvider } from './contexts/PageProvider'
@@ -73,8 +73,7 @@ const TouringcarPage = () => {
                 topOffset={HEADER_HEIGHT}
               >
                 <Element>
-                  <ParkingSpacesMapSettingsDisplay />
-
+                  <TouringcarMapSettingsDisplay />
                   <TouringcarMapPanel />
                 </Element>
 

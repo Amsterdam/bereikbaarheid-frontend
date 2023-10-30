@@ -6,6 +6,7 @@ import { oneWayArrows, topoColorLight } from 'shared/map/mapLayers'
 import { useTouringcarPageContext } from '../../contexts/PageContext'
 
 import { ParkingSpacesLayer } from './ParkingSpacesLayer'
+import { RoutesMandatoryLayer } from './RoutesMandatoryLayer'
 
 const TouringcarMapLayers = () => {
   const { address } = useTouringcarPageContext()
@@ -15,6 +16,8 @@ const TouringcarMapLayers = () => {
       <AddressMarker address={address} />
 
       <ParkingSpacesLayer />
+
+      <RoutesMandatoryLayer />
 
       <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />
 

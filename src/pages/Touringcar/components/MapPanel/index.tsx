@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 import { useTouringcarMapContext } from '../../contexts/MapContext'
 
-import ParkingSpaceDetailFeature from './ParkingSpaceDetailFeature'
+import ParkingSpaceDetails from './ParkingSpaceDetails'
 
 const { Overlay } = mapPanelConstants
 
@@ -36,7 +36,7 @@ const TouringcarMapPanel = () => {
         setCurrentParkingSpace(undefined)
       }}
     >
-      <ParkingSpaceDetailFeature />
+      <ParkingSpaceDetails />
     </StyledMapPanelContent>
   )
 }

@@ -213,7 +213,7 @@ Object {
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-lmUcrn jkpnfb jXhYgQ leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-iowXnY jkpnfb jBjdFB leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -375,7 +375,7 @@ Object {
                             Adres
                           </h3>
                           <button
-                            class="sc-dcJsrY gIANEL sc-dChVcU hvSbrt"
+                            class="sc-dcJsrY gIANEL sc-rPWID gnytmG"
                             data-testid="change-address"
                           >
                             wijzig
@@ -383,7 +383,7 @@ Object {
                         </div>
                       </div>
                       <div
-                        class="sc-gJCZQp cslaWx"
+                        class="sc-dChVcU bsvXQv"
                       >
                         <div
                           class="sc-hwdzOV juUYFW"
@@ -400,7 +400,7 @@ Object {
                         </div>
                       </div>
                       <div
-                        class="sc-hwdzOV dQyAaL sc-jwZKMi eBqEeJ"
+                        class="sc-hwdzOV dQyAaL sc-gJCZQp kJcekM"
                       >
                         <div
                           class="sc-krNlru ISieu"
@@ -411,7 +411,7 @@ Object {
                             Datum en tijd
                           </h3>
                           <button
-                            class="sc-dcJsrY gIANEL sc-dChVcU hvSbrt"
+                            class="sc-dcJsrY gIANEL sc-rPWID gnytmG"
                             data-testid="change-date-time"
                           >
                             wijzig
@@ -419,7 +419,7 @@ Object {
                         </div>
                       </div>
                       <div
-                        class="sc-gJCZQp cslaWx"
+                        class="sc-dChVcU bsvXQv"
                       >
                         <div
                           class="sc-hwdzOV juUYFW"
@@ -621,7 +621,7 @@ Object {
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-cTTdyq gbkphE"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-lmUcrn dpQcWE"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -677,7 +677,7 @@ Object {
                       class="sc-krNlru ISieu"
                     >
                       <label
-                        class="sc-gFVvzn xLgwd sc-gtJxfw gjWIIP"
+                        class="sc-gFVvzn xLgwd sc-jlGgGc dZEvOZ"
                         disabled=""
                         for="mapLegendLoadUnloadSpaces"
                       >
@@ -687,7 +687,7 @@ Object {
                           Laad- en losplekken
                         </span>
                         <div
-                          class="sc-jBeBSR gvDbQg"
+                          class="sc-gtJxfw jKdFHC"
                           disabled=""
                         />
                         <span
@@ -772,10 +772,10 @@ Object {
                           class="sc-gweoQa iNoOcl"
                         >
                           <div
-                            class="sc-jlGgGc hTffKD"
+                            class="sc-gplwa-d hjYTlV"
                           >
                             <div
-                              class="sc-gplwa-d kCRgRc"
+                              class="sc-cTTdyq OvFcD"
                             />
                             <p
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -788,10 +788,10 @@ Object {
                             </p>
                           </div>
                           <div
-                            class="sc-jlGgGc hTffKD"
+                            class="sc-gplwa-d hjYTlV"
                           >
                             <div
-                              class="sc-gplwa-d cBYlWu"
+                              class="sc-cTTdyq hXsXUh"
                             />
                             <p
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -804,10 +804,10 @@ Object {
                             </p>
                           </div>
                           <div
-                            class="sc-jlGgGc hTffKD"
+                            class="sc-gplwa-d hjYTlV"
                           >
                             <div
-                              class="sc-gplwa-d gzyxDj"
+                              class="sc-cTTdyq lbXQKg"
                             />
                             <p
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -1098,7 +1098,7 @@ Object {
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-lmUcrn jkpnfb jXhYgQ leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-iowXnY jkpnfb jBjdFB leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1260,7 +1260,7 @@ Object {
                           Adres
                         </h3>
                         <button
-                          class="sc-dcJsrY gIANEL sc-dChVcU hvSbrt"
+                          class="sc-dcJsrY gIANEL sc-rPWID gnytmG"
                           data-testid="change-address"
                         >
                           wijzig
@@ -1268,7 +1268,7 @@ Object {
                       </div>
                     </div>
                     <div
-                      class="sc-gJCZQp cslaWx"
+                      class="sc-dChVcU bsvXQv"
                     >
                       <div
                         class="sc-hwdzOV juUYFW"
@@ -1285,7 +1285,7 @@ Object {
                       </div>
                     </div>
                     <div
-                      class="sc-hwdzOV dQyAaL sc-jwZKMi eBqEeJ"
+                      class="sc-hwdzOV dQyAaL sc-gJCZQp kJcekM"
                     >
                       <div
                         class="sc-krNlru ISieu"
@@ -1296,7 +1296,7 @@ Object {
                           Datum en tijd
                         </h3>
                         <button
-                          class="sc-dcJsrY gIANEL sc-dChVcU hvSbrt"
+                          class="sc-dcJsrY gIANEL sc-rPWID gnytmG"
                           data-testid="change-date-time"
                         >
                           wijzig
@@ -1304,7 +1304,7 @@ Object {
                       </div>
                     </div>
                     <div
-                      class="sc-gJCZQp cslaWx"
+                      class="sc-dChVcU bsvXQv"
                     >
                       <div
                         class="sc-hwdzOV juUYFW"
@@ -1506,7 +1506,7 @@ Object {
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-cTTdyq gbkphE"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-lmUcrn dpQcWE"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -1562,7 +1562,7 @@ Object {
                     class="sc-krNlru ISieu"
                   >
                     <label
-                      class="sc-gFVvzn xLgwd sc-gtJxfw gjWIIP"
+                      class="sc-gFVvzn xLgwd sc-jlGgGc dZEvOZ"
                       disabled=""
                       for="mapLegendLoadUnloadSpaces"
                     >
@@ -1572,7 +1572,7 @@ Object {
                         Laad- en losplekken
                       </span>
                       <div
-                        class="sc-jBeBSR gvDbQg"
+                        class="sc-gtJxfw jKdFHC"
                         disabled=""
                       />
                       <span
@@ -1657,10 +1657,10 @@ Object {
                         class="sc-gweoQa iNoOcl"
                       >
                         <div
-                          class="sc-jlGgGc hTffKD"
+                          class="sc-gplwa-d hjYTlV"
                         >
                           <div
-                            class="sc-gplwa-d kCRgRc"
+                            class="sc-cTTdyq OvFcD"
                           />
                           <p
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -1673,10 +1673,10 @@ Object {
                           </p>
                         </div>
                         <div
-                          class="sc-jlGgGc hTffKD"
+                          class="sc-gplwa-d hjYTlV"
                         >
                           <div
-                            class="sc-gplwa-d cBYlWu"
+                            class="sc-cTTdyq hXsXUh"
                           />
                           <p
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -1689,10 +1689,10 @@ Object {
                           </p>
                         </div>
                         <div
-                          class="sc-jlGgGc hTffKD"
+                          class="sc-gplwa-d hjYTlV"
                         >
                           <div
-                            class="sc-gplwa-d gzyxDj"
+                            class="sc-cTTdyq lbXQKg"
                           />
                           <p
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"

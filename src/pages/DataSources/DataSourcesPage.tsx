@@ -13,6 +13,7 @@ import { trafficSignsLink } from '../ProhibitorySigns/data/dataLinks'
 import { DUMMY_VEHICLE } from '../ProhibitorySigns/hooks/useRdwGeneralInfo'
 import useUrlTrafficSigns from '../ProhibitorySigns/hooks/useUrlTrafficSigns'
 import obstructionsLinks from '../RoadObstructions/data/dataLinks'
+import touringcarLinks from '../Touringcar/data/dataLinks'
 
 import DataSourcesBlocks from './components/DataSourcesBlocks'
 
@@ -38,6 +39,7 @@ const DataSourcesPage = () => {
       timeTo: '23:59',
     }),
     ...loadUnloadLinks,
+    ...touringcarLinks,
   ]
 
   const { trackPageVisit } = useAnalytics()

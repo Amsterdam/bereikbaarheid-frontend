@@ -1,9 +1,21 @@
 {
   "appTitle": "Reachability",
   "_generic": {
+    "legend": "Legend",
     "_mapPanel": {
       "dataSource": "Data source",
       "input": "Input"
+    },
+    "_dataSources": {
+      "dataShownOnMap": "Data shown on map",
+      "viewAndDownloadShownDataLinks": "View and download the data shown on the map from the following links:",
+      "betaVersionFormatCanChange": "This is a beta version. The format can still change.",
+      "moreAboutUsedApisAndDatasets": "More about the use APIs and datasets",
+      "amsterdamRoadDatabase": "Road database of Amsterdam",
+      "downloadFullDatasetAndDocs": "Download the full dataset and its documentation",
+      "questions": "Questions?",
+      "doYouHaveSuggestionsOrQuestions": "Do you have suggestions? Or questions about the format or the data usage?",
+      "letUsKnow": "Let us know with an e-mail"
     }
   },
   "_error": {
@@ -13,14 +25,23 @@
   },
   "_pageLicencePlate": {
     "title": "Reachability by licence plate",
-    "titleShort": "By licence plate"
+    "titleShort": "By licence plate",
+    "_mapPanel": {
+      "label": "Input vehicle data or view the data sources"
+    }
   },
   "_pageRoadObstructions": {
     "title": "Road obstructions",
-    "roadObstructionsOn": "Road obstructions on"
+    "roadObstructionsOn": "Road obstructions on",
+    "_mapPanel": {
+      "label": "Input date and time or view the data sources"
+    }
   },
   "_pageLoadUnload": {
-    "title": "Load and unload"
+    "title": "Load and unload",
+    "_mapPanel": {
+      "label": "Input address, date and time or view the data sources"
+    }
   },
   "_linkTourBuzz": {
     "title": "Coach (Tour Buzz)",
@@ -29,6 +50,14 @@
   "_pageTouringcar": {
     "title": "Coach (Tour Buzz)",
     "titleShort": "Coach",
+    "_mapPanel": {
+      "label": "View messages, extra route information or the data sources",
+      "messages": "Messages",
+      "routeInfo": "Route information",
+      "recommendedAndMandatoryRoutes": "Recommended and mandatory routes",
+      "displayOfRecommendedAndMandatoryRoutes": "View recommended and mandatory routes for coaches.",
+      "payAttentionToVerhicleHeights": "Pay attention to vehicle heights."
+    },
     "_legend": {
       "messages": "Messages",
       "stops": "Stops",
@@ -38,6 +67,10 @@
       "recommendedRoutes": "Recommended routes",
       "mandatoryRoutes": "Mandatory routes (> 7.5t)",
       "environmentalZone": "Environmental zone"
+    },
+    "_dataSources": {
+      "parkingSpacesForCoaches": "Parking spaces for coaches",
+      "mandatoryRoutes": "Mandatory routes (> 7.5t)"
     }
   },
   "_pageData": {

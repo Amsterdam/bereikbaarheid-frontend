@@ -209,7 +209,7 @@ Object {
           </header>
         </div>
         <main
-          class="sc-bfhvDw sc-jdkBTo cMHqqc kwDoeI"
+          class="sc-bfhvDw sc-fmzyuX cMHqqc hBMoWR"
           data-testid="data-page"
         >
           <div
@@ -387,6 +387,72 @@ Object {
                   *
                 </sup>
               </li>
+              <li
+                class="sc-lcIPJg ddQxr"
+              >
+                <a
+                  class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                  href="v1/touringcars/parkeerplaatsen"
+                  target="_blank"
+                >
+                  <span
+                    class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                  >
+                    <svg
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="sc-fhzFiK iRpqvs"
+                  >
+                    Parkeerplekken voor touringcars
+                  </span>
+                </a>
+                <sup>
+                  *
+                </sup>
+              </li>
+              <li
+                class="sc-lcIPJg ddQxr"
+              >
+                <a
+                  class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                  href="v1/touringcars/verplichteroutes"
+                  target="_blank"
+                >
+                  <span
+                    class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                  >
+                    <svg
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="sc-fhzFiK iRpqvs"
+                  >
+                    Verplichte routes (&gt; 7,5t)
+                  </span>
+                </a>
+                <sup>
+                  *
+                </sup>
+              </li>
             </ul>
             <p
               class="sc-jEACwC sc-gFqAkR iKBNCE kBZfau"
@@ -405,21 +471,33 @@ Object {
             >
               Amsterdams Wegenbestand
             </h2>
-            <p
-              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            <a
+              class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+              href="https://data.amsterdam.nl/datasets/YLTyzpWP6Vz2QQ/amsterdams-wegenbestand/"
+              target="_blank"
             >
-              Op
-               
-              <a
-                class="sc-jEACwC gTqerM sc-jxOSlx dqUuuV"
-                href="https://data.amsterdam.nl/datasets/YLTyzpWP6Vz2QQ/amsterdams-wegenbestand/"
-                target="_blank"
+              <span
+                class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
               >
-                deze pagina
-              </a>
-               
-              kunt u de volledige dataset en de bijbehorende documentatie downloaden.
-            </p>
+                <svg
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </span>
+              <span
+                class="sc-fhzFiK iRpqvs"
+              >
+                Download de volledige dataset en de bijbehorende documentatie
+              </span>
+            </a>
+             
           </div>
           <div
             class="sc-imwsjW sc-hoLEA gphTiw jQzsTy"
@@ -439,7 +517,22 @@ Object {
                 href="mailto:b.bussink@amsterdam.nl?subject=Vraag%20over%20data%20van%20bereikbaarheid.amsterdam.nl&body=Beschrijf%20zo%20volledig%20mogelijk%20waar%20je%20tegenaan%20loopt%3A%0A%20%20-%20Welke%20data%20probeer%20je%20te%20downloaden%3F%0A%20%20-%20Als%20je%20een%20probleem%20ondervindt%2C%20welke%20melding%20zie%20je%20op%20het%20scherm%3F%0A%20%20-%20Heb%20je%20een%20suggestie%20hoe%20het%20anders%20zou%20kunnen%3F%0A"
                 target="_blank"
               >
-                Laat het ons weten
+                Laat het ons weten via e-mail
+                <span
+                  class="sc-aXZVg kAivaP"
+                  style="margin: 4px 0px 0px .25em;"
+                >
+                  <svg
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 4v24h32V4H0zm16.12 12.33L6 8h20.06l-9.94 8.33zM11.33 15 4 21.78V8.94L11.33 15zm1.56 1.28 3.24 2.67 3.08-2.58L27.45 24H4.55l8.34-7.72zm7.87-1.2L28 9v12.8l-7.24-6.72z"
+                    />
+                  </svg>
+                </span>
               </a>
               .
             </p>
@@ -653,7 +746,7 @@ Object {
         </header>
       </div>
       <main
-        class="sc-bfhvDw sc-jdkBTo cMHqqc kwDoeI"
+        class="sc-bfhvDw sc-fmzyuX cMHqqc hBMoWR"
         data-testid="data-page"
       >
         <div
@@ -831,6 +924,72 @@ Object {
                 *
               </sup>
             </li>
+            <li
+              class="sc-lcIPJg ddQxr"
+            >
+              <a
+                class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                href="v1/touringcars/parkeerplaatsen"
+                target="_blank"
+              >
+                <span
+                  class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                >
+                  <svg
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="sc-fhzFiK iRpqvs"
+                >
+                  Parkeerplekken voor touringcars
+                </span>
+              </a>
+              <sup>
+                *
+              </sup>
+            </li>
+            <li
+              class="sc-lcIPJg ddQxr"
+            >
+              <a
+                class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                href="v1/touringcars/verplichteroutes"
+                target="_blank"
+              >
+                <span
+                  class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                >
+                  <svg
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="sc-fhzFiK iRpqvs"
+                >
+                  Verplichte routes (&gt; 7,5t)
+                </span>
+              </a>
+              <sup>
+                *
+              </sup>
+            </li>
           </ul>
           <p
             class="sc-jEACwC sc-gFqAkR iKBNCE kBZfau"
@@ -849,21 +1008,33 @@ Object {
           >
             Amsterdams Wegenbestand
           </h2>
-          <p
-            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          <a
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+            href="https://data.amsterdam.nl/datasets/YLTyzpWP6Vz2QQ/amsterdams-wegenbestand/"
+            target="_blank"
           >
-            Op
-             
-            <a
-              class="sc-jEACwC gTqerM sc-jxOSlx dqUuuV"
-              href="https://data.amsterdam.nl/datasets/YLTyzpWP6Vz2QQ/amsterdams-wegenbestand/"
-              target="_blank"
+            <span
+              class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
             >
-              deze pagina
-            </a>
-             
-            kunt u de volledige dataset en de bijbehorende documentatie downloaden.
-          </p>
+              <svg
+                focusable="false"
+                role="img"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <span
+              class="sc-fhzFiK iRpqvs"
+            >
+              Download de volledige dataset en de bijbehorende documentatie
+            </span>
+          </a>
+           
         </div>
         <div
           class="sc-imwsjW sc-hoLEA gphTiw jQzsTy"
@@ -883,7 +1054,22 @@ Object {
               href="mailto:b.bussink@amsterdam.nl?subject=Vraag%20over%20data%20van%20bereikbaarheid.amsterdam.nl&body=Beschrijf%20zo%20volledig%20mogelijk%20waar%20je%20tegenaan%20loopt%3A%0A%20%20-%20Welke%20data%20probeer%20je%20te%20downloaden%3F%0A%20%20-%20Als%20je%20een%20probleem%20ondervindt%2C%20welke%20melding%20zie%20je%20op%20het%20scherm%3F%0A%20%20-%20Heb%20je%20een%20suggestie%20hoe%20het%20anders%20zou%20kunnen%3F%0A"
               target="_blank"
             >
-              Laat het ons weten
+              Laat het ons weten via e-mail
+              <span
+                class="sc-aXZVg kAivaP"
+                style="margin: 4px 0px 0px .25em;"
+              >
+                <svg
+                  focusable="false"
+                  role="img"
+                  viewBox="0 0 32 32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 4v24h32V4H0zm16.12 12.33L6 8h20.06l-9.94 8.33zM11.33 15 4 21.78V8.94L11.33 15zm1.56 1.28 3.24 2.67 3.08-2.58L27.45 24H4.55l8.34-7.72zm7.87-1.2L28 9v12.8l-7.24-6.72z"
+                  />
+                </svg>
+              </span>
             </a>
             .
           </p>

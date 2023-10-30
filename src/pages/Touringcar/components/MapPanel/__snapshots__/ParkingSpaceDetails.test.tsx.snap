@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TouringcarPage renders correctly 1`] = `
+exports[`ParkingSpaceDetails renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -247,6 +247,157 @@ Object {
                   class="leaflet-layer "
                   style="z-index: 250;"
                 />
+                <svg
+                  class="leaflet-zoom-animated"
+                  height="0"
+                  pointer-events="none"
+                  style="left: 0px; top: 0px;"
+                  viewBox="0 0 0 0"
+                  width="0"
+                >
+                  <g>
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                    <path
+                      class="leaflet-interactive"
+                      d="M0 0"
+                      fill="none"
+                      stroke="#00a03c"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="6"
+                    />
+                  </g>
+                </svg>
               </div>
               <div
                 class="leaflet-pane leaflet-shadow-pane"
@@ -938,6 +1089,157 @@ Object {
                 class="leaflet-layer "
                 style="z-index: 250;"
               />
+              <svg
+                class="leaflet-zoom-animated"
+                height="0"
+                pointer-events="none"
+                style="left: 0px; top: 0px;"
+                viewBox="0 0 0 0"
+                width="0"
+              >
+                <g>
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                  <path
+                    class="leaflet-interactive"
+                    d="M0 0"
+                    fill="none"
+                    stroke="#00a03c"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="6"
+                  />
+                </g>
+              </svg>
             </div>
             <div
               class="leaflet-pane leaflet-shadow-pane"
