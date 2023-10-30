@@ -3,11 +3,11 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
-import CardsMenu, { CARD_WIDTH_PX } from './components/CardsMenu'
-
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import Header from '../../shared/components/Header'
 import useAnalytics from '../../shared/hooks/useAnalytics'
+
+import CardsMenu, { CARD_WIDTH_PX } from './components/CardsMenu'
 
 const GRID_GAP_PX = 32
 

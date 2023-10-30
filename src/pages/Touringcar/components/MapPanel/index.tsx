@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react'
 import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
 import styled from 'styled-components'
 
-import ParkingSpaceDetailFeature from './ParkingSpaceDetailFeature'
-
 import { useTouringcarMapContext } from '../../contexts/MapContext'
+
+import ParkingSpaceDetailFeature from './ParkingSpaceDetailFeature'
 
 const { Overlay } = mapPanelConstants
 

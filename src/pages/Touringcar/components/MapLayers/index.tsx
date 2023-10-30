@@ -3,9 +3,9 @@ import { TileLayer } from '@amsterdam/react-maps'
 import { AddressMarker } from 'shared/components/MapLayers/AddressMarker'
 import { oneWayArrows, topoColorLight } from 'shared/map/mapLayers'
 
-import { ParkingSpacesLayer } from './ParkingSpacesLayer'
-
 import { useTouringcarPageContext } from '../../contexts/PageContext'
+
+import { ParkingSpacesLayer } from './ParkingSpacesLayer'
 
 const TouringcarMapLayers = () => {
   const { address } = useTouringcarPageContext()

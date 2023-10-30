@@ -8,11 +8,11 @@ import { Z_INDEX_MODAL } from 'shared/constants'
 import { getGeneratedPath } from 'shared/utils/path'
 import { Address } from 'types/address'
 
+import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
+
 import { ProhibitorySignsFormScenarioRdwInfo } from './FormRdwInfo'
 import { ProhibitorySignsFormScenarioAddress } from './FormScenarioAddress'
 import { ProhibitorySignsFormScenarioStart } from './FormScenarioStart'
-
-import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 
 const AnimatedModalBlock = animated(ModalBlock)
 

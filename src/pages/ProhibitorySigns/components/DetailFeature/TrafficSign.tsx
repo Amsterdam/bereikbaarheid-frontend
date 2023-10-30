@@ -13,9 +13,6 @@ import { RouteIds } from 'routes'
 import { getGeneratedPath } from 'shared/utils/path'
 import styled from 'styled-components'
 
-import { PropertiesContainer } from './DetailFeatureStyles'
-import ProhibitorySignsDetailFeatureTrafficSignImage from './TrafficSignImage'
-
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import {
@@ -23,6 +20,9 @@ import {
   RvvDetailExplanation,
   RvvDetailToggle,
 } from '../RvvDetail'
+
+import { PropertiesContainer } from './DetailFeatureStyles'
+import ProhibitorySignsDetailFeatureTrafficSignImage from './TrafficSignImage'
 
 const AdditionalInfo = styled.div`
   border: 1px solid ${props => props.theme.colors.tint?.level5};

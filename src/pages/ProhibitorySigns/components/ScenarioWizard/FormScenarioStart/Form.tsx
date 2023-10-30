@@ -18,9 +18,6 @@ import InputWithSuffix from 'shared/components/InputWithSuffix'
 import styled from 'styled-components'
 import { z } from 'zod'
 
-import { FormScenarioStartSampleLicensePlates } from './SampleLicensePlates'
-import { FormScenarioStartValidationSchema } from './ValidationSchema'
-
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { Vehicle } from '../../../types/vehicle'
 import {
@@ -28,6 +25,9 @@ import {
   FormInputLicensePlateWidth,
 } from '../FormInputLicensePlate/Style'
 import ScenarioWizardNav from '../ScenarioWizardNav'
+
+import { FormScenarioStartSampleLicensePlates } from './SampleLicensePlates'
+import { FormScenarioStartValidationSchema } from './ValidationSchema'
 
 const FormFieldWrapper = styled.div`
   margin-bottom: ${themeSpacing(3)};

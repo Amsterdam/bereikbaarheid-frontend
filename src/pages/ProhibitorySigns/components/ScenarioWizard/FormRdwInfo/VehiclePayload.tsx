@@ -4,15 +4,15 @@ import { ErrorMessage, Input, Label, Paragraph } from '@amsterdam/asc-ui'
 import { FieldValues, UseFormSetValue } from 'react-hook-form'
 import InputWithSuffix from 'shared/components/InputWithSuffix'
 
+import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
+import { useRdwInfo } from '../../../hooks/useRdwInfo'
+
 import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
 import {
   RdwInfoFormColumn,
   RdwInfoFormLabelHelpText,
   RdwInfoFormRow,
 } from './FormStyle'
-
-import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
-import { useRdwInfo } from '../../../hooks/useRdwInfo'
 
 interface FormRdwInfoVehiclePayloadProps<TFormValues extends FieldValues>
   extends FormRdwInfoInputProps<TFormValues> {

@@ -2,10 +2,10 @@ import { Paragraph } from '@amsterdam/asc-ui'
 import endsWith from 'lodash/endsWith'
 import styled from 'styled-components'
 
-import { ImageContainer, Image } from './DetailFeatureStyles'
-
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { trafficSignBackgrounds } from '../TrafficSignMarker/backgrounds'
+
+import { ImageContainer, Image } from './DetailFeatureStyles'
 
 const imageTextPadding: Record<string, string> = {
   c17: '12px',

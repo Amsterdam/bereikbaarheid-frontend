@@ -4,12 +4,12 @@ import {
   LegendItemsWrapper,
 } from 'shared/components/MapLegendStyles'
 
-import { ProhibitorySignsMapLegendTrafficSignsLegendItem as LegendItem } from './TrafficSignsLegendItem'
-
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { trafficSignBackgrounds } from '../TrafficSignMarker/backgrounds'
+
+import { ProhibitorySignsMapLegendTrafficSignsLegendItem as LegendItem } from './TrafficSignsLegendItem'
 
 const ProhibitorySignsMapLegendTrafficSigns = () => {
   const { activeMapLayers, updateActiveMapLayers } =

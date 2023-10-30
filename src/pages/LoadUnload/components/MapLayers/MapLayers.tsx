@@ -4,11 +4,11 @@ import { HighlightedFeatureLayer } from 'shared/components/HighlightedFeatureLay
 import { AddressMarker } from 'shared/components/MapLayers/AddressMarker'
 import { oneWayArrows, topoBlackWhite } from 'shared/map/mapLayers'
 
-import { LoadUnloadLoadUnloadSpacesLayer } from './LoadUnloadSpacesLayer'
-import { LoadUnloadRoadSectionsLoadUnloadLayer } from './RoadSectionsLoadUnloadLayer'
-
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
 import { useLoadUnloadPageContext } from '../../contexts/PageContext'
+
+import { LoadUnloadLoadUnloadSpacesLayer } from './LoadUnloadSpacesLayer'
+import { LoadUnloadRoadSectionsLoadUnloadLayer } from './RoadSectionsLoadUnloadLayer'
 
 export const LoadUnloadMapLayers = () => {
   const { detailFeature } = useLoadUnloadMapContext()

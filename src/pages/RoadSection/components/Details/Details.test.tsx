@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react'
 
-import { RoadSectionDetails } from './Details'
-
 import { withAppContext } from '../../../../../test/utils/withAppContext'
+
+import { RoadSectionDetails } from './Details'
 
 describe('RoadSectionDetails', () => {
   const roadSectionObstructions = require('../../../../../test/mocks/bereikbaarheid/road-elements/241115-withRoadObstructions.json')
