@@ -19,14 +19,15 @@ function TouringcarMapSettingsDisplay({
   return (
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label={t('_pageTouringcar._mapPanel.label')} activeTab={activeTab}>
-        <Tab
+        {/* TODO: show tab when API fetch is ready */}
+        {/* <Tab
           id={MapPanelTab.MESSAGES}
           label={t('_pageTouringcar._mapPanel.messages')}
           onClick={() => setActiveTab(MapPanelTab.MESSAGES)}
         >
           <br />
           <Paragraph>Berichten</Paragraph>
-        </Tab>
+        </Tab> */}
 
         <Tab
           id={MapPanelTab.ROUTE_INFO}

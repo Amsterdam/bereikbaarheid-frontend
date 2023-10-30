@@ -471,22 +471,12 @@ Object {
                       role="tablist"
                     >
                       <button
-                        aria-controls="panel-messages"
+                        aria-controls="panel-routeInfo"
                         aria-selected="true"
                         class="sc-lbJcrp jfaesJ"
-                        id="tab-messages"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        Berichten
-                      </button>
-                      <button
-                        aria-controls="panel-routeInfo"
-                        aria-selected="false"
-                        class="sc-lbJcrp gjLVTq"
                         id="tab-routeInfo"
                         role="tab"
-                        tabindex="-1"
+                        tabindex="0"
                       >
                         Routeinformatie
                       </button>
@@ -502,23 +492,8 @@ Object {
                       </button>
                     </div>
                     <div
-                      aria-labelledby="tab-messages"
-                      class="sc-fKWMtX"
-                      id="panel-messages"
-                      role="tabpanel"
-                      tabindex="0"
-                    >
-                      <br />
-                      <p
-                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                      >
-                        Berichten
-                      </p>
-                    </div>
-                    <div
                       aria-labelledby="tab-routeInfo"
                       class="sc-fKWMtX"
-                      hidden=""
                       id="panel-routeInfo"
                       role="tabpanel"
                       tabindex="0"
@@ -1338,22 +1313,12 @@ Object {
                     role="tablist"
                   >
                     <button
-                      aria-controls="panel-messages"
+                      aria-controls="panel-routeInfo"
                       aria-selected="true"
                       class="sc-lbJcrp jfaesJ"
-                      id="tab-messages"
-                      role="tab"
-                      tabindex="0"
-                    >
-                      Berichten
-                    </button>
-                    <button
-                      aria-controls="panel-routeInfo"
-                      aria-selected="false"
-                      class="sc-lbJcrp gjLVTq"
                       id="tab-routeInfo"
                       role="tab"
-                      tabindex="-1"
+                      tabindex="0"
                     >
                       Routeinformatie
                     </button>
@@ -1369,23 +1334,8 @@ Object {
                     </button>
                   </div>
                   <div
-                    aria-labelledby="tab-messages"
-                    class="sc-fKWMtX"
-                    id="panel-messages"
-                    role="tabpanel"
-                    tabindex="0"
-                  >
-                    <br />
-                    <p
-                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                    >
-                      Berichten
-                    </p>
-                  </div>
-                  <div
                     aria-labelledby="tab-routeInfo"
                     class="sc-fKWMtX"
-                    hidden=""
                     id="panel-routeInfo"
                     role="tabpanel"
                     tabindex="0"
