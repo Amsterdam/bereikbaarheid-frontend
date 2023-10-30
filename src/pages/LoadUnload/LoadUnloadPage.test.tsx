@@ -10,6 +10,8 @@ describe('LoadUnloadPage', () => {
 
   const loadUnloadData = require('../../../test/mocks/bereikbaarheid/road-sections/load-unload/data.json')
 
+  jest.setSystemTime(new Date('2023-10-20T10:58:17.683Z'))
+
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('LOAD_UNLOAD_PAGE'))
     const page = await withApp(pathToPage)
