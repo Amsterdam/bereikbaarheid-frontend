@@ -38,7 +38,7 @@ const ContentBlock = styled.div`
   padding-block-end: ${themeSpacing(8)};
 `
 
-const ContactPage = () => {
+function ContactPage() {
   const { t } = useTranslation()
 
   const { trackPageVisit } = useAnalytics()

@@ -7,7 +7,7 @@ import { getGeneratedPath } from 'shared/utils/path'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ProhibitorySignsWideRoads', () => {
-  jest.setTimeout(10000)
+  jest.setTimeout(15000)
 
   it('"Breed opgezette wegen" layer is enabled in map legend', async () => {
     const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)

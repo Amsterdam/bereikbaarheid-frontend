@@ -15,6 +15,7 @@ import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
 import Header from 'shared/components/Header'
 import { HEADER_HEIGHT } from 'shared/constants'
 import useAnalytics from 'shared/hooks/useAnalytics'
+import { useDocumentTitle } from 'shared/hooks/useDocumentTitle'
 import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
 import { MapStyle } from 'shared/map/mapStyle'
 import styled from 'styled-components'
@@ -41,6 +42,7 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
 
 const ProhibitorySignsPage = () => {
   const { t } = useTranslation()
+  useDocumentTitle(t('_pageLicencePlate.title'))
 
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })

@@ -1,0 +1,204 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.95868600129599, 52.372501004141576]
+      },
+      "properties": {
+        "id": 1,
+        "omschrijving": "P1: P+R Zeeburg",
+        "bijzonderheden": "Zuiderzeeweg 46A. Tarief: 1-3H: € 7,50 | >1H: €2,50 | 24H: € 22,50.",
+        "plaatsen": "20 bussen",
+        "meerInformatie": "http://www.amsterdam.nl/parkeren",
+        "url": "http://www.amsterdam.nl/parkeren"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.882071001218809, 52.35869800413375]
+      },
+      "properties": {
+        "id": 2,
+        "omschrijving": "P3: Museumplein",
+        "bijzonderheden": "Paulus Potterstraat 1. 1H: € 11,50 | 24H: €100 | 15% korting voor bestemmingen Museumplein. 15% korting/discount/réduction/rabatt bestemmingen/destinations/destinationen Museumplein",
+        "plaatsen": "24 bussen",
+        "meerInformatie": "http://www.qpark.nl",
+        "url": "http://www.qpark.nl"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.91400000125115, 52.368079004139126]
+      },
+      "properties": {
+        "id": 3,
+        "omschrijving": "P4: ARTIS",
+        "bijzonderheden": "Plantage Kerklaan 38-40. Bezoekers/visitors/besuchers/visiteurs ARTIS: €0 | overig/remaining/andere/autre: 1H: €4 (1 november - 1 maart)",
+        "plaatsen": "18 bussen",
+        "meerInformatie": "http://www.artis.nl",
+        "url": "http://www.artis.nl"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.904387001241635, 52.369914004140284]
+      },
+      "properties": {
+        "id": 4,
+        "omschrijving": "P5: Gassan Diamonds",
+        "bijzonderheden": "Nieuwe Uilenburgerstraat 173-175. Alleen toegankelijk bezoekers / Only accessible visitors / Nur für besucher / Uniquement accessible visiteurs Gassan Diamonds.",
+        "plaatsen": "20 bussen",
+        "meerInformatie": "http://www.gassan.com",
+        "url": "http://www.gassan.com"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.91655300125415, 52.37758000414476]
+      },
+      "properties": {
+        "id": 5,
+        "omschrijving": "P2: Passenger Terminal Amsterdam (PTA)",
+        "bijzonderheden": "Piet Heinkade 27. 1H: €5 | 24H: €60",
+        "plaatsen": "41 bussen ",
+        "meerInformatie": "http://www.ptamsterdam.nl",
+        "url": "http://www.ptamsterdam.nl"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.891534001227358, 52.33977400412247]
+      },
+      "properties": {
+        "id": 6,
+        "omschrijving": "P6: RAI",
+        "bijzonderheden": "Parkeerterrein P6 RAI. 24H: €45/1-1-2019:€50 | Beschikbaarheid: www.tourbuzz.nl",
+        "plaatsen": "20 bussen",
+        "meerInformatie": "https://www.rai.nl/nl/contact-bereikbaarheid-en-parkeren/parkeren-bij-rai-amster...",
+        "url": "https://www.rai.nl/nl/contact-bereikbaarheid-en-parkeren/parkeren-bij-rai-amsterdam/"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.933333001268026, 52.316292004108384]
+      },
+      "properties": {
+        "id": 7,
+        "omschrijving": "P8: P-plus ArenA",
+        "bijzonderheden": "Passage 100, 1101 AX Duivendrecht. 24H: €22,50 | Tijdens evenementen / During events / Bei Veranstaltungen / Lors d'événements: 24H: €35",
+        "plaatsen": "60 bussen",
+        "meerInformatie": "Parkeren via Joe Park",
+        "url": "http://www.joepark.nl"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.932904001267658, 52.31758300410913]
+      },
+      "properties": {
+        "id": 8,
+        "omschrijving": "P10: P-bus ArenA ",
+        "bijzonderheden": "De Passage 14, 1101 AX Duivendrecht. Tarief / Tariff: € 22,50 p.d. Tijdens evenementen / During events: €35,-p.d. www.joepark.nl",
+        "plaatsen": "20",
+        "meerInformatie": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.846644001184731, 52.38569800414973]
+      },
+      "properties": {
+        "id": 9,
+        "omschrijving": "P11: Golden Tulip A'dam West",
+        "bijzonderheden": " Molenwerf 1. Tarief: ma-za van 09:00 - 21:00, € 2,40 per uur.",
+        "plaatsen": "3 bussen",
+        "meerInformatie": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.81211900115059, 52.39240700415373]
+      },
+      "properties": {
+        "id": 10,
+        "omschrijving": "P7: Sloterdijk Basisweg",
+        "bijzonderheden": "Gratis. beschikbaar per medio 1 mei 2018",
+        "plaatsen": "11",
+        "meerInformatie": "",
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.948075001285214, 52.36866100413939]
+      },
+      "properties": {
+        "id": 11,
+        "omschrijving": "P12: The Harbour Club",
+        "bijzonderheden": "Cruquiusweg 67, 1H: €7 | 24H: €25. Mogelijkheid tot schoonmaak",
+        "plaatsen": "20 bussen",
+        "meerInformatie": "http://www.theharbourclub.com/amsterdam-oost/",
+        "url": "http://www.theharbourclub.com/amsterdam-oost/"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "parkeerplaatsen.12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.928570001265141, 52.35615200413206]
+      },
+      "properties": {
+        "id": 12,
+        "omschrijving": "P14: Sportfondsenbad Amsterdam-Oost",
+        "bijzonderheden": "Oranje-Vrijstaatkade 11B. 1H: €3. (ma-za:9:00 uur- 21:00 uur)",
+        "plaatsen": "3 bussen / coaches",
+        "meerInformatie": "",
+        "url": ""
+      }
+    }
+  ],
+  "_links": []
+}

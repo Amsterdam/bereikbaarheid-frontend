@@ -8,7 +8,7 @@ import {
 } from 'api/bereikbaarheid/road-sections/load-unload'
 import { DomEvent, PathOptions } from 'leaflet'
 import type L from 'leaflet'
-import { useDateToDayOfTheWeek } from 'shared/hooks/useDateToDayOfTheWeek'
+import { getDayOfTheWeekInDutch } from 'shared/utils/dateTime'
 import { useTheme } from 'styled-components'
 
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
@@ -19,7 +19,7 @@ import { useLoadUnloadPageContext } from '../../contexts/PageContext'
 export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
   const { activeMapLayers, setDetailFeature } = useLoadUnloadMapContext()
   const { dateTime } = useLoadUnloadPageContext()
-  const requestedDayOfTheWeek = useDateToDayOfTheWeek(dateTime.date)
+  const requestedDayOfTheWeek = getDayOfTheWeekInDutch(dateTime.date)
   const theme = useTheme()
   const [roadSectionsLayer, setRoadSectionsLayer] = useState<L.GeoJSON | null>(
     null

@@ -22,9 +22,23 @@
   "_pageLoadUnload": {
     "title": "Cargar y descargar"
   },
-  "_pageTouringCar": {
+  "_linkTourBuzz": {
     "title": "Auto turístico (Tour Buzz)",
     "titleShort": "Auto turístico"
+  },
+  "_pageTouringcar": {
+    "title": "Auto turístico (Tour Buzz)",
+    "titleShort": "Auto turístico",
+    "_legend": {
+      "messages": "Mensajes",
+      "stops": "Paradas de autobús",
+      "parking": "Aparcamiento",
+      "maxVehicleHeight": "Altura libre",
+      "destinationTraffic": "Tráfico de destino",
+      "recommendedRoutes": "Rutas recomendadas",
+      "mandatoryRoutes": "Ruta obligatoria (> 7,5t)",
+      "environmentalZone": "Zona ambiental"
+    }
   },
   "_pageData": {
     "title": "Fuentes de datos"

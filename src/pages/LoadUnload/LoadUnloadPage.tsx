@@ -43,6 +43,7 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
 
 const LoadUnloadPage = () => {
   const { t } = useTranslation()
+  useDocumentTitle(t('_pageLoadUnload.title'))
 
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
@@ -52,8 +53,6 @@ const LoadUnloadPage = () => {
       setMapDefaults(mapInstance)
     }
   }, [mapInstance])
-
-  useDocumentTitle('Laden en lossen')
 
   const [showAddressForm, setShowAddressForm] = useState(false)
   const [showDateTimeModal, setShowDateTimeModal] = useState(false)

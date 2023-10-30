@@ -1,5 +1,5 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
-import { MapLegendItem } from 'shared/components/MapLegendItem'
+import MapLegendItem from 'shared/components/MapLegendItem'
 import {
   LegendWrapper,
   LegendItemsWrapper,

@@ -15,7 +15,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "esnext"]
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "types": ["node", "@testing-library/jest-dom"]
   },
-  "include": ["src"]
+  "include": ["src", "src/setupTests.ts"]
 }
