@@ -16,6 +16,7 @@ export const LoadUnloadMapContext = createContext<
 
 export function useLoadUnloadMapContext() {
   const context = useContext(LoadUnloadMapContext)
+
   if (context === undefined) {
     throw new Error(
       'useLoadUnloadMapContext must be within LoadUnloadMapProvider'

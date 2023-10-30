@@ -32,8 +32,6 @@ const ErrorPage = () => {
     })
   }
 
-  console.error(error)
-
   const { trackPageVisit } = useAnalytics()
   useEffect(() => {
     trackPageVisit(error instanceof Response ? `${error.status}` : '404')
