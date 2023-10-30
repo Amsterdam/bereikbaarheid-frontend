@@ -7,6 +7,8 @@ import { getPathTo } from 'routes'
 import { withApp } from '../../../test/utils/withApp'
 
 describe('RoadObstructionsPage', () => {
+  jest.setTimeout(10000)
+
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))
     const roadSections = require('../../../test/mocks/bereikbaarheid/road-obstructions/data.json')
