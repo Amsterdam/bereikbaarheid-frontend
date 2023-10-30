@@ -22,9 +22,23 @@
   "_pageLoadUnload": {
     "title": "Laden und entladen"
   },
-  "_pageTouringCar": {
+  "_linkTourBuzz": {
     "title": "Tourenwagen (Tour Buzz)",
     "titleShort": "Tourenwagen"
+  },
+  "_pageTouringcar": {
+    "title": "Tourenwagen (Tour Buzz)",
+    "titleShort": "Tourenwagen",
+    "_legend": {
+      "messages": "Berichte",
+      "stops": "Bushaltestellen",
+      "parking": "Parkplatz",
+      "maxVehicleHeight": "Fahrhöhe",
+      "destinationTraffic": "Zielverkehr",
+      "recommendedRoutes": "Empfohlene Routen",
+      "mandatoryRoutes": "Obligatorische Route (> 7,5t)",
+      "environmentalZone": "Umweltzone"
+    }
   },
   "_pageData": {
     "title": "Datenquellen"

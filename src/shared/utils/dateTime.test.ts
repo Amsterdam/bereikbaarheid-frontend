@@ -1,4 +1,8 @@
-import { formatISODate, stripSecondsFromTime } from './dateTime'
+import {
+  formatISODate,
+  getDayOfTheWeekInDutch,
+  stripSecondsFromTime,
+} from './dateTime'
 
 test('format ISO date-times as human-readable strings', () => {
   // Note: below ISO strings are UTC.
@@ -18,4 +22,9 @@ test('format ISO date-times as human-readable strings', () => {
 
 test('time string is stripped of seconds', () => {
   expect(stripSecondsFromTime('15:54:23')).toBe('15:54')
+})
+
+test('get abbreviated day of the week in Dutch', () => {
+  expect(getDayOfTheWeekInDutch('2023-10-25')).toBe('wo')
+  expect(getDayOfTheWeekInDutch('2023-10-25')).not.toBe(3)
 })

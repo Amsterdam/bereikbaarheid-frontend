@@ -31,9 +31,28 @@
       "label": "Voer adres en moment in of bekijk dataverantwoording"
     }
   },
-  "_pageTouringCar": {
+  "_linkTourBuzz": {
     "title": "Touringcar (Tour Buzz)",
     "titleShort": "Touringcar"
+  },
+  "_pageTouringcar": {
+    "title": "Touringcar (Tour Buzz)",
+    "titleShort": "Touringcar",
+    "_mapPanel": {
+      "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
+      "messages": "Berichten",
+      "routeInfo": "Routeinformatie"
+    },
+    "_legend": {
+      "messages": "Berichten",
+      "stops": "Haltes",
+      "parking": "Parkeren",
+      "maxVehicleHeight": "Maximale doorrijhoogtes",
+      "destinationTraffic": "Bestemmingsverkeer",
+      "recommendedRoutes": "Aanbevolen routes",
+      "mandatoryRoutes": "Verplichte routes (> 7,5t)",
+      "environmentalZone": "Milieuzone"
+    }
   },
   "_pageData": {
     "title": "Databronnen"

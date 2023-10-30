@@ -55,12 +55,11 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
 const RoadObstructionsPage = () => {
   const { t } = useTranslation()
 
-  const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [detailFeature, setDetailFeature] = useState<DetailFeature | undefined>(
     undefined
   )
-  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
-
+  const [showMapFiltersForm, setShowMapFiltersForm] = useState(false)
+  const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   useEffect(() => {
     if (mapInstance) {
       setMapDefaults(mapInstance)
@@ -75,19 +74,22 @@ const RoadObstructionsPage = () => {
     timeFrom: '00:00',
     timeTo: '23:59',
   })
+
   const dateFormatted = useMemo(
     () =>
       format(parse(mapFilters.date, 'yyyy-MM-dd', new Date()), 'dd-MM-yyyy'),
     [mapFilters.date]
   )
-  const [showMapFiltersForm, setShowMapFiltersForm] = useState(false)
+
+  useDocumentTitle(
+    `${t('_pageRoadObstructions.roadObstructionsOn')} ${dateFormatted}`
+  )
 
   useEffect(() => {
     setSearchParams({ date: mapFilters.date })
   }, [mapFilters.date, setSearchParams])
 
-  useDocumentTitle(`Stremmingen op ${dateFormatted}`)
-
+  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   const { trackPageVisit } = useAnalytics()
