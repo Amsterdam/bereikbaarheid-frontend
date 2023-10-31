@@ -44,11 +44,10 @@ const CardLink = styled(Link)`
 
 const StyledCard = styled(Card)`
   width: ${CARD_WIDTH_PX}px;
-  aspect-ratio: 3 / 2;
 `
 
 const StyledCardMedia = styled(CardMedia)`
-  height: 100%;
+  aspect-ratio: 3 / 2;
 `
 
 const StyledCardContent = styled(CardContent)`
@@ -59,6 +58,7 @@ const StyledHeading = styled(Heading)`
   display: flex;
   gap: 0.75rem;
   margin: 0;
+  line-height: 1;
 
   & > span {
     margin-top: 2px;
@@ -92,7 +92,9 @@ function CardsMenu() {
                 <source srcSet={card.image} type="image/webp" />
                 <StyledImage
                   src={card.imageFallback}
-                  alt={t(card.title)}
+                  alt={`${t(card.title)}${
+                    card.description ? `: ${t(card.description)}` : ''
+                  }`}
                   data-testid={card.image && 'card-with-image'}
                   width="300"
                   height="200"
