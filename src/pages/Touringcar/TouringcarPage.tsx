@@ -69,7 +69,7 @@ const TouringcarPage = () => {
             <TouringcarMapProvider>
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}
-                initialPosition={mapPanelConstants.SnapPoint.Closed}
+                initialPosition={mapPanelConstants.SnapPoint.Halfway}
                 topOffset={HEADER_HEIGHT}
               >
                 <Element>

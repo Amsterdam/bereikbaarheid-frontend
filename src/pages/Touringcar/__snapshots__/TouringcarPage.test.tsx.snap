@@ -229,12 +229,12 @@ Object {
                 >
                   <div
                     class="leaflet-tile-container leaflet-zoom-animated"
-                    style="z-index: 18; left: 0px; top: 0px;"
+                    style="z-index: 21; left: 0px; top: 0px;"
                   >
                     <img
                       alt=""
                       class="leaflet-tile"
-                      src="https://t1.data.amsterdam.nl/topo_wm_light/13/4207/2692.png"
+                      src="https://t4.data.amsterdam.nl/topo_wm_zw/13/4207/2692.png"
                       style="width: 256px; height: 256px; left: -90px; top: -24px;"
                     />
                   </div>
@@ -299,7 +299,7 @@ Object {
           </div>
           <div
             class="MapPanelStyle--13h7umc hfJLIU"
-            style="width: 30px;"
+            style="width: 480px;"
           >
             <div
               class="MapPanelContent--10qv8ot dWqMO"
@@ -308,7 +308,7 @@ Object {
                 class="MapDrawerContentStyle--15grfz7 jHdtJb"
               >
                 <div
-                  class="StyledContainer--qabx89 ftUCHE"
+                  class="StyledContainer--qabx89 zPppQ"
                 >
                   <div
                     class="Content--1ku427e jPTlQg"
@@ -477,7 +477,7 @@ Object {
               </div>
             </div>
             <button
-              class="sc-dcJsrY ekQDyO Handle--qoocaz cjiUXM"
+              class="sc-dcJsrY ekQDyO Handle--qoocaz hqURud"
               size="32"
               title="Open legenda"
               type="button"
@@ -492,7 +492,7 @@ Object {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                    d="m22.857 32-16-16 16-16 2.9 2.91L12.677 16l13.08 13.09z"
                     fill-rule="evenodd"
                   />
                 </svg>
@@ -920,12 +920,12 @@ Object {
               >
                 <div
                   class="leaflet-tile-container leaflet-zoom-animated"
-                  style="z-index: 18; left: 0px; top: 0px;"
+                  style="z-index: 21; left: 0px; top: 0px;"
                 >
                   <img
                     alt=""
                     class="leaflet-tile"
-                    src="https://t1.data.amsterdam.nl/topo_wm_light/13/4207/2692.png"
+                    src="https://t4.data.amsterdam.nl/topo_wm_zw/13/4207/2692.png"
                     style="width: 256px; height: 256px; left: -90px; top: -24px;"
                   />
                 </div>
@@ -990,7 +990,7 @@ Object {
         </div>
         <div
           class="MapPanelStyle--13h7umc hfJLIU"
-          style="width: 30px;"
+          style="width: 480px;"
         >
           <div
             class="MapPanelContent--10qv8ot dWqMO"
@@ -999,7 +999,7 @@ Object {
               class="MapDrawerContentStyle--15grfz7 jHdtJb"
             >
               <div
-                class="StyledContainer--qabx89 ftUCHE"
+                class="StyledContainer--qabx89 zPppQ"
               >
                 <div
                   class="Content--1ku427e jPTlQg"
@@ -1168,7 +1168,7 @@ Object {
             </div>
           </div>
           <button
-            class="sc-dcJsrY ekQDyO Handle--qoocaz cjiUXM"
+            class="sc-dcJsrY ekQDyO Handle--qoocaz hqURud"
             size="32"
             title="Open legenda"
             type="button"
@@ -1183,7 +1183,7 @@ Object {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                  d="m22.857 32-16-16 16-16 2.9 2.91L12.677 16l13.08 13.09z"
                   fill-rule="evenodd"
                 />
               </svg>
