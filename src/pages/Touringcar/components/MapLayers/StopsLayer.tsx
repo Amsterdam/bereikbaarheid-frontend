@@ -37,7 +37,7 @@ export const StopsLayer = () => {
       setCurrentParkingSpace(undefined)
       setCurrentStop(Stop)
     },
-    [data?.features, setCurrentStop]
+    [data?.features, setCurrentParkingSpace, setCurrentStop]
   )
 
   const createClusterMarkers = () => {

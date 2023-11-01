@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 import {
   CompactThemeProvider,
   Heading,
-  Link,
   Paragraph,
   themeSpacing,
 } from '@amsterdam/asc-ui'
