@@ -212,7 +212,7 @@ Object {
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-bddgXz jkpnfb labFtI leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-eHsDsR jkpnfb fpdcno leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -500,7 +500,7 @@ Object {
                     >
                       <br />
                       <h2
-                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR fnZuME"
+                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
                       >
                         Aanbevolen en verplichte routes
                       </h2>
@@ -525,10 +525,10 @@ Object {
                       tabindex="0"
                     >
                       <div
-                        class="sc-imwsjW sc-hoLEA gphTiw ghMsZd"
+                        class="sc-imwsjW sc-fFlnrN gphTiw bLrZUg"
                       >
                         <h2
-                          class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR fnZuME"
+                          class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
                         >
                           Getoonde data op de kaart
                         </h2>
@@ -538,7 +538,7 @@ Object {
                           Bekijk en download de getoonde data op de kaart via de volgende links:
                         </p>
                         <ul
-                          class="sc-kdBSHD cHWVcp sc-fFlnrN bHdRVc"
+                          class="sc-kdBSHD cHWVcp sc-camqpD dHzkWQ"
                         >
                           <li
                             class="sc-lcIPJg ddQxr"
@@ -684,7 +684,7 @@ Object {
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-jdUcAg ginaLN"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-fyVfxW efvocT"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -697,7 +697,7 @@ Object {
               data-testid="topRight"
             >
               <div
-                class="sc-kbdlSk hKZFfn"
+                class="sc-gweoQa hLhfXU"
               >
                 <button
                   aria-controls="legend"
@@ -734,7 +734,7 @@ Object {
                   id="legend"
                 >
                   <div
-                    class="sc-gweoQa iNoOcl"
+                    class="sc-jdUcAg jKYZEF"
                   >
                     <label
                       class="sc-gFVvzn jmImEg"
@@ -746,7 +746,7 @@ Object {
                         Haltes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-eIcdZJ eCOSRh"
+                        class="sc-fHjqPf jSNdCb sc-bddgXz dHjTiV"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -782,7 +782,7 @@ Object {
                         Parkeren
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-eIcdZJ AIHzu"
+                        class="sc-fHjqPf jSNdCb sc-bddgXz brjEYC"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -818,7 +818,7 @@ Object {
                         Verplichte routes (&gt; 7,5t)
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-eIcdZJ jstSCP"
+                        class="sc-fHjqPf jSNdCb sc-bddgXz ZeiyL"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1123,7 +1123,7 @@ Object {
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-bddgXz jkpnfb labFtI leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-eHsDsR jkpnfb fpdcno leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1411,7 +1411,7 @@ Object {
                   >
                     <br />
                     <h2
-                      class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR fnZuME"
+                      class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
                     >
                       Aanbevolen en verplichte routes
                     </h2>
@@ -1436,10 +1436,10 @@ Object {
                     tabindex="0"
                   >
                     <div
-                      class="sc-imwsjW sc-hoLEA gphTiw ghMsZd"
+                      class="sc-imwsjW sc-fFlnrN gphTiw bLrZUg"
                     >
                       <h2
-                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR fnZuME"
+                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
                       >
                         Getoonde data op de kaart
                       </h2>
@@ -1449,7 +1449,7 @@ Object {
                         Bekijk en download de getoonde data op de kaart via de volgende links:
                       </p>
                       <ul
-                        class="sc-kdBSHD cHWVcp sc-fFlnrN bHdRVc"
+                        class="sc-kdBSHD cHWVcp sc-camqpD dHzkWQ"
                       >
                         <li
                           class="sc-lcIPJg ddQxr"
@@ -1595,7 +1595,7 @@ Object {
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-jdUcAg ginaLN"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-fyVfxW efvocT"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -1608,7 +1608,7 @@ Object {
             data-testid="topRight"
           >
             <div
-              class="sc-kbdlSk hKZFfn"
+              class="sc-gweoQa hLhfXU"
             >
               <button
                 aria-controls="legend"
@@ -1645,7 +1645,7 @@ Object {
                 id="legend"
               >
                 <div
-                  class="sc-gweoQa iNoOcl"
+                  class="sc-jdUcAg jKYZEF"
                 >
                   <label
                     class="sc-gFVvzn jmImEg"
@@ -1657,7 +1657,7 @@ Object {
                       Haltes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-eIcdZJ eCOSRh"
+                      class="sc-fHjqPf jSNdCb sc-bddgXz dHjTiV"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1693,7 +1693,7 @@ Object {
                       Parkeren
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-eIcdZJ AIHzu"
+                      class="sc-fHjqPf jSNdCb sc-bddgXz brjEYC"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1729,7 +1729,7 @@ Object {
                       Verplichte routes (&gt; 7,5t)
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-eIcdZJ jstSCP"
+                      class="sc-fHjqPf jSNdCb sc-bddgXz ZeiyL"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"

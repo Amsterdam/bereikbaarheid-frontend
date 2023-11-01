@@ -13,8 +13,12 @@ import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGro
 import TouringcarMarker from '../Marker/Marker'
 
 export const StopsLayer = () => {
-  const { activeMapLayers, setCurrentStop, setActiveTab } =
-    useTouringcarMapContext()
+  const {
+    activeMapLayers,
+    setCurrentStop,
+    setCurrentParkingSpace,
+    setActiveTab,
+  } = useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
 
   const { isLoading, error, isError, data } = useQuery({
@@ -30,6 +34,7 @@ export const StopsLayer = () => {
     (id: number) => {
       let Stop = data?.features.find(item => item.properties?.id === id)
 
+      setCurrentParkingSpace(undefined)
       setCurrentStop(Stop)
     },
     [data?.features, setCurrentStop]

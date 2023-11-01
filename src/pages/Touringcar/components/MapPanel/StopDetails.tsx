@@ -34,8 +34,8 @@ const PaddedContainer = styled.div`
   padding: 1em;
 `
 
-const ParkingSpaceDetailFeature = () => {
-  const { currentParkingSpace } = useTouringcarMapContext()
+const StopDetails = () => {
+  const { currentStop } = useTouringcarMapContext()
 
   const [imageLoading, setImageLoading] = useState(false)
 
@@ -49,13 +49,13 @@ const ParkingSpaceDetailFeature = () => {
     enabled: true,
     queryKey: ['panoramaThumbnail'],
     queryFn: () => {
-      if (!currentParkingSpace?.geometry.coordinates.length) {
+      if (!currentStop?.geometry.coordinates.length) {
         throw new Error('Coordinates are required.')
       }
 
       return getPanoramaThumbnail({
-        lat: currentParkingSpace?.geometry.coordinates[1],
-        lon: currentParkingSpace?.geometry.coordinates[0],
+        lat: currentStop?.geometry.coordinates[1],
+        lon: currentStop?.geometry.coordinates[0],
         width: PANORAMA_WIDTH_PX,
         aspect: PANORAMA_ASPECT_RATIO,
       })
@@ -63,37 +63,41 @@ const ParkingSpaceDetailFeature = () => {
   })
 
   useEffect(() => {
-    if (currentParkingSpace) {
+    if (currentStop) {
       ;(async () => {
         setImageLoading(true)
-        await refetch()
+        await refetch({ cancelRefetch: true })
         setImageLoading(false)
+        return
       })()
     }
-  }, [currentParkingSpace, refetch])
+
+    return () => {
+      setImageLoading(false)
+      refetch({ cancelRefetch: true })
+    }
+  }, [currentStop, refetch])
 
   return (
     <>
-      {currentParkingSpace?.properties?.additional_info && (
+      {currentStop?.properties?.additional_info && (
         <PaddedContainer>
           <AdditionalInfo>
-            {currentParkingSpace.properties.additional_info}
+            {currentStop.properties.additional_info}
           </AdditionalInfo>
         </PaddedContainer>
       )}
 
       <CompactThemeProvider>
         <PaddedContainer>
-          <Heading as="h2">
-            {currentParkingSpace?.properties?.omschrijving}
-          </Heading>
+          <Heading as="h2">{currentStop?.properties?.omschrijving}</Heading>
         </PaddedContainer>
 
         {!isLoading && !error && !isError && panoramaThumbnail && (
           <ImageWithLoading
             loading={isLoading || imageLoading}
             src={panoramaThumbnail}
-            alt={currentParkingSpace?.properties?.omschrijving}
+            alt={currentStop?.properties?.omschrijving}
             width={PANORAMA_WIDTH_PX}
             height={PANORAMA_WIDTH_PX / PANORAMA_ASPECT_RATIO}
           />
@@ -101,42 +105,14 @@ const ParkingSpaceDetailFeature = () => {
 
         <PaddedContainer>
           <Paragraph>
-            <strong>Plaatsen:</strong>{' '}
-            {currentParkingSpace?.properties?.plaatsen}
+            <strong>Plaatsen:</strong> {currentStop?.properties?.plaatsen}
           </Paragraph>
 
-          <Paragraph>
-            {currentParkingSpace?.properties?.bijzonderheden}
-          </Paragraph>
-
-          {currentParkingSpace?.properties?.meerInformatie && (
-            <Paragraph>
-              <strong>Meer informatie:</strong>{' '}
-              {currentParkingSpace.properties.meerInformatie.startsWith(
-                'https://'
-              ) ||
-              currentParkingSpace.properties.meerInformatie.startsWith(
-                'http://'
-              ) ||
-              currentParkingSpace.properties.meerInformatie.startsWith(
-                'www.'
-              ) ? (
-                <Link
-                  href={currentParkingSpace.properties.meerInformatie}
-                  target="_blank"
-                  variant="inline"
-                >
-                  {currentParkingSpace.properties.meerInformatie}
-                </Link>
-              ) : (
-                currentParkingSpace.properties.meerInformatie
-              )}
-            </Paragraph>
-          )}
+          <Paragraph>{currentStop?.properties?.bijzonderheden}</Paragraph>
         </PaddedContainer>
       </CompactThemeProvider>
     </>
   )
 }
 
-export default ParkingSpaceDetailFeature
+export default StopDetails
