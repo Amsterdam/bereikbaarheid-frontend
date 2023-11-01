@@ -1,6 +1,7 @@
 import { ReactNode, useCallback, useReducer, useState } from 'react'
 
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
+import { TouringcarStop } from 'api/touringcar/stops'
 import { useSearchParams } from 'react-router-dom'
 
 import {
@@ -41,6 +42,10 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
     })
   }, [queryParams])
 
+  const [currentStop, setCurrentStop] = useState<TouringcarStop | undefined>(
+    undefined
+  )
+
   const [currentParkingSpace, setCurrentParkingSpace] = useState<
     TouringcarParkingSpace | undefined
   >(undefined)
@@ -57,6 +62,8 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
         activeMapLayers,
         updateActiveMapLayers,
         updateActiveMapLayersWithSearchParams,
+        currentStop,
+        setCurrentStop,
         currentParkingSpace,
         setCurrentParkingSpace,
         activeTab,

@@ -545,6 +545,39 @@ Object {
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                              href="v1/touringcars/haltes"
+                              target="_blank"
+                            >
+                              <span
+                                class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                              >
+                                <svg
+                                  focusable="false"
+                                  role="img"
+                                  viewBox="0 0 32 32"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </span>
+                              <span
+                                class="sc-fhzFiK iRpqvs"
+                              >
+                                Parkeerplekken voor touringcars
+                              </span>
+                            </a>
+                            <sup>
+                              *
+                            </sup>
+                          </li>
+                          <li
+                            class="sc-lcIPJg ddQxr"
+                          >
+                            <a
+                              class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
                               href="v1/touringcars/parkeerplaatsen"
                               target="_blank"
                             >
@@ -705,6 +738,42 @@ Object {
                   >
                     <label
                       class="sc-gFVvzn jmImEg"
+                      for="touringcarStops"
+                    >
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Haltes
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb sc-eIcdZJ eCOSRh"
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarStops"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
+                    <label
+                      class="sc-gFVvzn jmImEg"
                       for="touringcarParkingSpaces"
                     >
                       <span
@@ -713,7 +782,7 @@ Object {
                         Parkeren
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb"
+                        class="sc-fHjqPf jSNdCb sc-eIcdZJ AIHzu"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1387,6 +1456,39 @@ Object {
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                            href="v1/touringcars/haltes"
+                            target="_blank"
+                          >
+                            <span
+                              class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                            >
+                              <svg
+                                focusable="false"
+                                role="img"
+                                viewBox="0 0 32 32"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                            <span
+                              class="sc-fhzFiK iRpqvs"
+                            >
+                              Parkeerplekken voor touringcars
+                            </span>
+                          </a>
+                          <sup>
+                            *
+                          </sup>
+                        </li>
+                        <li
+                          class="sc-lcIPJg ddQxr"
+                        >
+                          <a
+                            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
                             href="v1/touringcars/parkeerplaatsen"
                             target="_blank"
                           >
@@ -1547,6 +1649,42 @@ Object {
                 >
                   <label
                     class="sc-gFVvzn jmImEg"
+                    for="touringcarStops"
+                  >
+                    <span
+                      class="sc-brPLxw dGBiZJ"
+                    >
+                      Haltes
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb sc-eIcdZJ eCOSRh"
+                    >
+                      <span
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
+                      >
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarStops"
+                        type="checkbox"
+                      />
+                    </span>
+                  </label>
+                  <label
+                    class="sc-gFVvzn jmImEg"
                     for="touringcarParkingSpaces"
                   >
                     <span
@@ -1555,7 +1693,7 @@ Object {
                       Parkeren
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb"
+                      class="sc-fHjqPf jSNdCb sc-eIcdZJ AIHzu"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"

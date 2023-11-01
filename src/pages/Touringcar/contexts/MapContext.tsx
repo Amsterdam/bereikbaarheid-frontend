@@ -1,6 +1,7 @@
 import { createContext, Dispatch, SetStateAction, useContext } from 'react'
 
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
+import { TouringcarStop } from 'api/touringcar/stops'
 
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 
@@ -11,11 +12,13 @@ enum MapPanelTab {
 }
 
 enum MapLayerId {
+  touringcarStopsLayerId = 'touringcarStops',
   touringcarParkingSpacesLayerId = 'touringcarParkingSpaces',
   touringcarRoutesMandatoryLayerId = 'touringcarRoutesMandatory',
 }
 
 enum MapLayerParamToMapLayer {
+  'haltes' = MapLayerId.touringcarStopsLayerId,
   'parkeren' = MapLayerId.touringcarParkingSpacesLayerId,
   'verplichte-routes' = MapLayerId.touringcarRoutesMandatoryLayerId,
 }
@@ -23,14 +26,30 @@ enum MapLayerParamToMapLayer {
 type MapLayerParam = keyof typeof MapLayerParamToMapLayer
 
 const mapLayerParamIds: (keyof typeof MapLayerParamToMapLayer)[] = [
+  'haltes',
   'parkeren',
   'verplichte-routes',
 ]
+
+const layerFeatureProps = {
+  [MapLayerId.touringcarStopsLayerId]: {
+    color: '#009dec',
+  },
+  [MapLayerId.touringcarParkingSpacesLayerId]: {
+    color: '#000000',
+  },
+  [MapLayerId.touringcarRoutesMandatoryLayerId]: {
+    color: '#00a03c',
+    strokeWidth: 6,
+  },
+}
 
 interface TouringcarContextProps {
   activeMapLayers: typeof mapLayersInitialState
   updateActiveMapLayers: Dispatch<mapLayerActionType>
   updateActiveMapLayersWithSearchParams: () => void
+  currentStop: TouringcarStop | undefined
+  setCurrentStop: Dispatch<SetStateAction<TouringcarStop | undefined>>
   currentParkingSpace: TouringcarParkingSpace | undefined
   setCurrentParkingSpace: Dispatch<
     SetStateAction<TouringcarParkingSpace | undefined>
@@ -63,6 +82,7 @@ export {
   MapLayerId,
   MapLayerParamToMapLayer,
   mapLayerParamIds,
+  layerFeatureProps,
   TouringcarMapContext,
   useTouringcarMapContext,
 }

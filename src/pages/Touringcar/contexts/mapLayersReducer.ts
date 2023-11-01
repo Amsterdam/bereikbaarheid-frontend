@@ -5,17 +5,8 @@ type mapLayerActionType = {
   layerId: keyof typeof mapLayersInitialState
 }
 
-const layerFeatureProps = {
-  [MapLayerId.touringcarParkingSpacesLayerId]: {
-    color: '#000000',
-  },
-  [MapLayerId.touringcarRoutesMandatoryLayerId]: {
-    color: '#00a03c',
-    strokeWidth: 6,
-  },
-}
-
 const mapLayersInitialState = {
+  [MapLayerId.touringcarStopsLayerId]: true,
   [MapLayerId.touringcarParkingSpacesLayerId]: true,
   [MapLayerId.touringcarRoutesMandatoryLayerId]: true,
 }
@@ -45,6 +36,6 @@ function mapLayersReducer(
   }
 }
 
-export { layerFeatureProps, mapLayersInitialState }
+export { mapLayersInitialState }
 export type { mapLayerActionType }
 export default mapLayersReducer

@@ -1,9 +1,9 @@
 import { Checkbox, Label } from '@amsterdam/asc-ui'
 import {
   MapLayerId,
+  layerFeatureProps,
   useTouringcarMapContext,
 } from 'pages/Touringcar/contexts/MapContext'
-import { layerFeatureProps } from 'pages/Touringcar/contexts/mapLayersReducer'
 import { useTranslation } from 'react-i18next'
 import { MapLegend } from 'shared/components/MapLegend'
 import { LegendItemsWrapper } from 'shared/components/MapLegendStyles'
@@ -26,10 +26,26 @@ function TouringcarMapLegend() {
     <MapLegend>
       <LegendItemsWrapper>
         <Label
+          htmlFor={MapLayerId.touringcarStopsLayerId}
+          label={t('_pageTouringcar._legend.stops')}
+        >
+          <StyledCheckbox
+            id={MapLayerId.touringcarStopsLayerId}
+            onChange={() =>
+              updateActiveMapLayers({
+                type: 'TOGGLE',
+                layerId: MapLayerId.touringcarStopsLayerId,
+              })
+            }
+            checked={activeMapLayers[MapLayerId.touringcarStopsLayerId]}
+          />
+        </Label>
+
+        <Label
           htmlFor={MapLayerId.touringcarParkingSpacesLayerId}
           label={t('_pageTouringcar._legend.parking')}
         >
-          <Checkbox
+          <StyledCheckbox
             id={MapLayerId.touringcarParkingSpacesLayerId}
             onChange={() =>
               updateActiveMapLayers({

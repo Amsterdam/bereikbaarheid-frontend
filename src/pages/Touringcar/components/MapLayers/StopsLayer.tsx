@@ -2,9 +2,7 @@ import { useCallback, useContext } from 'react'
 
 import { MapPanelContext, mapPanelConstants } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarParkingSpaces, {
-  TouringcarParkingSpace,
-} from 'api/touringcar/parking-spaces'
+import getTouringcarStops, { TouringcarStop } from 'api/touringcar/stops'
 import {
   MapLayerId,
   MapPanelTab,
@@ -14,35 +12,32 @@ import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGro
 
 import TouringcarMarker from '../Marker/Marker'
 
-export const ParkingSpacesLayer = () => {
-  const { activeMapLayers, setCurrentParkingSpace, setActiveTab } =
+export const StopsLayer = () => {
+  const { activeMapLayers, setCurrentStop, setActiveTab } =
     useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
 
   const { isLoading, error, isError, data } = useQuery({
     enabled: true,
-    queryKey: ['touringcarParkingSpaces'],
+    queryKey: ['touringcarStops'],
     queryFn: () =>
-      getTouringcarParkingSpaces({
+      getTouringcarStops({
         _format: 'geojson',
       }),
   })
 
-  const findParkingSpace = useCallback(
+  const findStop = useCallback(
     (id: number) => {
-      let parkingSpace = data?.features.find(item => item.properties?.id === id)
+      let Stop = data?.features.find(item => item.properties?.id === id)
 
-      setCurrentParkingSpace(parkingSpace)
+      setCurrentStop(Stop)
     },
-    [data?.features, setCurrentParkingSpace]
+    [data?.features, setCurrentStop]
   )
 
   const createClusterMarkers = () => {
-    return data!.features.map((item: TouringcarParkingSpace) => {
-      const marker = TouringcarMarker(
-        item,
-        MapLayerId.touringcarParkingSpacesLayerId
-      )
+    return data!.features.map((item: TouringcarStop) => {
+      const marker = TouringcarMarker(item, MapLayerId.touringcarStopsLayerId)
 
       let tooltipText = `<strong>${item.properties?.omschrijving}</strong><br>Plaatsen: ${item.properties?.plaatsen}`
 
@@ -50,7 +45,7 @@ export const ParkingSpacesLayer = () => {
 
       marker.on('click', () => {
         setActiveTab(MapPanelTab.MESSAGES)
-        findParkingSpace(item.properties?.id)
+        findStop(item.properties?.id)
         setPositionFromSnapPoint(mapPanelConstants.SnapPoint.Halfway)
       })
 
@@ -66,7 +61,7 @@ export const ParkingSpacesLayer = () => {
     return null
   }
 
-  if (!activeMapLayers[MapLayerId.touringcarParkingSpacesLayerId]) return null
+  if (!activeMapLayers[MapLayerId.touringcarStopsLayerId]) return null
 
   return <MarkerClusterGroup markers={createClusterMarkers()} />
 }
