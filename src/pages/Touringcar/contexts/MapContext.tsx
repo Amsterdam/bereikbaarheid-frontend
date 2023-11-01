@@ -10,9 +10,27 @@ enum MapPanelTab {
   DATA = 'data',
 }
 
+enum MapLayerId {
+  touringcarParkingSpacesLayerId = 'touringcarParkingSpaces',
+  touringcarRoutesMandatoryLayerId = 'touringcarRoutesMandatory',
+}
+
+enum MapLayerParamToMapLayer {
+  'parkeren' = MapLayerId.touringcarParkingSpacesLayerId,
+  'verplichte-routes' = MapLayerId.touringcarRoutesMandatoryLayerId,
+}
+
+type MapLayerParam = keyof typeof MapLayerParamToMapLayer
+
+const mapLayerParamIds: (keyof typeof MapLayerParamToMapLayer)[] = [
+  'parkeren',
+  'verplichte-routes',
+]
+
 interface TouringcarContextProps {
   activeMapLayers: typeof mapLayersInitialState
   updateActiveMapLayers: Dispatch<mapLayerActionType>
+  updateActiveMapLayersWithSearchParams: () => void
   currentParkingSpace: TouringcarParkingSpace | undefined
   setCurrentParkingSpace: Dispatch<
     SetStateAction<TouringcarParkingSpace | undefined>
@@ -39,6 +57,13 @@ function useTouringcarMapContext() {
   return context
 }
 
-export type { TouringcarContextProps }
-export { MapPanelTab, TouringcarMapContext, useTouringcarMapContext }
+export type { MapLayerParam, TouringcarContextProps }
+export {
+  MapPanelTab,
+  MapLayerId,
+  MapLayerParamToMapLayer,
+  mapLayerParamIds,
+  TouringcarMapContext,
+  useTouringcarMapContext,
+}
 export default useTouringcarMapContext

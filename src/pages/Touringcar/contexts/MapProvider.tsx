@@ -1,19 +1,45 @@
-import { ReactNode, useReducer, useState } from 'react'
+import { ReactNode, useCallback, useReducer, useState } from 'react'
 
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
+import { useSearchParams } from 'react-router-dom'
 
-import { MapPanelTab, TouringcarMapContext } from './MapContext'
+import {
+  MapLayerParam,
+  MapLayerParamToMapLayer,
+  MapPanelTab,
+  TouringcarMapContext,
+  mapLayerParamIds,
+} from './MapContext'
 import mapLayersReducer, { mapLayersInitialState } from './mapLayersReducer'
 
-type Props = {
-  children: ReactNode
-}
-
-export const TouringcarMapProvider = ({ children }: Props) => {
+function TouringcarMapProvider({ children }: { children: ReactNode }) {
   const [activeMapLayers, updateActiveMapLayers] = useReducer(
     mapLayersReducer,
     mapLayersInitialState
   )
+
+  const [queryParams] = useSearchParams()
+  const updateActiveMapLayersWithSearchParams = useCallback(() => {
+    const mapLayerParams: MapLayerParam[] = (
+      [...queryParams.keys()] as MapLayerParam[]
+    ).filter(key => {
+      return mapLayerParamIds.includes(key as MapLayerParam)
+    })
+
+    mapLayerParamIds.forEach(param => {
+      const queryParam = MapLayerParamToMapLayer[
+        param
+      ] as unknown as keyof typeof mapLayersInitialState
+
+      if (!mapLayerParams.length) return
+
+      if (mapLayerParams.includes(param)) {
+        return updateActiveMapLayers({ type: 'ON', layerId: queryParam })
+      } else {
+        return updateActiveMapLayers({ type: 'OFF', layerId: queryParam })
+      }
+    })
+  }, [queryParams])
 
   const [currentParkingSpace, setCurrentParkingSpace] = useState<
     TouringcarParkingSpace | undefined
@@ -30,6 +56,7 @@ export const TouringcarMapProvider = ({ children }: Props) => {
       value={{
         activeMapLayers,
         updateActiveMapLayers,
+        updateActiveMapLayersWithSearchParams,
         currentParkingSpace,
         setCurrentParkingSpace,
         activeTab,
@@ -42,3 +69,5 @@ export const TouringcarMapProvider = ({ children }: Props) => {
     </TouringcarMapContext.Provider>
   )
 }
+
+export default TouringcarMapProvider
