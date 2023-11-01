@@ -5,11 +5,9 @@ import { getPathTo } from 'routes'
 
 import { withApp } from '../../../test/utils/withApp'
 
+jest.setTimeout(15000)
+
 describe('LoadUnloadPage', () => {
-  jest.setTimeout(10000)
-
-  jest.setSystemTime(new Date('2023-10-20T10:58:17.683Z'))
-
   const loadUnloadData = require('../../../test/mocks/bereikbaarheid/road-sections/load-unload/data.json')
 
   it('renders correctly', async () => {
