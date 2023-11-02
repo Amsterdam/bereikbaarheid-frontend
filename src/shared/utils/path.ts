@@ -9,8 +9,6 @@ function getGeneratedPath(
     `${getPathTo(route)}${
       params
         ? Object.keys(params).reduce((acc, key) => {
-            console.log(acc, key)
-
             return acc ? `${acc}/${key}` : `:${key}`
           }, '')
         : ''
