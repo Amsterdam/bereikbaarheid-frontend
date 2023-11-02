@@ -75,6 +75,7 @@
     },
     "_dataSources": {
       "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
+      "stopsForCoaches": "Haltes voor touringcars",
       "mandatoryRoutes": "Verplichte route (> 7,5t)"
     }
   },

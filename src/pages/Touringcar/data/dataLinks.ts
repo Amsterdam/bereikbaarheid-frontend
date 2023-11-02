@@ -4,7 +4,7 @@ import { getUrl as getTouringcarStopsUrl } from 'api/touringcar/stops'
 
 const touringcarStopsLink = {
   href: getTouringcarStopsUrl(),
-  title: '_pageTouringcar._dataSources.parkingSpacesForCoaches',
+  title: '_pageTouringcar._dataSources.stopsForCoaches',
   beta: true,
 }
 

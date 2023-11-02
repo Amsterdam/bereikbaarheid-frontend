@@ -70,6 +70,7 @@
     },
     "_dataSources": {
       "parkingSpacesForCoaches": "Parking spaces for coaches",
+      "stopsForCoaches": "Stops for coaches",
       "mandatoryRoutes": "Mandatory route (> 7.5t)"
     }
   },
