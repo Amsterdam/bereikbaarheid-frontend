@@ -24,15 +24,16 @@ const StyledMainContent = styled(MainContent)`
   max-width: 1200px;
 `
 
-const DataSourcesPage = () => {
+function DataSourcesPage() {
   const { t } = useTranslation()
 
   const { urlTrafficSigns } = useUrlTrafficSigns(DUMMY_VEHICLE)
 
+  const initialDate = format(new Date(), 'yyyy-MM-dd')
   const dataLinks = [
     trafficSignsLink(urlTrafficSigns()),
     ...obstructionsLinks({
-      date: format(new Date(), 'yyyy-MM-dd'),
+      date: initialDate,
       timeFrom: '00:00',
       timeTo: '23:59',
     }),
