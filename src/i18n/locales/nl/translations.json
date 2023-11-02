@@ -26,12 +26,14 @@
   "_pageLicencePlate": {
     "title": "Bereikbaarheid op kenteken",
     "titleShort": "Op kenteken",
+    "description": "Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën.",
     "_mapPanel": {
       "label": "Voer voertuiggegevens in of bekijk dataverantwoording"
     }
   },
   "_pageRoadObstructions": {
     "title": "Stremmingen",
+    "description": "Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen.",
     "roadObstructionsOn": "Stremmingen op",
     "_mapPanel": {
       "label": "Voer datum en tijd in of bekijk dataverantwoording"
@@ -39,17 +41,20 @@
   },
   "_pageLoadUnload": {
     "title": "Laden en lossen",
+    "description": "Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. ",
     "_mapPanel": {
       "label": "Voer adres en moment in of bekijk dataverantwoording"
     }
   },
   "_linkTourBuzz": {
     "title": "Touringcar (Tour Buzz)",
-    "titleShort": "Touringcar"
+    "titleShort": "Touringcar",
+    "description": "Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
   },
   "_pageTouringcar": {
     "title": "Touringcar (Tour Buzz)",
     "titleShort": "Touringcar",
+    "description": "Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie.",
     "_mapPanel": {
       "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
       "messages": "Berichten",
@@ -74,9 +79,11 @@
     }
   },
   "_pageData": {
-    "title": "Databronnen"
+    "title": "Databronnen",
+    "description": "De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
   },
   "_pageContact": {
-    "title": "Contact en uitleg"
+    "title": "Contact en uitleg",
+    "description": "FAQ en contactgegevens"
   }
 }

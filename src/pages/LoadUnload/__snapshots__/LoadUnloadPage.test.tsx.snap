@@ -60,7 +60,9 @@ Object {
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/op-kenteken"
-                    title="Op kenteken"
+                    title="Op kenteken:
+
+Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
                     variant="blank"
                   >
                     <span
@@ -80,7 +82,9 @@ Object {
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/stremmingen"
-                    title="Stremmingen"
+                    title="Stremmingen:
+
+Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen."
                     variant="blank"
                   >
                     <span
@@ -101,7 +105,9 @@ Object {
                     active="true"
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
                     href="/laden-lossen"
-                    title="Laden en lossen"
+                    title="Laden en lossen:
+
+Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. "
                     variant="blank"
                   >
                     <span
@@ -122,7 +128,9 @@ Object {
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="https://tourbuzz.amsterdam.nl/"
                     target="_blank"
-                    title="Touringcar"
+                    title="Touringcar:
+
+Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
                     variant="blank"
                   >
                     <span
@@ -166,7 +174,9 @@ Object {
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/data"
                     style="font-weight: normal;"
-                    title="Databronnen"
+                    title="Databronnen:
+
+De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
                     variant="blank"
                   >
                     <span
@@ -187,7 +197,9 @@ Object {
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/contact"
                     style="font-weight: normal;"
-                    title="Contact en uitleg"
+                    title="Contact en uitleg:
+
+FAQ en contactgegevens"
                     variant="blank"
                   >
                     <span
@@ -213,7 +225,7 @@ Object {
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-bWJUgm jkpnfb ypNuj leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-bHnlcS jkpnfb ksxNdL leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -375,7 +387,7 @@ Object {
                             Adres
                           </h3>
                           <button
-                            class="sc-dcJsrY gIANEL sc-jBeBSR eeubFA"
+                            class="sc-dcJsrY gIANEL sc-lmUcrn ftvqTV"
                             data-testid="change-address"
                           >
                             wijzig
@@ -383,7 +395,7 @@ Object {
                         </div>
                       </div>
                       <div
-                        class="sc-izQBue jZZUgA"
+                        class="sc-cTTdyq jaKrML"
                       >
                         <div
                           class="sc-hwdzOV juUYFW"
@@ -400,7 +412,7 @@ Object {
                         </div>
                       </div>
                       <div
-                        class="sc-hwdzOV dQyAaL sc-rPWID cWJqZ"
+                        class="sc-hwdzOV dQyAaL sc-gplwa-d mDFtt"
                       >
                         <div
                           class="sc-krNlru ISieu"
@@ -411,7 +423,7 @@ Object {
                             Datum en tijd
                           </h3>
                           <button
-                            class="sc-dcJsrY gIANEL sc-jBeBSR eeubFA"
+                            class="sc-dcJsrY gIANEL sc-lmUcrn ftvqTV"
                             data-testid="change-date-time"
                           >
                             wijzig
@@ -419,7 +431,7 @@ Object {
                         </div>
                       </div>
                       <div
-                        class="sc-izQBue jZZUgA"
+                        class="sc-cTTdyq jaKrML"
                       >
                         <div
                           class="sc-hwdzOV juUYFW"
@@ -621,7 +633,7 @@ Object {
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-fscmHZ lnJZIe"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-eBwKMn ewEjPj"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -677,7 +689,7 @@ Object {
                       class="sc-krNlru ISieu"
                     >
                       <label
-                        class="sc-gFVvzn xLgwd sc-cTTdyq cqPriE"
+                        class="sc-gFVvzn xLgwd sc-kpKSZj cYGOFM"
                         disabled=""
                         for="mapLegendLoadUnloadSpaces"
                       >
@@ -687,7 +699,7 @@ Object {
                           Laad- en losplekken
                         </span>
                         <div
-                          class="sc-gplwa-d kfVily"
+                          class="sc-bWJUgm jxDXNu"
                           disabled=""
                         />
                         <span
@@ -772,10 +784,10 @@ Object {
                           class="sc-jdUcAg jKYZEF"
                         >
                           <div
-                            class="sc-lmUcrn exnUBy"
+                            class="sc-lfYzqA itLYxA"
                           >
                             <div
-                              class="sc-iowXnY bWaPnq"
+                              class="sc-ijDOKB kAnhRp"
                             />
                             <p
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -788,10 +800,10 @@ Object {
                             </p>
                           </div>
                           <div
-                            class="sc-lmUcrn exnUBy"
+                            class="sc-lfYzqA itLYxA"
                           >
                             <div
-                              class="sc-iowXnY djHQEM"
+                              class="sc-ijDOKB ejBZLT"
                             />
                             <p
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -804,10 +816,10 @@ Object {
                             </p>
                           </div>
                           <div
-                            class="sc-lmUcrn exnUBy"
+                            class="sc-lfYzqA itLYxA"
                           >
                             <div
-                              class="sc-iowXnY gehBYV"
+                              class="sc-ijDOKB dzBvIa"
                             />
                             <p
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -945,7 +957,9 @@ Object {
                 <a
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/op-kenteken"
-                  title="Op kenteken"
+                  title="Op kenteken:
+
+Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
                   variant="blank"
                 >
                   <span
@@ -965,7 +979,9 @@ Object {
                 <a
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/stremmingen"
-                  title="Stremmingen"
+                  title="Stremmingen:
+
+Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen."
                   variant="blank"
                 >
                   <span
@@ -986,7 +1002,9 @@ Object {
                   active="true"
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
                   href="/laden-lossen"
-                  title="Laden en lossen"
+                  title="Laden en lossen:
+
+Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. "
                   variant="blank"
                 >
                   <span
@@ -1007,7 +1025,9 @@ Object {
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="https://tourbuzz.amsterdam.nl/"
                   target="_blank"
-                  title="Touringcar"
+                  title="Touringcar:
+
+Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
                   variant="blank"
                 >
                   <span
@@ -1051,7 +1071,9 @@ Object {
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/data"
                   style="font-weight: normal;"
-                  title="Databronnen"
+                  title="Databronnen:
+
+De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
                   variant="blank"
                 >
                   <span
@@ -1072,7 +1094,9 @@ Object {
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/contact"
                   style="font-weight: normal;"
-                  title="Contact en uitleg"
+                  title="Contact en uitleg:
+
+FAQ en contactgegevens"
                   variant="blank"
                 >
                   <span
@@ -1098,7 +1122,7 @@ Object {
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-bWJUgm jkpnfb ypNuj leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-bHnlcS jkpnfb ksxNdL leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1260,7 +1284,7 @@ Object {
                           Adres
                         </h3>
                         <button
-                          class="sc-dcJsrY gIANEL sc-jBeBSR eeubFA"
+                          class="sc-dcJsrY gIANEL sc-lmUcrn ftvqTV"
                           data-testid="change-address"
                         >
                           wijzig
@@ -1268,7 +1292,7 @@ Object {
                       </div>
                     </div>
                     <div
-                      class="sc-izQBue jZZUgA"
+                      class="sc-cTTdyq jaKrML"
                     >
                       <div
                         class="sc-hwdzOV juUYFW"
@@ -1285,7 +1309,7 @@ Object {
                       </div>
                     </div>
                     <div
-                      class="sc-hwdzOV dQyAaL sc-rPWID cWJqZ"
+                      class="sc-hwdzOV dQyAaL sc-gplwa-d mDFtt"
                     >
                       <div
                         class="sc-krNlru ISieu"
@@ -1296,7 +1320,7 @@ Object {
                           Datum en tijd
                         </h3>
                         <button
-                          class="sc-dcJsrY gIANEL sc-jBeBSR eeubFA"
+                          class="sc-dcJsrY gIANEL sc-lmUcrn ftvqTV"
                           data-testid="change-date-time"
                         >
                           wijzig
@@ -1304,7 +1328,7 @@ Object {
                       </div>
                     </div>
                     <div
-                      class="sc-izQBue jZZUgA"
+                      class="sc-cTTdyq jaKrML"
                     >
                       <div
                         class="sc-hwdzOV juUYFW"
@@ -1506,7 +1530,7 @@ Object {
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-fscmHZ lnJZIe"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-eBwKMn ewEjPj"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -1562,7 +1586,7 @@ Object {
                     class="sc-krNlru ISieu"
                   >
                     <label
-                      class="sc-gFVvzn xLgwd sc-cTTdyq cqPriE"
+                      class="sc-gFVvzn xLgwd sc-kpKSZj cYGOFM"
                       disabled=""
                       for="mapLegendLoadUnloadSpaces"
                     >
@@ -1572,7 +1596,7 @@ Object {
                         Laad- en losplekken
                       </span>
                       <div
-                        class="sc-gplwa-d kfVily"
+                        class="sc-bWJUgm jxDXNu"
                         disabled=""
                       />
                       <span
@@ -1657,10 +1681,10 @@ Object {
                         class="sc-jdUcAg jKYZEF"
                       >
                         <div
-                          class="sc-lmUcrn exnUBy"
+                          class="sc-lfYzqA itLYxA"
                         >
                           <div
-                            class="sc-iowXnY bWaPnq"
+                            class="sc-ijDOKB kAnhRp"
                           />
                           <p
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -1673,10 +1697,10 @@ Object {
                           </p>
                         </div>
                         <div
-                          class="sc-lmUcrn exnUBy"
+                          class="sc-lfYzqA itLYxA"
                         >
                           <div
-                            class="sc-iowXnY djHQEM"
+                            class="sc-ijDOKB ejBZLT"
                           />
                           <p
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -1689,10 +1713,10 @@ Object {
                           </p>
                         </div>
                         <div
-                          class="sc-lmUcrn exnUBy"
+                          class="sc-lfYzqA itLYxA"
                         >
                           <div
-                            class="sc-iowXnY gehBYV"
+                            class="sc-ijDOKB dzBvIa"
                           />
                           <p
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"

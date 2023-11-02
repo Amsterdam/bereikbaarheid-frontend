@@ -3331,9 +3331,9 @@ __metadata:
   linkType: hard
 
 "@types/estree@npm:*, @types/estree@npm:^1.0.0":
-  version: 1.0.3
-  resolution: "@types/estree@npm:1.0.3"
-  checksum: 5171f467fdd77852e28d7eec575222bc6c900e117a44e916a5ff65807ae8e1ed15f57d21e8954d6bd532e37c49a8ecfee730fcb152b7b44234d38681978b2caa
+  version: 1.0.4
+  resolution: "@types/estree@npm:1.0.4"
+  checksum: de2abd990fb9b36583ab25d6a5898938eac076cf3e47f11ffc8cf9e3fdca1245807e0f166b6bf0924c7dab0676cc314ca8f749679ee5ea8a45771466ded25dd1
   languageName: node
   linkType: hard
 
@@ -3536,11 +3536,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.8.9
-  resolution: "@types/node@npm:20.8.9"
+  version: 20.8.10
+  resolution: "@types/node@npm:20.8.10"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 6fb5604ac087c8be9aeb9ee1413fae2e691c603c9a691bd722e113597b883f21e8380a44d114ab894b435a491bfc939c8478cd57bcf890c585b961343b124964
+  checksum: caaa3ae9294f1bfdacb029a916c64af63cbcea613a52f53ea86f93c91779859af177b2b68113ef835194519f5e76cadda08559929b68297f1a8a568c207f9f66
   languageName: node
   linkType: hard
 
@@ -3552,11 +3552,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^18.17.18":
-  version: 18.18.7
-  resolution: "@types/node@npm:18.18.7"
+  version: 18.18.8
+  resolution: "@types/node@npm:18.18.8"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: f1ab9c8d318ad9b05f83664bd8a209b9a6410052b4e7124469771ee681ab080f9e65ac3ed3db8a3403976c1ee2941da1eef8008f42a7a3e2e084dc556d5494b5
+  checksum: 6a8592675bfc0895c0a3ed1b942344d56538c178c0acab8fcbaf069a6bdeef6f8a416d5aa297a8ced34232919caf7658a4dd4eabf33a9ae1a755eeef9ea8e681
   languageName: node
   linkType: hard
 
@@ -5236,9 +5236,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001538, caniuse-lite@npm:^1.0.30001541":
-  version: 1.0.30001558
-  resolution: "caniuse-lite@npm:1.0.30001558"
-  checksum: 34b24ea00b8a40fa4106144179deb85a4de69130fec40baaf84a707421b7776019761b77692812337abdc0c7a9386f7b8539a08f6397326344448a4d75c31d1e
+  version: 1.0.30001559
+  resolution: "caniuse-lite@npm:1.0.30001559"
+  checksum: 32377e386580dcb977f552b488e7b56fb489aa0a83f4f43087af6e8fe1fe7fda529bc29e76ef38c0f9c56c964389d322059a0dd7a544859a7b88063f7fc761d7
   languageName: node
   linkType: hard
 
@@ -5740,25 +5740,25 @@ __metadata:
   linkType: hard
 
 "core-js-compat@npm:^3.31.0, core-js-compat@npm:^3.33.1":
-  version: 3.33.1
-  resolution: "core-js-compat@npm:3.33.1"
+  version: 3.33.2
+  resolution: "core-js-compat@npm:3.33.2"
   dependencies:
     browserslist: "npm:^4.22.1"
-  checksum: 9c7361b370eac30756e6ec52469988d62c6110759efa1c85edd15e6b30f05ace8319a9cc0671bf596a98e7e81c67ad693ceaab2691b85cb62c636da1afe8feb9
+  checksum: bcf6f0badffbbf4a127449f64720c33e9c960f204f072d9644954b30d7742e18de733e9f446c7093f1ccf5d9e101205a7c64747a5aeec7d3925f336322f85a03
   languageName: node
   linkType: hard
 
 "core-js-pure@npm:^3.23.3":
-  version: 3.33.1
-  resolution: "core-js-pure@npm:3.33.1"
-  checksum: c7f7f210b15c2d58e9d9a1b5096f06c8f326bc5274a12eaddee0818d073538a7b2af3d7525162eb37a84fe6f86f2fe6eea1972ddf4615b45bbab2dbfa343cf1b
+  version: 3.33.2
+  resolution: "core-js-pure@npm:3.33.2"
+  checksum: 9de1cc6e64371c1b48d547a75840472a2c39277dbe3dd74adc4c172f05f078218ce69e42e30f663d26a94a181e761325141028c2c0a1d452c8e4a383befa2e25
   languageName: node
   linkType: hard
 
 "core-js@npm:^3.19.2":
-  version: 3.33.1
-  resolution: "core-js@npm:3.33.1"
-  checksum: cf84a4fc430778fcc0195a9b47c9121f46e710eb0b5110ad8884aac504c9480ccbbd33d0b0f9c1936d2a6c8325c510cf8b3ec68863c352e7de91d661f1e0860a
+  version: 3.33.2
+  resolution: "core-js@npm:3.33.2"
+  checksum: d6a56ad3e134846c805ce936788dd58cb51e861f173ed1f830979735d7865ea6f6a5a437076c36c8d8b842ba0384d052998f160774a8da7712f0f51df60167fe
   languageName: node
   linkType: hard
 
@@ -6630,9 +6630,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.535":
-  version: 1.4.569
-  resolution: "electron-to-chromium@npm:1.4.569"
-  checksum: d096c7adeb1e0df06ea6cb783c8d9bbd340f343185f8b16acfbe87f54ae2bc94173382383acdfe52ad83b21c9593ee41c27ef3fb49d667a4358f48bf6500b49c
+  version: 1.4.571
+  resolution: "electron-to-chromium@npm:1.4.571"
+  checksum: a9132ec4480b28ea7092f23787e40b16ee2e7ffe4de57a80edaf0e3fe3823b9f0433279f34e67e3726da321320339283f366e025fe5b6cff135bec5c8ad2a2c0
   languageName: node
   linkType: hard
 
@@ -9852,11 +9852,11 @@ __metadata:
   linkType: hard
 
 "jiti@npm:^1.19.1":
-  version: 1.20.0
-  resolution: "jiti@npm:1.20.0"
+  version: 1.21.0
+  resolution: "jiti@npm:1.21.0"
   bin:
     jiti: bin/jiti.js
-  checksum: e71999db5e436d38c32ca713c3688b5da2a686f264584d927dcca80a4eaece83af7dd32c047524e74084bb11bdfa148f5f91b7e9a0044b4803feffe3c2c30dbc
+  checksum: 7f361219fe6c7a5e440d5f1dba4ab763a5538d2df8708cdc22561cf25ea3e44b837687931fca7cdd8cdd9f567300e90be989dd1321650045012d8f9ed6aab07f
   languageName: node
   linkType: hard
 
@@ -12674,9 +12674,9 @@ __metadata:
   linkType: hard
 
 "punycode@npm:^2.1.0, punycode@npm:^2.1.1":
-  version: 2.3.0
-  resolution: "punycode@npm:2.3.0"
-  checksum: 8e6f7abdd3a6635820049e3731c623bbef3fedbf63bbc696b0d7237fdba4cefa069bc1fa62f2938b0fbae057550df7b5318f4a6bcece27f1907fc75c54160bee
+  version: 2.3.1
+  resolution: "punycode@npm:2.3.1"
+  checksum: 14f76a8206bc3464f794fb2e3d3cc665ae416c01893ad7a02b23766eb07159144ee612ad67af5e84fa4479ccfe67678c4feb126b0485651b302babf66f04f9e9
   languageName: node
   linkType: hard
 
@@ -14600,8 +14600,8 @@ __metadata:
   linkType: hard
 
 "terser@npm:^5.0.0, terser@npm:^5.10.0, terser@npm:^5.16.8":
-  version: 5.22.0
-  resolution: "terser@npm:5.22.0"
+  version: 5.23.0
+  resolution: "terser@npm:5.23.0"
   dependencies:
     "@jridgewell/source-map": "npm:^0.3.3"
     acorn: "npm:^8.8.2"
@@ -14609,7 +14609,7 @@ __metadata:
     source-map-support: "npm:~0.5.20"
   bin:
     terser: bin/terser
-  checksum: 76471196c7b86d65ea169c5a5cd66d470511064cf8592fd427cede1f36b842fdb196cb1e3df8eea12327ef9da847b01637b5776f637d34d1204484a492b6da8e
+  checksum: b7d2f5e475cb73ba164defca07dd8c363d50df3fd4a41139c9bce738481636aecf75cb7659c6649ad45dba6361d4a9531e5888d2e3db589ead1be8485bc44548
   languageName: node
   linkType: hard
 
