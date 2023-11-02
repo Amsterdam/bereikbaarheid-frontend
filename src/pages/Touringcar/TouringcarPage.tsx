@@ -24,8 +24,8 @@ import TouringcarMapLayers from './components/MapLayers'
 import TouringcarMapPanel from './components/MapPanel'
 import TouringcarMapSettingsDisplay from './components/MapSettingsDisplay'
 import { TouringcarViewerContainer } from './components/ViewerContainer'
-import { TouringcarMapProvider } from './contexts/MapProvider'
-import { TouringcarPageProvider } from './contexts/PageProvider'
+import TouringcarMapProvider from './contexts/MapProvider'
+import TouringcarPageProvider from './contexts/PageProvider'
 
 const StyledMap = styled(Map<typeof Map>)`
   flex-grow: 1;
@@ -69,7 +69,7 @@ const TouringcarPage = () => {
             <TouringcarMapProvider>
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}
-                initialPosition={mapPanelConstants.SnapPoint.Closed}
+                initialPosition={mapPanelConstants.SnapPoint.Halfway}
                 topOffset={HEADER_HEIGHT}
               >
                 <Element>

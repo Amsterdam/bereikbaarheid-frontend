@@ -6,13 +6,11 @@ import { useQuery } from '@tanstack/react-query'
 import getTouringcarRoutesMandatory from 'api/touringcar/routes-mandatory'
 import { DomEvent } from 'leaflet'
 import {
+  MapLayerId,
   MapPanelTab,
   useTouringcarMapContext,
 } from 'pages/Touringcar/contexts/MapContext'
-import {
-  layerFeatureProps,
-  layerIds,
-} from 'pages/Touringcar/contexts/mapLayersReducer'
+import { layerFeatureProps } from 'pages/Touringcar/contexts/mapLayersReducer'
 
 export const RoutesMandatoryLayer = () => {
   const { setCurrentParkingSpace, setActiveTab } = useTouringcarMapContext()
@@ -36,7 +34,7 @@ export const RoutesMandatoryLayer = () => {
     return null
   }
 
-  if (!activeMapLayers[layerIds.touringcarRoutesMandatoryLayerId]) return null
+  if (!activeMapLayers[MapLayerId.touringcarRoutesMandatoryLayerId]) return null
 
   return (
     <GeoJSON
@@ -44,9 +42,10 @@ export const RoutesMandatoryLayer = () => {
       options={{
         style: {
           color:
-            layerFeatureProps[layerIds.touringcarRoutesMandatoryLayerId].color,
+            layerFeatureProps[MapLayerId.touringcarRoutesMandatoryLayerId]
+              .color,
           weight:
-            layerFeatureProps[layerIds.touringcarRoutesMandatoryLayerId]
+            layerFeatureProps[MapLayerId.touringcarRoutesMandatoryLayerId]
               .strokeWidth,
         },
         onEachFeature: (_feature, layer: L.GeoJSON) => {

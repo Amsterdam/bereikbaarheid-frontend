@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ParkingStopsLayers renders correctly 1`] = `
+exports[`RoutesLayers renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -62,7 +62,7 @@ Object {
                     href="/op-kenteken"
                     title="Op kenteken:
 
-Voer uw kenteken in en u ziet gelijk of u de gewenste bestemming in stad kunt bereiken rekening gehouden met lengte, breedte, hoogte, aslast, gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
+Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
                     variant="blank"
                   >
                     <span
@@ -241,12 +241,12 @@ FAQ en contactgegevens"
                 >
                   <div
                     class="leaflet-tile-container leaflet-zoom-animated"
-                    style="z-index: 18; left: 0px; top: 0px;"
+                    style="z-index: 21; left: 0px; top: 0px;"
                   >
                     <img
                       alt=""
                       class="leaflet-tile"
-                      src="https://t1.data.amsterdam.nl/topo_wm_light/13/4207/2692.png"
+                      src="https://t4.data.amsterdam.nl/topo_wm_zw/13/4207/2692.png"
                       style="width: 256px; height: 256px; left: -90px; top: -24px;"
                     />
                   </div>
@@ -259,157 +259,6 @@ FAQ en contactgegevens"
                   class="leaflet-layer "
                   style="z-index: 250;"
                 />
-                <svg
-                  class="leaflet-zoom-animated"
-                  height="0"
-                  pointer-events="none"
-                  style="left: 0px; top: 0px;"
-                  viewBox="0 0 0 0"
-                  width="0"
-                >
-                  <g>
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                    <path
-                      class="leaflet-interactive"
-                      d="M0 0"
-                      fill="none"
-                      stroke="#00a03c"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-opacity="1"
-                      stroke-width="6"
-                    />
-                  </g>
-                </svg>
               </div>
               <div
                 class="leaflet-pane leaflet-shadow-pane"
@@ -462,7 +311,7 @@ FAQ en contactgegevens"
           </div>
           <div
             class="MapPanelStyle--13h7umc hfJLIU"
-            style="width: 30px;"
+            style="width: 480px;"
           >
             <div
               class="MapPanelContent--10qv8ot dWqMO"
@@ -471,7 +320,7 @@ FAQ en contactgegevens"
                 class="MapDrawerContentStyle--15grfz7 jHdtJb"
               >
                 <div
-                  class="StyledContainer--qabx89 ftUCHE"
+                  class="StyledContainer--qabx89 zPppQ"
                 >
                   <div
                     class="Content--1ku427e jPTlQg"
@@ -611,7 +460,7 @@ FAQ en contactgegevens"
                               <span
                                 class="sc-fhzFiK iRpqvs"
                               >
-                                Verplichte routes (&gt; 7,5t)
+                                Verplichte route (&gt; 7,5t)
                               </span>
                             </a>
                             <sup>
@@ -640,7 +489,7 @@ FAQ en contactgegevens"
               </div>
             </div>
             <button
-              class="sc-dcJsrY ekQDyO Handle--qoocaz cjiUXM"
+              class="sc-dcJsrY ekQDyO Handle--qoocaz hqURud"
               size="32"
               title="Open legenda"
               type="button"
@@ -655,7 +504,7 @@ FAQ en contactgegevens"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                    d="m22.857 32-16-16 16-16 2.9 2.91L12.677 16l13.08 13.09z"
                     fill-rule="evenodd"
                   />
                 </svg>
@@ -758,7 +607,7 @@ FAQ en contactgegevens"
                       <span
                         class="sc-brPLxw dGBiZJ"
                       >
-                        Verplichte routes (&gt; 7,5t)
+                        Verplichte route (&gt; 7,5t)
                       </span>
                       <span
                         class="sc-fHjqPf jSNdCb sc-eIcdZJ jstSCP"
@@ -916,7 +765,7 @@ FAQ en contactgegevens"
                   href="/op-kenteken"
                   title="Op kenteken:
 
-Voer uw kenteken in en u ziet gelijk of u de gewenste bestemming in stad kunt bereiken rekening gehouden met lengte, breedte, hoogte, aslast, gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
+Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
                   variant="blank"
                 >
                   <span
@@ -1095,12 +944,12 @@ FAQ en contactgegevens"
               >
                 <div
                   class="leaflet-tile-container leaflet-zoom-animated"
-                  style="z-index: 18; left: 0px; top: 0px;"
+                  style="z-index: 21; left: 0px; top: 0px;"
                 >
                   <img
                     alt=""
                     class="leaflet-tile"
-                    src="https://t1.data.amsterdam.nl/topo_wm_light/13/4207/2692.png"
+                    src="https://t4.data.amsterdam.nl/topo_wm_zw/13/4207/2692.png"
                     style="width: 256px; height: 256px; left: -90px; top: -24px;"
                   />
                 </div>
@@ -1113,157 +962,6 @@ FAQ en contactgegevens"
                 class="leaflet-layer "
                 style="z-index: 250;"
               />
-              <svg
-                class="leaflet-zoom-animated"
-                height="0"
-                pointer-events="none"
-                style="left: 0px; top: 0px;"
-                viewBox="0 0 0 0"
-                width="0"
-              >
-                <g>
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                  <path
-                    class="leaflet-interactive"
-                    d="M0 0"
-                    fill="none"
-                    stroke="#00a03c"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-opacity="1"
-                    stroke-width="6"
-                  />
-                </g>
-              </svg>
             </div>
             <div
               class="leaflet-pane leaflet-shadow-pane"
@@ -1316,7 +1014,7 @@ FAQ en contactgegevens"
         </div>
         <div
           class="MapPanelStyle--13h7umc hfJLIU"
-          style="width: 30px;"
+          style="width: 480px;"
         >
           <div
             class="MapPanelContent--10qv8ot dWqMO"
@@ -1325,7 +1023,7 @@ FAQ en contactgegevens"
               class="MapDrawerContentStyle--15grfz7 jHdtJb"
             >
               <div
-                class="StyledContainer--qabx89 ftUCHE"
+                class="StyledContainer--qabx89 zPppQ"
               >
                 <div
                   class="Content--1ku427e jPTlQg"
@@ -1465,7 +1163,7 @@ FAQ en contactgegevens"
                             <span
                               class="sc-fhzFiK iRpqvs"
                             >
-                              Verplichte routes (&gt; 7,5t)
+                              Verplichte route (&gt; 7,5t)
                             </span>
                           </a>
                           <sup>
@@ -1494,7 +1192,7 @@ FAQ en contactgegevens"
             </div>
           </div>
           <button
-            class="sc-dcJsrY ekQDyO Handle--qoocaz cjiUXM"
+            class="sc-dcJsrY ekQDyO Handle--qoocaz hqURud"
             size="32"
             title="Open legenda"
             type="button"
@@ -1509,7 +1207,7 @@ FAQ en contactgegevens"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                  d="m22.857 32-16-16 16-16 2.9 2.91L12.677 16l13.08 13.09z"
                   fill-rule="evenodd"
                 />
               </svg>
@@ -1612,7 +1310,7 @@ FAQ en contactgegevens"
                     <span
                       class="sc-brPLxw dGBiZJ"
                     >
-                      Verplichte routes (&gt; 7,5t)
+                      Verplichte route (&gt; 7,5t)
                     </span>
                     <span
                       class="sc-fHjqPf jSNdCb sc-eIcdZJ jstSCP"

@@ -17,8 +17,6 @@ import touringcarLinks from '../Touringcar/data/dataLinks'
 
 import DataSourcesBlocks from './components/DataSourcesBlocks'
 
-const INITIAL_DATE = format(new Date(), 'yyyy-MM-dd')
-
 const StyledMainContent = styled(MainContent)`
   align-self: center;
   padding: ${themeSpacing(8)};
@@ -26,15 +24,16 @@ const StyledMainContent = styled(MainContent)`
   max-width: 1200px;
 `
 
-const DataSourcesPage = () => {
+function DataSourcesPage() {
   const { t } = useTranslation()
 
   const { urlTrafficSigns } = useUrlTrafficSigns(DUMMY_VEHICLE)
 
+  const initialDate = format(new Date(), 'yyyy-MM-dd')
   const dataLinks = [
     trafficSignsLink(urlTrafficSigns()),
     ...obstructionsLinks({
-      date: INITIAL_DATE,
+      date: initialDate,
       timeFrom: '00:00',
       timeTo: '23:59',
     }),

@@ -62,7 +62,7 @@ Object {
                     href="/op-kenteken"
                     title="Op kenteken:
 
-Voer uw kenteken in en u ziet gelijk of u de gewenste bestemming in stad kunt bereiken rekening gehouden met lengte, breedte, hoogte, aslast, gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
+Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
                     variant="blank"
                   >
                     <span
@@ -278,7 +278,7 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="v1/road-obstructions/?date=2023-10-31&timeFrom=00:00&timeTo=23:59"
+                  href="v1/road-obstructions/?date=2023-10-01&timeFrom=00:00&timeTo=23:59"
                   target="_blank"
                 >
                   <span
@@ -458,7 +458,7 @@ FAQ en contactgegevens"
                   <span
                     class="sc-fhzFiK iRpqvs"
                   >
-                    Verplichte routes (&gt; 7,5t)
+                    Verplichte route (&gt; 7,5t)
                   </span>
                 </a>
                 <sup>
@@ -611,7 +611,7 @@ FAQ en contactgegevens"
                   href="/op-kenteken"
                   title="Op kenteken:
 
-Voer uw kenteken in en u ziet gelijk of u de gewenste bestemming in stad kunt bereiken rekening gehouden met lengte, breedte, hoogte, aslast, gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
+Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
                   variant="blank"
                 >
                   <span
@@ -827,7 +827,7 @@ FAQ en contactgegevens"
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="v1/road-obstructions/?date=2023-10-31&timeFrom=00:00&timeTo=23:59"
+                href="v1/road-obstructions/?date=2023-10-01&timeFrom=00:00&timeTo=23:59"
                 target="_blank"
               >
                 <span
@@ -1007,7 +1007,7 @@ FAQ en contactgegevens"
                 <span
                   class="sc-fhzFiK iRpqvs"
                 >
-                  Verplichte routes (&gt; 7,5t)
+                  Verplichte route (&gt; 7,5t)
                 </span>
               </a>
               <sup>
