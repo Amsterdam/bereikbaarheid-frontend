@@ -65,12 +65,12 @@
       "maxVehicleHeight": "Maximale doorrijhoogtes",
       "destinationTraffic": "Bestemmingsverkeer",
       "recommendedRoutes": "Aanbevolen routes",
-      "mandatoryRoutes": "Verplichte routes (> 7,5t)",
+      "mandatoryRoutes": "Verplichte route (> 7,5t)",
       "environmentalZone": "Milieuzone"
     },
     "_dataSources": {
       "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
-      "mandatoryRoutes": "Verplichte routes (> 7,5t)"
+      "mandatoryRoutes": "Verplichte route (> 7,5t)"
     }
   },
   "_pageData": {

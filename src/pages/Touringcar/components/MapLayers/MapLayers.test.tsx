@@ -15,7 +15,7 @@ describe('RoutesLayers', () => {
     expect(checkboxParkeren).toBeChecked()
 
     const checkboxRoutesMandatory = await screen.findByLabelText(
-      'Verplichte routes (> 7,5t)'
+      'Verplichte route (> 7,5t)'
     )
     expect(checkboxRoutesMandatory).toBeChecked()
   })
@@ -32,7 +32,7 @@ describe('RoutesLayers', () => {
     expect(checkboxParkeren).not.toBeChecked()
 
     const checkboxRoutesMandatory = await screen.findByLabelText(
-      'Verplichte routes (> 7,5t)'
+      'Verplichte route (> 7,5t)'
     )
     expect(checkboxRoutesMandatory).toBeChecked()
   })
@@ -49,7 +49,7 @@ describe('RoutesLayers', () => {
     expect(checkboxParkeren).toBeChecked()
 
     const checkboxRoutesMandatory = await screen.findByLabelText(
-      'Verplichte routes (> 7,5t)'
+      'Verplichte route (> 7,5t)'
     )
     expect(checkboxRoutesMandatory).toBeChecked()
   })
