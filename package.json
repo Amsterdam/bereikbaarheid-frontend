@@ -69,7 +69,7 @@
     "@testing-library/dom": "*"
   },
   "scripts": {
-    "clean": "rm -Rf build node_modules",
+    "clean": "rm -Rf build node_modules .yarn .eslintcache",
     "prepare": "husky install",
     "start": "GENERATE_SOURCEMAP=false react-scripts start",
     "lint": "eslint --cache .",

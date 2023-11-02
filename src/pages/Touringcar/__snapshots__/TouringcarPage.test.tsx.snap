@@ -60,7 +60,9 @@ Object {
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/op-kenteken"
-                    title="Op kenteken"
+                    title="Op kenteken:
+
+Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
                     variant="blank"
                   >
                     <span
@@ -80,7 +82,9 @@ Object {
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/stremmingen"
-                    title="Stremmingen"
+                    title="Stremmingen:
+
+Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen."
                     variant="blank"
                   >
                     <span
@@ -100,7 +104,9 @@ Object {
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/laden-lossen"
-                    title="Laden en lossen"
+                    title="Laden en lossen:
+
+Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. "
                     variant="blank"
                   >
                     <span
@@ -121,7 +127,9 @@ Object {
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="https://tourbuzz.amsterdam.nl/"
                     target="_blank"
-                    title="Touringcar"
+                    title="Touringcar:
+
+Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
                     variant="blank"
                   >
                     <span
@@ -165,7 +173,9 @@ Object {
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/data"
                     style="font-weight: normal;"
-                    title="Databronnen"
+                    title="Databronnen:
+
+De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
                     variant="blank"
                   >
                     <span
@@ -186,7 +196,9 @@ Object {
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/contact"
                     style="font-weight: normal;"
-                    title="Contact en uitleg"
+                    title="Contact en uitleg:
+
+FAQ en contactgegevens"
                     variant="blank"
                   >
                     <span
@@ -751,7 +763,9 @@ Object {
                 <a
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/op-kenteken"
-                  title="Op kenteken"
+                  title="Op kenteken:
+
+Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
                   variant="blank"
                 >
                   <span
@@ -771,7 +785,9 @@ Object {
                 <a
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/stremmingen"
-                  title="Stremmingen"
+                  title="Stremmingen:
+
+Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen."
                   variant="blank"
                 >
                   <span
@@ -791,7 +807,9 @@ Object {
                 <a
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/laden-lossen"
-                  title="Laden en lossen"
+                  title="Laden en lossen:
+
+Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. "
                   variant="blank"
                 >
                   <span
@@ -812,7 +830,9 @@ Object {
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="https://tourbuzz.amsterdam.nl/"
                   target="_blank"
-                  title="Touringcar"
+                  title="Touringcar:
+
+Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
                   variant="blank"
                 >
                   <span
@@ -856,7 +876,9 @@ Object {
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/data"
                   style="font-weight: normal;"
-                  title="Databronnen"
+                  title="Databronnen:
+
+De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
                   variant="blank"
                 >
                   <span
@@ -877,7 +899,9 @@ Object {
                   class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                   href="/contact"
                   style="font-weight: normal;"
-                  title="Contact en uitleg"
+                  title="Contact en uitleg:
+
+FAQ en contactgegevens"
                   variant="blank"
                 >
                   <span

@@ -30,7 +30,11 @@ function HeaderMenuItem({ item }: { item: MenuItemWithPath }) {
           )
         }
         title={`${t(item.title)}${
-          item.description ? `- ${item.description}` : ''
+          item.description
+            ? `:
+
+${t(item.description)}`
+            : ''
         }`}
         // @ts-ignore
         active={matchPath(location.pathname, item.path) ? 'true' : undefined}
