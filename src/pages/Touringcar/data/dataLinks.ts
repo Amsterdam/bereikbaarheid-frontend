@@ -1,5 +1,6 @@
 import { getUrl as getTouringcarParkingSpacesUrl } from 'api/touringcar/parking-spaces'
 import { getUrl as getTouringcarRoutesMandatoryUrl } from 'api/touringcar/routes-mandatory'
+import { getUrl as getTouringcarRoutesRecommendedUrl } from 'api/touringcar/routes-recommended'
 import { getUrl as getTouringcarStopsUrl } from 'api/touringcar/stops'
 
 const touringcarStopsLink = {
@@ -14,6 +15,12 @@ const touringcarParkingSpacesLink = {
   beta: true,
 }
 
+const touringcarRoutesRecommendedLink = {
+  href: getTouringcarRoutesRecommendedUrl(),
+  title: '_pageTouringcar._dataSources.recommendedRoutes',
+  beta: true,
+}
+
 const touringcarRoutesMandatoryLink = {
   href: getTouringcarRoutesMandatoryUrl(),
   title: '_pageTouringcar._dataSources.mandatoryRoutes',
@@ -23,12 +30,14 @@ const touringcarRoutesMandatoryLink = {
 const dataLinks = [
   touringcarStopsLink,
   touringcarParkingSpacesLink,
+  touringcarRoutesRecommendedLink,
   touringcarRoutesMandatoryLink,
 ]
 
 export {
   touringcarStopsLink,
   touringcarParkingSpacesLink,
+  touringcarRoutesRecommendedLink,
   touringcarRoutesMandatoryLink,
 }
 

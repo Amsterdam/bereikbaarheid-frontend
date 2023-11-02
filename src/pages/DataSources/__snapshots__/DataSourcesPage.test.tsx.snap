@@ -458,6 +458,39 @@ Object {
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                  href="v1/touringcars/aanbevolenroutes"
+                  target="_blank"
+                >
+                  <span
+                    class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                  >
+                    <svg
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="sc-fhzFiK iRpqvs"
+                  >
+                    _pageTouringcar._dataSources.recommendedRoutes
+                  </span>
+                </a>
+                <sup>
+                  *
+                </sup>
+              </li>
+              <li
+                class="sc-lcIPJg ddQxr"
+              >
+                <a
+                  class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
                   href="v1/touringcars/verplichteroutes"
                   target="_blank"
                 >
@@ -1017,6 +1050,39 @@ Object {
                   class="sc-fhzFiK iRpqvs"
                 >
                   Parkeerplekken voor touringcars
+                </span>
+              </a>
+              <sup>
+                *
+              </sup>
+            </li>
+            <li
+              class="sc-lcIPJg ddQxr"
+            >
+              <a
+                class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                href="v1/touringcars/aanbevolenroutes"
+                target="_blank"
+              >
+                <span
+                  class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                >
+                  <svg
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="sc-fhzFiK iRpqvs"
+                >
+                  _pageTouringcar._dataSources.recommendedRoutes
                 </span>
               </a>
               <sup>
