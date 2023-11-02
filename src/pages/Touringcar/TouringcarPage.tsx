@@ -25,7 +25,7 @@ import TouringcarMapPanel from './components/MapPanel'
 import TouringcarMapSettingsDisplay from './components/MapSettingsDisplay'
 import { TouringcarViewerContainer } from './components/ViewerContainer'
 import TouringcarMapProvider from './contexts/MapProvider'
-import { TouringcarPageProvider } from './contexts/PageProvider'
+import TouringcarPageProvider from './contexts/PageProvider'
 
 const StyledMap = styled(Map<typeof Map>)`
   flex-grow: 1;

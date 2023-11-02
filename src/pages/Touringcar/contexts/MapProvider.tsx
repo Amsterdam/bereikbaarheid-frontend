@@ -27,12 +27,12 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
       return mapLayerParamIds.includes(key as MapLayerParam)
     })
 
+    if (!mapLayerParams.length) return
+
     mapLayerParamIds.forEach(param => {
       const queryParam = MapLayerParamToMapLayer[
         param
       ] as unknown as keyof typeof mapLayersInitialState
-
-      if (!mapLayerParams.length) return
 
       if (mapLayerParams.includes(param)) {
         return updateActiveMapLayers({ type: 'ON', layerId: queryParam })

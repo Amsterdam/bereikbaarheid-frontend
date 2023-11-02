@@ -52,13 +52,14 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
   }
 `
 
-const RoadObstructionsPage = () => {
+function RoadObstructionsPage() {
   const { t } = useTranslation()
 
   const [detailFeature, setDetailFeature] = useState<DetailFeature | undefined>(
     undefined
   )
   const [showMapFiltersForm, setShowMapFiltersForm] = useState(false)
+
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   useEffect(() => {
     if (mapInstance) {
@@ -66,14 +67,17 @@ const RoadObstructionsPage = () => {
     }
   }, [mapInstance])
 
-  // variables concerning map filters
   const [searchParams, setSearchParams] = useSearchParams()
-  let initialDate = searchParams.get('date') ?? format(new Date(), 'yyyy-MM-dd')
+  const initialDate =
+    searchParams.get('date') ?? format(new Date(), 'yyyy-MM-dd')
   const [mapFilters, setMapFilters] = useState<RoadObstructionMapFilters>({
     date: initialDate,
     timeFrom: '00:00',
     timeTo: '23:59',
   })
+  useEffect(() => {
+    setSearchParams({ date: mapFilters.date })
+  }, [mapFilters.date, setSearchParams])
 
   const dateFormatted = useMemo(
     () =>
@@ -84,10 +88,6 @@ const RoadObstructionsPage = () => {
   useDocumentTitle(
     `${t('_pageRoadObstructions.roadObstructionsOn')} ${dateFormatted}`
   )
-
-  useEffect(() => {
-    setSearchParams({ date: mapFilters.date })
-  }, [mapFilters.date, setSearchParams])
 
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
