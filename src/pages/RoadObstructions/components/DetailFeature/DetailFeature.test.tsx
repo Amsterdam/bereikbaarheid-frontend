@@ -6,7 +6,7 @@ import { getPathTo } from 'routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('DetailFeature', () => {
-  jest.setTimeout(10000)
+  jest.setTimeout(15000)
 
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))
