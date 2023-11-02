@@ -65,12 +65,12 @@
       "maxVehicleHeight": "Maximum vehicle height",
       "destinationTraffic": "Destination traffic",
       "recommendedRoutes": "Recommended routes",
-      "mandatoryRoutes": "Mandatory routes (> 7.5t)",
+      "mandatoryRoutes": "Mandatory route (> 7.5t)",
       "environmentalZone": "Environmental zone"
     },
     "_dataSources": {
       "parkingSpacesForCoaches": "Parking spaces for coaches",
-      "mandatoryRoutes": "Mandatory routes (> 7.5t)"
+      "mandatoryRoutes": "Mandatory route (> 7.5t)"
     }
   },
   "_pageData": {
