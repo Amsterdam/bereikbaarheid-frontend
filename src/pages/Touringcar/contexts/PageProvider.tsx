@@ -6,14 +6,12 @@ import { Address } from 'types/address'
 
 import { TouringcarPageContext } from './PageContext'
 
-type Props = {
-  children: ReactNode
-}
-
-export const TouringcarPageProvider = ({ children }: Props) => {
+function TouringcarPageProvider({ children }: { children: ReactNode }) {
   const [address, setAddress] = useState({} as Address)
+
+  const initialDate = format(new Date(), 'yyyy-MM-dd')
   const [dateTime, setDateTime] = useState<FormDateTimeValues>({
-    date: format(new Date(), 'yyyy-MM-dd'),
+    date: initialDate,
     timeFrom: '11:00',
     timeTo: '13:00',
   })
@@ -31,3 +29,5 @@ export const TouringcarPageProvider = ({ children }: Props) => {
     </TouringcarPageContext.Provider>
   )
 }
+
+export default TouringcarPageProvider

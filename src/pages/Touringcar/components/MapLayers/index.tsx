@@ -24,8 +24,8 @@ const TouringcarMapLayers = () => {
     <>
       <AddressMarker address={address} />
 
-      <ParkingSpacesLayer />
       <StopsLayer />
+      <ParkingSpacesLayer />
       <RoutesMandatoryLayer />
 
       <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />

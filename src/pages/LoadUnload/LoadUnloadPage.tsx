@@ -27,7 +27,7 @@ import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
 import { ModalDateTime } from './components/ModalDateTime'
 import { LoadUnloadViewerContainer } from './components/ViewerContainer'
 import { LoadUnloadMapProvider } from './contexts/MapProvider'
-import { LoadUnloadPageProvider } from './contexts/PageProvider'
+import LoadUnloadPageProvider from './contexts/PageProvider'
 
 const { SnapPoint } = mapPanelConstants
 

@@ -5,7 +5,7 @@ import { PretendHeading } from 'shared/components/CompactElements'
 
 import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
 import { MapPanelTab, useTouringcarMapContext } from '../contexts/MapContext'
-import { TouringcarPageProvider } from '../contexts/PageProvider'
+import TouringcarPageProvider from '../contexts/PageProvider'
 import dataLinks from '../data/dataLinks'
 
 interface MapSettingsDisplayProps extends MapPanelContentProps {}
