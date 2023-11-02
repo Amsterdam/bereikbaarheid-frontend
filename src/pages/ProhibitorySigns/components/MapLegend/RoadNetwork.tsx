@@ -85,7 +85,7 @@ const ProhibitorySignsMapLegendRoadNetwork = () => {
 
             <MapLegendItem color={prohibitoryRoadsColors.rvv} text="RVV" />
 
-            <MapLegendItem color="#00b100" text="geen ontheffing" />
+            <MapLegendItem color="#00b100" text="Geen ontheffing" />
 
             <MapLegendItem color="#000" text="Buiten Amsterdam" />
           </LegendItemsWrapper>

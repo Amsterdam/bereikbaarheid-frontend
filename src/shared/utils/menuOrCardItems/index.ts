@@ -33,18 +33,21 @@ const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
   {
     title: '_pageLicencePlate.title',
     titleShort: '_pageLicencePlate.titleShort',
+    description: '_pageLicencePlate.description',
     route: 'LICENCE_PLATE_PAGE' as RouteIds,
     image: 'bereikbaarheid-op-kenteken.webp',
     imageFallback: 'bereikbaarheid-op-kenteken.jpg',
   },
   {
     title: '_pageRoadObstructions.title',
+    description: '_pageRoadObstructions.description',
     route: 'ROAD_OBSTRUCTIONS_PAGE' as RouteIds,
     image: 'stremmingen.webp',
     imageFallback: 'stremmingen.jpg',
   },
   {
     title: '_pageLoadUnload.title',
+    description: '_pageLoadUnload.description',
     route: 'LOAD_UNLOAD_PAGE' as RouteIds,
     image: 'laden-en-lossen.webp',
     imageFallback: 'laden-en-lossen.jpg',
@@ -52,6 +55,7 @@ const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
   {
     title: '_linkTourBuzz.title',
     titleShort: '_linkTourBuzz.titleShort',
+    description: '_linkTourBuzz.description',
     path: 'https://tourbuzz.amsterdam.nl/',
     target: '_blank',
     image: 'tour-buzz.webp',
@@ -59,6 +63,7 @@ const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
   },
   {
     title: '_pageData.title',
+    description: '_pageData.description',
     route: 'DATA' as RouteIds,
     image: 'json.webp',
     imageFallback: 'json.jpg',
@@ -66,7 +71,10 @@ const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
   },
   {
     title: '_pageContact.title',
+    description: '_pageContact.description',
     route: 'CONTACT' as RouteIds,
+    image: 'contact.webp',
+    imageFallback: 'contact.jpg',
     secondary: true,
   },
 ]
