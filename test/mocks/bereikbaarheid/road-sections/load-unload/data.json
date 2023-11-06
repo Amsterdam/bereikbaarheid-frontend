@@ -1,1002 +1,588 @@
 {
-    "features": [
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.824583055581009,
-                            52.390146916631636
-                        ],
-                        [
-                            4.824627812390793,
-                            52.39014712924079
-                        ],
-                        [
-                            4.824712638626093,
-                            52.3901461278149
-                        ],
-                        [
-                            4.824732183638337,
-                            52.39014341197816
-                        ],
-                        [
-                            4.824746815303268,
-                            52.390138987606605
-                        ],
-                        [
-                            4.82479264771117,
-                            52.390135834866626
-                        ],
-                        [
-                            4.827253137771801,
-                            52.390137382342026
-                        ],
-                        [
-                            4.827361228512472,
-                            52.39013901680591
-                        ],
-                        [
-                            4.827470496529011,
-                            52.390147397523734
-                        ],
-                        [
-                            4.827552974303948,
-                            52.39015059595686
-                        ],
-                        [
-                            4.827591096263156,
-                            52.39014909089596
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 10537,
-                "load_unload": [
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "vr",
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "oost",
-                        "end_time": "22:59:00",
-                        "road_section_id": 10537,
-                        "start_time": "06:00:00"
-                    },
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do"
-                        ],
-                        "direction": "oost",
-                        "end_time": "23:59:00",
-                        "road_section_id": 10537,
-                        "start_time": "00:00:00"
-                    }
-                ],
-                "street_name": "Rh\u00f4neweg"
-            },
-            "type": "Feature"
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.824583055581009, 52.390146916631636],
+            [4.824627812390793, 52.39014712924079],
+            [4.824712638626093, 52.3901461278149],
+            [4.824732183638337, 52.39014341197816],
+            [4.824746815303268, 52.390138987606605],
+            [4.82479264771117, 52.390135834866626],
+            [4.827253137771801, 52.390137382342026],
+            [4.827361228512472, 52.39013901680591],
+            [4.827470496529011, 52.390147397523734],
+            [4.827552974303948, 52.39015059595686],
+            [4.827591096263156, 52.39014909089596]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.840788092782371,
-                            52.35260458877681
-                        ],
-                        [
-                            4.841832312849236,
-                            52.35262092029993
-                        ],
-                        [
-                            4.841910179938253,
-                            52.35265779189643
-                        ],
-                        [
-                            4.841853811888598,
-                            52.35424949192424
-                        ],
-                        [
-                            4.841808366451649,
-                            52.3553160188534
-                        ],
-                        [
-                            4.841918456771059,
-                            52.355549365516644
-                        ],
-                        [
-                            4.84191485049277,
-                            52.35584285581262
-                        ],
-                        [
-                            4.841816020018388,
-                            52.35600895512643
-                        ],
-                        [
-                            4.841798128276935,
-                            52.35627036064184
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 13031,
-                "load_unload": [
-                    {
-                        "additional_info": "C06",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "noord",
-                        "end_time": "23:59:00",
-                        "road_section_id": 13031,
-                        "start_time": "00:00:00"
-                    }
-                ],
-                "street_name": "Terheideweg"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 10537,
+        "load_unload": [
+          {
+            "additional_info": "E02",
+            "days": ["vr", "za", "zo"],
+            "direction": "oost",
+            "end_time": "22:59:00",
+            "road_section_id": 10537,
+            "start_time": "06:00:00"
+          },
+          {
+            "additional_info": "E02",
+            "days": ["ma", "di", "wo", "do"],
+            "direction": "oost",
+            "end_time": "23:59:00",
+            "road_section_id": 10537,
+            "start_time": "00:00:00"
+          }
+        ],
+        "street_name": "Rh\u00f4neweg"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.840788092782371, 52.35260458877681],
+            [4.841832312849236, 52.35262092029993],
+            [4.841910179938253, 52.35265779189643],
+            [4.841853811888598, 52.35424949192424],
+            [4.841808366451649, 52.3553160188534],
+            [4.841918456771059, 52.355549365516644],
+            [4.84191485049277, 52.35584285581262],
+            [4.841816020018388, 52.35600895512643],
+            [4.841798128276935, 52.35627036064184]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.851947488454083,
-                            52.35099845836898
-                        ],
-                        [
-                            4.851870759419394,
-                            52.351018895585355
-                        ],
-                        [
-                            4.851474276612392,
-                            52.35103507723421
-                        ],
-                        [
-                            4.850446811782151,
-                            52.35103941003167
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 14418,
-                "load_unload": [
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr"
-                        ],
-                        "direction": "west",
-                        "end_time": "07:29:00",
-                        "road_section_id": 14418,
-                        "start_time": "00:00:00"
-                    },
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr"
-                        ],
-                        "direction": "west",
-                        "end_time": "15:59:00",
-                        "road_section_id": 14418,
-                        "start_time": "09:00:00"
-                    },
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "west",
-                        "end_time": "23:59:00",
-                        "road_section_id": 14418,
-                        "start_time": "00:00:00"
-                    },
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr"
-                        ],
-                        "direction": "west",
-                        "end_time": "23:59:00",
-                        "road_section_id": 14418,
-                        "start_time": "19:00:00"
-                    }
-                ],
-                "street_name": "Hoofddorpweg"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 13031,
+        "load_unload": [
+          {
+            "additional_info": "C06",
+            "days": ["ma", "di", "wo", "do", "vr", "za", "zo"],
+            "direction": "noord",
+            "end_time": "23:59:00",
+            "road_section_id": 13031,
+            "start_time": "00:00:00"
+          }
+        ],
+        "street_name": "Terheideweg"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.851947488454083, 52.35099845836898],
+            [4.851870759419394, 52.351018895585355],
+            [4.851474276612392, 52.35103507723421],
+            [4.850446811782151, 52.35103941003167]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.851495639656814,
-                            52.36921431716953
-                        ],
-                        [
-                            4.851533813226799,
-                            52.36927347193594
-                        ],
-                        [
-                            4.851629634445014,
-                            52.36938456698356
-                        ],
-                        [
-                            4.851642240966692,
-                            52.36940456555821
-                        ],
-                        [
-                            4.851642907711672,
-                            52.36942535272365
-                        ],
-                        [
-                            4.851622557426461,
-                            52.369476659307985
-                        ],
-                        [
-                            4.851301695353485,
-                            52.37017035291453
-                        ],
-                        [
-                            4.851241229798022,
-                            52.37021866917986
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 14606,
-                "load_unload": [
-                    {
-                        "additional_info": "G07ZB",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "noord",
-                        "end_time": "21:00:00",
-                        "road_section_id": 14606,
-                        "start_time": "07:00:00"
-                    }
-                ],
-                "street_name": "Mercatorplein"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 14418,
+        "load_unload": [
+          {
+            "additional_info": "E02",
+            "days": ["ma", "di", "wo", "do", "vr"],
+            "direction": "west",
+            "end_time": "07:29:00",
+            "road_section_id": 14418,
+            "start_time": "00:00:00"
+          },
+          {
+            "additional_info": "E02",
+            "days": ["ma", "di", "wo", "do", "vr"],
+            "direction": "west",
+            "end_time": "15:59:00",
+            "road_section_id": 14418,
+            "start_time": "09:00:00"
+          },
+          {
+            "additional_info": "E02",
+            "days": ["za", "zo"],
+            "direction": "west",
+            "end_time": "23:59:00",
+            "road_section_id": 14418,
+            "start_time": "00:00:00"
+          },
+          {
+            "additional_info": "E02",
+            "days": ["ma", "di", "wo", "do", "vr"],
+            "direction": "west",
+            "end_time": "23:59:00",
+            "road_section_id": 14418,
+            "start_time": "19:00:00"
+          }
+        ],
+        "street_name": "Hoofddorpweg"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.851495639656814, 52.36921431716953],
+            [4.851533813226799, 52.36927347193594],
+            [4.851629634445014, 52.36938456698356],
+            [4.851642240966692, 52.36940456555821],
+            [4.851642907711672, 52.36942535272365],
+            [4.851622557426461, 52.369476659307985],
+            [4.851301695353485, 52.37017035291453],
+            [4.851241229798022, 52.37021866917986]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.8535334754478,
-                            52.3508047993602
-                        ],
-                        [
-                            4.853457870777262,
-                            52.35080810973108
-                        ],
-                        [
-                            4.853387496531553,
-                            52.35081509492595
-                        ],
-                        [
-                            4.852904965972272,
-                            52.35087358517254
-                        ],
-                        [
-                            4.852836968962739,
-                            52.35088310858275
-                        ],
-                        [
-                            4.852738849849644,
-                            52.350899236770346
-                        ],
-                        [
-                            4.85268823407029,
-                            52.350903221221216
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 16046,
-                "load_unload": [
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr"
-                        ],
-                        "direction": "west",
-                        "end_time": "07:29:00",
-                        "road_section_id": 16046,
-                        "start_time": "00:00:00"
-                    },
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr"
-                        ],
-                        "direction": "west",
-                        "end_time": "15:59:00",
-                        "road_section_id": 16046,
-                        "start_time": "09:00:00"
-                    },
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "west",
-                        "end_time": "23:59:00",
-                        "road_section_id": 16046,
-                        "start_time": "00:00:00"
-                    },
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr"
-                        ],
-                        "direction": "west",
-                        "end_time": "23:59:00",
-                        "road_section_id": 16046,
-                        "start_time": "19:00:00"
-                    }
-                ],
-                "street_name": "Zeilstraat"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 14606,
+        "load_unload": [
+          {
+            "additional_info": "G07ZB",
+            "days": ["ma", "di", "wo", "do", "vr", "za", "zo"],
+            "direction": "noord",
+            "end_time": "21:00:00",
+            "road_section_id": 14606,
+            "start_time": "07:00:00"
+          }
+        ],
+        "street_name": "Mercatorplein"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.8535334754478, 52.3508047993602],
+            [4.853457870777262, 52.35080810973108],
+            [4.853387496531553, 52.35081509492595],
+            [4.852904965972272, 52.35087358517254],
+            [4.852836968962739, 52.35088310858275],
+            [4.852738849849644, 52.350899236770346],
+            [4.85268823407029, 52.350903221221216]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.85201052550229,
-                            52.370341517519
-                        ],
-                        [
-                            4.852034664560689,
-                            52.37028994713585
-                        ],
-                        [
-                            4.852251154619141,
-                            52.36982215874043
-                        ],
-                        [
-                            4.852265288854189,
-                            52.36979160811542
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 16393,
-                "load_unload": [
-                    {
-                        "additional_info": "C06",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "zuid",
-                        "end_time": "23:59:00",
-                        "road_section_id": 16393,
-                        "start_time": "00:00:00"
-                    }
-                ],
-                "street_name": "Hudsonhof"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 16046,
+        "load_unload": [
+          {
+            "additional_info": "E02",
+            "days": ["ma", "di", "wo", "do", "vr"],
+            "direction": "west",
+            "end_time": "07:29:00",
+            "road_section_id": 16046,
+            "start_time": "00:00:00"
+          },
+          {
+            "additional_info": "E02",
+            "days": ["ma", "di", "wo", "do", "vr"],
+            "direction": "west",
+            "end_time": "15:59:00",
+            "road_section_id": 16046,
+            "start_time": "09:00:00"
+          },
+          {
+            "additional_info": "E02",
+            "days": ["za", "zo"],
+            "direction": "west",
+            "end_time": "23:59:00",
+            "road_section_id": 16046,
+            "start_time": "00:00:00"
+          },
+          {
+            "additional_info": "E02",
+            "days": ["ma", "di", "wo", "do", "vr"],
+            "direction": "west",
+            "end_time": "23:59:00",
+            "road_section_id": 16046,
+            "start_time": "19:00:00"
+          }
+        ],
+        "street_name": "Zeilstraat"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.85201052550229, 52.370341517519],
+            [4.852034664560689, 52.37028994713585],
+            [4.852251154619141, 52.36982215874043],
+            [4.852265288854189, 52.36979160811542]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.862693286151793,
-                            52.36476103524479
-                        ],
-                        [
-                            4.862752417645043,
-                            52.364755960735394
-                        ],
-                        [
-                            4.862779118559707,
-                            52.364758045083654
-                        ],
-                        [
-                            4.862796027165375,
-                            52.36476373732084
-                        ],
-                        [
-                            4.862838586356374,
-                            52.36478274391508
-                        ],
-                        [
-                            4.862889548267929,
-                            52.364799259905375
-                        ],
-                        [
-                            4.862940368971152,
-                            52.364818022183634
-                        ],
-                        [
-                            4.863109679840407,
-                            52.36486567660061
-                        ],
-                        [
-                            4.864216975183071,
-                            52.365131779496615
-                        ],
-                        [
-                            4.864279567584902,
-                            52.36515424446603
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 18095,
-                "load_unload": [
-                    {
-                        "additional_info": "C01",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "oost",
-                        "end_time": "11:00:00",
-                        "road_section_id": 18095,
-                        "start_time": "06:00:00"
-                    }
-                ],
-                "street_name": "Kinkerstraat"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 16393,
+        "load_unload": [
+          {
+            "additional_info": "C06",
+            "days": ["ma", "di", "wo", "do", "vr", "za", "zo"],
+            "direction": "zuid",
+            "end_time": "23:59:00",
+            "road_section_id": 16393,
+            "start_time": "00:00:00"
+          }
+        ],
+        "street_name": "Hudsonhof"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.862693286151793, 52.36476103524479],
+            [4.862752417645043, 52.364755960735394],
+            [4.862779118559707, 52.364758045083654],
+            [4.862796027165375, 52.36476373732084],
+            [4.862838586356374, 52.36478274391508],
+            [4.862889548267929, 52.364799259905375],
+            [4.862940368971152, 52.364818022183634],
+            [4.863109679840407, 52.36486567660061],
+            [4.864216975183071, 52.365131779496615],
+            [4.864279567584902, 52.36515424446603]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.864279567584902,
-                            52.36515424446603
-                        ],
-                        [
-                            4.864366717312294,
-                            52.36518552472882
-                        ],
-                        [
-                            4.864385533110096,
-                            52.36519487642926
-                        ],
-                        [
-                            4.864411915616267,
-                            52.36520454240729
-                        ],
-                        [
-                            4.864445409357033,
-                            52.36521423977981
-                        ],
-                        [
-                            4.865488213514252,
-                            52.36546459825377
-                        ],
-                        [
-                            4.865582519779251,
-                            52.365482427543796
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 18096,
-                "load_unload": [
-                    {
-                        "additional_info": "C01",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "oost",
-                        "end_time": "11:00:00",
-                        "road_section_id": 18096,
-                        "start_time": "06:00:00"
-                    }
-                ],
-                "street_name": "Kinkerstraat"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 18095,
+        "load_unload": [
+          {
+            "additional_info": "C01",
+            "days": ["ma", "di", "wo", "do", "vr", "za", "zo"],
+            "direction": "oost",
+            "end_time": "11:00:00",
+            "road_section_id": 18095,
+            "start_time": "06:00:00"
+          }
+        ],
+        "street_name": "Kinkerstraat"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.864279567584902, 52.36515424446603],
+            [4.864366717312294, 52.36518552472882],
+            [4.864385533110096, 52.36519487642926],
+            [4.864411915616267, 52.36520454240729],
+            [4.864445409357033, 52.36521423977981],
+            [4.865488213514252, 52.36546459825377],
+            [4.865582519779251, 52.365482427543796]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.865582519779251,
-                            52.365482427543796
-                        ],
-                        [
-                            4.865664146620435,
-                            52.365505537372584
-                        ],
-                        [
-                            4.865694783318955,
-                            52.36551437920285
-                        ],
-                        [
-                            4.866693689158826,
-                            52.36575329894563
-                        ],
-                        [
-                            4.866890833903029,
-                            52.36579517208787
-                        ],
-                        [
-                            4.867057285842547,
-                            52.3658329779215
-                        ],
-                        [
-                            4.867545897399554,
-                            52.365953087653644
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 18132,
-                "load_unload": [
-                    {
-                        "additional_info": "C01",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "oost",
-                        "end_time": "11:00:00",
-                        "road_section_id": 18132,
-                        "start_time": "06:00:00"
-                    }
-                ],
-                "street_name": "Kinkerstraat"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 18096,
+        "load_unload": [
+          {
+            "additional_info": "C01",
+            "days": ["ma", "di", "wo", "do", "vr", "za", "zo"],
+            "direction": "oost",
+            "end_time": "11:00:00",
+            "road_section_id": 18096,
+            "start_time": "06:00:00"
+          }
+        ],
+        "street_name": "Kinkerstraat"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.865582519779251, 52.365482427543796],
+            [4.865664146620435, 52.365505537372584],
+            [4.865694783318955, 52.36551437920285],
+            [4.866693689158826, 52.36575329894563],
+            [4.866890833903029, 52.36579517208787],
+            [4.867057285842547, 52.3658329779215],
+            [4.867545897399554, 52.365953087653644]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.874291805970179,
-                            52.341743094254895
-                        ],
-                        [
-                            4.873612563565603,
-                            52.34173200329472
-                        ],
-                        [
-                            4.873231261091648,
-                            52.34171237237194
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 19116,
-                "load_unload": [
-                    {
-                        "additional_info": "E02",
-                        "days": [
-                            "zo"
-                        ],
-                        "direction": "west",
-                        "end_time": "23:59:00",
-                        "road_section_id": 19116,
-                        "start_time": "00:00:00"
-                    }
-                ],
-                "street_name": "Prinses Irenestraat"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 18132,
+        "load_unload": [
+          {
+            "additional_info": "C01",
+            "days": ["ma", "di", "wo", "do", "vr", "za", "zo"],
+            "direction": "oost",
+            "end_time": "11:00:00",
+            "road_section_id": 18132,
+            "start_time": "06:00:00"
+          }
+        ],
+        "street_name": "Kinkerstraat"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.874291805970179, 52.341743094254895],
+            [4.873612563565603, 52.34173200329472],
+            [4.873231261091648, 52.34171237237194]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.869469040499426,
-                            52.366474095085906
-                        ],
-                        [
-                            4.869561580857796,
-                            52.366496126468235
-                        ],
-                        [
-                            4.870515947393753,
-                            52.366751390160424
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 19473,
-                "load_unload": [
-                    {
-                        "additional_info": "C01",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "oost",
-                        "end_time": "11:00:00",
-                        "road_section_id": 19473,
-                        "start_time": "06:00:00"
-                    }
-                ],
-                "street_name": "Kinkerstraat"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 19116,
+        "load_unload": [
+          {
+            "additional_info": "E02",
+            "days": ["zo"],
+            "direction": "west",
+            "end_time": "23:59:00",
+            "road_section_id": 19116,
+            "start_time": "00:00:00"
+          }
+        ],
+        "street_name": "Prinses Irenestraat"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.869469040499426, 52.366474095085906],
+            [4.869561580857796, 52.366496126468235],
+            [4.870515947393753, 52.366751390160424]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.871043870231585,
-                            52.37452639060147
-                        ],
-                        [
-                            4.871060764675269,
-                            52.37455342740232
-                        ],
-                        [
-                            4.871141069877886,
-                            52.374652361466104
-                        ],
-                        [
-                            4.871258822770836,
-                            52.374806508424605
-                        ],
-                        [
-                            4.871284213803647,
-                            52.3748428507978
-                        ],
-                        [
-                            4.871311096653567,
-                            52.37488902998136
-                        ],
-                        [
-                            4.871324473815695,
-                            52.37490285070656
-                        ],
-                        [
-                            4.871345970140498,
-                            52.374918953731814
-                        ],
-                        [
-                            4.871387397530783,
-                            52.374987103822754
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 19598,
-                "load_unload": [
-                    {
-                        "additional_info": "C01",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "zo"
-                        ],
-                        "direction": "noord",
-                        "end_time": "16:00:00",
-                        "road_section_id": 19598,
-                        "start_time": "09:00:00"
-                    },
-                    {
-                        "additional_info": "C01",
-                        "days": [
-                            "za"
-                        ],
-                        "direction": "noord",
-                        "end_time": "19:00:00",
-                        "road_section_id": 19598,
-                        "start_time": "09:00:00"
-                    },
-                    {
-                        "additional_info": "C01",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "zo"
-                        ],
-                        "direction": "noord",
-                        "end_time": "21:00:00",
-                        "road_section_id": 19598,
-                        "start_time": "19:00:00"
-                    }
-                ],
-                "street_name": "Van Reigersbergenstraat"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 19473,
+        "load_unload": [
+          {
+            "additional_info": "C01",
+            "days": ["ma", "di", "wo", "do", "vr", "za", "zo"],
+            "direction": "oost",
+            "end_time": "11:00:00",
+            "road_section_id": 19473,
+            "start_time": "06:00:00"
+          }
+        ],
+        "street_name": "Kinkerstraat"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.871043870231585, 52.37452639060147],
+            [4.871060764675269, 52.37455342740232],
+            [4.871141069877886, 52.374652361466104],
+            [4.871258822770836, 52.374806508424605],
+            [4.871284213803647, 52.3748428507978],
+            [4.871311096653567, 52.37488902998136],
+            [4.871324473815695, 52.37490285070656],
+            [4.871345970140498, 52.374918953731814],
+            [4.871387397530783, 52.374987103822754]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.883087674431098,
-                            52.36435278059631
-                        ],
-                        [
-                            4.8829944830304,
-                            52.36442821771089
-                        ],
-                        [
-                            4.882775920340372,
-                            52.36459468314067
-                        ],
-                        [
-                            4.882718889890518,
-                            52.36463713185127
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 22195,
-                "load_unload": [
-                    {
-                        "additional_info": "G07ZB",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "noord",
-                        "end_time": "12:00:00",
-                        "road_section_id": 22195,
-                        "start_time": "07:00:00"
-                    }
-                ],
-                "street_name": "Leidseplein"
-            },
-            "type": "Feature"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 19598,
+        "load_unload": [
+          {
+            "additional_info": "C01",
+            "days": ["ma", "di", "wo", "do", "vr", "zo"],
+            "direction": "noord",
+            "end_time": "16:00:00",
+            "road_section_id": 19598,
+            "start_time": "09:00:00"
+          },
+          {
+            "additional_info": "C01",
+            "days": ["za"],
+            "direction": "noord",
+            "end_time": "19:00:00",
+            "road_section_id": 19598,
+            "start_time": "09:00:00"
+          },
+          {
+            "additional_info": "C01",
+            "days": ["ma", "di", "wo", "do", "vr", "zo"],
+            "direction": "noord",
+            "end_time": "21:00:00",
+            "road_section_id": 19598,
+            "start_time": "19:00:00"
+          }
+        ],
+        "street_name": "Van Reigersbergenstraat"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.883087674431098, 52.36435278059631],
+            [4.8829944830304, 52.36442821771089],
+            [4.882775920340372, 52.36459468314067],
+            [4.882718889890518, 52.36463713185127]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
         },
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.883390296922486,
-                            52.364147070156356
-                        ],
-                        [
-                            4.88332656243601,
-                            52.36409315339799
-                        ],
-                        [
-                            4.883315290610353,
-                            52.36408580289247
-                        ],
-                        [
-                            4.883277212321683,
-                            52.364065418424
-                        ],
-                        [
-                            4.882907673874953,
-                            52.36389167367845
-                        ]
-                    ]
-                ],
-                "crs": {
-                    "properties": {
-                        "name": "EPSG:4326"
-                    },
-                    "type": "name"
-                },
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 22197,
-                "load_unload": [
-                    {
-                        "additional_info": "G07ZB",
-                        "days": [
-                            "ma",
-                            "di",
-                            "wo",
-                            "do",
-                            "vr",
-                            "za",
-                            "zo"
-                        ],
-                        "direction": "west",
-                        "end_time": "12:00:00",
-                        "road_section_id": 22197,
-                        "start_time": "07:00:00"
-                    }
-                ],
-                "street_name": "Leidseplein"
-            },
-            "type": "Feature"
-        }
-    ],
-    "type": "FeatureCollection"
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 22195,
+        "load_unload": [
+          {
+            "additional_info": "G07ZB",
+            "days": ["ma", "di", "wo", "do", "vr", "za", "zo"],
+            "direction": "noord",
+            "end_time": "12:00:00",
+            "road_section_id": 22195,
+            "start_time": "07:00:00"
+          }
+        ],
+        "street_name": "Leidseplein"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.883390296922486, 52.364147070156356],
+            [4.88332656243601, 52.36409315339799],
+            [4.883315290610353, 52.36408580289247],
+            [4.883277212321683, 52.364065418424],
+            [4.882907673874953, 52.36389167367845]
+          ]
+        ],
+        "crs": {
+          "properties": {
+            "name": "EPSG:4326"
+          },
+          "type": "name"
+        },
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 22197,
+        "load_unload": [
+          {
+            "additional_info": "G07ZB",
+            "days": ["ma", "di", "wo", "do", "vr", "za", "zo"],
+            "direction": "west",
+            "end_time": "12:00:00",
+            "road_section_id": 22197,
+            "start_time": "07:00:00"
+          }
+        ],
+        "street_name": "Leidseplein"
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
 }

@@ -50,6 +50,7 @@
   "_pageTouringcar": {
     "title": "Coach (Tour Buzz)",
     "titleShort": "Coach",
+    "places": "Places",
     "_mapPanel": {
       "label": "View messages, extra route information or the data sources",
       "messages": "Messages",

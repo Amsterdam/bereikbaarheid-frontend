@@ -9,6 +9,7 @@ import {
 } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import getPanoramaThumbnail from 'api/panorama/thumbnail'
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import { useTouringcarMapContext } from '../../contexts/MapContext'
@@ -36,6 +37,8 @@ const PaddedContainer = styled.div`
 
 const ParkingSpaceDetails = () => {
   const { currentParkingSpace } = useTouringcarMapContext()
+
+  const { t } = useTranslation()
 
   const [imageLoading, setImageLoading] = useState(false)
 
@@ -107,7 +110,7 @@ const ParkingSpaceDetails = () => {
 
         <PaddedContainer>
           <Paragraph>
-            <strong>Plaatsen:</strong>{' '}
+            <strong>{t('_pageTouringcar.places')}:</strong>{' '}
             {currentParkingSpace?.properties?.plaatsen}
           </Paragraph>
 
