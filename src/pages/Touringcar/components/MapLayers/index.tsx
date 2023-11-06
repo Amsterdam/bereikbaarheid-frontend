@@ -27,7 +27,6 @@ const TouringcarMapLayers = () => {
 
       <StopsLayer />
       <ParkingSpacesLayer />
-      <StopsLayer />
       <RoutesRecommendedLayer />
       <RoutesMandatoryLayer />
 

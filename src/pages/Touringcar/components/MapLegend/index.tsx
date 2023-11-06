@@ -46,7 +46,11 @@ function TouringcarMapLegend() {
       <LegendItemsWrapper>
         {LEGEND_ITEMS.map(legendItem => {
           return (
-            <Label htmlFor={legendItem.id} label={t(legendItem.label)}>
+            <Label
+              key={legendItem.id}
+              htmlFor={legendItem.id}
+              label={t(legendItem.label)}
+            >
               <StyledCheckbox
                 id={legendItem.id}
                 onChange={() =>
