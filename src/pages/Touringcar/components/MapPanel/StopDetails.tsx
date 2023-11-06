@@ -51,7 +51,7 @@ const StopDetails = () => {
     enabled: true,
     queryKey: ['panoramaThumbnail'],
     queryFn: () => {
-      if (!currentStop?.geometry.coordinates.length) {
+      if (currentStop?.geometry.coordinates.length !== 2) {
         throw new Error('Coordinates are required.')
       }
 

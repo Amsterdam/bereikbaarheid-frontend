@@ -52,7 +52,7 @@ const ParkingSpaceDetails = () => {
     enabled: true,
     queryKey: ['panoramaThumbnail'],
     queryFn: () => {
-      if (!currentParkingSpace?.geometry.coordinates.length) {
+      if (currentParkingSpace?.geometry.coordinates.length !== 2) {
         throw new Error('Coordinates are required.')
       }
 
