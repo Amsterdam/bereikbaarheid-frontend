@@ -10,6 +10,7 @@ import { useTouringcarPageContext } from '../../contexts/PageContext'
 
 import { ParkingSpacesLayer } from './ParkingSpacesLayer'
 import { RoutesMandatoryLayer } from './RoutesMandatoryLayer'
+import { RoutesRecommendedLayer } from './RoutesRecommendedLayer'
 import { StopsLayer } from './StopsLayer'
 
 const TouringcarMapLayers = () => {
@@ -26,6 +27,7 @@ const TouringcarMapLayers = () => {
 
       <StopsLayer />
       <ParkingSpacesLayer />
+      <RoutesRecommendedLayer />
       <RoutesMandatoryLayer />
 
       <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />

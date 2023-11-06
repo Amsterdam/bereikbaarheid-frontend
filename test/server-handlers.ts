@@ -14,6 +14,7 @@ import { ENDPOINT as ENDPOINT_RDW_SUBCATEGORY } from '../src/api/rdw/subcategory
 import { ENDPOINT as ENDPOINT_RDW_VEHICLE } from '../src/api/rdw/vehicle'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_PARKING_SPACES } from '../src/api/touringcar/parking-spaces'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_MANDATORY } from '../src/api/touringcar/routes-mandatory'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_RECOMMENDED } from '../src/api/touringcar/routes-recommended'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_STOPS } from '../src/api/touringcar/stops'
 import { ENDPOINT as ENDPOINT_WFS_WIOR } from '../src/api/wfs/wior'
 
@@ -118,6 +119,11 @@ export const handlers = [
   rest.get(ENDPOINT_TOURINGCAR_ROUTES_MANDATORY, (_req, res, ctx) => {
     const touringcarRoutesMandatoryMock = require('./mocks/touringcar/routes-mandatory/data.json')
     return res(ctx.status(200), ctx.json(touringcarRoutesMandatoryMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_ROUTES_RECOMMENDED, (_req, res, ctx) => {
+    const touringcarRoutesRecommendedMock = require('./mocks/touringcar/routes-recommended/data.json')
+    return res(ctx.status(200), ctx.json(touringcarRoutesRecommendedMock))
   }),
 ]
 

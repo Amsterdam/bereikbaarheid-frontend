@@ -14,12 +14,14 @@ enum MapPanelTab {
 enum MapLayerId {
   touringcarStopsLayerId = 'touringcarStops',
   touringcarParkingSpacesLayerId = 'touringcarParkingSpaces',
+  touringcarRoutesRecommendedLayerId = 'touringcarRoutesRecommended',
   touringcarRoutesMandatoryLayerId = 'touringcarRoutesMandatory',
 }
 
 enum MapLayerParamToMapLayer {
   'haltes' = MapLayerId.touringcarStopsLayerId,
   'parkeren' = MapLayerId.touringcarParkingSpacesLayerId,
+  'aanbevolen-routes' = MapLayerId.touringcarRoutesRecommendedLayerId,
   'verplichte-routes' = MapLayerId.touringcarRoutesMandatoryLayerId,
 }
 
@@ -28,6 +30,7 @@ type MapLayerParam = keyof typeof MapLayerParamToMapLayer
 const mapLayerParamIds: (keyof typeof MapLayerParamToMapLayer)[] = [
   'haltes',
   'parkeren',
+  'aanbevolen-routes',
   'verplichte-routes',
 ]
 
@@ -37,6 +40,10 @@ const layerFeatureProps = {
   },
   [MapLayerId.touringcarParkingSpacesLayerId]: {
     color: '#000000',
+  },
+  [MapLayerId.touringcarRoutesRecommendedLayerId]: {
+    color: '#BED200',
+    strokeWidth: 6,
   },
   [MapLayerId.touringcarRoutesMandatoryLayerId]: {
     color: '#00a03c',
