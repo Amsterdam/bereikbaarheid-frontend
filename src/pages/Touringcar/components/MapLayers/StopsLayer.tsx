@@ -5,9 +5,10 @@ import { useQuery } from '@tanstack/react-query'
 import getTouringcarStops, { TouringcarStop } from 'api/touringcar/stops'
 import {
   MapLayerId,
-  MapPanelTab,
+  // MapPanelTab,
   useTouringcarMapContext,
 } from 'pages/Touringcar/contexts/MapContext'
+import { useTranslation } from 'react-i18next'
 import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGroup'
 
 import TouringcarMarker from '../Marker/Marker'
@@ -17,9 +18,11 @@ export const StopsLayer = () => {
     activeMapLayers,
     setCurrentStop,
     setCurrentParkingSpace,
-    setActiveTab,
+    // setActiveTab,
   } = useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
+
+  const { t } = useTranslation()
 
   const { isLoading, error, isError, data } = useQuery({
     enabled: true,
@@ -44,12 +47,17 @@ export const StopsLayer = () => {
     return data!.features.map((item: TouringcarStop) => {
       const marker = TouringcarMarker(item, MapLayerId.touringcarStopsLayerId)
 
-      let tooltipText = `<strong>${item.properties?.omschrijving}</strong><br>Plaatsen: ${item.properties?.plaatsen}`
+      let tooltipText = `<strong>${
+        item.properties?.omschrijving
+      }</strong><br>${t('_pageTouringcar.places')}: ${
+        item.properties?.plaatsen
+      }`
 
       marker.bindTooltip(tooltipText)
 
       marker.on('click', () => {
-        setActiveTab(MapPanelTab.MESSAGES)
+        // TODO: activate once messages feature is implemented.
+        // setActiveTab(MapPanelTab.MESSAGES)
         findStop(item.properties?.id)
         setPositionFromSnapPoint(mapPanelConstants.SnapPoint.Halfway)
       })

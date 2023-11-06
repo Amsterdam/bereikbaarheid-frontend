@@ -29,8 +29,9 @@
   "_pageTouringcar": {
     "title": "Tourenwagen (Tour Buzz)",
     "titleShort": "Tourenwagen",
+    "places": "Platz",
     "_legend": {
-      "messages": "Berichte",
+      "messages": "Berichten",
       "stops": "Bushaltestellen",
       "parking": "Parkplatz",
       "maxVehicleHeight": "Fahrhöhe",

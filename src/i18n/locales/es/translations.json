@@ -29,6 +29,7 @@
   "_pageTouringcar": {
     "title": "Auto turístico (Tour Buzz)",
     "titleShort": "Auto turístico",
+    "places": "Estacionamientos",
     "_legend": {
       "messages": "Mensajes",
       "stops": "Paradas de autobús",

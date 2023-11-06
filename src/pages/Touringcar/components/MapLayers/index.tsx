@@ -25,6 +25,7 @@ const TouringcarMapLayers = () => {
     <>
       <AddressMarker address={address} />
 
+      <StopsLayer />
       <ParkingSpacesLayer />
       <StopsLayer />
       <RoutesRecommendedLayer />

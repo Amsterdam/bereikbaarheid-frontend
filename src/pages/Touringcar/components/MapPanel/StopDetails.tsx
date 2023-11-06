@@ -8,6 +8,7 @@ import {
 } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import getPanoramaThumbnail from 'api/panorama/thumbnail'
+import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import { useTouringcarMapContext } from '../../contexts/MapContext'
@@ -36,6 +37,8 @@ const PaddedContainer = styled.div`
 const StopDetails = () => {
   const { currentStop } = useTouringcarMapContext()
 
+  const { t } = useTranslation()
+
   const [imageLoading, setImageLoading] = useState(false)
 
   const {
@@ -48,7 +51,7 @@ const StopDetails = () => {
     enabled: true,
     queryKey: ['panoramaThumbnail'],
     queryFn: () => {
-      if (!currentStop?.geometry.coordinates.length) {
+      if (currentStop?.geometry.coordinates.length !== 2) {
         throw new Error('Coordinates are required.')
       }
 
@@ -104,7 +107,8 @@ const StopDetails = () => {
 
         <PaddedContainer>
           <Paragraph>
-            <strong>Plaatsen:</strong> {currentStop?.properties?.plaatsen}
+            <strong>{t('_pageTouringcar.places')}:</strong>{' '}
+            {currentStop?.properties?.plaatsen}
           </Paragraph>
 
           <Paragraph>{currentStop?.properties?.bijzonderheden}</Paragraph>
