@@ -10,6 +10,7 @@ import { useTouringcarPageContext } from '../../contexts/PageContext'
 
 import { ParkingSpacesLayer } from './ParkingSpacesLayer'
 import { RoutesMandatoryLayer } from './RoutesMandatoryLayer'
+import { StopsLayer } from './StopsLayer'
 
 const TouringcarMapLayers = () => {
   const { address } = useTouringcarPageContext()
@@ -23,6 +24,7 @@ const TouringcarMapLayers = () => {
     <>
       <AddressMarker address={address} />
 
+      <StopsLayer />
       <ParkingSpacesLayer />
       <RoutesMandatoryLayer />
 

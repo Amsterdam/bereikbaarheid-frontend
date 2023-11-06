@@ -221,14 +221,14 @@ FAQ en contactgegevens"
           </header>
         </div>
         <main
-          class="sc-bfhvDw sc-fmzyuX cMHqqc hBMoWR"
+          class="sc-bfhvDw sc-dwalKd cMHqqc fsRSJJ"
           data-testid="data-page"
         >
           <div
-            class="sc-imwsjW sc-hoLEA gphTiw jQzsTy"
+            class="sc-imwsjW sc-fFlnrN gphTiw ixegSD"
           >
             <h2
-              class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR gVqHMf"
+              class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kQcVMm"
             >
               Getoonde data op de kaart
             </h2>
@@ -238,7 +238,7 @@ FAQ en contactgegevens"
               Bekijk en download de getoonde data op de kaart via de volgende links:
             </p>
             <ul
-              class="sc-kdBSHD cHWVcp sc-fFlnrN bHdRVc"
+              class="sc-kdBSHD cHWVcp sc-camqpD dHzkWQ"
             >
               <li
                 class="sc-lcIPJg ddQxr"
@@ -404,6 +404,39 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                  href="v1/touringcars/haltes"
+                  target="_blank"
+                >
+                  <span
+                    class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                  >
+                    <svg
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="sc-fhzFiK iRpqvs"
+                  >
+                    Haltes voor touringcars
+                  </span>
+                </a>
+                <sup>
+                  *
+                </sup>
+              </li>
+              <li
+                class="sc-lcIPJg ddQxr"
+              >
+                <a
+                  class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
                   href="v1/touringcars/parkeerplaatsen"
                   target="_blank"
                 >
@@ -476,10 +509,10 @@ FAQ en contactgegevens"
             </p>
           </div>
           <div
-            class="sc-imwsjW sc-hoLEA gphTiw jQzsTy"
+            class="sc-imwsjW sc-fFlnrN gphTiw ixegSD"
           >
             <h2
-              class="sc-bOhtcR gVqHMf"
+              class="sc-kbdlSk kQcVMm"
             >
               Amsterdams Wegenbestand
             </h2>
@@ -512,10 +545,10 @@ FAQ en contactgegevens"
              
           </div>
           <div
-            class="sc-imwsjW sc-hoLEA gphTiw jQzsTy"
+            class="sc-imwsjW sc-fFlnrN gphTiw ixegSD"
           >
             <h2
-              class="sc-bOhtcR gVqHMf"
+              class="sc-kbdlSk kQcVMm"
             >
               Vragen?
             </h2>
@@ -770,14 +803,14 @@ FAQ en contactgegevens"
         </header>
       </div>
       <main
-        class="sc-bfhvDw sc-fmzyuX cMHqqc hBMoWR"
+        class="sc-bfhvDw sc-dwalKd cMHqqc fsRSJJ"
         data-testid="data-page"
       >
         <div
-          class="sc-imwsjW sc-hoLEA gphTiw jQzsTy"
+          class="sc-imwsjW sc-fFlnrN gphTiw ixegSD"
         >
           <h2
-            class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR gVqHMf"
+            class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kQcVMm"
           >
             Getoonde data op de kaart
           </h2>
@@ -787,7 +820,7 @@ FAQ en contactgegevens"
             Bekijk en download de getoonde data op de kaart via de volgende links:
           </p>
           <ul
-            class="sc-kdBSHD cHWVcp sc-fFlnrN bHdRVc"
+            class="sc-kdBSHD cHWVcp sc-camqpD dHzkWQ"
           >
             <li
               class="sc-lcIPJg ddQxr"
@@ -953,6 +986,39 @@ FAQ en contactgegevens"
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                href="v1/touringcars/haltes"
+                target="_blank"
+              >
+                <span
+                  class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                >
+                  <svg
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="sc-fhzFiK iRpqvs"
+                >
+                  Haltes voor touringcars
+                </span>
+              </a>
+              <sup>
+                *
+              </sup>
+            </li>
+            <li
+              class="sc-lcIPJg ddQxr"
+            >
+              <a
+                class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
                 href="v1/touringcars/parkeerplaatsen"
                 target="_blank"
               >
@@ -1025,10 +1091,10 @@ FAQ en contactgegevens"
           </p>
         </div>
         <div
-          class="sc-imwsjW sc-hoLEA gphTiw jQzsTy"
+          class="sc-imwsjW sc-fFlnrN gphTiw ixegSD"
         >
           <h2
-            class="sc-bOhtcR gVqHMf"
+            class="sc-kbdlSk kQcVMm"
           >
             Amsterdams Wegenbestand
           </h2>
@@ -1061,10 +1127,10 @@ FAQ en contactgegevens"
            
         </div>
         <div
-          class="sc-imwsjW sc-hoLEA gphTiw jQzsTy"
+          class="sc-imwsjW sc-fFlnrN gphTiw ixegSD"
         >
           <h2
-            class="sc-bOhtcR gVqHMf"
+            class="sc-kbdlSk kQcVMm"
           >
             Vragen?
           </h2>

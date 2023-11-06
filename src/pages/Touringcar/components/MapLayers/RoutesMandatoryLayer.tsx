@@ -8,9 +8,9 @@ import { DomEvent } from 'leaflet'
 import {
   MapLayerId,
   MapPanelTab,
+  layerFeatureProps,
   useTouringcarMapContext,
 } from 'pages/Touringcar/contexts/MapContext'
-import { layerFeatureProps } from 'pages/Touringcar/contexts/mapLayersReducer'
 
 export const RoutesMandatoryLayer = () => {
   const { setCurrentParkingSpace, setActiveTab } = useTouringcarMapContext()

@@ -1,0 +1,600 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "haltes.1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.896319001234011, 52.37903500414568]
+      },
+      "properties": {
+        "id": 1,
+        "omschrijving": "H3: Lovers rondvaarten",
+        "bijzonderheden": "Prins Hendrikkade t/o 20",
+        "plaatsen": "7 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.890611001227922, 52.37088300414084]
+      },
+      "properties": {
+        "id": 2,
+        "omschrijving": "H7: Amsterdam Museum",
+        "bijzonderheden": "Nieuwezijds Voorburgwal 355",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.903743001240889, 52.36771300413899]
+      },
+      "properties": {
+        "id": 3,
+        "omschrijving": "H10: Joods Historisch Museum",
+        "bijzonderheden": "Mr. Visserplein",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.4",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.891534001228234, 52.35812600413333]
+      },
+      "properties": {
+        "id": 4,
+        "omschrijving": "H12: Blue Boat Company",
+        "bijzonderheden": "06:00 - 20:00 uur/hour. Stadhouderskade 78",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.5",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.88318700121997, 52.3596670041343]
+      },
+      "properties": {
+        "id": 5,
+        "omschrijving": "H13: Coster Diamonds / Rijksmuseum",
+        "bijzonderheden": "Hobbemastraat 16",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.6",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.883230001220109, 52.36168500413547]
+      },
+      "properties": {
+        "id": 6,
+        "omschrijving": "H14: Park Hotel",
+        "bijzonderheden": "Stadhouderskade 30",
+        "plaatsen": "3 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.7",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.888916001226193, 52.37011000414042]
+      },
+      "properties": {
+        "id": 7,
+        "omschrijving": "H15: NH City Centre",
+        "bijzonderheden": "Spuistraat 288-292",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.8",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.884024001221489, 52.3738800041427]
+      },
+      "properties": {
+        "id": 8,
+        "omschrijving": "H16: Anne Frank Huis",
+        "bijzonderheden": "Westermarkt",
+        "plaatsen": "3 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.9",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.894345001231994, 52.3780620041451]
+      },
+      "properties": {
+        "id": 9,
+        "omschrijving": "H22: Renaissance Hotel",
+        "bijzonderheden": "Kattengat 1",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.90556700124259, 52.36518400413748]
+      },
+      "properties": {
+        "id": 10,
+        "omschrijving": "H24: Hermitage / Portugese Synagoge",
+        "bijzonderheden": "Weesperstraat 63",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.887993001224761, 52.35944300413411]
+      },
+      "properties": {
+        "id": 11,
+        "omschrijving": "H25: Rijksmuseum",
+        "bijzonderheden": "Stadhouderskade t/o 47",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.890713001228176, 52.37405300414276]
+      },
+      "properties": {
+        "id": 12,
+        "omschrijving": "H20: Port van Cleve / Magna Plaza",
+        "bijzonderheden": "Nieuwezijds Voorburgwal 176",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.13",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.900466001238041, 52.376680004144276]
+      },
+      "properties": {
+        "id": 13,
+        "omschrijving": "H6: St. Nicolaaskerk",
+        "bijzonderheden": "Prins Hendrikkade 59-72",
+        "plaatsen": "5 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.14",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.879829001216554, 52.35838300413354]
+      },
+      "properties": {
+        "id": 14,
+        "omschrijving": "H23: Stedelijk Museum",
+        "bijzonderheden": "Paulus Potterstraat 13",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.15",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.875451001211141, 52.33675500412071]
+      },
+      "properties": {
+        "id": 15,
+        "omschrijving": "H26: Station Zuid",
+        "bijzonderheden": "Gustav Mahlerlaan 401",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.16",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.838598001176891, 52.38968900415208]
+      },
+      "properties": {
+        "id": 16,
+        "omschrijving": "H29: Station Sloterdijk ",
+        "bijzonderheden": "Piarcoplein. Alleen voor Internationale lijndiensten / Only International coachlines",
+        "plaatsen": "4 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.17",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.892735001227829, 52.32440300411336]
+      },
+      "properties": {
+        "id": 17,
+        "omschrijving": "H35: Riekermolen",
+        "bijzonderheden": "De Borcht 1",
+        "plaatsen": "3 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.18",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.895128001232994, 52.38257700414779]
+      },
+      "properties": {
+        "id": 18,
+        "omschrijving": "H1: De Ruijterkade west",
+        "bijzonderheden": "De Ruijterkade t/o 5",
+        "plaatsen": "7 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.19",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.915695001253005, 52.371499004141185]
+      },
+      "properties": {
+        "id": 19,
+        "omschrijving": "H11: Scheepvaartmuseum",
+        "bijzonderheden": "Kattenburgerstraat 1. Hoogtebeperking van max 3,90m",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.20",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.9098800012475, 52.37785200414494]
+      },
+      "properties": {
+        "id": 20,
+        "omschrijving": "H28: De Ruijterkade oost",
+        "bijzonderheden": "De Ruijterkade 153",
+        "plaatsen": "14 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.904312001241784, 52.37461000414306]
+      },
+      "properties": {
+        "id": 21,
+        "omschrijving": "H27: Grand Hotel Amrâth ",
+        "bijzonderheden": "Prins Hendrikkade 108",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.22",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.934363001271365, 52.36542900413752]
+      },
+      "properties": {
+        "id": 22,
+        "omschrijving": "H31: Stayokay",
+        "bijzonderheden": "Timorplein 21",
+        "plaatsen": "3 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.23",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.895839001232959, 52.3669970041386]
+      },
+      "properties": {
+        "id": 23,
+        "omschrijving": "H19: Amstel/Rembrandtplein",
+        "bijzonderheden": "Amstel 56. Niet geschikt voor grote touringcars / Not suitable for large coaches",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.24",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.8937010012317, 52.38540400414943]
+      },
+      "properties": {
+        "id": 24,
+        "omschrijving": "H18: Westerdoksdijk",
+        "bijzonderheden": "Riviercruise",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.25",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.921968001259665, 52.379836004146085]
+      },
+      "properties": {
+        "id": 25,
+        "omschrijving": "H9: Javakade",
+        "bijzonderheden": "Javakade 201",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.26",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.906511001243248, 52.359226004133944]
+      },
+      "properties": {
+        "id": 26,
+        "omschrijving": "H33: Rhijnspoorplein",
+        "bijzonderheden": "Mauritskade 1",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.27",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.820176001158094, 52.38140600414722]
+      },
+      "properties": {
+        "id": 27,
+        "omschrijving": "H34: Hotel Nieuw Slotania",
+        "bijzonderheden": "Burgemeester de Vlugtlaan 208",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.28",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.892220001229437, 52.36896400413976]
+      },
+      "properties": {
+        "id": 28,
+        "omschrijving": "H8:  Kooij rondvaarten",
+        "bijzonderheden": "Rokin 112",
+        "plaatsen": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.29",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.892714001229401, 52.3578900041332]
+      },
+      "properties": {
+        "id": 29,
+        "omschrijving": "H36: Heineken Experience",
+        "bijzonderheden": "06:00 - 20:00 uur/hour. Stadhouderskade 78. ",
+        "plaatsen": "3"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.30",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.881620001218523, 52.362099004135736]
+      },
+      "properties": {
+        "id": 30,
+        "omschrijving": "H30: Holland Casino",
+        "bijzonderheden": "Stadhouderskade 24. Niet geschikt voor grote touringcars / Not suitable for large coaches",
+        "plaatsen": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.31",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.889603001225161, 52.334137004119135]
+      },
+      "properties": {
+        "id": 31,
+        "omschrijving": "H37: Europaboulevard / Novotel",
+        "bijzonderheden": "Europaboulevard 10",
+        "plaatsen": "2"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.32",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.902424001240375, 52.38459500414892]
+      },
+      "properties": {
+        "id": 32,
+        "omschrijving": "H2: EYE / Adam Toren",
+        "bijzonderheden": "Bercylaan. Halteplek voor EYE en Adam Toren",
+        "plaatsen": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.33",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.868574001206619, 52.38550300414959]
+      },
+      "properties": {
+        "id": 33,
+        "omschrijving": "H39: Westerpark",
+        "bijzonderheden": "Haarlemmerweg to 217-283",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.34",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.91928900125537, 52.34559800412586]
+      },
+      "properties": {
+        "id": 34,
+        "omschrijving": "H38: Amstelstation",
+        "bijzonderheden": "MEININGER Hotel. Julianaplein 6",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.35",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.879314001217142, 52.3813440041471]
+      },
+      "properties": {
+        "id": 35,
+        "omschrijving": "H17: Nassaukade",
+        "bijzonderheden": "07:00 - 19:00. Nassaukade 54t/o",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.36",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.959533001293363, 52.297844004097264]
+      },
+      "properties": {
+        "id": 36,
+        "omschrijving": "H42: Station Holendrecht",
+        "bijzonderheden": "Meibergdreeg 2",
+        "plaatsen": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.37",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.844193001180924, 52.35773600413323]
+      },
+      "properties": {
+        "id": 37,
+        "omschrijving": "H21: Westcord Fashion Hotel",
+        "bijzonderheden": "Hendrikje Stoffelsstraat 1, Amsterdam",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.38",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.892929001228707, 52.3388200041219]
+      },
+      "properties": {
+        "id": 38,
+        "omschrijving": "H41: Motel One",
+        "bijzonderheden": "Maaslandstraat ",
+        "plaatsen": "1"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.39",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.838351001176703, 52.39086600415279]
+      },
+      "properties": {
+        "id": 39,
+        "omschrijving": "H43: Piarcoplein",
+        "bijzonderheden": "Uitstaphalte internationale lijndiensten / Only drop-off international coachlines",
+        "plaatsen": "2 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.40",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.918635001254926, 52.350055004128485]
+      },
+      "properties": {
+        "id": 40,
+        "omschrijving": "H44: Hotel Casa Amsterdam",
+        "bijzonderheden": "Eerste Ringdijkstraat 4, 1097 BC Amsterdam",
+        "plaatsen": "1 bus"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.41",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.917498001255078, 52.37724800414459]
+      },
+      "properties": {
+        "id": 41,
+        "omschrijving": "H4: Zouthaven - Piet Heinbuildings",
+        "bijzonderheden": "Piet Heinkade 93-95, 1019 GZ Amsterdam",
+        "plaatsen": "5 bussen"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "haltes.42",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.914654001252241, 52.377314004144644]
+      },
+      "properties": {
+        "id": 42,
+        "omschrijving": "H5: Zouthaven - Piet Heinkade",
+        "bijzonderheden": "Piet Heinkade 10, 1019 GM Amsterdam. Alleen beschikbaar bij turnaround PTA",
+        "plaatsen": "4 bussen"
+      }
+    }
+  ],
+  "_links": []
+}

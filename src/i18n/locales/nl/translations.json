@@ -55,6 +55,7 @@
     "title": "Touringcar (Tour Buzz)",
     "titleShort": "Touringcar",
     "description": "Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie.",
+    "places": "Plaatsen",
     "_mapPanel": {
       "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
       "messages": "Berichten",
@@ -75,6 +76,7 @@
     },
     "_dataSources": {
       "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
+      "stopsForCoaches": "Haltes voor touringcars",
       "mandatoryRoutes": "Verplichte route (> 7,5t)"
     }
   },

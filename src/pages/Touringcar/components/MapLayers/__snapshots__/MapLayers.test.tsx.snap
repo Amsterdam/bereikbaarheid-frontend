@@ -224,7 +224,7 @@ FAQ en contactgegevens"
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-bddgXz jkpnfb labFtI leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-eHsDsR jkpnfb fpdcno leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -361,7 +361,7 @@ FAQ en contactgegevens"
                     >
                       <br />
                       <h2
-                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR fnZuME"
+                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
                       >
                         Aanbevolen en verplichte routes
                       </h2>
@@ -386,10 +386,10 @@ FAQ en contactgegevens"
                       tabindex="0"
                     >
                       <div
-                        class="sc-imwsjW sc-hoLEA gphTiw ghMsZd"
+                        class="sc-imwsjW sc-fFlnrN gphTiw bLrZUg"
                       >
                         <h2
-                          class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR fnZuME"
+                          class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
                         >
                           Getoonde data op de kaart
                         </h2>
@@ -399,8 +399,41 @@ FAQ en contactgegevens"
                           Bekijk en download de getoonde data op de kaart via de volgende links:
                         </p>
                         <ul
-                          class="sc-kdBSHD cHWVcp sc-fFlnrN bHdRVc"
+                          class="sc-kdBSHD cHWVcp sc-camqpD dHzkWQ"
                         >
+                          <li
+                            class="sc-lcIPJg ddQxr"
+                          >
+                            <a
+                              class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                              href="v1/touringcars/haltes"
+                              target="_blank"
+                            >
+                              <span
+                                class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                              >
+                                <svg
+                                  focusable="false"
+                                  role="img"
+                                  viewBox="0 0 32 32"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </span>
+                              <span
+                                class="sc-fhzFiK iRpqvs"
+                              >
+                                Haltes voor touringcars
+                              </span>
+                            </a>
+                            <sup>
+                              *
+                            </sup>
+                          </li>
                           <li
                             class="sc-lcIPJg ddQxr"
                           >
@@ -512,7 +545,7 @@ FAQ en contactgegevens"
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-jdUcAg ginaLN"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-fyVfxW efvocT"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -525,7 +558,7 @@ FAQ en contactgegevens"
               data-testid="topRight"
             >
               <div
-                class="sc-kbdlSk hKZFfn"
+                class="sc-gweoQa hLhfXU"
               >
                 <button
                   aria-controls="legend"
@@ -562,8 +595,44 @@ FAQ en contactgegevens"
                   id="legend"
                 >
                   <div
-                    class="sc-gweoQa iNoOcl"
+                    class="sc-jdUcAg jKYZEF"
                   >
+                    <label
+                      class="sc-gFVvzn jmImEg"
+                      for="touringcarStops"
+                    >
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Haltes
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb sc-bddgXz dHjTiV"
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarStops"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
                     <label
                       class="sc-gFVvzn jmImEg"
                       for="touringcarParkingSpaces"
@@ -574,7 +643,7 @@ FAQ en contactgegevens"
                         Parkeren
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb"
+                        class="sc-fHjqPf jSNdCb sc-bddgXz brjEYC"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -610,7 +679,7 @@ FAQ en contactgegevens"
                         Verplichte route (&gt; 7,5t)
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-eIcdZJ jstSCP"
+                        class="sc-fHjqPf jSNdCb sc-bddgXz ZeiyL"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -927,7 +996,7 @@ FAQ en contactgegevens"
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-bddgXz jkpnfb labFtI leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-eHsDsR jkpnfb fpdcno leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1064,7 +1133,7 @@ FAQ en contactgegevens"
                   >
                     <br />
                     <h2
-                      class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR fnZuME"
+                      class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
                     >
                       Aanbevolen en verplichte routes
                     </h2>
@@ -1089,10 +1158,10 @@ FAQ en contactgegevens"
                     tabindex="0"
                   >
                     <div
-                      class="sc-imwsjW sc-hoLEA gphTiw ghMsZd"
+                      class="sc-imwsjW sc-fFlnrN gphTiw bLrZUg"
                     >
                       <h2
-                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-bOhtcR fnZuME"
+                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
                       >
                         Getoonde data op de kaart
                       </h2>
@@ -1102,8 +1171,41 @@ FAQ en contactgegevens"
                         Bekijk en download de getoonde data op de kaart via de volgende links:
                       </p>
                       <ul
-                        class="sc-kdBSHD cHWVcp sc-fFlnrN bHdRVc"
+                        class="sc-kdBSHD cHWVcp sc-camqpD dHzkWQ"
                       >
+                        <li
+                          class="sc-lcIPJg ddQxr"
+                        >
+                          <a
+                            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                            href="v1/touringcars/haltes"
+                            target="_blank"
+                          >
+                            <span
+                              class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                            >
+                              <svg
+                                focusable="false"
+                                role="img"
+                                viewBox="0 0 32 32"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                            <span
+                              class="sc-fhzFiK iRpqvs"
+                            >
+                              Haltes voor touringcars
+                            </span>
+                          </a>
+                          <sup>
+                            *
+                          </sup>
+                        </li>
                         <li
                           class="sc-lcIPJg ddQxr"
                         >
@@ -1215,7 +1317,7 @@ FAQ en contactgegevens"
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-jdUcAg ginaLN"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-fyVfxW efvocT"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -1228,7 +1330,7 @@ FAQ en contactgegevens"
             data-testid="topRight"
           >
             <div
-              class="sc-kbdlSk hKZFfn"
+              class="sc-gweoQa hLhfXU"
             >
               <button
                 aria-controls="legend"
@@ -1265,8 +1367,44 @@ FAQ en contactgegevens"
                 id="legend"
               >
                 <div
-                  class="sc-gweoQa iNoOcl"
+                  class="sc-jdUcAg jKYZEF"
                 >
+                  <label
+                    class="sc-gFVvzn jmImEg"
+                    for="touringcarStops"
+                  >
+                    <span
+                      class="sc-brPLxw dGBiZJ"
+                    >
+                      Haltes
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb sc-bddgXz dHjTiV"
+                    >
+                      <span
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
+                      >
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarStops"
+                        type="checkbox"
+                      />
+                    </span>
+                  </label>
                   <label
                     class="sc-gFVvzn jmImEg"
                     for="touringcarParkingSpaces"
@@ -1277,7 +1415,7 @@ FAQ en contactgegevens"
                       Parkeren
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb"
+                      class="sc-fHjqPf jSNdCb sc-bddgXz brjEYC"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1313,7 +1451,7 @@ FAQ en contactgegevens"
                       Verplichte route (&gt; 7,5t)
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-eIcdZJ jstSCP"
+                      class="sc-fHjqPf jSNdCb sc-bddgXz ZeiyL"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"

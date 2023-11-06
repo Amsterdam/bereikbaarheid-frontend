@@ -14,6 +14,7 @@ import { ENDPOINT as ENDPOINT_RDW_SUBCATEGORY } from '../src/api/rdw/subcategory
 import { ENDPOINT as ENDPOINT_RDW_VEHICLE } from '../src/api/rdw/vehicle'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_PARKING_SPACES } from '../src/api/touringcar/parking-spaces'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_MANDATORY } from '../src/api/touringcar/routes-mandatory'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_STOPS } from '../src/api/touringcar/stops'
 import { ENDPOINT as ENDPOINT_WFS_WIOR } from '../src/api/wfs/wior'
 
 export const handlers = [
@@ -102,6 +103,11 @@ export const handlers = [
     const parkingSpaceMock = require('./mocks/parkingSpace-122028486875.json')
 
     return res(ctx.status(200), ctx.json(parkingSpaceMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_STOPS, (_req, res, ctx) => {
+    const touringcarStopsMock = require('./mocks/touringcar/stops/data.json')
+    return res(ctx.status(200), ctx.json(touringcarStopsMock))
   }),
 
   rest.get(ENDPOINT_TOURINGCAR_PARKING_SPACES, (_req, res, ctx) => {

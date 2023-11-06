@@ -19,7 +19,7 @@ function TouringcarMapSettingsDisplay({
   return (
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label={t('_pageTouringcar._mapPanel.label')} activeTab={activeTab}>
-        {/* TODO: show tab when API fetch is ready */}
+        {/* TODO: activate once messages feature is implemented. */}
         {/* <Tab
           id={MapPanelTab.MESSAGES}
           label={t('_pageTouringcar._mapPanel.messages')}
@@ -28,7 +28,6 @@ function TouringcarMapSettingsDisplay({
           <br />
           <Paragraph>Berichten</Paragraph>
         </Tab> */}
-
         <Tab
           id={MapPanelTab.ROUTE_INFO}
           label={t('_pageTouringcar._mapPanel.routeInfo')}
@@ -47,7 +46,6 @@ function TouringcarMapSettingsDisplay({
             {t('_pageTouringcar._mapPanel.payAttentionToVerhicleHeights')}
           </Paragraph>
         </Tab>
-
         <Tab
           id={MapPanelTab.DATA}
           label={t('_generic._mapPanel.dataSource')}

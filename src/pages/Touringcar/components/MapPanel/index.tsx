@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
 import styled from 'styled-components'
@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import { useTouringcarMapContext } from '../../contexts/MapContext'
 
 import ParkingSpaceDetails from './ParkingSpaceDetails'
+import StopDetails from './StopDetails'
 
 const { Overlay } = mapPanelConstants
 
@@ -14,29 +15,40 @@ const StyledMapPanelContent = styled(MapPanelContent)`
 `
 
 const TouringcarMapPanel = () => {
-  const { currentParkingSpace, setCurrentParkingSpace } =
-    useTouringcarMapContext()
+  const {
+    currentStop,
+    setCurrentStop,
+    currentParkingSpace,
+    setCurrentParkingSpace,
+  } = useTouringcarMapContext()
   const [currentOverlay, setCurrentOverlay] = useState(Overlay.None)
 
+  const stopOrParkingSpace = useMemo(
+    () => currentStop || currentParkingSpace,
+    [currentParkingSpace, currentStop]
+  )
+
   useEffect(() => {
-    if (!currentParkingSpace) {
+    if (!stopOrParkingSpace) {
       setCurrentOverlay(Overlay.None)
     } else {
       setCurrentOverlay(Overlay.Results)
     }
-  }, [currentParkingSpace])
+  }, [stopOrParkingSpace])
 
-  if (!currentParkingSpace) return null
+  if (!stopOrParkingSpace) return null
 
   return (
     <StyledMapPanelContent
       animate
       stackOrder={currentOverlay === mapPanelConstants.Overlay.Results ? 2 : 1}
       onClose={() => {
+        setCurrentStop(undefined)
         setCurrentParkingSpace(undefined)
       }}
     >
-      <ParkingSpaceDetails />
+      {currentParkingSpace && <ParkingSpaceDetails />}
+      {currentStop && <StopDetails />}
     </StyledMapPanelContent>
   )
 }
