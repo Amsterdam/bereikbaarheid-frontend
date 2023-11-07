@@ -11,6 +11,12 @@ variables:
   # Debugging
   System.Debug: true
 
+parameters:
+  - name: versionOverride
+    displayName: "[OPTIONAL] Build/deploy version override"
+    type: string
+    default: ' '
+
 resources:
   repositories:
     - repository: templates
@@ -22,6 +28,8 @@ extends:
   template: pipelines/aks/template.yaml@templates
   parameters:
     name: bereikbaarheid-frontend
+    ${{ if ne(parameters.versionOverride, ' ') }}:
+      version: ${{ parameters.versionOverride }}
     build:
       producedImages:
       - opdrachten/bereikbaarheid-frontend
