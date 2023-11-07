@@ -42,7 +42,7 @@ services:
     ports:
       - name: http
         port: 80
-        targetPort: 8000
+        targetPort: 8080
     selector:
       app: bereikbaarheid-frontend
 
