@@ -16,6 +16,9 @@ serviceAccount: default
 ## @param tolerations (Optional) Default workload [tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) object
 tolerations:
 
+## @param tempDirs (Optional) Default list of temporary directories to mount on the pods (e.g. /tmp)
+tempDirs: []
+
 ## @section SecurityContext parameters
 ## @extra securityContext.pod Default pod [securityContext](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#security-context-1) object
 ## @param securityContext.pod.runAsNonRoot Indicates that the container must run as a non-root user
@@ -162,6 +165,7 @@ ingress:
 ## @param jobs.<key>.securityContext Optionally override `root.securityContext.pod`
 ## @param jobs.<key>.containers [array] [Container[]](#container-definition)
 ## @param jobs.<key>.volumes [array] [Volume[]](#volume-definition)
+## @param jobs.<key>.tempDirs [array] List of temporary directories to mount on the pods (extends root.tempDirs)
 jobs:
   <key>:
     ttlSecondsAfterFinished:
@@ -175,6 +179,7 @@ jobs:
     securityContext:
     containers: []
     volumes: []
+    tempDirs: []
 
 ## @section CronJob parameters
 ## @extra cronJobs `map` of the [CronJob](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/cron-job-v1/) workloads that should be deployed
@@ -194,6 +199,7 @@ jobs:
 ## @param cronJobs.<key>.securityContext Optionally override `root.securityContext.pod`
 ## @param cronJobs.<key>.containers [array] [Container[]](#container-definition)
 ## @param cronJobs.<key>.volumes [array] [Volume[]](#volume-definition)
+## @param cronJobs.<key>.tempDirs [array] List of temporary directories to mount on the pods (extends root.tempDirs)
 cronJobs:
   <key>:
     schedule: ''
@@ -212,6 +218,7 @@ cronJobs:
     securityContext:
     containers: []
     volumes: []
+    tempDirs: []
 
 ## @section Deployment parameters
 ## @extra deployments `map` of the [Deployment](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/deployment-v1/) workloads that should be deployed
@@ -229,6 +236,7 @@ cronJobs:
 ## @param deployments.<key>.securityContext Optionally override `root.securityContext.pod`
 ## @param deployments.<key>.containers [array] [Container[]](#container-definition)
 ## @param deployments.<key>.volumes [array] [Volume[]](#volume-definition)
+## @param deployments.<key>.tempDirs [array] List of temporary directories to mount on the pods (extends root.tempDirs)
 deployments:
   <key>:
     autoscale:
@@ -245,3 +253,4 @@ deployments:
     securityContext:
     containers: []
     volumes: []
+    tempDirs: []

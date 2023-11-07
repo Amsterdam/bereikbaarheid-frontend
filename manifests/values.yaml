@@ -16,6 +16,8 @@ network:
 
 deployments:
   app:
+    tempDirs:
+      - /tmp
     containers:
       - name: main
         ports:

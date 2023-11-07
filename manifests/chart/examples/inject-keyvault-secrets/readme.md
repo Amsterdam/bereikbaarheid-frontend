@@ -59,5 +59,5 @@ dev:
     - identity: app-mi-o
       serviceAccounts:
         # default-example refers to the serviceAccount that has been created as part of the helm chart installation. The postfix `-example` is the release name.
-      - name: default-example
+      - default-example
 ```

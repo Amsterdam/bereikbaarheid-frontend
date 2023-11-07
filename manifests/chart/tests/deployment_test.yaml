@@ -218,3 +218,27 @@ tests:
           path: spec.template.metadata.labels
           content:
             azure.workload.identity/use: "true"
+
+  - it: should be able to mount temp volumes
+    set:
+      tempDirs:
+      - /var/tmp
+      image:
+        repository: defaultrepo
+      deployments:
+        main:
+          containers:
+            - name: main
+    asserts:
+      - equal:
+          path: spec.template.spec.containers[?(@.name=='main')].volumeMounts
+          value:
+            - name: var-tmp
+              mountPath: /var/tmp
+              readOnly: false
+      - equal:
+          path: spec.template.spec.volumes
+          value:
+            - name: var-tmp
+              spec:
+                emptyDir: {}

@@ -96,6 +96,7 @@ Volumes
 {{- include "pod.persistentVolumes" . }}
 {{- include "pod.secretVolumes" . }}
 {{- include "pod.configVolumes" . }}
+{{- include "pod.tempVolumes" . }}
 {{- end }}
 
 {{/*
@@ -163,12 +164,25 @@ Pod config volumes
 {{- end }}
 
 {{/*
+Pod temp volumes
+*/}}
+{{- define "pod.tempVolumes" -}}
+{{- $tempDirs := concat (.local.tempDirs | default list) .root.Values.tempDirs }}
+{{- range $tempDirs }}
+- name: {{ kebabcase (trimPrefix "_" (. | replace "/" "_")) }}
+  spec:
+    emptyDir: {}
+{{- end }}
+{{- end }}
+
+{{/*
 Container volumeMounts
 */}}
 {{- define "container.volumeMounts" -}}
 {{- include "container.secretVolumes" . }}
 {{- include "container.configMapVolumes" . }}
 {{- include "container.volumes" . }}
+{{- include "container.tempVolumes" . }}
 {{- end }}
 
 {{/*
@@ -179,6 +193,18 @@ Container manual volumes
 - name: {{ .name }}
   mountPath: {{ .mountPath }}
   readOnly: {{ .readOnly | default false }}
+{{- end }}
+{{- end }}
+
+{{/*
+Container temp volumes
+*/}}
+{{- define "container.tempVolumes" -}}
+{{- $tempDirs := concat (.local.tempDirs | default list) .root.Values.tempDirs }}
+{{- range $tempDirs }}
+- name: {{ kebabcase (trimPrefix "_" (. | replace "/" "_")) }}
+  mountPath: {{ . }}
+  readOnly: false
 {{- end }}
 {{- end }}
 
@@ -364,7 +390,7 @@ containers
 {{- $context := . -}}
 
 {{- range .local.containers }}
-{{- $picked := pick $context.local "resources" "env" "secrets" "configMaps" "image" }}
+{{- $picked := pick $context.local "resources" "env" "secrets" "configMaps" "image" "tempDirs" }}
 {{- $containerContext := dict "local" (merge . $picked) "root" $context.root }}
 - name: {{ .name }}
 {{- include "container" $containerContext | indent 2 }}

@@ -40,6 +40,7 @@ A generic helm chart for deploying an application
 | `host`           | Default hostname to bind on ingresses                                                                                           | `""`      |
 | `serviceAccount` | Default serviceaccount to bind on the pods                                                                                      | `default` |
 | `tolerations`    | (Optional) Default workload [tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) object | `nil`     |
+| `tempDirs`       | (Optional) Default list of temporary directories to mount on the pods (e.g. /tmp)                                               | `[]`      |
 
 ### SecurityContext parameters
 
@@ -144,6 +145,7 @@ A generic helm chart for deploying an application
 | `jobs.<key>.securityContext`         | Optionally override `root.securityContext.pod`                                                                                       | `nil`  |
 | `jobs.<key>.containers`              | [Container[]](#container-definition)                                                                                                 | `[]`   |
 | `jobs.<key>.volumes`                 | [Volume[]](#volume-definition)                                                                                                       | `[]`   |
+| `jobs.<key>.tempDirs`                | List of temporary directories to mount on the pods (extends root.tempDirs)                                                           | `[]`   |
 
 ### CronJob parameters
 
@@ -166,6 +168,7 @@ A generic helm chart for deploying an application
 | `cronJobs.<key>.securityContext`            | Optionally override `root.securityContext.pod`                                                                                                | `nil`    |
 | `cronJobs.<key>.containers`                 | [Container[]](#container-definition)                                                                                                          | `[]`     |
 | `cronJobs.<key>.volumes`                    | [Volume[]](#volume-definition)                                                                                                                | `[]`     |
+| `cronJobs.<key>.tempDirs`                   | List of temporary directories to mount on the pods (extends root.tempDirs)                                                                    | `[]`     |
 
 ### Deployment parameters
 
@@ -186,3 +189,4 @@ A generic helm chart for deploying an application
 | `deployments.<key>.securityContext`        | Optionally override `root.securityContext.pod`                                                                                                     | `nil`  |
 | `deployments.<key>.containers`             | [Container[]](#container-definition)                                                                                                               | `[]`   |
 | `deployments.<key>.volumes`                | [Volume[]](#volume-definition)                                                                                                                     | `[]`   |
+| `deployments.<key>.tempDirs`               | List of temporary directories to mount on the pods (extends root.tempDirs)                                                                         | `[]`   |

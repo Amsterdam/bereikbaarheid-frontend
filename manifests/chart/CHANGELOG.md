@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/Amsterdam/helm-application/compare/1.7.0...1.8.0) (2023-10-16)
+
+
+### Features
+
+* **pods:** Auto-mount temp dirs ([49b88dd](https://github.com/Amsterdam/helm-application/commit/49b88ddf5d7da52154dc04ed4b7b8eaa4533c9d1))
+
 ## [1.7.0](https://github.com/Amsterdam/helm-application/compare/1.6.1...1.7.0) (2023-07-20)
 
 
