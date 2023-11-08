@@ -15,7 +15,7 @@ const StyledMapPanelContent = styled(MapPanelContent)`
 `
 
 const TouringcarMapPanel = () => {
-  const { currentStop, setCurrentStop, currentParkingSpace, setCurrentParkingSpace } = useTouringcarMapContext()
+  const { currentStop, currentParkingSpace, unsetDetailsPane } = useTouringcarMapContext()
   const [currentOverlay, setCurrentOverlay] = useState(Overlay.None)
 
   const stopOrParkingSpace = useMemo(() => currentStop || currentParkingSpace, [currentParkingSpace, currentStop])
@@ -35,8 +35,7 @@ const TouringcarMapPanel = () => {
       animate
       stackOrder={currentOverlay === mapPanelConstants.Overlay.Results ? 2 : 1}
       onClose={() => {
-        setCurrentStop(undefined)
-        setCurrentParkingSpace(undefined)
+        unsetDetailsPane()
       }}
     >
       {currentParkingSpace && <ParkingSpaceDetails />}

@@ -18,6 +18,7 @@ enum MapLayerId {
   touringcarRoutesDestinationTrafficLayerId = 'touringcarRoutesDestinationTraffic',
   touringcarRoutesRecommendedLayerId = 'touringcarRoutesRecommended',
   touringcarRoutesMandatoryLayerId = 'touringcarRoutesMandatory',
+  touringcarEnvironmentalZoneLayerId = 'touringcarEnvironmentalZone',
 }
 
 enum MapLayerParamToMapLayerId {
@@ -27,6 +28,7 @@ enum MapLayerParamToMapLayerId {
   'bestemmingsverkeer' = MapLayerId.touringcarRoutesDestinationTrafficLayerId,
   'aanbevolen-routes' = MapLayerId.touringcarRoutesRecommendedLayerId,
   'verplichte-routes' = MapLayerId.touringcarRoutesMandatoryLayerId,
+  'milieuzone' = MapLayerId.touringcarEnvironmentalZoneLayerId,
 }
 
 type MapLayerParam = keyof typeof MapLayerParamToMapLayerId
@@ -38,6 +40,7 @@ const mapLayerParams: MapLayerParam[] = [
   'bestemmingsverkeer',
   'aanbevolen-routes',
   'verplichte-routes',
+  'milieuzone',
 ]
 
 const mapLayerIdToMapLayerParam: Record<MapLayerId, MapLayerParam> = {
@@ -47,6 +50,7 @@ const mapLayerIdToMapLayerParam: Record<MapLayerId, MapLayerParam> = {
   [MapLayerId.touringcarRoutesDestinationTrafficLayerId]: 'bestemmingsverkeer',
   [MapLayerId.touringcarRoutesRecommendedLayerId]: 'aanbevolen-routes',
   [MapLayerId.touringcarRoutesMandatoryLayerId]: 'verplichte-routes',
+  [MapLayerId.touringcarEnvironmentalZoneLayerId]: 'milieuzone',
 }
 
 const layerFeatureProps = {
@@ -71,6 +75,10 @@ const layerFeatureProps = {
     color: '#00a03c',
     strokeWidth: 6,
   },
+  [MapLayerId.touringcarEnvironmentalZoneLayerId]: {
+    color: '#e50082',
+    strokeWidth: 2,
+  },
 }
 
 interface TouringcarContextProps {
@@ -81,6 +89,7 @@ interface TouringcarContextProps {
   setCurrentStop: Dispatch<SetStateAction<TouringcarStop | undefined>>
   currentParkingSpace: TouringcarParkingSpace | undefined
   setCurrentParkingSpace: Dispatch<SetStateAction<TouringcarParkingSpace | undefined>>
+  unsetDetailsPane: () => void
   activeTab: MapPanelTab | undefined
   setActiveTab: Dispatch<SetStateAction<MapPanelTab | undefined>>
   location: [number, number] | undefined

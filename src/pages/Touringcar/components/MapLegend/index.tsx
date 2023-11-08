@@ -30,6 +30,10 @@ const LEGEND_ITEMS = [
     id: MapLayerId.touringcarRoutesMandatoryLayerId,
     label: '_pageTouringcar._legend.mandatoryRoutes',
   },
+  {
+    id: MapLayerId.touringcarEnvironmentalZoneLayerId,
+    label: '_pageTouringcar._legend.environmentalZone',
+  },
 ]
 
 const StyledCheckbox = styled(Checkbox)`

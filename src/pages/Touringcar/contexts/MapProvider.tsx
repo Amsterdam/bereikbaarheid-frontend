@@ -72,6 +72,11 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
 
   const [currentParkingSpace, setCurrentParkingSpace] = useState<TouringcarParkingSpace | undefined>(undefined)
 
+  const unsetDetailsPane = useCallback(() => {
+    setCurrentStop(undefined)
+    setCurrentParkingSpace(undefined)
+  }, [])
+
   const [activeTab, setActiveTab] = useState<MapPanelTab | undefined>(undefined)
 
   const [location, setLocation] = useState<[number, number] | undefined>(undefined)
@@ -86,6 +91,7 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
         setCurrentStop,
         currentParkingSpace,
         setCurrentParkingSpace,
+        unsetDetailsPane,
         activeTab,
         setActiveTab,
         location,

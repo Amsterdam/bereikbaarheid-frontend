@@ -12,6 +12,7 @@ const mapLayersInitialState = {
   [MapLayerId.touringcarRoutesDestinationTrafficLayerId]: true,
   [MapLayerId.touringcarRoutesRecommendedLayerId]: true,
   [MapLayerId.touringcarRoutesMandatoryLayerId]: true,
+  [MapLayerId.touringcarEnvironmentalZoneLayerId]: true,
 }
 
 function mapLayersReducer(state: typeof mapLayersInitialState, action: mapLayerActionType) {
