@@ -1,9 +1,5 @@
 import { Checkbox, Label } from '@amsterdam/asc-ui'
-import {
-  MapLayerId,
-  layerFeatureProps,
-  useTouringcarMapContext,
-} from 'pages/Touringcar/contexts/MapContext'
+import { MapLayerId, layerFeatureProps, useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
 import { useTranslation } from 'react-i18next'
 import { MapLegend } from 'shared/components/MapLegend'
 import { LegendItemsWrapper } from 'shared/components/MapLegendStyles'
@@ -19,6 +15,10 @@ const LEGEND_ITEMS = [
     label: '_pageTouringcar._legend.parking',
   },
   {
+    id: MapLayerId.touringcarRoutesDestinationTrafficLayerId,
+    label: '_pageTouringcar._legend.destinationTraffic',
+  },
+  {
     id: MapLayerId.touringcarRoutesRecommendedLayerId,
     label: '_pageTouringcar._legend.recommendedRoutes',
   },
@@ -31,9 +31,7 @@ const LEGEND_ITEMS = [
 const StyledCheckbox = styled(Checkbox)`
   & > span {
     background-color: ${props =>
-      props.id && props.checked
-        ? layerFeatureProps[props.id as MapLayerId].color
-        : 'none'};
+      props.id && props.checked ? layerFeatureProps[props.id as MapLayerId].color : 'none'};
   }
 `
 
@@ -46,11 +44,7 @@ function TouringcarMapLegend() {
       <LegendItemsWrapper>
         {LEGEND_ITEMS.map(legendItem => {
           return (
-            <Label
-              key={legendItem.id}
-              htmlFor={legendItem.id}
-              label={t(legendItem.label)}
-            >
+            <Label key={legendItem.id} htmlFor={legendItem.id} label={t(legendItem.label)}>
               <StyledCheckbox
                 id={legendItem.id}
                 onChange={() => {

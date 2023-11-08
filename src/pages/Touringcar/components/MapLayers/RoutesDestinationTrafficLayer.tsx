@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { GeoJSON, MapPanelContext } from '@amsterdam/arm-core'
 import { SnapPoint } from '@amsterdam/arm-core/lib/components/MapPanel/constants'
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarRoutesMandatory from 'api/touringcar/routes-mandatory'
+import getTouringcarRoutesDestinationTraffic from 'api/touringcar/routes-destination-traffic'
 import { DomEvent } from 'leaflet'
 import {
   MapLayerId,
@@ -12,31 +12,31 @@ import {
   useTouringcarMapContext,
 } from 'pages/Touringcar/contexts/MapContext'
 
-export const RoutesMandatoryLayer = () => {
+export const RoutesDestinationTrafficLayer = () => {
   const { setCurrentParkingSpace, setActiveTab } = useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
   const { activeMapLayers } = useTouringcarMapContext()
 
   const { isLoading, error, isError, data } = useQuery({
     enabled: true,
-    queryKey: ['touringcarRoutesMandatory'],
+    queryKey: ['touringcarRoutesDestinationTraffic'],
     queryFn: () =>
-      getTouringcarRoutesMandatory({
+      getTouringcarRoutesDestinationTraffic({
         _format: 'geojson',
       }),
   })
 
   if (isError && error instanceof Error) console.error(error.message)
   if (isLoading || !data) return null
-  if (!activeMapLayers[MapLayerId.touringcarRoutesMandatoryLayerId]) return null
+  if (!activeMapLayers[MapLayerId.touringcarRoutesDestinationTrafficLayerId]) return null
 
   return (
     <GeoJSON
       args={[data]}
       options={{
         style: {
-          color: layerFeatureProps[MapLayerId.touringcarRoutesMandatoryLayerId].color,
-          weight: layerFeatureProps[MapLayerId.touringcarRoutesMandatoryLayerId].strokeWidth,
+          color: layerFeatureProps[MapLayerId.touringcarRoutesDestinationTrafficLayerId].color,
+          weight: layerFeatureProps[MapLayerId.touringcarRoutesDestinationTrafficLayerId].strokeWidth,
         },
         onEachFeature: (_feature, layer: L.GeoJSON) => {
           layer.on('click', e => {

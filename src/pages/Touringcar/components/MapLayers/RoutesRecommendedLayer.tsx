@@ -26,29 +26,17 @@ export const RoutesRecommendedLayer = () => {
       }),
   })
 
-  if (isError && error instanceof Error) {
-    console.error(error.message)
-  }
-
-  if (isLoading || !data) {
-    return null
-  }
-
-  if (!activeMapLayers[MapLayerId.touringcarRoutesRecommendedLayerId]) {
-    return null
-  }
+  if (isError && error instanceof Error) console.error(error.message)
+  if (isLoading || !data) return null
+  if (!activeMapLayers[MapLayerId.touringcarRoutesRecommendedLayerId]) return null
 
   return (
     <GeoJSON
       args={[data]}
       options={{
         style: {
-          color:
-            layerFeatureProps[MapLayerId.touringcarRoutesRecommendedLayerId]
-              .color,
-          weight:
-            layerFeatureProps[MapLayerId.touringcarRoutesRecommendedLayerId]
-              .strokeWidth,
+          color: layerFeatureProps[MapLayerId.touringcarRoutesRecommendedLayerId].color,
+          weight: layerFeatureProps[MapLayerId.touringcarRoutesRecommendedLayerId].strokeWidth,
         },
         onEachFeature: (_feature, layer: L.GeoJSON) => {
           layer.on('click', e => {

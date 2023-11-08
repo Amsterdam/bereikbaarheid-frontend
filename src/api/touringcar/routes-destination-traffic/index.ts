@@ -8,8 +8,7 @@ interface TouringcarRoutesDestinationTraffic extends Feature {
   omschrijving: string
 }
 
-interface TouringcarRoutesDestinationTrafficCollection
-  extends FeatureCollection {
+interface TouringcarRoutesDestinationTrafficCollection extends FeatureCollection {
   features: [] | TouringcarRoutesDestinationTraffic[]
 }
 
@@ -35,9 +34,6 @@ function getUrl(params?: TouringcarRoutesDestinationTrafficParams) {
   })
 }
 
-export type {
-  TouringcarRoutesDestinationTraffic,
-  TouringcarRoutesDestinationTrafficCollection,
-}
+export type { TouringcarRoutesDestinationTraffic, TouringcarRoutesDestinationTrafficCollection }
 export { ENDPOINT, getTouringcarRoutesDestinationTraffic, getUrl }
 export default getTouringcarRoutesDestinationTraffic
