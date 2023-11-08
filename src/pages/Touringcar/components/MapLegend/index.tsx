@@ -15,6 +15,10 @@ const LEGEND_ITEMS = [
     label: '_pageTouringcar._legend.parking',
   },
   {
+    id: MapLayerId.touringcarVehicleHeightsLayerId,
+    label: '_pageTouringcar._legend.maxVehicleHeight',
+  },
+  {
     id: MapLayerId.touringcarRoutesDestinationTrafficLayerId,
     label: '_pageTouringcar._legend.destinationTraffic',
   },

@@ -3,6 +3,7 @@ import { getUrl as getTouringcarRoutesDestinationTrafficUrl } from 'api/touringc
 import { getUrl as getTouringcarRoutesMandatoryUrl } from 'api/touringcar/routes-mandatory'
 import { getUrl as getTouringcarRoutesRecommendedUrl } from 'api/touringcar/routes-recommended'
 import { getUrl as getTouringcarStopsUrl } from 'api/touringcar/stops'
+import { getUrl as getTouringcarVehicleHeightsUrl } from 'api/touringcar/vehicle-heights'
 
 const touringcarStopsLink = {
   href: getTouringcarStopsUrl(),
@@ -13,6 +14,12 @@ const touringcarStopsLink = {
 const touringcarParkingSpacesLink = {
   href: getTouringcarParkingSpacesUrl(),
   title: '_pageTouringcar._dataSources.parkingSpacesForCoaches',
+  beta: true,
+}
+
+const touringcarVehicleHeightsLink = {
+  href: getTouringcarVehicleHeightsUrl(),
+  title: '_pageTouringcar._dataSources.maxVehicleHeight',
   beta: true,
 }
 
@@ -37,6 +44,7 @@ const touringcarRoutesMandatoryLink = {
 const dataLinks = [
   touringcarStopsLink,
   touringcarParkingSpacesLink,
+  touringcarVehicleHeightsLink,
   touringcarRoutesDestinationTrafficLink,
   touringcarRoutesRecommendedLink,
   touringcarRoutesMandatoryLink,
@@ -45,6 +53,7 @@ const dataLinks = [
 export {
   touringcarStopsLink,
   touringcarParkingSpacesLink,
+  touringcarVehicleHeightsLink,
   touringcarRoutesDestinationTrafficLink,
   touringcarRoutesRecommendedLink,
   touringcarRoutesMandatoryLink,

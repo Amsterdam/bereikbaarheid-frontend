@@ -8,6 +8,7 @@ interface TouringcarStop extends Feature {
   omschrijving: string
   bijzonderheden: string
   plaatsen: string
+  maximaleDoorrijhoogte?: string
 }
 
 interface TouringcarStopCollection extends FeatureCollection {

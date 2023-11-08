@@ -14,6 +14,7 @@ enum MapPanelTab {
 enum MapLayerId {
   touringcarStopsLayerId = 'touringcarStops',
   touringcarParkingSpacesLayerId = 'touringcarParkingSpaces',
+  touringcarVehicleHeightsLayerId = 'touringcarVehicleHeights',
   touringcarRoutesDestinationTrafficLayerId = 'touringcarRoutesDestinationTraffic',
   touringcarRoutesRecommendedLayerId = 'touringcarRoutesRecommended',
   touringcarRoutesMandatoryLayerId = 'touringcarRoutesMandatory',
@@ -22,6 +23,7 @@ enum MapLayerId {
 enum MapLayerParamToMapLayerId {
   'haltes' = MapLayerId.touringcarStopsLayerId,
   'parkeren' = MapLayerId.touringcarParkingSpacesLayerId,
+  'doorrijhoogtes' = MapLayerId.touringcarVehicleHeightsLayerId,
   'bestemmingsverkeer' = MapLayerId.touringcarRoutesDestinationTrafficLayerId,
   'aanbevolen-routes' = MapLayerId.touringcarRoutesRecommendedLayerId,
   'verplichte-routes' = MapLayerId.touringcarRoutesMandatoryLayerId,
@@ -32,6 +34,7 @@ type MapLayerParam = keyof typeof MapLayerParamToMapLayerId
 const mapLayerParams: MapLayerParam[] = [
   'haltes',
   'parkeren',
+  'doorrijhoogtes',
   'bestemmingsverkeer',
   'aanbevolen-routes',
   'verplichte-routes',
@@ -40,6 +43,7 @@ const mapLayerParams: MapLayerParam[] = [
 const mapLayerIdToMapLayerParam: Record<MapLayerId, MapLayerParam> = {
   [MapLayerId.touringcarStopsLayerId]: 'haltes',
   [MapLayerId.touringcarParkingSpacesLayerId]: 'parkeren',
+  [MapLayerId.touringcarVehicleHeightsLayerId]: 'doorrijhoogtes',
   [MapLayerId.touringcarRoutesDestinationTrafficLayerId]: 'bestemmingsverkeer',
   [MapLayerId.touringcarRoutesRecommendedLayerId]: 'aanbevolen-routes',
   [MapLayerId.touringcarRoutesMandatoryLayerId]: 'verplichte-routes',
@@ -51,6 +55,9 @@ const layerFeatureProps = {
   },
   [MapLayerId.touringcarParkingSpacesLayerId]: {
     color: '#000000',
+  },
+  [MapLayerId.touringcarVehicleHeightsLayerId]: {
+    color: '#ec0000',
   },
   [MapLayerId.touringcarRoutesDestinationTrafficLayerId]: {
     color: '#BED200',

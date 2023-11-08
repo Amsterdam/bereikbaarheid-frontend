@@ -472,6 +472,39 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                              href="v1/touringcars/doorrijhoogtes"
+                              target="_blank"
+                            >
+                              <span
+                                class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                              >
+                                <svg
+                                  focusable="false"
+                                  role="img"
+                                  viewBox="0 0 32 32"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </span>
+                              <span
+                                class="sc-fhzFiK iRpqvs"
+                              >
+                                Maximale doorrijhoogtes voor touringcars
+                              </span>
+                            </a>
+                            <sup>
+                              *
+                            </sup>
+                          </li>
+                          <li
+                            class="sc-lcIPJg ddQxr"
+                          >
+                            <a
+                              class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
                               href="v1/touringcars/wegwerkzaamheden"
                               target="_blank"
                             >
@@ -526,7 +559,7 @@ FAQ en contactgegevens"
                               <span
                                 class="sc-fhzFiK iRpqvs"
                               >
-                                Aanbevolen routes
+                                Aanbevolen routes voor touringcars
                               </span>
                             </a>
                             <sup>
@@ -559,7 +592,7 @@ FAQ en contactgegevens"
                               <span
                                 class="sc-fhzFiK iRpqvs"
                               >
-                                Verplichte route (&gt; 7,5t)
+                                Verplichte route (&gt; 7,5t) voor touringcars
                               </span>
                             </a>
                             <sup>
@@ -731,6 +764,42 @@ FAQ en contactgegevens"
                           checked=""
                           class="sc-fUnMCh cQYVve"
                           id="touringcarParkingSpaces"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
+                    <label
+                      class="sc-gFVvzn jmImEg"
+                      for="touringcarVehicleHeights"
+                    >
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Maximale doorrijhoogtes
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb sc-bddgXz kpzhkk"
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarVehicleHeights"
                           type="checkbox"
                         />
                       </span>
@@ -1382,6 +1451,39 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                            href="v1/touringcars/doorrijhoogtes"
+                            target="_blank"
+                          >
+                            <span
+                              class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                            >
+                              <svg
+                                focusable="false"
+                                role="img"
+                                viewBox="0 0 32 32"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                            <span
+                              class="sc-fhzFiK iRpqvs"
+                            >
+                              Maximale doorrijhoogtes voor touringcars
+                            </span>
+                          </a>
+                          <sup>
+                            *
+                          </sup>
+                        </li>
+                        <li
+                          class="sc-lcIPJg ddQxr"
+                        >
+                          <a
+                            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
                             href="v1/touringcars/wegwerkzaamheden"
                             target="_blank"
                           >
@@ -1436,7 +1538,7 @@ FAQ en contactgegevens"
                             <span
                               class="sc-fhzFiK iRpqvs"
                             >
-                              Aanbevolen routes
+                              Aanbevolen routes voor touringcars
                             </span>
                           </a>
                           <sup>
@@ -1469,7 +1571,7 @@ FAQ en contactgegevens"
                             <span
                               class="sc-fhzFiK iRpqvs"
                             >
-                              Verplichte route (&gt; 7,5t)
+                              Verplichte route (&gt; 7,5t) voor touringcars
                             </span>
                           </a>
                           <sup>
@@ -1641,6 +1743,42 @@ FAQ en contactgegevens"
                         checked=""
                         class="sc-fUnMCh cQYVve"
                         id="touringcarParkingSpaces"
+                        type="checkbox"
+                      />
+                    </span>
+                  </label>
+                  <label
+                    class="sc-gFVvzn jmImEg"
+                    for="touringcarVehicleHeights"
+                  >
+                    <span
+                      class="sc-brPLxw dGBiZJ"
+                    >
+                      Maximale doorrijhoogtes
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb sc-bddgXz kpzhkk"
+                    >
+                      <span
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
+                      >
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarVehicleHeights"
                         type="checkbox"
                       />
                     </span>

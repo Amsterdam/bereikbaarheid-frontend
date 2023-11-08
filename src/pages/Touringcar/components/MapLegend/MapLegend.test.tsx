@@ -13,5 +13,7 @@ describe('MapLegend', () => {
     await screen.findByText(/legenda/i)
 
     expect(screen.getByLabelText(/parkeren/i)).toBeEnabled()
+    expect(screen.getByLabelText(/bestemmingsverkeer/i)).toBeEnabled()
+    expect(screen.getByLabelText(/aanbevolen routes/i)).toBeEnabled()
   })
 })
