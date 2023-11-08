@@ -61,12 +61,11 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
       setQueryParams({}, { replace: true })
     } else {
       const fromActiveLayersToParams = Object.entries(activeMapLayers).reduce(
-        (acc, cur): string => {
-          if (cur[1]) {
-            // eslint-disable-next-line prettier/prettier
+        (acc: string, [key, val]: [string, boolean]): string => {
+          if (val) {
             return `${acc}&${
               mapLayerIdToMapLayerParam[
-                cur[0] as keyof typeof mapLayerIdToMapLayerParam
+                key as keyof typeof mapLayerIdToMapLayerParam
               ]
             }`
           }
