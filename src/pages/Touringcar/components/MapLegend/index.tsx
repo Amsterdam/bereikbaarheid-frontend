@@ -53,12 +53,12 @@ function TouringcarMapLegend() {
             >
               <StyledCheckbox
                 id={legendItem.id}
-                onChange={() =>
+                onChange={() => {
                   updateActiveMapLayers({
                     type: 'TOGGLE',
                     layerId: legendItem.id,
                   })
-                }
+                }}
                 checked={activeMapLayers[legendItem.id]}
               />
             </Label>

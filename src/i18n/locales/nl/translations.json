@@ -75,9 +75,10 @@
       "environmentalZone": "Milieuzone"
     },
     "_dataSources": {
-      "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
       "stopsForCoaches": "Haltes voor touringcars",
-      "mandatoryRoutes": "Verplichte route (> 7,5t)"
+      "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
+      "mandatoryRoutes": "Verplichte route (> 7,5t)",
+      "recommendedRoutes": "Aanbevolen routes"
     }
   },
   "_pageData": {
