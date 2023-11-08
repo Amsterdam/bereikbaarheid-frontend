@@ -17,6 +17,7 @@ import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_DESTINATION_TRAFFIC } from '../s
 import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_MANDATORY } from '../src/api/touringcar/routes-mandatory'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_RECOMMENDED } from '../src/api/touringcar/routes-recommended'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_STOPS } from '../src/api/touringcar/stops'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_TRAFFIC_HEIGHTS } from '../src/api/touringcar/traffic-heights'
 import { ENDPOINT as ENDPOINT_WFS_WIOR } from '../src/api/wfs/wior'
 
 export const handlers = [
@@ -109,6 +110,11 @@ export const handlers = [
   rest.get(ENDPOINT_TOURINGCAR_PARKING_SPACES, (_req, res, ctx) => {
     const touringcarParkingSpacesMock = require('./mocks/touringcar/parking-signs/data.json')
     return res(ctx.status(200), ctx.json(touringcarParkingSpacesMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_TRAFFIC_HEIGHTS, (_req, res, ctx) => {
+    const touringcarTrafficHeightsMock = require('./mocks/touringcar/traffic-heights/data.json')
+    return res(ctx.status(200), ctx.json(touringcarTrafficHeightsMock))
   }),
 
   rest.get(ENDPOINT_TOURINGCAR_ROUTES_DESTINATION_TRAFFIC, (_req, res, ctx) => {
