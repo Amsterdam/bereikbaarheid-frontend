@@ -18,21 +18,28 @@ enum MapLayerId {
   touringcarRoutesMandatoryLayerId = 'touringcarRoutesMandatory',
 }
 
-enum MapLayerParamToMapLayer {
+enum MapLayerParamToMapLayerId {
   'haltes' = MapLayerId.touringcarStopsLayerId,
   'parkeren' = MapLayerId.touringcarParkingSpacesLayerId,
   'aanbevolen-routes' = MapLayerId.touringcarRoutesRecommendedLayerId,
   'verplichte-routes' = MapLayerId.touringcarRoutesMandatoryLayerId,
 }
 
-type MapLayerParam = keyof typeof MapLayerParamToMapLayer
+type MapLayerParam = keyof typeof MapLayerParamToMapLayerId
 
-const mapLayerParamIds: (keyof typeof MapLayerParamToMapLayer)[] = [
+const mapLayerParams: MapLayerParam[] = [
   'haltes',
   'parkeren',
   'aanbevolen-routes',
   'verplichte-routes',
 ]
+
+const mapLayerIdToMapLayerParam: Record<MapLayerId, MapLayerParam> = {
+  [MapLayerId.touringcarStopsLayerId]: 'haltes',
+  [MapLayerId.touringcarParkingSpacesLayerId]: 'parkeren',
+  [MapLayerId.touringcarRoutesRecommendedLayerId]: 'aanbevolen-routes',
+  [MapLayerId.touringcarRoutesMandatoryLayerId]: 'verplichte-routes',
+}
 
 const layerFeatureProps = {
   [MapLayerId.touringcarStopsLayerId]: {
@@ -87,8 +94,9 @@ export type { MapLayerParam, TouringcarContextProps }
 export {
   MapPanelTab,
   MapLayerId,
-  MapLayerParamToMapLayer,
-  mapLayerParamIds,
+  MapLayerParamToMapLayerId,
+  mapLayerParams,
+  mapLayerIdToMapLayerParam,
   layerFeatureProps,
   TouringcarMapContext,
   useTouringcarMapContext,

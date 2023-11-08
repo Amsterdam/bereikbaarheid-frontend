@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useReducer, useState } from 'react'
+import { ReactNode, useCallback, useEffect, useReducer, useState } from 'react'
 
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 import { TouringcarStop } from 'api/touringcar/stops'
@@ -6,10 +6,11 @@ import { useSearchParams } from 'react-router-dom'
 
 import {
   MapLayerParam,
-  MapLayerParamToMapLayer,
+  MapLayerParamToMapLayerId as MapLayerParamToMapLayer,
   MapPanelTab,
   TouringcarMapContext,
-  mapLayerParamIds,
+  mapLayerIdToMapLayerParam,
+  mapLayerParams as mapLayerParamIds,
 } from './MapContext'
 import mapLayersReducer, { mapLayersInitialState } from './mapLayersReducer'
 
@@ -19,15 +20,20 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
     mapLayersInitialState
   )
 
-  const [queryParams] = useSearchParams()
+  const [blockURLParamsMutation, setBlockURLParamsMutation] = useState(false)
+  const [queryParams, setQueryParams] = useSearchParams()
   const updateActiveMapLayersWithSearchParams = useCallback(() => {
+    if (blockURLParamsMutation) return
+
+    setBlockURLParamsMutation(true)
+
     const mapLayerParams: MapLayerParam[] = (
       [...queryParams.keys()] as MapLayerParam[]
     ).filter(key => {
       return mapLayerParamIds.includes(key as MapLayerParam)
     })
 
-    if (!mapLayerParams.length) return
+    if (!mapLayerParams.length) return setBlockURLParamsMutation(false)
 
     mapLayerParamIds.forEach(param => {
       const queryParam = MapLayerParamToMapLayer[
@@ -40,7 +46,39 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
         return updateActiveMapLayers({ type: 'OFF', layerId: queryParam })
       }
     })
-  }, [queryParams])
+
+    setBlockURLParamsMutation(false)
+  }, [blockURLParamsMutation, queryParams])
+
+  // Add URL parameters when some, but not all, legend items are checked.
+  useEffect(() => {
+    if (blockURLParamsMutation) return
+
+    const noLayerIsActive = Object.values(activeMapLayers).every(l => !l)
+    const allLayersAreActive = Object.values(activeMapLayers).every(l => l)
+
+    if (noLayerIsActive || allLayersAreActive) {
+      setQueryParams({}, { replace: true })
+    } else {
+      const fromActiveLayersToParams = Object.entries(activeMapLayers).reduce(
+        (acc, cur): string => {
+          if (cur[1]) {
+            // eslint-disable-next-line prettier/prettier
+            return `${acc}&${
+              mapLayerIdToMapLayerParam[
+                cur[0] as keyof typeof mapLayerIdToMapLayerParam
+              ]
+            }`
+          }
+
+          return acc
+        },
+        ''
+      )
+
+      setQueryParams(fromActiveLayersToParams, { replace: true })
+    }
+  }, [blockURLParamsMutation, queryParams, setQueryParams, activeMapLayers])
 
   const [currentStop, setCurrentStop] = useState<TouringcarStop | undefined>(
     undefined
