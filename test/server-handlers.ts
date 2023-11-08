@@ -12,6 +12,7 @@ import { ENDPOINT as ENDPOINT_RDW_AXLES } from '../src/api/rdw/axles'
 import { ENDPOINT as ENDPOINT_RDW_FUEL } from '../src/api/rdw/fuel'
 import { ENDPOINT as ENDPOINT_RDW_SUBCATEGORY } from '../src/api/rdw/subcategory'
 import { ENDPOINT as ENDPOINT_RDW_VEHICLE } from '../src/api/rdw/vehicle'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_ENVIRONMENTAL_ZONE } from '../src/api/touringcar/environmental-zone'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_PARKING_SPACES } from '../src/api/touringcar/parking-spaces'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_DESTINATION_TRAFFIC } from '../src/api/touringcar/routes-destination-traffic'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_MANDATORY } from '../src/api/touringcar/routes-mandatory'
@@ -115,6 +116,11 @@ export const handlers = [
   rest.get(ENDPOINT_TOURINGCAR_VEHICLE_HEIGHTS, (_req, res, ctx) => {
     const touringcarVehicleHeightsMock = require('./mocks/touringcar/vehicle-heights/data.json')
     return res(ctx.status(200), ctx.json(touringcarVehicleHeightsMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_ENVIRONMENTAL_ZONE, (_req, res, ctx) => {
+    const touringcarEnvironmentalZoneMock = require('./mocks/touringcar/environmental-zone/data.json')
+    return res(ctx.status(200), ctx.json(touringcarEnvironmentalZoneMock))
   }),
 
   rest.get(ENDPOINT_TOURINGCAR_ROUTES_DESTINATION_TRAFFIC, (_req, res, ctx) => {
