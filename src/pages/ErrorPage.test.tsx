@@ -4,8 +4,6 @@ import { generatePath } from 'react-router-dom'
 import { withApp } from '../../test/utils/withApp'
 
 describe('LoadUnloadPage', () => {
-  jest.setTimeout(15000)
-
   test('renders a 404 error page correctly', async () => {
     const pathToPage = generatePath('/does-not-exist')
 

@@ -5,6 +5,10 @@ import { TileLayerOptions, WMSOptions } from 'leaflet'
 // for an explanation of TileLayerOptions type usage see:
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/15313#issuecomment-441331339
 
+const optionsShared = {
+  keepBuffer: 10,
+}
+
 export const aerialImages = {
   id: 'aerialImages',
   label: 'Luchtfoto',
@@ -41,6 +45,7 @@ export const loadUnloadSpaces = {
   id: 'loadUnloadSpaces',
   label: 'Laad- en losplekken',
   options: {
+    ...optionsShared,
     layers: 'parkeervakken_reservering',
     categorie: 'laden_lossen',
     format: 'image/png',
@@ -56,6 +61,7 @@ export const oneWayArrows = {
   id: 'oneWayArrows',
   label: 'Eenrichtingsverkeer',
   options: {
+    ...optionsShared,
     attribution: 'VMA 4.00 2021-03 Arrow',
     bounds: [
       [52.2602, 5.085],
@@ -73,6 +79,7 @@ export const roadNetworkNoRestrictions = {
   id: 'roadNetworkNoRestrictions',
   label: 'VMA Algemeen',
   options: {
+    ...optionsShared,
     attribution: 'VMA 4.00 2021-09-06 Algemeen',
     bounds: [
       [52.2602, 5.085],
@@ -89,6 +96,7 @@ export const roadNetworkHeavyGoodsVehicleZone = {
   id: 'roadNetworkHeavyGoodsVehicleZone',
   label: 'Zone zwaar verkeer',
   options: {
+    ...optionsShared,
     attribution: 'VMA 4.00 2021-09-06 Zone zwaar verkeer',
     bounds: [
       [52.2602, 5.085],
@@ -105,6 +113,7 @@ export const roadNetworkLowEmissionZone = {
   id: 'roadNetworkLowEmissionZone',
   label: 'Milieuzone',
   options: {
+    ...optionsShared,
     attribution: 'VMA 4.00 2021-09-06 Milieuzone',
     bounds: [
       [52.2602, 5.085],
@@ -121,6 +130,7 @@ export const roadNetworkHeavyGoodsVehicleAndLowEmissionZone = {
   id: 'roadNetworkHeavyGoodsVehicleAndLowEmissionZone',
   label: 'Milieuzone & zone zwaar verkeer',
   options: {
+    ...optionsShared,
     attribution: 'VMA 4.00 2021-09-06 Milieuzone & zone zwaar verkeer',
     bounds: [
       [52.2602, 5.085],
@@ -137,6 +147,7 @@ export const topoBlackWhite = {
   id: 'topoBlackWhite',
   label: 'Topografie zwart/wit',
   options: {
+    ...optionsShared,
     bounds: [
       [48.04050187217583, -1.657291602308058],
       [56.1105896454882, 12.431727265021497],
@@ -152,6 +163,7 @@ export const topoColorLight = {
   id: 'topoColorLight',
   label: 'Topografie kleur',
   options: {
+    ...optionsShared,
     bounds: [
       [48.04050187217583, -1.657291602308058],
       [56.1105896454882, 12.431727265021497],
@@ -166,6 +178,7 @@ export const wideRoads = {
   id: 'wideRoads',
   label: 'Breed opgezette wegen',
   options: {
+    ...optionsShared,
     attribution: 'VMA 4.00 2021-09-06 Breed opgezette wegen',
     bounds: [
       [52.3553, 4.874106995285647],
