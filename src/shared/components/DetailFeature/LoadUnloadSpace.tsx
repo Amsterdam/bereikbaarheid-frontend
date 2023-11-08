@@ -18,11 +18,7 @@ import styled from 'styled-components'
 
 import { formatISODate } from '../../utils/dateTime'
 
-import {
-  ImageContainer,
-  Image,
-  PropertiesContainer,
-} from './DetailFeatureStyles'
+import { ImageContainer, Image, PropertiesContainer } from './DetailFeatureStyles'
 import trafficSignE07 from './images/traffic-sign-E07.png'
 
 const TableTitle = styled(Heading)`
@@ -34,28 +30,19 @@ interface DetailFeatureLoadUnloadSpaceProps {
   parkingSpace: ParkingSpace
 }
 
-export const DetailFeatureLoadUnloadSpace = ({
-  parkingSpace,
-}: DetailFeatureLoadUnloadSpaceProps) => {
+export const DetailFeatureLoadUnloadSpace = ({ parkingSpace }: DetailFeatureLoadUnloadSpaceProps) => {
   const parseDate = (date: string) => parse(date, 'yyyy-MM-dd', new Date())
-  const parseTime = (time: string) =>
-    format(parse(time, 'HH:mm:ss', new Date()), 'HH:mm')
+  const parseTime = (time: string) => format(parse(time, 'HH:mm:ss', new Date()), 'HH:mm')
   const yesterday = startOfYesterday()
 
   const exceptionsToParkingRegimes = () => {
     return parkingSpace.regimes.filter(
-      item =>
-        item.eType === 'E7' &&
-        item.beginDatum &&
-        item.eindDatum &&
-        !isAfter(yesterday, parseDate(item.eindDatum))
+      item => item.eType === 'E7' && item.beginDatum && item.eindDatum && !isAfter(yesterday, parseDate(item.eindDatum))
     )
   }
 
   const regularParkingRegimes = () => {
-    return parkingSpace.regimes.filter(
-      item => item.eType === 'E7' && !item.beginDatum && !item.eindDatum
-    )
+    return parkingSpace.regimes.filter(item => item.eType === 'E7' && !item.beginDatum && !item.eindDatum)
   }
 
   return (

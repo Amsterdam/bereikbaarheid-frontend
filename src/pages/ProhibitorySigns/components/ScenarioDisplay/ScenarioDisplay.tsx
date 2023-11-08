@@ -1,16 +1,8 @@
 import { useContext, useEffect, useMemo } from 'react'
 
-import {
-  mapPanelConstants,
-  MapPanelContent,
-  MapPanelContentProps,
-  MapPanelContext,
-} from '@amsterdam/arm-core'
+import { mapPanelConstants, MapPanelContent, MapPanelContentProps, MapPanelContext } from '@amsterdam/arm-core'
 import { Tab, Tabs } from '@amsterdam/asc-ui'
-import {
-  DataLink,
-  DataSourcesAside,
-} from 'pages/DataSources/components/DataSourcesBlocks'
+import { DataLink, DataSourcesAside } from 'pages/DataSources/components/DataSourcesBlocks'
 import { useProhibitorySignsPageContext } from 'pages/ProhibitorySigns/contexts/PageContext'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'

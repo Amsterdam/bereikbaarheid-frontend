@@ -29,9 +29,7 @@ describe('RoadObstructionsPage', () => {
 
     // the roadsections should be displayed on the map
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSectionsSvg = page.container.querySelectorAll(
-      '.leaflet-overlay-pane svg path'
-    )
+    const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
 
     expect(roadSectionsSvg.length).toBe(roadSections.features.length)
   })
@@ -81,9 +79,7 @@ describe('RoadObstructionsPage', () => {
 
     // sanity check - the roadsections should be displayed on the map
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSectionsSvg = page.container.querySelectorAll(
-      '.leaflet-overlay-pane svg path'
-    )
+    const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
 
     expect(roadSectionsSvg.length).toBe(roadSections.features.length)
 
@@ -102,20 +98,14 @@ describe('RoadObstructionsPage', () => {
 
     // close filters modal
     await act(async () => {
-      await user.click(
-        screen.getByText('Kaart bekijken', { selector: 'button' })
-      )
+      await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
     })
 
     await waitFor(() => page.rerender)
 
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSectionsSvgUpdated = page.container.querySelectorAll(
-      '.leaflet-overlay-pane svg path'
-    )
+    const roadSectionsSvgUpdated = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
 
-    expect(roadSectionsSvgUpdated.length).toBe(
-      roadSectionsUpdated.features.length
-    )
+    expect(roadSectionsSvgUpdated.length).toBe(roadSectionsUpdated.features.length)
   })
 })

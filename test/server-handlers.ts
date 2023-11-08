@@ -53,27 +53,21 @@ export const handlers = [
 
   rest.get(ENDPOINT_RDW_AXLES, (req, res, ctx) => {
     const licensePlate = req.url.searchParams.get('kenteken')
-    const axlesMock = !licensePlate
-      ? []
-      : require(`./mocks/rdw/axles/${licensePlate.toLowerCase()}.json`)
+    const axlesMock = !licensePlate ? [] : require(`./mocks/rdw/axles/${licensePlate.toLowerCase()}.json`)
 
     return res(ctx.status(200), ctx.json(axlesMock))
   }),
 
   rest.get(ENDPOINT_RDW_FUEL, (req, res, ctx) => {
     const licensePlate = req.url.searchParams.get('kenteken')
-    const fuelMock = !licensePlate
-      ? []
-      : require(`./mocks/rdw/fuel/${licensePlate.toLowerCase()}.json`)
+    const fuelMock = !licensePlate ? [] : require(`./mocks/rdw/fuel/${licensePlate.toLowerCase()}.json`)
 
     return res(ctx.status(200), ctx.json(fuelMock))
   }),
 
   rest.get(ENDPOINT_RDW_SUBCATEGORY, (req, res, ctx) => {
     const licensePlate = req.url.searchParams.get('kenteken')
-    const subcategoryMock = !licensePlate
-      ? []
-      : require(`./mocks/rdw/subcategory/${licensePlate.toLowerCase()}.json`)
+    const subcategoryMock = !licensePlate ? [] : require(`./mocks/rdw/subcategory/${licensePlate.toLowerCase()}.json`)
 
     return res(ctx.status(200), ctx.json(subcategoryMock))
   }),
@@ -119,10 +113,7 @@ export const handlers = [
 
   rest.get(ENDPOINT_TOURINGCAR_ROUTES_DESTINATION_TRAFFIC, (_req, res, ctx) => {
     const touringcarRoutesDestinationTrafficMock = require('./mocks/touringcar/routes-destination-traffic/data.json')
-    return res(
-      ctx.status(200),
-      ctx.json(touringcarRoutesDestinationTrafficMock)
-    )
+    return res(ctx.status(200), ctx.json(touringcarRoutesDestinationTrafficMock))
   }),
 
   rest.get(ENDPOINT_TOURINGCAR_ROUTES_MANDATORY, (_req, res, ctx) => {

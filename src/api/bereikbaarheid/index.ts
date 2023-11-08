@@ -12,11 +12,7 @@ export const api = axios.create({
   paramsSerializer: {
     serialize: query => {
       return Object.entries(query)
-        .map(([key, value], i) =>
-          Array.isArray(value)
-            ? `${key}=${value.join('&' + key + '=')}`
-            : `${key}=${value}`
-        )
+        .map(([key, value], i) => (Array.isArray(value) ? `${key}=${value.join('&' + key + '=')}` : `${key}=${value}`))
         .join('&')
     },
   },

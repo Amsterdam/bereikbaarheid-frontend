@@ -1,9 +1,6 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
 import MapLegendItem from 'shared/components/MapLegendItem'
-import {
-  LegendWrapper,
-  LegendItemsWrapper,
-} from 'shared/components/MapLegendStyles'
+import { LegendWrapper, LegendItemsWrapper } from 'shared/components/MapLegendStyles'
 import {
   roadNetworkHeavyGoodsVehicleZone,
   roadNetworkLowEmissionZone,
@@ -18,8 +15,7 @@ import { prohibitoryRoadsColors } from '../MapLayers/ProhibitoryRoadsLayer'
 
 const ProhibitorySignsMapLegendRoadNetwork = () => {
   const activeRoadNetwork = useActiveRoadNetwork()
-  const { activeMapLayers, updateActiveMapLayers } =
-    useProhibitorySignsMapContext()
+  const { activeMapLayers, updateActiveMapLayers } = useProhibitorySignsMapContext()
   const { showScenarioWizard } = useProhibitorySignsPageContext()
 
   const toggleRoadNetworks = () => {
@@ -48,33 +44,22 @@ const ProhibitorySignsMapLegendRoadNetwork = () => {
               <>
                 <MapLegendItem color="#fe47aa" text="Zone zwaar verkeer" />
 
-                <MapLegendItem
-                  color={prohibitoryRoadsColors.heavyGoodsRvv}
-                  text="Zone zwaar verkeer & RVV"
-                />
+                <MapLegendItem color={prohibitoryRoadsColors.heavyGoodsRvv} text="Zone zwaar verkeer & RVV" />
               </>
             )}
 
             {(activeRoadNetwork === roadNetworkLowEmissionZone.id ||
-              activeRoadNetwork ===
-                roadNetworkHeavyGoodsVehicleAndLowEmissionZone.id) && (
+              activeRoadNetwork === roadNetworkHeavyGoodsVehicleAndLowEmissionZone.id) && (
               <>
                 <MapLegendItem color="#1786fb" text="Milieuzone" />
 
-                <MapLegendItem
-                  color={prohibitoryRoadsColors.lowEmissionRvv}
-                  text="Milieuzone & RVV"
-                />
+                <MapLegendItem color={prohibitoryRoadsColors.lowEmissionRvv} text="Milieuzone & RVV" />
               </>
             )}
 
-            {activeRoadNetwork ===
-              roadNetworkHeavyGoodsVehicleAndLowEmissionZone.id && (
+            {activeRoadNetwork === roadNetworkHeavyGoodsVehicleAndLowEmissionZone.id && (
               <>
-                <MapLegendItem
-                  color="#8585ff"
-                  text="Zone zwaar verkeer & Milieuzone"
-                />
+                <MapLegendItem color="#8585ff" text="Zone zwaar verkeer & Milieuzone" />
 
                 <MapLegendItem
                   color={prohibitoryRoadsColors.lowEmissionHeavyGoodsRvv}

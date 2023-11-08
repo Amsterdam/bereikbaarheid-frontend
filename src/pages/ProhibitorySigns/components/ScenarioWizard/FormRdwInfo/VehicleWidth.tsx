@@ -7,10 +7,7 @@ import { useRdwInfo } from '../../../hooks/useRdwInfo'
 import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
 import { RdwInfoFormColumn, RdwInfoFormRow } from './FormStyle'
 
-const FormRdwInfoVehicleWidth = ({
-  errors,
-  register,
-}: FormRdwInfoInputProps<FormRdwInfoInputs>) => {
+const FormRdwInfoVehicleWidth = ({ errors, register }: FormRdwInfoInputProps<FormRdwInfoInputs>) => {
   const { vehicle } = useProhibitorySignsPageContext()
   const { generalInfo } = useRdwInfo()
 
@@ -25,8 +22,7 @@ const FormRdwInfoVehicleWidth = ({
   }
 
   const defaultWidth = () => {
-    let defaultWidth: number | undefined =
-      generalInfo.data?.[0].derived.width ?? 0
+    let defaultWidth: number | undefined = generalInfo.data?.[0].derived.width ?? 0
 
     if (vehicle.hasTrailer) {
       defaultWidth = undefined
@@ -58,9 +54,7 @@ const FormRdwInfoVehicleWidth = ({
           />
         </InputWithSuffix>
 
-        {errors.vehicleWidth && (
-          <ErrorMessage message={errors.vehicleWidth.message!} />
-        )}
+        {errors.vehicleWidth && <ErrorMessage message={errors.vehicleWidth.message!} />}
       </RdwInfoFormColumn>
     </RdwInfoFormRow>
   )

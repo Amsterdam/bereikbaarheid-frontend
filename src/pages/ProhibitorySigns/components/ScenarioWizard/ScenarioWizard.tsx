@@ -17,8 +17,7 @@ import { ProhibitorySignsFormScenarioStart } from './FormScenarioStart'
 const AnimatedModalBlock = animated(ModalBlock)
 
 const ProhibitorySignsScenarioWizard = () => {
-  const { activeStepWizard, setAddress, showScenarioWizard } =
-    useProhibitorySignsPageContext()
+  const { activeStepWizard, setAddress, showScenarioWizard } = useProhibitorySignsPageContext()
   const [addressInputEnabled, setAddressInputEnabled] = useState(true)
   const animationProps = useSpring({
     to: { opacity: 1 },
@@ -39,9 +38,7 @@ const ProhibitorySignsScenarioWizard = () => {
       setAddressInputEnabled={setAddressInputEnabled}
     />,
     <ProhibitorySignsFormScenarioAddress />,
-    <ProhibitorySignsFormScenarioRdwInfo
-      addressInputEnabled={addressInputEnabled}
-    />,
+    <ProhibitorySignsFormScenarioRdwInfo addressInputEnabled={addressInputEnabled} />,
   ]
 
   return (
@@ -63,9 +60,7 @@ const ProhibitorySignsScenarioWizard = () => {
 
       <Divider />
 
-      <AnimatedModalBlock style={animationProps}>
-        {steps[activeStepWizard]}
-      </AnimatedModalBlock>
+      <AnimatedModalBlock style={animationProps}>{steps[activeStepWizard]}</AnimatedModalBlock>
     </Modal>
   )
 }

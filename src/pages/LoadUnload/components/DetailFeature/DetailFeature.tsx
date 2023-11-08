@@ -1,10 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 
-import {
-  mapPanelConstants,
-  MapPanelContent,
-  MapPanelContext,
-} from '@amsterdam/arm-core'
+import { mapPanelConstants, MapPanelContent, MapPanelContext } from '@amsterdam/arm-core'
 import { DetailFeatureLoadUnloadSpace } from 'shared/components/DetailFeature/LoadUnloadSpace'
 import LoadingSpinner from 'shared/components/LoadingSpinner'
 
@@ -48,24 +44,19 @@ export const LoadUnloadDetailFeature = () => {
 
       {searchForParkingSpace.isError && <div>Er ging helaas iets mis.</div>}
 
-      {searchForParkingSpace.results.data &&
-        searchForParkingSpace.results.data.features.length === 0 && (
-          <div>Geen objecten gevonden op deze locatie.</div>
-        )}
+      {searchForParkingSpace.results.data && searchForParkingSpace.results.data.features.length === 0 && (
+        <div>Geen objecten gevonden op deze locatie.</div>
+      )}
 
-      {detailFeature.feature &&
-        detailFeature.feature.type === 'parkingSpace' && (
-          <DetailFeatureLoadUnloadSpace
-            parkingSpace={detailFeature.feature.data}
-          ></DetailFeatureLoadUnloadSpace>
-        )}
+      {detailFeature.feature && detailFeature.feature.type === 'parkingSpace' && (
+        <DetailFeatureLoadUnloadSpace parkingSpace={detailFeature.feature.data}></DetailFeatureLoadUnloadSpace>
+      )}
 
-      {detailFeature.feature &&
-        detailFeature.feature.type === 'roadSectionLoadUnload' && (
-          <LoadUnloadDetailFeatureRoadSectionLoadUnload
-            roadSectionLoadUnload={detailFeature.feature.data}
-          ></LoadUnloadDetailFeatureRoadSectionLoadUnload>
-        )}
+      {detailFeature.feature && detailFeature.feature.type === 'roadSectionLoadUnload' && (
+        <LoadUnloadDetailFeatureRoadSectionLoadUnload
+          roadSectionLoadUnload={detailFeature.feature.data}
+        ></LoadUnloadDetailFeatureRoadSectionLoadUnload>
+      )}
     </MapPanelContent>
   )
 }

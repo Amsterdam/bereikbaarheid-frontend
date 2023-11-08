@@ -10,9 +10,7 @@ import dataLinks from '../data/dataLinks'
 
 interface MapSettingsDisplayProps extends MapPanelContentProps {}
 
-function TouringcarMapSettingsDisplay({
-  ...otherProps
-}: MapSettingsDisplayProps) {
+function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps) {
   const { activeTab, setActiveTab } = useTouringcarMapContext()
   const { t } = useTranslation()
 
@@ -38,13 +36,9 @@ function TouringcarMapSettingsDisplay({
             {t('_pageTouringcar._mapPanel.recommendedAndMandatoryRoutes')}
           </PretendHeading>
           <Paragraph style={{ marginBlockEnd: '.5em' }}>
-            {t(
-              '_pageTouringcar._mapPanel.displayOfRecommendedAndMandatoryRoutes'
-            )}
+            {t('_pageTouringcar._mapPanel.displayOfRecommendedAndMandatoryRoutes')}
           </Paragraph>
-          <Paragraph>
-            {t('_pageTouringcar._mapPanel.payAttentionToVerhicleHeights')}
-          </Paragraph>
+          <Paragraph>{t('_pageTouringcar._mapPanel.payAttentionToVerhicleHeights')}</Paragraph>
         </Tab>
         <Tab
           id={MapPanelTab.DATA}

@@ -19,10 +19,7 @@ describe('ScenarioDisplay', () => {
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
-    await user.type(
-      await screen.findByLabelText('Hoogte van uw voertuig'),
-      '2.88'
-    )
+    await user.type(await screen.findByLabelText('Hoogte van uw voertuig'), '2.88')
 
     // ... but uncheck the address option
     await user.click(await screen.findByLabelText('Ik wil een adres invoeren'))
@@ -30,9 +27,7 @@ describe('ScenarioDisplay', () => {
     await user.click(screen.getByText('Volgende', { selector: 'button' }))
 
     // the next step should be the form with RDW information
-    expect(
-      await within(screen.getByRole('dialog')).findByText('RDW gegevens')
-    ).toBeVisible()
+    expect(await within(screen.getByRole('dialog')).findByText('RDW gegevens')).toBeVisible()
 
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
@@ -61,10 +56,7 @@ describe('ScenarioDisplay', () => {
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
-    await user.type(
-      await screen.findByLabelText('Hoogte van uw voertuig'),
-      '2.88'
-    )
+    await user.type(await screen.findByLabelText('Hoogte van uw voertuig'), '2.88')
 
     // ... but uncheck the address option
     await user.click(await screen.findByLabelText('Ik wil een adres invoeren'))
@@ -72,9 +64,7 @@ describe('ScenarioDisplay', () => {
     await user.click(screen.getByText('Volgende', { selector: 'button' }))
 
     // the next step should be the form with RDW information
-    expect(
-      await within(screen.getByRole('dialog')).findByText('RDW gegevens')
-    ).toBeVisible()
+    expect(await within(screen.getByRole('dialog')).findByText('RDW gegevens')).toBeVisible()
 
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
@@ -85,9 +75,7 @@ describe('ScenarioDisplay', () => {
       document.querySelectorAll('.leaflet-overlay-pane svg path')
     )
 
-    expect(
-      within(screen.getByTestId('scenario-display')).getByText('8.23 m')
-    ).toBeVisible() // vehicle length
+    expect(within(screen.getByTestId('scenario-display')).getByText('8.23 m')).toBeVisible() // vehicle length
 
     // open RDW info form
     await user.click(screen.getByTestId('change-rdw-info'))
@@ -106,8 +94,6 @@ describe('ScenarioDisplay', () => {
     )
 
     // and check if vehicle length has changed
-    expect(
-      within(screen.getByTestId('scenario-display')).getByText('10.56 m')
-    ).toBeVisible() // vehicle length
+    expect(within(screen.getByTestId('scenario-display')).getByText('10.56 m')).toBeVisible() // vehicle length
   })
 })

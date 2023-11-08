@@ -24,10 +24,7 @@ export const AddressMarker = ({ address }: AddressMarkerProps) => {
   return (
     <>
       {address.lat && address.lon && (
-        <Marker
-          latLng={{ lat: address.lat, lng: address.lon }}
-          options={{ interactive: false }}
-        />
+        <Marker latLng={{ lat: address.lat, lng: address.lon }} options={{ interactive: false }} />
       )}
     </>
   )

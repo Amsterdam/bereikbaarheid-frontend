@@ -33,10 +33,5 @@ export const LoadUnloadLoadUnloadSpacesLayer = () => {
 
   if (!activeMapLayers[loadUnloadSpaces.id]) return null
 
-  return (
-    <NonTiledLayer
-      url={loadUnloadSpaces.url}
-      options={loadUnloadSpaces.options}
-    ></NonTiledLayer>
-  )
+  return <NonTiledLayer url={loadUnloadSpaces.url} options={loadUnloadSpaces.options}></NonTiledLayer>
 }

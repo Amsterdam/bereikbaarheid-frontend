@@ -18,14 +18,8 @@ export const usePermitsByLocation = () => {
   // application for a while - and using the same vehicle & address -
   // our API doesn't get queried on every render of a component.
   const queryResult = useQuery({
-    enabled:
-      !!rdwGeneralData &&
-      !!address.lat &&
-      !!vehicle.axleWeight &&
-      !!vehicle.weight,
-    queryKey: ['permitsByLocation', address.lat, address.lon].concat(
-      Object.values(vehicle)
-    ),
+    enabled: !!rdwGeneralData && !!address.lat && !!vehicle.axleWeight && !!vehicle.weight,
+    queryKey: ['permitsByLocation', address.lat, address.lon].concat(Object.values(vehicle)),
     queryFn: ({ signal }) =>
       getPermitsByLocation(
         address,

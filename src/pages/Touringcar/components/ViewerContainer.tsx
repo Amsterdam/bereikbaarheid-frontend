@@ -11,15 +11,15 @@ type StyledViewerContainerProps = {
   ignoreTransition: boolean
 }
 
-const StyledViewerContainer = styled(
-  ViewerContainer
-).attrs<StyledViewerContainerProps>(({ viewerHeight, leftOffset }) => ({
-  style: {
-    height: viewerHeight,
-    left: leftOffset,
-    width: `calc(100% - ${leftOffset})`,
-  },
-}))<StyledViewerContainerProps>`
+const StyledViewerContainer = styled(ViewerContainer).attrs<StyledViewerContainerProps>(
+  ({ viewerHeight, leftOffset }) => ({
+    style: {
+      height: viewerHeight,
+      left: leftOffset,
+      width: `calc(100% - ${leftOffset})`,
+    },
+  })
+)<StyledViewerContainerProps>`
   bottom: 0;
   position: absolute;
   right: 0;
@@ -36,10 +36,7 @@ interface TouringcarViewerContainerProps {
   showDesktopVariant: boolean
 }
 
-export const TouringcarViewerContainer = ({
-  showDesktopVariant,
-  ...otherProps
-}: TouringcarViewerContainerProps) => {
+export const TouringcarViewerContainer = ({ showDesktopVariant, ...otherProps }: TouringcarViewerContainerProps) => {
   const { draggable } = useContext(MapPanelContext)
 
   return (

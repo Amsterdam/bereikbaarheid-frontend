@@ -15,10 +15,7 @@ const wiorLink = {
   title: 'Werkzaamheden in de Openbare Ruimte (WIOR)',
 }
 
-const dataLinks = (mapFilters: RoadObstructionMapFilters) => [
-  obstructionsLink(mapFilters),
-  wiorLink,
-]
+const dataLinks = (mapFilters: RoadObstructionMapFilters) => [obstructionsLink(mapFilters), wiorLink]
 
 export { obstructionsLink, wiorLink }
 export default dataLinks

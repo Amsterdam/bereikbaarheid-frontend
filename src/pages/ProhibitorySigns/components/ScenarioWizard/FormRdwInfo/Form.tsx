@@ -1,20 +1,7 @@
 import { ChevronLeft } from '@amsterdam/asc-assets'
-import {
-  Button,
-  Column,
-  CompactThemeProvider,
-  Link,
-  Paragraph,
-} from '@amsterdam/asc-ui'
+import { Button, Column, CompactThemeProvider, Link, Paragraph } from '@amsterdam/asc-ui'
 import { zodResolver } from '@hookform/resolvers/zod'
-import {
-  DeepMap,
-  FieldError,
-  FieldValues,
-  SubmitHandler,
-  useForm,
-  UseFormRegister,
-} from 'react-hook-form'
+import { DeepMap, FieldError, FieldValues, SubmitHandler, useForm, UseFormRegister } from 'react-hook-form'
 import LoadingSpinner from 'shared/components/LoadingSpinner'
 import { z } from 'zod'
 
@@ -54,8 +41,7 @@ export interface ProhibitorySignsFormScenarioRdwInfoProps {
 export const ProhibitorySignsFormScenarioRdwInfo = ({
   addressInputEnabled,
 }: ProhibitorySignsFormScenarioRdwInfoProps) => {
-  const { setActiveStepWizard, setShowScenarioWizard, vehicle, setVehicle } =
-    useProhibitorySignsPageContext()
+  const { setActiveStepWizard, setShowScenarioWizard, vehicle, setVehicle } = useProhibitorySignsPageContext()
   const previousFormStep = addressInputEnabled ? 1 : 0
   const { rdwDataIsLoading } = useRdwInfo()
   const validationSchema = useRdwInfoValidationSchema()
@@ -103,10 +89,7 @@ export const ProhibitorySignsFormScenarioRdwInfo = ({
 
           <FormRdwInfoIntroText />
 
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            data-testid="form-scenario-rdw-info"
-          >
+          <form onSubmit={handleSubmit(onSubmit)} data-testid="form-scenario-rdw-info">
             <RdwInfoFormInnerContainer>
               <RdwInfoFormRow hasMargin={false}>
                 <Column push={4} span={4}>
@@ -121,26 +104,13 @@ export const ProhibitorySignsFormScenarioRdwInfo = ({
                 </Column>
               </RdwInfoFormRow>
 
-              <FormRdwInfoVehicleCurbWeight
-                errors={errors}
-                register={register}
-              />
+              <FormRdwInfoVehicleCurbWeight errors={errors} register={register} />
 
-              <FormRdwInfoVehiclePayload
-                errors={errors}
-                register={register}
-                setValue={setValue}
-              />
+              <FormRdwInfoVehiclePayload errors={errors} register={register} setValue={setValue} />
 
-              <FormRdwInfoVehicleTotalWeight
-                errors={errors}
-                register={register}
-              />
+              <FormRdwInfoVehicleTotalWeight errors={errors} register={register} />
 
-              <FormRdwInfoVehicleAxleWeight
-                errors={errors}
-                register={register}
-              />
+              <FormRdwInfoVehicleAxleWeight errors={errors} register={register} />
 
               <FormRdwInfoVehicleLength errors={errors} register={register} />
 

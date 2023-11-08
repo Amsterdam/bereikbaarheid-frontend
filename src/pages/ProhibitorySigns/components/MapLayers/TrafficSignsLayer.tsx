@@ -12,10 +12,8 @@ import { useTrafficSignCategories } from '../../hooks/useTrafficSignCategories'
 import { TrafficSignMarker } from '../TrafficSignMarker'
 
 const ProhibitorySignsTrafficSignsLayer = () => {
-  const { activeMapLayers, updateActiveMapLayers, setCurrentTrafficSign } =
-    useProhibitorySignsMapContext()
-  const { expertMode, showScenarioWizard, vehicle } =
-    useProhibitorySignsPageContext()
+  const { activeMapLayers, updateActiveMapLayers, setCurrentTrafficSign } = useProhibitorySignsMapContext()
+  const { expertMode, showScenarioWizard, vehicle } = useProhibitorySignsPageContext()
   const rdwGeneralInfo = useRdwGeneralInfo(vehicle)
   const rdwGeneralData = rdwGeneralInfo.data
   const trafficSignCategories = useTrafficSignCategories(expertMode)
@@ -49,9 +47,7 @@ const ProhibitorySignsTrafficSignsLayer = () => {
   }, [trafficSigns.data, updateActiveMapLayers])
 
   const findTrafficSign = (id: number) => {
-    let sign = trafficSigns.data?.features.find(
-      item => item.properties.id === id
-    )
+    let sign = trafficSigns.data?.features.find(item => item.properties.id === id)
 
     setCurrentTrafficSign(sign)
   }

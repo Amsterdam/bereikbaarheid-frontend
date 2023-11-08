@@ -11,15 +11,15 @@ type StyledViewerContainerProps = {
   ignoreTransition: boolean
 }
 
-const StyledViewerContainer = styled(
-  ViewerContainer
-).attrs<StyledViewerContainerProps>(({ viewerHeight, leftOffset }) => ({
-  style: {
-    height: viewerHeight,
-    left: leftOffset,
-    width: `calc(100% - ${leftOffset})`,
-  },
-}))<StyledViewerContainerProps>`
+const StyledViewerContainer = styled(ViewerContainer).attrs<StyledViewerContainerProps>(
+  ({ viewerHeight, leftOffset }) => ({
+    style: {
+      height: viewerHeight,
+      left: leftOffset,
+      width: `calc(100% - ${leftOffset})`,
+    },
+  })
+)<StyledViewerContainerProps>`
   bottom: 0;
   position: absolute;
   right: 0;
@@ -41,19 +41,12 @@ const ProhibitorySignsViewerContainer = ({
   ...otherProps
 }: ProhibitorySignsViewerContainerProps) => {
   const { draggable, drawerPosition } = useContext(MapPanelContext)
-  const height =
-    parseInt(drawerPosition, 10) < window.innerHeight / 2
-      ? '50%'
-      : drawerPosition
+  const height = parseInt(drawerPosition, 10) < window.innerHeight / 2 ? '50%' : drawerPosition
 
   return (
     <>
       {!showDesktopVariant ? (
-        <StyledViewerContainer
-          {...otherProps}
-          ignoreTransition={draggable}
-          viewerHeight={height}
-        />
+        <StyledViewerContainer {...otherProps} ignoreTransition={draggable} viewerHeight={height} />
       ) : (
         <StyledViewerContainer
           {...otherProps}

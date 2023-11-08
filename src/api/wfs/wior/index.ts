@@ -21,10 +21,7 @@ export interface WiorFeatureCollection extends FeatureCollection {
   features: [] | WiorFeature[]
 }
 
-export function getWiorData(
-  cqlFilter: string,
-  signal: AbortSignal | undefined
-): Promise<WiorFeatureCollection> {
+export function getWiorData(cqlFilter: string, signal: AbortSignal | undefined): Promise<WiorFeatureCollection> {
   return axios
     .get(ENDPOINT, {
       params: {

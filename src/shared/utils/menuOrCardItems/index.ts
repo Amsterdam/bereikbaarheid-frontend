@@ -25,9 +25,7 @@ interface MenuOrCardItemWithRoute extends MenuOrCardItem {
   route: RouteIds
 }
 
-type MenuOrCardItemWithPathOrRoute =
-  | MenuOrCardItemWithPath
-  | MenuOrCardItemWithRoute
+type MenuOrCardItemWithPathOrRoute = MenuOrCardItemWithPath | MenuOrCardItemWithRoute
 
 const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
   {
@@ -107,19 +105,12 @@ function mapPathsToMenuOrCardItems(
         itemWithPath.imageFallback = require(`./images/${item.imageFallback}`)
       }
     } catch (error) {
-      console.error(
-        'Requested image could not be loaded. Does it exist at "./images/"?',
-        error
-      )
+      console.error('Requested image could not be loaded. Does it exist at "./images/"?', error)
     }
 
     return itemWithPath as MenuOrCardItemWithPath
   })
 }
 
-export type {
-  MenuItemObj,
-  MenuOrCardItemWithPathOrRoute,
-  MenuOrCardItemWithPath,
-}
+export type { MenuItemObj, MenuOrCardItemWithPathOrRoute, MenuOrCardItemWithPath }
 export { menuOrCardItems, mapPathsToMenuOrCardItems }

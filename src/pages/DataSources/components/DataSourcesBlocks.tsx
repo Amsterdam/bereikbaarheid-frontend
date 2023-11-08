@@ -1,12 +1,5 @@
 import { Email } from '@amsterdam/asc-assets'
-import {
-  Icon,
-  Link,
-  List,
-  ListItem,
-  Paragraph,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { Icon, Link, List, ListItem, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 import { RouteIds, getPathTo } from 'routes'
 import { ContentBlock, PretendHeading } from 'shared/components/CompactElements'
@@ -55,9 +48,7 @@ const DataSourcesLinks = ({
         {t('_generic._dataSources.dataShownOnMap')}
       </PretendHeading>
 
-      <Paragraph gutterBottom={4}>
-        {t('_generic._dataSources.viewAndDownloadShownDataLinks')}
-      </Paragraph>
+      <Paragraph gutterBottom={4}>{t('_generic._dataSources.viewAndDownloadShownDataLinks')}</Paragraph>
 
       <StyledList>
         {dataLinksAll.map((item, index) => {
@@ -87,9 +78,7 @@ const DataSourcesRoads = () => {
 
   return (
     <ContentBlock>
-      <PretendHeading as="h2">
-        {t('_generic._dataSources.amsterdamRoadDatabase')}
-      </PretendHeading>
+      <PretendHeading as="h2">{t('_generic._dataSources.amsterdamRoadDatabase')}</PretendHeading>
       <Link href={URL_ALL_DATA} target="_blank" inList>
         {t('_generic._dataSources.downloadFullDatasetAndDocs')}
       </Link>{' '}
@@ -109,11 +98,7 @@ const DataSourcesQuestions = ({ isCompact = false }: DataSourcesBlockProps) => {
       <Paragraph>
         {t('_generic._dataSources.doYouHaveSuggestionsOrQuestions')}{' '}
         <Link
-          href={getMailtoLink(
-            QUESTION_RECIPIENT,
-            QUESTION_SUBJECT,
-            QUESTION_BODY
-          )}
+          href={getMailtoLink(QUESTION_RECIPIENT, QUESTION_SUBJECT, QUESTION_BODY)}
           target="_blank"
           variant="inline"
         >
@@ -155,10 +140,5 @@ const DataSourcesBlocks = ({ dataLinks }: DataSourcesLinksBlockProps) => {
 }
 
 export type { DataLink }
-export {
-  DataSourcesLinks,
-  DataSourcesRoads,
-  DataSourcesQuestions,
-  DataSourcesAside,
-}
+export { DataSourcesLinks, DataSourcesRoads, DataSourcesQuestions, DataSourcesAside }
 export default DataSourcesBlocks

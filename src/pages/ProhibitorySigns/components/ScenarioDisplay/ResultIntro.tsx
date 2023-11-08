@@ -17,9 +17,8 @@ const ScenarioDisplayResultIntro = () => {
   if ((!address.lat && !address.lon) || !permitsByLocation.data?.data) {
     return (
       <IntroWrapper data-testid="result-no-address-found">
-        U heeft <strong>geen</strong> of een <strong>ongeldig</strong> adres
-        adres ingevoerd. De kleuren (uitleg zie legenda rechtsboven) op de kaart
-        geven aan <strong>waar</strong> u welke ontheffing(en) u nodig heeft.
+        U heeft <strong>geen</strong> of een <strong>ongeldig</strong> adres adres ingevoerd. De kleuren (uitleg zie
+        legenda rechtsboven) op de kaart geven aan <strong>waar</strong> u welke ontheffing(en) u nodig heeft.
       </IntroWrapper>
     )
   }

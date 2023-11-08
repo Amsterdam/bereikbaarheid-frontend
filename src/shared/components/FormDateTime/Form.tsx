@@ -1,10 +1,4 @@
-import {
-  breakpoint,
-  Button,
-  ErrorMessage,
-  Input,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { breakpoint, Button, ErrorMessage, Input, themeSpacing } from '@amsterdam/asc-ui'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import styled from 'styled-components'
@@ -36,10 +30,7 @@ export interface FormDateTimeProps {
   onSubmitForm: (data: FormDateTimeValues) => void
 }
 
-export const FormDateTime = ({
-  formValues,
-  onSubmitForm,
-}: FormDateTimeProps) => {
+export const FormDateTime = ({ formValues, onSubmitForm }: FormDateTimeProps) => {
   const {
     register,
     handleSubmit,

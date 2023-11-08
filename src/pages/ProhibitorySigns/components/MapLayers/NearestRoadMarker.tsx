@@ -16,18 +16,13 @@ let flagIcon = L.icon({
 const ProhibitorySignsNearestRoadMarker = () => {
   const mapInstance = useMapInstance()
   const permitsByLocation = usePermitsByLocation()
-  const [markerInstance, setMarkerInstance] = useState<L.Marker | undefined>(
-    undefined
-  )
+  const [markerInstance, setMarkerInstance] = useState<L.Marker | undefined>(undefined)
 
   useEffect(() => {
     if (mapInstance && markerInstance) {
-      markerInstance.bindTooltip(
-        'Getoonde ontheffingen aan de linkerkant <br> gelden voor deze locatie.',
-        {
-          direction: 'left',
-        }
-      )
+      markerInstance.bindTooltip('Getoonde ontheffingen aan de linkerkant <br> gelden voor deze locatie.', {
+        direction: 'left',
+      })
     }
   }, [mapInstance, markerInstance])
 

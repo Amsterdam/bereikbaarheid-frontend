@@ -1,12 +1,4 @@
-import {
-  Column,
-  CompactThemeProvider,
-  Heading,
-  Paragraph,
-  Row,
-  styles,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { Column, CompactThemeProvider, Heading, Paragraph, Row, styles, themeSpacing } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
@@ -42,8 +34,7 @@ const TotalWeightRow = styled(Row)`
 `
 
 const ScenarioDisplayRdwInfo = () => {
-  const { setActiveStepWizard, setShowScenarioWizard, vehicle } =
-    useProhibitorySignsPageContext()
+  const { setActiveStepWizard, setShowScenarioWizard, vehicle } = useProhibitorySignsPageContext()
 
   const rdwGeneralInfo = useRdwGeneralInfo(vehicle)
 
@@ -57,11 +48,7 @@ const ScenarioDisplayRdwInfo = () => {
       <HeaderRow halign="space-between" hasMargin={false}>
         <Column span={12}>
           <Heading as="h4">Uw invoer, stap 2</Heading>
-          <EditFiltersButton
-            data-testid="change-rdw-info"
-            variant="textButton"
-            onClick={showScenarioWizard}
-          >
+          <EditFiltersButton data-testid="change-rdw-info" variant="textButton" onClick={showScenarioWizard}>
             wijzig
           </EditFiltersButton>
         </Column>
@@ -73,17 +60,11 @@ const ScenarioDisplayRdwInfo = () => {
             <Column span={11}>
               <Paragraph gutterBottom={0}>Rijklaar gewicht</Paragraph>
 
-              <Paragraph gutterBottom={0}>
-                {rdwGeneralInfo.data?.[0].derived.curbWeight} kg
-              </Paragraph>
+              <Paragraph gutterBottom={0}>{rdwGeneralInfo.data?.[0].derived.curbWeight} kg</Paragraph>
             </Column>
           </Row>
 
-          <Row
-            className="scenario-display-payload"
-            halign="space-between"
-            hasMargin={false}
-          >
+          <Row className="scenario-display-payload" halign="space-between" hasMargin={false}>
             <Column span={11}>
               <Paragraph gutterBottom={0}>Lading</Paragraph>
 

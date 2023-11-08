@@ -1,13 +1,6 @@
 import { ReactNode } from 'react'
 
-import {
-  Accordion,
-  Divider,
-  styles,
-  svgFill,
-  themeColor,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { Accordion, Divider, styles, svgFill, themeColor, themeSpacing } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 

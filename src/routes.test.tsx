@@ -11,8 +11,6 @@ describe('routes', () => {
 
     withApp(pathToPage)
 
-    expect(
-      await screen.findByTestId('prohibitory-signs-page')
-    ).toBeInTheDocument()
+    expect(await screen.findByTestId('prohibitory-signs-page')).toBeInTheDocument()
   })
 })

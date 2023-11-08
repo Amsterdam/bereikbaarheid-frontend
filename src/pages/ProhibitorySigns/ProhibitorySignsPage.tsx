@@ -1,12 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import {
-  Map,
-  MapPanel,
-  mapPanelConstants,
-  MapPanelDrawer,
-  MapPanelProvider,
-} from '@amsterdam/arm-core'
+import { Map, MapPanel, mapPanelConstants, MapPanelDrawer, MapPanelProvider } from '@amsterdam/arm-core'
 import { useMatchMedia } from '@amsterdam/asc-ui'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'

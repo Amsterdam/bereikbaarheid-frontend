@@ -1,9 +1,6 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
 import MapLegendItem from 'shared/components/MapLegendItem'
-import {
-  LegendItemsWrapper,
-  LegendWrapper,
-} from 'shared/components/MapLegendStyles'
+import { LegendItemsWrapper, LegendWrapper } from 'shared/components/MapLegendStyles'
 import { useTheme } from 'styled-components'
 
 import { useLoadUnloadMapContext } from '../../contexts/MapContext'
@@ -50,10 +47,7 @@ export const LoadUnloadMapLegendRoadSectionsLoadUnload = () => {
             }
           />
 
-          <MapLegendItem
-            color={theme.colors.primary!.main}
-            text="venstertijd valt buiten tijdvak"
-          />
+          <MapLegendItem color={theme.colors.primary!.main} text="venstertijd valt buiten tijdvak" />
         </LegendItemsWrapper>
       </CompactThemeProvider>
     </LegendWrapper>

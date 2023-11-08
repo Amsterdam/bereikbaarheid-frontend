@@ -36,10 +36,7 @@ import c21ProhibitionAhead from './images/C21--vooraankondiging-verbod.png'
 import c21zbProhibition from './images/C21ZB--verbod.png'
 import c22Prohibition from './images/C22--verbod.png'
 
-export type TrafficSignBackground = Record<
-  string,
-  Partial<Record<TrafficSignCategory, string>>
->
+export type TrafficSignBackground = Record<string, Partial<Record<TrafficSignCategory, string>>>
 
 export const trafficSignBackgrounds: TrafficSignBackground = {
   c01: {

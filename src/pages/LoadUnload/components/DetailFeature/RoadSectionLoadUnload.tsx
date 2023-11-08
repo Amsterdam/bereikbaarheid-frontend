@@ -14,16 +14,9 @@ import {
   TableRow,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import {
-  LoadUnloadRegime,
-  RoadSectionLoadUnload,
-} from 'api/bereikbaarheid/road-sections/load-unload'
+import { LoadUnloadRegime, RoadSectionLoadUnload } from 'api/bereikbaarheid/road-sections/load-unload'
 import groupBy from 'lodash/groupBy'
-import {
-  ImageContainer,
-  Image,
-  PropertiesContainer,
-} from 'shared/components/DetailFeature/DetailFeatureStyles'
+import { ImageContainer, Image, PropertiesContainer } from 'shared/components/DetailFeature/DetailFeatureStyles'
 import { stripSecondsFromTime } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
@@ -87,9 +80,7 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
   return (
     <>
       {parkingSigns?.length ? (
-        <PaddedImageContainer data-testid="detail-feature-road-section-sign">
-          {parkingSigns}
-        </PaddedImageContainer>
+        <PaddedImageContainer data-testid="detail-feature-road-section-sign">{parkingSigns}</PaddedImageContainer>
       ) : (
         <></>
       )}
@@ -103,9 +94,7 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
 
           <Row halign="flex-start" hasMargin={false} valign="center">
             <Column span={6}>Straatnaam</Column>
-            <Column span={6}>
-              {roadSectionLoadUnload.properties.street_name}
-            </Column>
+            <Column span={6}>{roadSectionLoadUnload.properties.street_name}</Column>
           </Row>
 
           {roadSectionLoadUnload.properties.load_unload.length > 0 && (
@@ -131,24 +120,13 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
                           {items.map((item, index) => {
                             return (
                               <TableRow key={`${key}-${index}-main`}>
-                                {item.days && (
-                                  <TableCell>{item.days.join(', ')}</TableCell>
-                                )}
+                                {item.days && <TableCell>{item.days.join(', ')}</TableCell>}
 
-                                {item.start_time && (
-                                  <TableCell>
-                                    {stripSecondsFromTime(item.start_time)}
-                                  </TableCell>
-                                )}
+                                {item.start_time && <TableCell>{stripSecondsFromTime(item.start_time)}</TableCell>}
 
-                                {item.end_time && (
-                                  <TableCell>
-                                    {stripSecondsFromTime(item.end_time)}
-                                  </TableCell>
-                                )}
+                                {item.end_time && <TableCell>{stripSecondsFromTime(item.end_time)}</TableCell>}
 
-                                {item.additional_info === 'E01' ||
-                                item.additional_info === 'E02' ? (
+                                {item.additional_info === 'E01' || item.additional_info === 'E02' ? (
                                   <TableCell>
                                     <Image
                                       src={SignCodeToImg[item.additional_info]}

@@ -11,17 +11,14 @@ import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
 const ProhibitorySignsWideRoads = () => {
   const permitsByLocation = usePermitsByLocation()
   const needsPermitBasedOnVehicle = usePermitHeavyGoodsVehicleZone()
-  const { activeMapLayers, updateActiveMapLayers } =
-    useProhibitorySignsMapContext()
+  const { activeMapLayers, updateActiveMapLayers } = useProhibitorySignsMapContext()
   const { vehicle } = useProhibitorySignsPageContext()
 
   const heavyGoodsVehiclePermit = permitsByLocation.data
     ? permitsByLocation.data.data?.attributes.heavy_goods_vehicle_zone
     : needsPermitBasedOnVehicle
 
-  const enableWideRoads = Boolean(
-    heavyGoodsVehiclePermit && (vehicle.length > 10 || vehicle.weight > 30000)
-  )
+  const enableWideRoads = Boolean(heavyGoodsVehiclePermit && (vehicle.length > 10 || vehicle.weight > 30000))
 
   useEffect(() => {
     updateActiveMapLayers({
@@ -31,13 +28,7 @@ const ProhibitorySignsWideRoads = () => {
     })
   }, [enableWideRoads, updateActiveMapLayers])
 
-  return (
-    <>
-      {activeMapLayers[wideRoads.id] && (
-        <TileLayer options={wideRoads.options} args={[wideRoads.url]} />
-      )}
-    </>
-  )
+  return <>{activeMapLayers[wideRoads.id] && <TileLayer options={wideRoads.options} args={[wideRoads.url]} />}</>
 }
 
 export default ProhibitorySignsWideRoads

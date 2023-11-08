@@ -26,8 +26,7 @@ const StyledLabel = styled(Label)`
 
 const ProhibitorySignsMapLegendLoadUnloadSpaces = () => {
   const mapInstance = useMapInstance()
-  const { activeMapLayers, updateActiveMapLayers } =
-    useProhibitorySignsMapContext()
+  const { activeMapLayers, updateActiveMapLayers } = useProhibitorySignsMapContext()
 
   // this WMS only provides output from zoom level 16 onwards,
   // so disable the checkbox when this zoomlevel is not yet reached
@@ -39,17 +38,11 @@ const ProhibitorySignsMapLegendLoadUnloadSpaces = () => {
   }, [mapInstance])
 
   return (
-    <StyledLabel
-      disabled={isDisabled}
-      htmlFor="mapLegendLoadUnloadSpaces"
-      label={loadUnloadSpaces.label}
-    >
+    <StyledLabel disabled={isDisabled} htmlFor="mapLegendLoadUnloadSpaces" label={loadUnloadSpaces.label}>
       <Legend />
       <Checkbox
         id="mapLegendLoadUnloadSpaces"
-        onChange={() =>
-          updateActiveMapLayers({ type: 'TOGGLE', layerId: 'loadUnloadSpaces' })
-        }
+        onChange={() => updateActiveMapLayers({ type: 'TOGGLE', layerId: 'loadUnloadSpaces' })}
         checked={activeMapLayers[loadUnloadSpaces.id]}
       />
     </StyledLabel>

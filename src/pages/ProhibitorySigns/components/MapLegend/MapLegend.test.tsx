@@ -19,10 +19,7 @@ describe('MapLegend', () => {
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
-    await user.type(
-      await screen.findByLabelText('Hoogte van uw voertuig'),
-      '2.78'
-    )
+    await user.type(await screen.findByLabelText('Hoogte van uw voertuig'), '2.78')
 
     // ... but uncheck the address option
     await user.click(await screen.findByLabelText('Ik wil een adres invoeren'))
@@ -30,9 +27,7 @@ describe('MapLegend', () => {
     await user.click(screen.getByText('Volgende', { selector: 'button' }))
 
     // the next step should be the form with RDW information
-    expect(
-      await within(screen.getByRole('dialog')).findByText('RDW gegevens')
-    ).toBeVisible()
+    expect(await within(screen.getByRole('dialog')).findByText('RDW gegevens')).toBeVisible()
 
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
@@ -67,10 +62,7 @@ describe('MapLegend', () => {
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
-    await user.type(
-      await screen.findByLabelText('Hoogte van uw voertuig'),
-      '2.78'
-    )
+    await user.type(await screen.findByLabelText('Hoogte van uw voertuig'), '2.78')
 
     // ... but uncheck the address option
     await user.click(await screen.findByLabelText('Ik wil een adres invoeren'))
@@ -78,9 +70,7 @@ describe('MapLegend', () => {
     await user.click(screen.getByText('Volgende', { selector: 'button' }))
 
     // the next step should be the form with RDW information
-    expect(
-      await within(screen.getByRole('dialog')).findByText('RDW gegevens')
-    ).toBeVisible()
+    expect(await within(screen.getByRole('dialog')).findByText('RDW gegevens')).toBeVisible()
 
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))

@@ -26,10 +26,8 @@ const InputWrapper = styled.div<{
 const InputSuffix = styled.div<{
   displayAsText: boolean
 }>`
-  background-color: ${props =>
-    !props.displayAsText ? props.theme.colors.tint?.level2 : 'transparent'};
-  border-color: ${props =>
-    !props.displayAsText ? props.theme.colors.tint?.level5 : 'transparent'};
+  background-color: ${props => (!props.displayAsText ? props.theme.colors.tint?.level2 : 'transparent')};
+  border-color: ${props => (!props.displayAsText ? props.theme.colors.tint?.level5 : 'transparent')};
   border-style: ${props => (!props.displayAsText ? 'solid' : 'none')};
   border-width: 1px 1px 1px 0;
   display: flex;
@@ -43,16 +41,10 @@ interface InputWithSuffixProps {
   suffix: string
 }
 
-const InputWithSuffix = ({
-  children,
-  displayAsText,
-  suffix,
-}: InputWithSuffixProps) => {
+const InputWithSuffix = ({ children, displayAsText, suffix }: InputWithSuffixProps) => {
   return (
     <InputGroupWrapper>
-      <InputWrapper displayAsText={displayAsText ?? false}>
-        {children}
-      </InputWrapper>
+      <InputWrapper displayAsText={displayAsText ?? false}>{children}</InputWrapper>
       <InputSuffix displayAsText={displayAsText ?? false}>{suffix}</InputSuffix>
     </InputGroupWrapper>
   )

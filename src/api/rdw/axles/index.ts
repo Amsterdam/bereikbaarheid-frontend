@@ -6,10 +6,7 @@ export interface rdwAxlesData {
   wettelijk_toegestane_maximum_aslast: string
 }
 
-export function getAxlesInfo(
-  licensePlate: string,
-  signal: AbortSignal | undefined
-): Promise<rdwAxlesData[]> {
+export function getAxlesInfo(licensePlate: string, signal: AbortSignal | undefined): Promise<rdwAxlesData[]> {
   return axios
     .get(ENDPOINT, {
       params: { kenteken: licensePlate },

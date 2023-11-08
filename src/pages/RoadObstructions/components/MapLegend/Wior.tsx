@@ -25,8 +25,7 @@ const StyledLabel = styled(Label)`
 
 export const RoadObstructionsMapLegendWior = () => {
   const mapInstance = useMapInstance()
-  const { activeMapLayers, updateActiveMapLayers } =
-    useRoadObstructionsMapContext()
+  const { activeMapLayers, updateActiveMapLayers } = useRoadObstructionsMapContext()
 
   // due to performance reasons is only available from zoom level 15 onwards,
   // so disable the checkbox when this zoomlevel is not yet reached.

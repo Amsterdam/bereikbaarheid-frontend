@@ -12,17 +12,10 @@ type Props = {
 
 const ProhibitorySignsMapProvider = ({ children }: Props) => {
   const [activeBaseLayer, setActiveBaseLayer] = useState(topoBlackWhite.id)
-  const [activeMapLayers, updateActiveMapLayers] = useReducer(
-    mapLayersReducer,
-    mapLayersInitialState
-  )
-  const [currentTrafficSign, setCurrentTrafficSign] = useState<
-    TrafficSign | undefined
-  >(undefined)
+  const [activeMapLayers, updateActiveMapLayers] = useReducer(mapLayersReducer, mapLayersInitialState)
+  const [currentTrafficSign, setCurrentTrafficSign] = useState<TrafficSign | undefined>(undefined)
 
-  const [location, setLocation] = useState<[number, number] | undefined>(
-    undefined
-  )
+  const [location, setLocation] = useState<[number, number] | undefined>(undefined)
 
   return (
     <ProhibitorySignsMapContext.Provider

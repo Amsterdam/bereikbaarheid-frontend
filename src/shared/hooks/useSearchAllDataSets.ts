@@ -5,13 +5,7 @@ interface UseSearchAllDataSetsProps extends SearchAllDatasetsProps {
   enabled: boolean
 }
 
-export const useSearchAllDataSets = ({
-  enabled,
-  datasets,
-  lat,
-  lon,
-  radius,
-}: UseSearchAllDataSetsProps) => {
+export const useSearchAllDataSets = ({ enabled, datasets, lat, lon, radius }: UseSearchAllDataSetsProps) => {
   const params = {
     datasets: datasets,
     lat: lat,

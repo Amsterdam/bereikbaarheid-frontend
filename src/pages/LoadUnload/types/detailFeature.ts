@@ -13,6 +13,4 @@ export type DetailFeatureRoadSectionLoadUnload = {
   type: 'roadSectionLoadUnload'
 }
 
-export type LoadUnloadDetailFeature =
-  | DetailFeatureParkingSpace
-  | DetailFeatureRoadSectionLoadUnload
+export type LoadUnloadDetailFeature = DetailFeatureParkingSpace | DetailFeatureRoadSectionLoadUnload

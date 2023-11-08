@@ -2,9 +2,7 @@ import { useCallback, useContext } from 'react'
 
 import { MapPanelContext, mapPanelConstants } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarParkingSpaces, {
-  TouringcarParkingSpace,
-} from 'api/touringcar/parking-spaces'
+import getTouringcarParkingSpaces, { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 import {
   MapLayerId,
   // MapPanelTab,
@@ -47,14 +45,9 @@ export const ParkingSpacesLayer = () => {
 
   const createClusterMarkers = () => {
     return data!.features.map((item: TouringcarParkingSpace) => {
-      const marker = TouringcarMarker(
-        item,
-        MapLayerId.touringcarParkingSpacesLayerId
-      )
+      const marker = TouringcarMarker(item, MapLayerId.touringcarParkingSpacesLayerId)
 
-      let tooltipText = `<strong>${
-        item.properties?.omschrijving
-      }</strong><br>${t('_pageTouringcar.places')}: ${
+      let tooltipText = `<strong>${item.properties?.omschrijving}</strong><br>${t('_pageTouringcar.places')}: ${
         item.properties?.plaatsen
       }`
 

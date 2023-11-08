@@ -1,14 +1,6 @@
 import { useState } from 'react'
 
-import {
-  Column,
-  CompactThemeProvider,
-  Heading,
-  Link,
-  Paragraph,
-  Row,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { Column, CompactThemeProvider, Heading, Link, Paragraph, Row, themeSpacing } from '@amsterdam/asc-ui'
 import LoadingSpinner from 'shared/components/LoadingSpinner'
 import { ReactComponent as DistanceToDestinationIcon } from 'shared/icons/bootstrap-icon-flag-fill.svg'
 import styled from 'styled-components'
@@ -80,9 +72,7 @@ const ScenarioDisplayResult = () => {
 
               <Column span={6}>
                 <Paragraph gutterBottom={0}>
-                  {!permitsByLocation.data.data.attributes.wide_road
-                    ? 'nee'
-                    : 'ja'}
+                  {!permitsByLocation.data.data.attributes.wide_road ? 'nee' : 'ja'}
                 </Paragraph>
               </Column>
             </Row>
@@ -102,8 +92,7 @@ const ScenarioDisplayResult = () => {
 
               <Column span={6}>
                 <Paragraph gutterBottom={0}>
-                  {permitsByLocation.data.data.attributes.time_window ??
-                    'niet van toepassing'}
+                  {permitsByLocation.data.data.attributes.time_window ?? 'niet van toepassing'}
                 </Paragraph>
               </Column>
             </Row>
@@ -111,11 +100,7 @@ const ScenarioDisplayResult = () => {
 
           <Row halign="flex-start" hasMargin={false}>
             <Column span={12}>
-              <PermitInfoHeader
-                gutterBottom={0}
-                strong
-                $permitLocationData={Boolean(permitsByLocation.data?.data)}
-              >
+              <PermitInfoHeader gutterBottom={0} strong $permitLocationData={Boolean(permitsByLocation.data?.data)}>
                 Ontheffingen
               </PermitInfoHeader>
             </Column>
@@ -155,11 +140,7 @@ const ScenarioDisplayResult = () => {
 
           <Row halign="flex-start" hasMargin={false} valign="center">
             <Column span={6}>
-              <RvvDetailToggle
-                showDetails={showRvvDetails}
-                setShowDetails={setShowRvvDetails}
-                title="RVV"
-              />
+              <RvvDetailToggle showDetails={showRvvDetails} setShowDetails={setShowRvvDetails} title="RVV" />
             </Column>
 
             <Column span={6}>
@@ -173,30 +154,24 @@ const ScenarioDisplayResult = () => {
             )}
           </Row>
 
-          {permitsByLocation.data?.data &&
-            permitsByLocation.data?.data.attributes
-              .distance_to_destination_in_m && (
-              <Row halign="flex-start" hasMargin={false}>
-                <Column span={12}>
-                  <DistanceToDestination gutterBottom={0}>
-                    Let op: afstand tussen adres en dichtsbijzijnde weg{' '}
-                    <StyledDistanceToDestinationIcon
-                      role="img"
-                      title="Een vlaggetje. Hiermee is de dichtsbijzijnde weg gemarkeerd op de kaart."
-                    />{' '}
-                    is{' '}
-                    <span style={{ whiteSpace: 'nowrap' }}>
-                      {
-                        permitsByLocation.data?.data.attributes
-                          .distance_to_destination_in_m
-                      }{' '}
-                      meter
-                    </span>
-                    . Controleer of u met dit advies uw bestemming kan bereiken.
-                  </DistanceToDestination>
-                </Column>
-              </Row>
-            )}
+          {permitsByLocation.data?.data && permitsByLocation.data?.data.attributes.distance_to_destination_in_m && (
+            <Row halign="flex-start" hasMargin={false}>
+              <Column span={12}>
+                <DistanceToDestination gutterBottom={0}>
+                  Let op: afstand tussen adres en dichtsbijzijnde weg{' '}
+                  <StyledDistanceToDestinationIcon
+                    role="img"
+                    title="Een vlaggetje. Hiermee is de dichtsbijzijnde weg gemarkeerd op de kaart."
+                  />{' '}
+                  is{' '}
+                  <span style={{ whiteSpace: 'nowrap' }}>
+                    {permitsByLocation.data?.data.attributes.distance_to_destination_in_m} meter
+                  </span>
+                  . Controleer of u met dit advies uw bestemming kan bereiken.
+                </DistanceToDestination>
+              </Column>
+            </Row>
+          )}
         </CompactThemeProvider>
       </FiltersContainer>
     </>

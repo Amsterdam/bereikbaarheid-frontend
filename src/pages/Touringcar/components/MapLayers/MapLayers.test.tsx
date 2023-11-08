@@ -13,9 +13,7 @@ describe('RoutesLayers', () => {
   })
 
   it('has only "verplichte-routes" layer checked via search query', async () => {
-    const pathToPage = `${getGeneratedPath(
-      RouteIds.TOURINGCAR_PAGE
-    )}?verplichte-routes`
+    const pathToPage = `${getGeneratedPath(RouteIds.TOURINGCAR_PAGE)}?verplichte-routes`
     const page = withApp(pathToPage)
 
     await waitFor(() => page.rerender)
@@ -23,16 +21,12 @@ describe('RoutesLayers', () => {
     const checkboxParkeren = await screen.findByLabelText('Parkeren')
     expect(checkboxParkeren).not.toBeChecked()
 
-    const checkboxRoutesMandatory = await screen.findByLabelText(
-      'Verplichte route (> 7,5t)'
-    )
+    const checkboxRoutesMandatory = await screen.findByLabelText('Verplichte route (> 7,5t)')
     expect(checkboxRoutesMandatory).toBeChecked()
   })
 
   it('has only "parkeren" and "verplichte-routes" layers checked via search query', async () => {
-    const pathToPage = `${getGeneratedPath(
-      RouteIds.TOURINGCAR_PAGE
-    )}?parkeren&verplichte-routes`
+    const pathToPage = `${getGeneratedPath(RouteIds.TOURINGCAR_PAGE)}?parkeren&verplichte-routes`
     const page = withApp(pathToPage)
 
     await waitFor(() => page.rerender)
@@ -40,9 +34,7 @@ describe('RoutesLayers', () => {
     const checkboxParkeren = await screen.findByLabelText('Parkeren')
     expect(checkboxParkeren).toBeChecked()
 
-    const checkboxRoutesMandatory = await screen.findByLabelText(
-      'Verplichte route (> 7,5t)'
-    )
+    const checkboxRoutesMandatory = await screen.findByLabelText('Verplichte route (> 7,5t)')
     expect(checkboxRoutesMandatory).toBeChecked()
   })
 })

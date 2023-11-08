@@ -1,14 +1,6 @@
 import { MouseEventHandler } from 'react'
 
-import {
-  CompactThemeProvider,
-  Link,
-  List,
-  ListItem,
-  styles,
-  themeColor,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { CompactThemeProvider, Link, List, ListItem, styles, themeColor, themeSpacing } from '@amsterdam/asc-ui'
 import { AddressItem } from 'api/atlas/search/address'
 import styled from 'styled-components'
 
@@ -38,10 +30,7 @@ interface AddressSearchResultsProps {
   onClickAddress: MouseEventHandler
 }
 
-export const AddressSearchResults = ({
-  addresses,
-  onClickAddress,
-}: AddressSearchResultsProps) => {
+export const AddressSearchResults = ({ addresses, onClickAddress }: AddressSearchResultsProps) => {
   return (
     <AddressSearchResultsContainer>
       {addresses.length > 0 && (

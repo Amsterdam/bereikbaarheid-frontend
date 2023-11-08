@@ -20,9 +20,7 @@ describe('RoadSectionMap', () => {
     const { container } = render(withAppContext(<RoadSectionMap {...props} />))
 
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSectionSvg = container.querySelectorAll(
-      '.leaflet-overlay-pane svg'
-    )
+    const roadSectionSvg = container.querySelectorAll('.leaflet-overlay-pane svg')
 
     expect(roadSectionSvg.length).toBe(1)
   })

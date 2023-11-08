@@ -53,19 +53,13 @@ function ContactPage() {
         <ContentBlock>
           <Heading as="h2">Onjuistheid terugmelden</Heading>
 
-          <Paragraph>
-            We horen graag welke gegevens onjuist zijn of ontbreken.
-          </Paragraph>
+          <Paragraph>We horen graag welke gegevens onjuist zijn of ontbreken.</Paragraph>
 
           <Button
             as="a"
             variant="primary"
             iconLeft={<Email />}
-            href={getMailtoLink(
-              FEEDBACK_RECIPIENT,
-              FEEDBACK_SUBJECT,
-              FEEDBACK_BODY
-            )}
+            href={getMailtoLink(FEEDBACK_RECIPIENT, FEEDBACK_SUBJECT, FEEDBACK_BODY)}
           >
             Onjuistheid terugmelden
           </Button>
@@ -75,19 +69,14 @@ function ContactPage() {
           <Heading as="h2">Overige vragen</Heading>
 
           <Paragraph>
-            Als iets op deze pagina niet goed werkt, onduidelijk is of vragen
-            oproept, geef het aan ons door.
+            Als iets op deze pagina niet goed werkt, onduidelijk is of vragen oproept, geef het aan ons door.
           </Paragraph>
 
           <Button
             as="a"
             variant="primary"
             iconLeft={<Email />}
-            href={getMailtoLink(
-              QUESTION_RECIPIENT,
-              QUESTION_SUBJECT,
-              QUESTION_BODY
-            )}
+            href={getMailtoLink(QUESTION_RECIPIENT, QUESTION_SUBJECT, QUESTION_BODY)}
           >
             Vraag indienen
           </Button>

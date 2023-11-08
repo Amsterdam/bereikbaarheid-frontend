@@ -14,11 +14,7 @@ interface RvvDetailToggleProps {
   title: string
 }
 
-export const RvvDetailToggle = ({
-  showDetails,
-  setShowDetails,
-  title,
-}: RvvDetailToggleProps) => {
+export const RvvDetailToggle = ({ showDetails, setShowDetails, title }: RvvDetailToggleProps) => {
   return (
     <ToggleButton
       iconRight={!showDetails ? <ChevronDown /> : <ChevronUp />}

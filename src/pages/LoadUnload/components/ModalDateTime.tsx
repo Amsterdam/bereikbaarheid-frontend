@@ -1,10 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 
 import { Divider, Heading, Modal, TopBar } from '@amsterdam/asc-ui'
-import {
-  FormDateTime,
-  FormDateTimeValues,
-} from 'shared/components/FormDateTime'
+import { FormDateTime, FormDateTimeValues } from 'shared/components/FormDateTime'
 import ModalBlock from 'shared/components/ModalBlock'
 import { Z_INDEX_MODAL } from 'shared/constants'
 
@@ -15,10 +12,7 @@ interface ModalDateTimeProps {
   setShowModal: Dispatch<SetStateAction<boolean>>
 }
 
-export const ModalDateTime = ({
-  showModal,
-  setShowModal,
-}: ModalDateTimeProps) => {
+export const ModalDateTime = ({ showModal, setShowModal }: ModalDateTimeProps) => {
   const { dateTime, setDateTime } = useLoadUnloadPageContext()
   const onSubmitForm = (data: FormDateTimeValues) => {
     setDateTime({

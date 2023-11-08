@@ -27,17 +27,11 @@ interface PanoramaParamsRD extends PanoramaParamsBase {
   y: number
 }
 
-type PanoramaParams =
-  | PanoramaParamsPanoID
-  | PanoramaParamsWG84
-  | PanoramaParamsRD
+type PanoramaParams = PanoramaParamsPanoID | PanoramaParamsWG84 | PanoramaParamsRD
 
 const ENDPOINT = 'panorama/thumbnail'
 
-function getPanoramaThumbnail(
-  params: PanoramaParams,
-  signal?: AbortSignal
-): Promise<Panorama> {
+function getPanoramaThumbnail(params: PanoramaParams, signal?: AbortSignal): Promise<Panorama> {
   if (!params.image_redirect) params.image_redirect = true
   if (!params.width) params.width = 300
   if (!params.radius) params.radius = 250

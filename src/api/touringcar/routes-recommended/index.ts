@@ -34,9 +34,6 @@ function getUrl(params?: TouringcarRoutesRecommendedParams) {
   })
 }
 
-export type {
-  TouringcarRoutesRecommended,
-  TouringcarRoutesRecommendedCollection,
-}
+export type { TouringcarRoutesRecommended, TouringcarRoutesRecommendedCollection }
 export { ENDPOINT, getTouringcarRoutesRecommended, getUrl }
 export default getTouringcarRoutesRecommended
