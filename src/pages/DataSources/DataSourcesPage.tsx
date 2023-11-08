@@ -38,7 +38,6 @@ function DataSourcesPage() {
       timeTo: '23:59',
     }),
     ...loadUnloadLinks,
-    ...touringcarLinks,
   ]
 
   const { trackPageVisit } = useAnalytics()
@@ -49,7 +48,7 @@ function DataSourcesPage() {
       <Header title={t('_pageData.title')} />
 
       <StyledMainContent data-testid="data-page">
-        <DataSourcesBlocks dataLinks={dataLinks} />
+        <DataSourcesBlocks dataLinks={dataLinks} touringcarLinks={touringcarLinks} />
       </StyledMainContent>
     </PageWrapper>
   )
