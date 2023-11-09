@@ -47,6 +47,8 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (blockURLParamsMutation) return
 
+    setBlockURLParamsMutation(true)
+
     const noLayerIsActive = Object.values(activeMapLayers).every(l => !l)
     const allLayersAreActive = Object.values(activeMapLayers).every(l => l)
 
@@ -66,6 +68,8 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
 
       setQueryParams(fromActiveLayersToParams, { replace: true })
     }
+
+    setBlockURLParamsMutation(false)
   }, [blockURLParamsMutation, queryParams, setQueryParams, activeMapLayers])
 
   const [currentStop, setCurrentStop] = useState<TouringcarStop | undefined>(undefined)
