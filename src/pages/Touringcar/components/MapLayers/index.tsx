@@ -8,6 +8,7 @@ import { oneWayArrows, topoBlackWhite } from 'shared/map/mapLayers'
 
 import { useTouringcarPageContext } from '../../contexts/PageContext'
 
+import { EnvironmentalZoneLayer } from './EnvironmentalZoneLayer'
 import { ParkingSpacesLayer } from './ParkingSpacesLayer'
 import { RoutesDestinationTrafficLayer } from './RoutesDestinationTrafficLayer'
 import { RoutesMandatoryLayer } from './RoutesMandatoryLayer'
@@ -31,6 +32,7 @@ const TouringcarMapLayers = () => {
       <RoutesDestinationTrafficLayer />
       <RoutesRecommendedLayer />
       <RoutesMandatoryLayer />
+      <EnvironmentalZoneLayer />
 
       <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />
 

@@ -1,10 +1,10 @@
-import { Feature, FeatureCollection, Geometry } from 'geojson'
+import { Feature, FeatureCollection, LineString, MultiLineString } from 'geojson'
 
 import api from '../../data.amsterdam'
 
 interface TouringcarRoutesRecommended extends Feature {
   id: number
-  geometry: Geometry
+  geometry: LineString | MultiLineString
   omschrijving: string
 }
 

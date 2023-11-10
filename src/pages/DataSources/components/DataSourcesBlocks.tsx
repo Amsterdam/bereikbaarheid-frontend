@@ -1,5 +1,5 @@
 import { Email } from '@amsterdam/asc-assets'
-import { Icon, Link, List, ListItem, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
+import { Heading, Icon, Link, List, ListItem, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 import { RouteIds, getPathTo } from 'routes'
 import { ContentBlock, PretendHeading } from 'shared/components/CompactElements'
@@ -18,6 +18,7 @@ interface DataSourcesBlockProps {
 
 interface DataSourcesLinksBlockProps {
   dataLinks?: DataLink[]
+  touringcarLinks?: DataLink[]
 }
 
 const URL_ALL_DATA = `https://data.amsterdam.nl/datasets/YLTyzpWP6Vz2QQ/amsterdams-wegenbestand/`
@@ -33,6 +34,19 @@ const QUESTION_BODY = `Beschrijf zo volledig mogelijk waar je tegenaan loopt:
 const StyledList = styled(List)`
   margin-bottom: ${themeSpacing(0)};
 `
+const DataSourcesIntro = ({ isCompact = false }: DataSourcesBlockProps & DataSourcesLinksBlockProps) => {
+  const { t } = useTranslation()
+
+  return (
+    <ContentBlock isCompact={isCompact}>
+      <PretendHeading forwardedAs="h2" isCompact={isCompact}>
+        {t('_generic._dataSources.dataShownOnMap')}
+      </PretendHeading>
+
+      <Paragraph gutterBottom={4}>{t('_generic._dataSources.viewAndDownloadShownDataLinks')}</Paragraph>
+    </ContentBlock>
+  )
+}
 
 const DataSourcesLinks = ({
   dataLinks = [],
@@ -44,12 +58,6 @@ const DataSourcesLinks = ({
 
   return (
     <ContentBlock isCompact={isCompact}>
-      <PretendHeading forwardedAs="h2" isCompact={isCompact}>
-        {t('_generic._dataSources.dataShownOnMap')}
-      </PretendHeading>
-
-      <Paragraph gutterBottom={4}>{t('_generic._dataSources.viewAndDownloadShownDataLinks')}</Paragraph>
-
       <StyledList>
         {dataLinksAll.map((item, index) => {
           return (
@@ -127,10 +135,24 @@ const DataSourcesAside = ({ dataLinks }: DataSourcesLinksBlockProps) => {
   )
 }
 
-const DataSourcesBlocks = ({ dataLinks }: DataSourcesLinksBlockProps) => {
+const DataSourcesBlocks = ({ dataLinks, touringcarLinks }: DataSourcesLinksBlockProps) => {
+  const { t } = useTranslation()
+
   return (
     <>
+      <DataSourcesIntro />
+
+      <Heading forwardedAs="h3">{t('appTitle')}</Heading>
       <DataSourcesLinks dataLinks={dataLinks} />
+
+      {touringcarLinks ? (
+        <>
+          <Heading forwardedAs="h3">{t('_pageTouringcar.title')}</Heading>
+          <DataSourcesLinks dataLinks={touringcarLinks} />
+        </>
+      ) : (
+        <></>
+      )}
 
       <DataSourcesRoads />
 
@@ -140,5 +162,5 @@ const DataSourcesBlocks = ({ dataLinks }: DataSourcesLinksBlockProps) => {
 }
 
 export type { DataLink }
-export { DataSourcesLinks, DataSourcesRoads, DataSourcesQuestions, DataSourcesAside }
+export { DataSourcesIntro, DataSourcesLinks, DataSourcesRoads, DataSourcesQuestions, DataSourcesAside }
 export default DataSourcesBlocks

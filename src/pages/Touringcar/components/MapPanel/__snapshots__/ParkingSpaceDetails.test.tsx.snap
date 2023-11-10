@@ -508,6 +508,18 @@ FAQ en contactgegevens"
                       stroke-opacity="1"
                       stroke-width="6"
                     />
+                    <path
+                      class="leaflet-interactive"
+                      d="M-2 2L-2 -2L2 -2L2 2z"
+                      fill="#e50082"
+                      fill-opacity="0.2"
+                      fill-rule="evenodd"
+                      stroke="#e50082"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-opacity="1"
+                      stroke-width="2"
+                    />
                   </g>
                 </svg>
               </div>
@@ -809,16 +821,6 @@ FAQ en contactgegevens"
                       <div
                         class="sc-imwsjW sc-fFlnrN gphTiw bLrZUg"
                       >
-                        <h2
-                          class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
-                        >
-                          Getoonde data op de kaart
-                        </h2>
-                        <p
-                          class="sc-jEACwC sc-gFqAkR gjIEIz kBZfau"
-                        >
-                          Bekijk en download de getoonde data op de kaart via de volgende links:
-                        </p>
                         <ul
                           class="sc-kdBSHD cHWVcp sc-camqpD dHzkWQ"
                         >
@@ -1014,6 +1016,39 @@ FAQ en contactgegevens"
                                 class="sc-fhzFiK iRpqvs"
                               >
                                 Verplichte route (&gt; 7,5t) voor touringcars
+                              </span>
+                            </a>
+                            <sup>
+                              *
+                            </sup>
+                          </li>
+                          <li
+                            class="sc-lcIPJg ddQxr"
+                          >
+                            <a
+                              class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                              href="v1/milieuzones/touringcar"
+                              target="_blank"
+                            >
+                              <span
+                                class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                              >
+                                <svg
+                                  focusable="false"
+                                  role="img"
+                                  viewBox="0 0 32 32"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                                    fill-rule="evenodd"
+                                  />
+                                </svg>
+                              </span>
+                              <span
+                                class="sc-fhzFiK iRpqvs"
+                              >
+                                Milieuzone
                               </span>
                             </a>
                             <sup>
@@ -1329,6 +1364,42 @@ FAQ en contactgegevens"
                           checked=""
                           class="sc-fUnMCh cQYVve"
                           id="touringcarRoutesMandatory"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
+                    <label
+                      class="sc-gFVvzn jmImEg"
+                      for="touringcarEnvironmentalZone"
+                    >
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Milieuzone
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb sc-bddgXz dQbdaU"
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarEnvironmentalZone"
                           type="checkbox"
                         />
                       </span>
@@ -1908,6 +1979,18 @@ FAQ en contactgegevens"
                     stroke-opacity="1"
                     stroke-width="6"
                   />
+                  <path
+                    class="leaflet-interactive"
+                    d="M-2 2L-2 -2L2 -2L2 2z"
+                    fill="#e50082"
+                    fill-opacity="0.2"
+                    fill-rule="evenodd"
+                    stroke="#e50082"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-opacity="1"
+                    stroke-width="2"
+                  />
                 </g>
               </svg>
             </div>
@@ -2209,16 +2292,6 @@ FAQ en contactgegevens"
                     <div
                       class="sc-imwsjW sc-fFlnrN gphTiw bLrZUg"
                     >
-                      <h2
-                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
-                      >
-                        Getoonde data op de kaart
-                      </h2>
-                      <p
-                        class="sc-jEACwC sc-gFqAkR gjIEIz kBZfau"
-                      >
-                        Bekijk en download de getoonde data op de kaart via de volgende links:
-                      </p>
                       <ul
                         class="sc-kdBSHD cHWVcp sc-camqpD dHzkWQ"
                       >
@@ -2414,6 +2487,39 @@ FAQ en contactgegevens"
                               class="sc-fhzFiK iRpqvs"
                             >
                               Verplichte route (&gt; 7,5t) voor touringcars
+                            </span>
+                          </a>
+                          <sup>
+                            *
+                          </sup>
+                        </li>
+                        <li
+                          class="sc-lcIPJg ddQxr"
+                        >
+                          <a
+                            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                            href="v1/milieuzones/touringcar"
+                            target="_blank"
+                          >
+                            <span
+                              class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                            >
+                              <svg
+                                focusable="false"
+                                role="img"
+                                viewBox="0 0 32 32"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                                  fill-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                            <span
+                              class="sc-fhzFiK iRpqvs"
+                            >
+                              Milieuzone
                             </span>
                           </a>
                           <sup>
@@ -2729,6 +2835,42 @@ FAQ en contactgegevens"
                         checked=""
                         class="sc-fUnMCh cQYVve"
                         id="touringcarRoutesMandatory"
+                        type="checkbox"
+                      />
+                    </span>
+                  </label>
+                  <label
+                    class="sc-gFVvzn jmImEg"
+                    for="touringcarEnvironmentalZone"
+                  >
+                    <span
+                      class="sc-brPLxw dGBiZJ"
+                    >
+                      Milieuzone
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb sc-bddgXz dQbdaU"
+                    >
+                      <span
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
+                      >
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarEnvironmentalZone"
                         type="checkbox"
                       />
                     </span>

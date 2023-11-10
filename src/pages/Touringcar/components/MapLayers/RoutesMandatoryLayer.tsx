@@ -13,7 +13,7 @@ import {
 } from 'pages/Touringcar/contexts/MapContext'
 
 export const RoutesMandatoryLayer = () => {
-  const { setCurrentParkingSpace, setActiveTab } = useTouringcarMapContext()
+  const { unsetDetailsPane, setActiveTab } = useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
   const { activeMapLayers } = useTouringcarMapContext()
 
@@ -42,7 +42,7 @@ export const RoutesMandatoryLayer = () => {
           layer.on('click', e => {
             DomEvent.stopPropagation(e)
 
-            setCurrentParkingSpace(undefined)
+            unsetDetailsPane()
             setActiveTab(MapPanelTab.ROUTE_INFO)
             setPositionFromSnapPoint(SnapPoint.Halfway)
           })

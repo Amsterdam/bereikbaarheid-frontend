@@ -47,6 +47,8 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (blockURLParamsMutation) return
 
+    setBlockURLParamsMutation(true)
+
     const noLayerIsActive = Object.values(activeMapLayers).every(l => !l)
     const allLayersAreActive = Object.values(activeMapLayers).every(l => l)
 
@@ -66,11 +68,18 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
 
       setQueryParams(fromActiveLayersToParams, { replace: true })
     }
+
+    setBlockURLParamsMutation(false)
   }, [blockURLParamsMutation, queryParams, setQueryParams, activeMapLayers])
 
   const [currentStop, setCurrentStop] = useState<TouringcarStop | undefined>(undefined)
 
   const [currentParkingSpace, setCurrentParkingSpace] = useState<TouringcarParkingSpace | undefined>(undefined)
+
+  const unsetDetailsPane = useCallback(() => {
+    setCurrentStop(undefined)
+    setCurrentParkingSpace(undefined)
+  }, [])
 
   const [activeTab, setActiveTab] = useState<MapPanelTab | undefined>(undefined)
 
@@ -86,6 +95,7 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
         setCurrentStop,
         currentParkingSpace,
         setCurrentParkingSpace,
+        unsetDetailsPane,
         activeTab,
         setActiveTab,
         location,

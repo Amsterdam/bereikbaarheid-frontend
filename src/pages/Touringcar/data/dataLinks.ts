@@ -1,3 +1,4 @@
+import { getUrl as getTouringcarEnvironmentalZoneUrl } from 'api/touringcar/environmental-zone'
 import { getUrl as getTouringcarParkingSpacesUrl } from 'api/touringcar/parking-spaces'
 import { getUrl as getTouringcarRoutesDestinationTrafficUrl } from 'api/touringcar/routes-destination-traffic'
 import { getUrl as getTouringcarRoutesMandatoryUrl } from 'api/touringcar/routes-mandatory'
@@ -41,6 +42,12 @@ const touringcarRoutesMandatoryLink = {
   beta: true,
 }
 
+const touringcarEnvironmentalZoneLink = {
+  href: getTouringcarEnvironmentalZoneUrl(),
+  title: '_pageTouringcar._dataSources.environmentalZone',
+  beta: true,
+}
+
 const dataLinks = [
   touringcarStopsLink,
   touringcarParkingSpacesLink,
@@ -48,6 +55,7 @@ const dataLinks = [
   touringcarRoutesDestinationTrafficLink,
   touringcarRoutesRecommendedLink,
   touringcarRoutesMandatoryLink,
+  touringcarEnvironmentalZoneLink,
 ]
 
 export {
@@ -57,6 +65,7 @@ export {
   touringcarRoutesDestinationTrafficLink,
   touringcarRoutesRecommendedLink,
   touringcarRoutesMandatoryLink,
+  touringcarEnvironmentalZoneLink,
 }
 
 export default dataLinks

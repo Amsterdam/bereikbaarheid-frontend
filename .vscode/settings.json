@@ -1,0 +1,9 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#EC0000",
+    "statusBar.background": "#004699",
+    "titleBar.inactiveBackground": "#EC0000",
+    "titleBar.inactiveForeground": "#CCC"
+  },
+  "editor.wordWrapColumn": 80
+}
