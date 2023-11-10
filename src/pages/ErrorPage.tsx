@@ -51,18 +51,12 @@ const ErrorPage = () => {
         <Row>
           <StyledColumn span={12}>
             {error instanceof Response && error.status === 404 && (
-              <Paragraph>
-                {error.statusText ?? t('_error.pageCouldNotBeFound')}
-              </Paragraph>
+              <Paragraph>{error.statusText ?? t('_error.pageCouldNotBeFound')}</Paragraph>
             )}
 
-            {error instanceof Response && error.status && (
-              <Paragraph>Status code: {error.status}</Paragraph>
-            )}
+            {error instanceof Response && error.status && <Paragraph>Status code: {error.status}</Paragraph>}
 
-            {!(error instanceof Response) && (
-              <Paragraph>{t('_error.somethingWentWrong')}.</Paragraph>
-            )}
+            {!(error instanceof Response) && <Paragraph>{t('_error.somethingWentWrong')}.</Paragraph>}
           </StyledColumn>
         </Row>
       </Container>

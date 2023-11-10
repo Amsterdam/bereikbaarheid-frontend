@@ -10,17 +10,13 @@ export type LoadUnloadMapContextProps = {
   setDetailFeature: Dispatch<DetailFeatureAction>
 }
 
-export const LoadUnloadMapContext = createContext<
-  LoadUnloadMapContextProps | undefined
->(undefined)
+export const LoadUnloadMapContext = createContext<LoadUnloadMapContextProps | undefined>(undefined)
 
 export function useLoadUnloadMapContext() {
   const context = useContext(LoadUnloadMapContext)
 
   if (context === undefined) {
-    throw new Error(
-      'useLoadUnloadMapContext must be within LoadUnloadMapProvider'
-    )
+    throw new Error('useLoadUnloadMapContext must be within LoadUnloadMapProvider')
   }
 
   return context

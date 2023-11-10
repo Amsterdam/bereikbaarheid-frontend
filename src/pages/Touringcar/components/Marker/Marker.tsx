@@ -35,16 +35,10 @@ const TouringcarMarkerIcon = (
   })
 }
 
-function TouringcarMarker(
-  item: TouringcarParkingSpace | TouringcarStop,
-  layerId: MapLayerId
-) {
-  const marker = L.marker(
-    new L.LatLng(item.geometry.coordinates[1], item.geometry.coordinates[0]),
-    {
-      icon: TouringcarMarkerIcon(item, layerId),
-    }
-  )
+function TouringcarMarker(item: TouringcarParkingSpace | TouringcarStop, layerId: MapLayerId) {
+  const marker = L.marker(new L.LatLng(item.geometry.coordinates[1], item.geometry.coordinates[0]), {
+    icon: TouringcarMarkerIcon(item, layerId),
+  })
 
   return marker
 }

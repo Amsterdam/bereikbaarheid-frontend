@@ -9,9 +9,7 @@ describe('LoadUnloadPage', () => {
 
     withApp(pathToPage)
 
-    expect(
-      await screen.findByText('De pagina kon niet worden gevonden.')
-    ).toBeInTheDocument()
+    expect(await screen.findByText('De pagina kon niet worden gevonden.')).toBeInTheDocument()
 
     expect(await screen.findByText('Status code: 404')).toBeInTheDocument()
   })

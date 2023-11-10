@@ -72,8 +72,11 @@
     "_dataSources": {
       "stopsForCoaches": "Stops for coaches",
       "parkingSpacesForCoaches": "Parking spaces for coaches",
+      "maxVehicleHeight": "Maximum vehicle height",
+      "destinationTraffic": "Destination traffic",
+      "recommendedRoutes": "Recommended routes",
       "mandatoryRoutes": "Mandatory route (> 7.5t)",
-      "recommendedRoutes": "Recommended routes"
+      "environmentalZone": "Environmental zone"
     }
   },
   "_pageData": {

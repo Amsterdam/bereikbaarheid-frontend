@@ -1,11 +1,4 @@
-import {
-  ChangeEvent,
-  Dispatch,
-  FormEvent,
-  MouseEvent,
-  SetStateAction,
-  useState,
-} from 'react'
+import { ChangeEvent, Dispatch, FormEvent, MouseEvent, SetStateAction, useState } from 'react'
 
 import {
   Button,
@@ -52,9 +45,7 @@ interface LoadUnloadAddressFormProps {
   setShowAddressForm: Dispatch<SetStateAction<boolean>>
 }
 
-export const LoadUnloadAddressForm = ({
-  setShowAddressForm,
-}: LoadUnloadAddressFormProps) => {
+export const LoadUnloadAddressForm = ({ setShowAddressForm }: LoadUnloadAddressFormProps) => {
   const { address, setAddress } = useLoadUnloadPageContext()
   const [addressOptions, setAddressOptions] = useState<AddressItem[] | []>([])
   const {
@@ -158,14 +149,9 @@ export const LoadUnloadAddressForm = ({
             name={name}
             ref={ref}
           />
-          {errors.searchAddress && (
-            <ErrorMessage message={errors.searchAddress.message!} />
-          )}
+          {errors.searchAddress && <ErrorMessage message={errors.searchAddress.message!} />}
 
-          <AddressSearchResults
-            addresses={addressOptions}
-            onClickAddress={onClickAddress}
-          />
+          <AddressSearchResults addresses={addressOptions} onClickAddress={onClickAddress} />
 
           <FormFooter>
             <CompactThemeProvider>

@@ -19,8 +19,7 @@ export const useRdwSubcategoryInfo = () => {
   const queryResult = useQuery({
     enabled: !!vehicle.licensePlate,
     queryKey: ['rdw', 'subcategory', vehicle.licensePlate],
-    queryFn: ({ signal }) =>
-      getVehicleSubcategory(vehicle.licensePlate, signal),
+    queryFn: ({ signal }) => getVehicleSubcategory(vehicle.licensePlate, signal),
     staleTime: 1000 * 60 * 15,
   })
 

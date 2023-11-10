@@ -1,18 +1,11 @@
-import {
-  Column,
-  CompactThemeProvider,
-  Heading,
-  Paragraph,
-  Row,
-} from '@amsterdam/asc-ui'
+import { Column, CompactThemeProvider, Heading, Paragraph, Row } from '@amsterdam/asc-ui'
 
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 
 import { EditFiltersButton, FiltersContainer } from './ScenarioDisplayStyle'
 
 const ScenarioDisplayStartAndAddress = () => {
-  const { setActiveStepWizard, address, setShowScenarioWizard, vehicle } =
-    useProhibitorySignsPageContext()
+  const { setActiveStepWizard, address, setShowScenarioWizard, vehicle } = useProhibitorySignsPageContext()
   const showScenarioWizard = () => {
     setActiveStepWizard(0)
     setShowScenarioWizard(true)

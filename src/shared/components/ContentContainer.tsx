@@ -21,11 +21,7 @@ interface ContentContainerProps {
 }
 
 const ContentContainer = ({ children, className }: ContentContainerProps) => {
-  return (
-    <StyledContainer className={className ?? 'content-container'}>
-      {children}
-    </StyledContainer>
-  )
+  return <StyledContainer className={className ?? 'content-container'}>{children}</StyledContainer>
 }
 
 export default ContentContainer

@@ -3,10 +3,7 @@ import { format } from 'date-fns'
 
 import { withAppContext } from '../../../../../test/utils/withAppContext'
 
-import {
-  RoadObstructionsFiltersForm,
-  RoadObstructionsFiltersFormProps,
-} from './Form'
+import { RoadObstructionsFiltersForm, RoadObstructionsFiltersFormProps } from './Form'
 
 const defaultFormValues = {
   date: format(new Date(), 'yyyy-MM-dd'),
@@ -63,12 +60,8 @@ describe('RoadObstructionsFiltersForm', () => {
     act(() => {
       expect(props.setMapFilters).not.toBeCalled()
     })
-    expect(screen.getByTestId('time-from-input')).toHaveValue(
-      defaultFormValues.timeFrom
-    )
-    expect(screen.getByTestId('time-to-input')).toHaveValue(
-      defaultFormValues.timeTo
-    )
+    expect(screen.getByTestId('time-from-input')).toHaveValue(defaultFormValues.timeFrom)
+    expect(screen.getByTestId('time-to-input')).toHaveValue(defaultFormValues.timeTo)
   })
 
   it('displays an error message when start time is invalid', async () => {
@@ -99,9 +92,7 @@ describe('RoadObstructionsFiltersForm', () => {
       expect(props.setMapFilters).not.toBeCalled()
     })
     expect(screen.getByTestId('date-input')).toHaveValue(defaultFormValues.date)
-    expect(screen.getByTestId('time-to-input')).toHaveValue(
-      defaultFormValues.timeTo
-    )
+    expect(screen.getByTestId('time-to-input')).toHaveValue(defaultFormValues.timeTo)
   })
 
   it('displays an error message when end time is invalid', async () => {
@@ -135,9 +126,7 @@ describe('RoadObstructionsFiltersForm', () => {
       expect(props.setMapFilters).not.toBeCalled()
     })
     expect(screen.getByTestId('date-input')).toHaveValue(defaultFormValues.date)
-    expect(screen.getByTestId('time-from-input')).toHaveValue(
-      defaultFormValues.timeFrom
-    )
+    expect(screen.getByTestId('time-from-input')).toHaveValue(defaultFormValues.timeFrom)
   })
 
   it('displays an error message when end time is before start time', async () => {
@@ -197,11 +186,7 @@ describe('RoadObstructionsFiltersForm', () => {
       expect(props.setMapFilters).toBeCalled()
     })
     expect(screen.getByTestId('date-input')).toHaveValue(defaultFormValues.date)
-    expect(screen.getByTestId('time-from-input')).toHaveValue(
-      defaultFormValues.timeFrom
-    )
-    expect(screen.getByTestId('time-to-input')).toHaveValue(
-      defaultFormValues.timeTo
-    )
+    expect(screen.getByTestId('time-from-input')).toHaveValue(defaultFormValues.timeFrom)
+    expect(screen.getByTestId('time-to-input')).toHaveValue(defaultFormValues.timeTo)
   })
 })

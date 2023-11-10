@@ -1,8 +1,5 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
-import {
-  LegendWrapper,
-  LegendItemsWrapper,
-} from 'shared/components/MapLegendStyles'
+import { LegendWrapper, LegendItemsWrapper } from 'shared/components/MapLegendStyles'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
@@ -12,8 +9,7 @@ import { trafficSignBackgrounds } from '../TrafficSignMarker/backgrounds'
 import { ProhibitorySignsMapLegendTrafficSignsLegendItem as LegendItem } from './TrafficSignsLegendItem'
 
 const ProhibitorySignsMapLegendTrafficSigns = () => {
-  const { activeMapLayers, updateActiveMapLayers } =
-    useProhibitorySignsMapContext()
+  const { activeMapLayers, updateActiveMapLayers } = useProhibitorySignsMapContext()
   const { expertMode, showScenarioWizard } = useProhibitorySignsPageContext()
 
   if (showScenarioWizard) return null
@@ -35,10 +31,7 @@ const ProhibitorySignsMapLegendTrafficSigns = () => {
 
       <CompactThemeProvider>
         <LegendItemsWrapper>
-          <LegendItem
-            itemImage={trafficSignBackgrounds.c01.verbod!}
-            itemText="Regulier, rode rand"
-          />
+          <LegendItem itemImage={trafficSignBackgrounds.c01.verbod!} itemText="Regulier, rode rand" />
 
           <LegendItem
             itemImage={trafficSignBackgrounds.c01['verbod, met uitzondering']!}

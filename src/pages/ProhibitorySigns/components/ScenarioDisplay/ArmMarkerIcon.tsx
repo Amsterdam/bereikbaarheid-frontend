@@ -7,12 +7,7 @@ const ArmMarkerIcon = () => {
   const theme = useTheme()
 
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 39 39"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 39 39">
       <g fill="none" fillRule="evenodd">
         <path
           fill="#666"
@@ -26,10 +21,7 @@ const ArmMarkerIcon = () => {
           fill={theme.colors.secondary?.main}
           d="M19.27 0C12.374 0 7 5.41 7 12.264c0 7.167 12.27 26.43 12.27 26.43s12.267-19.4 12.267-26.43C31.537 5.422 26.264 0 19.27 0m0 3.473c5.014 0 8.794 3.779 8.794 8.79 0 .825-.41 4.285-5.703 14.178a177.988 177.988 0 01-3.1 5.538 172.554 172.554 0 01-3.086-5.491c-5.147-9.59-5.702-13.142-5.702-14.224 0-2.393.9-4.612 2.533-6.249 1.637-1.64 3.862-2.542 6.264-2.542"
         />
-        <path
-          fill={theme.colors.secondary?.main}
-          d="M22.462 11.948a3.266 3.266 0 11-6.533 0 3.266 3.266 0 016.533 0"
-        />
+        <path fill={theme.colors.secondary?.main} d="M22.462 11.948a3.266 3.266 0 11-6.533 0 3.266 3.266 0 016.533 0" />
       </g>
     </svg>
   )

@@ -1,10 +1,7 @@
 import { ReactNode } from 'react'
 
 import { mapPanelConstants, MapPanelProvider } from '@amsterdam/arm-core'
-import {
-  ProhibitorySignsMapContext,
-  ProhibitorySignsMapContextProps,
-} from 'pages/ProhibitorySigns/contexts/MapContext'
+import { ProhibitorySignsMapContext, ProhibitorySignsMapContextProps } from 'pages/ProhibitorySigns/contexts/MapContext'
 import { mapLayersInitialState } from 'pages/ProhibitorySigns/contexts/mapLayersReducer'
 
 import { withPageContext } from './withPageContext'
@@ -22,10 +19,7 @@ export const initialState: ProhibitorySignsMapContextProps = {
   setLocation: () => {},
 }
 
-export const withMapContext = (
-  component: ReactNode,
-  mapContextProps?: Partial<ProhibitorySignsMapContextProps>
-) =>
+export const withMapContext = (component: ReactNode, mapContextProps?: Partial<ProhibitorySignsMapContextProps>) =>
   withPageContext(
     <ProhibitorySignsMapContext.Provider
       value={{

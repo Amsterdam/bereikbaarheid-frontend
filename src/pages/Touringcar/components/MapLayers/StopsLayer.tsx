@@ -47,9 +47,7 @@ export const StopsLayer = () => {
     return data!.features.map((item: TouringcarStop) => {
       const marker = TouringcarMarker(item, MapLayerId.touringcarStopsLayerId)
 
-      let tooltipText = `<strong>${
-        item.properties?.omschrijving
-      }</strong><br>${t('_pageTouringcar.places')}: ${
+      let tooltipText = `<strong>${item.properties?.omschrijving}</strong><br>${t('_pageTouringcar.places')}: ${
         item.properties?.plaatsen
       }`
 

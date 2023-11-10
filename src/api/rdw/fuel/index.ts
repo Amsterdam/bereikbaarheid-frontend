@@ -7,10 +7,7 @@ export interface rdwFuelData {
   emissiecode_omschrijving: string
 }
 
-export function getFuelInfo(
-  licensePlate: string,
-  signal: AbortSignal | undefined
-): Promise<rdwFuelData[]> {
+export function getFuelInfo(licensePlate: string, signal: AbortSignal | undefined): Promise<rdwFuelData[]> {
   return axios
     .get(ENDPOINT, {
       params: { kenteken: licensePlate },

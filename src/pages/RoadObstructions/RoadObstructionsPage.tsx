@@ -1,13 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
-import {
-  BaseLayer,
-  Map,
-  MapPanel,
-  mapPanelConstants,
-  MapPanelDrawer,
-  MapPanelProvider,
-} from '@amsterdam/arm-core'
+import { BaseLayer, Map, MapPanel, mapPanelConstants, MapPanelDrawer, MapPanelProvider } from '@amsterdam/arm-core'
 import { Modal, useMatchMedia } from '@amsterdam/asc-ui'
 import { TileLayer } from '@amsterdam/react-maps'
 import { format, parse } from 'date-fns'
@@ -21,11 +14,7 @@ import { HEADER_HEIGHT, Z_INDEX_MODAL } from 'shared/constants'
 import useAnalytics from 'shared/hooks/useAnalytics'
 import { useDocumentTitle } from 'shared/hooks/useDocumentTitle'
 import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
-import {
-  oneWayArrows,
-  roadNetworkNoRestrictions,
-  topoBlackWhite,
-} from 'shared/map/mapLayers'
+import { oneWayArrows, roadNetworkNoRestrictions, topoBlackWhite } from 'shared/map/mapLayers'
 import { MapStyle } from 'shared/map/mapStyle'
 import styled from 'styled-components'
 
@@ -55,9 +44,7 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
 function RoadObstructionsPage() {
   const { t } = useTranslation()
 
-  const [detailFeature, setDetailFeature] = useState<DetailFeature | undefined>(
-    undefined
-  )
+  const [detailFeature, setDetailFeature] = useState<DetailFeature | undefined>(undefined)
   const [showMapFiltersForm, setShowMapFiltersForm] = useState(false)
 
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
@@ -68,8 +55,7 @@ function RoadObstructionsPage() {
   }, [mapInstance])
 
   const [searchParams, setSearchParams] = useSearchParams()
-  const initialDate =
-    searchParams.get('date') ?? format(new Date(), 'yyyy-MM-dd')
+  const initialDate = searchParams.get('date') ?? format(new Date(), 'yyyy-MM-dd')
   const [mapFilters, setMapFilters] = useState<RoadObstructionMapFilters>({
     date: initialDate,
     timeFrom: '00:00',
@@ -80,14 +66,11 @@ function RoadObstructionsPage() {
   }, [mapFilters.date, setSearchParams])
 
   const dateFormatted = useMemo(
-    () =>
-      format(parse(mapFilters.date, 'yyyy-MM-dd', new Date()), 'dd-MM-yyyy'),
+    () => format(parse(mapFilters.date, 'yyyy-MM-dd', new Date()), 'dd-MM-yyyy'),
     [mapFilters.date]
   )
 
-  useDocumentTitle(
-    `${t('_pageRoadObstructions.roadObstructionsOn')} ${dateFormatted}`
-  )
+  useDocumentTitle(`${t('_pageRoadObstructions.roadObstructionsOn')} ${dateFormatted}`)
 
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
@@ -98,11 +81,7 @@ function RoadObstructionsPage() {
   return (
     <>
       <PageWrapper>
-        <Header
-          title={`${t(
-            '_pageRoadObstructions.roadObstructionsOn'
-          )} ${dateFormatted}`}
-        />
+        <Header title={`${t('_pageRoadObstructions.roadObstructionsOn')} ${dateFormatted}`} />
 
         <MainContent data-testid="road-obstructions-page">
           <MapStyle />
@@ -114,10 +93,7 @@ function RoadObstructionsPage() {
                 topOffset={HEADER_HEIGHT}
               >
                 <Element>
-                  <RoadObstructionsDetailFeature
-                    detailFeature={detailFeature}
-                    setDetailFeature={setDetailFeature}
-                  />
+                  <RoadObstructionsDetailFeature detailFeature={detailFeature} setDetailFeature={setDetailFeature} />
 
                   <RoadObstructionsFiltersDisplay
                     dateFormatted={dateFormatted}
@@ -126,9 +102,7 @@ function RoadObstructionsPage() {
                   />
                 </Element>
 
-                <RoadObstructionsHighlightedFeatureLayer
-                  detailFeature={detailFeature}
-                />
+                <RoadObstructionsHighlightedFeatureLayer detailFeature={detailFeature} />
 
                 <RoadObstructionsLayer
                   detailFeature={detailFeature}
@@ -136,29 +110,20 @@ function RoadObstructionsPage() {
                   mapFilters={mapFilters}
                 />
 
-                <WiorLayer
-                  setDetailFeature={setDetailFeature}
-                  mapFilters={mapFilters}
-                />
+                <WiorLayer setDetailFeature={setDetailFeature} mapFilters={mapFilters} />
 
                 <RoadObstructionsViewerContainer {...{ showDesktopVariant }} />
               </MapPanelProvider>
             </RoadObstructionsMapProvider>
 
-            <TileLayer
-              options={oneWayArrows.options}
-              args={[oneWayArrows.url]}
-            />
+            <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />
 
             <TileLayer
               options={{ ...roadNetworkNoRestrictions.options, opacity: 0.65 }}
               args={[roadNetworkNoRestrictions.url]}
             />
 
-            <BaseLayer
-              baseLayer={topoBlackWhite.url}
-              options={topoBlackWhite.options}
-            />
+            <BaseLayer baseLayer={topoBlackWhite.url} options={topoBlackWhite.options} />
           </StyledMap>
         </MainContent>
       </PageWrapper>

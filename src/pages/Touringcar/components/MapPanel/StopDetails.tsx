@@ -1,11 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import {
-  CompactThemeProvider,
-  Heading,
-  Paragraph,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { CompactThemeProvider, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import getPanoramaThumbnail from 'api/panorama/thumbnail'
 import { useTranslation } from 'react-i18next'
@@ -84,9 +79,7 @@ const StopDetails = () => {
     <>
       {currentStop?.properties?.additional_info && (
         <PaddedContainer>
-          <AdditionalInfo>
-            {currentStop.properties.additional_info}
-          </AdditionalInfo>
+          <AdditionalInfo>{currentStop.properties.additional_info}</AdditionalInfo>
         </PaddedContainer>
       )}
 
@@ -107,8 +100,7 @@ const StopDetails = () => {
 
         <PaddedContainer>
           <Paragraph>
-            <strong>{t('_pageTouringcar.places')}:</strong>{' '}
-            {currentStop?.properties?.plaatsen}
+            <strong>{t('_pageTouringcar.places')}:</strong> {currentStop?.properties?.plaatsen}
           </Paragraph>
 
           <Paragraph>{currentStop?.properties?.bijzonderheden}</Paragraph>

@@ -15,10 +15,7 @@ import {
 import mapLayersReducer, { mapLayersInitialState } from './mapLayersReducer'
 
 function TouringcarMapProvider({ children }: { children: ReactNode }) {
-  const [activeMapLayers, updateActiveMapLayers] = useReducer(
-    mapLayersReducer,
-    mapLayersInitialState
-  )
+  const [activeMapLayers, updateActiveMapLayers] = useReducer(mapLayersReducer, mapLayersInitialState)
 
   const [blockURLParamsMutation, setBlockURLParamsMutation] = useState(false)
   const [queryParams, setQueryParams] = useSearchParams()
@@ -27,18 +24,14 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
 
     setBlockURLParamsMutation(true)
 
-    const mapLayerParams: MapLayerParam[] = (
-      [...queryParams.keys()] as MapLayerParam[]
-    ).filter(key => {
+    const mapLayerParams: MapLayerParam[] = ([...queryParams.keys()] as MapLayerParam[]).filter(key => {
       return mapLayerParamIds.includes(key as MapLayerParam)
     })
 
     if (!mapLayerParams.length) return setBlockURLParamsMutation(false)
 
     mapLayerParamIds.forEach(param => {
-      const queryParam = MapLayerParamToMapLayer[
-        param
-      ] as unknown as keyof typeof mapLayersInitialState
+      const queryParam = MapLayerParamToMapLayer[param] as unknown as keyof typeof mapLayersInitialState
 
       if (mapLayerParams.includes(param)) {
         return updateActiveMapLayers({ type: 'ON', layerId: queryParam })
@@ -63,11 +56,7 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
       const fromActiveLayersToParams = Object.entries(activeMapLayers).reduce(
         (acc: string, [key, val]: [string, boolean]): string => {
           if (val) {
-            return `${acc}&${
-              mapLayerIdToMapLayerParam[
-                key as keyof typeof mapLayerIdToMapLayerParam
-              ]
-            }`
+            return `${acc}&${mapLayerIdToMapLayerParam[key as keyof typeof mapLayerIdToMapLayerParam]}`
           }
 
           return acc
@@ -79,19 +68,13 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
     }
   }, [blockURLParamsMutation, queryParams, setQueryParams, activeMapLayers])
 
-  const [currentStop, setCurrentStop] = useState<TouringcarStop | undefined>(
-    undefined
-  )
+  const [currentStop, setCurrentStop] = useState<TouringcarStop | undefined>(undefined)
 
-  const [currentParkingSpace, setCurrentParkingSpace] = useState<
-    TouringcarParkingSpace | undefined
-  >(undefined)
+  const [currentParkingSpace, setCurrentParkingSpace] = useState<TouringcarParkingSpace | undefined>(undefined)
 
   const [activeTab, setActiveTab] = useState<MapPanelTab | undefined>(undefined)
 
-  const [location, setLocation] = useState<[number, number] | undefined>(
-    undefined
-  )
+  const [location, setLocation] = useState<[number, number] | undefined>(undefined)
 
   return (
     <TouringcarMapContext.Provider

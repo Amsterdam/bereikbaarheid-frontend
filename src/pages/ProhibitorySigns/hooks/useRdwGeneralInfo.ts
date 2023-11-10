@@ -63,9 +63,7 @@ export const useRdwGeneralInfo = (vehicle: Vehicle = DUMMY_VEHICLE) => {
         curbWeight: curbWeight,
         isBus: item.voertuigsoort === 'Bus',
         isCompanyCar: item.voertuigsoort === 'Bedrijfsauto',
-        isHeavyGoodsVehicle: Boolean(
-          item.voertuigsoort === 'Bedrijfsauto' && maxAllowedWeight > 3500
-        ),
+        isHeavyGoodsVehicle: Boolean(item.voertuigsoort === 'Bedrijfsauto' && maxAllowedWeight > 3500),
         isPrivateCar: item.voertuigsoort === 'Personenauto',
         isTaxi: item.taxi_indicator === 'Ja',
         length: item.lengte ? Number(item.lengte) / 100.0 : 0,

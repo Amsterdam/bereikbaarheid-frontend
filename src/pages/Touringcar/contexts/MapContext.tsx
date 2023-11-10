@@ -14,6 +14,7 @@ enum MapPanelTab {
 enum MapLayerId {
   touringcarStopsLayerId = 'touringcarStops',
   touringcarParkingSpacesLayerId = 'touringcarParkingSpaces',
+  touringcarRoutesDestinationTrafficLayerId = 'touringcarRoutesDestinationTraffic',
   touringcarRoutesRecommendedLayerId = 'touringcarRoutesRecommended',
   touringcarRoutesMandatoryLayerId = 'touringcarRoutesMandatory',
 }
@@ -21,6 +22,7 @@ enum MapLayerId {
 enum MapLayerParamToMapLayerId {
   'haltes' = MapLayerId.touringcarStopsLayerId,
   'parkeren' = MapLayerId.touringcarParkingSpacesLayerId,
+  'bestemmingsverkeer' = MapLayerId.touringcarRoutesDestinationTrafficLayerId,
   'aanbevolen-routes' = MapLayerId.touringcarRoutesRecommendedLayerId,
   'verplichte-routes' = MapLayerId.touringcarRoutesMandatoryLayerId,
 }
@@ -30,6 +32,7 @@ type MapLayerParam = keyof typeof MapLayerParamToMapLayerId
 const mapLayerParams: MapLayerParam[] = [
   'haltes',
   'parkeren',
+  'bestemmingsverkeer',
   'aanbevolen-routes',
   'verplichte-routes',
 ]
@@ -37,6 +40,7 @@ const mapLayerParams: MapLayerParam[] = [
 const mapLayerIdToMapLayerParam: Record<MapLayerId, MapLayerParam> = {
   [MapLayerId.touringcarStopsLayerId]: 'haltes',
   [MapLayerId.touringcarParkingSpacesLayerId]: 'parkeren',
+  [MapLayerId.touringcarRoutesDestinationTrafficLayerId]: 'bestemmingsverkeer',
   [MapLayerId.touringcarRoutesRecommendedLayerId]: 'aanbevolen-routes',
   [MapLayerId.touringcarRoutesMandatoryLayerId]: 'verplichte-routes',
 }
@@ -48,8 +52,12 @@ const layerFeatureProps = {
   [MapLayerId.touringcarParkingSpacesLayerId]: {
     color: '#000000',
   },
-  [MapLayerId.touringcarRoutesRecommendedLayerId]: {
+  [MapLayerId.touringcarRoutesDestinationTrafficLayerId]: {
     color: '#BED200',
+    strokeWidth: 6,
+  },
+  [MapLayerId.touringcarRoutesRecommendedLayerId]: {
+    color: '#ff9100',
     strokeWidth: 6,
   },
   [MapLayerId.touringcarRoutesMandatoryLayerId]: {
@@ -65,26 +73,20 @@ interface TouringcarContextProps {
   currentStop: TouringcarStop | undefined
   setCurrentStop: Dispatch<SetStateAction<TouringcarStop | undefined>>
   currentParkingSpace: TouringcarParkingSpace | undefined
-  setCurrentParkingSpace: Dispatch<
-    SetStateAction<TouringcarParkingSpace | undefined>
-  >
+  setCurrentParkingSpace: Dispatch<SetStateAction<TouringcarParkingSpace | undefined>>
   activeTab: MapPanelTab | undefined
   setActiveTab: Dispatch<SetStateAction<MapPanelTab | undefined>>
   location: [number, number] | undefined
   setLocation: Dispatch<SetStateAction<[number, number] | undefined>>
 }
 
-const TouringcarMapContext = createContext<TouringcarContextProps | undefined>(
-  undefined
-)
+const TouringcarMapContext = createContext<TouringcarContextProps | undefined>(undefined)
 
 function useTouringcarMapContext() {
   const context = useContext(TouringcarMapContext)
 
   if (context === undefined) {
-    throw new Error(
-      'useTouringcarMapContext must be within TouringcarMapProvider'
-    )
+    throw new Error('useTouringcarMapContext must be within TouringcarMapProvider')
   }
 
   return context

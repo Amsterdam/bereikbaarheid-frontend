@@ -13,8 +13,7 @@ const imageTextPadding: Record<string, string> = {
 }
 
 const ImageTextContainer = styled(Paragraph)<{ signType: string }>`
-  padding-bottom: ${props =>
-    props.signType ? imageTextPadding[props.signType] : 0};
+  padding-bottom: ${props => (props.signType ? imageTextPadding[props.signType] : 0)};
   position: absolute;
 `
 

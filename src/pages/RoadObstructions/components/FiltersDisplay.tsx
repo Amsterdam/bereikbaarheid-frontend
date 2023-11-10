@@ -1,17 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 
 import { MapPanelContent, MapPanelContentProps } from '@amsterdam/arm-core'
-import {
-  Button,
-  Column,
-  Heading,
-  Paragraph,
-  Row,
-  Tab,
-  Tabs,
-  themeColor,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { Button, Column, Heading, Paragraph, Row, Tab, Tabs, themeColor, themeSpacing } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
@@ -63,11 +53,7 @@ const RoadObstructionsFiltersDisplay = ({
           <StyledRow halign="space-between">
             <Column span={12}>
               <Heading as="h3"></Heading>
-              <EditFiltersButton
-                variant="textButton"
-                onClick={showMapFiltersForm}
-                style={{ marginTop: 16 }}
-              >
+              <EditFiltersButton variant="textButton" onClick={showMapFiltersForm} style={{ marginTop: 16 }}>
                 wijzig
               </EditFiltersButton>
             </Column>

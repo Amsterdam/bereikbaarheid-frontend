@@ -8,10 +8,7 @@ type Props = {
 }
 
 const RoadObstructionsMapProvider = ({ children }: Props) => {
-  const [activeMapLayers, updateActiveMapLayers] = useReducer(
-    mapLayersReducer,
-    mapLayersInitialState
-  )
+  const [activeMapLayers, updateActiveMapLayers] = useReducer(mapLayersReducer, mapLayersInitialState)
 
   return (
     <RoadObstructionsMapContext.Provider

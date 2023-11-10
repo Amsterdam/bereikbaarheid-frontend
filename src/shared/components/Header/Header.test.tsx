@@ -27,8 +27,6 @@ describe('Header', () => {
       )
     )
 
-    expect(
-      screen.getByText('Title is optional', { selector: 'a' })
-    ).toBeInTheDocument()
+    expect(screen.getByText('Title is optional', { selector: 'a' })).toBeInTheDocument()
   })
 })

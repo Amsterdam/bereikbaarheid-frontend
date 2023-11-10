@@ -15,18 +15,10 @@ const StyledMapPanelContent = styled(MapPanelContent)`
 `
 
 const TouringcarMapPanel = () => {
-  const {
-    currentStop,
-    setCurrentStop,
-    currentParkingSpace,
-    setCurrentParkingSpace,
-  } = useTouringcarMapContext()
+  const { currentStop, setCurrentStop, currentParkingSpace, setCurrentParkingSpace } = useTouringcarMapContext()
   const [currentOverlay, setCurrentOverlay] = useState(Overlay.None)
 
-  const stopOrParkingSpace = useMemo(
-    () => currentStop || currentParkingSpace,
-    [currentParkingSpace, currentStop]
-  )
+  const stopOrParkingSpace = useMemo(() => currentStop || currentParkingSpace, [currentParkingSpace, currentStop])
 
   useEffect(() => {
     if (!stopOrParkingSpace) {

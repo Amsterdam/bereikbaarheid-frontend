@@ -17,10 +17,7 @@ describe('useTrafficSignCategories', () => {
 
     const { result } = renderHook(() => useTrafficSignCategories(), { wrapper })
 
-    expect(result.current).toStrictEqual([
-      'prohibition',
-      'prohibition with exception',
-    ])
+    expect(result.current).toStrictEqual(['prohibition', 'prohibition with exception'])
   })
 
   it('returns an additional category in expert mode', () => {

@@ -2,13 +2,7 @@ import { ReactNode } from 'react'
 
 import styled from 'styled-components'
 
-type FlexJustify =
-  | 'flex-start'
-  | 'flex-end'
-  | 'center'
-  | 'space-between'
-  | 'space-around'
-  | 'space-evenly'
+type FlexJustify = 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly'
 
 type FormNavigationWrapperProps = {
   halign?: FlexJustify

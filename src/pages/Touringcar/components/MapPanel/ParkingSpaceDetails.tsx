@@ -1,12 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import {
-  CompactThemeProvider,
-  Heading,
-  Link,
-  Paragraph,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { CompactThemeProvider, Heading, Link, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import getPanoramaThumbnail from 'api/panorama/thumbnail'
 import { useTranslation } from 'react-i18next'
@@ -85,17 +79,13 @@ const ParkingSpaceDetails = () => {
     <>
       {currentParkingSpace?.properties?.additional_info && (
         <PaddedContainer>
-          <AdditionalInfo>
-            {currentParkingSpace.properties.additional_info}
-          </AdditionalInfo>
+          <AdditionalInfo>{currentParkingSpace.properties.additional_info}</AdditionalInfo>
         </PaddedContainer>
       )}
 
       <CompactThemeProvider>
         <PaddedContainer>
-          <Heading as="h2">
-            {currentParkingSpace?.properties?.omschrijving}
-          </Heading>
+          <Heading as="h2">{currentParkingSpace?.properties?.omschrijving}</Heading>
         </PaddedContainer>
 
         {!isLoading && !error && !isError && panoramaThumbnail && (
@@ -110,31 +100,18 @@ const ParkingSpaceDetails = () => {
 
         <PaddedContainer>
           <Paragraph>
-            <strong>{t('_pageTouringcar.places')}:</strong>{' '}
-            {currentParkingSpace?.properties?.plaatsen}
+            <strong>{t('_pageTouringcar.places')}:</strong> {currentParkingSpace?.properties?.plaatsen}
           </Paragraph>
 
-          <Paragraph>
-            {currentParkingSpace?.properties?.bijzonderheden}
-          </Paragraph>
+          <Paragraph>{currentParkingSpace?.properties?.bijzonderheden}</Paragraph>
 
           {currentParkingSpace?.properties?.meerInformatie && (
             <Paragraph>
               <strong>Meer informatie:</strong>{' '}
-              {currentParkingSpace.properties.meerInformatie.startsWith(
-                'https://'
-              ) ||
-              currentParkingSpace.properties.meerInformatie.startsWith(
-                'http://'
-              ) ||
-              currentParkingSpace.properties.meerInformatie.startsWith(
-                'www.'
-              ) ? (
-                <Link
-                  href={currentParkingSpace.properties.meerInformatie}
-                  target="_blank"
-                  variant="inline"
-                >
+              {currentParkingSpace.properties.meerInformatie.startsWith('https://') ||
+              currentParkingSpace.properties.meerInformatie.startsWith('http://') ||
+              currentParkingSpace.properties.meerInformatie.startsWith('www.') ? (
+                <Link href={currentParkingSpace.properties.meerInformatie} target="_blank" variant="inline">
                   {currentParkingSpace.properties.meerInformatie}
                 </Link>
               ) : (

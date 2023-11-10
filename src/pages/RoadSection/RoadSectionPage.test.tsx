@@ -16,9 +16,7 @@ describe('RoadSectionPage', () => {
     await screen.findByText(/Wegvak/)
 
     // two h1's are rendered: logo & page title
-    expect(screen.getAllByRole('heading', { level: 1 })[1]).toHaveTextContent(
-      'Wegvak 24115'
-    )
+    expect(screen.getAllByRole('heading', { level: 1 })[1]).toHaveTextContent('Wegvak 24115')
 
     // smoke test map - see if attribution is visible
     expect(screen.getByText(/VMA/)).toBeInTheDocument()

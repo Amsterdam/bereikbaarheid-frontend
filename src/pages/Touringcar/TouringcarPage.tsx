@@ -1,12 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import {
-  Map,
-  MapPanel,
-  mapPanelConstants,
-  MapPanelDrawer,
-  MapPanelProvider,
-} from '@amsterdam/arm-core'
+import { Map, MapPanel, mapPanelConstants, MapPanelDrawer, MapPanelProvider } from '@amsterdam/arm-core'
 import { useMatchMedia } from '@amsterdam/asc-ui'
 import type L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
@@ -62,10 +56,7 @@ const TouringcarPage = () => {
         <MainContent data-testid="load-unload-page">
           <MapStyle />
 
-          <StyledMap
-            options={{ ...defaultMapOptions, maxZoom: 21 }}
-            setInstance={setMapInstance}
-          >
+          <StyledMap options={{ ...defaultMapOptions, maxZoom: 21 }} setInstance={setMapInstance}>
             <TouringcarMapProvider>
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}

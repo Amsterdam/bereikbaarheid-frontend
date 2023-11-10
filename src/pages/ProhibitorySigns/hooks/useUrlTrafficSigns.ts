@@ -25,8 +25,7 @@ const useUrlTrafficSigns = (vehicle: Vehicle) => {
         vehicleHasTrailer: vehicle?.hasTrailer || false,
         vehicleHeight: vehicle?.height || 2.65,
         vehicleLength: vehicle?.length || 8.23,
-        vehicleMaxAllowedWeight:
-          rdwGeneralInfo.data![0].derived.maxAllowedWeight,
+        vehicleMaxAllowedWeight: rdwGeneralInfo.data![0].derived.maxAllowedWeight,
         vehicleTotalWeight: vehicle?.weight || 26500,
         vehicleType: rdwGeneralInfo.data![0].derived.vehicleType,
         vehicleWidth: vehicle?.width || 2.55,

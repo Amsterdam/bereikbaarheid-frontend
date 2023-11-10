@@ -14,10 +14,7 @@ const ScenarioDisplayResultPermitLowEmissionZone = () => {
     return <Paragraph gutterBottom={0}>niet nodig</Paragraph>
   }
 
-  if (
-    permitsByLocation.data?.data &&
-    !permitsByLocation.data?.data?.attributes.low_emission_zone
-  ) {
+  if (permitsByLocation.data?.data && !permitsByLocation.data?.data?.attributes.low_emission_zone) {
     return <Paragraph gutterBottom={0}>niet nodig</Paragraph>
   }
 
@@ -34,10 +31,7 @@ const ScenarioDisplayResultPermitLowEmissionZone = () => {
 
   return (
     <Paragraph gutterBottom={0}>
-      <Button
-        onClick={() => window.open(linkToPermitCheck, '_blank')}
-        variant="primary"
-      >
+      <Button onClick={() => window.open(linkToPermitCheck, '_blank')} variant="primary">
         checken
       </Button>
     </Paragraph>

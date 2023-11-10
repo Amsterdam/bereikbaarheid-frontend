@@ -19,9 +19,7 @@ describe('DetailFeature', () => {
     await screen.findAllByText(/stremmingen op/i)
 
     // feature info is only visible after clicking on a feature
-    expect(
-      screen.queryByTestId('detail-feature-road-section')
-    ).not.toBeInTheDocument()
+    expect(screen.queryByTestId('detail-feature-road-section')).not.toBeInTheDocument()
 
     expect(screen.queryByTestId('detail-feature-wior')).not.toBeInTheDocument()
   })
@@ -44,9 +42,7 @@ describe('DetailFeature', () => {
 
     // direct road obstructions are displayed in dark blue (theme.colors.primary.main)
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSections = page.container.querySelectorAll(
-      '.leaflet-overlay-pane svg path[stroke="#004699"]'
-    )
+    const roadSections = page.container.querySelectorAll('.leaflet-overlay-pane svg path[stroke="#004699"]')
 
     await act(async () => {
       await user.click(roadSections[0])
@@ -56,9 +52,7 @@ describe('DetailFeature', () => {
       expect(window.scrollTo).toHaveBeenCalled()
     })
 
-    expect(
-      screen.getByTestId('detail-feature-road-section')
-    ).toBeInTheDocument()
+    expect(screen.getByTestId('detail-feature-road-section')).toBeInTheDocument()
   })
 
   it('shows WIOR detail info when clicking on a feature', async () => {

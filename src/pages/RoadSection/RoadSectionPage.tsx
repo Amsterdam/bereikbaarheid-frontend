@@ -49,9 +49,7 @@ const RoadSectionPage = () => {
         <ContentContainer>
           <Row>
             <StyledColumn span={6}>
-              <RoadSectionDetails
-                properties={roadSection.data.features[0].properties}
-              />
+              <RoadSectionDetails properties={roadSection.data.features[0].properties} />
             </StyledColumn>
 
             <StyledColumn span={6}>

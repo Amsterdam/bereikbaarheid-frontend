@@ -8,14 +8,9 @@ import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
 
 import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
-import {
-  RdwInfoFormColumn,
-  RdwInfoFormLabelHelpText,
-  RdwInfoFormRow,
-} from './FormStyle'
+import { RdwInfoFormColumn, RdwInfoFormLabelHelpText, RdwInfoFormRow } from './FormStyle'
 
-interface FormRdwInfoVehiclePayloadProps<TFormValues extends FieldValues>
-  extends FormRdwInfoInputProps<TFormValues> {
+interface FormRdwInfoVehiclePayloadProps<TFormValues extends FieldValues> extends FormRdwInfoInputProps<TFormValues> {
   setValue: UseFormSetValue<TFormValues>
 }
 
@@ -45,9 +40,7 @@ const FormRdwInfoVehiclePayload = ({
   const calculateTotalWeight = (e: FormEvent<HTMLInputElement>) => {
     const payloadInputValue = e.currentTarget.value
     let curbWeight = generalInfo.data?.[0].derived.curbWeight
-    let payload = payloadInputValue
-      ? Number(payloadInputValue.replace(',', '.'))
-      : 0
+    let payload = payloadInputValue ? Number(payloadInputValue.replace(',', '.')) : 0
 
     setValue('vehicleTotalWeight', (curbWeight ?? 0) + (payload ?? 0), {
       shouldValidate: true,
@@ -59,9 +52,7 @@ const FormRdwInfoVehiclePayload = ({
       <RdwInfoFormColumn span={4}>
         <Label htmlFor="vehiclePayload" label="Lading" />
         {vehicle.hasTrailer && (
-          <RdwInfoFormLabelHelpText>
-            incl. ledig gewicht oplegger en/of aanhanger
-          </RdwInfoFormLabelHelpText>
+          <RdwInfoFormLabelHelpText>incl. ledig gewicht oplegger en/of aanhanger</RdwInfoFormLabelHelpText>
         )}
       </RdwInfoFormColumn>
       <RdwInfoFormColumn span={4}>
@@ -80,9 +71,7 @@ const FormRdwInfoVehiclePayload = ({
           />
         </InputWithSuffix>
 
-        {errors.vehiclePayload && (
-          <ErrorMessage message={errors.vehiclePayload.message!} />
-        )}
+        {errors.vehiclePayload && <ErrorMessage message={errors.vehiclePayload.message!} />}
       </RdwInfoFormColumn>
     </RdwInfoFormRow>
   )

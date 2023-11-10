@@ -77,8 +77,11 @@
     "_dataSources": {
       "stopsForCoaches": "Haltes voor touringcars",
       "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
+      "maxVehicleHeight": "Maximale doorrijhoogtes",
+      "destinationTraffic": "Bestemmingsverkeer",
+      "recommendedRoutes": "Aanbevolen routes",
       "mandatoryRoutes": "Verplichte route (> 7,5t)",
-      "recommendedRoutes": "Aanbevolen routes"
+      "environmentalZone": "Milieuzone"
     }
   },
   "_pageData": {

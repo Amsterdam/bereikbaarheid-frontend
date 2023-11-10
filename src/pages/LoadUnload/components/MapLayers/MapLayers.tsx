@@ -33,10 +33,7 @@ export const LoadUnloadMapLayers = () => {
 
       <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />
 
-      <BaseLayer
-        baseLayer={topoBlackWhite.url}
-        options={topoBlackWhite.options}
-      />
+      <BaseLayer baseLayer={topoBlackWhite.url} options={topoBlackWhite.options} />
     </>
   )
 }

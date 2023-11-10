@@ -18,9 +18,7 @@ describe('ProhibitorySignsDetailFeature', () => {
 
     render(withMapContext(<DetailFeature />, mapContextProps))
 
-    expect(
-      screen.getByText(trafficSigns.features[0].properties.id)
-    ).toBeVisible()
+    expect(screen.getByText(trafficSigns.features[0].properties.id)).toBeVisible()
   })
 
   it('renders additional traffic sign info when in expert mode', async () => {
@@ -65,9 +63,7 @@ describe('ProhibitorySignsDetailFeature', () => {
 
     await screen.findByText(/parkeerplaats/)
 
-    expect(
-      screen.getByText(/Geen parkeerplaats gevonden op deze locatie/i)
-    ).toBeVisible()
+    expect(screen.getByText(/Geen parkeerplaats gevonden op deze locatie/i)).toBeVisible()
   })
 
   it('info about a selected location takes precedence over a displayed traffic sign', async () => {
@@ -77,9 +73,7 @@ describe('ProhibitorySignsDetailFeature', () => {
       })
     )
 
-    expect(
-      screen.getByText(trafficSigns.features[0].properties.id)
-    ).toBeVisible()
+    expect(screen.getByText(trafficSigns.features[0].properties.id)).toBeVisible()
 
     rerender(
       withMapContext(<DetailFeature />, {
@@ -90,8 +84,6 @@ describe('ProhibitorySignsDetailFeature', () => {
     await screen.findByText(parkingSpace.id)
 
     expect(screen.getByText(parkingSpace.id)).toBeVisible()
-    expect(
-      screen.queryByText(trafficSigns.features[0].properties.id)
-    ).not.toBeInTheDocument()
+    expect(screen.queryByText(trafficSigns.features[0].properties.id)).not.toBeInTheDocument()
   })
 })

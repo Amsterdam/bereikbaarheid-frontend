@@ -8,10 +8,7 @@ import { withAppContext } from '../../../../../../test/utils/withAppContext'
 import { withQueryClient } from '../../../../../../test/utils/withQueryClient'
 import ProhibitorySignsPageProvider from '../../../contexts/PageProvider'
 
-import {
-  ProhibitorySignsFormScenarioStart,
-  ProhibitorySignsFormScenarioStartProps,
-} from './Form'
+import { ProhibitorySignsFormScenarioStart, ProhibitorySignsFormScenarioStartProps } from './Form'
 
 describe('ProhibitorySignsFormScenarioStart', () => {
   const props: ProhibitorySignsFormScenarioStartProps = {
@@ -25,9 +22,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       ...withQueryClient(
         withAppContext(
           <MemoryRouter>
-            <ProhibitorySignsPageProvider>
-              {children}
-            </ProhibitorySignsPageProvider>
+            <ProhibitorySignsPageProvider>{children}</ProhibitorySignsPageProvider>
           </MemoryRouter>
         )
       ),
@@ -47,9 +42,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       const { user } = setup(<ProhibitorySignsFormScenarioStart {...props} />)
 
       const licensePlateInput = await screen.findByLabelText('Kenteken')
-      const vehicleHeightInput = await screen.findByLabelText(
-        'Hoogte van uw voertuig'
-      )
+      const vehicleHeightInput = await screen.findByLabelText('Hoogte van uw voertuig')
 
       await user.type(licensePlateInput, 'BXLS14')
       await user.type(vehicleHeightInput, '2,65')
@@ -64,9 +57,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       const { user } = setup(<ProhibitorySignsFormScenarioStart {...props} />)
 
       const licensePlateInput = await screen.findByLabelText('Kenteken')
-      const vehicleHeightInput = await screen.findByLabelText(
-        'Hoogte van uw voertuig'
-      )
+      const vehicleHeightInput = await screen.findByLabelText('Hoogte van uw voertuig')
 
       await user.type(licensePlateInput, 'BXLS14')
       await user.type(vehicleHeightInput, '2.45')
@@ -81,9 +72,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       const { user } = setup(<ProhibitorySignsFormScenarioStart {...props} />)
 
       const licensePlateInput = await screen.findByLabelText('Kenteken')
-      const vehicleHeightInput = await screen.findByLabelText(
-        'Hoogte van uw voertuig'
-      )
+      const vehicleHeightInput = await screen.findByLabelText('Hoogte van uw voertuig')
 
       await user.type(licensePlateInput, 'OT77FJ')
       await user.type(vehicleHeightInput, '2.3')
@@ -91,9 +80,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
     })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(
-      screen.getByText('Voer een kenteken in van een trekkend voertuig')
-    ).toBeVisible()
+    expect(screen.getByText('Voer een kenteken in van een trekkend voertuig')).toBeVisible()
   })
 
   it('shows an error message if license plate has less than 4 characters', async () => {
@@ -101,9 +88,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       const { user } = setup(<ProhibitorySignsFormScenarioStart {...props} />)
 
       const licensePlateInput = await screen.findByLabelText('Kenteken')
-      const vehicleHeightInput = await screen.findByLabelText(
-        'Hoogte van uw voertuig'
-      )
+      const vehicleHeightInput = await screen.findByLabelText('Hoogte van uw voertuig')
 
       await user.type(licensePlateInput, 'NFD')
       await user.type(vehicleHeightInput, '1.55')
@@ -119,9 +104,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       const { user } = setup(<ProhibitorySignsFormScenarioStart {...props} />)
 
       const licensePlateInput = await screen.findByLabelText('Kenteken')
-      const vehicleHeightInput = await screen.findByLabelText(
-        'Hoogte van uw voertuig'
-      )
+      const vehicleHeightInput = await screen.findByLabelText('Hoogte van uw voertuig')
 
       await user.type(licensePlateInput, 'NOFOUND')
       await user.type(vehicleHeightInput, '1.55')
@@ -130,9 +113,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
     expect(
-      screen.getByText(
-        'Kenteken niet gevonden bij RDW. Probeer het nog eens met een geldig Nederlands kenteken'
-      )
+      screen.getByText('Kenteken niet gevonden bij RDW. Probeer het nog eens met een geldig Nederlands kenteken')
     ).toBeVisible()
   })
 
@@ -141,9 +122,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       const { user } = setup(<ProhibitorySignsFormScenarioStart {...props} />)
 
       const licensePlateInput = await screen.findByLabelText('Kenteken')
-      const vehicleHeightInput = await screen.findByLabelText(
-        'Hoogte van uw voertuig'
-      )
+      const vehicleHeightInput = await screen.findByLabelText('Hoogte van uw voertuig')
 
       await user.type(licensePlateInput, '65JRDP')
       await user.type(vehicleHeightInput, '1.85')
@@ -163,9 +142,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       const { user } = setup(<ProhibitorySignsFormScenarioStart {...props} />)
 
       const licensePlateInput = await screen.findByLabelText('Kenteken')
-      const vehicleHeightInput = await screen.findByLabelText(
-        'Hoogte van uw voertuig'
-      )
+      const vehicleHeightInput = await screen.findByLabelText('Hoogte van uw voertuig')
 
       await user.type(licensePlateInput, 'BXLS14')
       await user.type(vehicleHeightInput, '0')
@@ -173,9 +150,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
     })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(
-      screen.getByText('Hoogte moet vallen tussen 0 m en 4 m')
-    ).toBeVisible()
+    expect(screen.getByText('Hoogte moet vallen tussen 0 m en 4 m')).toBeVisible()
   })
 
   it('shows an error message if vehicle height is larger than 4 meter', async () => {
@@ -183,9 +158,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       const { user } = setup(<ProhibitorySignsFormScenarioStart {...props} />)
 
       const licensePlateInput = await screen.findByLabelText('Kenteken')
-      const vehicleHeightInput = await screen.findByLabelText(
-        'Hoogte van uw voertuig'
-      )
+      const vehicleHeightInput = await screen.findByLabelText('Hoogte van uw voertuig')
 
       await user.type(licensePlateInput, 'BXLS14')
       await user.type(vehicleHeightInput, '4.15')
@@ -193,11 +166,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
     })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(
-      screen.getByText(
-        'Hoogte moet vallen tussen 0 m en 4 m. Neem contact op met het RDW.'
-      )
-    ).toBeVisible()
+    expect(screen.getByText('Hoogte moet vallen tussen 0 m en 4 m. Neem contact op met het RDW.')).toBeVisible()
   })
 
   it('shows an error message when the webapp is being rate limited', async () => {
@@ -205,9 +174,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       const { user } = setup(<ProhibitorySignsFormScenarioStart {...props} />)
 
       const licensePlateInput = await screen.findByLabelText('Kenteken')
-      const vehicleHeightInput = await screen.findByLabelText(
-        'Hoogte van uw voertuig'
-      )
+      const vehicleHeightInput = await screen.findByLabelText('Hoogte van uw voertuig')
 
       // https://dev.socrata.com/docs/response-codes.html
       await user.type(licensePlateInput, 'API429')
@@ -216,11 +183,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
     })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(
-      screen.getByText(
-        'De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.'
-      )
-    ).toBeVisible()
+    expect(screen.getByText('De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.')).toBeVisible()
   })
 
   it('shows an error message when the RDW API is not available', async () => {
@@ -228,9 +191,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       const { user } = setup(<ProhibitorySignsFormScenarioStart {...props} />)
 
       const licensePlateInput = await screen.findByLabelText('Kenteken')
-      const vehicleHeightInput = await screen.findByLabelText(
-        'Hoogte van uw voertuig'
-      )
+      const vehicleHeightInput = await screen.findByLabelText('Hoogte van uw voertuig')
 
       await user.type(licensePlateInput, 'API500')
       await user.type(vehicleHeightInput, '1.50')
@@ -238,10 +199,6 @@ describe('ProhibitorySignsFormScenarioStart', () => {
     })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(
-      screen.getByText(
-        'De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.'
-      )
-    ).toBeVisible()
+    expect(screen.getByText('De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.')).toBeVisible()
   })
 })

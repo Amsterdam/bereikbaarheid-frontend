@@ -18,9 +18,7 @@ describe('WiorLayer', () => {
 
     // wior features are displayed in orange (theme.colors.supplement.orange)
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const wiorFeatures = page.container.querySelectorAll(
-      '.leaflet-overlay-pane svg path[stroke="#ff9100"]'
-    )
+    const wiorFeatures = page.container.querySelectorAll('.leaflet-overlay-pane svg path[stroke="#ff9100"]')
 
     // wior layer is disabled on initial render due to zoom level restriction
     expect(screen.getByLabelText(/wior/i)).toBeDisabled()

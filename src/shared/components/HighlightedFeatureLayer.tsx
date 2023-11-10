@@ -11,13 +11,10 @@ interface HighlightedFeatureLayerProps {
   detailFeature: DetailFeature | undefined
 }
 
-export const HighlightedFeatureLayer = ({
-  detailFeature,
-}: HighlightedFeatureLayerProps) => {
+export const HighlightedFeatureLayer = ({ detailFeature }: HighlightedFeatureLayerProps) => {
   const theme = useTheme()
   const isALine = () =>
-    detailFeature?.geometry.type === 'LineString' ||
-    detailFeature?.geometry.type === 'MultiLineString'
+    detailFeature?.geometry.type === 'LineString' || detailFeature?.geometry.type === 'MultiLineString'
 
   if (!detailFeature) return null
 

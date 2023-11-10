@@ -65,11 +65,7 @@ export const LoadUnloadMapSettingsDisplay = ({
                 <Heading as="h3" style={{ marginTop: 16 }}>
                   Adres
                 </Heading>
-                <EditSettingButton
-                  data-testid="change-address"
-                  variant="textButton"
-                  onClick={showAddressForm}
-                >
+                <EditSettingButton data-testid="change-address" variant="textButton" onClick={showAddressForm}>
                   wijzig
                 </EditSettingButton>
               </Column>
@@ -78,9 +74,7 @@ export const LoadUnloadMapSettingsDisplay = ({
             <FiltersContainer>
               <Row halign="flex-start" hasMargin={false}>
                 <Column span={12}>
-                  <Paragraph gutterBottom={0}>
-                    {address.label ?? 'Geen adres ingesteld'}
-                  </Paragraph>
+                  <Paragraph gutterBottom={0}>{address.label ?? 'Geen adres ingesteld'}</Paragraph>
                 </Column>
               </Row>
             </FiltersContainer>
@@ -88,11 +82,7 @@ export const LoadUnloadMapSettingsDisplay = ({
             <DateTimeHeaderRow halign="space-between" hasMargin={false}>
               <Column span={12}>
                 <Heading as="h3">Datum en tijd</Heading>
-                <EditSettingButton
-                  data-testid="change-date-time"
-                  variant="textButton"
-                  onClick={showDateTimeModal}
-                >
+                <EditSettingButton data-testid="change-date-time" variant="textButton" onClick={showDateTimeModal}>
                   wijzig
                 </EditSettingButton>
               </Column>
@@ -106,9 +96,7 @@ export const LoadUnloadMapSettingsDisplay = ({
                   </Paragraph>
                 </Column>
                 <Column span={6}>
-                  <Paragraph gutterBottom={0}>
-                    {formatISODate(dateTime.date, 'dd-MM-yyyy')}
-                  </Paragraph>
+                  <Paragraph gutterBottom={0}>{formatISODate(dateTime.date, 'dd-MM-yyyy')}</Paragraph>
                 </Column>
               </Row>
 

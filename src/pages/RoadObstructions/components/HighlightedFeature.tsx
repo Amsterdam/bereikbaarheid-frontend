@@ -7,9 +7,7 @@ interface HighlightedFeatureLayerProps {
   detailFeature: DetailFeature | undefined
 }
 
-export const RoadObstructionsHighlightedFeatureLayer = ({
-  detailFeature,
-}: HighlightedFeatureLayerProps) => {
+export const RoadObstructionsHighlightedFeatureLayer = ({ detailFeature }: HighlightedFeatureLayerProps) => {
   const featureKey = () => {
     if (!detailFeature) return null
 

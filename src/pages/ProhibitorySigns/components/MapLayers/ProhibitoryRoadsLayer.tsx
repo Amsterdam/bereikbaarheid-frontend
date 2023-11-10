@@ -27,8 +27,7 @@ const statusCodesToColors = new Map([
 ])
 
 const ProhibitorySignsProhibitoryRoadsLayer = () => {
-  const { activeMapLayers, updateActiveMapLayers } =
-    useProhibitorySignsMapContext()
+  const { activeMapLayers, updateActiveMapLayers } = useProhibitorySignsMapContext()
   const { showScenarioWizard, vehicle } = useProhibitorySignsPageContext()
   const needsPermitHeavyGoodsVehicleZone = usePermitHeavyGoodsVehicleZone()
   const needsPermitLowEmissionZone = usePermitLowEmissionZone()

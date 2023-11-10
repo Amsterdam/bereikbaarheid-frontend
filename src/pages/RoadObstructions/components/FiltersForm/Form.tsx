@@ -1,15 +1,6 @@
 import { Dispatch, SetStateAction } from 'react'
 
-import {
-  breakpoint,
-  Button,
-  Divider,
-  ErrorMessage,
-  Heading,
-  Input,
-  themeSpacing,
-  TopBar,
-} from '@amsterdam/asc-ui'
+import { breakpoint, Button, Divider, ErrorMessage, Heading, Input, themeSpacing, TopBar } from '@amsterdam/asc-ui'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { FormLabel } from 'shared/components/FormLabel'
@@ -90,9 +81,7 @@ export const RoadObstructionsFiltersForm = ({
               type="time"
               {...register('timeFrom')}
             />
-            {errors.timeFrom && (
-              <ErrorMessage message={errors.timeFrom.message!} />
-            )}
+            {errors.timeFrom && <ErrorMessage message={errors.timeFrom.message!} />}
           </FormFieldWrapper>
 
           <FormFieldWrapper>

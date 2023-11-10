@@ -34,10 +34,7 @@ describe('ProhibitorySignsWideRoads', () => {
     // - needs a heavy goods vehicle permit (zone zwaar verkeer ontheffing)
     // - and vehicle length > 10 m or vehicle weight > 30000 kg
     await user.type(await screen.findByLabelText('Kenteken'), '85BPF2')
-    await user.type(
-      await screen.findByLabelText('Hoogte van uw voertuig'),
-      '3.25'
-    )
+    await user.type(await screen.findByLabelText('Hoogte van uw voertuig'), '3.25')
 
     // uncheck the address option
     await user.click(await screen.findByLabelText('Ik wil een adres invoeren'))
@@ -45,9 +42,7 @@ describe('ProhibitorySignsWideRoads', () => {
     await user.click(screen.getByText('Volgende', { selector: 'button' }))
 
     // the next step should be the form with RDW information
-    expect(
-      await within(screen.getByRole('dialog')).findByText('RDW gegevens')
-    ).toBeVisible()
+    expect(await within(screen.getByRole('dialog')).findByText('RDW gegevens')).toBeVisible()
 
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
@@ -56,9 +51,7 @@ describe('ProhibitorySignsWideRoads', () => {
 
     // the wide roads layer should be enabled
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const wideRoadsMapTiles = container.querySelectorAll(
-      '.leaflet-tile[src*="breed_opgezette_wegen"]'
-    )
+    const wideRoadsMapTiles = container.querySelectorAll('.leaflet-tile[src*="breed_opgezette_wegen"]')
 
     expect(wideRoadsMapTiles.length).toBeGreaterThanOrEqual(1)
 

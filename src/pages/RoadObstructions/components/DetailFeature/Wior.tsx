@@ -1,11 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 
 import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
-import {
-  DescriptionList,
-  DescriptionListItem,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { DescriptionList, DescriptionListItem, themeSpacing } from '@amsterdam/asc-ui'
 import { formatISODate } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
@@ -43,31 +39,19 @@ export const RoadObstructionsDetailFeatureWior = ({
       }}
     >
       <StyledDescriptionList>
-        <DescriptionListItem term="Projectnaam">
-          {detailFeature.data.properties.projectnaam}
-        </DescriptionListItem>
+        <DescriptionListItem term="Projectnaam">{detailFeature.data.properties.projectnaam}</DescriptionListItem>
 
-        <ProjectDescription term="Beschrijving">
-          {detailFeature.data.properties.beschrijving}
-        </ProjectDescription>
+        <ProjectDescription term="Beschrijving">{detailFeature.data.properties.beschrijving}</ProjectDescription>
 
         <DescriptionListItem term="Datum start uitvoering">
-          {formatISODate(
-            detailFeature.data.properties.datum_start_uitvoering,
-            'dd-MM-yyyy'
-          )}
+          {formatISODate(detailFeature.data.properties.datum_start_uitvoering, 'dd-MM-yyyy')}
         </DescriptionListItem>
 
         <DescriptionListItem term="Datum einde uitvoering">
-          {formatISODate(
-            detailFeature.data.properties.datum_einde_uitvoering,
-            'dd-MM-yyyy'
-          )}
+          {formatISODate(detailFeature.data.properties.datum_einde_uitvoering, 'dd-MM-yyyy')}
         </DescriptionListItem>
 
-        <DescriptionListItem term="Hoofdstatus">
-          {detailFeature.data.properties.hoofdstatus}
-        </DescriptionListItem>
+        <DescriptionListItem term="Hoofdstatus">{detailFeature.data.properties.hoofdstatus}</DescriptionListItem>
 
         {detailFeature.data.properties.type_werkzaamheden && (
           <DescriptionListItem term="Type werkzaamheden">

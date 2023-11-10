@@ -17,9 +17,7 @@ describe('ProhibitorySignsFormScenarioAddress', () => {
       ...withQueryClient(
         withAppContext(
           <MemoryRouter>
-            <ProhibitorySignsPageProvider>
-              {children}
-            </ProhibitorySignsPageProvider>
+            <ProhibitorySignsPageProvider>{children}</ProhibitorySignsPageProvider>
           </MemoryRouter>
         )
       ),
@@ -29,9 +27,7 @@ describe('ProhibitorySignsFormScenarioAddress', () => {
   it('renders correctly', async () => {
     setup(<ProhibitorySignsFormScenarioAddress />)
 
-    expect(
-      await screen.findByLabelText('Adres van uw bestemming')
-    ).toBeInTheDocument()
+    expect(await screen.findByLabelText('Adres van uw bestemming')).toBeInTheDocument()
   })
 
   it('renders a list of address options', async () => {
@@ -50,9 +46,7 @@ describe('ProhibitorySignsFormScenarioAddress', () => {
     // wait for search results
     await screen.findByRole('list')
 
-    expect(within(screen.getByRole('list')).getAllByRole('link')).toHaveLength(
-      11
-    )
+    expect(within(screen.getByRole('list')).getAllByRole('link')).toHaveLength(11)
   })
 
   it('shows an error message if no address is selected', async () => {

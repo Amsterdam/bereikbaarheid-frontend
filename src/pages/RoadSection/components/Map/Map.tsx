@@ -1,23 +1,13 @@
 import { useEffect, useState } from 'react'
 
-import {
-  BaseLayer,
-  GeoJSON,
-  Map,
-  ViewerContainer,
-  Zoom,
-} from '@amsterdam/arm-core'
+import { BaseLayer, GeoJSON, Map, ViewerContainer, Zoom } from '@amsterdam/arm-core'
 import { breakpoint, themeSpacing } from '@amsterdam/asc-ui'
 import { TileLayer } from '@amsterdam/react-maps'
 import { RoadSection } from 'api/bereikbaarheid/road-elements'
 import type L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
-import {
-  oneWayArrows,
-  roadNetworkNoRestrictions,
-  topoBlackWhite,
-} from 'shared/map/mapLayers'
+import { oneWayArrows, roadNetworkNoRestrictions, topoBlackWhite } from 'shared/map/mapLayers'
 import { MapStyle } from 'shared/map/mapStyle'
 import styled, { useTheme } from 'styled-components'
 
@@ -83,10 +73,7 @@ export const RoadSectionMap = ({ roadSection }: RoadSectionMapProps) => {
           args={[roadNetworkNoRestrictions.url]}
         />
 
-        <BaseLayer
-          baseLayer={topoBlackWhite.url}
-          options={topoBlackWhite.options}
-        />
+        <BaseLayer baseLayer={topoBlackWhite.url} options={topoBlackWhite.options} />
 
         <ViewerContainer bottomRight={<Zoom />} />
       </StyledMap>

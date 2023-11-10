@@ -171,11 +171,7 @@ function CardsMenu() {
               </StretchedDiv>
 
               {card.description && (
-                <PopupContainer
-                  style={
-                    showTooltip === card.path ? {} : { height: '0px', top: 0 }
-                  }
-                >
+                <PopupContainer style={showTooltip === card.path ? {} : { height: '0px', top: 0 }}>
                   <PopupContent>
                     <PopupParagraph>{t(card.description)}</PopupParagraph>
                   </PopupContent>

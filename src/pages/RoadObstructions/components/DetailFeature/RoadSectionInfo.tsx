@@ -18,10 +18,7 @@ import { formatISODate } from 'shared/utils/dateTime'
 import { getGeneratedPath } from 'shared/utils/path'
 import styled from 'styled-components'
 
-import {
-  DetailFeature,
-  DetailFeatureRoadSection,
-} from '../../types/detailFeature'
+import { DetailFeature, DetailFeatureRoadSection } from '../../types/detailFeature'
 
 function formatActivity(item: RoadObstruction) {
   if (!item.url) {
@@ -49,11 +46,7 @@ interface RoadSectionInfoProps {
   setDetailFeature: Dispatch<SetStateAction<DetailFeature | undefined>>
 }
 
-const RoadSectionInfo = ({
-  currentOverlay,
-  detailFeature,
-  setDetailFeature,
-}: RoadSectionInfoProps) => {
+const RoadSectionInfo = ({ currentOverlay, detailFeature, setDetailFeature }: RoadSectionInfoProps) => {
   return (
     <MapPanelContent
       title={`Wegvak ${detailFeature.data.properties.road_element_id}`}
@@ -90,18 +83,14 @@ const RoadSectionInfo = ({
                 <Paragraph strong>{formatActivity(item)}</Paragraph>
                 {item.reference && <Paragraph>{item.reference}</Paragraph>}
                 <Paragraph>
-                  van {formatISODate(item['start_date'])} tot{' '}
-                  {formatISODate(item['end_date'])}
+                  van {formatISODate(item['start_date'])} tot {formatISODate(item['end_date'])}
                 </Paragraph>
               </CardContent>
             </StyledCard>
           )
         })
       ) : (
-        <Paragraph>
-          Klik op het nabij gelegen donker gekleurde wegvak voor meer
-          informatie.
-        </Paragraph>
+        <Paragraph>Klik op het nabij gelegen donker gekleurde wegvak voor meer informatie.</Paragraph>
       )}
     </MapPanelContent>
   )

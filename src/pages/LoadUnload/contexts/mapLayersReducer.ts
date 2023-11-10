@@ -14,10 +14,7 @@ export type mapLayerActionType = {
   layerId: (typeof layerIds)[number]
 }
 
-export const mapLayersReducer = (
-  state: typeof mapLayersInitialState,
-  action: mapLayerActionType
-) => {
+export const mapLayersReducer = (state: typeof mapLayersInitialState, action: mapLayerActionType) => {
   switch (action.type) {
     case 'TOGGLE':
       return {

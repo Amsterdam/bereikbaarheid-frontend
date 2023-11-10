@@ -25,9 +25,7 @@ export interface RoadSectionsLoadUnloadCollection extends FeatureCollection {
   features: [] | RoadSectionLoadUnload[]
 }
 
-export function getRoadSectionsLoadUnload(
-  signal: AbortSignal | undefined
-): Promise<RoadSectionsLoadUnloadCollection> {
+export function getRoadSectionsLoadUnload(signal: AbortSignal | undefined): Promise<RoadSectionsLoadUnloadCollection> {
   return api
     .get(ENDPOINT, {
       signal,

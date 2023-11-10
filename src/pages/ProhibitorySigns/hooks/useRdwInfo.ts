@@ -13,10 +13,7 @@ export const useRdwInfo = () => {
   const generalInfo = useRdwGeneralInfo(vehicle)
   const subcategoryInfo = useRdwSubcategoryInfo()
   const rdwDataIsLoading =
-    axlesInfo.isLoading ||
-    fuelInfo.isLoading ||
-    generalInfo.isLoading ||
-    subcategoryInfo.isLoading
+    axlesInfo.isLoading || fuelInfo.isLoading || generalInfo.isLoading || subcategoryInfo.isLoading
 
   return {
     axlesInfo,

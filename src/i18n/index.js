@@ -12,10 +12,7 @@ i18n.use(initReactI18next).init({
     try {
       translations = require(`./locales/${cur}/translations.json`)
     } catch (error) {
-      console.error(
-        `Could not load translations for language "${cur}". Does the file exist?`,
-        error
-      )
+      console.error(`Could not load translations for language "${cur}". Does the file exist?`, error)
     }
 
     if (!translations) return acc

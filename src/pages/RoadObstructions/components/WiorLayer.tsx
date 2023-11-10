@@ -1,20 +1,9 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
-import {
-  GeoJSON,
-  MAX_ZOOM_LEVEL,
-  MIN_ZOOM_LEVEL,
-  useMapInstance,
-} from '@amsterdam/arm-core'
+import { GeoJSON, MAX_ZOOM_LEVEL, MIN_ZOOM_LEVEL, useMapInstance } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
 import { getWiorData } from 'api/wfs/wior'
-import {
-  DomEvent,
-  GeoJSON as GeoJSONLayer,
-  LatLngBounds,
-  Map,
-  PathOptions,
-} from 'leaflet'
+import { DomEvent, GeoJSON as GeoJSONLayer, LatLngBounds, Map, PathOptions } from 'leaflet'
 import { useTheme } from 'styled-components'
 
 import { useRoadObstructionsMapContext } from '../contexts/MapContext'
@@ -38,10 +27,7 @@ interface WiorLayerProps {
   mapFilters: RoadObstructionMapFilters
 }
 
-const RoadObstructionsWiorLayer = ({
-  setDetailFeature,
-  mapFilters,
-}: WiorLayerProps) => {
+const RoadObstructionsWiorLayer = ({ setDetailFeature, mapFilters }: WiorLayerProps) => {
   const { activeMapLayers } = useRoadObstructionsMapContext()
   const mapInstance = useMapInstance()
   const [layerInstance, setLayerInstance] = useState<GeoJSONLayer>()

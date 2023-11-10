@@ -1,9 +1,6 @@
 import { ReactNode, useReducer } from 'react'
 
-import {
-  detailFeatureReducer,
-  detailFeatureInitialState,
-} from './detailFeatureReducer'
+import { detailFeatureReducer, detailFeatureInitialState } from './detailFeatureReducer'
 import { LoadUnloadMapContext } from './MapContext'
 import { mapLayersReducer, mapLayersInitialState } from './mapLayersReducer'
 
@@ -12,15 +9,9 @@ type Props = {
 }
 
 export const LoadUnloadMapProvider = ({ children }: Props) => {
-  const [activeMapLayers, updateActiveMapLayers] = useReducer(
-    mapLayersReducer,
-    mapLayersInitialState
-  )
+  const [activeMapLayers, updateActiveMapLayers] = useReducer(mapLayersReducer, mapLayersInitialState)
 
-  const [detailFeature, setDetailFeature] = useReducer(
-    detailFeatureReducer,
-    detailFeatureInitialState
-  )
+  const [detailFeature, setDetailFeature] = useReducer(detailFeatureReducer, detailFeatureInitialState)
 
   return (
     <LoadUnloadMapContext.Provider

@@ -2,10 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 
 import { GeoJSON } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
-import {
-  getRoadSectionsLoadUnload,
-  RoadSectionLoadUnload,
-} from 'api/bereikbaarheid/road-sections/load-unload'
+import { getRoadSectionsLoadUnload, RoadSectionLoadUnload } from 'api/bereikbaarheid/road-sections/load-unload'
 import { DomEvent, PathOptions } from 'leaflet'
 import type L from 'leaflet'
 import { getDayOfTheWeekInDutch } from 'shared/utils/dateTime'
@@ -21,9 +18,7 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
   const { dateTime } = useLoadUnloadPageContext()
   const requestedDayOfTheWeek = getDayOfTheWeekInDutch(dateTime.date)
   const theme = useTheme()
-  const [roadSectionsLayer, setRoadSectionsLayer] = useState<L.GeoJSON | null>(
-    null
-  )
+  const [roadSectionsLayer, setRoadSectionsLayer] = useState<L.GeoJSON | null>(null)
 
   const roadSectionsLoadUnload = useQuery({
     queryKey: ['road-sections', 'load-unload'],
@@ -51,10 +46,8 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
           item.end_time &&
           item.days &&
           item.days.includes(requestedDayOfTheWeek) &&
-          ((item.start_time >= `${dateTime.timeFrom}:00` &&
-            item.start_time <= `${dateTime.timeTo}:00`) ||
-            (item.end_time >= `${dateTime.timeFrom}:00` &&
-              item.end_time <= `${dateTime.timeTo}:00`))
+          ((item.start_time >= `${dateTime.timeFrom}:00` && item.start_time <= `${dateTime.timeTo}:00`) ||
+            (item.end_time >= `${dateTime.timeFrom}:00` && item.end_time <= `${dateTime.timeTo}:00`))
       )
 
       if (fullyAvailableRegimes.length > 0) {
@@ -73,16 +66,11 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
 
   useEffect(() => {
     if (roadSectionsLayer) {
-      roadSectionsLayer.setStyle(feature =>
-        categorizeSection(feature as RoadSectionLoadUnload)
-      )
+      roadSectionsLayer.setStyle(feature => categorizeSection(feature as RoadSectionLoadUnload))
     }
   }, [roadSectionsLayer, categorizeSection])
 
-  if (
-    roadSectionsLoadUnload.isError &&
-    roadSectionsLoadUnload.error instanceof Error
-  ) {
+  if (roadSectionsLoadUnload.isError && roadSectionsLoadUnload.error instanceof Error) {
     console.error(roadSectionsLoadUnload.error.message)
   }
 

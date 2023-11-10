@@ -18,10 +18,7 @@ export const usePermitLowEmissionZone = (): boolean => {
   }
 
   // Taxi's from 2009 or younger do not need a permit
-  if (
-    rdwGeneralInfo.data?.[0].derived.isTaxi &&
-    rdwGeneralInfo.data?.[0].derived.buildDate >= 2009
-  ) {
+  if (rdwGeneralInfo.data?.[0].derived.isTaxi && rdwGeneralInfo.data?.[0].derived.buildDate >= 2009) {
     return false
   }
 
@@ -33,8 +30,7 @@ export const usePermitLowEmissionZone = (): boolean => {
   // Private cars & company cars running on diesel
   // & emission standard of at least 4 do not need a permit
   if (
-    (rdwGeneralInfo.data?.[0].derived.isPrivateCar ||
-      rdwGeneralInfo.data?.[0].derived.isCompanyCar) &&
+    (rdwGeneralInfo.data?.[0].derived.isPrivateCar || rdwGeneralInfo.data?.[0].derived.isCompanyCar) &&
     !rdwGeneralInfo.data?.[0].derived.isHeavyGoodsVehicle &&
     parseInt(rdwFuelInfo.data?.[0].server.emissiecode_omschrijving) >= 4
   ) {
@@ -44,8 +40,7 @@ export const usePermitLowEmissionZone = (): boolean => {
   // Heavy goods vehicles & buses running on diesel
   // & emission standard of at least 6 do not need a permit
   if (
-    (rdwGeneralInfo.data?.[0].derived.isHeavyGoodsVehicle ||
-      rdwGeneralInfo.data?.[0].derived.isBus) &&
+    (rdwGeneralInfo.data?.[0].derived.isHeavyGoodsVehicle || rdwGeneralInfo.data?.[0].derived.isBus) &&
     parseInt(rdwFuelInfo.data?.[0].server.emissiecode_omschrijving) >= 6
   ) {
     return false

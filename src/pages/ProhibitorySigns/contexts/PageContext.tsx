@@ -15,16 +15,12 @@ export type ProhibitorySignsPageContextProps = {
   setVehicle: Dispatch<SetStateAction<Vehicle>>
 }
 
-export const ProhibitorySignsPageContext = createContext<
-  ProhibitorySignsPageContextProps | undefined
->(undefined)
+export const ProhibitorySignsPageContext = createContext<ProhibitorySignsPageContextProps | undefined>(undefined)
 
 export function useProhibitorySignsPageContext() {
   const context = useContext(ProhibitorySignsPageContext)
   if (context === undefined) {
-    throw new Error(
-      'useProhibitorySignsPageContext must be within ProhibitorySignsPageProvider'
-    )
+    throw new Error('useProhibitorySignsPageContext must be within ProhibitorySignsPageProvider')
   }
 
   return context

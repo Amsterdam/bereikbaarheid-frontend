@@ -8,14 +8,12 @@ type mapLayerActionType = {
 const mapLayersInitialState = {
   [MapLayerId.touringcarStopsLayerId]: true,
   [MapLayerId.touringcarParkingSpacesLayerId]: true,
+  [MapLayerId.touringcarRoutesDestinationTrafficLayerId]: true,
   [MapLayerId.touringcarRoutesRecommendedLayerId]: true,
   [MapLayerId.touringcarRoutesMandatoryLayerId]: true,
 }
 
-function mapLayersReducer(
-  state: typeof mapLayersInitialState,
-  action: mapLayerActionType
-) {
+function mapLayersReducer(state: typeof mapLayersInitialState, action: mapLayerActionType) {
   switch (action.type) {
     case 'ON':
       return {

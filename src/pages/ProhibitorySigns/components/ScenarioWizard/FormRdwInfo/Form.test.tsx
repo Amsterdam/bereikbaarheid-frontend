@@ -8,10 +8,7 @@ import { withPageContext } from '../../../../../../test/utils/prohibitorySigns/w
 import { withQueryClient } from '../../../../../../test/utils/withQueryClient'
 import { Vehicle } from '../../../types/vehicle'
 
-import {
-  ProhibitorySignsFormScenarioRdwInfo,
-  ProhibitorySignsFormScenarioRdwInfoProps,
-} from './Form'
+import { ProhibitorySignsFormScenarioRdwInfo, ProhibitorySignsFormScenarioRdwInfoProps } from './Form'
 
 describe('ProhibitorySignsFormScenarioRdwInfo', () => {
   const props: ProhibitorySignsFormScenarioRdwInfoProps = {
@@ -37,9 +34,7 @@ describe('ProhibitorySignsFormScenarioRdwInfo', () => {
       setup(<ProhibitorySignsFormScenarioRdwInfo {...props} />)
     })
 
-    expect(
-      await screen.findByTestId('form-scenario-rdw-info')
-    ).toBeInTheDocument()
+    expect(await screen.findByTestId('form-scenario-rdw-info')).toBeInTheDocument()
   })
 
   it('shows an error message if the payload exceeds the registered maximum', async () => {
@@ -51,9 +46,7 @@ describe('ProhibitorySignsFormScenarioRdwInfo', () => {
 
     expect(await screen.findAllByRole('alert')).toHaveLength(2)
     expect(screen.getByText(/Lading mag niet meer zijn dan.*/i)).toBeVisible()
-    expect(
-      screen.getByText(/Totaal gewicht mag niet meer zijn dan.*/i)
-    ).toBeVisible()
+    expect(screen.getByText(/Totaal gewicht mag niet meer zijn dan.*/i)).toBeVisible()
   })
 
   it('shows an error message if the payload is a negative value', async () => {
@@ -67,9 +60,7 @@ describe('ProhibitorySignsFormScenarioRdwInfo', () => {
 
     expect(await screen.findAllByRole('alert')).toHaveLength(2)
     expect(screen.getByText('Lading moet minimaal 0 kg zijn')).toBeVisible()
-    expect(
-      screen.getByText(/Totaal gewicht moet meer zijn dan.*/i)
-    ).toBeVisible()
+    expect(screen.getByText(/Totaal gewicht moet meer zijn dan.*/i)).toBeVisible()
   })
 
   it('presets the axle weight input to the legal general maximum if the registered axle weight is higher', async () => {
@@ -94,11 +85,7 @@ describe('ProhibitorySignsFormScenarioRdwInfo', () => {
     })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(
-      screen.getByText(
-        'Aslast mag niet meer zijn dan 10000 kg. Neem contact op met het RDW.'
-      )
-    ).toBeVisible()
+    expect(screen.getByText('Aslast mag niet meer zijn dan 10000 kg. Neem contact op met het RDW.')).toBeVisible()
   })
 
   it('increases the allowed axle and total weight in case of a mobile crane', async () => {
@@ -122,9 +109,7 @@ describe('ProhibitorySignsFormScenarioRdwInfo', () => {
     expect(await screen.findByLabelText('Aslast')).toHaveValue('12000')
 
     await act(async () => {
-      await user.click(
-        screen.getByText('Kaart bekijken', { selector: 'button' })
-      )
+      await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
     })
 
     expect(screen.queryByRole('alert')).not.toBeInTheDocument()
@@ -140,11 +125,7 @@ describe('ProhibitorySignsFormScenarioRdwInfo', () => {
     })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(
-      screen.getByText(
-        'Lengte mag maximaal 22 m zijn. Neem contact op met het RDW.'
-      )
-    ).toBeVisible()
+    expect(screen.getByText('Lengte mag maximaal 22 m zijn. Neem contact op met het RDW.')).toBeVisible()
   })
 
   it('shows an error message if vehicle width is less than registered width', async () => {
@@ -172,11 +153,7 @@ describe('ProhibitorySignsFormScenarioRdwInfo', () => {
     })
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(
-      screen.getByText(
-        'Breedte mag maximaal 3 m zijn. Neem contact op met het RDW.'
-      )
-    ).toBeVisible()
+    expect(screen.getByText('Breedte mag maximaal 3 m zijn. Neem contact op met het RDW.')).toBeVisible()
   })
 
   it('accepts a comma as decimal separator for vehicle length and width', async () => {
@@ -191,9 +168,7 @@ describe('ProhibitorySignsFormScenarioRdwInfo', () => {
       await user.type(lengthInput, '15,34')
       await user.type(widthInput, '2,65')
 
-      await user.click(
-        screen.getByText('Kaart bekijken', { selector: 'button' })
-      )
+      await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
     })
 
     expect(screen.queryByRole('alert')).not.toBeInTheDocument()
@@ -211,9 +186,7 @@ describe('ProhibitorySignsFormScenarioRdwInfo', () => {
       await user.type(lengthInput, '12.75')
       await user.type(widthInput, '2.88')
 
-      await user.click(
-        screen.getByText('Kaart bekijken', { selector: 'button' })
-      )
+      await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
     })
 
     expect(screen.queryByRole('alert')).not.toBeInTheDocument()

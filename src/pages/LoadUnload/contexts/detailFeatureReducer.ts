@@ -27,10 +27,7 @@ export type DetailFeatureAction =
       location: NonNullable<DetailFeatureState['location']>
     }
 
-export const detailFeatureReducer = (
-  state: DetailFeatureState,
-  action: DetailFeatureAction
-): DetailFeatureState => {
+export const detailFeatureReducer = (state: DetailFeatureState, action: DetailFeatureAction): DetailFeatureState => {
   switch (action.type) {
     case DetailFeatureActionType.RESET:
       return detailFeatureInitialState

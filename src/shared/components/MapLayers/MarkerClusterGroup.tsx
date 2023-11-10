@@ -34,11 +34,7 @@ type MarkerClusterGroupProps = {
   setInstance?: (clusterLayer: L.MarkerClusterGroup | undefined) => void
 }
 
-export const MarkerClusterGroup = ({
-  markers,
-  events,
-  setInstance,
-}: MarkerClusterGroupProps) => {
+export const MarkerClusterGroup = ({ markers, events, setInstance }: MarkerClusterGroupProps) => {
   const mapInstance = useMapInstance()
   const theme = useTheme()
 

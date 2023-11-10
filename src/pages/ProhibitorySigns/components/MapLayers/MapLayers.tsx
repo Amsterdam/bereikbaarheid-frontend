@@ -1,13 +1,7 @@
 import { BaseLayer } from '@amsterdam/arm-core'
 import { TileLayer } from '@amsterdam/react-maps'
 import { AddressMarker } from 'shared/components/MapLayers/AddressMarker'
-import {
-  aerialImages,
-  linkIds,
-  oneWayArrows,
-  topoBlackWhite,
-  topoColorLight,
-} from 'shared/map/mapLayers'
+import { aerialImages, linkIds, oneWayArrows, topoBlackWhite, topoColorLight } from 'shared/map/mapLayers'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
@@ -22,9 +16,7 @@ import ProhibitorySignsTrafficSignsLayer from './TrafficSignsLayer'
 import ProhibitorySignsWideRoads from './WideRoads'
 
 function selectedBaseLayer(id: string) {
-  return [aerialImages, topoBlackWhite, topoColorLight].find(
-    layer => layer.id === id
-  )
+  return [aerialImages, topoBlackWhite, topoColorLight].find(layer => layer.id === id)
 }
 
 const ProhibitorySignsMapLayers = () => {
@@ -51,9 +43,7 @@ const ProhibitorySignsMapLayers = () => {
 
       <ProhibitorySignsParkingSpaceHighlight />
 
-      {expertMode && (
-        <TileLayer options={linkIds.options} args={[linkIds.url]} />
-      )}
+      {expertMode && <TileLayer options={linkIds.options} args={[linkIds.url]} />}
 
       <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />
 

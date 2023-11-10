@@ -43,9 +43,7 @@ test('give back correct menu or card objects', () => {
     },
   ])
 
-  expect(
-    mapPathsToMenuOrCardItems(menuOrCardItems, { preferShortTitles: false })
-  ).toStrictEqual([
+  expect(mapPathsToMenuOrCardItems(menuOrCardItems, { preferShortTitles: false })).toStrictEqual([
     {
       title: 'Bereikbaarheid op kenteken',
       titleShort: 'Op kenteken',

@@ -10,10 +10,7 @@ const TrafficSignIcon = (item: TrafficSign) => {
   const isZonalSign = endsWith(signType, 'zb')
   const signCategory = item.properties.category
 
-  if (
-    !trafficSignBackgrounds[signType] ||
-    !trafficSignBackgrounds[signType][signCategory]
-  ) {
+  if (!trafficSignBackgrounds[signType] || !trafficSignBackgrounds[signType][signCategory]) {
     console.warn(`Image for ${signType} ${signCategory} is missing`)
     return icons.defaultIcon
   }
@@ -25,12 +22,9 @@ const TrafficSignIcon = (item: TrafficSign) => {
 }
 
 export const TrafficSignMarker = (item: TrafficSign) => {
-  const marker = L.marker(
-    new L.LatLng(item.geometry.coordinates[1], item.geometry.coordinates[0]),
-    {
-      icon: TrafficSignIcon(item),
-    }
-  )
+  const marker = L.marker(new L.LatLng(item.geometry.coordinates[1], item.geometry.coordinates[0]), {
+    icon: TrafficSignIcon(item),
+  })
 
   return marker
 }

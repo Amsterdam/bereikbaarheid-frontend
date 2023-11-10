@@ -19,8 +19,7 @@ type FormScenarioAddressInputs = {
 }
 
 export const ProhibitorySignsFormScenarioAddress = () => {
-  const { setActiveStepWizard, address, setAddress } =
-    useProhibitorySignsPageContext()
+  const { setActiveStepWizard, address, setAddress } = useProhibitorySignsPageContext()
   const [addressOptions, setAddressOptions] = useState<AddressItem[] | []>([])
   const {
     handleSubmit,
@@ -105,22 +104,12 @@ export const ProhibitorySignsFormScenarioAddress = () => {
         name={name}
         ref={ref}
       />
-      {errors.searchAddress && (
-        <ErrorMessage message={errors.searchAddress.message!} />
-      )}
+      {errors.searchAddress && <ErrorMessage message={errors.searchAddress.message!} />}
 
-      <AddressSearchResults
-        addresses={addressOptions}
-        onClickAddress={onClickAddress}
-      />
+      <AddressSearchResults addresses={addressOptions} onClickAddress={onClickAddress} />
 
       <ScenarioWizardNav>
-        <Button
-          variant="textButton"
-          iconSize={14}
-          iconLeft={<ChevronLeft />}
-          onClick={() => setActiveStepWizard(0)}
-        >
+        <Button variant="textButton" iconSize={14} iconLeft={<ChevronLeft />} onClick={() => setActiveStepWizard(0)}>
           Vorige
         </Button>
 

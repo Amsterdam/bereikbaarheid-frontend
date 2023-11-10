@@ -1,10 +1,4 @@
-import {
-  Dispatch,
-  SetStateAction,
-  useContext,
-  useEffect,
-  useState,
-} from 'react'
+import { Dispatch, SetStateAction, useContext, useEffect, useState } from 'react'
 
 import { mapPanelConstants, MapPanelContext } from '@amsterdam/arm-core'
 
@@ -20,10 +14,7 @@ interface RoadObstructionsDetailFeatureProps {
   setDetailFeature: Dispatch<SetStateAction<DetailFeature | undefined>>
 }
 
-const RoadObstructionsDetailFeature = ({
-  detailFeature,
-  setDetailFeature,
-}: RoadObstructionsDetailFeatureProps) => {
+const RoadObstructionsDetailFeature = ({ detailFeature, setDetailFeature }: RoadObstructionsDetailFeatureProps) => {
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
   const [currentOverlay, setCurrentOverlay] = useState(Overlay.None)
 

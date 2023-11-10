@@ -1,16 +1,11 @@
 import { Label, Radio, RadioGroup } from '@amsterdam/asc-ui'
-import {
-  aerialImages,
-  topoBlackWhite,
-  topoColorLight,
-} from 'shared/map/mapLayers'
+import { aerialImages, topoBlackWhite, topoColorLight } from 'shared/map/mapLayers'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 
 const ProhibitorySignsMapLegendBaseLayers = () => {
-  const { activeBaseLayer, setActiveBaseLayer } =
-    useProhibitorySignsMapContext()
+  const { activeBaseLayer, setActiveBaseLayer } = useProhibitorySignsMapContext()
   const { expertMode } = useProhibitorySignsPageContext()
 
   const baseLayers = [

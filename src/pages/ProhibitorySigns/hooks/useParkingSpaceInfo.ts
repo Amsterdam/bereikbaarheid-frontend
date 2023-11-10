@@ -5,10 +5,7 @@ interface UseParkingSpaceInfoProps extends GetParkingSpaceProps {
   enabled: boolean
 }
 
-export const useParkingSpaceInfo = ({
-  enabled,
-  id,
-}: UseParkingSpaceInfoProps) => {
+export const useParkingSpaceInfo = ({ enabled, id }: UseParkingSpaceInfoProps) => {
   const queryResult = useQuery({
     enabled: enabled,
     queryKey: ['parkingSpace', id],

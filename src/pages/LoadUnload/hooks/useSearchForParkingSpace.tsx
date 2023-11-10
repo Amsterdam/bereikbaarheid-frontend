@@ -38,8 +38,7 @@ export const useSearchForParkingSpace = () => {
 
   return {
     isError: parkingSpace.isError || searchResults.isError,
-    isInitialLoading:
-      parkingSpace.isInitialLoading || searchResults.isInitialLoading,
+    isInitialLoading: parkingSpace.isInitialLoading || searchResults.isInitialLoading,
     results: searchResults,
   }
 }
