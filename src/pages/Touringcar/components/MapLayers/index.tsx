@@ -13,6 +13,7 @@ import { RoutesDestinationTrafficLayer } from './RoutesDestinationTrafficLayer'
 import { RoutesMandatoryLayer } from './RoutesMandatoryLayer'
 import { RoutesRecommendedLayer } from './RoutesRecommendedLayer'
 import { StopsLayer } from './StopsLayer'
+import { VehicleHeightsLayer } from './VehicleHeightsLayer'
 
 const TouringcarMapLayers = () => {
   const { address } = useTouringcarPageContext()
@@ -26,6 +27,7 @@ const TouringcarMapLayers = () => {
 
       <StopsLayer />
       <ParkingSpacesLayer />
+      <VehicleHeightsLayer />
       <RoutesDestinationTrafficLayer />
       <RoutesRecommendedLayer />
       <RoutesMandatoryLayer />

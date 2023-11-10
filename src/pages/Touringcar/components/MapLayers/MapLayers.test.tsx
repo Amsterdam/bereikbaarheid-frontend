@@ -18,8 +18,8 @@ describe('RoutesLayers', () => {
 
     await waitFor(() => page.rerender)
 
-    const checkboxParkeren = await screen.findByLabelText('Parkeren')
-    expect(checkboxParkeren).not.toBeChecked()
+    const checkboxParking = await screen.findByLabelText('Parkeren')
+    expect(checkboxParking).not.toBeChecked()
 
     const checkboxRoutesMandatory = await screen.findByLabelText('Verplichte route (> 7,5t)')
     expect(checkboxRoutesMandatory).toBeChecked()
@@ -31,8 +31,11 @@ describe('RoutesLayers', () => {
 
     await waitFor(() => page.rerender)
 
-    const checkboxParkeren = await screen.findByLabelText('Parkeren')
-    expect(checkboxParkeren).toBeChecked()
+    const checkboxParking = await screen.findByLabelText('Parkeren')
+    expect(checkboxParking).toBeChecked()
+
+    const checkboxMaxVehicleHeight = await screen.findByLabelText('Maximale doorrijhoogtes')
+    expect(checkboxMaxVehicleHeight).not.toBeChecked()
 
     const checkboxRoutesMandatory = await screen.findByLabelText('Verplichte route (> 7,5t)')
     expect(checkboxRoutesMandatory).toBeChecked()

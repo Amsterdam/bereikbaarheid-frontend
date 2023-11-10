@@ -1,0 +1,97 @@
+{
+  "type": "FeatureCollection",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4326" } },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.1",
+      "geometry": { "type": "Point", "coordinates": [4.904258001241866, 52.37748500414476] },
+      "properties": { "id": 1, "omschrijving": "Spoortunnel Stationseiland Oost", "maximaleDoorrijhoogte": "3,2m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.2",
+      "geometry": { "type": "Point", "coordinates": [4.910738001248633, 52.383668004148376] },
+      "properties": { "id": 2, "omschrijving": "Ijtunnel noord", "maximaleDoorrijhoogte": "4m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.3",
+      "geometry": { "type": "Point", "coordinates": [4.912241001249674, 52.373975004142665] },
+      "properties": { "id": 3, "omschrijving": "Ijtunnel zuid", "maximaleDoorrijhoogte": "4m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.4",
+      "geometry": { "type": "Point", "coordinates": [4.921510001259015, 52.375783004143685] },
+      "properties": { "id": 4, "omschrijving": "Spoortunnel Kattenburgerstraat", "maximaleDoorrijhoogte": "3,9m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.5",
+      "geometry": { "type": "Point", "coordinates": [4.958160001295489, 52.373003004141886] },
+      "properties": { "id": 5, "omschrijving": "Piet Heintunnel", "maximaleDoorrijhoogte": "4m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.6",
+      "geometry": { "type": "Point", "coordinates": [4.922068001259637, 52.37715800414447] },
+      "properties": { "id": 6, "omschrijving": "Schaeferbrug", "maximaleDoorrijhoogte": "3,9m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.7",
+      "geometry": { "type": "Point", "coordinates": [4.931670001268714, 52.36631100413804] },
+      "properties": { "id": 7, "omschrijving": "Panamalaan", "maximaleDoorrijhoogte": "4m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.8",
+      "geometry": { "type": "Point", "coordinates": [4.935951001273288, 52.37258600414174] },
+      "properties": { "id": 8, "omschrijving": "Piet Heintunnel", "maximaleDoorrijhoogte": "4m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.9",
+      "geometry": { "type": "Point", "coordinates": [4.882795001220844, 52.38606000414985] },
+      "properties": { "id": 9, "omschrijving": "S103", "maximaleDoorrijhoogte": "4,1m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.10",
+      "geometry": { "type": "Point", "coordinates": [4.883789001222069, 52.390902004152686] },
+      "properties": { "id": 10, "omschrijving": "Spaarndammerdijk", "maximaleDoorrijhoogte": "4,5m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.11",
+      "geometry": { "type": "Point", "coordinates": [4.872501001210899, 52.392958004153925] },
+      "properties": { "id": 11, "omschrijving": "Spaarndammerdijk", "maximaleDoorrijhoogte": "4,5m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.12",
+      "geometry": { "type": "Point", "coordinates": [4.882795001220843, 52.386007004149846] },
+      "properties": { "id": 12, "omschrijving": "Houtman spoorbrug", "maximaleDoorrijhoogte": "4,1m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.13",
+      "geometry": { "type": "Point", "coordinates": [4.897392001235183, 52.381124004146905] },
+      "properties": { "id": 13, "omschrijving": "Michiel de Ruijtertunnel", "maximaleDoorrijhoogte": "4,2m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.14",
+      "geometry": { "type": "Point", "coordinates": [4.904526001242184, 52.378506004145315] },
+      "properties": { "id": 14, "omschrijving": "Michiel de Ruijtertunnel  ", "maximaleDoorrijhoogte": "4,2m" }
+    },
+    {
+      "type": "Feature",
+      "id": "doorrijhoogtes.15",
+      "geometry": { "type": "Point", "coordinates": [4.895761001233526, 52.38052400414657] },
+      "properties": { "id": 15, "omschrijving": "Westertoegang", "maximaleDoorrijhoogte": "4m" }
+    }
+  ],
+  "_links": []
+}

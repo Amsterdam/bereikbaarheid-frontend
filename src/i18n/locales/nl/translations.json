@@ -56,6 +56,7 @@
     "titleShort": "Touringcar",
     "description": "Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie.",
     "places": "Plaatsen",
+    "maxVehicleHeight": "Maximale doorrijhoogte",
     "_mapPanel": {
       "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
       "messages": "Berichten",
@@ -77,10 +78,10 @@
     "_dataSources": {
       "stopsForCoaches": "Haltes voor touringcars",
       "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
-      "maxVehicleHeight": "Maximale doorrijhoogtes",
+      "maxVehicleHeight": "Maximale doorrijhoogtes voor touringcars",
       "destinationTraffic": "Bestemmingsverkeer",
-      "recommendedRoutes": "Aanbevolen routes",
-      "mandatoryRoutes": "Verplichte route (> 7,5t)",
+      "recommendedRoutes": "Aanbevolen routes voor touringcars",
+      "mandatoryRoutes": "Verplichte route (> 7,5t) voor touringcars",
       "environmentalZone": "Milieuzone"
     }
   },

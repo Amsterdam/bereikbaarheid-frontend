@@ -10,6 +10,7 @@ interface TouringcarParkingSpace extends Feature {
   plaatsen: string
   meerInformatie: string
   url: string
+  maximaleDoorrijhoogte?: string
 }
 
 interface TouringcarParkingSpaceCollection extends FeatureCollection {
