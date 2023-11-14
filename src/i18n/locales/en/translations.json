@@ -54,7 +54,7 @@
     "_mapPanel": {
       "label": "View messages, extra route information or the data sources",
       "messages": "Messages",
-      "routeInfo": "Route information",
+      "info": "Information",
       "recommendedAndMandatoryRoutes": "Recommended and mandatory routes",
       "displayOfRecommendedAndMandatoryRoutes": "View recommended and mandatory routes for coaches.",
       "payAttentionToVerhicleHeights": "Pay attention to vehicle heights."

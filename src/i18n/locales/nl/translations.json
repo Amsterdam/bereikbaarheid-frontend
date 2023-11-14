@@ -60,7 +60,7 @@
     "_mapPanel": {
       "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
       "messages": "Berichten",
-      "routeInfo": "Routeinformatie",
+      "info": "Informatie",
       "recommendedAndMandatoryRoutes": "Aanbevolen en verplichte routes",
       "displayOfRecommendedAndMandatoryRoutes": "Weergave van de aanbevolen en verplichte routes voor touringcars.",
       "payAttentionToVerhicleHeights": "Let op de doorrijhoogtes."
