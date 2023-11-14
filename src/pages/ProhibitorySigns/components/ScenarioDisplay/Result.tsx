@@ -109,7 +109,7 @@ const ScenarioDisplayResult = () => {
           <Row halign="flex-start" hasMargin={false} valign="center">
             <Column span={6}>
               <Link
-                href="https://www.amsterdam.nl/parkeren-verkeer/milieuzone-amsterdam/aanscherping-milieuzones/"
+                href="https://www.amsterdam.nl/verkeer-vervoer/milieuzone-uitstootvrijezone/"
                 target="_blank"
                 variant="inline"
               >
@@ -124,11 +124,7 @@ const ScenarioDisplayResult = () => {
 
           <Row halign="flex-start" hasMargin={false} valign="center">
             <Column span={6}>
-              <Link
-                href="https://www.amsterdam.nl/parkeren-verkeer/zone-zwaar-verkeer-amsterdam/nieuw-beleid-zwaar-verkeer/"
-                target="_blank"
-                variant="inline"
-              >
+              <Link href="https://www.amsterdam.nl/verkeer-vervoer/zwaar-verkeer/" target="_blank" variant="inline">
                 Zone zwaar verkeer
               </Link>
             </Column>
