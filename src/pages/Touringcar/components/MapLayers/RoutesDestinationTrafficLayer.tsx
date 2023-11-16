@@ -43,7 +43,7 @@ export const RoutesDestinationTrafficLayer = () => {
             DomEvent.stopPropagation(e)
 
             unsetDetailsPane()
-            setActiveTab(MapPanelTab.ROUTE_INFO)
+            setActiveTab(MapPanelTab.INFO)
             setPositionFromSnapPoint(SnapPoint.Halfway)
           })
         },

@@ -35,7 +35,7 @@ export const VehicleHeightsLayer = () => {
       marker.bindTooltip(tooltipText)
 
       marker.on('click', () => {
-        setActiveTab(MapPanelTab.ROUTE_INFO)
+        setActiveTab(MapPanelTab.INFO)
         setPositionFromSnapPoint(mapPanelConstants.SnapPoint.Halfway)
       })
 
