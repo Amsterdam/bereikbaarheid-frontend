@@ -224,7 +224,7 @@ FAQ en contactgegevens"
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-jdkBTo jkpnfb kBZmAT leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-fmzyuX jkpnfb fprxrO leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -360,7 +360,7 @@ FAQ en contactgegevens"
                       tabindex="0"
                     >
                       <div
-                        class="sc-gweoQa cqvkId"
+                        class="sc-eIcdZJ bzzgoc"
                       >
                         <h2
                           class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
@@ -378,6 +378,24 @@ FAQ en contactgegevens"
                         >
                           Let op de doorrijhoogtes.
                         </p>
+                      </div>
+                      <div
+                        class="sc-eIcdZJ bzzgoc"
+                      >
+                        <h2
+                          class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
+                        >
+                          Haltes
+                        </h2>
+                      </div>
+                      <div
+                        class="sc-eIcdZJ bzzgoc"
+                      >
+                        <h2
+                          class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
+                        >
+                          Parkeerplaatsen
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -670,7 +688,7 @@ FAQ en contactgegevens"
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-eHsDsR wLJRc"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-jdkBTo jNHDJD"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -683,7 +701,7 @@ FAQ en contactgegevens"
               data-testid="topRight"
             >
               <div
-                class="sc-eIcdZJ igQBed"
+                class="sc-jdUcAg cZRFDs"
               >
                 <button
                   aria-controls="legend"
@@ -720,7 +738,7 @@ FAQ en contactgegevens"
                   id="legend"
                 >
                   <div
-                    class="sc-bddgXz lfPnaU"
+                    class="sc-fyVfxW zIcYX"
                   >
                     <label
                       class="sc-gFVvzn jmImEg"
@@ -732,7 +750,7 @@ FAQ en contactgegevens"
                         Haltes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW hJgrTe"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR hPjyKt"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -768,7 +786,7 @@ FAQ en contactgegevens"
                         Parkeren
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW hFDYmZ"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR kFCdQG"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -804,7 +822,7 @@ FAQ en contactgegevens"
                         Maximale doorrijhoogtes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW kCdxSf"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR cmmQQw"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -840,7 +858,7 @@ FAQ en contactgegevens"
                         Bestemmingsverkeer
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW ebZGpg"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -876,7 +894,7 @@ FAQ en contactgegevens"
                         Aanbevolen routes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW kzuWdp"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR hEjijC"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -912,7 +930,7 @@ FAQ en contactgegevens"
                         Verplichte route (&gt; 7,5t)
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW hMvKKs"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR bmJRtT"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -948,7 +966,7 @@ FAQ en contactgegevens"
                         Milieuzone
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW jJucgH"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR faYBOs"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1265,7 +1283,7 @@ FAQ en contactgegevens"
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-jdkBTo jkpnfb kBZmAT leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-fmzyuX jkpnfb fprxrO leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1401,7 +1419,7 @@ FAQ en contactgegevens"
                     tabindex="0"
                   >
                     <div
-                      class="sc-gweoQa cqvkId"
+                      class="sc-eIcdZJ bzzgoc"
                     >
                       <h2
                         class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
@@ -1419,6 +1437,24 @@ FAQ en contactgegevens"
                       >
                         Let op de doorrijhoogtes.
                       </p>
+                    </div>
+                    <div
+                      class="sc-eIcdZJ bzzgoc"
+                    >
+                      <h2
+                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
+                      >
+                        Haltes
+                      </h2>
+                    </div>
+                    <div
+                      class="sc-eIcdZJ bzzgoc"
+                    >
+                      <h2
+                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
+                      >
+                        Parkeerplaatsen
+                      </h2>
                     </div>
                   </div>
                   <div
@@ -1711,7 +1747,7 @@ FAQ en contactgegevens"
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-eHsDsR wLJRc"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-jdkBTo jNHDJD"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -1724,7 +1760,7 @@ FAQ en contactgegevens"
             data-testid="topRight"
           >
             <div
-              class="sc-eIcdZJ igQBed"
+              class="sc-jdUcAg cZRFDs"
             >
               <button
                 aria-controls="legend"
@@ -1761,7 +1797,7 @@ FAQ en contactgegevens"
                 id="legend"
               >
                 <div
-                  class="sc-bddgXz lfPnaU"
+                  class="sc-fyVfxW zIcYX"
                 >
                   <label
                     class="sc-gFVvzn jmImEg"
@@ -1773,7 +1809,7 @@ FAQ en contactgegevens"
                       Haltes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW hJgrTe"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR hPjyKt"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1809,7 +1845,7 @@ FAQ en contactgegevens"
                       Parkeren
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW hFDYmZ"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR kFCdQG"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1845,7 +1881,7 @@ FAQ en contactgegevens"
                       Maximale doorrijhoogtes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW kCdxSf"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR cmmQQw"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1881,7 +1917,7 @@ FAQ en contactgegevens"
                       Bestemmingsverkeer
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW ebZGpg"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1917,7 +1953,7 @@ FAQ en contactgegevens"
                       Aanbevolen routes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW kzuWdp"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR hEjijC"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1953,7 +1989,7 @@ FAQ en contactgegevens"
                       Verplichte route (&gt; 7,5t)
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW hMvKKs"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR bmJRtT"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1989,7 +2025,7 @@ FAQ en contactgegevens"
                       Milieuzone
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW jJucgH"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR faYBOs"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"

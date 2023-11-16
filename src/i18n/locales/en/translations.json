@@ -50,6 +50,7 @@
   "_pageTouringcar": {
     "title": "Coach (Tour Buzz)",
     "titleShort": "Coach",
+    "reference": "Reference",
     "places": "Places",
     "_mapPanel": {
       "label": "View messages, extra route information or the data sources",
@@ -57,7 +58,9 @@
       "info": "Information",
       "recommendedAndMandatoryRoutes": "Recommended and mandatory routes",
       "displayOfRecommendedAndMandatoryRoutes": "View recommended and mandatory routes for coaches.",
-      "payAttentionToVerhicleHeights": "Pay attention to vehicle heights."
+      "payAttentionToVerhicleHeights": "Pay attention to vehicle heights.",
+      "stops": "Stops",
+      "parkingSpaces": "Parking spaces"
     },
     "_legend": {
       "messages": "Messages",

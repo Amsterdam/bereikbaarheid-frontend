@@ -9,6 +9,9 @@ import { MapPanelTab, useTouringcarMapContext } from '../contexts/MapContext'
 import TouringcarPageProvider from '../contexts/PageProvider'
 import dataLinks from '../data/dataLinks'
 
+import ParkingSpacesList from './LocationsList/ParkingSpaces'
+import StopsList from './LocationsList/Stops'
+
 const PaddedContent = styled.div`
   padding-top: 1em;
 `
@@ -31,6 +34,7 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
           <br />
           <Paragraph>Berichten</Paragraph>
         </Tab> */}
+
         <Tab
           id={MapPanelTab.INFO}
           label={t('_pageTouringcar._mapPanel.info')}
@@ -45,7 +49,24 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
             </Paragraph>
             <Paragraph>{t('_pageTouringcar._mapPanel.payAttentionToVerhicleHeights')}</Paragraph>
           </PaddedContent>
+
+          <PaddedContent>
+            <PretendHeading forwardedAs="h2" isCompact={true}>
+              {t('_pageTouringcar._mapPanel.stops')}
+            </PretendHeading>
+
+            <StopsList />
+          </PaddedContent>
+
+          <PaddedContent>
+            <PretendHeading forwardedAs="h2" isCompact={true}>
+              {t('_pageTouringcar._mapPanel.parkingSpaces')}
+            </PretendHeading>
+
+            <ParkingSpacesList />
+          </PaddedContent>
         </Tab>
+
         <Tab
           id={MapPanelTab.DATA}
           label={t('_generic._mapPanel.dataSource')}

@@ -224,7 +224,7 @@ FAQ en contactgegevens"
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-jdkBTo jkpnfb kBZmAT leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-fmzyuX jkpnfb fprxrO leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -793,7 +793,7 @@ FAQ en contactgegevens"
                       tabindex="0"
                     >
                       <div
-                        class="sc-gweoQa cqvkId"
+                        class="sc-eIcdZJ bzzgoc"
                       >
                         <h2
                           class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
@@ -811,6 +811,672 @@ FAQ en contactgegevens"
                         >
                           Let op de doorrijhoogtes.
                         </p>
+                      </div>
+                      <div
+                        class="sc-eIcdZJ bzzgoc"
+                      >
+                        <h2
+                          class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
+                        >
+                          Haltes
+                        </h2>
+                        <table
+                          class="sc-czkgLR bomdop"
+                        >
+                          <thead
+                            class="sc-lizKOf sc-gweoQa jHFeDu evmqIK"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              Aanduiding
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              Plaatsen
+                            </td>
+                          </thead>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H3: Lovers rondvaarten
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              7 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H7: Amsterdam Museum
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H10: Joods Historisch Museum
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H12: Blue Boat Company
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H13: Coster Diamonds / Rijksmuseum
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H14: Park Hotel
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              3 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H15: NH City Centre
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H16: Anne Frank Huis
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              3 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H22: Renaissance Hotel
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H24: Hermitage / Portugese Synagoge
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H25: Rijksmuseum
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H20: Port van Cleve / Magna Plaza
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H6: St. Nicolaaskerk
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              5 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H23: Stedelijk Museum
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H26: Station Zuid
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H29: Station Sloterdijk 
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              4 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H35: Riekermolen
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              3 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H1: De Ruijterkade west
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              7 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H11: Scheepvaartmuseum
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H28: De Ruijterkade oost
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              14 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H27: Grand Hotel Amrâth 
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H31: Stayokay
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              3 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H19: Amstel/Rembrandtplein
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H18: Westerdoksdijk
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H9: Javakade
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H33: Rhijnspoorplein
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H34: Hotel Nieuw Slotania
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H8:  Kooij rondvaarten
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H36: Heineken Experience
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              3
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H30: Holland Casino
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H37: Europaboulevard / Novotel
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H2: EYE / Adam Toren
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H39: Westerpark
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H38: Amstelstation
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H17: Nassaukade
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H42: Station Holendrecht
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H21: Westcord Fashion Hotel
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H41: Motel One
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H43: Piarcoplein
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              2 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H44: Hotel Casa Amsterdam
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              1 bus
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H4: Zouthaven - Piet Heinbuildings
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              5 bussen
+                            </td>
+                          </tr>
+                          <tr
+                            class="sc-hTUWRQ cZDYyh"
+                          >
+                            <td
+                              class="sc-dycYrt foMVJw"
+                            >
+                              H5: Zouthaven - Piet Heinkade
+                            </td>
+                            <td
+                              class="sc-dycYrt foMVJw"
+                              width="25%"
+                            >
+                              4 bussen
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div
+                        class="sc-eIcdZJ bzzgoc"
+                      >
+                        <h2
+                          class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
+                        >
+                          Parkeerplaatsen
+                        </h2>
                       </div>
                     </div>
                     <div
@@ -1103,7 +1769,7 @@ FAQ en contactgegevens"
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-eHsDsR wLJRc"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-jdkBTo jNHDJD"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -1116,7 +1782,7 @@ FAQ en contactgegevens"
               data-testid="topRight"
             >
               <div
-                class="sc-eIcdZJ igQBed"
+                class="sc-jdUcAg cZRFDs"
               >
                 <button
                   aria-controls="legend"
@@ -1153,7 +1819,7 @@ FAQ en contactgegevens"
                   id="legend"
                 >
                   <div
-                    class="sc-bddgXz lfPnaU"
+                    class="sc-fyVfxW zIcYX"
                   >
                     <label
                       class="sc-gFVvzn jmImEg"
@@ -1165,7 +1831,7 @@ FAQ en contactgegevens"
                         Haltes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW hJgrTe"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR hPjyKt"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1201,7 +1867,7 @@ FAQ en contactgegevens"
                         Parkeren
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW hFDYmZ"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR kFCdQG"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1237,7 +1903,7 @@ FAQ en contactgegevens"
                         Maximale doorrijhoogtes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW kCdxSf"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR cmmQQw"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1273,7 +1939,7 @@ FAQ en contactgegevens"
                         Bestemmingsverkeer
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW ebZGpg"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1309,7 +1975,7 @@ FAQ en contactgegevens"
                         Aanbevolen routes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW kzuWdp"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR hEjijC"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1345,7 +2011,7 @@ FAQ en contactgegevens"
                         Verplichte route (&gt; 7,5t)
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW hMvKKs"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR bmJRtT"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1381,7 +2047,7 @@ FAQ en contactgegevens"
                         Milieuzone
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fyVfxW jJucgH"
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR faYBOs"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1698,7 +2364,7 @@ FAQ en contactgegevens"
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-jdkBTo jkpnfb kBZmAT leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-fmzyuX jkpnfb fprxrO leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -2267,7 +2933,7 @@ FAQ en contactgegevens"
                     tabindex="0"
                   >
                     <div
-                      class="sc-gweoQa cqvkId"
+                      class="sc-eIcdZJ bzzgoc"
                     >
                       <h2
                         class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
@@ -2285,6 +2951,672 @@ FAQ en contactgegevens"
                       >
                         Let op de doorrijhoogtes.
                       </p>
+                    </div>
+                    <div
+                      class="sc-eIcdZJ bzzgoc"
+                    >
+                      <h2
+                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
+                      >
+                        Haltes
+                      </h2>
+                      <table
+                        class="sc-czkgLR bomdop"
+                      >
+                        <thead
+                          class="sc-lizKOf sc-gweoQa jHFeDu evmqIK"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            Aanduiding
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            Plaatsen
+                          </td>
+                        </thead>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H3: Lovers rondvaarten
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            7 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H7: Amsterdam Museum
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H10: Joods Historisch Museum
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H12: Blue Boat Company
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H13: Coster Diamonds / Rijksmuseum
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H14: Park Hotel
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            3 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H15: NH City Centre
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H16: Anne Frank Huis
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            3 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H22: Renaissance Hotel
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H24: Hermitage / Portugese Synagoge
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H25: Rijksmuseum
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H20: Port van Cleve / Magna Plaza
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H6: St. Nicolaaskerk
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            5 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H23: Stedelijk Museum
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H26: Station Zuid
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H29: Station Sloterdijk 
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            4 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H35: Riekermolen
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            3 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H1: De Ruijterkade west
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            7 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H11: Scheepvaartmuseum
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H28: De Ruijterkade oost
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            14 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H27: Grand Hotel Amrâth 
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H31: Stayokay
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            3 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H19: Amstel/Rembrandtplein
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H18: Westerdoksdijk
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H9: Javakade
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H33: Rhijnspoorplein
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H34: Hotel Nieuw Slotania
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H8:  Kooij rondvaarten
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H36: Heineken Experience
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            3
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H30: Holland Casino
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H37: Europaboulevard / Novotel
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H2: EYE / Adam Toren
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H39: Westerpark
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H38: Amstelstation
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H17: Nassaukade
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H42: Station Holendrecht
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H21: Westcord Fashion Hotel
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H41: Motel One
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H43: Piarcoplein
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            2 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H44: Hotel Casa Amsterdam
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            1 bus
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H4: Zouthaven - Piet Heinbuildings
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            5 bussen
+                          </td>
+                        </tr>
+                        <tr
+                          class="sc-hTUWRQ cZDYyh"
+                        >
+                          <td
+                            class="sc-dycYrt foMVJw"
+                          >
+                            H5: Zouthaven - Piet Heinkade
+                          </td>
+                          <td
+                            class="sc-dycYrt foMVJw"
+                            width="25%"
+                          >
+                            4 bussen
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div
+                      class="sc-eIcdZJ bzzgoc"
+                    >
+                      <h2
+                        class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
+                      >
+                        Parkeerplaatsen
+                      </h2>
                     </div>
                   </div>
                   <div
@@ -2577,7 +3909,7 @@ FAQ en contactgegevens"
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-eHsDsR wLJRc"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-jdkBTo jNHDJD"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -2590,7 +3922,7 @@ FAQ en contactgegevens"
             data-testid="topRight"
           >
             <div
-              class="sc-eIcdZJ igQBed"
+              class="sc-jdUcAg cZRFDs"
             >
               <button
                 aria-controls="legend"
@@ -2627,7 +3959,7 @@ FAQ en contactgegevens"
                 id="legend"
               >
                 <div
-                  class="sc-bddgXz lfPnaU"
+                  class="sc-fyVfxW zIcYX"
                 >
                   <label
                     class="sc-gFVvzn jmImEg"
@@ -2639,7 +3971,7 @@ FAQ en contactgegevens"
                       Haltes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW hJgrTe"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR hPjyKt"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2675,7 +4007,7 @@ FAQ en contactgegevens"
                       Parkeren
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW hFDYmZ"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR kFCdQG"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2711,7 +4043,7 @@ FAQ en contactgegevens"
                       Maximale doorrijhoogtes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW kCdxSf"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR cmmQQw"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2747,7 +4079,7 @@ FAQ en contactgegevens"
                       Bestemmingsverkeer
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW ebZGpg"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2783,7 +4115,7 @@ FAQ en contactgegevens"
                       Aanbevolen routes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW kzuWdp"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR hEjijC"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2819,7 +4151,7 @@ FAQ en contactgegevens"
                       Verplichte route (&gt; 7,5t)
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW hMvKKs"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR bmJRtT"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2855,7 +4187,7 @@ FAQ en contactgegevens"
                       Milieuzone
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fyVfxW jJucgH"
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR faYBOs"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
