@@ -7,7 +7,7 @@ import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 
 enum MapPanelTab {
   MESSAGES = 'messages',
-  ROUTE_INFO = 'routeInfo',
+  INFO = 'info',
   DATA = 'data',
 }
 
