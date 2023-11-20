@@ -1,21 +1,30 @@
-import { loadUnloadSpaces } from 'shared/map/mapLayers'
+import { MapLayerId } from './MapContext'
 
 export const roadSectionsLoadUnloadLayerId = 'roadSectionsLoadUnload'
 
 export const mapLayersInitialState = {
-  [loadUnloadSpaces.id]: true,
-  [roadSectionsLoadUnloadLayerId]: true,
+  [MapLayerId.loadUnloadLayerId]: true,
+  [MapLayerId.roadSectionsLoadUnloadLayerId]: true,
+  [MapLayerId.bollardsLayerId]: false,
 }
 
-export const layerIds = ['loadUnloadSpaces', 'roadSectionsLoadUnload'] as const
-
 export type mapLayerActionType = {
-  type: 'TOGGLE'
-  layerId: (typeof layerIds)[number]
+  type: 'ON' | 'OFF' | 'TOGGLE'
+  layerId: MapLayerId
 }
 
 export const mapLayersReducer = (state: typeof mapLayersInitialState, action: mapLayerActionType) => {
   switch (action.type) {
+    case 'ON':
+      return {
+        ...state,
+        [action.layerId]: true,
+      }
+    case 'OFF':
+      return {
+        ...state,
+        [action.layerId]: false,
+      }
     case 'TOGGLE':
       return {
         ...state,

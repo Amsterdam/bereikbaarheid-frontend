@@ -6,7 +6,7 @@ import { LeafletMouseEvent } from 'leaflet'
 import { loadUnloadSpaces } from 'shared/map/mapLayers'
 
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
-import { useLoadUnloadMapContext } from '../../contexts/MapContext'
+import useLoadUnloadMapContext, { MapLayerId } from '../../contexts/MapContext'
 
 export const LoadUnloadLoadUnloadSpacesLayer = () => {
   const mapInstance = useMapInstance()
@@ -24,14 +24,14 @@ export const LoadUnloadLoadUnloadSpacesLayer = () => {
   )
 
   useEffect(() => {
-    if (activeMapLayers[loadUnloadSpaces.id]) {
+    if (activeMapLayers[MapLayerId.loadUnloadLayerId]) {
       mapInstance.on('click', onClick)
     } else {
       mapInstance.off('click', onClick)
     }
   }, [activeMapLayers, mapInstance, setDetailFeature, onClick])
 
-  if (!activeMapLayers[loadUnloadSpaces.id]) return null
+  if (!activeMapLayers[MapLayerId.loadUnloadLayerId]) return null
 
   return <NonTiledLayer url={loadUnloadSpaces.url} options={loadUnloadSpaces.options}></NonTiledLayer>
 }

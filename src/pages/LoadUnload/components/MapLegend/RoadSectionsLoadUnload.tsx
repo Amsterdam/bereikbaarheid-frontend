@@ -3,8 +3,7 @@ import MapLegendItem from 'shared/components/MapLegendItem'
 import { LegendItemsWrapper, LegendWrapper } from 'shared/components/MapLegendStyles'
 import { useTheme } from 'styled-components'
 
-import { useLoadUnloadMapContext } from '../../contexts/MapContext'
-import { roadSectionsLoadUnloadLayerId } from '../../contexts/mapLayersReducer'
+import useLoadUnloadMapContext, { MapLayerId } from '../../contexts/MapContext'
 
 export const LoadUnloadMapLegendRoadSectionsLoadUnload = () => {
   const { activeMapLayers, updateActiveMapLayers } = useLoadUnloadMapContext()
@@ -18,10 +17,10 @@ export const LoadUnloadMapLegendRoadSectionsLoadUnload = () => {
           onChange={() =>
             updateActiveMapLayers({
               type: 'TOGGLE',
-              layerId: roadSectionsLoadUnloadLayerId,
+              layerId: MapLayerId.loadUnloadLayerId,
             })
           }
-          checked={activeMapLayers[roadSectionsLoadUnloadLayerId]}
+          checked={activeMapLayers[MapLayerId.loadUnloadLayerId]}
         />
       </Label>
 

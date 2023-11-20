@@ -9,8 +9,7 @@ import { getDayOfTheWeekInDutch } from 'shared/utils/dateTime'
 import { useTheme } from 'styled-components'
 
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
-import { useLoadUnloadMapContext } from '../../contexts/MapContext'
-import { roadSectionsLoadUnloadLayerId } from '../../contexts/mapLayersReducer'
+import useLoadUnloadMapContext, { MapLayerId } from '../../contexts/MapContext'
 import { useLoadUnloadPageContext } from '../../contexts/PageContext'
 
 export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
@@ -78,7 +77,7 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
     return null
   }
 
-  if (!activeMapLayers[roadSectionsLoadUnloadLayerId]) return null
+  if (!activeMapLayers[MapLayerId.roadSectionsLoadUnloadLayerId]) return null
 
   return (
     <GeoJSON

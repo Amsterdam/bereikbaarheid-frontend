@@ -3,16 +3,34 @@ import { createContext, Dispatch, useContext } from 'react'
 import { DetailFeatureAction, DetailFeatureState } from './detailFeatureReducer'
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 
-export type LoadUnloadMapContextProps = {
+enum MapLayerId {
+  loadUnloadLayerId = 'loadUnloadSpaces',
+  roadSectionsLoadUnloadLayerId = 'roadSectionsLoadUnload',
+  bollardsLayerId = 'bollards',
+}
+
+type LoadUnloadMapContextProps = {
   activeMapLayers: typeof mapLayersInitialState
   updateActiveMapLayers: Dispatch<mapLayerActionType>
   detailFeature: DetailFeatureState
   setDetailFeature: Dispatch<DetailFeatureAction>
 }
 
-export const LoadUnloadMapContext = createContext<LoadUnloadMapContextProps | undefined>(undefined)
+const layerFeatureProps = {
+  [MapLayerId.loadUnloadLayerId]: {
+    color: '#000',
+  },
+  [MapLayerId.roadSectionsLoadUnloadLayerId]: {
+    color: '#000',
+  },
+  [MapLayerId.bollardsLayerId]: {
+    color: 'purple',
+  },
+}
 
-export function useLoadUnloadMapContext() {
+const LoadUnloadMapContext = createContext<LoadUnloadMapContextProps | undefined>(undefined)
+
+function useLoadUnloadMapContext() {
   const context = useContext(LoadUnloadMapContext)
 
   if (context === undefined) {
@@ -21,3 +39,7 @@ export function useLoadUnloadMapContext() {
 
   return context
 }
+
+export type { LoadUnloadMapContextProps }
+export { MapLayerId, layerFeatureProps, LoadUnloadMapContext }
+export default useLoadUnloadMapContext

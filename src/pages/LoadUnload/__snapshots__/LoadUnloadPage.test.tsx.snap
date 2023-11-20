@@ -225,7 +225,7 @@ FAQ en contactgegevens"
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-lgjHQU jkpnfb gKLWWe leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-fatcLD jkpnfb lbGwxf leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -623,7 +623,7 @@ FAQ en contactgegevens"
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-cKXybt fkovPM"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-lgjHQU golTdm"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -818,6 +818,46 @@ FAQ en contactgegevens"
                             </p>
                           </div>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-hwdzOV juUYFW"
+                  >
+                    <div
+                      class="sc-krNlru ISieu"
+                    >
+                      <div
+                        class="sc-fyVfxW zIcYX"
+                      >
+                        <label
+                          class="sc-gFVvzn dbijgR"
+                          disabled=""
+                          for="bollards"
+                        >
+                          <span
+                            class="sc-brPLxw dGBiZJ"
+                          >
+                            Verzinkbare paaltjes
+                          </span>
+                          <span
+                            aria-disabled="true"
+                            class="sc-fHjqPf bzXOXV sc-cKXybt hvmebH"
+                            disabled=""
+                          >
+                            <span
+                              class="sc-aXZVg sc-hzhJZQ MrMbL crFTCz"
+                              data-testid="checkboxIcon"
+                              disabled=""
+                            />
+                            <input
+                              class="sc-fUnMCh cQYVve"
+                              disabled=""
+                              id="bollards"
+                              type="checkbox"
+                            />
+                          </span>
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -1112,7 +1152,7 @@ FAQ en contactgegevens"
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-lgjHQU jkpnfb gKLWWe leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-fatcLD jkpnfb lbGwxf leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1510,7 +1550,7 @@ FAQ en contactgegevens"
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-cKXybt fkovPM"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-lgjHQU golTdm"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -1705,6 +1745,46 @@ FAQ en contactgegevens"
                           </p>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="sc-hwdzOV juUYFW"
+                >
+                  <div
+                    class="sc-krNlru ISieu"
+                  >
+                    <div
+                      class="sc-fyVfxW zIcYX"
+                    >
+                      <label
+                        class="sc-gFVvzn dbijgR"
+                        disabled=""
+                        for="bollards"
+                      >
+                        <span
+                          class="sc-brPLxw dGBiZJ"
+                        >
+                          Verzinkbare paaltjes
+                        </span>
+                        <span
+                          aria-disabled="true"
+                          class="sc-fHjqPf bzXOXV sc-cKXybt hvmebH"
+                          disabled=""
+                        >
+                          <span
+                            class="sc-aXZVg sc-hzhJZQ MrMbL crFTCz"
+                            data-testid="checkboxIcon"
+                            disabled=""
+                          />
+                          <input
+                            class="sc-fUnMCh cQYVve"
+                            disabled=""
+                            id="bollards"
+                            type="checkbox"
+                          />
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </div>
