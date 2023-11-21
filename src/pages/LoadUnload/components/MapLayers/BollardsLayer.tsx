@@ -10,14 +10,13 @@ const BOLLARDS_ZOOM_LEVEL = 16
 function BollardsLayer() {
   const { activeMapLayers } = useLoadUnloadMapContext()
 
-  const { isLoading, error, isError, data } = useQuery({
+  const { isLoading, isError, data } = useQuery({
     enabled: true,
     queryKey: ['bollards'],
     queryFn: () => getBollards(),
   })
 
-  if (isError && error instanceof Error) console.error(error.message)
-  if (isLoading || !data) return null
+  if (isLoading || isError || !data) return null
   if (!activeMapLayers[MapLayerId.bollardsLayerId]) return null
 
   return (
