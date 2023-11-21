@@ -94,6 +94,7 @@
   },
   "_pageContact": {
     "title": "Contact en uitleg",
-    "description": "FAQ en contactgegevens"
+    "description": "FAQ en contactgegevens",
+    "faq": "Veel gevraagd"
   }
 }
