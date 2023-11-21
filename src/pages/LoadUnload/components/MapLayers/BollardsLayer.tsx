@@ -31,12 +31,13 @@ function BollardsLayer() {
             options={{
               icon: L.divIcon({
                 html: `<div style="
+                  border: 1px solid white;
                   border-radius: 50%;
                   background-color: ${layerFeatureProps[MapLayerId.bollardsLayerId].color};
                   width: 100%;
                   height: 100%;
                 " />`,
-                iconSize: [6, 6],
+                iconSize: [12, 12],
               }),
             }}
           />

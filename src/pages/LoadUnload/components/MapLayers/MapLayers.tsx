@@ -19,15 +19,11 @@ export const LoadUnloadMapLayers = () => {
 
   const mapInstance = useMapInstance()
   useEffect(() => {
-    mapInstance.on('zoomend', event => {
-      const zoomlvl = mapInstance.getZoom()
-      if (zoomlvl >= BOLLARDS_ZOOM_LEVEL) {
-        updateActiveMapLayers({ type: 'ON', layerId: MapLayerId.bollardsLayerId })
-        // updateActiveMapLayers({ type: 'ON', layerId: MapLayerId.loadUnloadLayerId })
-      } else {
-        updateActiveMapLayers({ type: 'OFF', layerId: MapLayerId.bollardsLayerId })
-        // updateActiveMapLayers({ type: 'OFF', layerId: MapLayerId.loadUnloadLayerId })
-      }
+    mapInstance.on('zoomend', () => {
+      updateActiveMapLayers({
+        type: mapInstance.getZoom() >= BOLLARDS_ZOOM_LEVEL ? 'ON' : 'OFF',
+        layerId: MapLayerId.bollardsLayerId,
+      })
     })
   }, [mapInstance, updateActiveMapLayers])
 
