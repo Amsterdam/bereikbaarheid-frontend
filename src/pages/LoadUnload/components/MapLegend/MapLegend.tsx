@@ -5,7 +5,6 @@ import { useMapInstance } from '@amsterdam/react-maps'
 import { useTranslation } from 'react-i18next'
 import { MapLegend } from 'shared/components/MapLegend'
 import { MapLegendLoadUnloadSpaces } from 'shared/components/MapLegendLoadUnloadSpaces'
-import { LegendItemsWrapper } from 'shared/components/MapLegendStyles'
 import styled from 'styled-components'
 
 import useLoadUnloadMapContext, { MapLayerId, layerFeatureProps } from '../../contexts/MapContext'
@@ -51,32 +50,30 @@ export const LoadUnloadMapLegend = () => {
 
       <Row halign="flex-start" hasMargin={false}>
         <Column span={12}>
-          <LoadUnloadMapLegendRoadSectionsLoadUnload />
+          <CompactThemeProvider>
+            <Label
+              htmlFor={MapLayerId.bollardsLayerId}
+              label={t('_pageLoadUnload._legend.bollards')}
+              disabled={bollardsAreDisabled}
+            >
+              <StyledCheckbox
+                id={MapLayerId.bollardsLayerId}
+                onChange={() => {
+                  updateActiveMapLayers({
+                    type: 'TOGGLE',
+                    layerId: MapLayerId.bollardsLayerId,
+                  })
+                }}
+                checked={activeMapLayers[MapLayerId.bollardsLayerId]}
+              />
+            </Label>
+          </CompactThemeProvider>
         </Column>
       </Row>
 
       <Row halign="flex-start" hasMargin={false}>
         <Column span={12}>
-          <CompactThemeProvider>
-            <LegendItemsWrapper>
-              <Label
-                htmlFor={MapLayerId.bollardsLayerId}
-                label={t('_pageLoadUnload._legend.bollards')}
-                disabled={bollardsAreDisabled}
-              >
-                <StyledCheckbox
-                  id={MapLayerId.bollardsLayerId}
-                  onChange={() => {
-                    updateActiveMapLayers({
-                      type: 'TOGGLE',
-                      layerId: MapLayerId.bollardsLayerId,
-                    })
-                  }}
-                  checked={activeMapLayers[MapLayerId.bollardsLayerId]}
-                />
-              </Label>
-            </LegendItemsWrapper>
-          </CompactThemeProvider>
+          <LoadUnloadMapLegendRoadSectionsLoadUnload />
         </Column>
       </Row>
     </MapLegend>

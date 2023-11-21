@@ -1,5 +1,7 @@
 import { createContext, Dispatch, useContext } from 'react'
 
+import { themeColor } from '@amsterdam/asc-ui'
+
 import { DetailFeatureAction, DetailFeatureState } from './detailFeatureReducer'
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 
@@ -24,7 +26,7 @@ const layerFeatureProps = {
     color: '#000',
   },
   [MapLayerId.bollardsLayerId]: {
-    color: 'purple',
+    color: 'rgb(255, 145, 0)',
   },
 }
 

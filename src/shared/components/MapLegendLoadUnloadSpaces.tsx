@@ -43,7 +43,7 @@ export const MapLegendLoadUnloadSpaces = ({ checked, onChange }: MapLegendLoadUn
   return (
     <StyledLabel disabled={isDisabled} htmlFor="mapLegendLoadUnloadSpaces" label={loadUnloadSpaces.label}>
       <Legend />
-      <Checkbox id="mapLegendLoadUnloadSpaces" onChange={onChange} checked={checked} />
+      <Checkbox id="mapLegendLoadUnloadSpaces" onChange={onChange} checked={!isDisabled && checked} />
     </StyledLabel>
   )
 }

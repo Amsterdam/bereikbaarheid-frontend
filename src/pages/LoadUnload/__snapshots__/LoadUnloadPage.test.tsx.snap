@@ -679,7 +679,7 @@ FAQ en contactgegevens"
                       class="sc-krNlru ISieu"
                     >
                       <label
-                        class="sc-gFVvzn xLgwd sc-ijDOKB brxyyG"
+                        class="sc-gFVvzn dbijgR sc-ijDOKB brxyyG"
                         disabled=""
                         for="mapLegendLoadUnloadSpaces"
                       >
@@ -698,27 +698,50 @@ FAQ en contactgegevens"
                           disabled=""
                         >
                           <span
-                            class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                            class="sc-aXZVg sc-hzhJZQ MrMbL crFTCz"
                             data-testid="checkboxIcon"
                             disabled=""
-                          >
-                            <svg
-                              focusable="false"
-                              role="img"
-                              viewBox="0 0 32 32"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
-                                fill-rule="evenodd"
-                              />
-                            </svg>
-                          </span>
+                          />
                           <input
-                            checked=""
                             class="sc-fUnMCh cQYVve"
                             disabled=""
                             id="mapLegendLoadUnloadSpaces"
+                            type="checkbox"
+                          />
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div
+                    class="sc-hwdzOV juUYFW"
+                  >
+                    <div
+                      class="sc-krNlru ISieu"
+                    >
+                      <label
+                        class="sc-gFVvzn dbijgR"
+                        disabled=""
+                        for="bollards"
+                      >
+                        <span
+                          class="sc-brPLxw dGBiZJ"
+                        >
+                          Verzinkbare paaltjes
+                        </span>
+                        <span
+                          aria-disabled="true"
+                          class="sc-fHjqPf bzXOXV sc-cKXybt hvmebH"
+                          disabled=""
+                        >
+                          <span
+                            class="sc-aXZVg sc-hzhJZQ MrMbL crFTCz"
+                            data-testid="checkboxIcon"
+                            disabled=""
+                          />
+                          <input
+                            class="sc-fUnMCh cQYVve"
+                            disabled=""
+                            id="bollards"
                             type="checkbox"
                           />
                         </span>
@@ -818,46 +841,6 @@ FAQ en contactgegevens"
                             </p>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="sc-hwdzOV juUYFW"
-                  >
-                    <div
-                      class="sc-krNlru ISieu"
-                    >
-                      <div
-                        class="sc-fyVfxW zIcYX"
-                      >
-                        <label
-                          class="sc-gFVvzn dbijgR"
-                          disabled=""
-                          for="bollards"
-                        >
-                          <span
-                            class="sc-brPLxw dGBiZJ"
-                          >
-                            Verzinkbare paaltjes
-                          </span>
-                          <span
-                            aria-disabled="true"
-                            class="sc-fHjqPf bzXOXV sc-cKXybt hvmebH"
-                            disabled=""
-                          >
-                            <span
-                              class="sc-aXZVg sc-hzhJZQ MrMbL crFTCz"
-                              data-testid="checkboxIcon"
-                              disabled=""
-                            />
-                            <input
-                              class="sc-fUnMCh cQYVve"
-                              disabled=""
-                              id="bollards"
-                              type="checkbox"
-                            />
-                          </span>
-                        </label>
                       </div>
                     </div>
                   </div>
@@ -1606,7 +1589,7 @@ FAQ en contactgegevens"
                     class="sc-krNlru ISieu"
                   >
                     <label
-                      class="sc-gFVvzn xLgwd sc-ijDOKB brxyyG"
+                      class="sc-gFVvzn dbijgR sc-ijDOKB brxyyG"
                       disabled=""
                       for="mapLegendLoadUnloadSpaces"
                     >
@@ -1625,27 +1608,50 @@ FAQ en contactgegevens"
                         disabled=""
                       >
                         <span
-                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          class="sc-aXZVg sc-hzhJZQ MrMbL crFTCz"
                           data-testid="checkboxIcon"
                           disabled=""
-                        >
-                          <svg
-                            focusable="false"
-                            role="img"
-                            viewBox="0 0 32 32"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
-                              fill-rule="evenodd"
-                            />
-                          </svg>
-                        </span>
+                        />
                         <input
-                          checked=""
                           class="sc-fUnMCh cQYVve"
                           disabled=""
                           id="mapLegendLoadUnloadSpaces"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div
+                  class="sc-hwdzOV juUYFW"
+                >
+                  <div
+                    class="sc-krNlru ISieu"
+                  >
+                    <label
+                      class="sc-gFVvzn dbijgR"
+                      disabled=""
+                      for="bollards"
+                    >
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Verzinkbare paaltjes
+                      </span>
+                      <span
+                        aria-disabled="true"
+                        class="sc-fHjqPf bzXOXV sc-cKXybt hvmebH"
+                        disabled=""
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL crFTCz"
+                          data-testid="checkboxIcon"
+                          disabled=""
+                        />
+                        <input
+                          class="sc-fUnMCh cQYVve"
+                          disabled=""
+                          id="bollards"
                           type="checkbox"
                         />
                       </span>
@@ -1745,46 +1751,6 @@ FAQ en contactgegevens"
                           </p>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="sc-hwdzOV juUYFW"
-                >
-                  <div
-                    class="sc-krNlru ISieu"
-                  >
-                    <div
-                      class="sc-fyVfxW zIcYX"
-                    >
-                      <label
-                        class="sc-gFVvzn dbijgR"
-                        disabled=""
-                        for="bollards"
-                      >
-                        <span
-                          class="sc-brPLxw dGBiZJ"
-                        >
-                          Verzinkbare paaltjes
-                        </span>
-                        <span
-                          aria-disabled="true"
-                          class="sc-fHjqPf bzXOXV sc-cKXybt hvmebH"
-                          disabled=""
-                        >
-                          <span
-                            class="sc-aXZVg sc-hzhJZQ MrMbL crFTCz"
-                            data-testid="checkboxIcon"
-                            disabled=""
-                          />
-                          <input
-                            class="sc-fUnMCh cQYVve"
-                            disabled=""
-                            id="bollards"
-                            type="checkbox"
-                          />
-                        </span>
-                      </label>
                     </div>
                   </div>
                 </div>
