@@ -1,7 +1,5 @@
 import { createContext, Dispatch, useContext } from 'react'
 
-import { themeColor } from '@amsterdam/asc-ui'
-
 import { DetailFeatureAction, DetailFeatureState } from './detailFeatureReducer'
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 

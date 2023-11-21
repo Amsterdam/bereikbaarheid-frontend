@@ -17,10 +17,10 @@ export const LoadUnloadMapLegendRoadSectionsLoadUnload = () => {
           onChange={() =>
             updateActiveMapLayers({
               type: 'TOGGLE',
-              layerId: MapLayerId.loadUnloadLayerId,
+              layerId: MapLayerId.roadSectionsLoadUnloadLayerId,
             })
           }
-          checked={activeMapLayers[MapLayerId.loadUnloadLayerId]}
+          checked={activeMapLayers[MapLayerId.roadSectionsLoadUnloadLayerId]}
         />
       </Label>
 

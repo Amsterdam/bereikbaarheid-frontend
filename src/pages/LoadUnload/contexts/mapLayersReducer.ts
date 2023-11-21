@@ -1,7 +1,5 @@
 import { MapLayerId } from './MapContext'
 
-export const roadSectionsLoadUnloadLayerId = 'roadSectionsLoadUnload'
-
 export const mapLayersInitialState = {
   [MapLayerId.loadUnloadLayerId]: true,
   [MapLayerId.roadSectionsLoadUnloadLayerId]: true,
