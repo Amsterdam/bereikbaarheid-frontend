@@ -8,7 +8,7 @@ interface Bollard extends Feature {
 }
 
 interface BollardCollection extends FeatureCollection {
-  features: [] | Bollard[]
+  features: Bollard[]
 }
 
 const ENDPOINT = 'v1/bollards'
