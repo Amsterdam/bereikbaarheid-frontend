@@ -112,7 +112,6 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
                             <TableCell as="th">dagen</TableCell>
                             <TableCell as="th">van</TableCell>
                             <TableCell as="th">tot</TableCell>
-                            <TableCell as="th"></TableCell>
                           </TableRow>
                         </TableHeader>
 
@@ -125,21 +124,6 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
                                 {item.start_time && <TableCell>{stripSecondsFromTime(item.start_time)}</TableCell>}
 
                                 {item.end_time && <TableCell>{stripSecondsFromTime(item.end_time)}</TableCell>}
-
-                                {item.additional_info === 'E01' || item.additional_info === 'E02' ? (
-                                  <TableCell>
-                                    <Image
-                                      src={SignCodeToImg[item.additional_info]}
-                                      style={{
-                                        marginTop: '4px',
-                                        width: '28px',
-                                        height: '28px',
-                                      }}
-                                    />
-                                  </TableCell>
-                                ) : (
-                                  <></>
-                                )}
                               </TableRow>
                             )
                           })}
