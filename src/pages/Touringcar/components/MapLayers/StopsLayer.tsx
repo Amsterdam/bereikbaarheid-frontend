@@ -17,7 +17,6 @@ export const StopsLayer = () => {
   const {
     activeMapLayers,
     setCurrentStop,
-    setCurrentParkingSpace,
     // setActiveTab,
   } = useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
@@ -35,12 +34,10 @@ export const StopsLayer = () => {
 
   const findStop = useCallback(
     (id: number) => {
-      let Stop = data?.features.find(item => item.properties?.id === id)
-
-      setCurrentParkingSpace(undefined)
-      setCurrentStop(Stop)
+      const stop = data?.features.find(item => item.properties?.id === id)
+      setCurrentStop(stop)
     },
-    [data?.features, setCurrentParkingSpace, setCurrentStop]
+    [data?.features, setCurrentStop]
   )
 
   const createClusterMarkers = () => {

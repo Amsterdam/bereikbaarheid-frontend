@@ -72,13 +72,21 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
     setBlockURLParamsMutation(false)
   }, [blockURLParamsMutation, queryParams, setQueryParams, activeMapLayers])
 
-  const [currentStop, setCurrentStop] = useState<TouringcarStop | undefined>(undefined)
+  const [currentStop, doSetCurrentStop] = useState<TouringcarStop | undefined>(undefined)
+  const setCurrentStop = useCallback((stop?: TouringcarStop) => {
+    doSetCurrentParkingSpace(undefined)
+    doSetCurrentStop(stop)
+  }, [])
 
-  const [currentParkingSpace, setCurrentParkingSpace] = useState<TouringcarParkingSpace | undefined>(undefined)
+  const [currentParkingSpace, doSetCurrentParkingSpace] = useState<TouringcarParkingSpace | undefined>(undefined)
+  const setCurrentParkingSpace = useCallback((parkingSpace?: TouringcarParkingSpace) => {
+    doSetCurrentStop(undefined)
+    doSetCurrentParkingSpace(parkingSpace)
+  }, [])
 
   const unsetDetailsPane = useCallback(() => {
-    setCurrentStop(undefined)
-    setCurrentParkingSpace(undefined)
+    doSetCurrentStop(undefined)
+    doSetCurrentParkingSpace(undefined)
   }, [])
 
   const [activeTab, setActiveTab] = useState<MapPanelTab | undefined>(undefined)

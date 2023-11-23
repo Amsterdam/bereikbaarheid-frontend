@@ -16,7 +16,6 @@ import TouringcarMarker from '../Marker/Marker'
 export const ParkingSpacesLayer = () => {
   const {
     activeMapLayers,
-    setCurrentStop,
     setCurrentParkingSpace,
     // setActiveTab,
   } = useTouringcarMapContext()
@@ -35,12 +34,10 @@ export const ParkingSpacesLayer = () => {
 
   const findParkingSpace = useCallback(
     (id: number) => {
-      let parkingSpace = data?.features.find(item => item.properties?.id === id)
-
-      setCurrentStop(undefined)
+      const parkingSpace = data?.features.find(item => item.properties?.id === id)
       setCurrentParkingSpace(parkingSpace)
     },
-    [data?.features, setCurrentStop, setCurrentParkingSpace]
+    [data?.features, setCurrentParkingSpace]
   )
 
   const createClusterMarkers = () => {
