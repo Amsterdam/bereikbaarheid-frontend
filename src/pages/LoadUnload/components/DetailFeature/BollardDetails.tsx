@@ -19,6 +19,13 @@ function BollardDetails({ bollard }: { bollard: Bollard }) {
   return (
     <PropContainer data-testid="detail-feature-road-section">
       <CompactThemeProvider>
+        {bollard.properties.id && (
+          <Row halign="flex-start" hasMargin={false} valign="center">
+            <Column span={6}>ID</Column>
+            <Column span={6}>{bollard.properties.id}</Column>
+          </Row>
+        )}
+
         {bollard.properties.type && (
           <Row halign="flex-start" hasMargin={false} valign="center">
             <Column span={6}>Type</Column>
