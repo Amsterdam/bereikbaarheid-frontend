@@ -19,7 +19,7 @@ const PaddedContent = styled.div`
 interface MapSettingsDisplayProps extends MapPanelContentProps {}
 
 function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps) {
-  const { activeTab, setActiveTab } = useTouringcarMapContext()
+  const { activeMapLayers, activeTab, setActiveTab } = useTouringcarMapContext()
   const { t } = useTranslation()
 
   return (
@@ -50,21 +50,25 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
             <Paragraph>{t('_pageTouringcar._mapPanel.payAttentionToVerhicleHeights')}</Paragraph>
           </PaddedContent>
 
-          <PaddedContent>
-            <PretendHeading forwardedAs="h2" isCompact={true}>
-              {t('_pageTouringcar._mapPanel.stops')}
-            </PretendHeading>
+          {activeMapLayers.touringcarStops && (
+            <PaddedContent>
+              <PretendHeading forwardedAs="h2" isCompact={true}>
+                {t('_pageTouringcar._mapPanel.stops')}
+              </PretendHeading>
 
-            <StopsList />
-          </PaddedContent>
+              <StopsList />
+            </PaddedContent>
+          )}
 
-          <PaddedContent>
-            <PretendHeading forwardedAs="h2" isCompact={true}>
-              {t('_pageTouringcar._mapPanel.parkingSpaces')}
-            </PretendHeading>
+          {activeMapLayers.touringcarParkingSpaces && (
+            <PaddedContent>
+              <PretendHeading forwardedAs="h2" isCompact={true}>
+                {t('_pageTouringcar._mapPanel.parkingSpaces')}
+              </PretendHeading>
 
-            <ParkingSpacesList />
-          </PaddedContent>
+              <ParkingSpacesList />
+            </PaddedContent>
+          )}
         </Tab>
 
         <Tab
