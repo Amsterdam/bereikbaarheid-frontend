@@ -24,7 +24,10 @@ import E01 from './images/E01.svg'
 import E02 from './images/E02.svg'
 
 const PaddedImageContainer = styled(ImageContainer)`
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1em;
+  gap: 1em;
 `
 
 const PropContainer = styled(PropertiesContainer)`
@@ -66,23 +69,35 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
   }, [roadSectionLoadUnload.properties.load_unload])
 
   const parkingSigns = useMemo(() => {
-    return roadSectionLoadUnload.properties.load_unload
-      .reduce((acc: ParkingSign[], cur: LoadUnloadRegime): ParkingSign[] => {
-        if (acc.includes(cur.additional_info as ParkingSign)) return acc
+    type ParkingSignsWithSubSignTuple = [ParkingSign[], string]
+
+    const parkingSignsWithSubSign = roadSectionLoadUnload.properties.load_unload.reduce(
+      (acc: ParkingSignsWithSubSignTuple, cur: LoadUnloadRegime): ParkingSignsWithSubSignTuple => {
+        if (acc[0].includes(cur.additional_info as ParkingSign)) return acc
         if (cur.additional_info === 'E01' || cur.additional_info === 'E02') {
-          return [...acc, cur.additional_info]
+          return [[...acc[0], cur.additional_info], acc[1] ? `${acc[1]}, ${cur.text}` : cur.text]
         }
         return acc
-      }, [])
-      .map((pS: ParkingSign) => <Image key={pS} src={SignCodeToImg[pS]} />)
+      },
+      [[] as ParkingSign[], '']
+    )
+
+    if (!parkingSignsWithSubSign?.[0].length) return null
+
+    return (
+      <>
+        {parkingSignsWithSubSign[0].map((pS: ParkingSign) => (
+          <Image key={pS} src={SignCodeToImg[pS]} />
+        ))}
+        <div>{parkingSignsWithSubSign[1]}</div>
+      </>
+    )
   }, [roadSectionLoadUnload.properties.load_unload])
 
   return (
     <>
-      {parkingSigns?.length ? (
+      {parkingSigns && (
         <PaddedImageContainer data-testid="detail-feature-road-section-sign">{parkingSigns}</PaddedImageContainer>
-      ) : (
-        <></>
       )}
 
       <PropContainer data-testid="detail-feature-road-section">
