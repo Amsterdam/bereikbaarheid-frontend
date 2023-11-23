@@ -44,6 +44,9 @@
     "description": "Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. ",
     "_mapPanel": {
       "label": "Voer adres en moment in of bekijk dataverantwoording"
+    },
+    "_legend": {
+      "bollards": "Verzinkbare paaltjes"
     }
   },
   "_linkTourBuzz": {
