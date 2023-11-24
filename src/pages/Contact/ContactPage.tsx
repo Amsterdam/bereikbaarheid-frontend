@@ -67,7 +67,7 @@ const FAQs = [
     a: 'Voor iedereen die met een gemotoriseerd voertuig meer informatie wil over bereikbaarheid op kenteken, specifieke informatie voor touringcarbestuurders, en specifieke informatie rondom laden en lossen.',
   },
   {
-    q: 'Ik zie geen laadlosvakken op de kaart?',
+    q: 'Ik zie geen laad- en losvakken op de kaart?',
     a: 'Logistiek informatie vindt u op de laden en lossen kaart. Zonder in te zoomen ziet u de venstertijden voor de straten, zodra u meer inzoomt op de kaart, komen de afzonderlijke laad- en losvakken tevoorschijn als kleine bruine vakjes. Wanneer u op een straat of vakje klikt, ziet u meer informatie over dagen en tijden waarop gelaad en gelost kan worden.',
   },
   {
