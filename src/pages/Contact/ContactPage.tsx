@@ -76,7 +76,7 @@ const FAQs = [
   },
   {
     q: 'Waarom moet ik een hoogte invoeren, ik voer toch al mijn kenteken in?',
-    a: 'Deze gegevens staan niet in de publiek toegankelijke gegevens van het RDW. Daarnaast kan het zijn dat u iets vervoert op het dak van uw voertuig, waardoor de hoogte, en dus andere verkeersborden voor uw situatie van toepassing worden.',
+    a: 'Deze gegevens staan niet in de publiek toegankelijke gegevens van het RDW. Daarnaast kan het zijn dat u iets vervoert op het dak van uw voertuig waardoor de hoogte verandert, en er dus andere verkeersborden voor uw situatie van toepassing worden.',
   },
   {
     q: 'Waarom moet ik lengte apart invoeren? Dat is toch bekend bij het RDW?',
