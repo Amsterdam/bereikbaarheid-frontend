@@ -1,6 +1,7 @@
 import { rest } from 'msw'
 
 import { ENDPOINT as ENDPOINT_ADDRESS_SEARCH } from '../src/api/atlas/search/address'
+import { ENDPOINT as ENDPOINT_BOLLARDS } from '../src/api/bereikbaarheid/bollards'
 import { ENDPOINT as ENDPOINT_ROAD_SECTION } from '../src/api/bereikbaarheid/road-elements'
 import { ENDPOINT as ENDPOINT_ROAD_OBSTRUCTIONS } from '../src/api/bereikbaarheid/road-obstructions'
 import { ENDPOINT as ENDPOINT_LOAD_UNLOAD } from '../src/api/bereikbaarheid/road-sections/load-unload'
@@ -40,6 +41,11 @@ export const handlers = [
   rest.get(`/${ENDPOINT_ROAD_OBSTRUCTIONS}`, (req, res, ctx) => {
     const roadObstructionsMock = getRoadObstructions(req.url.searchParams)
     return res(ctx.status(200), ctx.json(roadObstructionsMock))
+  }),
+
+  rest.get(`/${ENDPOINT_BOLLARDS}`, (_req, res, ctx) => {
+    const bollardsMock = require('./mocks/bereikbaarheid/stops/data.json')
+    return res(ctx.status(200), ctx.json(bollardsMock))
   }),
 
   rest.get(`/${ENDPOINT_ROAD_SECTION}:roadSectionId`, (req, res, ctx) => {

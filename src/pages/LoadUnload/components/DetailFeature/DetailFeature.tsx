@@ -5,7 +5,7 @@ import { DetailFeatureLoadUnloadSpace } from 'shared/components/DetailFeature/Lo
 import LoadingSpinner from 'shared/components/LoadingSpinner'
 
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
-import { useLoadUnloadMapContext } from '../../contexts/MapContext'
+import useLoadUnloadMapContext from '../../contexts/MapContext'
 import { useSearchForParkingSpace } from '../../hooks/useSearchForParkingSpace'
 
 import { LoadUnloadDetailFeatureRoadSectionLoadUnload } from './RoadSectionLoadUnload'

@@ -56,7 +56,7 @@ const TouringcarPage = () => {
         <MainContent data-testid="load-unload-page">
           <MapStyle />
 
-          <StyledMap options={{ ...defaultMapOptions, maxZoom: 21 }} setInstance={setMapInstance}>
+          <StyledMap options={{ ...defaultMapOptions, maxZoom: 21, zoom: 14 }} setInstance={setMapInstance}>
             <TouringcarMapProvider>
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}

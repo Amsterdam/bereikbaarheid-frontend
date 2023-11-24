@@ -2,7 +2,7 @@ import { MapLayerId } from './MapContext'
 
 type mapLayerActionType = {
   type: 'ON' | 'OFF' | 'TOGGLE'
-  layerId: keyof typeof mapLayersInitialState
+  layerId: MapLayerId
 }
 
 const mapLayersInitialState = {
