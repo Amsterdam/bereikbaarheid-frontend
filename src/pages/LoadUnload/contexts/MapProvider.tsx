@@ -12,10 +12,10 @@ export const LoadUnloadMapProvider = ({ children }: { children: ReactNode }) => 
   const [currentBollard, setCurrentBollard] = useState<Bollard | undefined>(undefined)
 
   useEffect(() => {
-    if ((detailFeature.feature || detailFeature.location) && currentBollard) {
+    if (detailFeature.feature || detailFeature.location) {
       setCurrentBollard(undefined)
     }
-  }, [currentBollard, detailFeature?.feature, detailFeature?.location])
+  }, [detailFeature?.feature, detailFeature?.location])
 
   return (
     <LoadUnloadMapContext.Provider
