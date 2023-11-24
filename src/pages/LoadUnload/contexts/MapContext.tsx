@@ -1,5 +1,7 @@
 import { createContext, Dispatch, useContext } from 'react'
 
+import { Bollard } from 'api/bereikbaarheid/bollards'
+
 import { DetailFeatureAction, DetailFeatureState } from './detailFeatureReducer'
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 
@@ -14,6 +16,8 @@ type LoadUnloadMapContextProps = {
   updateActiveMapLayers: Dispatch<mapLayerActionType>
   detailFeature: DetailFeatureState
   setDetailFeature: Dispatch<DetailFeatureAction>
+  currentBollard: Bollard | undefined
+  setCurrentBollard: Dispatch<Bollard | undefined>
 }
 
 const layerFeatureProps = {
