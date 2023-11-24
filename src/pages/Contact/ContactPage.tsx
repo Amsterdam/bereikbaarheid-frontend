@@ -48,7 +48,7 @@ const FAQs = [
   },
   {
     q: 'Deze gegevens staan toch al op Google Maps of Waze, wat voegt deze kaart toe?',
-    a: 'Routeplanners zoals Google Maps en Waze bieden algemene routeinformatie. Onze kaart levert specifieke gegevens die zijn afgestemd op uw voertuig en situatie.  Daarnaast toont onze bereikbaarheidskaart op basis van kentekeninvoer of en hoe u een ontheffing kunt aanvragen. Ook voor ondernemers of bewoners die gaanverhuizen, bieden wij inzicht in mogelijke laad- en losplekken. Daarnaast gebruiken Google en Waze juist de gegevens die de gemeenten aan deze partijen aanleveren, zoals de stremmingen en milieuzones. Wij leveren dus geen dubbel werk, dit werk doen wij sowieso al als stad. Door voertuigspecifieke informatie te delenhopen wij dat het voor u makkelijker maakt om de verkeersregels te volgen en, indien nodig, waar u een ontheffing kunt aanvragen.',
+    a: 'Routeplanners zoals Google Maps en Waze bieden algemene routeinformatie. Onze kaart levert specifieke gegevens die zijn afgestemd op uw voertuig en situatie. Daarnaast toont onze bereikbaarheidskaart op basis van kentekeninvoer of en hoe u een ontheffing kunt aanvragen. Ook voor ondernemers of bewoners die gaan verhuizen, bieden wij inzicht in mogelijke laad- en losplekken. Daarnaast gebruiken Google en Waze juist de gegevens die de gemeenten aan deze partijen aanleveren, zoals de stremmingen en milieuzones. Wij leveren dus geen dubbel werk, dit werk doen wij sowieso al als stad. Door voertuigspecifieke informatie te delen hopen wij het voor u makkelijker te kunnen maken om de verkeersregels te volgen en, indien nodig, aan te kunnen geven waar u een ontheffing kunt aanvragen.',
   },
   {
     q: 'Mag ik als personenauto ook parkeren op touringcarhaltes?',
