@@ -16,6 +16,7 @@ import styled from 'styled-components'
 
 import { LoadUnloadAddressForm } from './components/AddressForm'
 import { LoadUnloadDetailFeature } from './components/DetailFeature'
+import BollardDetailsFeature from './components/DetailFeature/BollardDetailFeature'
 import { LoadUnloadMapLayers } from './components/MapLayers'
 import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
 import { ModalDateTime } from './components/ModalDateTime'
@@ -72,6 +73,7 @@ const LoadUnloadPage = () => {
               >
                 <Element>
                   <LoadUnloadDetailFeature />
+                  <BollardDetailsFeature />
 
                   <LoadUnloadMapSettingsDisplay
                     setShowAddressForm={setShowAddressForm}

@@ -2,9 +2,19 @@ import { Feature, FeatureCollection, Point } from 'geojson'
 
 import { api } from '..'
 
+type DayOfTheWeek = 'ma' | 'di' | 'wo' | 'do' | 'vr' | 'za' | 'zo'
+
 interface Bollard extends Feature {
-  id: number
   geometry: Point
+  properties: {
+    id: string
+    type: string
+    location: string
+    days: DayOfTheWeek[]
+    window_times: string
+    entry_system: string
+    details: string
+  }
 }
 
 interface BollardCollection extends FeatureCollection {

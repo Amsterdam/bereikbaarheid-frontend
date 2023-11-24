@@ -11,6 +11,7 @@ import useLoadUnloadMapContext, { MapLayerId } from '../../contexts/MapContext'
 export const LoadUnloadLoadUnloadSpacesLayer = () => {
   const mapInstance = useMapInstance()
   const { activeMapLayers, setDetailFeature } = useLoadUnloadMapContext()
+
   const onClick = useCallback(
     (e: LeafletMouseEvent) => {
       if (mapInstance.getZoom() >= loadUnloadSpaces.options.minZoom!) {
@@ -33,5 +34,5 @@ export const LoadUnloadLoadUnloadSpacesLayer = () => {
 
   if (!activeMapLayers[MapLayerId.loadUnloadLayerId]) return null
 
-  return <NonTiledLayer url={loadUnloadSpaces.url} options={loadUnloadSpaces.options}></NonTiledLayer>
+  return <NonTiledLayer url={loadUnloadSpaces.url} options={loadUnloadSpaces.options} />
 }
