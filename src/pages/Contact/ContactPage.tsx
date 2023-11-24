@@ -68,7 +68,7 @@ const FAQs = [
   },
   {
     q: 'Ik zie geen laad- en losvakken op de kaart?',
-    a: 'Logistiek informatie vindt u op de laden en lossen kaart. Zonder in te zoomen ziet u de venstertijden voor de straten, zodra u meer inzoomt op de kaart, komen de afzonderlijke laad- en losvakken tevoorschijn als kleine bruine vakjes. Wanneer u op een straat of vakje klikt, ziet u meer informatie over dagen en tijden waarop gelaad en gelost kan worden.',
+    a: 'Logistieke informatie vindt u op de ʼladen en lossenʼ-kaart. Zonder in te zoomen ziet u de venstertijden voor de straten, zodra u meer inzoomt op de kaart, komen de afzonderlijke laad- en losvakken tevoorschijn als kleine bruine vakjes. Wanneer u op een straat of vakje klikt, ziet u meer informatie over dagen en tijden waarop geladen en gelost kan worden.',
   },
   {
     q: 'Bij de venstertijdenkaart staat er een dag en tijd, maar ik wil een andere dag en tijdstip, hoe pas ik dat aan?',
