@@ -51,7 +51,7 @@ const FAQs = [
     a: 'Routeplanners zoals Google Maps en Waze bieden algemene routeinformatie. Onze kaart levert specifieke gegevens die zijn afgestemd op uw voertuig en situatie. Daarnaast toont onze bereikbaarheidskaart op basis van kentekeninvoer of en hoe u een ontheffing kunt aanvragen. Ook voor ondernemers of bewoners die gaan verhuizen, bieden wij inzicht in mogelijke laad- en losplekken. Daarnaast gebruiken Google en Waze juist de gegevens die de gemeenten aan deze partijen aanleveren, zoals de stremmingen en milieuzones. Wij leveren dus geen dubbel werk, dit werk doen wij sowieso al als stad. Door voertuigspecifieke informatie te delen hopen wij het voor u makkelijker te kunnen maken om de verkeersregels te volgen en, indien nodig, aan te kunnen geven waar u een ontheffing kunt aanvragen.',
   },
   {
-    q: 'Mag ik als personenauto ook parkeren op touringcarhaltes?',
+    q: 'Mag ik met mijn personenauto ook parkeren op touringcarhaltes?',
     a: 'Voor meer informatie over halteren en parkeren voor touringcars, kunt u deze website raadplegen <a href="https://www.amsterdam.nl/veelgevraagd/een-touringcar-parkeren-of-halteren-ff8e6" target="_blank">https://www.amsterdam.nl/veelgevraagd/een-touringcar-parkeren-of-halteren-ff8e6</a>',
   },
   {
