@@ -11,6 +11,7 @@ export interface LoadUnloadRegime {
   direction: string
   start_time: TimeHumanReadable_Hours_Minutes_Seconds | null
   end_time: TimeHumanReadable_Hours_Minutes_Seconds | null
+  text: string
 }
 
 export interface RoadSectionLoadUnload extends Feature {
