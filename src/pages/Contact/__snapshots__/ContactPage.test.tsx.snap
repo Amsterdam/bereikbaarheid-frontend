@@ -221,7 +221,7 @@ FAQ en contactgegevens"
           </header>
         </div>
         <main
-          class="sc-bfhvDw sc-dwalKd cMHqqc fsRSJJ"
+          class="sc-bfhvDw sc-dwalKd cMHqqc jsPFFN"
         >
           <div
             class="sc-BQMaI dmQbTq"
@@ -290,6 +290,179 @@ FAQ en contactgegevens"
               </span>
               Vraag indienen
             </a>
+          </div>
+          <h2
+            class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM"
+          >
+            Veel gevraagd
+          </h2>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Er is een verschil tussen jullie kaart en de situatie op straat, aan welke regels dien ik mij te houden?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              De situatie op straat is juridisch geldig, dus volg altijd de borden op straat ingeval dat afwijkt van de digitale kaart.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Waarom vragen jullie een kenteken voor de bereikbaarheidskaart?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              Met één kenteken vullen wij voor u alvast bijna 10 kenmerken als standaardlengte, hoogte, breedte, aslast in. Hierdoor kunnen wij u direct een voertuigspecifiek bereikbaarheidsantwoord geven. U kunt deze gegevens vervolgens zelf nog aanpassen, bijvoorbeeld als u zware lading gaat vervoeren of een aanhanger toevoegt.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Ik krijg niet alle databronnen geopend, waarom niet?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              De databronnen zijn heel handig voor professioneel logistieke planners die dit bijvoorbeeld in hun software kunnen laden. Grote kans dat u de benodigde programma’s om deze gegevens te lezen niet op uw apparaat heeft geïnstalleerd. Daarom hebben we de kaart ontwikkeld, die dezelfde gegevens gebruikt en voor iedereen toegankelijk is. Of u nu werkt op een laptop, vaste computer of telefoon.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Hoe houden jullie deze kaart up to date?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              Zodra de situatie op straat veranderd, zal dit ook in de kaart moeten worden doorgevoerd. Sommige gegevens gaan bijna automatisch, andere informatie moet (nog) handmatig worden toegevoegd. Wij doen ons best dit zo goed en snel mogelijk te doen.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Deze gegevens staan toch al op Google Maps of Waze, wat voegt deze kaart toe?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              Routeplanners zoals Google Maps en Waze bieden algemene routeinformatie. Onze kaart levert specifieke gegevens die zijn afgestemd op uw voertuig en situatie.  Daarnaast toont onze bereikbaarheidskaart op basis van kentekeninvoer of en hoe u een ontheffing kunt aanvragen. Ook voor ondernemers of bewoners die gaanverhuizen, bieden wij inzicht in mogelijke laad- en losplekken. Daarnaast gebruiken Google en Waze juist de gegevens die de gemeenten aan deze partijen aanleveren, zoals de stremmingen en milieuzones. Wij leveren dus geen dubbel werk, dit werk doen wij sowieso al als stad. Door voertuigspecifieke informatie te delenhopen wij dat het voor u makkelijker maakt om de verkeersregels te volgen en, indien nodig, waar u een ontheffing kunt aanvragen.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Mag ik als personenauto ook parkeren op touringcarhaltes?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              Voor meer informatie over halteren en parkeren voor touringcars, kunt u deze website raadplegen 
+              <a
+                href="https://www.amsterdam.nl/veelgevraagd/een-touringcar-parkeren-of-halteren-ff8e6"
+                target="_blank"
+              >
+                https://www.amsterdam.nl/veelgevraagd/een-touringcar-parkeren-of-halteren-ff8e6
+              </a>
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Op de kaart staat dat ik een ontheffing moet aanvragen, wat als ik dat niet doe?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              Het kan zijn dat u met uw voertuig dan bijvoorbeeld schade toebrengt aan kwetsbare bruggen of kademuren, de bovenkant van een tunnel, of niet met uw voertuig bij uw bestemming kunt komen. Daarnaast loopt u de kans op een boete.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Hoe werkt dat ook alweer met de milieuzone en zero emissiezone in Amsterdam?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              Hier vindt u meer informatie over de milieuzones en de gefaseerde invoering van uitstootvrije zones per verschillende voertuigcategorie: 
+              <a
+                href="https://www.amsterdam.nl/verkeer-vervoer/milieuzone-amsterdam/#PagCls_17152255"
+                target="_blank"
+              >
+                https://www.amsterdam.nl/verkeer-vervoer/milieuzone-amsterdam/#PagCls_17152255
+              </a>
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Voor wie is deze website?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              Voor iedereen die met een gemotoriseerd voertuig meer informatie wil over bereikbaarheid op kenteken, specifieke informatie voor touringcarbestuurders, en specifieke informatie rondom laden en lossen.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Ik zie geen laadlosvakken op de kaart?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              Logistiek informatie vindt u op de laden en lossen kaart. Zonder in te zoomen ziet u de venstertijden voor de straten, zodra u meer inzoomt op de kaart, komen de afzonderlijke laad- en losvakken tevoorschijn als kleine bruine vakjes. Wanneer u op een straat of vakje klikt, ziet u meer informatie over dagen en tijden waarop gelaad en gelost kan worden.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Bij de venstertijdenkaart staat er een dag en tijd, maar ik wil een andere dag en tijdstip, hoe pas ik dat aan?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              De kaart gebruikt standaard de dag dat u de kaart raadpleegt, met een laad- en lostijd tussen 11.00 en 13.00 uur. Aan de linkerkant van de kaart is het mogelijk om via de tab ‘Invoer’ de datum en tijd aan te passen.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Waarom moet ik een hoogte invoeren, ik voer toch al mijn kenteken in?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              Deze gegevens staan niet in de publiek toegankelijke gegevens van het RDW. Daarnaast kan het zijn dat u iets vervoert op het dak van uw voertuig, waardoor de hoogte, en dus andere verkeersborden voor uw situatie van toepassing worden.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+            >
+              Waarom moet ik lengte apart invoeren? Dat is toch bekend bij het RDW?
+            </h4>
+            <p
+              class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+            >
+              Het kan zijn dat u een aanhanger toevoegt aan bijvoorbeeld uw personenauto, waardoor er andere verkeersborden voor uw situatie gaan gelden. Deze gegevens zijn belangrijk om de voor u relevante verkeersborden te tonen.
+            </p>
           </div>
         </main>
       </div>
@@ -512,7 +685,7 @@ FAQ en contactgegevens"
         </header>
       </div>
       <main
-        class="sc-bfhvDw sc-dwalKd cMHqqc fsRSJJ"
+        class="sc-bfhvDw sc-dwalKd cMHqqc jsPFFN"
       >
         <div
           class="sc-BQMaI dmQbTq"
@@ -581,6 +754,179 @@ FAQ en contactgegevens"
             </span>
             Vraag indienen
           </a>
+        </div>
+        <h2
+          class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM"
+        >
+          Veel gevraagd
+        </h2>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Er is een verschil tussen jullie kaart en de situatie op straat, aan welke regels dien ik mij te houden?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            De situatie op straat is juridisch geldig, dus volg altijd de borden op straat ingeval dat afwijkt van de digitale kaart.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Waarom vragen jullie een kenteken voor de bereikbaarheidskaart?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            Met één kenteken vullen wij voor u alvast bijna 10 kenmerken als standaardlengte, hoogte, breedte, aslast in. Hierdoor kunnen wij u direct een voertuigspecifiek bereikbaarheidsantwoord geven. U kunt deze gegevens vervolgens zelf nog aanpassen, bijvoorbeeld als u zware lading gaat vervoeren of een aanhanger toevoegt.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Ik krijg niet alle databronnen geopend, waarom niet?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            De databronnen zijn heel handig voor professioneel logistieke planners die dit bijvoorbeeld in hun software kunnen laden. Grote kans dat u de benodigde programma’s om deze gegevens te lezen niet op uw apparaat heeft geïnstalleerd. Daarom hebben we de kaart ontwikkeld, die dezelfde gegevens gebruikt en voor iedereen toegankelijk is. Of u nu werkt op een laptop, vaste computer of telefoon.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Hoe houden jullie deze kaart up to date?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            Zodra de situatie op straat veranderd, zal dit ook in de kaart moeten worden doorgevoerd. Sommige gegevens gaan bijna automatisch, andere informatie moet (nog) handmatig worden toegevoegd. Wij doen ons best dit zo goed en snel mogelijk te doen.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Deze gegevens staan toch al op Google Maps of Waze, wat voegt deze kaart toe?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            Routeplanners zoals Google Maps en Waze bieden algemene routeinformatie. Onze kaart levert specifieke gegevens die zijn afgestemd op uw voertuig en situatie.  Daarnaast toont onze bereikbaarheidskaart op basis van kentekeninvoer of en hoe u een ontheffing kunt aanvragen. Ook voor ondernemers of bewoners die gaanverhuizen, bieden wij inzicht in mogelijke laad- en losplekken. Daarnaast gebruiken Google en Waze juist de gegevens die de gemeenten aan deze partijen aanleveren, zoals de stremmingen en milieuzones. Wij leveren dus geen dubbel werk, dit werk doen wij sowieso al als stad. Door voertuigspecifieke informatie te delenhopen wij dat het voor u makkelijker maakt om de verkeersregels te volgen en, indien nodig, waar u een ontheffing kunt aanvragen.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Mag ik als personenauto ook parkeren op touringcarhaltes?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            Voor meer informatie over halteren en parkeren voor touringcars, kunt u deze website raadplegen 
+            <a
+              href="https://www.amsterdam.nl/veelgevraagd/een-touringcar-parkeren-of-halteren-ff8e6"
+              target="_blank"
+            >
+              https://www.amsterdam.nl/veelgevraagd/een-touringcar-parkeren-of-halteren-ff8e6
+            </a>
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Op de kaart staat dat ik een ontheffing moet aanvragen, wat als ik dat niet doe?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            Het kan zijn dat u met uw voertuig dan bijvoorbeeld schade toebrengt aan kwetsbare bruggen of kademuren, de bovenkant van een tunnel, of niet met uw voertuig bij uw bestemming kunt komen. Daarnaast loopt u de kans op een boete.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Hoe werkt dat ook alweer met de milieuzone en zero emissiezone in Amsterdam?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            Hier vindt u meer informatie over de milieuzones en de gefaseerde invoering van uitstootvrije zones per verschillende voertuigcategorie: 
+            <a
+              href="https://www.amsterdam.nl/verkeer-vervoer/milieuzone-amsterdam/#PagCls_17152255"
+              target="_blank"
+            >
+              https://www.amsterdam.nl/verkeer-vervoer/milieuzone-amsterdam/#PagCls_17152255
+            </a>
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Voor wie is deze website?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            Voor iedereen die met een gemotoriseerd voertuig meer informatie wil over bereikbaarheid op kenteken, specifieke informatie voor touringcarbestuurders, en specifieke informatie rondom laden en lossen.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Ik zie geen laadlosvakken op de kaart?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            Logistiek informatie vindt u op de laden en lossen kaart. Zonder in te zoomen ziet u de venstertijden voor de straten, zodra u meer inzoomt op de kaart, komen de afzonderlijke laad- en losvakken tevoorschijn als kleine bruine vakjes. Wanneer u op een straat of vakje klikt, ziet u meer informatie over dagen en tijden waarop gelaad en gelost kan worden.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Bij de venstertijdenkaart staat er een dag en tijd, maar ik wil een andere dag en tijdstip, hoe pas ik dat aan?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            De kaart gebruikt standaard de dag dat u de kaart raadpleegt, met een laad- en lostijd tussen 11.00 en 13.00 uur. Aan de linkerkant van de kaart is het mogelijk om via de tab ‘Invoer’ de datum en tijd aan te passen.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Waarom moet ik een hoogte invoeren, ik voer toch al mijn kenteken in?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            Deze gegevens staan niet in de publiek toegankelijke gegevens van het RDW. Daarnaast kan het zijn dat u iets vervoert op het dak van uw voertuig, waardoor de hoogte, en dus andere verkeersborden voor uw situatie van toepassing worden.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="sc-jEACwC fvddPB sc-kOPcWz btvUtM"
+          >
+            Waarom moet ik lengte apart invoeren? Dat is toch bekend bij het RDW?
+          </h4>
+          <p
+            class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+          >
+            Het kan zijn dat u een aanhanger toevoegt aan bijvoorbeeld uw personenauto, waardoor er andere verkeersborden voor uw situatie gaan gelden. Deze gegevens zijn belangrijk om de voor u relevante verkeersborden te tonen.
+          </p>
         </div>
       </main>
     </div>
