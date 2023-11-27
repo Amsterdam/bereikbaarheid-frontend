@@ -32,7 +32,7 @@ const QUESTION_BODY = `Beschrijf zo volledig mogelijk waar je tegenaan loopt:
 const FAQs = [
   {
     q: 'Er is een verschil tussen jullie kaart en de situatie op straat, aan welke regels dien ik mij te houden?',
-    a: 'De situatie op straat is juridisch geldig, dus volg altijd de borden op straat ingeval dat afwijkt van de digitale kaart.',
+    a: 'De situatie en bebording op straat is altijd leidend, dus volg deze in het geval dat het afwijkt van de digitale kaart.',
   },
   {
     q: 'Waarom vragen jullie een kenteken voor de bereikbaarheidskaart?',
