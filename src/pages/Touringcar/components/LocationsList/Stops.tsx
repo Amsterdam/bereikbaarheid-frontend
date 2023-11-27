@@ -18,7 +18,11 @@ function StopsList() {
     return null
   }
 
-  return <LocationsList locationItems={data.features} />
+  return (
+    <div data-testid="stops-list">
+      <LocationsList locationItems={data.features} />
+    </div>
+  )
 }
 
 export default StopsList

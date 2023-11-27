@@ -820,219 +820,231 @@ FAQ en contactgegevens"
                         >
                           Haltes
                         </h2>
-                        <table
-                          class="sc-czkgLR bomdop"
+                        <div
+                          data-testid="stops-list"
                         >
-                          <thead
-                            class="sc-lizKOf sc-gweoQa jHFeDu evmqIK"
+                          <table
+                            class="sc-czkgLR bomdop"
                           >
-                            <td
-                              class="sc-dycYrt foMVJw"
+                            <thead
+                              class="sc-lizKOf sc-gweoQa jHFeDu evmqIK"
                             >
-                              Aanduiding
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <th
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  Aanduiding
+                                </th>
+                                <th
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  Plaatsen
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody
+                              class="sc-eoVZPG"
                             >
-                              Plaatsen
-                            </td>
-                          </thead>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H3: Lovers rondvaarten
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              7 bussen
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H7: Amsterdam Museum
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              1 bus
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H10: Joods Historisch Museum
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              2 bussen
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H12: Blue Boat Company
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              2 bussen
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H13: Coster Diamonds / Rijksmuseum
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              2 bussen
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H14: Park Hotel
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              3 bussen
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H15: NH City Centre
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              1 bus
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H16: Anne Frank Huis
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              3 bussen
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H22: Renaissance Hotel
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              1 bus
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H24: Hermitage / Portugese Synagoge
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              2 bussen
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H25: Rijksmuseum
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              2 bussen
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H20: Port van Cleve / Magna Plaza
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              1 bus
-                            </td>
-                          </tr>
-                          <tr
-                            class="sc-hTUWRQ cZDYyh"
-                          >
-                            <td
-                              class="sc-dycYrt foMVJw"
-                            >
-                              H5: Zouthaven - Piet Heinkade
-                            </td>
-                            <td
-                              class="sc-dycYrt foMVJw"
-                              width="25%"
-                            >
-                              4 bussen
-                            </td>
-                          </tr>
-                        </table>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H3: Lovers rondvaarten
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  7 bussen
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H7: Amsterdam Museum
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  1 bus
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H10: Joods Historisch Museum
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  2 bussen
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H12: Blue Boat Company
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  2 bussen
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H13: Coster Diamonds / Rijksmuseum
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  2 bussen
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H14: Park Hotel
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  3 bussen
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H15: NH City Centre
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  1 bus
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H16: Anne Frank Huis
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  3 bussen
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H22: Renaissance Hotel
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  1 bus
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H24: Hermitage / Portugese Synagoge
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  2 bussen
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H25: Rijksmuseum
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  2 bussen
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H20: Port van Cleve / Magna Plaza
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  1 bus
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H5: Zouthaven - Piet Heinkade
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  4 bussen
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
                       <div
                         class="sc-eIcdZJ bzzgoc"
@@ -1705,6 +1717,9 @@ FAQ en contactgegevens"
               </div>
             </div>
           </div>
+          <div
+            data-testid="markercluster-stops"
+          />
         </main>
       </div>
     </div>
@@ -2525,219 +2540,231 @@ FAQ en contactgegevens"
                       >
                         Haltes
                       </h2>
-                      <table
-                        class="sc-czkgLR bomdop"
+                      <div
+                        data-testid="stops-list"
                       >
-                        <thead
-                          class="sc-lizKOf sc-gweoQa jHFeDu evmqIK"
+                        <table
+                          class="sc-czkgLR bomdop"
                         >
-                          <td
-                            class="sc-dycYrt foMVJw"
+                          <thead
+                            class="sc-lizKOf sc-gweoQa jHFeDu evmqIK"
                           >
-                            Aanduiding
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <th
+                                class="sc-dycYrt foMVJw"
+                              >
+                                Aanduiding
+                              </th>
+                              <th
+                                class="sc-dycYrt foMVJw"
+                              >
+                                Plaatsen
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody
+                            class="sc-eoVZPG"
                           >
-                            Plaatsen
-                          </td>
-                        </thead>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H3: Lovers rondvaarten
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            7 bussen
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H7: Amsterdam Museum
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            1 bus
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H10: Joods Historisch Museum
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            2 bussen
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H12: Blue Boat Company
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            2 bussen
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H13: Coster Diamonds / Rijksmuseum
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            2 bussen
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H14: Park Hotel
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            3 bussen
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H15: NH City Centre
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            1 bus
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H16: Anne Frank Huis
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            3 bussen
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H22: Renaissance Hotel
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            1 bus
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H24: Hermitage / Portugese Synagoge
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            2 bussen
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H25: Rijksmuseum
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            2 bussen
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H20: Port van Cleve / Magna Plaza
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            1 bus
-                          </td>
-                        </tr>
-                        <tr
-                          class="sc-hTUWRQ cZDYyh"
-                        >
-                          <td
-                            class="sc-dycYrt foMVJw"
-                          >
-                            H5: Zouthaven - Piet Heinkade
-                          </td>
-                          <td
-                            class="sc-dycYrt foMVJw"
-                            width="25%"
-                          >
-                            4 bussen
-                          </td>
-                        </tr>
-                      </table>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H3: Lovers rondvaarten
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                7 bussen
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H7: Amsterdam Museum
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                1 bus
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H10: Joods Historisch Museum
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                2 bussen
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H12: Blue Boat Company
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                2 bussen
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H13: Coster Diamonds / Rijksmuseum
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                2 bussen
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H14: Park Hotel
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                3 bussen
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H15: NH City Centre
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                1 bus
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H16: Anne Frank Huis
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                3 bussen
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H22: Renaissance Hotel
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                1 bus
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H24: Hermitage / Portugese Synagoge
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                2 bussen
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H25: Rijksmuseum
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                2 bussen
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H20: Port van Cleve / Magna Plaza
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                1 bus
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H5: Zouthaven - Piet Heinkade
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                4 bussen
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                     <div
                       class="sc-eIcdZJ bzzgoc"
@@ -3410,6 +3437,9 @@ FAQ en contactgegevens"
             </div>
           </div>
         </div>
+        <div
+          data-testid="markercluster-stops"
+        />
       </main>
     </div>
   </div>,

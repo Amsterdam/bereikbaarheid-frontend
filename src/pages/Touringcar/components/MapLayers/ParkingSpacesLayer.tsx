@@ -71,5 +71,9 @@ export const ParkingSpacesLayer = () => {
 
   if (!activeMapLayers[MapLayerId.touringcarParkingSpacesLayerId]) return null
 
-  return <MarkerClusterGroup markers={createClusterMarkers()} />
+  return (
+    <div data-testid="markercluster-parking-spaces">
+      <MarkerClusterGroup markers={createClusterMarkers()} />
+    </div>
+  )
 }

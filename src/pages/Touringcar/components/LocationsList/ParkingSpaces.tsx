@@ -18,7 +18,11 @@ function ParkingSpacesList() {
     return null
   }
 
-  return <LocationsList locationItems={data.features} />
+  return (
+    <div data-testid="parking-spaces-list">
+      <LocationsList locationItems={data.features} />
+    </div>
+  )
 }
 
 export default ParkingSpacesList

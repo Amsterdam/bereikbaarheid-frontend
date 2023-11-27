@@ -71,5 +71,9 @@ export const StopsLayer = () => {
 
   if (!activeMapLayers[MapLayerId.touringcarStopsLayerId]) return null
 
-  return <MarkerClusterGroup markers={createClusterMarkers()} />
+  return (
+    <div data-testid="markercluster-stops">
+      <MarkerClusterGroup markers={createClusterMarkers()} />
+    </div>
+  )
 }
