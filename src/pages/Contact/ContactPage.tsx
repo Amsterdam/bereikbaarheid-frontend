@@ -36,7 +36,7 @@ const FAQs = [
   },
   {
     q: 'Waarom vragen jullie een kenteken voor de bereikbaarheidskaart?',
-    a: 'Met één kenteken vullen wij voor u alvast bijna 10 kenmerken als standaardlengte, hoogte, breedte, aslast in. Hierdoor kunnen wij u direct een voertuigspecifiek bereikbaarheidsantwoord geven. U kunt deze gegevens vervolgens zelf nog aanpassen, bijvoorbeeld als u zware lading gaat vervoeren of een aanhanger toevoegt.',
+    a: 'Met één kenteken vullen wij voor u alvast bijna 10 kenmerken in, zoals standaardlengte, breedte en aslast. Hierdoor kunnen wij u direct een voertuigspecifiek bereikbaarheidsantwoord geven. U kunt deze gegevens vervolgens zelf nog aanpassen, bijvoorbeeld als u zware lading gaat vervoeren of een aanhanger toevoegt.',
   },
   {
     q: 'Ik krijg niet alle databronnen geopend, waarom niet?',
