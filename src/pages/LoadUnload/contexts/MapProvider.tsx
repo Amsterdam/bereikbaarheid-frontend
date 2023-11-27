@@ -1,17 +1,21 @@
-import { ReactNode, useReducer } from 'react'
+import { ReactNode, useEffect, useReducer, useState } from 'react'
+
+import { Bollard } from 'api/bereikbaarheid/bollards'
 
 import { detailFeatureReducer, detailFeatureInitialState } from './detailFeatureReducer'
 import { LoadUnloadMapContext } from './MapContext'
 import { mapLayersReducer, mapLayersInitialState } from './mapLayersReducer'
 
-type Props = {
-  children: ReactNode
-}
-
-export const LoadUnloadMapProvider = ({ children }: Props) => {
+export const LoadUnloadMapProvider = ({ children }: { children: ReactNode }) => {
   const [activeMapLayers, updateActiveMapLayers] = useReducer(mapLayersReducer, mapLayersInitialState)
-
   const [detailFeature, setDetailFeature] = useReducer(detailFeatureReducer, detailFeatureInitialState)
+  const [currentBollard, setCurrentBollard] = useState<Bollard | undefined>(undefined)
+
+  useEffect(() => {
+    if (detailFeature.feature || detailFeature.location) {
+      setCurrentBollard(undefined)
+    }
+  }, [detailFeature?.feature, detailFeature?.location])
 
   return (
     <LoadUnloadMapContext.Provider
@@ -20,6 +24,8 @@ export const LoadUnloadMapProvider = ({ children }: Props) => {
         updateActiveMapLayers,
         detailFeature,
         setDetailFeature,
+        currentBollard,
+        setCurrentBollard,
       }}
     >
       {children}
