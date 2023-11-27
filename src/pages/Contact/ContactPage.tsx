@@ -60,7 +60,7 @@ const FAQs = [
   },
   {
     q: 'Voor wie is deze website?',
-    a: 'Voor iedereen die met een gemotoriseerd voertuig meer informatie wil over bereikbaarheid op kenteken, specifieke informatie voor touringcarbestuurders, en specifieke informatie rondom laden en lossen.',
+    a: 'Voor iedereen die met een gemotoriseerd voertuig meer informatie wil over bereikbaarheid, specifieke informatie voor touringcarbestuurders, en specifieke informatie rondom laden en lossen.',
   },
   {
     q: 'Ik zie geen laad- en losvakken op de kaart?',
