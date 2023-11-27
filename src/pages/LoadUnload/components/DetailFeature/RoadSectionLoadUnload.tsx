@@ -27,7 +27,20 @@ const PaddedImageContainer = styled(ImageContainer)`
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
+  width: 100%;
   gap: 1em;
+`
+
+const TrafficSign = styled(Image)`
+  width: 72px;
+  height: 72px;
+`
+
+const SubSign = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  word-break: break-all;
 `
 
 const PropContainer = styled(PropertiesContainer)`
@@ -87,9 +100,9 @@ export const LoadUnloadDetailFeatureRoadSectionLoadUnload = ({
     return (
       <>
         {parkingSignsWithSubSign[0].map((pS: ParkingSign) => (
-          <Image key={pS} src={SignCodeToImg[pS]} />
+          <TrafficSign key={pS} src={SignCodeToImg[pS]} />
         ))}
-        <div>{parkingSignsWithSubSign[1]}</div>
+        <SubSign>{parkingSignsWithSubSign[1]}</SubSign>
       </>
     )
   }, [roadSectionLoadUnload.properties.load_unload])
