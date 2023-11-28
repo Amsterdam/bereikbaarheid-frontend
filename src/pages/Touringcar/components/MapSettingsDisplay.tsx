@@ -50,6 +50,18 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
             <Paragraph>{t('_pageTouringcar._mapPanel.payAttentionToVerhicleHeights')}</Paragraph>
           </PaddedContent>
 
+          <PaddedContent>
+            <Paragraph style={{ marginBlockEnd: '.5em' }}>
+              <strong>{t('_pageTouringcar._mapPanel._attention2024.attention')}</strong>
+            </Paragraph>
+            <Paragraph style={{ marginBlockEnd: '.5em' }}>
+              {t('_pageTouringcar._mapPanel._attention2024.paragraph1')}
+            </Paragraph>
+            <Paragraph style={{ marginBlockEnd: '.5em' }}>
+              {t('_pageTouringcar._mapPanel._attention2024.paragraph2')}
+            </Paragraph>
+          </PaddedContent>
+
           {activeMapLayers.touringcarStops && (
             <PaddedContent>
               <PretendHeading forwardedAs="h2" isCompact={true}>

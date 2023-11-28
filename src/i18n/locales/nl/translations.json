@@ -75,6 +75,11 @@
       "recommendedAndMandatoryRoutes": "Aanbevolen en verplichte routes",
       "displayOfRecommendedAndMandatoryRoutes": "Weergave van de aanbevolen en verplichte routes voor touringcars.",
       "payAttentionToVerhicleHeights": "Let op de doorrijhoogtes.",
+      "_attention2024": {
+        "attention": "LET OP:",
+        "paragraph1": "Vanaf januari 2024 mogen touringcars zwaarder dan 7,5 ton niet meer binnen de S100 rijden. Uitzondering is de S100 zelf en de corridor Weesperstraat – Valkenburgerstraat – Kattenburgerstraat (aangegeven in lichtgroen).",
+        "paragraph2": "Voor de wegen aangegeven in het donkergroen geldt dat deze alléén toegankelijk zijn voor touringcars >7,5 ton mét ontheffing. Een ontheffing is alleen aan te vragen voor vervoer van specifieke doelgroepen (basisschoolleerlingen, mensen met een beperking, ouderen, artiesten) in combinatie met een bezoek aan een educatieve en/of culturele instelling."
+      },
       "stops": "Haltes",
       "parkingSpaces": "Parkeerplaatsen"
     },
@@ -83,18 +88,18 @@
       "stops": "Haltes",
       "parking": "Parkeren",
       "maxVehicleHeight": "Maximale doorrijhoogtes",
-      "destinationTraffic": "Bestemmingsverkeer",
+      "destinationTraffic": "Toegestane wegen",
       "recommendedRoutes": "Aanbevolen routes",
-      "mandatoryRoutes": "Verplichte route (> 7,5t)",
+      "mandatoryRoutes": "Alleen met ontheffing",
       "environmentalZone": "Milieuzone"
     },
     "_dataSources": {
       "stopsForCoaches": "Haltes voor touringcars",
       "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
       "maxVehicleHeight": "Maximale doorrijhoogtes voor touringcars",
-      "destinationTraffic": "Bestemmingsverkeer",
+      "destinationTraffic": "Toegestane wegen voor touringcars",
       "recommendedRoutes": "Aanbevolen routes voor touringcars",
-      "mandatoryRoutes": "Verplichte route (> 7,5t) voor touringcars",
+      "mandatoryRoutes": "Alleen met ontheffing voor touringcars",
       "environmentalZone": "Milieuzone"
     }
   },
