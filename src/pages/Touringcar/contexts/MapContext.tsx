@@ -86,9 +86,9 @@ interface TouringcarContextProps {
   updateActiveMapLayers: Dispatch<mapLayerActionType>
   updateActiveMapLayersWithSearchParams: () => void
   currentStop: TouringcarStop | undefined
-  setCurrentStop: Dispatch<SetStateAction<TouringcarStop | undefined>>
+  setCurrentStop: (stop: TouringcarStop | undefined) => void
   currentParkingSpace: TouringcarParkingSpace | undefined
-  setCurrentParkingSpace: Dispatch<SetStateAction<TouringcarParkingSpace | undefined>>
+  setCurrentParkingSpace: (parkingSpace: TouringcarParkingSpace | undefined) => void
   unsetDetailsPane: () => void
   activeTab: MapPanelTab | undefined
   setActiveTab: Dispatch<SetStateAction<MapPanelTab | undefined>>

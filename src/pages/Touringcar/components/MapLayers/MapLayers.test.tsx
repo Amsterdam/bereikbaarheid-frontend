@@ -40,4 +40,17 @@ describe('RoutesLayers', () => {
     const checkboxRoutesMandatory = await screen.findByLabelText('Verplichte route (> 7,5t)')
     expect(checkboxRoutesMandatory).toBeChecked()
   })
+
+  it('has "haltes" layer checked and the layer and the list are visible', async () => {
+    const pathToPage = `${getGeneratedPath(RouteIds.TOURINGCAR_PAGE)}?haltes&parkeren`
+    const page = withApp(pathToPage)
+
+    await waitFor(() => page.rerender)
+
+    expect(await screen.findByLabelText('Parkeren')).toBeChecked()
+
+    expect(await screen.findByLabelText('Haltes')).toBeChecked()
+    expect(await screen.findByTestId('markercluster-stops')).toBeVisible()
+    expect(await screen.findByTestId('stops-list')).toBeVisible()
+  })
 })

@@ -1,6 +1,6 @@
 import { Fragment } from 'react'
 
-import { Table, TableCell, TableHeader, TableRow } from '@amsterdam/asc-ui'
+import { Table, TableBody, TableCell, TableHeader, TableRow } from '@amsterdam/asc-ui'
 import { TouringcarStop } from 'api/touringcar/stops'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
@@ -15,20 +15,24 @@ function LocationsList({ locationItems }: { locationItems: TouringcarStop[] }) {
   return (
     <Table>
       <TableHeaderStrong>
-        <TableCell>{t('_pageTouringcar.reference')}</TableCell>
-        <TableCell>{t('_pageTouringcar.places')}</TableCell>
+        <TableRow>
+          <TableCell as="th">{t('_pageTouringcar.reference')}</TableCell>
+          <TableCell as="th">{t('_pageTouringcar.places')}</TableCell>
+        </TableRow>
       </TableHeaderStrong>
 
-      {locationItems.map(({ properties: item }, index) => {
-        if (!item) return <Fragment key={index}></Fragment>
+      <TableBody>
+        {locationItems.map(({ properties: item }, index) => {
+          if (!item) return <Fragment key={index}></Fragment>
 
-        return (
-          <TableRow key={item.omschrijving}>
-            <TableCell>{item.omschrijving}</TableCell>
-            <TableCell width="25%">{item.plaatsen}</TableCell>
-          </TableRow>
-        )
-      })}
+          return (
+            <TableRow key={item.omschrijving}>
+              <TableCell>{item.omschrijving}</TableCell>
+              <TableCell width="25%">{item.plaatsen}</TableCell>
+            </TableRow>
+          )
+        })}
+      </TableBody>
     </Table>
   )
 }
