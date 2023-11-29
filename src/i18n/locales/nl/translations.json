@@ -79,11 +79,11 @@
         "attention": "LET OP:",
         "_allowedRoutes": {
           "title": "Toegestane wegen",
-          "paragraph": "Vanaf januari 2024 mogen touringcars zwaarder dan 7,5 ton niet meer binnen de S100 rijden. Uitzondering is de S100 zelf en de corridor Weesperstraat – Valkenburgerstraat – Kattenburgerstraat (aangegeven in lichtgroen)."
+          "paragraph": "Vanaf januari 2024 mogen touringcars zwaarder dan 7,5 ton niet meer binnen de S100 rijden. Uitzondering is de S100 zelf en de corridor Weesperstraat – Valkenburgerstraat – Kattenburgerstraat."
         },
         "_onlyWithExemption": {
           "title": "Alleen met ontheffing",
-          "paragraph": "Voor de wegen aangegeven in het donkergroen geldt dat deze alléén toegankelijk zijn voor touringcars >7,5 ton mét ontheffing. Een ontheffing is alleen aan te vragen voor vervoer van specifieke doelgroepen (basisschoolleerlingen, mensen met een beperking, ouderen, artiesten) in combinatie met een bezoek aan een educatieve en/of culturele instelling."
+          "paragraph": "Deze wegen zijn alléén toegankelijk voor touringcars >7,5 ton mét ontheffing. Een ontheffing is alleen aan te vragen voor vervoer van specifieke doelgroepen (basisschoolleerlingen, mensen met een beperking, ouderen, artiesten) in combinatie met een bezoek aan een educatieve en/of culturele instelling."
         }
       },
       "stops": "Haltes",
