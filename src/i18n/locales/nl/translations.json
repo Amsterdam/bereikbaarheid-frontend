@@ -72,13 +72,19 @@
       "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
       "messages": "Berichten",
       "info": "Informatie",
-      "recommendedAndMandatoryRoutes": "Aanbevolen en verplichte routes",
-      "displayOfRecommendedAndMandatoryRoutes": "Weergave van de aanbevolen en verplichte routes voor touringcars.",
+      "recommendedAndMandatoryRoutes": "Situatie vanaf januari 2024",
+      "displayOfRecommendedAndMandatoryRoutes": "Parkeerplaatsen, in- en uitstaphaltes en de toegestane touringcarroute in Amsterdam.",
       "payAttentionToVerhicleHeights": "Let op de doorrijhoogtes.",
       "_attention2024": {
         "attention": "LET OP:",
-        "paragraph1": "Vanaf januari 2024 mogen touringcars zwaarder dan 7,5 ton niet meer binnen de S100 rijden. Uitzondering is de S100 zelf en de corridor Weesperstraat – Valkenburgerstraat – Kattenburgerstraat (aangegeven in lichtgroen).",
-        "paragraph2": "Voor de wegen aangegeven in het donkergroen geldt dat deze alléén toegankelijk zijn voor touringcars >7,5 ton mét ontheffing. Een ontheffing is alleen aan te vragen voor vervoer van specifieke doelgroepen (basisschoolleerlingen, mensen met een beperking, ouderen, artiesten) in combinatie met een bezoek aan een educatieve en/of culturele instelling."
+        "_allowedRoutes": {
+          "title": "Toegestane wegen",
+          "paragraph": "Vanaf januari 2024 mogen touringcars zwaarder dan 7,5 ton niet meer binnen de S100 rijden. Uitzondering is de S100 zelf en de corridor Weesperstraat – Valkenburgerstraat – Kattenburgerstraat (aangegeven in lichtgroen)."
+        },
+        "_onlyWithExemption": {
+          "title": "Alleen met ontheffing",
+          "paragraph": "Voor de wegen aangegeven in het donkergroen geldt dat deze alléén toegankelijk zijn voor touringcars >7,5 ton mét ontheffing. Een ontheffing is alleen aan te vragen voor vervoer van specifieke doelgroepen (basisschoolleerlingen, mensen met een beperking, ouderen, artiesten) in combinatie met een bezoek aan een educatieve en/of culturele instelling."
+        }
       },
       "stops": "Haltes",
       "parkingSpaces": "Parkeerplaatsen"
