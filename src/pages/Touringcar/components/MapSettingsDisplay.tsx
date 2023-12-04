@@ -52,14 +52,6 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
             </Paragraph>
           </PaddedContent>
 
-          {(activeMapLayers.touringcarRoutesMandatory || activeMapLayers.touringcarRoutesDestinationTraffic) && (
-            <PaddedContent>
-              <Paragraph style={{ marginBlockEnd: 0 }}>
-                <strong>{t('_pageTouringcar._mapPanel._attention2024.attention')}</strong>
-              </Paragraph>
-            </PaddedContent>
-          )}
-
           {activeMapLayers.touringcarRoutesDestinationTraffic && (
             <PaddedContent>
               <Paragraph style={{ marginBlockEnd: '.5em' }}>
