@@ -47,8 +47,32 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
             <Paragraph style={{ marginBlockEnd: '.5em' }}>
               {t('_pageTouringcar._mapPanel.displayOfRecommendedAndMandatoryRoutes')}
             </Paragraph>
-            <Paragraph>{t('_pageTouringcar._mapPanel.payAttentionToVerhicleHeights')}</Paragraph>
+            <Paragraph style={{ marginBlockEnd: '.5em' }}>
+              {t('_pageTouringcar._mapPanel.payAttentionToVerhicleHeights')}
+            </Paragraph>
           </PaddedContent>
+
+          {activeMapLayers.touringcarRoutesDestinationTraffic && (
+            <PaddedContent>
+              <Paragraph style={{ marginBlockEnd: '.5em' }}>
+                <strong>{t('_pageTouringcar._mapPanel._attention2024._allowedRoutes.title')}</strong>
+              </Paragraph>
+              <Paragraph style={{ marginBlockEnd: '.5em' }}>
+                {t('_pageTouringcar._mapPanel._attention2024._allowedRoutes.paragraph')}
+              </Paragraph>
+            </PaddedContent>
+          )}
+
+          {activeMapLayers.touringcarRoutesMandatory && (
+            <PaddedContent>
+              <Paragraph style={{ marginBlockEnd: '.5em' }}>
+                <strong>{t('_pageTouringcar._mapPanel._attention2024._onlyWithExemption.title')}</strong>
+              </Paragraph>
+              <Paragraph style={{ marginBlockEnd: '.5em' }}>
+                {t('_pageTouringcar._mapPanel._attention2024._onlyWithExemption.paragraph')}
+              </Paragraph>
+            </PaddedContent>
+          )}
 
           {activeMapLayers.touringcarStops && (
             <PaddedContent>
