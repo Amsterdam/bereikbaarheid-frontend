@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
-import { useProhibitorySignsPageContext } from '../contexts/PageContext'
-import { getVehicle, rdwGeneralData } from '../../../api/rdw/vehicle'
+import { getVehicle, rdwGeneralData } from 'api/rdw/vehicle'
+
+import { Vehicle } from '../types/vehicle'
 
 export interface rdwGeneralInfo {
   server: rdwGeneralData
@@ -20,10 +21,19 @@ export interface rdwGeneralInfo {
   }
 }
 
-export const useRdwGeneralInfo = () => {
-  const { vehicle } = useProhibitorySignsPageContext()
+export const DUMMY_VEHICLE = {
+  axleWeight: 10000,
+  hasTrailer: false,
+  height: 2.65,
+  length: 8.23,
+  licensePlate: 'BXLS14',
+  payload: 9590,
+  weight: 26500,
+  width: 2.55,
+}
 
-  // setting a higher stale time, so that if the user works with the
+export const useRdwGeneralInfo = (vehicle: Vehicle = DUMMY_VEHICLE) => {
+  // Setting a higher stale time, so that if the user works with the
   // application for a while - and using the same licenseplate -
   // the RDW API doesn't get queried on every render of a component.
   const queryResult = useQuery({
@@ -53,9 +63,7 @@ export const useRdwGeneralInfo = () => {
         curbWeight: curbWeight,
         isBus: item.voertuigsoort === 'Bus',
         isCompanyCar: item.voertuigsoort === 'Bedrijfsauto',
-        isHeavyGoodsVehicle: Boolean(
-          item.voertuigsoort === 'Bedrijfsauto' && maxAllowedWeight > 3500
-        ),
+        isHeavyGoodsVehicle: Boolean(item.voertuigsoort === 'Bedrijfsauto' && maxAllowedWeight > 3500),
         isPrivateCar: item.voertuigsoort === 'Personenauto',
         isTaxi: item.taxi_indicator === 'Ja',
         length: item.lengte ? Number(item.lengte) / 100.0 : 0,

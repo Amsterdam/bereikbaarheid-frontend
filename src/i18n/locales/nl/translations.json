@@ -1,0 +1,120 @@
+{
+  "appTitle": "Bereikbaarheid",
+  "_generic": {
+    "legend": "Legenda",
+    "_mapPanel": {
+      "dataSource": "Brondata",
+      "input": "Invoer"
+    },
+    "_dataSources": {
+      "dataShownOnMap": "Getoonde data op de kaart",
+      "viewAndDownloadShownDataLinks": "Bekijk en download de getoonde data op de kaart via de volgende links:",
+      "betaVersionFormatCanChange": "Dit is een beta versie. Het format kan nog veranderen.",
+      "moreAboutUsedApisAndDatasets": "Meer over de gebruikte API's en datasets",
+      "amsterdamRoadDatabase": "Amsterdams Wegenbestand",
+      "downloadFullDatasetAndDocs": "Download de volledige dataset en de bijbehorende documentatie",
+      "questions": "Vragen?",
+      "doYouHaveSuggestionsOrQuestions": "Heeft u suggesties? Of vragen over het format of het gebruik van de data?",
+      "letUsKnow": "Laat het ons weten via e-mail"
+    }
+  },
+  "_error": {
+    "somethingWentWrong": "Er ging iets fout",
+    "unfortunately": "Helaas",
+    "pageCouldNotBeFound": "De pagina kon niet worden gevonden."
+  },
+  "_pageLicencePlate": {
+    "title": "Bereikbaarheid op kenteken",
+    "titleShort": "Op kenteken",
+    "description": "Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën.",
+    "_mapPanel": {
+      "label": "Voer voertuiggegevens in of bekijk dataverantwoording"
+    }
+  },
+  "_pageRoadObstructions": {
+    "title": "Stremmingen",
+    "description": "Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen.",
+    "roadObstructionsOn": "Stremmingen op",
+    "_mapPanel": {
+      "label": "Voer datum en tijd in of bekijk dataverantwoording"
+    }
+  },
+  "_pageLoadUnload": {
+    "title": "Laden en lossen",
+    "description": "Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. ",
+    "_mapPanel": {
+      "label": "Voer adres en moment in of bekijk dataverantwoording",
+      "id": "ID",
+      "type": "Type",
+      "location": "Locatie",
+      "days": "Dagen",
+      "windowTimes": "Venstertijden",
+      "entrySystem": "Toegangssysteem",
+      "details": "Details"
+    },
+    "_legend": {
+      "bollards": "Verzinkbare paaltjes"
+    }
+  },
+  "_linkTourBuzz": {
+    "title": "Touringcar (Tour Buzz)",
+    "titleShort": "Touringcar",
+    "description": "Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
+  },
+  "_pageTouringcar": {
+    "title": "Touringcar (Tour Buzz)",
+    "titleShort": "Touringcar",
+    "description": "Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie.",
+    "reference": "Aanduiding",
+    "places": "Plaatsen",
+    "maxVehicleHeight": "Maximale doorrijhoogte",
+    "_mapPanel": {
+      "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
+      "messages": "Berichten",
+      "info": "Informatie",
+      "recommendedAndMandatoryRoutes": "Situatie vanaf januari 2024",
+      "displayOfRecommendedAndMandatoryRoutes": "Parkeerplaatsen, in- en uitstaphaltes en de toegestane touringcarroute in Amsterdam.",
+      "payAttentionToVerhicleHeights": "Let op de doorrijhoogtes.",
+      "_attention2024": {
+        "_allowedRoutes": {
+          "title": "Toegestane wegen",
+          "paragraph": "Vanaf januari 2024 mogen touringcars zwaarder dan 7,5 ton niet meer binnen de S100 rijden. Uitzondering is de S100 zelf en de corridor Weesperstraat – Valkenburgerstraat – Kattenburgerstraat."
+        },
+        "_onlyWithExemption": {
+          "title": "Alleen met ontheffing",
+          "paragraph": "Deze wegen zijn alléén toegankelijk voor touringcars >7,5 ton mét ontheffing. Een ontheffing is alleen aan te vragen voor vervoer van specifieke doelgroepen (basisschoolleerlingen, mensen met een beperking, ouderen, artiesten) in combinatie met een bezoek aan een educatieve en/of culturele instelling."
+        }
+      },
+      "stops": "Haltes",
+      "parkingSpaces": "Parkeerplaatsen"
+    },
+    "_legend": {
+      "messages": "Berichten",
+      "stops": "Haltes",
+      "parking": "Parkeren",
+      "maxVehicleHeight": "Maximale doorrijhoogtes",
+      "destinationTraffic": "Toegestane wegen",
+      "recommendedRoutes": "Aanbevolen routes",
+      "mandatoryRoutes": "Alleen met ontheffing",
+      "environmentalZone": "Milieuzone"
+    },
+    "_dataSources": {
+      "stopsForCoaches": "Haltes voor touringcars",
+      "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
+      "maxVehicleHeight": "Maximale doorrijhoogtes voor touringcars",
+      "destinationTraffic": "Toegestane wegen voor touringcars",
+      "recommendedRoutes": "Aanbevolen routes voor touringcars",
+      "mandatoryRoutes": "Alleen met ontheffing voor touringcars",
+      "environmentalZone": "Milieuzone"
+    }
+  },
+  "_pageData": {
+    "title": "Databronnen",
+    "description": "De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
+  },
+  "_pageContact": {
+    "title": "Contact en uitleg",
+    "description": "FAQ en contactgegevens",
+    "faq": "Veelgestelde vragen"
+  }
+}

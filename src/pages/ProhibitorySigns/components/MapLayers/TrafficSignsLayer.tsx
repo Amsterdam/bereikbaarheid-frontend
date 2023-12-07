@@ -1,28 +1,22 @@
-import { useQuery } from '@tanstack/react-query'
 import { useEffect } from 'react'
 
-import {
-  getTrafficSigns,
-  TrafficSign,
-} from '../../../../api/bereikbaarheid/traffic-signs'
+import { useQuery } from '@tanstack/react-query'
+import { getTrafficSigns, TrafficSign } from 'api/bereikbaarheid/traffic-signs'
 
-import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
+import { MarkerClusterGroup } from '../../../../shared/components/MapLayers/MarkerClusterGroup'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
+import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
 import { useRdwGeneralInfo } from '../../hooks/useRdwGeneralInfo'
 import { useTrafficSignCategories } from '../../hooks/useTrafficSignCategories'
-
-import { MarkerClusterGroup } from '../MarkerClusterGroup'
 import { TrafficSignMarker } from '../TrafficSignMarker'
 
 const ProhibitorySignsTrafficSignsLayer = () => {
-  const { activeMapLayers, updateActiveMapLayers, setCurrentTrafficSign } =
-    useProhibitorySignsMapContext()
-  const { expertMode, showScenarioWizard, vehicle } =
-    useProhibitorySignsPageContext()
-  const rdwGeneralInfo = useRdwGeneralInfo()
+  const { activeMapLayers, updateActiveMapLayers, setCurrentTrafficSign } = useProhibitorySignsMapContext()
+  const { expertMode, showScenarioWizard, vehicle } = useProhibitorySignsPageContext()
+  const rdwGeneralInfo = useRdwGeneralInfo(vehicle)
   const rdwGeneralData = rdwGeneralInfo.data
-  const trafficSignCategories = useTrafficSignCategories()
+  const trafficSignCategories = useTrafficSignCategories(expertMode)
 
   const trafficSigns = useQuery({
     enabled: !!rdwGeneralData && !!vehicle.axleWeight && !!vehicle.weight,
@@ -53,9 +47,7 @@ const ProhibitorySignsTrafficSignsLayer = () => {
   }, [trafficSigns.data, updateActiveMapLayers])
 
   const findTrafficSign = (id: number) => {
-    let sign = trafficSigns.data?.features.find(
-      item => item.properties.id === id
-    )
+    let sign = trafficSigns.data?.features.find(item => item.properties.id === id)
 
     setCurrentTrafficSign(sign)
   }
@@ -76,8 +68,9 @@ const ProhibitorySignsTrafficSignsLayer = () => {
     })
   }
 
-  if (trafficSigns.isError && trafficSigns.error instanceof Error)
+  if (trafficSigns.isError && trafficSigns.error instanceof Error) {
     console.error(trafficSigns.error.message)
+  }
 
   if (trafficSigns.isLoading || !trafficSigns.data) return null
 

@@ -1,20 +1,39 @@
-import {
-  mapPanelConstants,
-  MapPanelContent,
-  MapPanelContentProps,
-  MapPanelContext,
-} from '@amsterdam/arm-core'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useMemo } from 'react'
 
-import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
+import { mapPanelConstants, MapPanelContent, MapPanelContentProps, MapPanelContext } from '@amsterdam/arm-core'
+import { Tab, Tabs } from '@amsterdam/asc-ui'
+import { DataLink, DataSourcesAside } from 'pages/DataSources/components/DataSourcesBlocks'
+import { useProhibitorySignsPageContext } from 'pages/ProhibitorySigns/contexts/PageContext'
+import { useTranslation } from 'react-i18next'
+import styled from 'styled-components'
+
+import getDataLinks, { loadUnloadLink } from '../../data/dataLinks'
+import useUrlTrafficSigns from '../../hooks/useUrlTrafficSigns'
 
 import ScenarioDisplayRdwInfo from './RdwInfo'
 import ScenarioDisplayResult from './Result'
 import ScenarioDisplayStartAndAddress from './StartAndAddress'
 
+const Spacer = styled.div`
+  height: 14px;
+`
+
 const ScenarioDisplay = ({ ...otherProps }: MapPanelContentProps) => {
-  const { showScenarioWizard } = useProhibitorySignsPageContext()
+  const { t } = useTranslation()
+  const { showScenarioWizard, vehicle } = useProhibitorySignsPageContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
+
+  const { urlTrafficSigns } = useUrlTrafficSigns(vehicle)
+
+  const dataLinks = useMemo<DataLink[]>(() => {
+    const url = urlTrafficSigns(showScenarioWizard, vehicle)
+
+    if (url) {
+      return getDataLinks(url)
+    }
+
+    return [loadUnloadLink]
+  }, [showScenarioWizard, vehicle, urlTrafficSigns])
 
   useEffect(() => {
     const mapPanelPosition = !showScenarioWizard
@@ -26,16 +45,22 @@ const ScenarioDisplay = ({ ...otherProps }: MapPanelContentProps) => {
 
   return (
     <MapPanelContent data-testid="scenario-display" {...otherProps}>
-      {/* only display scenario outcome when needed info is available
-          for hooks embedded in included components */}
       {!showScenarioWizard && (
-        <>
-          <ScenarioDisplayStartAndAddress />
+        <Tabs label={t('_pageLicencePlate._mapPanel.label')}>
+          <Tab id="input" label={t('_generic._mapPanel.input')}>
+            <Spacer />
 
-          <ScenarioDisplayRdwInfo />
+            <ScenarioDisplayStartAndAddress />
 
-          <ScenarioDisplayResult />
-        </>
+            <ScenarioDisplayRdwInfo />
+
+            <ScenarioDisplayResult />
+          </Tab>
+
+          <Tab id="data" label={t('_generic._mapPanel.dataSource')}>
+            <DataSourcesAside dataLinks={dataLinks} />
+          </Tab>
+        </Tabs>
       )}
     </MapPanelContent>
   )

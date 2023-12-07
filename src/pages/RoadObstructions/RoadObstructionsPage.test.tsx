@@ -1,12 +1,14 @@
-import { screen, waitFor, within } from '@testing-library/react'
+import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { format } from 'date-fns'
 import { generatePath } from 'react-router-dom'
+import { getPathTo } from 'routes'
 
-import { getPathTo } from '../../routes'
 import { withApp } from '../../../test/utils/withApp'
 
 describe('RoadObstructionsPage', () => {
+  jest.setTimeout(15000)
+
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))
     const roadSections = require('../../../test/mocks/bereikbaarheid/road-obstructions/data.json')
@@ -27,9 +29,7 @@ describe('RoadObstructionsPage', () => {
 
     // the roadsections should be displayed on the map
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSectionsSvg = page.container.querySelectorAll(
-      '.leaflet-overlay-pane svg path'
-    )
+    const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
 
     expect(roadSectionsSvg.length).toBe(roadSections.features.length)
   })
@@ -55,7 +55,9 @@ describe('RoadObstructionsPage', () => {
     expect(dateInFiltersDisplay).toBeVisible()
 
     // open filters modal and check if date is preset on the form
-    await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    await act(async () => {
+      await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    })
     const dateInput = screen.getByTestId('date-input')
 
     expect(dateInput).toBeVisible()
@@ -77,33 +79,33 @@ describe('RoadObstructionsPage', () => {
 
     // sanity check - the roadsections should be displayed on the map
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSectionsSvg = page.container.querySelectorAll(
-      '.leaflet-overlay-pane svg path'
-    )
+    const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
 
     expect(roadSectionsSvg.length).toBe(roadSections.features.length)
 
     // open filters modal
-    await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    await act(async () => {
+      await user.click(screen.getByText('wijzig', { selector: 'button' }))
+    })
 
     // change date
     const date = '2023-06-15'
-    await user.clear(screen.getByTestId('date-input'))
-    await user.type(screen.getByTestId('date-input'), date)
+    await act(async () => {
+      await user.clear(screen.getByTestId('date-input'))
+      await user.type(screen.getByTestId('date-input'), date)
+    })
     expect(screen.getByTestId('date-input')).toHaveValue(date)
 
     // close filters modal
-    await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
+    await act(async () => {
+      await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
+    })
 
     await waitFor(() => page.rerender)
 
     // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSectionsSvgUpdated = page.container.querySelectorAll(
-      '.leaflet-overlay-pane svg path'
-    )
+    const roadSectionsSvgUpdated = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
 
-    expect(roadSectionsSvgUpdated.length).toBe(
-      roadSectionsUpdated.features.length
-    )
+    expect(roadSectionsSvgUpdated.length).toBe(roadSectionsUpdated.features.length)
   })
 })

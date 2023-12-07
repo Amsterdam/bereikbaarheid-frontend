@@ -1,12 +1,12 @@
-import { TileLayer } from '@amsterdam/react-maps'
 import { useEffect } from 'react'
 
+import { TileLayer } from '@amsterdam/react-maps'
 import {
   roadNetworkHeavyGoodsVehicleZone,
   roadNetworkLowEmissionZone,
   roadNetworkHeavyGoodsVehicleAndLowEmissionZone,
   roadNetworkNoRestrictions,
-} from '../../../../shared/map/mapLayers'
+} from 'shared/map/mapLayers'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
@@ -14,8 +14,7 @@ import { useActiveRoadNetwork } from '../../hooks/useActiveRoadNetwork'
 
 const ProhibitorySignsRoadNetwork = () => {
   const activeRoadNetwork = useActiveRoadNetwork()
-  const { activeMapLayers, updateActiveMapLayers } =
-    useProhibitorySignsMapContext()
+  const { activeMapLayers, updateActiveMapLayers } = useProhibitorySignsMapContext()
   const { showScenarioWizard } = useProhibitorySignsPageContext()
 
   useEffect(() => {
@@ -32,17 +31,11 @@ const ProhibitorySignsRoadNetwork = () => {
   return (
     <>
       {activeMapLayers[roadNetworkHeavyGoodsVehicleZone.id] && (
-        <TileLayer
-          options={roadNetworkHeavyGoodsVehicleZone.options}
-          args={[roadNetworkHeavyGoodsVehicleZone.url]}
-        />
+        <TileLayer options={roadNetworkHeavyGoodsVehicleZone.options} args={[roadNetworkHeavyGoodsVehicleZone.url]} />
       )}
 
       {activeMapLayers[roadNetworkLowEmissionZone.id] && (
-        <TileLayer
-          options={roadNetworkLowEmissionZone.options}
-          args={[roadNetworkLowEmissionZone.url]}
-        />
+        <TileLayer options={roadNetworkLowEmissionZone.options} args={[roadNetworkLowEmissionZone.url]} />
       )}
 
       {activeMapLayers[roadNetworkHeavyGoodsVehicleAndLowEmissionZone.id] && (
@@ -53,10 +46,7 @@ const ProhibitorySignsRoadNetwork = () => {
       )}
 
       {activeMapLayers[roadNetworkNoRestrictions.id] && (
-        <TileLayer
-          options={roadNetworkNoRestrictions.options}
-          args={[roadNetworkNoRestrictions.url]}
-        />
+        <TileLayer options={roadNetworkNoRestrictions.options} args={[roadNetworkNoRestrictions.url]} />
       )}
     </>
   )

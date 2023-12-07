@@ -10,8 +10,8 @@ const Explanation = styled(Paragraph)`
 export const RvvDetailExplanation = () => {
   return (
     <Explanation>
-      Wegen die niet toegankelijk zijn voor uw voertuig zonder RVV-ontheffing
-      (Reglement Verkeersregels en Verkeerstekens)
+      Wegen die niet toegankelijk zijn voor uw voertuig zonder RVV-ontheffing (Reglement Verkeersregels en
+      Verkeerstekens)
     </Explanation>
   )
 }

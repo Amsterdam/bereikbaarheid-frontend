@@ -1,68 +1,79 @@
-// No check because typing of asc-ui is not correct.
-// @ts-nocheck
-// this is the reason why the menu items are located in this separate file
-// which is an effort to keep unchecked code to a minimum
-//
-// a block-scoped ignore in Header.tsx would be a more elegant solution
-// however TS does not offer a block-scoped ignore at the time of writing
-// see https://github.com/Microsoft/TypeScript/issues/19573
+import { useMemo } from 'react'
 
-import { MenuButton, MenuItem } from '@amsterdam/asc-ui'
-import { generatePath, Link, matchPath, useLocation } from 'react-router-dom'
-import { getPathTo } from '../../../routes'
+import { ExternalLink } from '@amsterdam/asc-assets'
+import { Icon, MenuButton, MenuItem, themeColor } from '@amsterdam/asc-ui'
+import { useTranslation } from 'react-i18next'
+import { Link, matchPath, useLocation } from 'react-router-dom'
+import styled from 'styled-components'
 
-export const HeaderMenuItems = () => {
+import {
+  MenuOrCardItemWithPath as MenuItemWithPath,
+  menuOrCardItems as menuItems,
+  mapPathsToMenuOrCardItems as mapPathsToMenuItems,
+} from '../../utils/menuOrCardItems'
+
+function HeaderMenuItem({ item }: { item: MenuItemWithPath }) {
   const location = useLocation()
+  const { t } = useTranslation()
+
+  return (
+    <MenuItem key={item.path}>
+      <MenuButton
+        forwardedAs={Link}
+        to={item.path}
+        target={item.target}
+        iconRight={
+          item.target === '_blank' && (
+            <Icon size={13} style={{ marginLeft: -2 }}>
+              <ExternalLink />
+            </Icon>
+          )
+        }
+        title={`${t(item.title)}${
+          item.description
+            ? `:
+
+${t(item.description)}`
+            : ''
+        }`}
+        // @ts-ignore
+        active={matchPath(location.pathname, item.path) ? 'true' : undefined}
+        style={item.secondary ? { fontWeight: 'normal' } : {}}
+      >
+        {t(item.title)}
+      </MenuButton>
+    </MenuItem>
+  )
+}
+
+const MenuDivider = styled.hr`
+  height: 2rem;
+  margin-inline: 1em;
+  border: 1px solid ${themeColor('tint', 'level3')};
+`
+
+function HeaderMenuItems() {
+  const primaryMenuItemsWithPaths = useMemo<MenuItemWithPath[]>(() => {
+    return mapPathsToMenuItems(menuItems.filter(item => !item.secondary))
+  }, [])
+
+  const secondaryMenuItemsWithPaths = useMemo<MenuItemWithPath[]>(() => {
+    return mapPathsToMenuItems(menuItems.filter(item => item.secondary))
+  }, [])
 
   return (
     <>
-      <MenuItem>
-        <MenuButton
-          as={Link}
-          to={generatePath(getPathTo('HOME'))}
-          active={
-            matchPath(location.pathname, generatePath(getPathTo('HOME')))
-              ? 'true'
-              : undefined
-          }
-        >
-          Home
-        </MenuButton>
-      </MenuItem>
+      {primaryMenuItemsWithPaths.map(item => (
+        <HeaderMenuItem key={item.path} item={item} />
+      ))}
 
-      <MenuItem>
-        <MenuButton
-          as={Link}
-          to={generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))}
-          active={
-            matchPath(
-              location.pathname,
-              generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))
-            )
-              ? 'true'
-              : undefined
-          }
-        >
-          Stremmingen
-        </MenuButton>
-      </MenuItem>
+      <MenuDivider />
 
-      <MenuItem>
-        <MenuButton
-          as={Link}
-          to={generatePath(getPathTo('LOAD_UNLOAD_PAGE'))}
-          active={
-            matchPath(
-              location.pathname,
-              generatePath(getPathTo('LOAD_UNLOAD_PAGE'))
-            )
-              ? 'true'
-              : undefined
-          }
-        >
-          Laden en lossen
-        </MenuButton>
-      </MenuItem>
+      {secondaryMenuItemsWithPaths.map(item => (
+        <HeaderMenuItem key={item.path} item={item} />
+      ))}
     </>
   )
 }
+
+export default HeaderMenuItems

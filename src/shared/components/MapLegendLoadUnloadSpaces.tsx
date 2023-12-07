@@ -1,6 +1,7 @@
+import { ChangeEvent, useEffect, useState } from 'react'
+
 import { useMapInstance } from '@amsterdam/arm-core'
 import { Checkbox, Label, themeSpacing } from '@amsterdam/asc-ui'
-import { ChangeEvent, useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import { loadUnloadSpaces } from '../map/mapLayers'
@@ -27,10 +28,7 @@ interface MapLegendLoadUnloadSpacesProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
 }
 
-export const MapLegendLoadUnloadSpaces = ({
-  checked,
-  onChange,
-}: MapLegendLoadUnloadSpacesProps) => {
+export const MapLegendLoadUnloadSpaces = ({ checked, onChange }: MapLegendLoadUnloadSpacesProps) => {
   const mapInstance = useMapInstance()
 
   // this WMS only provides output from zoom level 16 onwards,
@@ -43,17 +41,9 @@ export const MapLegendLoadUnloadSpaces = ({
   }, [mapInstance])
 
   return (
-    <StyledLabel
-      disabled={isDisabled}
-      htmlFor="mapLegendLoadUnloadSpaces"
-      label={loadUnloadSpaces.label}
-    >
+    <StyledLabel disabled={isDisabled} htmlFor="mapLegendLoadUnloadSpaces" label={loadUnloadSpaces.label}>
       <Legend />
-      <Checkbox
-        id="mapLegendLoadUnloadSpaces"
-        onChange={onChange}
-        checked={checked}
-      />
+      <Checkbox id="mapLegendLoadUnloadSpaces" onChange={onChange} checked={!isDisabled && checked} />
     </StyledLabel>
   )
 }

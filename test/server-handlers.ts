@@ -1,17 +1,25 @@
 import { rest } from 'msw'
 
-import { API_URL as API_URL_GEOSEARCH } from '../src/api/geosearch'
-import { API_URL as API_URL_PARKEERVAKKEN } from '../src/api/parkeervakken'
 import { ENDPOINT as ENDPOINT_ADDRESS_SEARCH } from '../src/api/atlas/search/address'
-import { ENDPOINT as ENDPOINT_LOAD_UNLOAD } from '../src/api/bereikbaarheid/road-sections/load-unload'
-import { ENDPOINT as ENDPOINT_PROHIBITORY_ROADS } from '../src/api/bereikbaarheid/roads/prohibitory'
+import { ENDPOINT as ENDPOINT_BOLLARDS } from '../src/api/bereikbaarheid/bollards'
 import { ENDPOINT as ENDPOINT_ROAD_SECTION } from '../src/api/bereikbaarheid/road-elements'
 import { ENDPOINT as ENDPOINT_ROAD_OBSTRUCTIONS } from '../src/api/bereikbaarheid/road-obstructions'
+import { ENDPOINT as ENDPOINT_LOAD_UNLOAD } from '../src/api/bereikbaarheid/road-sections/load-unload'
+import { ENDPOINT as ENDPOINT_PROHIBITORY_ROADS } from '../src/api/bereikbaarheid/roads/prohibitory'
 import { ENDPOINT as ENDPOINT_TRAFFIC_SIGNS } from '../src/api/bereikbaarheid/traffic-signs'
+import { API_URL as API_URL_GEOSEARCH } from '../src/api/geosearch'
+import { API_URL as API_URL_PARKEERVAKKEN } from '../src/api/parkeervakken'
 import { ENDPOINT as ENDPOINT_RDW_AXLES } from '../src/api/rdw/axles'
 import { ENDPOINT as ENDPOINT_RDW_FUEL } from '../src/api/rdw/fuel'
 import { ENDPOINT as ENDPOINT_RDW_SUBCATEGORY } from '../src/api/rdw/subcategory'
 import { ENDPOINT as ENDPOINT_RDW_VEHICLE } from '../src/api/rdw/vehicle'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_ENVIRONMENTAL_ZONE } from '../src/api/touringcar/environmental-zone'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_PARKING_SPACES } from '../src/api/touringcar/parking-spaces'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_DESTINATION_TRAFFIC } from '../src/api/touringcar/routes-destination-traffic'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_MANDATORY } from '../src/api/touringcar/routes-mandatory'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_RECOMMENDED } from '../src/api/touringcar/routes-recommended'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_STOPS } from '../src/api/touringcar/stops'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_VEHICLE_HEIGHTS } from '../src/api/touringcar/vehicle-heights'
 import { ENDPOINT as ENDPOINT_WFS_WIOR } from '../src/api/wfs/wior'
 
 export const handlers = [
@@ -35,6 +43,11 @@ export const handlers = [
     return res(ctx.status(200), ctx.json(roadObstructionsMock))
   }),
 
+  rest.get(`/${ENDPOINT_BOLLARDS}`, (_req, res, ctx) => {
+    const bollardsMock = require('./mocks/bereikbaarheid/stops/data.json')
+    return res(ctx.status(200), ctx.json(bollardsMock))
+  }),
+
   rest.get(`/${ENDPOINT_ROAD_SECTION}:roadSectionId`, (req, res, ctx) => {
     const { roadSectionId } = req.params
     const roadSectionMock = getRoadSection(roadSectionId)
@@ -48,27 +61,21 @@ export const handlers = [
 
   rest.get(ENDPOINT_RDW_AXLES, (req, res, ctx) => {
     const licensePlate = req.url.searchParams.get('kenteken')
-    const axlesMock = !licensePlate
-      ? []
-      : require(`./mocks/rdw/axles/${licensePlate.toLowerCase()}.json`)
+    const axlesMock = !licensePlate ? [] : require(`./mocks/rdw/axles/${licensePlate.toLowerCase()}.json`)
 
     return res(ctx.status(200), ctx.json(axlesMock))
   }),
 
   rest.get(ENDPOINT_RDW_FUEL, (req, res, ctx) => {
     const licensePlate = req.url.searchParams.get('kenteken')
-    const fuelMock = !licensePlate
-      ? []
-      : require(`./mocks/rdw/fuel/${licensePlate.toLowerCase()}.json`)
+    const fuelMock = !licensePlate ? [] : require(`./mocks/rdw/fuel/${licensePlate.toLowerCase()}.json`)
 
     return res(ctx.status(200), ctx.json(fuelMock))
   }),
 
   rest.get(ENDPOINT_RDW_SUBCATEGORY, (req, res, ctx) => {
     const licensePlate = req.url.searchParams.get('kenteken')
-    const subcategoryMock = !licensePlate
-      ? []
-      : require(`./mocks/rdw/subcategory/${licensePlate.toLowerCase()}.json`)
+    const subcategoryMock = !licensePlate ? [] : require(`./mocks/rdw/subcategory/${licensePlate.toLowerCase()}.json`)
 
     return res(ctx.status(200), ctx.json(subcategoryMock))
   }),
@@ -100,6 +107,41 @@ export const handlers = [
     const parkingSpaceMock = require('./mocks/parkingSpace-122028486875.json')
 
     return res(ctx.status(200), ctx.json(parkingSpaceMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_STOPS, (_req, res, ctx) => {
+    const touringcarStopsMock = require('./mocks/touringcar/stops/data.json')
+    return res(ctx.status(200), ctx.json(touringcarStopsMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_PARKING_SPACES, (_req, res, ctx) => {
+    const touringcarParkingSpacesMock = require('./mocks/touringcar/parking-signs/data.json')
+    return res(ctx.status(200), ctx.json(touringcarParkingSpacesMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_VEHICLE_HEIGHTS, (_req, res, ctx) => {
+    const touringcarVehicleHeightsMock = require('./mocks/touringcar/vehicle-heights/data.json')
+    return res(ctx.status(200), ctx.json(touringcarVehicleHeightsMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_ENVIRONMENTAL_ZONE, (_req, res, ctx) => {
+    const touringcarEnvironmentalZoneMock = require('./mocks/touringcar/environmental-zone/data.json')
+    return res(ctx.status(200), ctx.json(touringcarEnvironmentalZoneMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_ROUTES_DESTINATION_TRAFFIC, (_req, res, ctx) => {
+    const touringcarRoutesDestinationTrafficMock = require('./mocks/touringcar/routes-destination-traffic/data.json')
+    return res(ctx.status(200), ctx.json(touringcarRoutesDestinationTrafficMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_ROUTES_MANDATORY, (_req, res, ctx) => {
+    const touringcarRoutesMandatoryMock = require('./mocks/touringcar/routes-mandatory/data.json')
+    return res(ctx.status(200), ctx.json(touringcarRoutesMandatoryMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_ROUTES_RECOMMENDED, (_req, res, ctx) => {
+    const touringcarRoutesRecommendedMock = require('./mocks/touringcar/routes-recommended/data.json')
+    return res(ctx.status(200), ctx.json(touringcarRoutesRecommendedMock))
   }),
 ]
 

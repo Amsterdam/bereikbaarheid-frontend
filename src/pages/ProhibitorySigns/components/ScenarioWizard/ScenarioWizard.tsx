@@ -1,32 +1,23 @@
-import { Button, Divider, Heading, Modal, TopBar } from '@amsterdam/asc-ui'
-import { useSpring, animated } from '@react-spring/web'
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
-import styled from 'styled-components'
+import { useEffect, useState } from 'react'
 
-import { Z_INDEX_MODAL } from '../../../../shared/constants'
-import ModalBlock from '../../../../shared/components/ModalBlock'
-import { Address } from '../../../../types/address'
+import { Link, Divider, Heading, Modal, TopBar } from '@amsterdam/asc-ui'
+import { useSpring, animated } from '@react-spring/web'
+import { RouteIds } from 'routes'
+import ModalBlock from 'shared/components/ModalBlock'
+import { Z_INDEX_MODAL } from 'shared/constants'
+import { getGeneratedPath } from 'shared/utils/path'
+import { Address } from 'types/address'
 
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
-import { ProhibitorySignsFormScenarioStart } from './FormScenarioStart'
-import { ProhibitorySignsFormScenarioAddress } from './FormScenarioAddress'
-import { ProhibitorySignsFormScenarioRdwInfo } from './FormRdwInfo'
 
-const FeedbackButton = styled(Button)`
-  align-self: stretch;
-`
+import { ProhibitorySignsFormScenarioRdwInfo } from './FormRdwInfo'
+import { ProhibitorySignsFormScenarioAddress } from './FormScenarioAddress'
+import { ProhibitorySignsFormScenarioStart } from './FormScenarioStart'
 
 const AnimatedModalBlock = animated(ModalBlock)
 
-interface ProhibitorySignsScenarioWizardProps {
-  setShowFeedbackModal: Dispatch<SetStateAction<boolean>>
-}
-
-const ProhibitorySignsScenarioWizard = ({
-  setShowFeedbackModal,
-}: ProhibitorySignsScenarioWizardProps) => {
-  const { activeStepWizard, setAddress, showScenarioWizard } =
-    useProhibitorySignsPageContext()
+const ProhibitorySignsScenarioWizard = () => {
+  const { activeStepWizard, setAddress, showScenarioWizard } = useProhibitorySignsPageContext()
   const [addressInputEnabled, setAddressInputEnabled] = useState(true)
   const animationProps = useSpring({
     to: { opacity: 1 },
@@ -47,9 +38,7 @@ const ProhibitorySignsScenarioWizard = ({
       setAddressInputEnabled={setAddressInputEnabled}
     />,
     <ProhibitorySignsFormScenarioAddress />,
-    <ProhibitorySignsFormScenarioRdwInfo
-      addressInputEnabled={addressInputEnabled}
-    />,
+    <ProhibitorySignsFormScenarioRdwInfo addressInputEnabled={addressInputEnabled} />,
   ]
 
   return (
@@ -64,19 +53,14 @@ const ProhibitorySignsScenarioWizard = ({
       <TopBar>
         <Heading as="h2">Invoer gegevens</Heading>
 
-        <FeedbackButton
-          variant="textButton"
-          onClick={() => setShowFeedbackModal(true)}
-        >
+        <Link href={getGeneratedPath(RouteIds.CONTACT)} target="_blank">
           Feedback
-        </FeedbackButton>
+        </Link>
       </TopBar>
 
       <Divider />
 
-      <AnimatedModalBlock style={animationProps}>
-        {steps[activeStepWizard]}
-      </AnimatedModalBlock>
+      <AnimatedModalBlock style={animationProps}>{steps[activeStepWizard]}</AnimatedModalBlock>
     </Modal>
   )
 }

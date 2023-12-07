@@ -11,12 +11,11 @@ import {
   TableRow,
   themeSpacing,
 } from '@amsterdam/asc-ui'
+import { RoadSection } from 'api/bereikbaarheid/road-elements'
+import { RoadObstruction } from 'api/bereikbaarheid/road-obstructions'
+import LinkInTable from 'shared/components/LinkInTable'
+import { formatISODate } from 'shared/utils/dateTime'
 import styled from 'styled-components'
-
-import LinkInTable from '../../../../shared/components/LinkInTable'
-import { formatISODate } from '../../../../shared/utils/formatDate'
-import { RoadObstruction } from '../../../../api/bereikbaarheid/road-obstructions'
-import { RoadSection } from '../../../../api/bereikbaarheid/road-elements'
 
 const StyledH1 = styled(Heading)`
   margin-bottom: ${themeSpacing(5)};
@@ -42,28 +41,20 @@ function formatActivity(item: RoadObstruction) {
   )
 }
 
-export const RoadSectionDetails = ({
-  properties,
-}: Pick<RoadSection, 'properties'>) => {
+export const RoadSectionDetails = ({ properties }: Pick<RoadSection, 'properties'>) => {
   return (
     <>
       <StyledH1>Wegvak {properties.id}</StyledH1>
 
       <StyledDescriptionList>
-        <DescriptionListItem term="Straatnaam">
-          {properties.street_name}
-        </DescriptionListItem>
+        <DescriptionListItem term="Straatnaam">{properties.street_name}</DescriptionListItem>
 
         <DescriptionListItem term="Maximum snelheid">
-          {properties.max_speed_in_km
-            ? `${properties.max_speed_in_km} kilometer per uur`
-            : 'onbekend'}
+          {properties.max_speed_in_km ? `${properties.max_speed_in_km} kilometer per uur` : 'onbekend'}
         </DescriptionListItem>
 
         <DescriptionListItem term="Lengte">
-          {properties.length_in_m
-            ? `${properties.length_in_m} meter`
-            : 'onbekend'}
+          {properties.length_in_m ? `${properties.length_in_m} meter` : 'onbekend'}
         </DescriptionListItem>
       </StyledDescriptionList>
 
@@ -114,18 +105,10 @@ export const RoadSectionDetails = ({
                 return (
                   <TableRow key={index}>
                     <TableCell>{item.year}</TableCell>
+                    <TableCell>{Boolean(item.langzaam_verkeer) ? 'ja' : 'nee'}</TableCell>
+                    <TableCell>{Boolean(item.snelverkeer) ? 'ja' : 'nee'}</TableCell>
                     <TableCell>
-                      {Boolean(item.langzaam_verkeer) ? 'ja' : 'nee'}
-                    </TableCell>
-                    <TableCell>
-                      {Boolean(item.snelverkeer) ? 'ja' : 'nee'}
-                    </TableCell>
-                    <TableCell>
-                      <LinkInTable
-                        variant="inline"
-                        href={item.link_to_file}
-                        target="_blank"
-                      >
+                      <LinkInTable variant="inline" href={item.link_to_file} target="_blank">
                         Download
                       </LinkInTable>
                     </TableCell>

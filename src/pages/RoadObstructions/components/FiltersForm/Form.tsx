@@ -1,22 +1,14 @@
-import {
-  breakpoint,
-  Button,
-  Divider,
-  ErrorMessage,
-  Heading,
-  Input,
-  themeSpacing,
-  TopBar,
-} from '@amsterdam/asc-ui'
-import { zodResolver } from '@hookform/resolvers/zod'
 import { Dispatch, SetStateAction } from 'react'
+
+import { breakpoint, Button, Divider, ErrorMessage, Heading, Input, themeSpacing, TopBar } from '@amsterdam/asc-ui'
+import { zodResolver } from '@hookform/resolvers/zod'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { FormLabel } from 'shared/components/FormLabel'
+import ModalBlock from 'shared/components/ModalBlock'
 import styled from 'styled-components'
 
-import { FormLabel } from '../../../../shared/components/FormLabel'
-import ModalBlock from '../../../../shared/components/ModalBlock'
-
 import { RoadObstructionMapFilters } from '../../types/roadObstructionMapFilters'
+
 import { RoadObstructionsFiltersValidationSchema } from './ValidationSchema'
 
 const FormFieldWrapper = styled.div`
@@ -89,9 +81,7 @@ export const RoadObstructionsFiltersForm = ({
               type="time"
               {...register('timeFrom')}
             />
-            {errors.timeFrom && (
-              <ErrorMessage message={errors.timeFrom.message!} />
-            )}
+            {errors.timeFrom && <ErrorMessage message={errors.timeFrom.message!} />}
           </FormFieldWrapper>
 
           <FormFieldWrapper>

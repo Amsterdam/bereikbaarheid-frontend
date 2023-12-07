@@ -1,8 +1,9 @@
-import { Marker, useMapInstance } from '@amsterdam/arm-core'
 import { useEffect } from 'react'
 
+import { Marker, useMapInstance } from '@amsterdam/arm-core'
+import { Address } from 'types/address'
+
 import { defaultMapOptions } from '../../map/mapDefaults'
-import { Address } from '../../../types/address'
 
 interface AddressMarkerProps {
   address: Address
@@ -23,10 +24,7 @@ export const AddressMarker = ({ address }: AddressMarkerProps) => {
   return (
     <>
       {address.lat && address.lon && (
-        <Marker
-          latLng={{ lat: address.lat, lng: address.lon }}
-          options={{ interactive: false }}
-        />
+        <Marker latLng={{ lat: address.lat, lng: address.lon }} options={{ interactive: false }} />
       )}
     </>
   )

@@ -1,16 +1,11 @@
-import {
-  GeoJSON,
-  mapPanelConstants,
-  MapPanelContext,
-  usePanToLatLng,
-} from '@amsterdam/arm-core'
+import { Dispatch, SetStateAction, useContext, useEffect } from 'react'
+
+import { GeoJSON, mapPanelConstants, MapPanelContext, usePanToLatLng } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
+import { getRoadObstructions } from 'api/bereikbaarheid/road-obstructions'
 import { LatLngBounds, LatLngBoundsLiteral, PathOptions } from 'leaflet'
 import type L from 'leaflet'
-import { Dispatch, SetStateAction, useContext, useEffect } from 'react'
 import { useTheme } from 'styled-components'
-
-import { getRoadObstructions } from '../../../api/bereikbaarheid/road-obstructions'
 
 import { useRoadObstructionsMapContext } from '../contexts/MapContext'
 import { roadObstructionsLayerId } from '../contexts/mapLayersReducer'
@@ -23,23 +18,13 @@ interface LayerProps {
   mapFilters: RoadObstructionMapFilters
 }
 
-const RoadObstructionsLayer = ({
-  detailFeature,
-  setDetailFeature,
-  mapFilters,
-}: LayerProps) => {
-  const { drawerPosition, matchPositionWithSnapPoint, variant } =
-    useContext(MapPanelContext)
+const RoadObstructionsLayer = ({ detailFeature, setDetailFeature, mapFilters }: LayerProps) => {
+  const { drawerPosition, matchPositionWithSnapPoint, variant } = useContext(MapPanelContext)
   const { activeMapLayers } = useRoadObstructionsMapContext()
   const { pan } = usePanToLatLng()
   const theme = useTheme()
   const { data, error, isError, isLoading } = useQuery(
-    [
-      'roadObstructions',
-      mapFilters.date,
-      mapFilters.timeFrom,
-      mapFilters.timeTo,
-    ],
+    ['roadObstructions', mapFilters.date, mapFilters.timeFrom, mapFilters.timeTo],
     ({ signal }) => getRoadObstructions(mapFilters, signal)
   )
 
@@ -51,8 +36,7 @@ const RoadObstructionsLayer = ({
       matchPositionWithSnapPoint(mapPanelConstants.SnapPoint.Halfway) &&
       detailFeature &&
       detailFeature.type === 'roadSectionObstructions' &&
-      (detailFeature.data.geometry.type === 'LineString' ||
-        detailFeature.data.geometry.type === 'MultiLineString')
+      (detailFeature.data.geometry.type === 'LineString' || detailFeature.data.geometry.type === 'MultiLineString')
     ) {
       let roadSectionCenter = new LatLngBounds(
         detailFeature.data.geometry.coordinates as LatLngBoundsLiteral
@@ -87,13 +71,10 @@ const RoadObstructionsLayer = ({
           })
         },
         style: (feature): PathOptions => {
-          let indirectlyUnreachable =
-            feature?.properties.road_element_accessibility_code === 222
+          let indirectlyUnreachable = feature?.properties.road_element_accessibility_code === 222
 
           return {
-            color: indirectlyUnreachable
-              ? theme.colors.supplement?.lightblue
-              : theme.colors.primary?.main,
+            color: indirectlyUnreachable ? theme.colors.supplement?.lightblue : theme.colors.primary?.main,
             weight: 5,
           }
         },

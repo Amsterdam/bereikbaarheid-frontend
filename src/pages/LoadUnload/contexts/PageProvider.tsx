@@ -1,19 +1,17 @@
-import { format } from 'date-fns'
 import { ReactNode, useState } from 'react'
 
-import type { FormDateTimeValues } from '../../../shared/components/FormDateTime'
-import { Address } from '../../../types/address'
+import { format } from 'date-fns'
+import type { FormDateTimeValues } from 'shared/components/FormDateTime'
+import { Address } from 'types/address'
 
 import { LoadUnloadPageContext } from './PageContext'
 
-type Props = {
-  children: ReactNode
-}
-
-export const LoadUnloadPageProvider = ({ children }: Props) => {
+function LoadUnloadPageProvider({ children }: { children: ReactNode }) {
   const [address, setAddress] = useState({} as Address)
+
+  const initialDate = format(new Date(), 'yyyy-MM-dd')
   const [dateTime, setDateTime] = useState<FormDateTimeValues>({
-    date: format(new Date(), 'yyyy-MM-dd'),
+    date: initialDate,
     timeFrom: '11:00',
     timeTo: '13:00',
   })
@@ -31,3 +29,5 @@ export const LoadUnloadPageProvider = ({ children }: Props) => {
     </LoadUnloadPageContext.Provider>
   )
 }
+
+export default LoadUnloadPageProvider

@@ -1,9 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
+import { getVehicleSubcategory, rdwSubcategoryData } from 'api/rdw/subcategory'
+
 import { useProhibitorySignsPageContext } from '../contexts/PageContext'
-import {
-  getVehicleSubcategory,
-  rdwSubcategoryData,
-} from '../../../api/rdw/subcategory'
 
 export interface rdwSubcategoryInfo {
   server: rdwSubcategoryData
@@ -21,8 +19,7 @@ export const useRdwSubcategoryInfo = () => {
   const queryResult = useQuery({
     enabled: !!vehicle.licensePlate,
     queryKey: ['rdw', 'subcategory', vehicle.licensePlate],
-    queryFn: ({ signal }) =>
-      getVehicleSubcategory(vehicle.licensePlate, signal),
+    queryFn: ({ signal }) => getVehicleSubcategory(vehicle.licensePlate, signal),
     staleTime: 1000 * 60 * 15,
   })
 

@@ -1,7 +1,6 @@
 import { Checkbox, Label, themeSpacing } from '@amsterdam/asc-ui'
+import { wideRoads } from 'shared/map/mapLayers'
 import styled from 'styled-components'
-
-import { wideRoads } from '../../../../shared/map/mapLayers'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 
@@ -24,8 +23,7 @@ const StyledLabel = styled(Label)`
 `
 
 const ProhibitorySignsMapLegendWideRoads = () => {
-  const { activeMapLayers, updateActiveMapLayers } =
-    useProhibitorySignsMapContext()
+  const { activeMapLayers, updateActiveMapLayers } = useProhibitorySignsMapContext()
 
   return (
     <StyledLabel htmlFor="mapLegendWideRoads" label={wideRoads.label}>
@@ -35,9 +33,7 @@ const ProhibitorySignsMapLegendWideRoads = () => {
       </Legend>
       <Checkbox
         id="mapLegendWideRoads"
-        onChange={() =>
-          updateActiveMapLayers({ type: 'TOGGLE', layerId: 'wideRoads' })
-        }
+        onChange={() => updateActiveMapLayers({ type: 'TOGGLE', layerId: 'wideRoads' })}
         checked={activeMapLayers[wideRoads.id]}
       />
     </StyledLabel>

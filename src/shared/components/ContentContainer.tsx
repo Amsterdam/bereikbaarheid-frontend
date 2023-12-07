@@ -1,6 +1,7 @@
+import { ReactNode } from 'react'
+
 import { breakpoint, themeSpacing } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
-import { ReactNode } from 'react'
 
 const StyledContainer = styled.div`
   background-color: white;
@@ -20,11 +21,7 @@ interface ContentContainerProps {
 }
 
 const ContentContainer = ({ children, className }: ContentContainerProps) => {
-  return (
-    <StyledContainer className={className ?? 'content-container'}>
-      {children}
-    </StyledContainer>
-  )
+  return <StyledContainer className={className ?? 'content-container'}>{children}</StyledContainer>
 }
 
 export default ContentContainer

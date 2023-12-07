@@ -1,25 +1,18 @@
 import { Input, Label, Paragraph } from '@amsterdam/asc-ui'
-
-import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
+import InputWithSuffix from 'shared/components/InputWithSuffix'
+import styled from 'styled-components'
 
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
 
 import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
-import {
-  RdwInfoFormColumn,
-  RdwInfoFormLabelHelpText,
-  RdwInfoFormRow,
-} from './FormStyle'
-import styled from 'styled-components'
+import { RdwInfoFormColumn, RdwInfoFormLabelHelpText, RdwInfoFormRow } from './FormStyle'
 
 const StyledFormRow = styled(RdwInfoFormRow)`
   margin-bottom: 0;
 `
 
-const FormRdwInfoVehicleCurbWeight = ({
-  register,
-}: FormRdwInfoInputProps<FormRdwInfoInputs>) => {
+const FormRdwInfoVehicleCurbWeight = ({ register }: FormRdwInfoInputProps<FormRdwInfoInputs>) => {
   const { vehicle } = useProhibitorySignsPageContext()
   const { generalInfo } = useRdwInfo()
 
@@ -31,14 +24,10 @@ const FormRdwInfoVehicleCurbWeight = ({
     <StyledFormRow hasMargin={false} valign="center">
       <RdwInfoFormColumn span={4}>
         <Label htmlFor="vehicleCurbWeight" label="Rijklaar gewicht" />
-        {vehicle.hasTrailer && (
-          <RdwInfoFormLabelHelpText>voertuig</RdwInfoFormLabelHelpText>
-        )}
+        {vehicle.hasTrailer && <RdwInfoFormLabelHelpText>voertuig</RdwInfoFormLabelHelpText>}
       </RdwInfoFormColumn>
       <RdwInfoFormColumn span={4}>
-        <Paragraph gutterBottom={0}>
-          {generalInfo.data?.[0].derived.curbWeight} kg
-        </Paragraph>
+        <Paragraph gutterBottom={0}>{generalInfo.data?.[0].derived.curbWeight} kg</Paragraph>
       </RdwInfoFormColumn>
       <RdwInfoFormColumn span={4}>
         <InputWithSuffix displayAsText suffix="kg">

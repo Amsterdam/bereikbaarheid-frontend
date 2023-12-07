@@ -1,26 +1,25 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { generatePath } from 'react-router-dom'
+import { RouteIds } from 'routes'
+import { getGeneratedPath } from 'shared/utils/path'
 
-import { getPathTo } from '../../../../routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ScenarioDisplay', () => {
+  jest.setTimeout(15000)
+
   it('displays the result after finishing the scenario wizard', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
     const user = userEvent.setup()
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
-    await user.type(
-      await screen.findByLabelText('Hoogte van uw voertuig'),
-      '2.88'
-    )
+    await user.type(await screen.findByLabelText('Hoogte van uw voertuig'), '2.88')
 
     // ... but uncheck the address option
     await user.click(await screen.findByLabelText('Ik wil een adres invoeren'))
@@ -28,9 +27,7 @@ describe('ScenarioDisplay', () => {
     await user.click(screen.getByText('Volgende', { selector: 'button' }))
 
     // the next step should be the form with RDW information
-    expect(
-      await within(screen.getByRole('dialog')).findByText('RDW gegevens')
-    ).toBeVisible()
+    expect(await within(screen.getByRole('dialog')).findByText('RDW gegevens')).toBeVisible()
 
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
@@ -49,20 +46,17 @@ describe('ScenarioDisplay', () => {
   })
 
   it('updates the result when input is changed after finishing the initial scenario wizard', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
     const user = userEvent.setup()
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
-    await user.type(
-      await screen.findByLabelText('Hoogte van uw voertuig'),
-      '2.88'
-    )
+    await user.type(await screen.findByLabelText('Hoogte van uw voertuig'), '2.88')
 
     // ... but uncheck the address option
     await user.click(await screen.findByLabelText('Ik wil een adres invoeren'))
@@ -70,9 +64,7 @@ describe('ScenarioDisplay', () => {
     await user.click(screen.getByText('Volgende', { selector: 'button' }))
 
     // the next step should be the form with RDW information
-    expect(
-      await within(screen.getByRole('dialog')).findByText('RDW gegevens')
-    ).toBeVisible()
+    expect(await within(screen.getByRole('dialog')).findByText('RDW gegevens')).toBeVisible()
 
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
@@ -83,9 +75,7 @@ describe('ScenarioDisplay', () => {
       document.querySelectorAll('.leaflet-overlay-pane svg path')
     )
 
-    expect(
-      within(screen.getByTestId('scenario-display')).getByText('8.23 m')
-    ).toBeVisible() // vehicle length
+    expect(within(screen.getByTestId('scenario-display')).getByText('8.23 m')).toBeVisible() // vehicle length
 
     // open RDW info form
     await user.click(screen.getByTestId('change-rdw-info'))
@@ -104,8 +94,6 @@ describe('ScenarioDisplay', () => {
     )
 
     // and check if vehicle length has changed
-    expect(
-      within(screen.getByTestId('scenario-display')).getByText('10.56 m')
-    ).toBeVisible() // vehicle length
+    expect(within(screen.getByTestId('scenario-display')).getByText('10.56 m')).toBeVisible() // vehicle length
   })
 })

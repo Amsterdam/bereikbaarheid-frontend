@@ -1,32 +1,21 @@
-import {
-  breakpoint,
-  Button,
-  Checkbox,
-  ErrorMessage,
-  Input,
-  Label,
-  Paragraph,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { Dispatch, SetStateAction } from 'react'
+
+import { breakpoint, Button, Checkbox, ErrorMessage, Input, Label, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { zodResolver } from '@hookform/resolvers/zod'
 import debounce from 'lodash/debounce'
-import { Dispatch, SetStateAction } from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
+import { FormLabel } from 'shared/components/FormLabel'
+import InputWithSuffix from 'shared/components/InputWithSuffix'
 import styled from 'styled-components'
 import { z } from 'zod'
 
-import { FormLabel } from '../../../../../shared/components/FormLabel'
-import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
-
 import { Vehicle } from '../../../types/vehicle'
-import {
-  FormInputLicensePlate,
-  FormInputLicensePlateWidth,
-} from '../FormInputLicensePlate/Style'
+import { FormInputLicensePlate, FormInputLicensePlateWidth } from '../FormInputLicensePlate/Style'
+import ScenarioWizardNav from '../ScenarioWizardNav'
+
 import { FormScenarioStartSampleLicensePlates } from './SampleLicensePlates'
 import { FormScenarioStartValidationSchema } from './ValidationSchema'
-import ScenarioWizardNav from '../ScenarioWizardNav'
 
 const FormFieldWrapper = styled.div`
   margin-bottom: ${themeSpacing(3)};
@@ -67,8 +56,7 @@ export const ProhibitorySignsFormScenarioStart = ({
   addressInputEnabled,
   setAddressInputEnabled,
 }: ProhibitorySignsFormScenarioStartProps) => {
-  const { setActiveStepWizard, expertMode, vehicle, setVehicle } =
-    useProhibitorySignsPageContext()
+  const { setActiveStepWizard, expertMode, vehicle, setVehicle } = useProhibitorySignsPageContext()
   const {
     control,
     register,
@@ -84,9 +72,7 @@ export const ProhibitorySignsFormScenarioStart = ({
   })
   const { onChange, onBlur, name, ref } = register('licensePlate')
 
-  const onSubmit: SubmitHandler<
-    z.infer<typeof FormScenarioStartValidationSchema>
-  > = data => {
+  const onSubmit: SubmitHandler<z.infer<typeof FormScenarioStartValidationSchema>> = data => {
     const nextFormStep = data.addressInputEnabled ? 1 : 2
 
     setAddressInputEnabled(data.addressInputEnabled ?? false)
@@ -105,8 +91,7 @@ export const ProhibitorySignsFormScenarioStart = ({
   return (
     <>
       <StyledParagraph>
-        Na het invoeren van uw gegevens ziet u op de kaart of uw bestemming
-        bereikbaar is.
+        Na het invoeren van uw gegevens ziet u op de kaart of uw bestemming bereikbaar is.
       </StyledParagraph>
 
       <form onSubmit={handleSubmit(onSubmit)} data-testid="form-scenario-start">
@@ -132,9 +117,7 @@ export const ProhibitorySignsFormScenarioStart = ({
             )}
           </LicensePlateInnerContainer>
 
-          {errors.licensePlate && (
-            <ErrorMessage message={errors.licensePlate.message!} />
-          )}
+          {errors.licensePlate && <ErrorMessage message={errors.licensePlate.message!} />}
         </FormFieldWrapper>
 
         <FormFieldWrapper>
@@ -148,28 +131,17 @@ export const ProhibitorySignsFormScenarioStart = ({
               {...register('vehicleHeight')}
             />
           </InputWithSuffix>
-          {errors.vehicleHeight && (
-            <ErrorMessage message={errors.vehicleHeight.message!} />
-          )}
+          {errors.vehicleHeight && <ErrorMessage message={errors.vehicleHeight.message!} />}
         </FormFieldWrapper>
 
         <div>
-          <Label
-            htmlFor="vehicleHasTrailer"
-            label="Ik heb een oplegger en/of aanhanger"
-          >
+          <Label htmlFor="vehicleHasTrailer" label="Ik heb een oplegger en/of aanhanger">
             <Controller
               control={control}
               name="vehicleHasTrailer"
               defaultValue={vehicle.hasTrailer ?? false}
               render={({ field: { onChange, onBlur, value, ref } }) => (
-                <Checkbox
-                  id="vehicleHasTrailer"
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  checked={value}
-                  ref={ref}
-                />
+                <Checkbox id="vehicleHasTrailer" onChange={onChange} onBlur={onBlur} checked={value} ref={ref} />
               )}
             />
           </Label>
@@ -181,17 +153,8 @@ export const ProhibitorySignsFormScenarioStart = ({
             name="addressInputEnabled"
             defaultValue={addressInputEnabled}
             render={({ field: { onChange, onBlur, value, ref } }) => (
-              <Label
-                htmlFor="addressInputEnabled"
-                label="Ik wil een adres invoeren"
-              >
-                <Checkbox
-                  id="addressInputEnabled"
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  checked={value}
-                  ref={ref}
-                />
+              <Label htmlFor="addressInputEnabled" label="Ik wil een adres invoeren">
+                <Checkbox id="addressInputEnabled" onChange={onChange} onBlur={onBlur} checked={value} ref={ref} />
               </Label>
             )}
           />

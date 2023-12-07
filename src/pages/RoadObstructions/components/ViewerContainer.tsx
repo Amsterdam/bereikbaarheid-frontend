@@ -1,5 +1,6 @@
-import { MapPanelContext, ViewerContainer, Zoom } from '@amsterdam/arm-core'
 import { useContext } from 'react'
+
+import { MapPanelContext, ViewerContainer, Zoom } from '@amsterdam/arm-core'
 import styled, { css } from 'styled-components'
 
 import RoadObstructionsMapLegend from './MapLegend'
@@ -10,15 +11,15 @@ type StyledViewerContainerProps = {
   ignoreTransition: boolean
 }
 
-const StyledViewerContainer = styled(
-  ViewerContainer
-).attrs<StyledViewerContainerProps>(({ viewerHeight, leftOffset }) => ({
-  style: {
-    height: viewerHeight,
-    left: leftOffset,
-    width: `calc(100% - ${leftOffset})`,
-  },
-}))<StyledViewerContainerProps>`
+const StyledViewerContainer = styled(ViewerContainer).attrs<StyledViewerContainerProps>(
+  ({ viewerHeight, leftOffset }) => ({
+    style: {
+      height: viewerHeight,
+      left: leftOffset,
+      width: `calc(100% - ${leftOffset})`,
+    },
+  })
+)<StyledViewerContainerProps>`
   bottom: 0;
   position: absolute;
   right: 0;

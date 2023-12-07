@@ -1,6 +1,5 @@
 import { Column, Row } from '@amsterdam/asc-ui'
-
-import { MapLegend } from '../../../../shared/components/MapLegend'
+import { MapLegend } from 'shared/components/MapLegend'
 
 import { RoadObstructionsMapLegendRoadObstructions } from './RoadObstructions'
 import { RoadObstructionsMapLegendWior } from './Wior'

@@ -7,13 +7,7 @@ interface LoadingSpinnerProps {
 }
 
 const LoadingSpinner = ({ size }: LoadingSpinnerProps) => {
-  return (
-    <Spinner
-      color={themeColor('secondary')}
-      size={size ?? DEFAULT_SIZE}
-      data-testid="loadingSpinner"
-    />
-  )
+  return <Spinner color={themeColor('secondary')} size={size ?? DEFAULT_SIZE} data-testid="loadingSpinner" />
 }
 
 export default LoadingSpinner

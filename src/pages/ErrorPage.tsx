@@ -1,5 +1,10 @@
+import { useEffect } from 'react'
+
 import { Column, Heading, Paragraph, Row } from '@amsterdam/asc-ui'
+import { useTranslation } from 'react-i18next'
 import { useRouteError } from 'react-router-dom'
+import Header from 'shared/components/Header'
+import useAnalytics from 'shared/hooks/useAnalytics'
 import styled from 'styled-components'
 
 const Container = styled.main`
@@ -9,32 +14,53 @@ const Container = styled.main`
   justify-content: center;
 `
 
+const StyledColumn = styled(Column)`
+  padding-block-start: 1em;
+  flex-direction: column;
+  align-items: center;
+`
+
 const ErrorPage = () => {
-  const error = useRouteError()
-  console.error(error)
+  const { t } = useTranslation()
+
+  let error = useRouteError()
+
+  if (!error) {
+    error = new Response('Not Found', {
+      status: 404,
+      statusText: t('_error.pageCouldNotBeFound'),
+    })
+  }
+
+  const { trackPageVisit } = useAnalytics()
+  useEffect(() => {
+    trackPageVisit(error instanceof Response ? `${error.status}` : '404')
+  })
 
   return (
-    <Container data-testid="error-page">
-      <Row>
-        <Column span={12}>
-          <Heading as="h1">Helaas</Heading>
-        </Column>
-      </Row>
+    <>
+      <Header title={t('_error.somethingWentWrong')} />
 
-      <Row>
-        <Column span={12}>
-          {error instanceof Response && error.status === 404 && (
-            <Paragraph>
-              {error.statusText ?? 'De pagina kon niet worden gevonden.'}
-            </Paragraph>
-          )}
+      <Container data-testid="error-page">
+        <Row>
+          <Column span={12}>
+            <Heading as="h1">{t('_error.unfortunately')}</Heading>
+          </Column>
+        </Row>
 
-          {!(error instanceof Response) && (
-            <Paragraph>Er ging iets fout.</Paragraph>
-          )}
-        </Column>
-      </Row>
-    </Container>
+        <Row>
+          <StyledColumn span={12}>
+            {error instanceof Response && error.status === 404 && (
+              <Paragraph>{error.statusText ?? t('_error.pageCouldNotBeFound')}</Paragraph>
+            )}
+
+            {error instanceof Response && error.status && <Paragraph>Status code: {error.status}</Paragraph>}
+
+            {!(error instanceof Response) && <Paragraph>{t('_error.somethingWentWrong')}.</Paragraph>}
+          </StyledColumn>
+        </Row>
+      </Container>
+    </>
   )
 }
 

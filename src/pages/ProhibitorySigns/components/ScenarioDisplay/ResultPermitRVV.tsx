@@ -1,7 +1,7 @@
 import { Button, Link, Paragraph } from '@amsterdam/asc-ui'
 
-import { linkToPermitCheck } from '../RvvDetail'
 import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
+import { linkToPermitCheck } from '../RvvDetail'
 
 const ScenarioDisplayResultPermitRVV = () => {
   const permitsByLocation = usePermitsByLocation()
@@ -17,19 +17,13 @@ const ScenarioDisplayResultPermitRVV = () => {
     )
   }
 
-  if (
-    permitsByLocation.data?.data &&
-    !permitsByLocation.data?.data?.attributes.rvv_permit_needed
-  ) {
+  if (permitsByLocation.data?.data && !permitsByLocation.data?.data?.attributes.rvv_permit_needed) {
     return <Paragraph gutterBottom={0}>niet nodig</Paragraph>
   }
 
   return (
     <Paragraph gutterBottom={0}>
-      <Button
-        onClick={() => window.open(linkToPermitCheck, '_blank')}
-        variant="primary"
-      >
+      <Button onClick={() => window.open(linkToPermitCheck, '_blank')} variant="primary">
         nodig, vraag aan
       </Button>
     </Paragraph>

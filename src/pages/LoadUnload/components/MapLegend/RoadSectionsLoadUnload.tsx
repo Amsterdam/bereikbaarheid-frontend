@@ -1,14 +1,9 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
+import MapLegendItem from 'shared/components/MapLegendItem'
+import { LegendItemsWrapper, LegendWrapper } from 'shared/components/MapLegendStyles'
 import { useTheme } from 'styled-components'
 
-import { MapLegendItem } from '../../../../shared/components/MapLegendItem'
-import {
-  LegendItemsWrapper,
-  LegendWrapper,
-} from '../../../../shared/components/MapLegendStyles'
-
-import { useLoadUnloadMapContext } from '../../contexts/MapContext'
-import { roadSectionsLoadUnloadLayerId } from '../../contexts/mapLayersReducer'
+import useLoadUnloadMapContext, { MapLayerId } from '../../contexts/MapContext'
 
 export const LoadUnloadMapLegendRoadSectionsLoadUnload = () => {
   const { activeMapLayers, updateActiveMapLayers } = useLoadUnloadMapContext()
@@ -22,10 +17,10 @@ export const LoadUnloadMapLegendRoadSectionsLoadUnload = () => {
           onChange={() =>
             updateActiveMapLayers({
               type: 'TOGGLE',
-              layerId: roadSectionsLoadUnloadLayerId,
+              layerId: MapLayerId.roadSectionsLoadUnloadLayerId,
             })
           }
-          checked={activeMapLayers[roadSectionsLoadUnloadLayerId]}
+          checked={activeMapLayers[MapLayerId.roadSectionsLoadUnloadLayerId]}
         />
       </Label>
 
@@ -51,10 +46,7 @@ export const LoadUnloadMapLegendRoadSectionsLoadUnload = () => {
             }
           />
 
-          <MapLegendItem
-            color={theme.colors.primary!.main}
-            text="venstertijd valt buiten tijdvak"
-          />
+          <MapLegendItem color={theme.colors.primary!.main} text="venstertijd valt buiten tijdvak" />
         </LegendItemsWrapper>
       </CompactThemeProvider>
     </LegendWrapper>

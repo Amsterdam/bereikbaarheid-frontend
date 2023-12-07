@@ -1,11 +1,6 @@
-import {
-  Alert,
-  CompactThemeProvider,
-  Link,
-  Paragraph,
-  themeColor,
-} from '@amsterdam/asc-ui'
 import { Dispatch, SetStateAction } from 'react'
+
+import { Alert, CompactThemeProvider, Link, Paragraph, themeColor } from '@amsterdam/asc-ui'
 import styled from 'styled-components'
 
 import { Z_INDEX_HEADER } from '../constants'
@@ -40,12 +35,10 @@ const Disclaimer = ({ setShowDisclaimer }: DisclaimerProps) => {
     <CompactThemeProvider>
       <StyledAlert dismissible onDismiss={onDismiss}>
         <StyledParagraph>
-          De gemeente Amsterdam verwerkt uw persoonsgegevens op een zorgvuldige
-          en veilige manier in overeenstemming met de geldende wet- en
-          regelgeving. Dat betekent onder meer dat uw gegevens niet voor een
-          ander doel worden gebruikt dan waarvoor u ze heeft verstrekt. Meer
-          informatie over de bescherming van uw persoonsgegevens kunt u vinden
-          in&nbsp;
+          De gemeente Amsterdam verwerkt uw persoonsgegevens op een zorgvuldige en veilige manier in overeenstemming met
+          de geldende wet- en regelgeving. Dat betekent onder meer dat uw gegevens niet voor een ander doel worden
+          gebruikt dan waarvoor u ze heeft verstrekt. Meer informatie over de bescherming van uw persoonsgegevens kunt u
+          vinden in&nbsp;
           <Link
             href="https://www.amsterdam.nl/privacy/specifieke/privacyverklaring-parkeren-verkeer-bouw/bereikbaarheidskaart-privacy/"
             rel="noreferrer"
@@ -63,10 +56,9 @@ const Disclaimer = ({ setShowDisclaimer }: DisclaimerProps) => {
           >
             een statistiekendienst
           </Link>
-          &nbsp;om inzicht te krijgen in klikpaden. Deze gegevens zijn
-          geanonimiseerd. Aan deze kaart kunnen geen rechten worden ontleend. De
-          situatie en bebording op straat kan dus afwijken van de kaartgegevens
-          en prevaleert altijd.
+          &nbsp;om inzicht te krijgen in klikpaden. Deze gegevens zijn geanonimiseerd. Aan deze kaart kunnen geen
+          rechten worden ontleend. De situatie en bebording op straat kan dus afwijken van de kaartgegevens en
+          prevaleert altijd.
         </StyledParagraph>
       </StyledAlert>
     </CompactThemeProvider>

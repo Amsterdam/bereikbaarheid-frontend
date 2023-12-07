@@ -1,11 +1,5 @@
-import {
-  Feature,
-  FeatureCollection,
-  LineString,
-  MultiLineString,
-} from 'geojson'
-
-import { Vehicle } from '../../../../pages/ProhibitorySigns/types/vehicle'
+import { Feature, FeatureCollection, LineString, MultiLineString } from 'geojson'
+import { Vehicle } from 'pages/ProhibitorySigns/types/vehicle'
 
 import { api } from '../../index'
 

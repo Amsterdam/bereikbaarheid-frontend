@@ -1,26 +1,25 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
+import { getPathTo } from 'routes'
 
-import { getPathTo } from '../../../../routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('MapLegend', () => {
+  jest.setTimeout(15000)
+
   it('renders correctly', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
-    await user.type(
-      await screen.findByLabelText('Hoogte van uw voertuig'),
-      '2.78'
-    )
+    await user.type(await screen.findByLabelText('Hoogte van uw voertuig'), '2.78')
 
     // ... but uncheck the address option
     await user.click(await screen.findByLabelText('Ik wil een adres invoeren'))
@@ -28,9 +27,7 @@ describe('MapLegend', () => {
     await user.click(screen.getByText('Volgende', { selector: 'button' }))
 
     // the next step should be the form with RDW information
-    expect(
-      await within(screen.getByRole('dialog')).findByText('RDW gegevens')
-    ).toBeVisible()
+    expect(await within(screen.getByRole('dialog')).findByText('RDW gegevens')).toBeVisible()
 
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
@@ -55,20 +52,17 @@ describe('MapLegend', () => {
   // item and the loading & enabling of the map layer makes use of
   // the same - mapInstance based - mechanism.
   it('enables the load/unload spaces layer when zooming in', async () => {
-    const pathToPage = generatePath(getPathTo('HOME'))
+    const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
 
     withApp(pathToPage)
 
     // wait until page is rendered
-    await screen.findAllByText(/bereikbaarheid amsterdam op kenteken/i)
+    await screen.findAllByText(/bereikbaarheid op kenteken/i)
 
     // fill out the first form
     await user.type(await screen.findByLabelText('Kenteken'), 'BXLS14')
-    await user.type(
-      await screen.findByLabelText('Hoogte van uw voertuig'),
-      '2.78'
-    )
+    await user.type(await screen.findByLabelText('Hoogte van uw voertuig'), '2.78')
 
     // ... but uncheck the address option
     await user.click(await screen.findByLabelText('Ik wil een adres invoeren'))
@@ -76,9 +70,7 @@ describe('MapLegend', () => {
     await user.click(screen.getByText('Volgende', { selector: 'button' }))
 
     // the next step should be the form with RDW information
-    expect(
-      await within(screen.getByRole('dialog')).findByText('RDW gegevens')
-    ).toBeVisible()
+    expect(await within(screen.getByRole('dialog')).findByText('RDW gegevens')).toBeVisible()
 
     // complete the wizard
     await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))

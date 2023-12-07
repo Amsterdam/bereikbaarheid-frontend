@@ -1,9 +1,11 @@
-import { Select, themeSpacing } from '@amsterdam/asc-ui'
 import { FormEvent, useState } from 'react'
+
+import { Select, themeSpacing } from '@amsterdam/asc-ui'
 import { UseFormSetValue } from 'react-hook-form'
 import styled from 'styled-components'
 
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
+
 import { FormScenarioStartInputs } from './Form'
 
 const licensePlates = [
@@ -52,9 +54,7 @@ type ExpertModeLicensePlatesProps = {
   setValue: UseFormSetValue<FormScenarioStartInputs>
 }
 
-export const FormScenarioStartSampleLicensePlates = ({
-  setValue,
-}: ExpertModeLicensePlatesProps) => {
+export const FormScenarioStartSampleLicensePlates = ({ setValue }: ExpertModeLicensePlatesProps) => {
   const { vehicle, setVehicle } = useProhibitorySignsPageContext()
   const [selected, setSelected] = useState(vehicle?.licensePlate)
 
@@ -73,9 +73,7 @@ export const FormScenarioStartSampleLicensePlates = ({
       })
     }
 
-    const selectedItem = licensePlates.find(
-      item => item.licensePlate === e.currentTarget.value
-    )
+    const selectedItem = licensePlates.find(item => item.licensePlate === e.currentTarget.value)
 
     if (selectedItem) {
       setValue('licensePlate', selectedItem.licensePlate)

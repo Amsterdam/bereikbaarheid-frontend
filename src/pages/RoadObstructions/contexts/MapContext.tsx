@@ -7,16 +7,12 @@ export type RoadObstructionsMapContextProps = {
   updateActiveMapLayers: Dispatch<mapLayerActionType>
 }
 
-export const RoadObstructionsMapContext = createContext<
-  RoadObstructionsMapContextProps | undefined
->(undefined)
+export const RoadObstructionsMapContext = createContext<RoadObstructionsMapContextProps | undefined>(undefined)
 
 export function useRoadObstructionsMapContext() {
   const context = useContext(RoadObstructionsMapContext)
   if (context === undefined) {
-    throw new Error(
-      'useRoadObstructionsMapContext must be within RoadObstructionsMapProvider'
-    )
+    throw new Error('useRoadObstructionsMapContext must be within RoadObstructionsMapProvider')
   }
 
   return context

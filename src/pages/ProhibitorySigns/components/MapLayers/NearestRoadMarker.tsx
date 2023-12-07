@@ -1,9 +1,10 @@
-import { Marker, useMapInstance } from '@amsterdam/arm-core'
-import L from 'leaflet'
 import { useEffect, useState } from 'react'
 
+import { Marker, useMapInstance } from '@amsterdam/arm-core'
+import L from 'leaflet'
+import DistanceToDestinationIconImage from 'shared/icons/bootstrap-icon-flag-fill.svg'
+
 import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
-import DistanceToDestinationIconImage from '../../../../shared/icons/bootstrap-icon-flag-fill.svg'
 
 let flagIcon = L.icon({
   iconUrl: DistanceToDestinationIconImage,
@@ -15,18 +16,13 @@ let flagIcon = L.icon({
 const ProhibitorySignsNearestRoadMarker = () => {
   const mapInstance = useMapInstance()
   const permitsByLocation = usePermitsByLocation()
-  const [markerInstance, setMarkerInstance] = useState<L.Marker | undefined>(
-    undefined
-  )
+  const [markerInstance, setMarkerInstance] = useState<L.Marker | undefined>(undefined)
 
   useEffect(() => {
     if (mapInstance && markerInstance) {
-      markerInstance.bindTooltip(
-        'Getoonde ontheffingen aan de linkerkant <br> gelden voor deze locatie.',
-        {
-          direction: 'left',
-        }
-      )
+      markerInstance.bindTooltip('Getoonde ontheffingen aan de linkerkant <br> gelden voor deze locatie.', {
+        direction: 'left',
+      })
     }
   }, [mapInstance, markerInstance])
 

@@ -1,5 +1,6 @@
-import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
 import { useEffect, useState } from 'react'
+
+import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 
@@ -9,8 +10,7 @@ import ProhibitorySignsDetailFeatureTrafficSign from './TrafficSign'
 const { Overlay } = mapPanelConstants
 
 const ProhibitorySignsDetailFeature = () => {
-  const { currentTrafficSign, setCurrentTrafficSign, location, setLocation } =
-    useProhibitorySignsMapContext()
+  const { currentTrafficSign, setCurrentTrafficSign, location, setLocation } = useProhibitorySignsMapContext()
   const [currentOverlay, setCurrentOverlay] = useState(Overlay.None)
 
   useEffect(() => {
@@ -47,10 +47,7 @@ const ProhibitorySignsDetailFeature = () => {
       {currentTrafficSign && <ProhibitorySignsDetailFeatureTrafficSign />}
 
       {!currentTrafficSign && location && (
-        <ProhibitorySignsDetailFeatureSearchResults
-          lat={location[0]}
-          lon={location[1]}
-        />
+        <ProhibitorySignsDetailFeatureSearchResults lat={location[0]} lon={location[1]} />
       )}
     </MapPanelContent>
   )

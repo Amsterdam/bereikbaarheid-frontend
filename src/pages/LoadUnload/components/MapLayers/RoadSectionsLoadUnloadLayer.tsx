@@ -1,29 +1,23 @@
+import { useCallback, useEffect, useState } from 'react'
+
 import { GeoJSON } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
+import { getRoadSectionsLoadUnload, RoadSectionLoadUnload } from 'api/bereikbaarheid/road-sections/load-unload'
 import { DomEvent, PathOptions } from 'leaflet'
 import type L from 'leaflet'
-import { useCallback, useEffect, useState } from 'react'
+import { getDayOfTheWeekInDutch } from 'shared/utils/dateTime'
 import { useTheme } from 'styled-components'
 
-import {
-  getRoadSectionsLoadUnload,
-  RoadSectionLoadUnload,
-} from '../../../../api/bereikbaarheid/road-sections/load-unload'
-import { useDateToDayOfTheWeek } from '../../../../shared/hooks/useDateToDayOfTheWeek'
-
-import { useLoadUnloadMapContext } from '../../contexts/MapContext'
-import { roadSectionsLoadUnloadLayerId } from '../../contexts/mapLayersReducer'
-import { useLoadUnloadPageContext } from '../../contexts/PageContext'
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
+import useLoadUnloadMapContext, { MapLayerId } from '../../contexts/MapContext'
+import { useLoadUnloadPageContext } from '../../contexts/PageContext'
 
 export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
   const { activeMapLayers, setDetailFeature } = useLoadUnloadMapContext()
   const { dateTime } = useLoadUnloadPageContext()
-  const requestedDayOfTheWeek = useDateToDayOfTheWeek(dateTime.date)
+  const requestedDayOfTheWeek = getDayOfTheWeekInDutch(dateTime.date)
   const theme = useTheme()
-  const [roadSectionsLayer, setRoadSectionsLayer] = useState<L.GeoJSON | null>(
-    null
-  )
+  const [roadSectionsLayer, setRoadSectionsLayer] = useState<L.GeoJSON | null>(null)
 
   const roadSectionsLoadUnload = useQuery({
     queryKey: ['road-sections', 'load-unload'],
@@ -51,10 +45,8 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
           item.end_time &&
           item.days &&
           item.days.includes(requestedDayOfTheWeek) &&
-          ((item.start_time >= `${dateTime.timeFrom}:00` &&
-            item.start_time <= `${dateTime.timeTo}:00`) ||
-            (item.end_time >= `${dateTime.timeFrom}:00` &&
-              item.end_time <= `${dateTime.timeTo}:00`))
+          ((item.start_time >= `${dateTime.timeFrom}:00` && item.start_time <= `${dateTime.timeTo}:00`) ||
+            (item.end_time >= `${dateTime.timeFrom}:00` && item.end_time <= `${dateTime.timeTo}:00`))
       )
 
       if (fullyAvailableRegimes.length > 0) {
@@ -73,16 +65,11 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
 
   useEffect(() => {
     if (roadSectionsLayer) {
-      roadSectionsLayer.setStyle(feature =>
-        categorizeSection(feature as RoadSectionLoadUnload)
-      )
+      roadSectionsLayer.setStyle(feature => categorizeSection(feature as RoadSectionLoadUnload))
     }
   }, [roadSectionsLayer, categorizeSection])
 
-  if (
-    roadSectionsLoadUnload.isError &&
-    roadSectionsLoadUnload.error instanceof Error
-  ) {
+  if (roadSectionsLoadUnload.isError && roadSectionsLoadUnload.error instanceof Error) {
     console.error(roadSectionsLoadUnload.error.message)
   }
 
@@ -90,7 +77,7 @@ export const LoadUnloadRoadSectionsLoadUnloadLayer = () => {
     return null
   }
 
-  if (!activeMapLayers[roadSectionsLoadUnloadLayerId]) return null
+  if (!activeMapLayers[MapLayerId.roadSectionsLoadUnloadLayerId]) return null
 
   return (
     <GeoJSON

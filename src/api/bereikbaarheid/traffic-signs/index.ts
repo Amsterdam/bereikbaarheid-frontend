@@ -1,14 +1,11 @@
 import { Feature, FeatureCollection, Point } from 'geojson'
+import { Vehicle } from 'pages/ProhibitorySigns/types/vehicle'
 
-import { Vehicle } from '../../../pages/ProhibitorySigns/types/vehicle'
 import { api } from '../index'
 
 export const ENDPOINT = 'v1/traffic-signs'
 
-export type TrafficSignCategory =
-  | 'verbod'
-  | 'verbod, met uitzondering'
-  | 'vooraankondiging verbod'
+export type TrafficSignCategory = 'verbod' | 'verbod, met uitzondering' | 'vooraankondiging verbod'
 
 export interface TrafficSign extends Feature {
   geometry: Point
@@ -31,10 +28,7 @@ interface TrafficSignsFeatureCollection extends FeatureCollection {
   features: [] | TrafficSign[]
 }
 
-export type TrafficSignCategoryApi =
-  | 'prohibition'
-  | 'prohibition ahead'
-  | 'prohibition with exception'
+export type TrafficSignCategoryApi = 'prohibition' | 'prohibition ahead' | 'prohibition with exception'
 
 interface TrafficSignsParams {
   trafficSignCategories: TrafficSignCategoryApi[]

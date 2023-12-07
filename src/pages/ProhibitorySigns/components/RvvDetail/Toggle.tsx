@@ -1,6 +1,7 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import { ChevronDown, ChevronUp } from '@amsterdam/asc-assets'
 import { Button } from '@amsterdam/asc-ui'
-import { Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
 const ToggleButton = styled(Button)`
@@ -13,11 +14,7 @@ interface RvvDetailToggleProps {
   title: string
 }
 
-export const RvvDetailToggle = ({
-  showDetails,
-  setShowDetails,
-  title,
-}: RvvDetailToggleProps) => {
+export const RvvDetailToggle = ({ showDetails, setShowDetails, title }: RvvDetailToggleProps) => {
   return (
     <ToggleButton
       iconRight={!showDetails ? <ChevronDown /> : <ChevronUp />}

@@ -7,16 +7,8 @@ const timeFromIsBeforeTimeTo = (data: FormDateTimeValues) => {
   // ignore this check when no date is selected
   if (!data.date) return true
 
-  let startDateTime = parse(
-    `${data.date} ${data.timeFrom}`,
-    'yyyy-MM-dd HH:mm',
-    new Date()
-  )
-  let endDateTime = parse(
-    `${data.date} ${data.timeTo}`,
-    'yyyy-MM-dd HH:mm',
-    new Date()
-  )
+  let startDateTime = parse(`${data.date} ${data.timeFrom}`, 'yyyy-MM-dd HH:mm', new Date())
+  let endDateTime = parse(`${data.date} ${data.timeTo}`, 'yyyy-MM-dd HH:mm', new Date())
 
   return isBefore(startDateTime, endDateTime)
 }

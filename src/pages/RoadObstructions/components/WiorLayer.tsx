@@ -1,21 +1,10 @@
-import {
-  GeoJSON,
-  MAX_ZOOM_LEVEL,
-  MIN_ZOOM_LEVEL,
-  useMapInstance,
-} from '@amsterdam/arm-core'
-import { useQuery } from '@tanstack/react-query'
-import {
-  DomEvent,
-  GeoJSON as GeoJSONLayer,
-  LatLngBounds,
-  Map,
-  PathOptions,
-} from 'leaflet'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
-import { useTheme } from 'styled-components'
 
-import { getWiorData } from '../../../api/wfs/wior'
+import { GeoJSON, MAX_ZOOM_LEVEL, MIN_ZOOM_LEVEL, useMapInstance } from '@amsterdam/arm-core'
+import { useQuery } from '@tanstack/react-query'
+import { getWiorData } from 'api/wfs/wior'
+import { DomEvent, GeoJSON as GeoJSONLayer, LatLngBounds, Map, PathOptions } from 'leaflet'
+import { useTheme } from 'styled-components'
 
 import { useRoadObstructionsMapContext } from '../contexts/MapContext'
 import { wiorLayerId } from '../contexts/mapLayersReducer'
@@ -38,10 +27,7 @@ interface WiorLayerProps {
   mapFilters: RoadObstructionMapFilters
 }
 
-const RoadObstructionsWiorLayer = ({
-  setDetailFeature,
-  mapFilters,
-}: WiorLayerProps) => {
+const RoadObstructionsWiorLayer = ({ setDetailFeature, mapFilters }: WiorLayerProps) => {
   const { activeMapLayers } = useRoadObstructionsMapContext()
   const mapInstance = useMapInstance()
   const [layerInstance, setLayerInstance] = useState<GeoJSONLayer>()
@@ -98,8 +84,9 @@ const RoadObstructionsWiorLayer = ({
     }
   }, [layerInstance])
 
-  if (wiorData.isError && wiorData.error instanceof Error)
+  if (wiorData.isError && wiorData.error instanceof Error) {
     console.error(wiorData.error.message)
+  }
 
   if (wiorData.isLoading || !wiorData.data) return null
 

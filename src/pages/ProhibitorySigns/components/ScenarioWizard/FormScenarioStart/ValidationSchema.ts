@@ -1,7 +1,6 @@
+import { getVehicle } from 'api/rdw/vehicle'
+import { zToNumber } from 'shared/utils/zodPreprocess'
 import { z } from 'zod'
-
-import { getVehicle } from '../../../../../api/rdw/vehicle'
-import { zToNumber } from '../../../../../shared/utils/zodPreprocess'
 
 function isPermittedVehicleType(vehicleType: string) {
   const permittedVehicleTypes = ['Bedrijfsauto', 'Bus', 'Personenauto']
@@ -15,8 +14,7 @@ const isValidLicensePlate = (val: string, ctx: z.RefinementCtx) => {
       if (data.length === 0) {
         return ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          message:
-            'Kenteken niet gevonden bij RDW. Probeer het nog eens met een geldig Nederlands kenteken',
+          message: 'Kenteken niet gevonden bij RDW. Probeer het nog eens met een geldig Nederlands kenteken',
         })
       }
 
@@ -38,8 +36,7 @@ const isValidLicensePlate = (val: string, ctx: z.RefinementCtx) => {
     .catch(() => {
       return ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message:
-          'De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.',
+        message: 'De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.',
       })
     })
 }
@@ -72,9 +69,6 @@ export const FormScenarioStartValidationSchema = z.object({
         invalid_type_error: 'Voer een getal in tussen 0 m en 4 m',
       })
       .gt(0, 'Hoogte moet vallen tussen 0 m en 4 m')
-      .max(
-        4,
-        'Hoogte moet vallen tussen 0 m en 4 m. Neem contact op met het RDW.'
-      )
+      .max(4, 'Hoogte moet vallen tussen 0 m en 4 m. Neem contact op met het RDW.')
   ),
 })

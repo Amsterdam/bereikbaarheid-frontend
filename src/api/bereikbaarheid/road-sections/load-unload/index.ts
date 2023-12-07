@@ -1,4 +1,5 @@
 import { Feature, FeatureCollection } from 'geojson'
+import { TimeHumanReadable_Hours_Minutes_Seconds } from 'shared/utils/dateTime'
 
 import { api } from '../../index'
 
@@ -8,8 +9,9 @@ export interface LoadUnloadRegime {
   additional_info: string
   days: string[] | null
   direction: string
-  start_time: string | null
-  end_time: string | null
+  start_time: TimeHumanReadable_Hours_Minutes_Seconds | null
+  end_time: TimeHumanReadable_Hours_Minutes_Seconds | null
+  text: string
 }
 
 export interface RoadSectionLoadUnload extends Feature {
@@ -24,9 +26,7 @@ export interface RoadSectionsLoadUnloadCollection extends FeatureCollection {
   features: [] | RoadSectionLoadUnload[]
 }
 
-export function getRoadSectionsLoadUnload(
-  signal: AbortSignal | undefined
-): Promise<RoadSectionsLoadUnloadCollection> {
+export function getRoadSectionsLoadUnload(signal: AbortSignal | undefined): Promise<RoadSectionsLoadUnloadCollection> {
   return api
     .get(ENDPOINT, {
       signal,

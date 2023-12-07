@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 
-import { useSearchAllDataSets } from '../../../shared/hooks/useSearchAllDataSets'
-import { useParkingSpaceInfo } from '../../../shared/hooks/useParkingSpaceInfo'
+import { useParkingSpaceInfo } from 'shared/hooks/useParkingSpaceInfo'
+import { useSearchAllDataSets } from 'shared/hooks/useSearchAllDataSets'
 
 import { DetailFeatureActionType } from '../contexts/detailFeatureReducer'
-import { useLoadUnloadMapContext } from '../contexts/MapContext'
+import useLoadUnloadMapContext from '../contexts/MapContext'
 
 export const useSearchForParkingSpace = () => {
   const { detailFeature, setDetailFeature } = useLoadUnloadMapContext()
@@ -38,8 +38,7 @@ export const useSearchForParkingSpace = () => {
 
   return {
     isError: parkingSpace.isError || searchResults.isError,
-    isInitialLoading:
-      parkingSpace.isInitialLoading || searchResults.isInitialLoading,
+    isInitialLoading: parkingSpace.isInitialLoading || searchResults.isInitialLoading,
     results: searchResults,
   }
 }

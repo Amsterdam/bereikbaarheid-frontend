@@ -55,12 +55,8 @@ describe('FormDateTime', () => {
 
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
     expect(props.onSubmitForm).not.toBeCalled()
-    expect(screen.getByTestId('time-from-input')).toHaveValue(
-      defaultFormValues.timeFrom
-    )
-    expect(screen.getByTestId('time-to-input')).toHaveValue(
-      defaultFormValues.timeTo
-    )
+    expect(screen.getByTestId('time-from-input')).toHaveValue(defaultFormValues.timeFrom)
+    expect(screen.getByTestId('time-to-input')).toHaveValue(defaultFormValues.timeTo)
   })
 
   it('should display an error message when start time is invalid', async () => {
@@ -89,9 +85,7 @@ describe('FormDateTime', () => {
     expect(await screen.findAllByRole('alert')).toHaveLength(1)
     expect(props.onSubmitForm).not.toBeCalled()
     expect(screen.getByTestId('date-input')).toHaveValue(defaultFormValues.date)
-    expect(screen.getByTestId('time-to-input')).toHaveValue(
-      defaultFormValues.timeTo
-    )
+    expect(screen.getByTestId('time-to-input')).toHaveValue(defaultFormValues.timeTo)
   })
 
   it('should display an error message when end time is invalid', async () => {
@@ -123,9 +117,7 @@ describe('FormDateTime', () => {
     expect(await screen.findAllByRole('alert')).toHaveLength(2)
     expect(props.onSubmitForm).not.toBeCalled()
     expect(screen.getByTestId('date-input')).toHaveValue(defaultFormValues.date)
-    expect(screen.getByTestId('time-from-input')).toHaveValue(
-      defaultFormValues.timeFrom
-    )
+    expect(screen.getByTestId('time-from-input')).toHaveValue(defaultFormValues.timeFrom)
   })
 
   it('should display an error message when end time is before end time', async () => {
@@ -181,11 +173,7 @@ describe('FormDateTime', () => {
     await waitFor(() => expect(screen.queryAllByRole('alert')).toHaveLength(0))
     expect(props.onSubmitForm).toBeCalled()
     expect(screen.getByTestId('date-input')).toHaveValue(defaultFormValues.date)
-    expect(screen.getByTestId('time-from-input')).toHaveValue(
-      defaultFormValues.timeFrom
-    )
-    expect(screen.getByTestId('time-to-input')).toHaveValue(
-      defaultFormValues.timeTo
-    )
+    expect(screen.getByTestId('time-from-input')).toHaveValue(defaultFormValues.timeFrom)
+    expect(screen.getByTestId('time-to-input')).toHaveValue(defaultFormValues.timeTo)
   })
 })

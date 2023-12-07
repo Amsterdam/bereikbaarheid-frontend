@@ -13,10 +13,7 @@ const ScenarioDisplayResultPermitHeavyGoodsVehicleZone = () => {
     return <Paragraph gutterBottom={0}>niet nodig</Paragraph>
   }
 
-  if (
-    permitsByLocation.data?.data &&
-    !permitsByLocation.data?.data?.attributes.heavy_goods_vehicle_zone
-  ) {
+  if (permitsByLocation.data?.data && !permitsByLocation.data?.data?.attributes.heavy_goods_vehicle_zone) {
     return <Paragraph gutterBottom={0}>niet nodig</Paragraph>
   }
 
@@ -33,10 +30,7 @@ const ScenarioDisplayResultPermitHeavyGoodsVehicleZone = () => {
 
   return (
     <Paragraph gutterBottom={0}>
-      <Button
-        onClick={() => window.open(linkToPermitCheck, '_blank')}
-        variant="primary"
-      >
+      <Button onClick={() => window.open(linkToPermitCheck, '_blank')} variant="primary">
         nodig, vraag aan
       </Button>
     </Paragraph>

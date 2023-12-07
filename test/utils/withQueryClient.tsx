@@ -1,6 +1,7 @@
+import { ReactElement } from 'react'
+
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { render } from '@testing-library/react'
-import { ReactElement } from 'react'
 
 const createTestQueryClient = () =>
   new QueryClient({
@@ -15,18 +16,12 @@ const createTestQueryClient = () =>
 export const withQueryClient = (component: ReactElement) => {
   const testQueryClient = createTestQueryClient()
   const { rerender, ...result } = render(
-    <QueryClientProvider client={testQueryClient}>
-      {component}
-    </QueryClientProvider>
+    <QueryClientProvider client={testQueryClient}>{component}</QueryClientProvider>
   )
 
   return {
     ...result,
     rerender: (rerenderComponent: ReactElement) =>
-      rerender(
-        <QueryClientProvider client={testQueryClient}>
-          {rerenderComponent}
-        </QueryClientProvider>
-      ),
+      rerender(<QueryClientProvider client={testQueryClient}>{rerenderComponent}</QueryClientProvider>),
   }
 }

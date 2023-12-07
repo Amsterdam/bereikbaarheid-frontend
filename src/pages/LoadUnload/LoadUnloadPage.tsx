@@ -1,32 +1,28 @@
-import {
-  Map,
-  MapPanel,
-  mapPanelConstants,
-  MapPanelDrawer,
-  MapPanelProvider,
-} from '@amsterdam/arm-core'
+import { useEffect, useState } from 'react'
+
+import { Map, MapPanel, mapPanelConstants, MapPanelDrawer, MapPanelProvider } from '@amsterdam/arm-core'
 import { Modal, useMatchMedia } from '@amsterdam/asc-ui'
 import type L from 'leaflet'
-import { useEffect, useState } from 'react'
-import styled from 'styled-components'
 import 'leaflet/dist/leaflet.css'
-
-import { HEADER_HEIGHT, Z_INDEX_MODAL } from '../../shared/constants'
-import FeedbackModal from '../../shared/components/FeedbackModal'
-import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
-import { MapStyle } from '../../shared/map/mapStyle'
-import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
-import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
+import { useTranslation } from 'react-i18next'
+import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
+import Header from 'shared/components/Header'
+import { HEADER_HEIGHT, Z_INDEX_MODAL } from 'shared/constants'
+import useAnalytics from 'shared/hooks/useAnalytics'
+import { useDocumentTitle } from 'shared/hooks/useDocumentTitle'
+import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
+import { MapStyle } from 'shared/map/mapStyle'
+import styled from 'styled-components'
 
 import { LoadUnloadAddressForm } from './components/AddressForm'
-import { LoadUnloadHeader } from './components/Header'
 import { LoadUnloadDetailFeature } from './components/DetailFeature'
+import BollardDetailsFeature from './components/DetailFeature/BollardDetailFeature'
 import { LoadUnloadMapLayers } from './components/MapLayers'
+import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
 import { ModalDateTime } from './components/ModalDateTime'
 import { LoadUnloadViewerContainer } from './components/ViewerContainer'
-import { LoadUnloadMapSettingsDisplay } from './components/MapSettingsDisplay'
 import { LoadUnloadMapProvider } from './contexts/MapProvider'
-import { LoadUnloadPageProvider } from './contexts/PageProvider'
+import LoadUnloadPageProvider from './contexts/PageProvider'
 
 const { SnapPoint } = mapPanelConstants
 
@@ -34,7 +30,16 @@ const StyledMap = styled(Map<typeof Map>)`
   flex-grow: 1;
 `
 
+const StyledMapPanelDrawer = styled(MapPanelDrawer)`
+  & > div > div {
+    z-index: 1;
+  }
+`
+
 const LoadUnloadPage = () => {
+  const { t } = useTranslation()
+  useDocumentTitle(t('_pageLoadUnload.title'))
+
   const [mapInstance, setMapInstance] = useState<L.Map | null>(null)
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
 
@@ -44,27 +49,22 @@ const LoadUnloadPage = () => {
     }
   }, [mapInstance])
 
-  useDocumentTitle('Laden en lossen')
-
   const [showAddressForm, setShowAddressForm] = useState(false)
   const [showDateTimeModal, setShowDateTimeModal] = useState(false)
-  const [openFeedbackModal, setOpenFeedbackModal] = useState(false)
-  const Element = showDesktopVariant ? MapPanel : MapPanelDrawer
+
+  const { trackPageVisit } = useAnalytics()
+  useEffect(trackPageVisit)
+
+  const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   return (
     <LoadUnloadPageProvider>
       <PageWrapper>
-        <LoadUnloadHeader
-          setOpenFeedbackModal={setOpenFeedbackModal}
-          title="Laden en lossen"
-        />
+        <Header title={t('_pageLoadUnload.title')} />
 
         <MainContent data-testid="load-unload-page">
           <MapStyle />
-          <StyledMap
-            options={{ ...defaultMapOptions, maxZoom: 21 }}
-            setInstance={setMapInstance}
-          >
+          <StyledMap options={{ ...defaultMapOptions, maxZoom: 21 }} setInstance={setMapInstance}>
             <LoadUnloadMapProvider>
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}
@@ -73,6 +73,7 @@ const LoadUnloadPage = () => {
               >
                 <Element>
                   <LoadUnloadDetailFeature />
+                  <BollardDetailsFeature />
 
                   <LoadUnloadMapSettingsDisplay
                     setShowAddressForm={setShowAddressForm}
@@ -98,12 +99,7 @@ const LoadUnloadPage = () => {
         <LoadUnloadAddressForm setShowAddressForm={setShowAddressForm} />
       </Modal>
 
-      <ModalDateTime
-        showModal={showDateTimeModal}
-        setShowModal={setShowDateTimeModal}
-      />
-
-      <FeedbackModal setOpen={setOpenFeedbackModal} open={openFeedbackModal} />
+      <ModalDateTime showModal={showDateTimeModal} setShowModal={setShowDateTimeModal} />
     </LoadUnloadPageProvider>
   )
 }

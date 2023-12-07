@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
+import { getAxlesInfo, rdwAxlesData } from 'api/rdw/axles'
+
 import { useProhibitorySignsPageContext } from '../contexts/PageContext'
-import { getAxlesInfo, rdwAxlesData } from '../../../api/rdw/axles'
 
 export interface rdwAxlesInfo {
   server: rdwAxlesData[]

@@ -30,14 +30,11 @@ const FormRdwInfoVehicleSummary = () => {
     <StyledList>
       <ListItem>{vehicle.licensePlate}</ListItem>
       <ListItem>
-        {generalInfo.data?.[0].server.merk}{' '}
-        {generalInfo.data?.[0].server.handelsbenaming}
+        {generalInfo.data?.[0].server.merk} {generalInfo.data?.[0].server.handelsbenaming}
       </ListItem>
       <ListItem>{generalInfo.data?.[0].server.voertuigsoort}</ListItem>
       <ListItem>{fuelInfo.data?.[0].server.brandstof_omschrijving}</ListItem>
-      <ListItem>
-        Emissieklasse {fuelInfo.data?.[0].server.emissiecode_omschrijving}
-      </ListItem>
+      <ListItem>Emissieklasse {fuelInfo.data?.[0].server.emissiecode_omschrijving}</ListItem>
     </StyledList>
   )
 }

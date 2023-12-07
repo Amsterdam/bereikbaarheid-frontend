@@ -1,5 +1,5 @@
-import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
-import { useSearchAllDataSets } from '../../../../shared/hooks/useSearchAllDataSets'
+import LoadingSpinner from 'shared/components/LoadingSpinner'
+import { useSearchAllDataSets } from 'shared/hooks/useSearchAllDataSets'
 
 import ProhibitorySignsDetailFeatureParkingSpace from './ParkingSpace'
 
@@ -8,10 +8,7 @@ interface FeatureSearchResultsProps {
   lon: number
 }
 
-const ProhibitorySignsDetailFeatureSearchResults = ({
-  lat,
-  lon,
-}: FeatureSearchResultsProps) => {
+const ProhibitorySignsDetailFeatureSearchResults = ({ lat, lon }: FeatureSearchResultsProps) => {
   const searchResults = useSearchAllDataSets({
     enabled: !!lat && !!lon,
     datasets: 'parkeervakken',
@@ -26,14 +23,10 @@ const ProhibitorySignsDetailFeatureSearchResults = ({
 
   return (
     <>
-      {searchResults.data!.features.length === 0 && (
-        <div>Geen parkeerplaats gevonden op deze locatie.</div>
-      )}
+      {searchResults.data!.features.length === 0 && <div>Geen parkeerplaats gevonden op deze locatie.</div>}
 
       {searchResults.data!.features.length > 0 && (
-        <ProhibitorySignsDetailFeatureParkingSpace
-          id={searchResults.data!.features[0].properties.id}
-        />
+        <ProhibitorySignsDetailFeatureParkingSpace id={searchResults.data!.features[0].properties.id} />
       )}
     </>
   )

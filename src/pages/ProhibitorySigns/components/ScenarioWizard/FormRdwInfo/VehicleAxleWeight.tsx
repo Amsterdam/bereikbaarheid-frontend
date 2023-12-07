@@ -1,15 +1,13 @@
 import { ErrorMessage, Input, Label, Paragraph } from '@amsterdam/asc-ui'
+import InputWithSuffix from 'shared/components/InputWithSuffix'
 
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
-import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
+
 import { FormRdwInfoInputProps, FormRdwInfoInputs } from './Form'
 import { RdwInfoFormColumn, RdwInfoFormRow } from './FormStyle'
 
-const FormRdwInfoVehicleAxleWeight = ({
-  errors,
-  register,
-}: FormRdwInfoInputProps<FormRdwInfoInputs>) => {
+const FormRdwInfoVehicleAxleWeight = ({ errors, register }: FormRdwInfoInputProps<FormRdwInfoInputs>) => {
   const { vehicle } = useProhibitorySignsPageContext()
   const { axlesInfo, subcategoryInfo } = useRdwInfo()
 
@@ -29,15 +27,10 @@ const FormRdwInfoVehicleAxleWeight = ({
     let maxDefaultWeight = 10000
 
     if (subcategoryInfo.data && subcategoryInfo.data.length > 0) {
-      maxDefaultWeight = subcategoryInfo.data[0].derived.isMobileCrane
-        ? 12000
-        : 10000
+      maxDefaultWeight = subcategoryInfo.data[0].derived.isMobileCrane ? 12000 : 10000
     }
 
-    if (
-      (defaultWeight && defaultWeight > maxDefaultWeight) ||
-      vehicle.hasTrailer
-    ) {
+    if ((defaultWeight && defaultWeight > maxDefaultWeight) || vehicle.hasTrailer) {
       defaultWeight = maxDefaultWeight
     }
 
@@ -66,9 +59,7 @@ const FormRdwInfoVehicleAxleWeight = ({
           />
         </InputWithSuffix>
 
-        {errors.vehicleAxleWeight && (
-          <ErrorMessage message={errors.vehicleAxleWeight.message!} />
-        )}
+        {errors.vehicleAxleWeight && <ErrorMessage message={errors.vehicleAxleWeight.message!} />}
       </RdwInfoFormColumn>
     </RdwInfoFormRow>
   )

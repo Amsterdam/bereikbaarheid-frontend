@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from 'react'
+
 import { mapPanelConstants, MapPanelContent } from '@amsterdam/arm-core'
 import {
   Card,
@@ -9,18 +11,14 @@ import {
   Paragraph,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { Dispatch, SetStateAction } from 'react'
-import { generatePath, Link as RouterLink } from 'react-router-dom'
+import { RoadObstruction } from 'api/bereikbaarheid/road-obstructions'
+import { Link as RouterLink } from 'react-router-dom'
+import { RouteIds } from 'routes'
+import { formatISODate } from 'shared/utils/dateTime'
+import { getGeneratedPath } from 'shared/utils/path'
 import styled from 'styled-components'
 
-import { getPathTo } from '../../../../routes'
-import { formatISODate } from '../../../../shared/utils/formatDate'
-
-import {
-  DetailFeature,
-  DetailFeatureRoadSection,
-} from '../../types/detailFeature'
-import { RoadObstruction } from '../../../../api/bereikbaarheid/road-obstructions'
+import { DetailFeature, DetailFeatureRoadSection } from '../../types/detailFeature'
 
 function formatActivity(item: RoadObstruction) {
   if (!item.url) {
@@ -48,11 +46,7 @@ interface RoadSectionInfoProps {
   setDetailFeature: Dispatch<SetStateAction<DetailFeature | undefined>>
 }
 
-const RoadSectionInfo = ({
-  currentOverlay,
-  detailFeature,
-  setDetailFeature,
-}: RoadSectionInfoProps) => {
+const RoadSectionInfo = ({ currentOverlay, detailFeature, setDetailFeature }: RoadSectionInfoProps) => {
   return (
     <MapPanelContent
       title={`Wegvak ${detailFeature.data.properties.road_element_id}`}
@@ -71,7 +65,7 @@ const RoadSectionInfo = ({
         <Link
           variant="inline"
           as={RouterLink}
-          to={generatePath(getPathTo('ROAD_SECTION_DETAIL_PAGE'), {
+          to={getGeneratedPath(RouteIds.ROAD_SECTION_DETAIL_PAGE, {
             id: String(detailFeature.data.properties.road_element_id),
           })}
         >
@@ -89,18 +83,14 @@ const RoadSectionInfo = ({
                 <Paragraph strong>{formatActivity(item)}</Paragraph>
                 {item.reference && <Paragraph>{item.reference}</Paragraph>}
                 <Paragraph>
-                  van {formatISODate(item['start_date'])} tot{' '}
-                  {formatISODate(item['end_date'])}
+                  van {formatISODate(item['start_date'])} tot {formatISODate(item['end_date'])}
                 </Paragraph>
               </CardContent>
             </StyledCard>
           )
         })
       ) : (
-        <Paragraph>
-          Klik op het nabij gelegen donker gekleurde wegvak voor meer
-          informatie.
-        </Paragraph>
+        <Paragraph>Klik op het nabij gelegen donker gekleurde wegvak voor meer informatie.</Paragraph>
       )}
     </MapPanelContent>
   )

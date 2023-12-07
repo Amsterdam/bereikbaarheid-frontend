@@ -5,7 +5,7 @@ import {
   roadNetworkHeavyGoodsVehicleAndLowEmissionZone,
   roadNetworkNoRestrictions,
   wideRoads,
-} from '../../../shared/map/mapLayers'
+} from 'shared/map/mapLayers'
 
 export const prohibitoryRoadsLayerId = 'prohibitoryRoads'
 export const trafficSignsLayerId = 'trafficSigns'
@@ -38,10 +38,7 @@ export type mapLayerActionType =
   | { type: 'TOGGLE'; layerId: (typeof layerIds)[number] }
   | { type: 'UPDATE'; layerId: (typeof layerIds)[number]; enabled: boolean }
 
-export const mapLayersReducer = (
-  state: typeof mapLayersInitialState,
-  action: mapLayerActionType
-) => {
+export const mapLayersReducer = (state: typeof mapLayersInitialState, action: mapLayerActionType) => {
   switch (action.type) {
     case 'ACTIVE_ROAD_NETWORK':
       return {

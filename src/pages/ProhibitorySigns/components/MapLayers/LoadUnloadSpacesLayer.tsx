@@ -1,8 +1,8 @@
-import { useMapInstance } from '@amsterdam/arm-core'
-import { NonTiledLayer } from '@amsterdam/arm-nontiled'
 import { useEffect } from 'react'
 
-import { loadUnloadSpaces } from '../../../../shared/map/mapLayers'
+import { useMapInstance } from '@amsterdam/arm-core'
+import { NonTiledLayer } from '@amsterdam/arm-nontiled'
+import { loadUnloadSpaces } from 'shared/map/mapLayers'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
@@ -24,12 +24,7 @@ const ProhibitorySignsLoadUnloadSpacesLayer = () => {
 
   if (!activeMapLayers[loadUnloadSpaces.id]) return null
 
-  return (
-    <NonTiledLayer
-      url={loadUnloadSpaces.url}
-      options={loadUnloadSpaces.options}
-    ></NonTiledLayer>
-  )
+  return <NonTiledLayer url={loadUnloadSpaces.url} options={loadUnloadSpaces.options}></NonTiledLayer>
 }
 
 export default ProhibitorySignsLoadUnloadSpacesLayer

@@ -1,6 +1,6 @@
 import { createContext, Dispatch, SetStateAction, useContext } from 'react'
 
-import { TrafficSign } from '../../../api/bereikbaarheid/traffic-signs'
+import { TrafficSign } from 'api/bereikbaarheid/traffic-signs'
 
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 
@@ -15,16 +15,12 @@ export type ProhibitorySignsMapContextProps = {
   setLocation: Dispatch<SetStateAction<[number, number] | undefined>>
 }
 
-export const ProhibitorySignsMapContext = createContext<
-  ProhibitorySignsMapContextProps | undefined
->(undefined)
+export const ProhibitorySignsMapContext = createContext<ProhibitorySignsMapContextProps | undefined>(undefined)
 
 export function useProhibitorySignsMapContext() {
   const context = useContext(ProhibitorySignsMapContext)
   if (context === undefined) {
-    throw new Error(
-      'useProhibitorySignsMapContext must be within ProhibitorySignsMapProvider'
-    )
+    throw new Error('useProhibitorySignsMapContext must be within ProhibitorySignsMapProvider')
   }
 
   return context

@@ -1,3 +1,5 @@
+import { ChangeEvent, Dispatch, FormEvent, MouseEvent, SetStateAction, useState } from 'react'
+
 import {
   Button,
   CompactThemeProvider,
@@ -9,27 +11,14 @@ import {
   themeSpacing,
   TopBar,
 } from '@amsterdam/asc-ui'
+import { address as addressApi, AddressItem } from 'api/atlas/search/address'
 import debounce from 'lodash/debounce'
-import {
-  ChangeEvent,
-  Dispatch,
-  FormEvent,
-  MouseEvent,
-  SetStateAction,
-  useState,
-} from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
+import { AddressSearchResults } from 'shared/components/AddressSearchResults'
+import { FormLabel } from 'shared/components/FormLabel'
+import ModalBlock from 'shared/components/ModalBlock'
 import styled from 'styled-components'
-
-import {
-  address as addressApi,
-  AddressItem,
-} from '../../../api/atlas/search/address'
-
-import { AddressSearchResults } from '../../../shared/components/AddressSearchResults'
-import { FormLabel } from '../../../shared/components/FormLabel'
-import ModalBlock from '../../../shared/components/ModalBlock'
-import { Address } from '../../../types/address'
+import { Address } from 'types/address'
 
 import { useLoadUnloadPageContext } from '../contexts/PageContext'
 
@@ -56,9 +45,7 @@ interface LoadUnloadAddressFormProps {
   setShowAddressForm: Dispatch<SetStateAction<boolean>>
 }
 
-export const LoadUnloadAddressForm = ({
-  setShowAddressForm,
-}: LoadUnloadAddressFormProps) => {
+export const LoadUnloadAddressForm = ({ setShowAddressForm }: LoadUnloadAddressFormProps) => {
   const { address, setAddress } = useLoadUnloadPageContext()
   const [addressOptions, setAddressOptions] = useState<AddressItem[] | []>([])
   const {
@@ -162,14 +149,9 @@ export const LoadUnloadAddressForm = ({
             name={name}
             ref={ref}
           />
-          {errors.searchAddress && (
-            <ErrorMessage message={errors.searchAddress.message!} />
-          )}
+          {errors.searchAddress && <ErrorMessage message={errors.searchAddress.message!} />}
 
-          <AddressSearchResults
-            addresses={addressOptions}
-            onClickAddress={onClickAddress}
-          />
+          <AddressSearchResults addresses={addressOptions} onClickAddress={onClickAddress} />
 
           <FormFooter>
             <CompactThemeProvider>

@@ -1,14 +1,6 @@
-import {
-  ErrorMessage,
-  Input,
-  Label,
-  Paragraph,
-  styles,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
+import { ErrorMessage, Input, Label, Paragraph, styles, themeSpacing } from '@amsterdam/asc-ui'
+import InputWithSuffix from 'shared/components/InputWithSuffix'
 import styled from 'styled-components'
-
-import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
 
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
@@ -34,10 +26,7 @@ const StyledFormRow = styled(RdwInfoFormRow)`
   }
 `
 
-const FormRdwInfoVehicleTotalWeight = ({
-  errors,
-  register,
-}: FormRdwInfoInputProps<FormRdwInfoInputs>) => {
+const FormRdwInfoVehicleTotalWeight = ({ errors, register }: FormRdwInfoInputProps<FormRdwInfoInputs>) => {
   const { vehicle } = useProhibitorySignsPageContext()
   const { generalInfo } = useRdwInfo()
 
@@ -76,9 +65,7 @@ const FormRdwInfoVehicleTotalWeight = ({
           />
         </InputWithSuffix>
 
-        {errors.vehicleTotalWeight && (
-          <ErrorMessage message={errors.vehicleTotalWeight.message!} />
-        )}
+        {errors.vehicleTotalWeight && <ErrorMessage message={errors.vehicleTotalWeight.message!} />}
       </RdwInfoFormColumn>
     </StyledFormRow>
   )

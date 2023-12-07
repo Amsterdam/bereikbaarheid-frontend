@@ -13,14 +13,8 @@ require('jest-canvas-mock')
 let createElementNSOrig = global.document.createElementNS
 
 // @ts-ignore
-global.document.createElementNS = function (
-  namespaceURI: string,
-  qualifiedName: string
-) {
-  if (
-    namespaceURI === 'http://www.w3.org/2000/svg' &&
-    qualifiedName === 'svg'
-  ) {
+global.document.createElementNS = function (namespaceURI: string, qualifiedName: string) {
+  if (namespaceURI === 'http://www.w3.org/2000/svg' && qualifiedName === 'svg') {
     let element = createElementNSOrig.apply(this, [namespaceURI, qualifiedName])
     // @ts-ignore
     element.createSVGRect = function () {}
@@ -34,11 +28,7 @@ beforeAll(() => {
   // Establish API mocking before all tests.
   server.listen({
     onUnhandledRequest(req) {
-      console.error(
-        'Found an unhandled %s request to %s',
-        req.method,
-        req.url.href
-      )
+      console.error('Found an unhandled %s request to %s', req.method, req.url.href)
     },
   })
 

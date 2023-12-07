@@ -1,0 +1,50 @@
+{
+  "appTitle": "Erreichbarkeit",
+  "_generic": {
+    "_mapPanel": {
+      "dataSource": "Quelldaten",
+      "input": "Eingang"
+    }
+  },
+  "_error": {
+    "somethingWentWrong": "Something went wrong",
+    "unfortunately": "Bedauerlicherweise",
+    "pageCouldNotBeFound": "The page could not be found."
+  },
+  "_pageLicencePlate": {
+    "title": "Erreichbarkeit mit Kennzeichen",
+    "titleShort": "Mit Kennzeichen"
+  },
+  "_pageRoadObstructions": {
+    "title": "Straßenbehinderungen",
+    "roadObstructionsOn": "Straßenbehinderungen auf"
+  },
+  "_pageLoadUnload": {
+    "title": "Laden und entladen"
+  },
+  "_linkTourBuzz": {
+    "title": "Tourenwagen (Tour Buzz)",
+    "titleShort": "Tourenwagen"
+  },
+  "_pageTouringcar": {
+    "title": "Tourenwagen (Tour Buzz)",
+    "titleShort": "Tourenwagen",
+    "places": "Platz",
+    "_legend": {
+      "messages": "Berichten",
+      "stops": "Bushaltestellen",
+      "parking": "Parkplatz",
+      "maxVehicleHeight": "Fahrhöhe",
+      "destinationTraffic": "Zielverkehr",
+      "recommendedRoutes": "Empfohlene Routen",
+      "mandatoryRoutes": "Obligatorische Route (> 7,5t)",
+      "environmentalZone": "Umweltzone"
+    }
+  },
+  "_pageData": {
+    "title": "Datenquellen"
+  },
+  "_pageContact": {
+    "title": "Kontakt und Erklärung"
+  }
+}

@@ -1,4 +1,5 @@
-version: '3.6'
+version: '3.7'
+
 services:
   frontend:
     build: &build-config
@@ -11,7 +12,7 @@ services:
       - TZ=Europe/Amsterdam
     ipc: host
     ports:
-      - "5000:8080"
+      - '5000:8080'
 
   test:
     build:

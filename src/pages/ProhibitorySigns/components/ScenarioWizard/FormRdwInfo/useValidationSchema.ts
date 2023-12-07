@@ -1,6 +1,5 @@
+import { zToNumber } from 'shared/utils/zodPreprocess'
 import { z } from 'zod'
-
-import { zToNumber } from '../../../../../shared/utils/zodPreprocess'
 
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'
@@ -13,11 +12,7 @@ export const useRdwInfoValidationSchema = () => {
     // allowed general maximum axle weight (by law)
     let maxAxleWeight = 10000
 
-    if (
-      subcategoryInfo.data &&
-      subcategoryInfo.data.length > 0 &&
-      subcategoryInfo.data[0].derived.isMobileCrane
-    ) {
+    if (subcategoryInfo.data && subcategoryInfo.data.length > 0 && subcategoryInfo.data[0].derived.isMobileCrane) {
       maxAxleWeight = 12000
     }
 
@@ -48,9 +43,7 @@ export const useRdwInfoValidationSchema = () => {
     vehiclePayload: zToNumber(
       z
         .number({
-          required_error: !vehicle.hasTrailer
-            ? 'Voer lading voertuig in'
-            : 'Voer lading van combinatie in',
+          required_error: !vehicle.hasTrailer ? 'Voer lading voertuig in' : 'Voer lading van combinatie in',
           invalid_type_error: 'Voer een nummer in',
         })
         .min(0, 'Lading moet minimaal 0 kg zijn')
@@ -84,23 +77,16 @@ export const useRdwInfoValidationSchema = () => {
     vehicleAxleWeight: zToNumber(
       z
         .number({
-          required_error: !vehicle.hasTrailer
-            ? 'Voer aslast voertuig in'
-            : 'Voer maximale aslast van combinatie in',
+          required_error: !vehicle.hasTrailer ? 'Voer aslast voertuig in' : 'Voer maximale aslast van combinatie in',
           invalid_type_error: 'Voer een nummer in',
         })
         .min(0, 'Aslast moet minimaal 0 kg zijn')
-        .max(
-          maxAxleWeight(),
-          `Aslast mag niet meer zijn dan ${maxAxleWeight()} kg. Neem contact op met het RDW.`
-        )
+        .max(maxAxleWeight(), `Aslast mag niet meer zijn dan ${maxAxleWeight()} kg. Neem contact op met het RDW.`)
     ),
     vehicleLength: zToNumber(
       z
         .number({
-          required_error: !vehicle.hasTrailer
-            ? 'Voer lengte voertuig in'
-            : 'Voer lengte van combinatie in',
+          required_error: !vehicle.hasTrailer ? 'Voer lengte voertuig in' : 'Voer lengte van combinatie in',
           invalid_type_error: 'Voer een nummer in',
         })
         .min(0, 'Lengte moet minimaal 0 m zijn')
@@ -109,9 +95,7 @@ export const useRdwInfoValidationSchema = () => {
     vehicleWidth: zToNumber(
       z
         .number({
-          required_error: !vehicle.hasTrailer
-            ? 'Voer breedte voertuig in'
-            : 'Voer maximale breedte van combinatie in',
+          required_error: !vehicle.hasTrailer ? 'Voer breedte voertuig in' : 'Voer maximale breedte van combinatie in',
           invalid_type_error: 'Voer een nummer in',
         })
         .min(minWidth(), `Breedte moet minimaal ${minWidth()} m zijn`)

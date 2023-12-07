@@ -1,24 +1,14 @@
-import {
-  Button,
-  Column,
-  CompactThemeProvider,
-  Link,
-  Row,
-  themeSpacing,
-} from '@amsterdam/asc-ui'
 import { useState } from 'react'
-import { generatePath, Link as RouterLink } from 'react-router-dom'
-import styled from 'styled-components'
 
-import { getPathTo } from '../../../../routes'
+import { Button, Column, CompactThemeProvider, Link, Row, themeSpacing } from '@amsterdam/asc-ui'
+import { Link as RouterLink } from 'react-router-dom'
+import { RouteIds } from 'routes'
+import { getGeneratedPath } from 'shared/utils/path'
+import styled from 'styled-components'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'
-import {
-  linkToPermitCheck,
-  RvvDetailExplanation,
-  RvvDetailToggle,
-} from '../RvvDetail'
+import { linkToPermitCheck, RvvDetailExplanation, RvvDetailToggle } from '../RvvDetail'
 
 import { PropertiesContainer } from './DetailFeatureStyles'
 import ProhibitorySignsDetailFeatureTrafficSignImage from './TrafficSignImage'
@@ -73,9 +63,7 @@ const ProhibitorySignsDetailFeatureTrafficSign = () => {
       <ProhibitorySignsDetailFeatureTrafficSignImage />
 
       {currentTrafficSign?.properties.additional_info && (
-        <AdditionalInfo>
-          {currentTrafficSign.properties.additional_info}
-        </AdditionalInfo>
+        <AdditionalInfo>{currentTrafficSign.properties.additional_info}</AdditionalInfo>
       )}
 
       <PropertiesContainer>
@@ -87,18 +75,12 @@ const ProhibitorySignsDetailFeatureTrafficSign = () => {
 
           <Row halign="flex-start" hasMargin={false} valign="center">
             <Column span={6}>Straatnaam</Column>
-            <Column span={6}>
-              {currentTrafficSign?.properties.street_name}
-            </Column>
+            <Column span={6}>{currentTrafficSign?.properties.street_name}</Column>
           </Row>
 
           <Row halign="flex-start" hasMargin={false} valign="center">
             <Column span={6}>Kijkrichting</Column>
-            <Column span={6}>
-              {windDirectionLabel(
-                currentTrafficSign?.properties.view_direction_in_degrees
-              )}
-            </Column>
+            <Column span={6}>{windDirectionLabel(currentTrafficSign?.properties.view_direction_in_degrees)}</Column>
           </Row>
 
           {expertMode && (
@@ -108,10 +90,8 @@ const ProhibitorySignsDetailFeatureTrafficSign = () => {
                 <Link
                   variant="inline"
                   as={RouterLink}
-                  to={generatePath(getPathTo('ROAD_SECTION_DETAIL_PAGE'), {
-                    id: String(
-                      Math.abs(currentTrafficSign!.properties.network_link_id)
-                    ),
+                  to={getGeneratedPath(RouteIds.ROAD_SECTION_DETAIL_PAGE, {
+                    id: String(Math.abs(currentTrafficSign!.properties.network_link_id)),
                   })}
                 >
                   {currentTrafficSign!.properties.network_link_id}
@@ -123,9 +103,7 @@ const ProhibitorySignsDetailFeatureTrafficSign = () => {
           {currentTrafficSign?.properties.additional_info && (
             <Row halign="flex-start" hasMargin={false} valign="center">
               <Column span={6}>Onderbord</Column>
-              <AdditionalInfoColumn span={6}>
-                {currentTrafficSign?.properties.additional_info}
-              </AdditionalInfoColumn>
+              <AdditionalInfoColumn span={6}>{currentTrafficSign?.properties.additional_info}</AdditionalInfoColumn>
             </Row>
           )}
 
@@ -149,23 +127,16 @@ const ProhibitorySignsDetailFeatureTrafficSign = () => {
             </Row>
           )}
 
-          {expertMode &&
-            currentTrafficSign?.properties.link_to_panoramic_image && (
-              <Row halign="flex-start" hasMargin={false} valign="center">
-                <Column span={6}>Bekijk foto</Column>
-                <Column span={6}>
-                  <Link
-                    href={
-                      currentTrafficSign?.properties.link_to_panoramic_image
-                    }
-                    target="_blank"
-                    variant="inline"
-                  >
-                    panoramabeeld
-                  </Link>
-                </Column>
-              </Row>
-            )}
+          {expertMode && currentTrafficSign?.properties.link_to_panoramic_image && (
+            <Row halign="flex-start" hasMargin={false} valign="center">
+              <Column span={6}>Bekijk foto</Column>
+              <Column span={6}>
+                <Link href={currentTrafficSign?.properties.link_to_panoramic_image} target="_blank" variant="inline">
+                  panoramabeeld
+                </Link>
+              </Column>
+            </Row>
+          )}
 
           <Row halign="flex-start" hasMargin={false} valign="center">
             <Column span={6}>Bekijk in Google</Column>
@@ -182,17 +153,10 @@ const ProhibitorySignsDetailFeatureTrafficSign = () => {
 
           <Row halign="flex-start" hasMargin={false} valign="center">
             <Column span={6}>
-              <RvvDetailToggle
-                showDetails={showRvvDetails}
-                setShowDetails={setShowRvvDetails}
-                title="RVV-ontheffing"
-              />
+              <RvvDetailToggle showDetails={showRvvDetails} setShowDetails={setShowRvvDetails} title="RVV-ontheffing" />
             </Column>
             <Column span={6}>
-              <Button
-                onClick={() => window.open(linkToPermitCheck, '_blank')}
-                variant="primary"
-              >
+              <Button onClick={() => window.open(linkToPermitCheck, '_blank')} variant="primary">
                 RVV aanvragen
               </Button>
             </Column>

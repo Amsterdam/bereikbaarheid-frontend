@@ -1,16 +1,17 @@
+import { useCallback, useEffect } from 'react'
+
 import { useMapInstance } from '@amsterdam/arm-core'
 import { NonTiledLayer } from '@amsterdam/arm-nontiled'
 import { LeafletMouseEvent } from 'leaflet'
-import { useCallback, useEffect } from 'react'
-
-import { loadUnloadSpaces } from '../../../../shared/map/mapLayers'
+import { loadUnloadSpaces } from 'shared/map/mapLayers'
 
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
-import { useLoadUnloadMapContext } from '../../contexts/MapContext'
+import useLoadUnloadMapContext, { MapLayerId } from '../../contexts/MapContext'
 
 export const LoadUnloadLoadUnloadSpacesLayer = () => {
   const mapInstance = useMapInstance()
   const { activeMapLayers, setDetailFeature } = useLoadUnloadMapContext()
+
   const onClick = useCallback(
     (e: LeafletMouseEvent) => {
       if (mapInstance.getZoom() >= loadUnloadSpaces.options.minZoom!) {
@@ -24,19 +25,14 @@ export const LoadUnloadLoadUnloadSpacesLayer = () => {
   )
 
   useEffect(() => {
-    if (activeMapLayers[loadUnloadSpaces.id]) {
+    if (activeMapLayers[MapLayerId.loadUnloadLayerId]) {
       mapInstance.on('click', onClick)
     } else {
       mapInstance.off('click', onClick)
     }
   }, [activeMapLayers, mapInstance, setDetailFeature, onClick])
 
-  if (!activeMapLayers[loadUnloadSpaces.id]) return null
+  if (!activeMapLayers[MapLayerId.loadUnloadLayerId]) return null
 
-  return (
-    <NonTiledLayer
-      url={loadUnloadSpaces.url}
-      options={loadUnloadSpaces.options}
-    ></NonTiledLayer>
-  )
+  return <NonTiledLayer url={loadUnloadSpaces.url} options={loadUnloadSpaces.options} />
 }

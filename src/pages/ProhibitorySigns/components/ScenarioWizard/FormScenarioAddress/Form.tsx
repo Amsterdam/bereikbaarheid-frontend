@@ -1,20 +1,16 @@
+import { ChangeEvent, FormEvent, useState } from 'react'
+
 import { ChevronLeft } from '@amsterdam/asc-assets'
 import { Button, ErrorMessage, Input } from '@amsterdam/asc-ui'
+import { address as addressApi, AddressItem } from 'api/atlas/search/address'
 import debounce from 'lodash/debounce'
-import { ChangeEvent, FormEvent, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-
-import { AddressSearchResults } from '../../../../../shared/components/AddressSearchResults'
-import { FormLabel } from '../../../../../shared/components/FormLabel'
-import { Address } from '../../../../../types/address'
+import { AddressSearchResults } from 'shared/components/AddressSearchResults'
+import { FormLabel } from 'shared/components/FormLabel'
+import { Address } from 'types/address'
 
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
-
 import ScenarioWizardNav from '../ScenarioWizardNav'
-import {
-  address as addressApi,
-  AddressItem,
-} from '../../../../../api/atlas/search/address'
 
 const debouncedHandler = debounce((e, handler) => handler(e), 500)
 
@@ -23,8 +19,7 @@ type FormScenarioAddressInputs = {
 }
 
 export const ProhibitorySignsFormScenarioAddress = () => {
-  const { setActiveStepWizard, address, setAddress } =
-    useProhibitorySignsPageContext()
+  const { setActiveStepWizard, address, setAddress } = useProhibitorySignsPageContext()
   const [addressOptions, setAddressOptions] = useState<AddressItem[] | []>([])
   const {
     handleSubmit,
@@ -109,22 +104,12 @@ export const ProhibitorySignsFormScenarioAddress = () => {
         name={name}
         ref={ref}
       />
-      {errors.searchAddress && (
-        <ErrorMessage message={errors.searchAddress.message!} />
-      )}
+      {errors.searchAddress && <ErrorMessage message={errors.searchAddress.message!} />}
 
-      <AddressSearchResults
-        addresses={addressOptions}
-        onClickAddress={onClickAddress}
-      />
+      <AddressSearchResults addresses={addressOptions} onClickAddress={onClickAddress} />
 
       <ScenarioWizardNav>
-        <Button
-          variant="textButton"
-          iconSize={14}
-          iconLeft={<ChevronLeft />}
-          onClick={() => setActiveStepWizard(0)}
-        >
+        <Button variant="textButton" iconSize={14} iconLeft={<ChevronLeft />} onClick={() => setActiveStepWizard(0)}>
           Vorige
         </Button>
 

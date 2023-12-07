@@ -13,17 +13,13 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import { isAfter, parse, startOfYesterday } from 'date-fns'
+import LoadingSpinner from 'shared/components/LoadingSpinner'
+import { formatISODate } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
-import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
-import { formatISODate } from '../../../../shared/utils/formatDate'
 import { useParkingSpaceInfo } from '../../hooks/useParkingSpaceInfo'
 
-import {
-  ImageContainer,
-  Image,
-  PropertiesContainer,
-} from './DetailFeatureStyles'
+import { ImageContainer, Image, PropertiesContainer } from './DetailFeatureStyles'
 import trafficSignE07 from './images/traffic-sign-E07.png'
 
 const TableTitle = styled(Heading)`
@@ -35,25 +31,17 @@ interface DetailFeatureParkingSpaceProps {
   id: string
 }
 
-const ProhibitorySignsDetailFeatureParkingSpace = ({
-  id,
-}: DetailFeatureParkingSpaceProps) => {
+const ProhibitorySignsDetailFeatureParkingSpace = ({ id }: DetailFeatureParkingSpaceProps) => {
   const parkingSpace = useParkingSpaceInfo({ enabled: true, id: id })
   const parseDate = (date: string) => parse(date, 'yyyy-MM-dd', new Date())
   const yesterday = startOfYesterday()
   const exceptionsToParkingRegimes = () => {
     return parkingSpace.data!.regimes.filter(
-      item =>
-        item.eType === 'E7' &&
-        item.beginDatum &&
-        item.eindDatum &&
-        !isAfter(yesterday, parseDate(item.eindDatum))
+      item => item.eType === 'E7' && item.beginDatum && item.eindDatum && !isAfter(yesterday, parseDate(item.eindDatum))
     )
   }
   const regularParkingRegimes = () => {
-    return parkingSpace.data!.regimes.filter(
-      item => item.eType === 'E7' && !item.beginDatum && !item.eindDatum
-    )
+    return parkingSpace.data!.regimes.filter(item => item.eType === 'E7' && !item.beginDatum && !item.eindDatum)
   }
 
   if (parkingSpace.isLoading) return <LoadingSpinner />

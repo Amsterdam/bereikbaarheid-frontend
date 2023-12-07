@@ -1,18 +1,13 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
+import MapLegendItem from 'shared/components/MapLegendItem'
+import { LegendWrapper, LegendItemsWrapper } from 'shared/components/MapLegendStyles'
 import { useTheme } from 'styled-components'
-
-import { MapLegendItem } from '../../../../shared/components/MapLegendItem'
-import {
-  LegendWrapper,
-  LegendItemsWrapper,
-} from '../../../../shared/components/MapLegendStyles'
 
 import { useRoadObstructionsMapContext } from '../../contexts/MapContext'
 import { roadObstructionsLayerId } from '../../contexts/mapLayersReducer'
 
 export const RoadObstructionsMapLegendRoadObstructions = () => {
-  const { activeMapLayers, updateActiveMapLayers } =
-    useRoadObstructionsMapContext()
+  const { activeMapLayers, updateActiveMapLayers } = useRoadObstructionsMapContext()
   const theme = useTheme()
 
   return (
@@ -34,10 +29,7 @@ export const RoadObstructionsMapLegendRoadObstructions = () => {
         <LegendItemsWrapper>
           <MapLegendItem color={theme.colors.primary!.main} text="direct" />
 
-          <MapLegendItem
-            color={theme.colors.supplement!.lightblue}
-            text="indirect"
-          />
+          <MapLegendItem color={theme.colors.supplement!.lightblue} text="indirect" />
         </LegendItemsWrapper>
       </CompactThemeProvider>
     </LegendWrapper>

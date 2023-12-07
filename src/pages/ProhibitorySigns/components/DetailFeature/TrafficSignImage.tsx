@@ -3,8 +3,9 @@ import endsWith from 'lodash/endsWith'
 import styled from 'styled-components'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
-import { ImageContainer, Image } from './DetailFeatureStyles'
 import { trafficSignBackgrounds } from '../TrafficSignMarker/backgrounds'
+
+import { ImageContainer, Image } from './DetailFeatureStyles'
 
 const imageTextPadding: Record<string, string> = {
   c17: '12px',
@@ -12,8 +13,7 @@ const imageTextPadding: Record<string, string> = {
 }
 
 const ImageTextContainer = styled(Paragraph)<{ signType: string }>`
-  padding-bottom: ${props =>
-    props.signType ? imageTextPadding[props.signType] : 0};
+  padding-bottom: ${props => (props.signType ? imageTextPadding[props.signType] : 0)};
   position: absolute;
 `
 
@@ -24,7 +24,12 @@ const ProhibitorySignsDetailFeatureTrafficSignImage = () => {
   const isZonalSign = endsWith(signType, 'zb')
   const signCategory = currentTrafficSign?.properties.category
   const imageText = () => {
-    let text = currentTrafficSign?.properties.label.replace(/t|m|/g, '').trim()
+    let text = currentTrafficSign?.properties.label
+
+    if (typeof text === 'string') {
+      text = text.replace(/t|m|/g, '').trim()
+    }
+
     return text !== 'None' ? text : null
   }
 

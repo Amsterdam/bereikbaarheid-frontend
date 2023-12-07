@@ -1,8 +1,10 @@
-import { renderHook } from '@testing-library/react-hooks'
 import { ReactNode } from 'react'
+
+import { renderHook } from '@testing-library/react-hooks'
 import { MemoryRouter } from 'react-router-dom'
 
 import ProhibitorySignsPageProvider from '../contexts/PageProvider'
+
 import { useTrafficSignCategories } from './useTrafficSignCategories'
 
 describe('useTrafficSignCategories', () => {
@@ -15,10 +17,7 @@ describe('useTrafficSignCategories', () => {
 
     const { result } = renderHook(() => useTrafficSignCategories(), { wrapper })
 
-    expect(result.current).toStrictEqual([
-      'prohibition',
-      'prohibition with exception',
-    ])
+    expect(result.current).toStrictEqual(['prohibition', 'prohibition with exception'])
   })
 
   it('returns an additional category in expert mode', () => {
@@ -28,7 +27,9 @@ describe('useTrafficSignCategories', () => {
       </MemoryRouter>
     )
 
-    const { result } = renderHook(() => useTrafficSignCategories(), { wrapper })
+    const { result } = renderHook(() => useTrafficSignCategories(true), {
+      wrapper,
+    })
 
     expect(result.current).toStrictEqual([
       'prohibition',
