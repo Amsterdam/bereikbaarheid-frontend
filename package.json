@@ -1,7 +1,17 @@
 {
   "name": "bereikbaarheid-frontend",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18.19 <19",
+    "npm": ">=9.6",
+    "yarn": ">=1.22"
+  },
+  "volta": {
+    "node": "18.19.0",
+    "npm": "9.6.0",
+    "yarn": "1.22.19"
+  },
   "dependencies": {
     "@amsterdam/arm-core": "^1.0.0",
     "@amsterdam/arm-nontiled": "^1.0.0",

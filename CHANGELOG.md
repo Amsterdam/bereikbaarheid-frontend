@@ -6,12 +6,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.0.0...HEAD)
 
+## Added
+
+## Changed
+
+## Fixed
+
+## [v3.1.0 - 2023-12-07](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.0.0...v3.1.0)
+
 ### Added
 
-- Default Amsterdam municipality favicons and app icons for various platforms (Android, iOS, Windows)
+- "Touringcar" page (unlinked) with all its legend items (as seen on tourbuzz.amsterdam.nl)
+- Fetch and display bollards on map
+- Bollard details can be viewed in the map panel and tooltips
 - Internationalization with i18next
 - Translations for some UI elements to Dutch, English, German and Spanish (but there is not yet a way for the user to switch languages)
-- "Touringcar" page (hidden) with "Parking spaces" data and legend item
+- Frequently Asked Questions (FAQ) on contact & help page
+- Default Amsterdam municipality favicons and app icons for various platforms (Android, iOS, Windows)
+
+### Changed
+
+- New lay-out and content for forbidden to stop and park signs on parking spaces on the load-unload page
+
+### Fixed
+
+- Replace dead or old links
 
 ## [v3.0.0 - 2023-10-16](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.7.0...v3.0.0)
 
