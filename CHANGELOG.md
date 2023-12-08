@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.0.0...HEAD)
+## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.1.0...HEAD)
 
 ## Added
 
@@ -18,9 +18,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 - "Touringcar" page (unlinked) with all its legend items (as seen on tourbuzz.amsterdam.nl)
 - Fetch and display bollards on map
-- Bollard details can be viewed in the map panel and tooltips
+- Bollard details can be viewed in the map panel and in tooltips
 - Internationalization with i18next
-- Translations for some UI elements to Dutch, English, German and Spanish (but there is not yet a way for the user to switch languages)
+- Translations for many UI elements to Dutch, English, German and Spanish (but there is not yet a way for the user to switch languages)
+- Fallback language is Dutch (nl_NL)
 - Frequently Asked Questions (FAQ) on contact & help page
 - Default Amsterdam municipality favicons and app icons for various platforms (Android, iOS, Windows)
 
@@ -30,7 +31,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Fixed
 
-- Replace dead or old links
+- Replaced dead or old links
 
 ## [v3.0.0 - 2023-10-16](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v2.7.0...v3.0.0)
 
