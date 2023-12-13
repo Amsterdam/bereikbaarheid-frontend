@@ -82,18 +82,18 @@
       "stops": "Haltes",
       "parking": "Parkeren",
       "maxVehicleHeight": "Maximale doorrijhoogtes",
-      "destinationTraffic": "Toegestane wegen",
       "recommendedRoutes": "Aanbevolen routes",
-      "mandatoryRoutes": "Alleen met ontheffing",
+      "destinationTraffic": "Toegestane wegen >7,5 ton",
+      "mandatoryRoutes": ">7,5 ton mét ontheffing",
       "environmentalZone": "Milieuzone"
     },
     "_dataSources": {
       "stopsForCoaches": "Haltes voor touringcars",
       "parkingSpacesForCoaches": "Parkeerplekken voor touringcars",
       "maxVehicleHeight": "Maximale doorrijhoogtes voor touringcars",
-      "destinationTraffic": "Toegestane wegen voor touringcars",
       "recommendedRoutes": "Aanbevolen routes voor touringcars",
-      "mandatoryRoutes": "Alleen met ontheffing voor touringcars",
+      "destinationTraffic": "Toegestane wegen >7,5 ton voor touringcars",
+      "mandatoryRoutes": ">7,5 ton mét ontheffing voor touringcars",
       "environmentalZone": "Milieuzone"
     }
   },

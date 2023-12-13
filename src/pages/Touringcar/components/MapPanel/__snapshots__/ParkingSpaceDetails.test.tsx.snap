@@ -1191,7 +1191,7 @@ FAQ en contactgegevens"
                               <span
                                 class="sc-fhzFiK iRpqvs"
                               >
-                                Toegestane wegen voor touringcars
+                                Toegestane wegen &gt;7,5 ton voor touringcars
                               </span>
                             </a>
                             <sup>
@@ -1257,7 +1257,7 @@ FAQ en contactgegevens"
                               <span
                                 class="sc-fhzFiK iRpqvs"
                               >
-                                Alleen met ontheffing voor touringcars
+                                &gt;7,5 ton mét ontheffing voor touringcars
                               </span>
                             </a>
                             <sup>
@@ -1504,42 +1504,6 @@ FAQ en contactgegevens"
                     </label>
                     <label
                       class="sc-gFVvzn jmImEg"
-                      for="touringcarRoutesDestinationTraffic"
-                    >
-                      <span
-                        class="sc-brPLxw dGBiZJ"
-                      >
-                        Toegestane wegen
-                      </span>
-                      <span
-                        class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
-                      >
-                        <span
-                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
-                          data-testid="checkboxIcon"
-                        >
-                          <svg
-                            focusable="false"
-                            role="img"
-                            viewBox="0 0 32 32"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
-                              fill-rule="evenodd"
-                            />
-                          </svg>
-                        </span>
-                        <input
-                          checked=""
-                          class="sc-fUnMCh cQYVve"
-                          id="touringcarRoutesDestinationTraffic"
-                          type="checkbox"
-                        />
-                      </span>
-                    </label>
-                    <label
-                      class="sc-gFVvzn jmImEg"
                       for="touringcarRoutesRecommended"
                     >
                       <span
@@ -1576,12 +1540,48 @@ FAQ en contactgegevens"
                     </label>
                     <label
                       class="sc-gFVvzn jmImEg"
+                      for="touringcarRoutesDestinationTraffic"
+                    >
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Toegestane wegen &gt;7,5 ton
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarRoutesDestinationTraffic"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
+                    <label
+                      class="sc-gFVvzn jmImEg"
                       for="touringcarRoutesMandatory"
                     >
                       <span
                         class="sc-brPLxw dGBiZJ"
                       >
-                        Alleen met ontheffing
+                        &gt;7,5 ton mét ontheffing
                       </span>
                       <span
                         class="sc-fHjqPf jSNdCb sc-eHsDsR bmJRtT"
@@ -2907,7 +2907,7 @@ FAQ en contactgegevens"
                             <span
                               class="sc-fhzFiK iRpqvs"
                             >
-                              Toegestane wegen voor touringcars
+                              Toegestane wegen &gt;7,5 ton voor touringcars
                             </span>
                           </a>
                           <sup>
@@ -2973,7 +2973,7 @@ FAQ en contactgegevens"
                             <span
                               class="sc-fhzFiK iRpqvs"
                             >
-                              Alleen met ontheffing voor touringcars
+                              &gt;7,5 ton mét ontheffing voor touringcars
                             </span>
                           </a>
                           <sup>
@@ -3220,42 +3220,6 @@ FAQ en contactgegevens"
                   </label>
                   <label
                     class="sc-gFVvzn jmImEg"
-                    for="touringcarRoutesDestinationTraffic"
-                  >
-                    <span
-                      class="sc-brPLxw dGBiZJ"
-                    >
-                      Toegestane wegen
-                    </span>
-                    <span
-                      class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
-                    >
-                      <span
-                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
-                        data-testid="checkboxIcon"
-                      >
-                        <svg
-                          focusable="false"
-                          role="img"
-                          viewBox="0 0 32 32"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
-                            fill-rule="evenodd"
-                          />
-                        </svg>
-                      </span>
-                      <input
-                        checked=""
-                        class="sc-fUnMCh cQYVve"
-                        id="touringcarRoutesDestinationTraffic"
-                        type="checkbox"
-                      />
-                    </span>
-                  </label>
-                  <label
-                    class="sc-gFVvzn jmImEg"
                     for="touringcarRoutesRecommended"
                   >
                     <span
@@ -3292,12 +3256,48 @@ FAQ en contactgegevens"
                   </label>
                   <label
                     class="sc-gFVvzn jmImEg"
+                    for="touringcarRoutesDestinationTraffic"
+                  >
+                    <span
+                      class="sc-brPLxw dGBiZJ"
+                    >
+                      Toegestane wegen &gt;7,5 ton
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
+                    >
+                      <span
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
+                      >
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarRoutesDestinationTraffic"
+                        type="checkbox"
+                      />
+                    </span>
+                  </label>
+                  <label
+                    class="sc-gFVvzn jmImEg"
                     for="touringcarRoutesMandatory"
                   >
                     <span
                       class="sc-brPLxw dGBiZJ"
                     >
-                      Alleen met ontheffing
+                      &gt;7,5 ton mét ontheffing
                     </span>
                     <span
                       class="sc-fHjqPf jSNdCb sc-eHsDsR bmJRtT"

@@ -24,15 +24,15 @@ const touringcarVehicleHeightsLink = {
   beta: true,
 }
 
-const touringcarRoutesDestinationTrafficLink = {
-  href: getTouringcarRoutesDestinationTrafficUrl(),
-  title: '_pageTouringcar._dataSources.destinationTraffic',
-  beta: true,
-}
-
 const touringcarRoutesRecommendedLink = {
   href: getTouringcarRoutesRecommendedUrl(),
   title: '_pageTouringcar._dataSources.recommendedRoutes',
+  beta: true,
+}
+
+const touringcarRoutesDestinationTrafficLink = {
+  href: getTouringcarRoutesDestinationTrafficUrl(),
+  title: '_pageTouringcar._dataSources.destinationTraffic',
   beta: true,
 }
 
