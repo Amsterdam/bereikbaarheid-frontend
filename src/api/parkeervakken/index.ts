@@ -3,6 +3,7 @@
 // https://api.data.amsterdam.nl/v1/parkeervakken/
 //
 
+import { headers } from 'api/data.amsterdam'
 import axios from 'axios'
 import { Polygon } from 'geojson'
 
@@ -49,6 +50,7 @@ export function getParkingSpaceById(id: string | undefined, signal: AbortSignal 
     : axios
         .get(`${API_URL}/${id}/`, {
           headers: {
+            ...headers,
             'accept-crs': 'EPSG:4258',
           },
           signal,
