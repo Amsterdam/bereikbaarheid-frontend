@@ -1,3 +1,4 @@
+import { headers } from 'api/data.amsterdam'
 import axios from 'axios'
 import { Feature, FeatureCollection } from 'geojson'
 
@@ -33,6 +34,7 @@ export function getWiorData(cqlFilter: string, signal: AbortSignal | undefined):
         srsName: 'EPSG:4326',
         FILTER: cqlFilter,
       },
+      headers,
       signal,
     })
     .then(response => response.data)

@@ -1,7 +1,16 @@
 import axios from 'axios'
 
+const headers =
+  process.env.NODE_ENV === 'production' && process.env.REACT_APP_API_DATA_AMS_KEY?.length
+    ? {
+        'X-Api-Key': process.env.REACT_APP_API_DATA_AMS_KEY,
+      }
+    : undefined
+
 const api = axios.create({
   baseURL: process.env.REACT_APP_API_DATA_AMS_ROOT,
+
+  headers,
 
   // create an URL with repeated parameters,
   // e.g. ?category=foo&category=bar&category=baz
@@ -14,4 +23,5 @@ const api = axios.create({
   },
 })
 
+export { headers }
 export default api
