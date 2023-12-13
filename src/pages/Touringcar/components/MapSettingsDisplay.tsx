@@ -1,5 +1,6 @@
 import { MapPanelContent, MapPanelContentProps } from '@amsterdam/arm-core'
 import { Paragraph, Tab, Tabs } from '@amsterdam/asc-ui'
+import parse from 'html-react-parser'
 import { useTranslation } from 'react-i18next'
 import { PretendHeading } from 'shared/components/CompactElements'
 import styled from 'styled-components'
@@ -45,7 +46,7 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
               {t('_pageTouringcar._mapPanel.recommendedAndMandatoryRoutes')}
             </PretendHeading>
             <Paragraph style={{ marginBlockEnd: '.5em' }}>
-              {t('_pageTouringcar._mapPanel.displayOfRecommendedAndMandatoryRoutes')}
+              {parse(t('_pageTouringcar._mapPanel.displayOfRecommendedAndMandatoryRoutes'))}
             </Paragraph>
           </PaddedContent>
 
