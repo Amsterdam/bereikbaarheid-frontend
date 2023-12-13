@@ -60,7 +60,7 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
           )}
 
           {activeMapLayers.touringcarParkingSpaces && (
-            <PaddedContent>
+            <PaddedContent style={{ marginBlockEnd: '3em' }}>
               <PretendHeading forwardedAs="h2" isCompact={true}>
                 {t('_pageTouringcar._mapPanel.parkingSpaces')}
               </PretendHeading>

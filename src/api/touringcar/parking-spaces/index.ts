@@ -3,7 +3,7 @@ import { Feature, FeatureCollection, Point } from 'geojson'
 import api from '../../data.amsterdam'
 
 interface TouringcarParkingSpace extends Feature {
-  id: number
+  id: string
   geometry: Point
   omschrijving: string
   bijzonderheden: string
