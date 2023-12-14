@@ -1,5 +1,6 @@
 import { MapPanelContent, MapPanelContentProps } from '@amsterdam/arm-core'
 import { Paragraph, Tab, Tabs } from '@amsterdam/asc-ui'
+import parse from 'html-react-parser'
 import { useTranslation } from 'react-i18next'
 import { PretendHeading } from 'shared/components/CompactElements'
 import styled from 'styled-components'
@@ -45,34 +46,9 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
               {t('_pageTouringcar._mapPanel.recommendedAndMandatoryRoutes')}
             </PretendHeading>
             <Paragraph style={{ marginBlockEnd: '.5em' }}>
-              {t('_pageTouringcar._mapPanel.displayOfRecommendedAndMandatoryRoutes')}
-            </Paragraph>
-            <Paragraph style={{ marginBlockEnd: '.5em' }}>
-              {t('_pageTouringcar._mapPanel.payAttentionToVerhicleHeights')}
+              {parse(t('_pageTouringcar._mapPanel.displayOfRecommendedAndMandatoryRoutes'))}
             </Paragraph>
           </PaddedContent>
-
-          {activeMapLayers.touringcarRoutesDestinationTraffic && (
-            <PaddedContent>
-              <Paragraph style={{ marginBlockEnd: '.5em' }}>
-                <strong>{t('_pageTouringcar._mapPanel._attention2024._allowedRoutes.title')}</strong>
-              </Paragraph>
-              <Paragraph style={{ marginBlockEnd: '.5em' }}>
-                {t('_pageTouringcar._mapPanel._attention2024._allowedRoutes.paragraph')}
-              </Paragraph>
-            </PaddedContent>
-          )}
-
-          {activeMapLayers.touringcarRoutesMandatory && (
-            <PaddedContent>
-              <Paragraph style={{ marginBlockEnd: '.5em' }}>
-                <strong>{t('_pageTouringcar._mapPanel._attention2024._onlyWithExemption.title')}</strong>
-              </Paragraph>
-              <Paragraph style={{ marginBlockEnd: '.5em' }}>
-                {t('_pageTouringcar._mapPanel._attention2024._onlyWithExemption.paragraph')}
-              </Paragraph>
-            </PaddedContent>
-          )}
 
           {activeMapLayers.touringcarStops && (
             <PaddedContent>
@@ -85,7 +61,7 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
           )}
 
           {activeMapLayers.touringcarParkingSpaces && (
-            <PaddedContent>
+            <PaddedContent style={{ marginBlockEnd: '3em' }}>
               <PretendHeading forwardedAs="h2" isCompact={true}>
                 {t('_pageTouringcar._mapPanel.parkingSpaces')}
               </PretendHeading>

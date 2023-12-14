@@ -19,12 +19,12 @@ const LEGEND_ITEMS = [
     label: '_pageTouringcar._legend.maxVehicleHeight',
   },
   {
-    id: MapLayerId.touringcarRoutesDestinationTrafficLayerId,
-    label: '_pageTouringcar._legend.destinationTraffic',
-  },
-  {
     id: MapLayerId.touringcarRoutesRecommendedLayerId,
     label: '_pageTouringcar._legend.recommendedRoutes',
+  },
+  {
+    id: MapLayerId.touringcarRoutesDestinationTrafficLayerId,
+    label: '_pageTouringcar._legend.destinationTraffic',
   },
   {
     id: MapLayerId.touringcarRoutesMandatoryLayerId,

@@ -798,55 +798,19 @@ FAQ en contactgegevens"
                         <h2
                           class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
                         >
-                          Situatie vanaf januari 2024
+                          Nieuw beleid voor 2024
                         </h2>
                         <p
                           class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
                           style="margin-block-end: .5em;"
                         >
-                          Parkeerplaatsen, in- en uitstaphaltes en de toegestane touringcarroute in Amsterdam.
-                        </p>
-                        <p
-                          class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                          style="margin-block-end: .5em;"
-                        >
-                          Let op de doorrijhoogtes.
-                        </p>
-                      </div>
-                      <div
-                        class="sc-eIcdZJ bzzgoc"
-                      >
-                        <p
-                          class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                          style="margin-block-end: .5em;"
-                        >
-                          <strong>
-                            Toegestane wegen
-                          </strong>
-                        </p>
-                        <p
-                          class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                          style="margin-block-end: .5em;"
-                        >
-                          Vanaf januari 2024 mogen touringcars zwaarder dan 7,5 ton niet meer binnen de S100 rijden. Uitzondering is de S100 zelf en de corridor Weesperstraat – Valkenburgerstraat – Kattenburgerstraat.
-                        </p>
-                      </div>
-                      <div
-                        class="sc-eIcdZJ bzzgoc"
-                      >
-                        <p
-                          class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                          style="margin-block-end: .5em;"
-                        >
-                          <strong>
-                            Alleen met ontheffing
-                          </strong>
-                        </p>
-                        <p
-                          class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                          style="margin-block-end: .5em;"
-                        >
-                          Deze wegen zijn alléén toegankelijk voor touringcars &gt;7,5 ton mét ontheffing. Een ontheffing is alleen aan te vragen voor vervoer van specifieke doelgroepen (basisschoolleerlingen, mensen met een beperking, ouderen, artiesten) in combinatie met een bezoek aan een educatieve en/of culturele instelling.
+                          Vanaf 1 januari 2024 zijn touringcars zwaarder dan 7,5 ton zonder ontheffing toegestaan op de S100 en de corridor Weesperstraat - Valkenburgerstraat – Kattenburgerstraat (lichtgroen weergegeven). Touringcars zwaarder dan 7,5 ton mét ontheffing zijn toegestaan op de in donkergroen weergegeven wegen. Voor meer informatie over het verkeersbesluit, ontheffingenbeleid en het aanvragen van een ontheffing: 
+                          <a
+                            href="https://www.amsterdam.nl/touringcar"
+                            target="_blank"
+                          >
+                            www.amsterdam.nl/touringcar
+                          </a>
                         </p>
                       </div>
                       <div
@@ -897,6 +861,21 @@ FAQ en contactgegevens"
                                   width="25%"
                                 >
                                   7 bussen
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
+                                  H5: Zouthaven - Piet Heinkade
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  4 bussen
                                 </td>
                               </tr>
                               <tr
@@ -1010,6 +989,21 @@ FAQ en contactgegevens"
                                 <td
                                   class="sc-dycYrt foMVJw"
                                 >
+                                  H20: Port van Cleve / Magna Plaza
+                                </td>
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                  width="25%"
+                                >
+                                  1 bus
+                                </td>
+                              </tr>
+                              <tr
+                                class="sc-hTUWRQ cZDYyh"
+                              >
+                                <td
+                                  class="sc-dycYrt foMVJw"
+                                >
                                   H22: Renaissance Hotel
                                 </td>
                                 <td
@@ -1049,42 +1043,13 @@ FAQ en contactgegevens"
                                   2 bussen
                                 </td>
                               </tr>
-                              <tr
-                                class="sc-hTUWRQ cZDYyh"
-                              >
-                                <td
-                                  class="sc-dycYrt foMVJw"
-                                >
-                                  H20: Port van Cleve / Magna Plaza
-                                </td>
-                                <td
-                                  class="sc-dycYrt foMVJw"
-                                  width="25%"
-                                >
-                                  1 bus
-                                </td>
-                              </tr>
-                              <tr
-                                class="sc-hTUWRQ cZDYyh"
-                              >
-                                <td
-                                  class="sc-dycYrt foMVJw"
-                                >
-                                  H5: Zouthaven - Piet Heinkade
-                                </td>
-                                <td
-                                  class="sc-dycYrt foMVJw"
-                                  width="25%"
-                                >
-                                  4 bussen
-                                </td>
-                              </tr>
                             </tbody>
                           </table>
                         </div>
                       </div>
                       <div
                         class="sc-eIcdZJ bzzgoc"
+                        style="margin-block-end: 3em;"
                       >
                         <h2
                           class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
@@ -1232,7 +1197,7 @@ FAQ en contactgegevens"
                               <span
                                 class="sc-fhzFiK iRpqvs"
                               >
-                                Toegestane wegen voor touringcars
+                                Toegestane wegen &gt;7,5 ton voor touringcars
                               </span>
                             </a>
                             <sup>
@@ -1298,7 +1263,7 @@ FAQ en contactgegevens"
                               <span
                                 class="sc-fhzFiK iRpqvs"
                               >
-                                Alleen met ontheffing voor touringcars
+                                &gt;7,5 ton mét ontheffing voor touringcars
                               </span>
                             </a>
                             <sup>
@@ -1545,42 +1510,6 @@ FAQ en contactgegevens"
                     </label>
                     <label
                       class="sc-gFVvzn jmImEg"
-                      for="touringcarRoutesDestinationTraffic"
-                    >
-                      <span
-                        class="sc-brPLxw dGBiZJ"
-                      >
-                        Toegestane wegen
-                      </span>
-                      <span
-                        class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
-                      >
-                        <span
-                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
-                          data-testid="checkboxIcon"
-                        >
-                          <svg
-                            focusable="false"
-                            role="img"
-                            viewBox="0 0 32 32"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
-                              fill-rule="evenodd"
-                            />
-                          </svg>
-                        </span>
-                        <input
-                          checked=""
-                          class="sc-fUnMCh cQYVve"
-                          id="touringcarRoutesDestinationTraffic"
-                          type="checkbox"
-                        />
-                      </span>
-                    </label>
-                    <label
-                      class="sc-gFVvzn jmImEg"
                       for="touringcarRoutesRecommended"
                     >
                       <span
@@ -1617,12 +1546,48 @@ FAQ en contactgegevens"
                     </label>
                     <label
                       class="sc-gFVvzn jmImEg"
+                      for="touringcarRoutesDestinationTraffic"
+                    >
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Toegestane wegen &gt;7,5 ton
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarRoutesDestinationTraffic"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
+                    <label
+                      class="sc-gFVvzn jmImEg"
                       for="touringcarRoutesMandatory"
                     >
                       <span
                         class="sc-brPLxw dGBiZJ"
                       >
-                        Alleen met ontheffing
+                        &gt;7,5 ton mét ontheffing
                       </span>
                       <span
                         class="sc-fHjqPf jSNdCb sc-eHsDsR bmJRtT"
@@ -2555,55 +2520,19 @@ FAQ en contactgegevens"
                       <h2
                         class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
                       >
-                        Situatie vanaf januari 2024
+                        Nieuw beleid voor 2024
                       </h2>
                       <p
                         class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
                         style="margin-block-end: .5em;"
                       >
-                        Parkeerplaatsen, in- en uitstaphaltes en de toegestane touringcarroute in Amsterdam.
-                      </p>
-                      <p
-                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                        style="margin-block-end: .5em;"
-                      >
-                        Let op de doorrijhoogtes.
-                      </p>
-                    </div>
-                    <div
-                      class="sc-eIcdZJ bzzgoc"
-                    >
-                      <p
-                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                        style="margin-block-end: .5em;"
-                      >
-                        <strong>
-                          Toegestane wegen
-                        </strong>
-                      </p>
-                      <p
-                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                        style="margin-block-end: .5em;"
-                      >
-                        Vanaf januari 2024 mogen touringcars zwaarder dan 7,5 ton niet meer binnen de S100 rijden. Uitzondering is de S100 zelf en de corridor Weesperstraat – Valkenburgerstraat – Kattenburgerstraat.
-                      </p>
-                    </div>
-                    <div
-                      class="sc-eIcdZJ bzzgoc"
-                    >
-                      <p
-                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                        style="margin-block-end: .5em;"
-                      >
-                        <strong>
-                          Alleen met ontheffing
-                        </strong>
-                      </p>
-                      <p
-                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
-                        style="margin-block-end: .5em;"
-                      >
-                        Deze wegen zijn alléén toegankelijk voor touringcars &gt;7,5 ton mét ontheffing. Een ontheffing is alleen aan te vragen voor vervoer van specifieke doelgroepen (basisschoolleerlingen, mensen met een beperking, ouderen, artiesten) in combinatie met een bezoek aan een educatieve en/of culturele instelling.
+                        Vanaf 1 januari 2024 zijn touringcars zwaarder dan 7,5 ton zonder ontheffing toegestaan op de S100 en de corridor Weesperstraat - Valkenburgerstraat – Kattenburgerstraat (lichtgroen weergegeven). Touringcars zwaarder dan 7,5 ton mét ontheffing zijn toegestaan op de in donkergroen weergegeven wegen. Voor meer informatie over het verkeersbesluit, ontheffingenbeleid en het aanvragen van een ontheffing: 
+                        <a
+                          href="https://www.amsterdam.nl/touringcar"
+                          target="_blank"
+                        >
+                          www.amsterdam.nl/touringcar
+                        </a>
                       </p>
                     </div>
                     <div
@@ -2654,6 +2583,21 @@ FAQ en contactgegevens"
                                 width="25%"
                               >
                                 7 bussen
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
+                                H5: Zouthaven - Piet Heinkade
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                4 bussen
                               </td>
                             </tr>
                             <tr
@@ -2767,6 +2711,21 @@ FAQ en contactgegevens"
                               <td
                                 class="sc-dycYrt foMVJw"
                               >
+                                H20: Port van Cleve / Magna Plaza
+                              </td>
+                              <td
+                                class="sc-dycYrt foMVJw"
+                                width="25%"
+                              >
+                                1 bus
+                              </td>
+                            </tr>
+                            <tr
+                              class="sc-hTUWRQ cZDYyh"
+                            >
+                              <td
+                                class="sc-dycYrt foMVJw"
+                              >
                                 H22: Renaissance Hotel
                               </td>
                               <td
@@ -2806,42 +2765,13 @@ FAQ en contactgegevens"
                                 2 bussen
                               </td>
                             </tr>
-                            <tr
-                              class="sc-hTUWRQ cZDYyh"
-                            >
-                              <td
-                                class="sc-dycYrt foMVJw"
-                              >
-                                H20: Port van Cleve / Magna Plaza
-                              </td>
-                              <td
-                                class="sc-dycYrt foMVJw"
-                                width="25%"
-                              >
-                                1 bus
-                              </td>
-                            </tr>
-                            <tr
-                              class="sc-hTUWRQ cZDYyh"
-                            >
-                              <td
-                                class="sc-dycYrt foMVJw"
-                              >
-                                H5: Zouthaven - Piet Heinkade
-                              </td>
-                              <td
-                                class="sc-dycYrt foMVJw"
-                                width="25%"
-                              >
-                                4 bussen
-                              </td>
-                            </tr>
                           </tbody>
                         </table>
                       </div>
                     </div>
                     <div
                       class="sc-eIcdZJ bzzgoc"
+                      style="margin-block-end: 3em;"
                     >
                       <h2
                         class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-kbdlSk kRJpwh"
@@ -2989,7 +2919,7 @@ FAQ en contactgegevens"
                             <span
                               class="sc-fhzFiK iRpqvs"
                             >
-                              Toegestane wegen voor touringcars
+                              Toegestane wegen &gt;7,5 ton voor touringcars
                             </span>
                           </a>
                           <sup>
@@ -3055,7 +2985,7 @@ FAQ en contactgegevens"
                             <span
                               class="sc-fhzFiK iRpqvs"
                             >
-                              Alleen met ontheffing voor touringcars
+                              &gt;7,5 ton mét ontheffing voor touringcars
                             </span>
                           </a>
                           <sup>
@@ -3302,42 +3232,6 @@ FAQ en contactgegevens"
                   </label>
                   <label
                     class="sc-gFVvzn jmImEg"
-                    for="touringcarRoutesDestinationTraffic"
-                  >
-                    <span
-                      class="sc-brPLxw dGBiZJ"
-                    >
-                      Toegestane wegen
-                    </span>
-                    <span
-                      class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
-                    >
-                      <span
-                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
-                        data-testid="checkboxIcon"
-                      >
-                        <svg
-                          focusable="false"
-                          role="img"
-                          viewBox="0 0 32 32"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
-                            fill-rule="evenodd"
-                          />
-                        </svg>
-                      </span>
-                      <input
-                        checked=""
-                        class="sc-fUnMCh cQYVve"
-                        id="touringcarRoutesDestinationTraffic"
-                        type="checkbox"
-                      />
-                    </span>
-                  </label>
-                  <label
-                    class="sc-gFVvzn jmImEg"
                     for="touringcarRoutesRecommended"
                   >
                     <span
@@ -3374,12 +3268,48 @@ FAQ en contactgegevens"
                   </label>
                   <label
                     class="sc-gFVvzn jmImEg"
+                    for="touringcarRoutesDestinationTraffic"
+                  >
+                    <span
+                      class="sc-brPLxw dGBiZJ"
+                    >
+                      Toegestane wegen &gt;7,5 ton
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb sc-eHsDsR hGTRLv"
+                    >
+                      <span
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
+                      >
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarRoutesDestinationTraffic"
+                        type="checkbox"
+                      />
+                    </span>
+                  </label>
+                  <label
+                    class="sc-gFVvzn jmImEg"
                     for="touringcarRoutesMandatory"
                   >
                     <span
                       class="sc-brPLxw dGBiZJ"
                     >
-                      Alleen met ontheffing
+                      &gt;7,5 ton mét ontheffing
                     </span>
                     <span
                       class="sc-fHjqPf jSNdCb sc-eHsDsR bmJRtT"
