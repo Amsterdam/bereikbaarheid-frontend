@@ -8,7 +8,7 @@ To release a new version, please take the following steps:
    - The current 'Unreleased' section becomes the new version.
    - Create a new empty 'Unreleased' section
 
-2. Increase the version in `package.json`: `npm version <VALID_SEMVER_STRING> --no-git-tag-version --force` where `<VALID_SEMVER_STRING>` is e.g 'patch' or 'minor'
+2. Increase the version in `package.json` by doing `npm version <VALID_SEMVER_STRING> --no-git-tag-version --force` where `<VALID_SEMVER_STRING>` is e.g 'patch' or 'minor'
 
 3. Commit and push the changelog update & version increase
 

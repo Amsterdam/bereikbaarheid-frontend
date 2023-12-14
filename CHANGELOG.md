@@ -12,6 +12,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Fixed
 
+## [v3.2.0 - 2023-12-14](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.1.0...v3.2.0)
+
+### Changed
+
+- Touringcar: legend labels
+- Touringcar: text about situation in 2024
+- Touringcar: stop and parking space tables are now sorted
+
 ## [v3.1.0 - 2023-12-07](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.0.0...v3.1.0)
 
 ### Added
