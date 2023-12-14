@@ -12,10 +12,10 @@ To release a new version, please take the following steps:
 
 3. Commit and push the changelog update & version increase
 
-4. Tag a new version where `<VERSION_NUMBER>` is of format `1.2.3`:
+4. Tag a new version where `<VERSION_NUMBER>` is of format `v1.2.3`:
 
    - `git tag -a <VERSION_NUMBER> -m 'release: version <VERSION_NUMBER>' <full-commit-id>`
-   - `git push origin v<VERSION_NUMBER>`
+   - `git push origin <VERSION_NUMBER>`
 
 5. [Create a GitHub release](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository)
 
