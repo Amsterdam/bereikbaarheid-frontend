@@ -7,10 +7,6 @@ trigger:
     include:
       - "*.*.*"
 
-variables:
-  # Debugging
-  System.Debug: true
-
 parameters:
   - name: versionOverride
     displayName: "[OPTIONAL] Build/deploy version override"

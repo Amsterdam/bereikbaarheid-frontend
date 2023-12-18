@@ -18,5 +18,7 @@ secrets:
     keyVaultName: shared-p-fvzhzurrbxcfc
 
 ingress:
-  app:
-    className: nginx-internal
+  external:
+    host: bereikbaarheid.amsterdam.nl
+  internal-motiv:
+    host: bereikbaarheid.amsterdam.nl

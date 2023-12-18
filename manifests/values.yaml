@@ -47,12 +47,26 @@ services:
       app: bereikbaarheid-frontend
 
 ingress:
-  app:
+  external:
+    className: nginx-external
     paths:
-    - path: /
-      service: app
-      port: 80
-    className: nginx
+      - path: /
+        service: app
+        port: 80
+    tls: certificate
+  internal:
+    className: nginx-internal
+    paths:
+      - path: /
+        service: app
+        port: 80
+    tls: certificate
+  internal-motiv:
+    className: nginx-internal
+    paths:
+      - path: /
+        service: app
+        port: 80
     tls: certificate
 
 secrets:

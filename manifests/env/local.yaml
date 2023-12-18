@@ -8,8 +8,12 @@ jobs:
     enabled: false
 
 ingress:
-  app:
-    tls: null
+  external:
+    enabled: false
+  internal-motiv:
+    enabled: false
+  internal:
+    className: nginx
 
 secrets:
   certificate:

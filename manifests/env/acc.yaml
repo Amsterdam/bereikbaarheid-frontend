@@ -18,5 +18,7 @@ secrets:
     keyVaultName: shared-a-uibe5ahqv3cwo
 
 ingress:
-  app:
-    className: nginx-internal
+  external:
+    host: acc.bereikbaarheid.amsterdam.nl
+  internal-motiv:
+    host: acc.bereikbaarheid.amsterdam.nl

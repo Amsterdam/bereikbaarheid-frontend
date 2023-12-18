@@ -18,5 +18,7 @@ secrets:
     keyVaultName: shared-o-yhqbd6yktpphi
 
 ingress:
-  app:
-    className: nginx-internal
+  external:
+    enabled: false
+  internal-motiv:
+    enabled: false
