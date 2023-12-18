@@ -33,15 +33,27 @@ extends:
       pool: Opdrachten
       namespace: ns-ccc-opdr-ont-01-bereikbaarheid
       kubernetesServiceConnection: "SCN-K8S-ns-ccc-opdr-ont-01-bereikbaarheid"
+      preSteps:
+        - script: helm uninstall frontend -n ns-ccc-opdr-ont-01-bereikbaarheid || true
+          displayName: helm uninstall
     test:
       pool: Opdrachten
       namespace: ns-ccc-opdr-tst-01-bereikbaarheid
       kubernetesServiceConnection: "SCN-K8S-ns-ccc-opdr-tst-01-bereikbaarheid"
+      preSteps:
+        - script: helm uninstall frontend -n ns-ccc-opdr-tst-01-bereikbaarheid || true
+          displayName: helm uninstall
     acc:
       pool: Opdrachten
       namespace: ns-ccc-opdr-acc-01-bereikbaarheid
       kubernetesServiceConnection: "SCN-K8S-ns-ccc-opdr-acc-01-bereikbaarheid"
+      preSteps:
+        - script: helm uninstall frontend -n ns-ccc-opdr-acc-01-bereikbaarheid || true
+          displayName: helm uninstall
     prod:
       pool: Opdrachten
       namespace: ns-ccc-opdr-prd-01-bereikbaarheid
       kubernetesServiceConnection: "SCN-K8S-ns-ccc-opdr-prd-01-bereikbaarheid"
+      preSteps:
+        - script: helm uninstall frontend -n ns-ccc-opdr-prd-01-bereikbaarheid || true
+          displayName: helm uninstall
