@@ -19,6 +19,8 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
 
   const [blockURLParamsMutation, setBlockURLParamsMutation] = useState(false)
   const [queryParams, setQueryParams] = useSearchParams()
+
+  // Show or hide layers on basis of what parameters are in the URL.
   const updateActiveMapLayersWithSearchParams = useCallback(() => {
     if (blockURLParamsMutation) return
 
