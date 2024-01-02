@@ -61,14 +61,8 @@ export const ParkingSpacesLayer = () => {
     })
   }
 
-  if (isError && error instanceof Error) {
-    console.error(error.message)
-  }
-
-  if (isLoading || !data) {
-    return null
-  }
-
+  if (isError && error instanceof Error) console.error(error.message)
+  if (isLoading || !data) return null
   if (!activeMapLayers[MapLayerId.touringcarParkingSpacesLayerId]) return null
 
   return (
