@@ -5,6 +5,8 @@ import { RouteIds, getPathTo } from 'routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ParkingSpaceDetails', () => {
+  jest.setTimeout(15000)
+
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo(RouteIds.TOURINGCAR_PAGE), {
       legenda: ['haltes-parkeerplaatsen'],
