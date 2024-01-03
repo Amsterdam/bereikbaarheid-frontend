@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 import { BaseLayer } from '@amsterdam/arm-core'
 import { TileLayer } from '@amsterdam/react-maps'
@@ -20,23 +20,35 @@ const TouringcarMapLayers = () => {
   const { address } = useTouringcarPageContext()
 
   const { updateActiveMapLayersWithSearchParams } = useTouringcarMapContext()
-  useEffect(updateActiveMapLayersWithSearchParams, [updateActiveMapLayersWithSearchParams])
+  const [show, setShow] = useState(false)
+  useLayoutEffect(() => {
+    updateActiveMapLayersWithSearchParams()
+
+    // Hacky workaround for apparent bug (?) in Amsterdam React Maps:
+    // GeoJSON's are loaded when going back with the browser's history even if they shouldn't be.
+    setTimeout(() => setShow(true), 100)
+  }, [updateActiveMapLayersWithSearchParams])
 
   return (
     <>
-      <AddressMarker address={address} />
+      <BaseLayer baseLayer={topoBlackWhite.url} options={topoBlackWhite.options} />
+
+      <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />
 
       <StopsLayer />
       <ParkingSpacesLayer />
       <VehicleHeightsLayer />
-      <RoutesDestinationTrafficLayer />
-      <RoutesRecommendedLayer />
-      <RoutesMandatoryLayer />
-      <EnvironmentalZoneLayer />
 
-      <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />
+      {show && (
+        <>
+          <RoutesDestinationTrafficLayer />
+          <RoutesRecommendedLayer />
+          <RoutesMandatoryLayer />
+          <EnvironmentalZoneLayer />
+        </>
+      )}
 
-      <BaseLayer baseLayer={topoBlackWhite.url} options={topoBlackWhite.options} />
+      <AddressMarker address={address} />
     </>
   )
 }
