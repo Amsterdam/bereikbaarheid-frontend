@@ -13,6 +13,8 @@ describe('ParkingSpaceDetails', () => {
 
     await waitFor(() => page.rerender)
     await screen.findByText('Leaflet')
+    // Sleep function: need to give some time for map layers to render
+    await new Promise(resolve => setTimeout(() => resolve(true), 500))
 
     expect(page).toMatchSnapshot()
   })
