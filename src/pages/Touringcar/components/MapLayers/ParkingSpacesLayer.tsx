@@ -23,7 +23,7 @@ export const ParkingSpacesLayer = () => {
 
   const { t } = useTranslation()
 
-  const { isLoading, error, isError, data } = useQuery({
+  const { isLoading, data } = useQuery({
     enabled: true,
     queryKey: ['touringcarParkingSpaces'],
     queryFn: () =>
@@ -61,14 +61,7 @@ export const ParkingSpacesLayer = () => {
     })
   }
 
-  if (isError && error instanceof Error) {
-    console.error(error.message)
-  }
-
-  if (isLoading || !data) {
-    return null
-  }
-
+  if (isLoading || !data) return null
   if (!activeMapLayers[MapLayerId.touringcarParkingSpacesLayerId]) return null
 
   return (

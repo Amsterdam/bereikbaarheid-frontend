@@ -13,9 +13,8 @@ import {
 } from 'pages/Touringcar/contexts/MapContext'
 
 export const RoutesRecommendedLayer = () => {
-  const { unsetDetailsPane, setActiveTab } = useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
-  const { activeMapLayers } = useTouringcarMapContext()
+  const { activeMapLayers, unsetDetailsPane, setActiveTab } = useTouringcarMapContext()
 
   const { isLoading, error, isError, data } = useQuery({
     enabled: true,
