@@ -20,7 +20,7 @@ Object {
               class="sc-kbousE ldkzVx"
             >
               <a
-                class="sc-jlZhew hhsyaO sc-fUBkdm cyZzDk"
+                class="sc-jlZhew hhsyaO sc-hBtRBD klfEZR"
                 href="/"
               >
                 <svg
@@ -52,7 +52,7 @@ Object {
               class="sc-sLsrZ hThACK"
             >
               <ul
-                class="sc-iEXKAA sc-kzqdkY gPeeHM cXHLKo sc-hBtRBD boxVSJ"
+                class="sc-iEXKAA sc-kzqdkY gPeeHM cXHLKo sc-hYmls dCFeII"
               >
                 <li
                   class="sc-ejfMa-d fymHSF"
@@ -213,6 +213,102 @@ FAQ en contactgegevens"
                     </span>
                   </a>
                 </li>
+                <li
+                  class="sc-ejfMa-d sc-EgOXT fymHSF cDzAhx sc-fUBkdm hQUOCj"
+                  data-testid="flyout"
+                  role="button"
+                  tabindex="-1"
+                >
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    data-testid="flyoutButton"
+                  >
+                    <span
+                      class="sc-dlWCHZ"
+                    >
+                      <span
+                        class="sc-eZYNyq"
+                      >
+                        Taal
+                      </span>
+                    </span>
+                  </button>
+                  <ul
+                    aria-hidden="true"
+                    class="sc-iEXKAA yGkZE"
+                  >
+                    <li
+                      class="sc-ejfMa-d fymHSF"
+                    >
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      >
+                        <span
+                          class="sc-dlWCHZ"
+                        >
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Nederlands
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li
+                      class="sc-ejfMa-d fymHSF"
+                    >
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      >
+                        <span
+                          class="sc-dlWCHZ"
+                        >
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Engels
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li
+                      class="sc-ejfMa-d fymHSF"
+                    >
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      >
+                        <span
+                          class="sc-dlWCHZ"
+                        >
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Duits
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li
+                      class="sc-ejfMa-d fymHSF"
+                    >
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      >
+                        <span
+                          class="sc-dlWCHZ"
+                        >
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Spaans
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </nav>
             <div
@@ -225,7 +321,7 @@ FAQ en contactgegevens"
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-pKqro jkpnfb iybELA leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-gvPdwL jkpnfb btusV leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -387,7 +483,7 @@ FAQ en contactgegevens"
                             Adres
                           </h3>
                           <button
-                            class="sc-dcJsrY gIANEL sc-lfYzqA iAGvZv"
+                            class="sc-dcJsrY gIANEL sc-ijDOKB jdNfiP"
                             data-testid="change-address"
                           >
                             wijzig
@@ -395,7 +491,7 @@ FAQ en contactgegevens"
                         </div>
                       </div>
                       <div
-                        class="sc-kpKSZj gVRicP"
+                        class="sc-lfYzqA iUDQsZ"
                       >
                         <div
                           class="sc-hwdzOV juUYFW"
@@ -412,7 +508,7 @@ FAQ en contactgegevens"
                         </div>
                       </div>
                       <div
-                        class="sc-hwdzOV dQyAaL sc-bWJUgm kfklnh"
+                        class="sc-hwdzOV dQyAaL sc-kpKSZj iGuLrK"
                       >
                         <div
                           class="sc-krNlru ISieu"
@@ -423,7 +519,7 @@ FAQ en contactgegevens"
                             Datum en tijd
                           </h3>
                           <button
-                            class="sc-dcJsrY gIANEL sc-lfYzqA iAGvZv"
+                            class="sc-dcJsrY gIANEL sc-ijDOKB jdNfiP"
                             data-testid="change-date-time"
                           >
                             wijzig
@@ -431,7 +527,7 @@ FAQ en contactgegevens"
                         </div>
                       </div>
                       <div
-                        class="sc-kpKSZj gVRicP"
+                        class="sc-lfYzqA iUDQsZ"
                       >
                         <div
                           class="sc-hwdzOV juUYFW"
@@ -510,10 +606,10 @@ FAQ en contactgegevens"
                       tabindex="0"
                     >
                       <div
-                        class="sc-imwsjW sc-fFlnrN gphTiw bLrZUg"
+                        class="sc-imwsjW sc-kbdlSk gphTiw ixHFKj"
                       >
                         <ul
-                          class="sc-kdBSHD cHWVcp sc-camqpD dHzkWQ"
+                          class="sc-kdBSHD cHWVcp sc-gweoQa qMtFU"
                         >
                           <li
                             class="sc-lcIPJg ddQxr"
@@ -623,7 +719,7 @@ FAQ en contactgegevens"
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-djTQaJ dnhKeL"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-pKqro ka-DHdw"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -636,7 +732,7 @@ FAQ en contactgegevens"
               data-testid="topRight"
             >
               <div
-                class="sc-jdUcAg cZRFDs"
+                class="sc-bddgXz iTGqvB"
               >
                 <button
                   aria-controls="legend"
@@ -679,7 +775,7 @@ FAQ en contactgegevens"
                       class="sc-krNlru ISieu"
                     >
                       <label
-                        class="sc-gFVvzn dbijgR sc-cKXybt dQolcM"
+                        class="sc-gFVvzn dbijgR sc-lgjHQU klmOBq"
                         disabled=""
                         for="mapLegendLoadUnloadSpaces"
                       >
@@ -689,7 +785,7 @@ FAQ en contactgegevens"
                           Laad- en losplekken
                         </span>
                         <div
-                          class="sc-bHnlcS dTvdNm"
+                          class="sc-cKXybt iZnNKp"
                           disabled=""
                         />
                         <span
@@ -730,7 +826,7 @@ FAQ en contactgegevens"
                         </span>
                         <span
                           aria-disabled="true"
-                          class="sc-fHjqPf bzXOXV sc-cgjDci jFWbEc"
+                          class="sc-fHjqPf bzXOXV sc-djTQaJ bIlYzw"
                           disabled=""
                         >
                           <span
@@ -755,7 +851,7 @@ FAQ en contactgegevens"
                       class="sc-krNlru ISieu"
                     >
                       <div
-                        class="sc-bddgXz dzSKah"
+                        class="sc-fyVfxW bNIXdu"
                       >
                         <label
                           class="sc-gFVvzn jmImEg"
@@ -794,13 +890,13 @@ FAQ en contactgegevens"
                           </span>
                         </label>
                         <div
-                          class="sc-fyVfxW zIcYX"
+                          class="sc-eHsDsR cMemZM"
                         >
                           <div
-                            class="sc-lgjHQU ktVhiI"
+                            class="sc-fatcLD kibknJ"
                           >
                             <div
-                              class="sc-fatcLD ivfXoA"
+                              class="sc-cgjDci guSBZU"
                             />
                             <p
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -813,10 +909,10 @@ FAQ en contactgegevens"
                             </p>
                           </div>
                           <div
-                            class="sc-lgjHQU ktVhiI"
+                            class="sc-fatcLD kibknJ"
                           >
                             <div
-                              class="sc-fatcLD gFKYZC"
+                              class="sc-cgjDci ltkeW"
                             />
                             <p
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -829,10 +925,10 @@ FAQ en contactgegevens"
                             </p>
                           </div>
                           <div
-                            class="sc-lgjHQU ktVhiI"
+                            class="sc-fatcLD kibknJ"
                           >
                             <div
-                              class="sc-fatcLD jBAzzD"
+                              class="sc-cgjDci jdvbvL"
                             />
                             <p
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -930,7 +1026,7 @@ FAQ en contactgegevens"
             class="sc-kbousE ldkzVx"
           >
             <a
-              class="sc-jlZhew hhsyaO sc-fUBkdm cyZzDk"
+              class="sc-jlZhew hhsyaO sc-hBtRBD klfEZR"
               href="/"
             >
               <svg
@@ -962,7 +1058,7 @@ FAQ en contactgegevens"
             class="sc-sLsrZ hThACK"
           >
             <ul
-              class="sc-iEXKAA sc-kzqdkY gPeeHM cXHLKo sc-hBtRBD boxVSJ"
+              class="sc-iEXKAA sc-kzqdkY gPeeHM cXHLKo sc-hYmls dCFeII"
             >
               <li
                 class="sc-ejfMa-d fymHSF"
@@ -1123,6 +1219,102 @@ FAQ en contactgegevens"
                   </span>
                 </a>
               </li>
+              <li
+                class="sc-ejfMa-d sc-EgOXT fymHSF cDzAhx sc-fUBkdm hQUOCj"
+                data-testid="flyout"
+                role="button"
+                tabindex="-1"
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                  data-testid="flyoutButton"
+                >
+                  <span
+                    class="sc-dlWCHZ"
+                  >
+                    <span
+                      class="sc-eZYNyq"
+                    >
+                      Taal
+                    </span>
+                  </span>
+                </button>
+                <ul
+                  aria-hidden="true"
+                  class="sc-iEXKAA yGkZE"
+                >
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <button
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    >
+                      <span
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Nederlands
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <button
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    >
+                      <span
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Engels
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <button
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    >
+                      <span
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Duits
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <button
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    >
+                      <span
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Spaans
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </nav>
           <div
@@ -1135,7 +1327,7 @@ FAQ en contactgegevens"
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-pKqro jkpnfb iybELA leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-gvPdwL jkpnfb btusV leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1297,7 +1489,7 @@ FAQ en contactgegevens"
                           Adres
                         </h3>
                         <button
-                          class="sc-dcJsrY gIANEL sc-lfYzqA iAGvZv"
+                          class="sc-dcJsrY gIANEL sc-ijDOKB jdNfiP"
                           data-testid="change-address"
                         >
                           wijzig
@@ -1305,7 +1497,7 @@ FAQ en contactgegevens"
                       </div>
                     </div>
                     <div
-                      class="sc-kpKSZj gVRicP"
+                      class="sc-lfYzqA iUDQsZ"
                     >
                       <div
                         class="sc-hwdzOV juUYFW"
@@ -1322,7 +1514,7 @@ FAQ en contactgegevens"
                       </div>
                     </div>
                     <div
-                      class="sc-hwdzOV dQyAaL sc-bWJUgm kfklnh"
+                      class="sc-hwdzOV dQyAaL sc-kpKSZj iGuLrK"
                     >
                       <div
                         class="sc-krNlru ISieu"
@@ -1333,7 +1525,7 @@ FAQ en contactgegevens"
                           Datum en tijd
                         </h3>
                         <button
-                          class="sc-dcJsrY gIANEL sc-lfYzqA iAGvZv"
+                          class="sc-dcJsrY gIANEL sc-ijDOKB jdNfiP"
                           data-testid="change-date-time"
                         >
                           wijzig
@@ -1341,7 +1533,7 @@ FAQ en contactgegevens"
                       </div>
                     </div>
                     <div
-                      class="sc-kpKSZj gVRicP"
+                      class="sc-lfYzqA iUDQsZ"
                     >
                       <div
                         class="sc-hwdzOV juUYFW"
@@ -1420,10 +1612,10 @@ FAQ en contactgegevens"
                     tabindex="0"
                   >
                     <div
-                      class="sc-imwsjW sc-fFlnrN gphTiw bLrZUg"
+                      class="sc-imwsjW sc-kbdlSk gphTiw ixHFKj"
                     >
                       <ul
-                        class="sc-kdBSHD cHWVcp sc-camqpD dHzkWQ"
+                        class="sc-kdBSHD cHWVcp sc-gweoQa qMtFU"
                       >
                         <li
                           class="sc-lcIPJg ddQxr"
@@ -1533,7 +1725,7 @@ FAQ en contactgegevens"
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-djTQaJ dnhKeL"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-pKqro ka-DHdw"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -1546,7 +1738,7 @@ FAQ en contactgegevens"
             data-testid="topRight"
           >
             <div
-              class="sc-jdUcAg cZRFDs"
+              class="sc-bddgXz iTGqvB"
             >
               <button
                 aria-controls="legend"
@@ -1589,7 +1781,7 @@ FAQ en contactgegevens"
                     class="sc-krNlru ISieu"
                   >
                     <label
-                      class="sc-gFVvzn dbijgR sc-cKXybt dQolcM"
+                      class="sc-gFVvzn dbijgR sc-lgjHQU klmOBq"
                       disabled=""
                       for="mapLegendLoadUnloadSpaces"
                     >
@@ -1599,7 +1791,7 @@ FAQ en contactgegevens"
                         Laad- en losplekken
                       </span>
                       <div
-                        class="sc-bHnlcS dTvdNm"
+                        class="sc-cKXybt iZnNKp"
                         disabled=""
                       />
                       <span
@@ -1640,7 +1832,7 @@ FAQ en contactgegevens"
                       </span>
                       <span
                         aria-disabled="true"
-                        class="sc-fHjqPf bzXOXV sc-cgjDci jFWbEc"
+                        class="sc-fHjqPf bzXOXV sc-djTQaJ bIlYzw"
                         disabled=""
                       >
                         <span
@@ -1665,7 +1857,7 @@ FAQ en contactgegevens"
                     class="sc-krNlru ISieu"
                   >
                     <div
-                      class="sc-bddgXz dzSKah"
+                      class="sc-fyVfxW bNIXdu"
                     >
                       <label
                         class="sc-gFVvzn jmImEg"
@@ -1704,13 +1896,13 @@ FAQ en contactgegevens"
                         </span>
                       </label>
                       <div
-                        class="sc-fyVfxW zIcYX"
+                        class="sc-eHsDsR cMemZM"
                       >
                         <div
-                          class="sc-lgjHQU ktVhiI"
+                          class="sc-fatcLD kibknJ"
                         >
                           <div
-                            class="sc-fatcLD ivfXoA"
+                            class="sc-cgjDci guSBZU"
                           />
                           <p
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -1723,10 +1915,10 @@ FAQ en contactgegevens"
                           </p>
                         </div>
                         <div
-                          class="sc-lgjHQU ktVhiI"
+                          class="sc-fatcLD kibknJ"
                         >
                           <div
-                            class="sc-fatcLD gFKYZC"
+                            class="sc-cgjDci ltkeW"
                           />
                           <p
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
@@ -1739,10 +1931,10 @@ FAQ en contactgegevens"
                           </p>
                         </div>
                         <div
-                          class="sc-lgjHQU ktVhiI"
+                          class="sc-fatcLD kibknJ"
                         >
                           <div
-                            class="sc-fatcLD jBAzzD"
+                            class="sc-cgjDci jdvbvL"
                           />
                           <p
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"

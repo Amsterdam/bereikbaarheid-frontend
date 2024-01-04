@@ -20,7 +20,7 @@ Object {
               class="sc-kbousE ldkzVx"
             >
               <a
-                class="sc-jlZhew hhsyaO sc-fUBkdm cyZzDk"
+                class="sc-jlZhew hhsyaO sc-hBtRBD klfEZR"
                 href="/"
               >
                 <svg
@@ -52,7 +52,7 @@ Object {
               class="sc-sLsrZ hThACK"
             >
               <ul
-                class="sc-iEXKAA sc-kzqdkY gPeeHM cXHLKo sc-hBtRBD boxVSJ"
+                class="sc-iEXKAA sc-kzqdkY gPeeHM cXHLKo sc-hYmls dCFeII"
               >
                 <li
                   class="sc-ejfMa-d fymHSF"
@@ -212,6 +212,102 @@ FAQ en contactgegevens"
                     </span>
                   </a>
                 </li>
+                <li
+                  class="sc-ejfMa-d sc-EgOXT fymHSF cDzAhx sc-fUBkdm hQUOCj"
+                  data-testid="flyout"
+                  role="button"
+                  tabindex="-1"
+                >
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    data-testid="flyoutButton"
+                  >
+                    <span
+                      class="sc-dlWCHZ"
+                    >
+                      <span
+                        class="sc-eZYNyq"
+                      >
+                        Taal
+                      </span>
+                    </span>
+                  </button>
+                  <ul
+                    aria-hidden="true"
+                    class="sc-iEXKAA yGkZE"
+                  >
+                    <li
+                      class="sc-ejfMa-d fymHSF"
+                    >
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      >
+                        <span
+                          class="sc-dlWCHZ"
+                        >
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Nederlands
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li
+                      class="sc-ejfMa-d fymHSF"
+                    >
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      >
+                        <span
+                          class="sc-dlWCHZ"
+                        >
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Engels
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li
+                      class="sc-ejfMa-d fymHSF"
+                    >
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      >
+                        <span
+                          class="sc-dlWCHZ"
+                        >
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Duits
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li
+                      class="sc-ejfMa-d fymHSF"
+                    >
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      >
+                        <span
+                          class="sc-dlWCHZ"
+                        >
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Spaans
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </nav>
             <div
@@ -220,19 +316,19 @@ FAQ en contactgegevens"
           </header>
         </div>
         <main
-          class="sc-bfhvDw sc-iLLODe cMHqqc cYCGRT"
+          class="sc-bfhvDw sc-fPrdXf cMHqqc cVNupe"
           data-testid="home-page"
         >
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
             href="/op-kenteken"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+              class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
             >
               <div
-                class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+                class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -244,7 +340,7 @@ FAQ en contactgegevens"
                     />
                     <img
                       alt="Bereikbaarheid op kenteken"
-                      class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                      class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                       data-testid="card-with-image"
                       height="200"
                       src="bereikbaarheid-op-kenteken.jpg"
@@ -254,18 +350,18 @@ FAQ en contactgegevens"
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+                class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
               >
                 <div
-                  class="sc-faUjhM cluSgf"
+                  class="sc-cezyBN brfuez"
                 >
                   <h4
-                    class="sc-cezyBN kDtJnB"
+                    class="sc-fUkmAC byrIvn"
                   >
                     Bereikbaarheid op kenteken
                   </h4>
                   <span
-                    class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                    class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                   >
                     <svg
                       focusable="false"
@@ -281,14 +377,14 @@ FAQ en contactgegevens"
                   </span>
                 </div>
                 <div
-                  class="sc-cXPBUD eRfYSs"
+                  class="sc-edKZPI jjyTHV"
                   style="height: 0px; top: 0px;"
                 >
                   <div
-                    class="sc-edKZPI hASWz"
+                    class="sc-bhqpjJ czqDNF"
                   >
                     <p
-                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                     >
                       Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën.
                     </p>
@@ -298,15 +394,15 @@ FAQ en contactgegevens"
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
             href="/stremmingen"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+              class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
             >
               <div
-                class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+                class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -318,7 +414,7 @@ FAQ en contactgegevens"
                     />
                     <img
                       alt="Stremmingen"
-                      class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                      class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                       data-testid="card-with-image"
                       height="200"
                       src="stremmingen.jpg"
@@ -328,18 +424,18 @@ FAQ en contactgegevens"
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+                class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
               >
                 <div
-                  class="sc-faUjhM cluSgf"
+                  class="sc-cezyBN brfuez"
                 >
                   <h4
-                    class="sc-cezyBN kDtJnB"
+                    class="sc-fUkmAC byrIvn"
                   >
                     Stremmingen
                   </h4>
                   <span
-                    class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                    class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                   >
                     <svg
                       focusable="false"
@@ -355,14 +451,14 @@ FAQ en contactgegevens"
                   </span>
                 </div>
                 <div
-                  class="sc-cXPBUD eRfYSs"
+                  class="sc-edKZPI jjyTHV"
                   style="height: 0px; top: 0px;"
                 >
                   <div
-                    class="sc-edKZPI hASWz"
+                    class="sc-bhqpjJ czqDNF"
                   >
                     <p
-                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                     >
                       Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen.
                     </p>
@@ -372,15 +468,15 @@ FAQ en contactgegevens"
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
             href="/laden-lossen"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+              class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
             >
               <div
-                class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+                class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -392,7 +488,7 @@ FAQ en contactgegevens"
                     />
                     <img
                       alt="Laden en lossen"
-                      class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                      class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                       data-testid="card-with-image"
                       height="200"
                       src="laden-en-lossen.jpg"
@@ -402,18 +498,18 @@ FAQ en contactgegevens"
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+                class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
               >
                 <div
-                  class="sc-faUjhM cluSgf"
+                  class="sc-cezyBN brfuez"
                 >
                   <h4
-                    class="sc-cezyBN kDtJnB"
+                    class="sc-fUkmAC byrIvn"
                   >
                     Laden en lossen
                   </h4>
                   <span
-                    class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                    class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                   >
                     <svg
                       focusable="false"
@@ -429,14 +525,14 @@ FAQ en contactgegevens"
                   </span>
                 </div>
                 <div
-                  class="sc-cXPBUD eRfYSs"
+                  class="sc-edKZPI jjyTHV"
                   style="height: 0px; top: 0px;"
                 >
                   <div
-                    class="sc-edKZPI hASWz"
+                    class="sc-bhqpjJ czqDNF"
                   >
                     <p
-                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                     >
                       Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. 
                     </p>
@@ -446,17 +542,17 @@ FAQ en contactgegevens"
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
             data-testid="card-with-external-link"
             href="https://tourbuzz.amsterdam.nl/"
             tabindex="0"
             target="_blank"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+              class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
             >
               <div
-                class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+                class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -468,7 +564,7 @@ FAQ en contactgegevens"
                     />
                     <img
                       alt="Touringcar (Tour Buzz)"
-                      class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                      class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                       data-testid="card-with-image"
                       height="200"
                       src="tour-buzz.jpg"
@@ -478,13 +574,13 @@ FAQ en contactgegevens"
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+                class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
               >
                 <div
-                  class="sc-faUjhM cluSgf"
+                  class="sc-cezyBN brfuez"
                 >
                   <h4
-                    class="sc-cezyBN kDtJnB"
+                    class="sc-fUkmAC byrIvn"
                   >
                     Touringcar (Tour Buzz)
                     <span
@@ -504,7 +600,7 @@ FAQ en contactgegevens"
                     </span>
                   </h4>
                   <span
-                    class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                    class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                   >
                     <svg
                       focusable="false"
@@ -520,14 +616,14 @@ FAQ en contactgegevens"
                   </span>
                 </div>
                 <div
-                  class="sc-cXPBUD eRfYSs"
+                  class="sc-edKZPI jjyTHV"
                   style="height: 0px; top: 0px;"
                 >
                   <div
-                    class="sc-edKZPI hASWz"
+                    class="sc-bhqpjJ czqDNF"
                   >
                     <p
-                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                     >
                       Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie.
                     </p>
@@ -537,15 +633,15 @@ FAQ en contactgegevens"
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
             href="/data"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+              class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
             >
               <div
-                class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+                class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -557,7 +653,7 @@ FAQ en contactgegevens"
                     />
                     <img
                       alt="Databronnen"
-                      class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                      class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                       data-testid="card-with-image"
                       height="200"
                       src="json.jpg"
@@ -567,18 +663,18 @@ FAQ en contactgegevens"
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+                class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
               >
                 <div
-                  class="sc-faUjhM cluSgf"
+                  class="sc-cezyBN brfuez"
                 >
                   <h4
-                    class="sc-cezyBN kDtJnB"
+                    class="sc-fUkmAC byrIvn"
                   >
                     Databronnen
                   </h4>
                   <span
-                    class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                    class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                   >
                     <svg
                       focusable="false"
@@ -594,14 +690,14 @@ FAQ en contactgegevens"
                   </span>
                 </div>
                 <div
-                  class="sc-cXPBUD eRfYSs"
+                  class="sc-edKZPI jjyTHV"
                   style="height: 0px; top: 0px;"
                 >
                   <div
-                    class="sc-edKZPI hASWz"
+                    class="sc-bhqpjJ czqDNF"
                   >
                     <p
-                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                     >
                       De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software.
                     </p>
@@ -611,15 +707,15 @@ FAQ en contactgegevens"
             </div>
           </a>
           <a
-            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+            class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
             href="/contact"
             tabindex="0"
           >
             <div
-              class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+              class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
             >
               <div
-                class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+                class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
               >
                 <div
                   class="sc-fPXMVe Psysk"
@@ -631,7 +727,7 @@ FAQ en contactgegevens"
                     />
                     <img
                       alt="Contact en uitleg"
-                      class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                      class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                       data-testid="card-with-image"
                       height="200"
                       src="contact.jpg"
@@ -641,18 +737,18 @@ FAQ en contactgegevens"
                 </div>
               </div>
               <div
-                class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+                class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
               >
                 <div
-                  class="sc-faUjhM cluSgf"
+                  class="sc-cezyBN brfuez"
                 >
                   <h4
-                    class="sc-cezyBN kDtJnB"
+                    class="sc-fUkmAC byrIvn"
                   >
                     Contact en uitleg
                   </h4>
                   <span
-                    class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                    class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                   >
                     <svg
                       focusable="false"
@@ -668,14 +764,14 @@ FAQ en contactgegevens"
                   </span>
                 </div>
                 <div
-                  class="sc-cXPBUD eRfYSs"
+                  class="sc-edKZPI jjyTHV"
                   style="height: 0px; top: 0px;"
                 >
                   <div
-                    class="sc-edKZPI hASWz"
+                    class="sc-bhqpjJ czqDNF"
                   >
                     <p
-                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                      class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                     >
                       FAQ en contactgegevens
                     </p>
@@ -704,7 +800,7 @@ FAQ en contactgegevens"
             class="sc-kbousE ldkzVx"
           >
             <a
-              class="sc-jlZhew hhsyaO sc-fUBkdm cyZzDk"
+              class="sc-jlZhew hhsyaO sc-hBtRBD klfEZR"
               href="/"
             >
               <svg
@@ -736,7 +832,7 @@ FAQ en contactgegevens"
             class="sc-sLsrZ hThACK"
           >
             <ul
-              class="sc-iEXKAA sc-kzqdkY gPeeHM cXHLKo sc-hBtRBD boxVSJ"
+              class="sc-iEXKAA sc-kzqdkY gPeeHM cXHLKo sc-hYmls dCFeII"
             >
               <li
                 class="sc-ejfMa-d fymHSF"
@@ -896,6 +992,102 @@ FAQ en contactgegevens"
                   </span>
                 </a>
               </li>
+              <li
+                class="sc-ejfMa-d sc-EgOXT fymHSF cDzAhx sc-fUBkdm hQUOCj"
+                data-testid="flyout"
+                role="button"
+                tabindex="-1"
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                  data-testid="flyoutButton"
+                >
+                  <span
+                    class="sc-dlWCHZ"
+                  >
+                    <span
+                      class="sc-eZYNyq"
+                    >
+                      Taal
+                    </span>
+                  </span>
+                </button>
+                <ul
+                  aria-hidden="true"
+                  class="sc-iEXKAA yGkZE"
+                >
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <button
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    >
+                      <span
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Nederlands
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <button
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    >
+                      <span
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Engels
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <button
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    >
+                      <span
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Duits
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <button
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    >
+                      <span
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Spaans
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </nav>
           <div
@@ -904,19 +1096,19 @@ FAQ en contactgegevens"
         </header>
       </div>
       <main
-        class="sc-bfhvDw sc-iLLODe cMHqqc cYCGRT"
+        class="sc-bfhvDw sc-fPrdXf cMHqqc cVNupe"
         data-testid="home-page"
       >
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
           href="/op-kenteken"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+            class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
           >
             <div
-              class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+              class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -928,7 +1120,7 @@ FAQ en contactgegevens"
                   />
                   <img
                     alt="Bereikbaarheid op kenteken"
-                    class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                    class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                     data-testid="card-with-image"
                     height="200"
                     src="bereikbaarheid-op-kenteken.jpg"
@@ -938,18 +1130,18 @@ FAQ en contactgegevens"
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+              class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
             >
               <div
-                class="sc-faUjhM cluSgf"
+                class="sc-cezyBN brfuez"
               >
                 <h4
-                  class="sc-cezyBN kDtJnB"
+                  class="sc-fUkmAC byrIvn"
                 >
                   Bereikbaarheid op kenteken
                 </h4>
                 <span
-                  class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                  class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                 >
                   <svg
                     focusable="false"
@@ -965,14 +1157,14 @@ FAQ en contactgegevens"
                 </span>
               </div>
               <div
-                class="sc-cXPBUD eRfYSs"
+                class="sc-edKZPI jjyTHV"
                 style="height: 0px; top: 0px;"
               >
                 <div
-                  class="sc-edKZPI hASWz"
+                  class="sc-bhqpjJ czqDNF"
                 >
                   <p
-                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                   >
                     Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën.
                   </p>
@@ -982,15 +1174,15 @@ FAQ en contactgegevens"
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
           href="/stremmingen"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+            class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
           >
             <div
-              class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+              class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -1002,7 +1194,7 @@ FAQ en contactgegevens"
                   />
                   <img
                     alt="Stremmingen"
-                    class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                    class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                     data-testid="card-with-image"
                     height="200"
                     src="stremmingen.jpg"
@@ -1012,18 +1204,18 @@ FAQ en contactgegevens"
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+              class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
             >
               <div
-                class="sc-faUjhM cluSgf"
+                class="sc-cezyBN brfuez"
               >
                 <h4
-                  class="sc-cezyBN kDtJnB"
+                  class="sc-fUkmAC byrIvn"
                 >
                   Stremmingen
                 </h4>
                 <span
-                  class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                  class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                 >
                   <svg
                     focusable="false"
@@ -1039,14 +1231,14 @@ FAQ en contactgegevens"
                 </span>
               </div>
               <div
-                class="sc-cXPBUD eRfYSs"
+                class="sc-edKZPI jjyTHV"
                 style="height: 0px; top: 0px;"
               >
                 <div
-                  class="sc-edKZPI hASWz"
+                  class="sc-bhqpjJ czqDNF"
                 >
                   <p
-                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                   >
                     Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen.
                   </p>
@@ -1056,15 +1248,15 @@ FAQ en contactgegevens"
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
           href="/laden-lossen"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+            class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
           >
             <div
-              class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+              class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -1076,7 +1268,7 @@ FAQ en contactgegevens"
                   />
                   <img
                     alt="Laden en lossen"
-                    class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                    class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                     data-testid="card-with-image"
                     height="200"
                     src="laden-en-lossen.jpg"
@@ -1086,18 +1278,18 @@ FAQ en contactgegevens"
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+              class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
             >
               <div
-                class="sc-faUjhM cluSgf"
+                class="sc-cezyBN brfuez"
               >
                 <h4
-                  class="sc-cezyBN kDtJnB"
+                  class="sc-fUkmAC byrIvn"
                 >
                   Laden en lossen
                 </h4>
                 <span
-                  class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                  class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                 >
                   <svg
                     focusable="false"
@@ -1113,14 +1305,14 @@ FAQ en contactgegevens"
                 </span>
               </div>
               <div
-                class="sc-cXPBUD eRfYSs"
+                class="sc-edKZPI jjyTHV"
                 style="height: 0px; top: 0px;"
               >
                 <div
-                  class="sc-edKZPI hASWz"
+                  class="sc-bhqpjJ czqDNF"
                 >
                   <p
-                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                   >
                     Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. 
                   </p>
@@ -1130,17 +1322,17 @@ FAQ en contactgegevens"
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
           data-testid="card-with-external-link"
           href="https://tourbuzz.amsterdam.nl/"
           tabindex="0"
           target="_blank"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+            class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
           >
             <div
-              class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+              class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -1152,7 +1344,7 @@ FAQ en contactgegevens"
                   />
                   <img
                     alt="Touringcar (Tour Buzz)"
-                    class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                    class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                     data-testid="card-with-image"
                     height="200"
                     src="tour-buzz.jpg"
@@ -1162,13 +1354,13 @@ FAQ en contactgegevens"
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+              class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
             >
               <div
-                class="sc-faUjhM cluSgf"
+                class="sc-cezyBN brfuez"
               >
                 <h4
-                  class="sc-cezyBN kDtJnB"
+                  class="sc-fUkmAC byrIvn"
                 >
                   Touringcar (Tour Buzz)
                   <span
@@ -1188,7 +1380,7 @@ FAQ en contactgegevens"
                   </span>
                 </h4>
                 <span
-                  class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                  class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                 >
                   <svg
                     focusable="false"
@@ -1204,14 +1396,14 @@ FAQ en contactgegevens"
                 </span>
               </div>
               <div
-                class="sc-cXPBUD eRfYSs"
+                class="sc-edKZPI jjyTHV"
                 style="height: 0px; top: 0px;"
               >
                 <div
-                  class="sc-edKZPI hASWz"
+                  class="sc-bhqpjJ czqDNF"
                 >
                   <p
-                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                   >
                     Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie.
                   </p>
@@ -1221,15 +1413,15 @@ FAQ en contactgegevens"
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
           href="/data"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+            class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
           >
             <div
-              class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+              class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -1241,7 +1433,7 @@ FAQ en contactgegevens"
                   />
                   <img
                     alt="Databronnen"
-                    class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                    class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                     data-testid="card-with-image"
                     height="200"
                     src="json.jpg"
@@ -1251,18 +1443,18 @@ FAQ en contactgegevens"
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+              class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
             >
               <div
-                class="sc-faUjhM cluSgf"
+                class="sc-cezyBN brfuez"
               >
                 <h4
-                  class="sc-cezyBN kDtJnB"
+                  class="sc-fUkmAC byrIvn"
                 >
                   Databronnen
                 </h4>
                 <span
-                  class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                  class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                 >
                   <svg
                     focusable="false"
@@ -1278,14 +1470,14 @@ FAQ en contactgegevens"
                 </span>
               </div>
               <div
-                class="sc-cXPBUD eRfYSs"
+                class="sc-edKZPI jjyTHV"
                 style="height: 0px; top: 0px;"
               >
                 <div
-                  class="sc-edKZPI hASWz"
+                  class="sc-bhqpjJ czqDNF"
                 >
                   <p
-                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                   >
                     De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software.
                   </p>
@@ -1295,15 +1487,15 @@ FAQ en contactgegevens"
           </div>
         </a>
         <a
-          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-kUdmhA hRijAa"
+          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-hgRRfv fagqYr"
           href="/contact"
           tabindex="0"
         >
           <div
-            class="sc-dAbbOL ITqKK sc-hgRRfv extnpY"
+            class="sc-dAbbOL ITqKK sc-emIrwa krPhBO"
           >
             <div
-              class="sc-eldPxv AglKV sc-emIrwa hSRuoG"
+              class="sc-eldPxv AglKV sc-gRtvSG gCSFhc"
             >
               <div
                 class="sc-fPXMVe Psysk"
@@ -1315,7 +1507,7 @@ FAQ en contactgegevens"
                   />
                   <img
                     alt="Contact en uitleg"
-                    class="sc-JrDLc hYVxgF sc-gRtvSG jRZRPX"
+                    class="sc-JrDLc hYVxgF sc-dUYLmH btZppB"
                     data-testid="card-with-image"
                     height="200"
                     src="contact.jpg"
@@ -1325,18 +1517,18 @@ FAQ en contactgegevens"
               </div>
             </div>
             <div
-              class="sc-ikkxIA dKESuo sc-dUYLmH Swvlx"
+              class="sc-ikkxIA dKESuo sc-faUjhM gdybR"
             >
               <div
-                class="sc-faUjhM cluSgf"
+                class="sc-cezyBN brfuez"
               >
                 <h4
-                  class="sc-cezyBN kDtJnB"
+                  class="sc-fUkmAC byrIvn"
                 >
                   Contact en uitleg
                 </h4>
                 <span
-                  class="sc-aXZVg sc-fUkmAC cycjMX guBHSd"
+                  class="sc-aXZVg sc-cXPBUD cycjMX cLItum"
                 >
                   <svg
                     focusable="false"
@@ -1352,14 +1544,14 @@ FAQ en contactgegevens"
                 </span>
               </div>
               <div
-                class="sc-cXPBUD eRfYSs"
+                class="sc-edKZPI jjyTHV"
                 style="height: 0px; top: 0px;"
               >
                 <div
-                  class="sc-edKZPI hASWz"
+                  class="sc-bhqpjJ czqDNF"
                 >
                   <p
-                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-bhqpjJ iEpJRy"
+                    class="sc-jEACwC sc-gFqAkR jiqykX kBZfau sc-iLLODe cECUhC"
                   >
                     FAQ en contactgegevens
                   </p>

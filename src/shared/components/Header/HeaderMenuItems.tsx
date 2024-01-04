@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 
 import { ExternalLink } from '@amsterdam/asc-assets'
-import { Icon, MenuButton, MenuItem, themeColor } from '@amsterdam/asc-ui'
+import { Icon, MenuButton, MenuFlyOut, MenuItem, themeColor } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 import { Link, matchPath, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
@@ -52,6 +52,12 @@ const MenuDivider = styled.hr`
   border: 1px solid ${themeColor('tint', 'level3')};
 `
 
+const MenuFlyOutStyled = styled(MenuFlyOut)`
+  & > button {
+    font-weight: normal;
+  }
+`
+
 function HeaderMenuItems() {
   const primaryMenuItemsWithPaths = useMemo<MenuItemWithPath[]>(() => {
     return mapPathsToMenuItems(menuItems.filter(item => !item.secondary))
@@ -72,6 +78,21 @@ function HeaderMenuItems() {
       {secondaryMenuItemsWithPaths.map(item => (
         <HeaderMenuItem key={item.path} item={item} />
       ))}
+
+      <MenuFlyOutStyled label="Taal">
+        <MenuItem>
+          <MenuButton>Nederlands</MenuButton>
+        </MenuItem>
+        <MenuItem>
+          <MenuButton>Engels</MenuButton>
+        </MenuItem>
+        <MenuItem>
+          <MenuButton>Duits</MenuButton>
+        </MenuItem>
+        <MenuItem>
+          <MenuButton>Spaans</MenuButton>
+        </MenuItem>
+      </MenuFlyOutStyled>
     </>
   )
 }
