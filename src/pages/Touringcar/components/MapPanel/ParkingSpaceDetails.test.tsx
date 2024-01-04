@@ -1,6 +1,7 @@
 import { screen, waitFor } from '@testing-library/react'
 import { generatePath } from 'react-router-dom'
 import { RouteIds, getPathTo } from 'routes'
+import delay from 'shared/utils/delay'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
@@ -8,6 +9,8 @@ describe('ParkingSpaceDetails', () => {
   jest.setTimeout(15000)
 
   it('renders correctly', async () => {
+    await delay(1500)
+
     const pathToPage = generatePath(getPathTo(RouteIds.TOURINGCAR_PAGE), {
       legenda: ['haltes-parkeerplaatsen'],
     })
@@ -15,8 +18,6 @@ describe('ParkingSpaceDetails', () => {
 
     await waitFor(() => page.rerender)
     await screen.findByText('Leaflet')
-    // Sleep function: need to give some time for map layers to render
-    await new Promise(resolve => setTimeout(() => resolve(true), 500))
 
     expect(page).toMatchSnapshot()
   })

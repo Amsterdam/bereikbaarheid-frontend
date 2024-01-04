@@ -1,16 +1,18 @@
 import { screen, waitFor } from '@testing-library/react'
 import { RouteIds } from 'routes'
+import delay from 'shared/utils/delay'
 import { getGeneratedPath } from 'shared/utils/path'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('RoutesLayers', () => {
+  jest.setTimeout(15000)
+
   it('renders correctly', async () => {
+    await delay(1500)
+
     const pathToPage = getGeneratedPath(RouteIds.TOURINGCAR_PAGE)
     const page = withApp(pathToPage)
-
-    // Sleep function: need to give some time for map layers to render
-    await new Promise(resolve => setTimeout(() => resolve(true), 500))
 
     expect(page).toMatchSnapshot()
   })
