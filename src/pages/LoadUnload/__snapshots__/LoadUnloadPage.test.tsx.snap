@@ -215,7 +215,7 @@ FAQ en contactgegevens"
                 </li>
                 <li
                   class="sc-ejfMa-d sc-EgOXT fymHSF cDzAhx sc-fUBkdm hQUOCj"
-                  data-testid="flyout"
+                  data-testid="menuFlyoutLanguageSelect"
                   role="button"
                   tabindex="-1"
                 >
@@ -231,7 +231,7 @@ FAQ en contactgegevens"
                       <span
                         class="sc-eZYNyq"
                       >
-                        Taal
+                        Taal: Nederlands
                       </span>
                     </span>
                   </button>
@@ -243,7 +243,8 @@ FAQ en contactgegevens"
                       class="sc-ejfMa-d fymHSF"
                     >
                       <button
-                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
+                        data-testid="buttonLanguageNederlands"
                       >
                         <span
                           class="sc-dlWCHZ"
@@ -261,6 +262,7 @@ FAQ en contactgegevens"
                     >
                       <button
                         class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                        data-testid="buttonLanguageEnglish"
                       >
                         <span
                           class="sc-dlWCHZ"
@@ -268,7 +270,7 @@ FAQ en contactgegevens"
                           <span
                             class="sc-eZYNyq"
                           >
-                            Engels
+                            English
                           </span>
                         </span>
                       </button>
@@ -278,6 +280,7 @@ FAQ en contactgegevens"
                     >
                       <button
                         class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                        data-testid="buttonLanguageDeutsch"
                       >
                         <span
                           class="sc-dlWCHZ"
@@ -285,7 +288,7 @@ FAQ en contactgegevens"
                           <span
                             class="sc-eZYNyq"
                           >
-                            Duits
+                            Deutsch
                           </span>
                         </span>
                       </button>
@@ -295,6 +298,7 @@ FAQ en contactgegevens"
                     >
                       <button
                         class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                        data-testid="buttonLanguageEspañol"
                       >
                         <span
                           class="sc-dlWCHZ"
@@ -302,7 +306,7 @@ FAQ en contactgegevens"
                           <span
                             class="sc-eZYNyq"
                           >
-                            Spaans
+                            Español
                           </span>
                         </span>
                       </button>
@@ -1221,7 +1225,7 @@ FAQ en contactgegevens"
               </li>
               <li
                 class="sc-ejfMa-d sc-EgOXT fymHSF cDzAhx sc-fUBkdm hQUOCj"
-                data-testid="flyout"
+                data-testid="menuFlyoutLanguageSelect"
                 role="button"
                 tabindex="-1"
               >
@@ -1237,7 +1241,7 @@ FAQ en contactgegevens"
                     <span
                       class="sc-eZYNyq"
                     >
-                      Taal
+                      Taal: Nederlands
                     </span>
                   </span>
                 </button>
@@ -1249,7 +1253,8 @@ FAQ en contactgegevens"
                     class="sc-ejfMa-d fymHSF"
                   >
                     <button
-                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
+                      data-testid="buttonLanguageNederlands"
                     >
                       <span
                         class="sc-dlWCHZ"
@@ -1267,6 +1272,7 @@ FAQ en contactgegevens"
                   >
                     <button
                       class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      data-testid="buttonLanguageEnglish"
                     >
                       <span
                         class="sc-dlWCHZ"
@@ -1274,7 +1280,7 @@ FAQ en contactgegevens"
                         <span
                           class="sc-eZYNyq"
                         >
-                          Engels
+                          English
                         </span>
                       </span>
                     </button>
@@ -1284,6 +1290,7 @@ FAQ en contactgegevens"
                   >
                     <button
                       class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      data-testid="buttonLanguageDeutsch"
                     >
                       <span
                         class="sc-dlWCHZ"
@@ -1291,7 +1298,7 @@ FAQ en contactgegevens"
                         <span
                           class="sc-eZYNyq"
                         >
-                          Duits
+                          Deutsch
                         </span>
                       </span>
                     </button>
@@ -1301,6 +1308,7 @@ FAQ en contactgegevens"
                   >
                     <button
                       class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      data-testid="buttonLanguageEspañol"
                     >
                       <span
                         class="sc-dlWCHZ"
@@ -1308,7 +1316,7 @@ FAQ en contactgegevens"
                         <span
                           class="sc-eZYNyq"
                         >
-                          Spaans
+                          Español
                         </span>
                       </span>
                     </button>

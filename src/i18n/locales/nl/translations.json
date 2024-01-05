@@ -2,6 +2,7 @@
   "appTitle": "Bereikbaarheid",
   "_generic": {
     "legend": "Legenda",
+    "language": "Taal",
     "_mapPanel": {
       "dataSource": "Brondata",
       "input": "Invoer"

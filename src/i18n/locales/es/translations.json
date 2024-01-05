@@ -1,6 +1,7 @@
 {
   "appTitle": "Accesibilidad",
   "_generic": {
+    "language": "Idioma",
     "_mapPanel": {
       "dataSource": "Fuente de datos",
       "input": "Aporte"

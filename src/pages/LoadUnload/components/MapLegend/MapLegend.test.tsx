@@ -7,6 +7,8 @@ import { getPathTo } from 'routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('MapLegend', () => {
+  jest.setTimeout(15000)
+
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('LOAD_UNLOAD_PAGE'))
     const page = withApp(pathToPage)

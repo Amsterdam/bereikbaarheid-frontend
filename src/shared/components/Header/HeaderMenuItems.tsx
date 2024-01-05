@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 
 import { ExternalLink } from '@amsterdam/asc-assets'
 import { Icon, MenuButton, MenuFlyOut, MenuItem, themeColor } from '@amsterdam/asc-ui'
+import i18n from 'i18n'
 import { useTranslation } from 'react-i18next'
 import { Link, matchPath, useLocation } from 'react-router-dom'
 import styled from 'styled-components'
@@ -46,6 +47,21 @@ ${t(item.description)}`
   )
 }
 
+const languages = {
+  nl: {
+    name: 'Nederlands',
+  },
+  en: {
+    name: 'English',
+  },
+  de: {
+    name: 'Deutsch',
+  },
+  es: {
+    name: 'Español',
+  },
+}
+
 const MenuDivider = styled.hr`
   height: 2rem;
   margin-inline: 1em;
@@ -59,6 +75,8 @@ const MenuFlyOutStyled = styled(MenuFlyOut)`
 `
 
 function HeaderMenuItems() {
+  const { t } = useTranslation()
+
   const primaryMenuItemsWithPaths = useMemo<MenuItemWithPath[]>(() => {
     return mapPathsToMenuItems(menuItems.filter(item => !item.secondary))
   }, [])
@@ -79,19 +97,21 @@ function HeaderMenuItems() {
         <HeaderMenuItem key={item.path} item={item} />
       ))}
 
-      <MenuFlyOutStyled label="Taal">
-        <MenuItem>
-          <MenuButton>Nederlands</MenuButton>
-        </MenuItem>
-        <MenuItem>
-          <MenuButton>Engels</MenuButton>
-        </MenuItem>
-        <MenuItem>
-          <MenuButton>Duits</MenuButton>
-        </MenuItem>
-        <MenuItem>
-          <MenuButton>Spaans</MenuButton>
-        </MenuItem>
+      <MenuFlyOutStyled
+        label={`${t('_generic.language')}: ${languages[i18n.language as keyof typeof languages].name}`}
+        data-testid="menuFlyoutLanguageSelect"
+      >
+        {Object.entries(languages).map(([key, val]) => (
+          <MenuItem>
+            <MenuButton
+              data-testid={`buttonLanguage${val.name}`}
+              active={key === i18n.language}
+              onClick={() => i18n.changeLanguage(key)}
+            >
+              {val.name}
+            </MenuButton>
+          </MenuItem>
+        ))}
       </MenuFlyOutStyled>
     </>
   )
