@@ -43,14 +43,8 @@ export const VehicleHeightsLayer = () => {
     })
   }
 
-  if (isError && error instanceof Error) {
-    console.error(error.message)
-  }
-
-  if (isLoading || !data) {
-    return null
-  }
-
+  if (isError && error instanceof Error) console.error(error.message)
+  if (isLoading || !data) return null
   if (!activeMapLayers[MapLayerId.touringcarVehicleHeightsLayerId]) return null
 
   return <MarkerClusterGroup markers={createClusterMarkers()} />
