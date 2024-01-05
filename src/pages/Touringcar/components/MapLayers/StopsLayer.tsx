@@ -61,10 +61,7 @@ export const StopsLayer = () => {
     })
   }
 
-  if (isError && error instanceof Error) {
-    console.error(error.message)
-  }
-
+  if (isError && error instanceof Error) console.error(error.message)
   if (isLoading || !data) return null
   if (!activeMapLayers[MapLayerId.touringcarStopsLayerId]) return null
 
