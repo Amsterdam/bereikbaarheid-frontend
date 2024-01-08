@@ -51,102 +51,214 @@ Object {
             <nav
               class="sc-sLsrZ hThACK"
             >
-              <ul
-                class="sc-iEXKAA sc-kzqdkY gPeeHM cXHLKo sc-hYmls dCFeII"
+              <div
+                class="sc-gdyeKB dsFoWg sc-ktJbId bfBOlG"
+                tabindex="-1"
               >
-                <li
-                  class="sc-ejfMa-d fymHSF"
+                <button
+                  aria-label="Menu"
+                  class="sc-dcJsrY sc-gmgFlS ggwXTK fzWecF"
+                  size="50"
+                  type="button"
                 >
-                  <a
-                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                    href="/op-kenteken"
-                    title="Op kenteken:
+                  <span
+                    class="sc-aXZVg cycjMX"
+                  >
+                    <svg
+                      focusable="false"
+                      role="img"
+                      viewBox="0 0 32 32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 3.238h32V7.81H0V3.238zm0 10.476h32v4.572H0v-4.572zM0 24.19h32v4.572H0V24.19z"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <ul
+                  aria-hidden="true"
+                  class="sc-iEXKAA gPeeHM"
+                >
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <a
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      href="/op-kenteken"
+                      title="Op kenteken:
 
 Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
-                    variant="blank"
-                  >
-                    <span
-                      class="sc-dlWCHZ"
+                      variant="blank"
                     >
                       <span
-                        class="sc-eZYNyq"
+                        class="sc-dlWCHZ"
                       >
-                        Op kenteken
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Op kenteken
+                        </span>
                       </span>
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="sc-ejfMa-d fymHSF"
-                >
-                  <a
-                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                    href="/stremmingen"
-                    title="Stremmingen:
+                    </a>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <a
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      href="/stremmingen"
+                      title="Stremmingen:
 
 Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen."
-                    variant="blank"
-                  >
-                    <span
-                      class="sc-dlWCHZ"
+                      variant="blank"
                     >
                       <span
-                        class="sc-eZYNyq"
+                        class="sc-dlWCHZ"
                       >
-                        Stremmingen
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Stremmingen
+                        </span>
                       </span>
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="sc-ejfMa-d fymHSF"
-                >
-                  <a
-                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                    href="/laden-lossen"
-                    title="Laden en lossen:
+                    </a>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <a
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      href="/laden-lossen"
+                      title="Laden en lossen:
 
 Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. "
-                    variant="blank"
-                  >
-                    <span
-                      class="sc-dlWCHZ"
+                      variant="blank"
                     >
                       <span
-                        class="sc-eZYNyq"
+                        class="sc-dlWCHZ"
                       >
-                        Laden en lossen
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Laden en lossen
+                        </span>
                       </span>
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="sc-ejfMa-d fymHSF"
-                >
-                  <a
-                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                    href="https://tourbuzz.amsterdam.nl/"
-                    target="_blank"
-                    title="Touringcar:
+                    </a>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <a
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      href="https://tourbuzz.amsterdam.nl/"
+                      target="_blank"
+                      title="Touringcar:
 
 Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
-                    variant="blank"
-                  >
-                    <span
-                      class="sc-dlWCHZ"
+                      variant="blank"
                     >
                       <span
-                        class="sc-eZYNyq"
+                        class="sc-dlWCHZ"
                       >
-                        Touringcar
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Touringcar
+                        </span>
                       </span>
-                    </span>
-                    <span
-                      class="sc-aXZVg sc-fqkvVR lauBHv jMALZu"
+                      <span
+                        class="sc-aXZVg sc-fqkvVR lauBHv jMALZu"
+                      >
+                        <span
+                          class="sc-aXZVg geoGNn"
+                          style="margin-left: -2px;"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M19.006 0H32.01v12.992h-4.002V6.826L14.434 20.417l-2.83-2.818L25.187 3.998h-6.182V0zm7.002 13.991L26.018 32H.01V6.016h17.975l-3.98 3.978.02.02H4.01v17.988h18.006l-.01-10.013 4-3.998z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <a
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      href="/data"
+                      style="font-weight: normal;"
+                      title="Databronnen:
+
+De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
+                      variant="blank"
                     >
                       <span
-                        class="sc-aXZVg geoGNn"
-                        style="margin-left: -2px;"
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Databronnen
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d fymHSF"
+                  >
+                    <a
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      href="/contact"
+                      style="font-weight: normal;"
+                      title="Contact & help:
+
+FAQ en contactgegevens"
+                      variant="blank"
+                    >
+                      <span
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Contact & help
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                  <li
+                    class="sc-ejfMa-d sc-EgOXT fymHSF eTUFNY sc-fUBkdm hQUOCj"
+                    data-testid="menuFlyoutLanguageSelect"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <button
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                      data-testid="flyoutButton"
+                    >
+                      <span
+                        class="sc-dlWCHZ"
+                      >
+                        <span
+                          class="sc-eZYNyq"
+                        >
+                          Language / Sprache / Idioma
+                        </span>
+                      </span>
+                      <span
+                        class="sc-aXZVg sc-fqkvVR lauBHv jMALZu"
                       >
                         <svg
                           focusable="false"
@@ -155,164 +267,92 @@ Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en par
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            d="M19.006 0H32.01v12.992h-4.002V6.826L14.434 20.417l-2.83-2.818L25.187 3.998h-6.182V0zm7.002 13.991L26.018 32H.01V6.016h17.975l-3.98 3.978.02.02H4.01v17.988h18.006l-.01-10.013 4-3.998z"
+                            d="m16 25.757-16-16 2.91-2.9L16 19.937l13.09-13.08 2.91 2.9z"
                             fill-rule="evenodd"
                           />
                         </svg>
                       </span>
-                    </span>
-                  </a>
-                </li>
-                <hr
-                  class="sc-cMa-dbN eDQtOA"
-                />
-                <li
-                  class="sc-ejfMa-d fymHSF"
-                >
-                  <a
-                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                    href="/data"
-                    style="font-weight: normal;"
-                    title="Databronnen:
-
-De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
-                    variant="blank"
-                  >
-                    <span
-                      class="sc-dlWCHZ"
+                    </button>
+                    <ul
+                      aria-hidden="true"
+                      class="sc-iEXKAA yGkZE"
                     >
-                      <span
-                        class="sc-eZYNyq"
+                      <li
+                        class="sc-ejfMa-d fymHSF"
                       >
-                        Databronnen
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="sc-ejfMa-d fymHSF"
-                >
-                  <a
-                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                    href="/contact"
-                    style="font-weight: normal;"
-                    title="Contact en uitleg:
-
-FAQ en contactgegevens"
-                    variant="blank"
-                  >
-                    <span
-                      class="sc-dlWCHZ"
-                    >
-                      <span
-                        class="sc-eZYNyq"
-                      >
-                        Contact en uitleg
-                      </span>
-                    </span>
-                  </a>
-                </li>
-                <li
-                  class="sc-ejfMa-d sc-EgOXT fymHSF cDzAhx sc-fUBkdm hQUOCj"
-                  data-testid="menuFlyoutLanguageSelect"
-                  role="button"
-                  tabindex="-1"
-                >
-                  <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                    data-testid="flyoutButton"
-                  >
-                    <span
-                      class="sc-dlWCHZ"
-                    >
-                      <span
-                        class="sc-eZYNyq"
-                      >
-                        Taal: Nederlands
-                      </span>
-                    </span>
-                  </button>
-                  <ul
-                    aria-hidden="true"
-                    class="sc-iEXKAA yGkZE"
-                  >
-                    <li
-                      class="sc-ejfMa-d fymHSF"
-                    >
-                      <button
-                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
-                        data-testid="buttonLanguageNederlands"
-                      >
-                        <span
-                          class="sc-dlWCHZ"
+                        <button
+                          class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
+                          data-testid="buttonLanguageNederlands"
                         >
                           <span
-                            class="sc-eZYNyq"
+                            class="sc-dlWCHZ"
                           >
-                            Nederlands
+                            <span
+                              class="sc-eZYNyq"
+                            >
+                              Nederlands
+                            </span>
                           </span>
-                        </span>
-                      </button>
-                    </li>
-                    <li
-                      class="sc-ejfMa-d fymHSF"
-                    >
-                      <button
-                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                        data-testid="buttonLanguageEnglish"
+                        </button>
+                      </li>
+                      <li
+                        class="sc-ejfMa-d fymHSF"
                       >
-                        <span
-                          class="sc-dlWCHZ"
+                        <button
+                          class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                          data-testid="buttonLanguageEnglish"
                         >
                           <span
-                            class="sc-eZYNyq"
+                            class="sc-dlWCHZ"
                           >
-                            English
+                            <span
+                              class="sc-eZYNyq"
+                            >
+                              English
+                            </span>
                           </span>
-                        </span>
-                      </button>
-                    </li>
-                    <li
-                      class="sc-ejfMa-d fymHSF"
-                    >
-                      <button
-                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                        data-testid="buttonLanguageDeutsch"
+                        </button>
+                      </li>
+                      <li
+                        class="sc-ejfMa-d fymHSF"
                       >
-                        <span
-                          class="sc-dlWCHZ"
+                        <button
+                          class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                          data-testid="buttonLanguageDeutsch"
                         >
                           <span
-                            class="sc-eZYNyq"
+                            class="sc-dlWCHZ"
                           >
-                            Deutsch
+                            <span
+                              class="sc-eZYNyq"
+                            >
+                              Deutsch
+                            </span>
                           </span>
-                        </span>
-                      </button>
-                    </li>
-                    <li
-                      class="sc-ejfMa-d fymHSF"
-                    >
-                      <button
-                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                        data-testid="buttonLanguageEspañol"
+                        </button>
+                      </li>
+                      <li
+                        class="sc-ejfMa-d fymHSF"
                       >
-                        <span
-                          class="sc-dlWCHZ"
+                        <button
+                          class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                          data-testid="buttonLanguageEspañol"
                         >
                           <span
-                            class="sc-eZYNyq"
+                            class="sc-dlWCHZ"
                           >
-                            Español
+                            <span
+                              class="sc-eZYNyq"
+                            >
+                              Español
+                            </span>
                           </span>
-                        </span>
-                      </button>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+                        </button>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </nav>
             <div
               class="sc-eyvILC cWNZCU"
@@ -1873,102 +1913,214 @@ FAQ en contactgegevens"
           <nav
             class="sc-sLsrZ hThACK"
           >
-            <ul
-              class="sc-iEXKAA sc-kzqdkY gPeeHM cXHLKo sc-hYmls dCFeII"
+            <div
+              class="sc-gdyeKB dsFoWg sc-ktJbId bfBOlG"
+              tabindex="-1"
             >
-              <li
-                class="sc-ejfMa-d fymHSF"
+              <button
+                aria-label="Menu"
+                class="sc-dcJsrY sc-gmgFlS ggwXTK fzWecF"
+                size="50"
+                type="button"
               >
-                <a
-                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                  href="/op-kenteken"
-                  title="Op kenteken:
+                <span
+                  class="sc-aXZVg cycjMX"
+                >
+                  <svg
+                    focusable="false"
+                    role="img"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 3.238h32V7.81H0V3.238zm0 10.476h32v4.572H0v-4.572zM0 24.19h32v4.572H0V24.19z"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <ul
+                aria-hidden="true"
+                class="sc-iEXKAA gPeeHM"
+              >
+                <li
+                  class="sc-ejfMa-d fymHSF"
+                >
+                  <a
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    href="/op-kenteken"
+                    title="Op kenteken:
 
 Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
-                  variant="blank"
-                >
-                  <span
-                    class="sc-dlWCHZ"
+                    variant="blank"
                   >
                     <span
-                      class="sc-eZYNyq"
+                      class="sc-dlWCHZ"
                     >
-                      Op kenteken
+                      <span
+                        class="sc-eZYNyq"
+                      >
+                        Op kenteken
+                      </span>
                     </span>
-                  </span>
-                </a>
-              </li>
-              <li
-                class="sc-ejfMa-d fymHSF"
-              >
-                <a
-                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                  href="/stremmingen"
-                  title="Stremmingen:
+                  </a>
+                </li>
+                <li
+                  class="sc-ejfMa-d fymHSF"
+                >
+                  <a
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    href="/stremmingen"
+                    title="Stremmingen:
 
 Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen."
-                  variant="blank"
-                >
-                  <span
-                    class="sc-dlWCHZ"
+                    variant="blank"
                   >
                     <span
-                      class="sc-eZYNyq"
+                      class="sc-dlWCHZ"
                     >
-                      Stremmingen
+                      <span
+                        class="sc-eZYNyq"
+                      >
+                        Stremmingen
+                      </span>
                     </span>
-                  </span>
-                </a>
-              </li>
-              <li
-                class="sc-ejfMa-d fymHSF"
-              >
-                <a
-                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                  href="/laden-lossen"
-                  title="Laden en lossen:
+                  </a>
+                </li>
+                <li
+                  class="sc-ejfMa-d fymHSF"
+                >
+                  <a
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    href="/laden-lossen"
+                    title="Laden en lossen:
 
 Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. "
-                  variant="blank"
-                >
-                  <span
-                    class="sc-dlWCHZ"
+                    variant="blank"
                   >
                     <span
-                      class="sc-eZYNyq"
+                      class="sc-dlWCHZ"
                     >
-                      Laden en lossen
+                      <span
+                        class="sc-eZYNyq"
+                      >
+                        Laden en lossen
+                      </span>
                     </span>
-                  </span>
-                </a>
-              </li>
-              <li
-                class="sc-ejfMa-d fymHSF"
-              >
-                <a
-                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                  href="https://tourbuzz.amsterdam.nl/"
-                  target="_blank"
-                  title="Touringcar:
+                  </a>
+                </li>
+                <li
+                  class="sc-ejfMa-d fymHSF"
+                >
+                  <a
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    href="https://tourbuzz.amsterdam.nl/"
+                    target="_blank"
+                    title="Touringcar:
 
 Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
-                  variant="blank"
-                >
-                  <span
-                    class="sc-dlWCHZ"
+                    variant="blank"
                   >
                     <span
-                      class="sc-eZYNyq"
+                      class="sc-dlWCHZ"
                     >
-                      Touringcar
+                      <span
+                        class="sc-eZYNyq"
+                      >
+                        Touringcar
+                      </span>
                     </span>
-                  </span>
-                  <span
-                    class="sc-aXZVg sc-fqkvVR lauBHv jMALZu"
+                    <span
+                      class="sc-aXZVg sc-fqkvVR lauBHv jMALZu"
+                    >
+                      <span
+                        class="sc-aXZVg geoGNn"
+                        style="margin-left: -2px;"
+                      >
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M19.006 0H32.01v12.992h-4.002V6.826L14.434 20.417l-2.83-2.818L25.187 3.998h-6.182V0zm7.002 13.991L26.018 32H.01V6.016h17.975l-3.98 3.978.02.02H4.01v17.988h18.006l-.01-10.013 4-3.998z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="sc-ejfMa-d fymHSF"
+                >
+                  <a
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    href="/data"
+                    style="font-weight: normal;"
+                    title="Databronnen:
+
+De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
+                    variant="blank"
                   >
                     <span
-                      class="sc-aXZVg geoGNn"
-                      style="margin-left: -2px;"
+                      class="sc-dlWCHZ"
+                    >
+                      <span
+                        class="sc-eZYNyq"
+                      >
+                        Databronnen
+                      </span>
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="sc-ejfMa-d fymHSF"
+                >
+                  <a
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    href="/contact"
+                    style="font-weight: normal;"
+                    title="Contact & help:
+
+FAQ en contactgegevens"
+                    variant="blank"
+                  >
+                    <span
+                      class="sc-dlWCHZ"
+                    >
+                      <span
+                        class="sc-eZYNyq"
+                      >
+                        Contact & help
+                      </span>
+                    </span>
+                  </a>
+                </li>
+                <li
+                  class="sc-ejfMa-d sc-EgOXT fymHSF eTUFNY sc-fUBkdm hQUOCj"
+                  data-testid="menuFlyoutLanguageSelect"
+                  role="button"
+                  tabindex="-1"
+                >
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                    data-testid="flyoutButton"
+                  >
+                    <span
+                      class="sc-dlWCHZ"
+                    >
+                      <span
+                        class="sc-eZYNyq"
+                      >
+                        Language / Sprache / Idioma
+                      </span>
+                    </span>
+                    <span
+                      class="sc-aXZVg sc-fqkvVR lauBHv jMALZu"
                     >
                       <svg
                         focusable="false"
@@ -1977,164 +2129,92 @@ Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en par
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          d="M19.006 0H32.01v12.992h-4.002V6.826L14.434 20.417l-2.83-2.818L25.187 3.998h-6.182V0zm7.002 13.991L26.018 32H.01V6.016h17.975l-3.98 3.978.02.02H4.01v17.988h18.006l-.01-10.013 4-3.998z"
+                          d="m16 25.757-16-16 2.91-2.9L16 19.937l13.09-13.08 2.91 2.9z"
                           fill-rule="evenodd"
                         />
                       </svg>
                     </span>
-                  </span>
-                </a>
-              </li>
-              <hr
-                class="sc-cMa-dbN eDQtOA"
-              />
-              <li
-                class="sc-ejfMa-d fymHSF"
-              >
-                <a
-                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                  href="/data"
-                  style="font-weight: normal;"
-                  title="Databronnen:
-
-De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
-                  variant="blank"
-                >
-                  <span
-                    class="sc-dlWCHZ"
+                  </button>
+                  <ul
+                    aria-hidden="true"
+                    class="sc-iEXKAA yGkZE"
                   >
-                    <span
-                      class="sc-eZYNyq"
+                    <li
+                      class="sc-ejfMa-d fymHSF"
                     >
-                      Databronnen
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li
-                class="sc-ejfMa-d fymHSF"
-              >
-                <a
-                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                  href="/contact"
-                  style="font-weight: normal;"
-                  title="Contact en uitleg:
-
-FAQ en contactgegevens"
-                  variant="blank"
-                >
-                  <span
-                    class="sc-dlWCHZ"
-                  >
-                    <span
-                      class="sc-eZYNyq"
-                    >
-                      Contact en uitleg
-                    </span>
-                  </span>
-                </a>
-              </li>
-              <li
-                class="sc-ejfMa-d sc-EgOXT fymHSF cDzAhx sc-fUBkdm hQUOCj"
-                data-testid="menuFlyoutLanguageSelect"
-                role="button"
-                tabindex="-1"
-              >
-                <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                  data-testid="flyoutButton"
-                >
-                  <span
-                    class="sc-dlWCHZ"
-                  >
-                    <span
-                      class="sc-eZYNyq"
-                    >
-                      Taal: Nederlands
-                    </span>
-                  </span>
-                </button>
-                <ul
-                  aria-hidden="true"
-                  class="sc-iEXKAA yGkZE"
-                >
-                  <li
-                    class="sc-ejfMa-d fymHSF"
-                  >
-                    <button
-                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
-                      data-testid="buttonLanguageNederlands"
-                    >
-                      <span
-                        class="sc-dlWCHZ"
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
+                        data-testid="buttonLanguageNederlands"
                       >
                         <span
-                          class="sc-eZYNyq"
+                          class="sc-dlWCHZ"
                         >
-                          Nederlands
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Nederlands
+                          </span>
                         </span>
-                      </span>
-                    </button>
-                  </li>
-                  <li
-                    class="sc-ejfMa-d fymHSF"
-                  >
-                    <button
-                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                      data-testid="buttonLanguageEnglish"
+                      </button>
+                    </li>
+                    <li
+                      class="sc-ejfMa-d fymHSF"
                     >
-                      <span
-                        class="sc-dlWCHZ"
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                        data-testid="buttonLanguageEnglish"
                       >
                         <span
-                          class="sc-eZYNyq"
+                          class="sc-dlWCHZ"
                         >
-                          English
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            English
+                          </span>
                         </span>
-                      </span>
-                    </button>
-                  </li>
-                  <li
-                    class="sc-ejfMa-d fymHSF"
-                  >
-                    <button
-                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                      data-testid="buttonLanguageDeutsch"
+                      </button>
+                    </li>
+                    <li
+                      class="sc-ejfMa-d fymHSF"
                     >
-                      <span
-                        class="sc-dlWCHZ"
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                        data-testid="buttonLanguageDeutsch"
                       >
                         <span
-                          class="sc-eZYNyq"
+                          class="sc-dlWCHZ"
                         >
-                          Deutsch
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Deutsch
+                          </span>
                         </span>
-                      </span>
-                    </button>
-                  </li>
-                  <li
-                    class="sc-ejfMa-d fymHSF"
-                  >
-                    <button
-                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                      data-testid="buttonLanguageEspañol"
+                      </button>
+                    </li>
+                    <li
+                      class="sc-ejfMa-d fymHSF"
                     >
-                      <span
-                        class="sc-dlWCHZ"
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                        data-testid="buttonLanguageEspañol"
                       >
                         <span
-                          class="sc-eZYNyq"
+                          class="sc-dlWCHZ"
                         >
-                          Español
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Español
+                          </span>
                         </span>
-                      </span>
-                    </button>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </nav>
           <div
             class="sc-eyvILC cWNZCU"
