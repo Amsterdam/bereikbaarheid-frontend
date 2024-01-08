@@ -50,15 +50,19 @@ ${t(item.description)}`
 const languages = {
   nl: {
     name: 'Nederlands',
+    language: 'Taal',
   },
   en: {
     name: 'English',
+    language: 'Language',
   },
   de: {
     name: 'Deutsch',
+    language: 'Sprache',
   },
   es: {
     name: 'Español',
+    language: 'Idioma',
   },
 }
 
@@ -74,9 +78,7 @@ const MenuFlyOutStyled = styled(MenuFlyOut)`
   }
 `
 
-function HeaderMenuItems() {
-  const { t } = useTranslation()
-
+function HeaderMenuItems({ showDesktopVariant = false }: { showDesktopVariant?: boolean }) {
   const primaryMenuItemsWithPaths = useMemo<MenuItemWithPath[]>(() => {
     return mapPathsToMenuItems(menuItems.filter(item => !item.secondary))
   }, [])
@@ -85,27 +87,35 @@ function HeaderMenuItems() {
     return mapPathsToMenuItems(menuItems.filter(item => item.secondary))
   }, [])
 
+  const languagesLabel = useMemo(() => {
+    return Object.entries(languages).reduce((acc, [key, val]) => {
+      if (key !== i18n.resolvedLanguage) {
+        return acc === '' ? val.language : `${acc} / ${val.language}`
+      }
+
+      return acc
+    }, '')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [i18n.resolvedLanguage])
+
   return (
     <>
       {primaryMenuItemsWithPaths.map(item => (
         <HeaderMenuItem key={item.path} item={item} />
       ))}
 
-      <MenuDivider />
+      {showDesktopVariant && <MenuDivider />}
 
       {secondaryMenuItemsWithPaths.map(item => (
         <HeaderMenuItem key={item.path} item={item} />
       ))}
 
-      <MenuFlyOutStyled
-        label={`${t('_generic.language')}: ${languages[i18n.language as keyof typeof languages].name}`}
-        data-testid="menuFlyoutLanguageSelect"
-      >
+      <MenuFlyOutStyled label={languagesLabel} data-testid="menuFlyoutLanguageSelect">
         {Object.entries(languages).map(([key, val]) => (
-          <MenuItem>
+          <MenuItem key={key}>
             <MenuButton
               data-testid={`buttonLanguage${val.name}`}
-              active={key === i18n.language}
+              active={key === i18n.resolvedLanguage}
               onClick={() => i18n.changeLanguage(key)}
             >
               {val.name}

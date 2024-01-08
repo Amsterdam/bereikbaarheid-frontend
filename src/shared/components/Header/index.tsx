@@ -27,7 +27,7 @@ interface HeaderProps {
 
 function Header({ title, zIndex }: HeaderProps) {
   const dutchOrEnglish = useMemo(() => i18n.language === 'nl' || i18n.language === 'en', [])
-  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: dutchOrEnglish ? 'laptop' : 'desktop' })
+  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: dutchOrEnglish ? 'laptopL' : 'desktopL' })
 
   return (
     <ASCHeader
@@ -45,7 +45,7 @@ function Header({ title, zIndex }: HeaderProps) {
             </MenuToggle>
           ) : (
             <StyledMenu>
-              <HeaderMenuItems></HeaderMenuItems>
+              <HeaderMenuItems showDesktopVariant={showDesktopVariant}></HeaderMenuItems>
             </StyledMenu>
           )}
         </>
