@@ -2,6 +2,7 @@
   "appTitle": "Reachability",
   "_generic": {
     "legend": "Legend",
+    "language": "Language",
     "_mapPanel": {
       "dataSource": "Data source",
       "input": "Input"
@@ -86,6 +87,6 @@
     "title": "Data sources"
   },
   "_pageContact": {
-    "title": "Contact and explanation"
+    "title": "Contact & help"
   }
 }

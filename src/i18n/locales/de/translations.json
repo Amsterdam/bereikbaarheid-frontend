@@ -1,6 +1,7 @@
 {
   "appTitle": "Erreichbarkeit",
   "_generic": {
+    "language": "Sprache",
     "_mapPanel": {
       "dataSource": "Quelldaten",
       "input": "Eingang"

@@ -1,4 +1,7 @@
+import { useMemo } from 'react'
+
 import { AmsterdamLogo, Header as ASCHeader, MenuInline, MenuToggle, styles, useMatchMedia } from '@amsterdam/asc-ui'
+import i18n from 'i18n'
 import styled from 'styled-components'
 
 import { HEADER_HEIGHT, Z_INDEX_HEADER } from '../../constants'
@@ -23,7 +26,8 @@ interface HeaderProps {
 }
 
 function Header({ title, zIndex }: HeaderProps) {
-  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'laptop' })
+  const dutchOrEnglish = useMemo(() => i18n.language === 'nl' || i18n.language === 'en', [])
+  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: dutchOrEnglish ? 'laptopL' : 'desktopL' })
 
   return (
     <ASCHeader
@@ -41,7 +45,7 @@ function Header({ title, zIndex }: HeaderProps) {
             </MenuToggle>
           ) : (
             <StyledMenu>
-              <HeaderMenuItems></HeaderMenuItems>
+              <HeaderMenuItems showDesktopVariant={showDesktopVariant}></HeaderMenuItems>
             </StyledMenu>
           )}
         </>

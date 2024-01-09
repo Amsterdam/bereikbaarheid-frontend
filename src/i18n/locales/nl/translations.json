@@ -2,6 +2,7 @@
   "appTitle": "Bereikbaarheid",
   "_generic": {
     "legend": "Legenda",
+    "language": "Taal",
     "_mapPanel": {
       "dataSource": "Brondata",
       "input": "Invoer"
@@ -102,7 +103,7 @@
     "description": "De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
   },
   "_pageContact": {
-    "title": "Contact en uitleg",
+    "title": "Contact & help",
     "description": "FAQ en contactgegevens",
     "faq": "Veelgestelde vragen"
   }
