@@ -1,0 +1,60 @@
+{
+  "appTitle": "Accessibilité",
+  "_generic": {
+    "language": "Langue",
+    "_mapPanel": {
+      "dataSource": "",
+      "input": "Entrée"
+    }
+  },
+  "_error": {
+    "somethingWentWrong": "Something went wrong",
+    "unfortunately": "Malheureusement",
+    "pageCouldNotBeFound": "The page could not be found."
+  },
+  "_pageLicencePlate": {
+    "title": "Selon la plaque d'immatriculation",
+    "titleShort": "Selon la plaque d'immatriculation"
+  },
+  "_pageRoadObstructions": {
+    "title": "Barrages routiers",
+    "roadObstructionsOn": "Barrages routiers"
+  },
+  "_pageLoadUnload": {
+    "title": "Chargement et déchargement"
+  },
+  "_linkTourBuzz": {
+    "title": "Autocars (Tour Buzz)",
+    "titleShort": "Autocars"
+  },
+  "_pageTouringcar": {
+    "title": "Autocars (Tour Buzz)",
+    "titleShort": "Autocars",
+    "places": "Place",
+    "_legend": {
+      "messages": "Messages",
+      "stops": "Arrêts",
+      "parking": "Se garer",
+      "maxVehicleHeight": "Hauteurs libres maximales",
+      "destinationTraffic": "Routes autorisées > 7,5 tonnes",
+      "recommendedRoutes": "Itinéraires recommandés",
+      "mandatoryRoutes": "> 7,5 tonnes avec dérogation",
+      "environmentalZone": "Zone à faibles émissions (ZFE)"
+    },
+    "_mapPanel": {
+      "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
+      "messages": "Messages",
+      "info": "Information",
+      "recommendedAndMandatoryRoutes": "Nouvelle politique pour 2024",
+      "displayOfRecommendedAndMandatoryRoutes": "À partir du 1er janvier 2024, les autocars de plus de 7,5 tonnes pourront emprunter la S100 et le corridor Weesperstraat - Valkenburgerstraat - Kattenburgerstraat (indiqué en vert clair) sans dérogation. Les autocars de plus de 7,5 tonnes bénéficiant d'une dérogation sont autorisés à emprunter les routes indiquées en vert foncé. Pour plus d’informations sur la décision en termes de circulation, la politique de dérogation et la manière de faire une demande de dérogation: www.amsterdam.nl/touringcar",
+      "stops": "Arrêts",
+      "parkingSpaces": "Se garer"
+    }
+  },
+  "_pageData": {
+    "title": "Sources de données"
+  },
+  "_pageContact": {
+    "title": "Contact & assistance"
+  }
+}

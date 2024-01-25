@@ -64,6 +64,10 @@ const languages = {
     name: 'Español',
     language: 'Idioma',
   },
+  fr: {
+    name: 'Français',
+    language: 'Langue',
+  },
 }
 
 const MenuDivider = styled.hr`

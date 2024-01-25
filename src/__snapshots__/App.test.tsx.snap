@@ -254,7 +254,7 @@ FAQ en contactgegevens"
                         <span
                           class="sc-eZYNyq"
                         >
-                          Language / Sprache / Idioma
+                          Language / Sprache / Idioma / Langue
                         </span>
                       </span>
                       <span
@@ -345,6 +345,24 @@ FAQ en contactgegevens"
                               class="sc-eZYNyq"
                             >
                               Español
+                            </span>
+                          </span>
+                        </button>
+                      </li>
+                      <li
+                        class="sc-ejfMa-d fymHSF"
+                      >
+                        <button
+                          class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                          data-testid="buttonLanguageFrançais"
+                        >
+                          <span
+                            class="sc-dlWCHZ"
+                          >
+                            <span
+                              class="sc-eZYNyq"
+                            >
+                              Français
                             </span>
                           </span>
                         </button>
@@ -1138,7 +1156,7 @@ FAQ en contactgegevens"
                       <span
                         class="sc-eZYNyq"
                       >
-                        Language / Sprache / Idioma
+                        Language / Sprache / Idioma / Langue
                       </span>
                     </span>
                     <span
@@ -1229,6 +1247,24 @@ FAQ en contactgegevens"
                             class="sc-eZYNyq"
                           >
                             Español
+                          </span>
+                        </span>
+                      </button>
+                    </li>
+                    <li
+                      class="sc-ejfMa-d fymHSF"
+                    >
+                      <button
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
+                        data-testid="buttonLanguageFrançais"
+                      >
+                        <span
+                          class="sc-dlWCHZ"
+                        >
+                          <span
+                            class="sc-eZYNyq"
+                          >
+                            Français
                           </span>
                         </span>
                       </button>

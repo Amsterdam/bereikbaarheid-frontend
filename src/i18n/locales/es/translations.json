@@ -3,7 +3,7 @@
   "_generic": {
     "language": "Idioma",
     "_mapPanel": {
-      "dataSource": "Fuente de datos",
+      "dataSource": "Fuentes de datos",
       "input": "Aporte"
     }
   },
@@ -13,39 +13,47 @@
     "pageCouldNotBeFound": "The page could not be found."
   },
   "_pageLicencePlate": {
-    "title": "Accesibilidad con matrícula",
-    "titleShort": "Con matrícula"
+    "title": "Por matrícula",
+    "titleShort": "Por matrícula"
   },
   "_pageRoadObstructions": {
-    "title": "Obstrucciones en la carretera",
-    "roadObstructionsOn": "Obstrucciones en"
+    "title": "Bloqueos",
+    "roadObstructionsOn": "Bloqueos"
   },
   "_pageLoadUnload": {
-    "title": "Cargar y descargar"
+    "title": "Carga y descarga"
   },
   "_linkTourBuzz": {
-    "title": "Auto turístico (Tour Buzz)",
-    "titleShort": "Auto turístico"
+    "title": "Autocar (Tour Buzz)",
+    "titleShort": "Autocar"
   },
   "_pageTouringcar": {
-    "title": "Auto turístico (Tour Buzz)",
-    "titleShort": "Auto turístico",
+    "title": "Autocar (Tour Buzz)",
+    "titleShort": "Autocar",
     "places": "Estacionamientos",
     "_legend": {
       "messages": "Mensajes",
-      "stops": "Paradas de autobús",
-      "parking": "Aparcamiento",
-      "maxVehicleHeight": "Altura libre",
-      "destinationTraffic": "Tráfico de destino",
+      "stops": "Paradas",
+      "parking": "Aparcamientos",
+      "maxVehicleHeight": "Alturas máximas para transitar",
+      "destinationTraffic": "Carreteras permitidas > 7,5 toneladas",
       "recommendedRoutes": "Rutas recomendadas",
-      "mandatoryRoutes": "Ruta obligatoria (> 7,5t)",
-      "environmentalZone": "Zona ambiental"
+      "mandatoryRoutes": "> 7,5 toneladas con exención",
+      "environmentalZone": "Zona medioambiental"
+    },
+    "_mapPanel": {
+      "messages": "Mensajes",
+      "info": "Información",
+      "recommendedAndMandatoryRoutes": "Nueva política para el año 2024",
+      "displayOfRecommendedAndMandatoryRoutes": "A partir del 1 de enero de 2024, los autocares de más de 7,5 toneladas podrán circular sin exención por la S100 y por el corredor Weesperstraat - Valkenburgerstraat - Kattenburgerstraat (zona demarcada en verde claro). Los autocares de más de 7,5 toneladas con una exención están permitidos en las carreteras demarcadas en verde oscuro. Para obtener más información sobre la decisión con respecto a la normativa de tráfico, la política de exenciones y la solicitud de una exención, consulte el siguiente enlace: www.amsterdam.nl/touringcar",
+      "stops": "Paradas",
+      "parkingSpaces": "Aparcamientos"
     }
   },
   "_pageData": {
     "title": "Fuentes de datos"
   },
   "_pageContact": {
-    "title": "Contacto y explicación"
+    "title": "Contacto y asistencia"
   }
 }

@@ -51,6 +51,6 @@ describe('Header', () => {
     })
 
     pageTitle = screen.getByRole('heading', { level: 1 })
-    expect(pageTitle).toHaveTextContent('Auto turístico (Tour Buzz)')
+    expect(pageTitle).toHaveTextContent('Autocar (Tour Buzz)')
   })
 })

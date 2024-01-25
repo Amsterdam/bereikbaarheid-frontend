@@ -13,39 +13,48 @@
     "pageCouldNotBeFound": "The page could not be found."
   },
   "_pageLicencePlate": {
-    "title": "Erreichbarkeit mit Kennzeichen",
-    "titleShort": "Mit Kennzeichen"
+    "title": "Erreichbarkeit auf Fahrzeugkennzeichen",
+    "titleShort": "Auf Fahrzeugkennzeichen"
   },
   "_pageRoadObstructions": {
-    "title": "Straßenbehinderungen",
-    "roadObstructionsOn": "Straßenbehinderungen auf"
+    "title": "Sperrungen",
+    "roadObstructionsOn": "Sperrungen auf"
   },
   "_pageLoadUnload": {
-    "title": "Laden und entladen"
+    "title": "Be- und Entladen"
   },
   "_linkTourBuzz": {
-    "title": "Tourenwagen (Tour Buzz)",
-    "titleShort": "Tourenwagen"
+    "title": "Reisebus (Tour Buzz)",
+    "titleShort": "Reisebus"
   },
   "_pageTouringcar": {
-    "title": "Tourenwagen (Tour Buzz)",
-    "titleShort": "Tourenwagen",
+    "title": "Reisebus (Tour Buzz)",
+    "titleShort": "Reisebus",
     "places": "Platz",
     "_legend": {
       "messages": "Berichten",
-      "stops": "Bushaltestellen",
-      "parking": "Parkplatz",
-      "maxVehicleHeight": "Fahrhöhe",
-      "destinationTraffic": "Zielverkehr",
+      "stops": "Haltestellen",
+      "parking": "Parken",
+      "maxVehicleHeight": "Maximale Durchfahrtshöhen",
+      "destinationTraffic": "Erlaubte Straßen > 7,5 Tonnen",
       "recommendedRoutes": "Empfohlene Routen",
-      "mandatoryRoutes": "Obligatorische Route (> 7,5t)",
+      "mandatoryRoutes": "> 7,5 Tonnen mit Ausnahmegenehmigung",
       "environmentalZone": "Umweltzone"
+    },
+    "_mapPanel": {
+      "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
+      "messages": "Berichten",
+      "info": "Informatie",
+      "recommendedAndMandatoryRoutes": "Neue Richtlinie 2024",
+      "displayOfRecommendedAndMandatoryRoutes": "Ab dem 1. Januar 2024 sind Reisebusse mit einem Gewicht über 7,5 Tonnen ohne Ausnahmegenehmigung auf der S100 und auf dem Korridor Weesperstraat - Valkenburgerstraat - Kattenburgerstraat (hellgrün angegeben) erlaubt. Reisebusse mit einem Gewicht über 7,5 Tonnen sind mit einer Ausnahmegenehmigung auf den in dunkelgrün angegebenen Straßen erlaubt. Weitere Information über den Verkehrsbeschluss, Ausnahmegenehmigungsregelungen und Beantragung von Ausnahmegenehmigungen: www.amsterdam.nl/touringcar",
+      "stops": "Haltestellen",
+      "parkingSpaces": "Parken"
     }
   },
   "_pageData": {
     "title": "Datenquellen"
   },
   "_pageContact": {
-    "title": "Kontakt und Erklärung"
+    "title": "Kontakt und Hilfe"
   }
 }
