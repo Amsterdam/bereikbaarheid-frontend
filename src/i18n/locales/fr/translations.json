@@ -3,7 +3,7 @@
   "_generic": {
     "language": "Langue",
     "_mapPanel": {
-      "dataSource": "",
+      "dataSource": "Données sources",
       "input": "Entrée"
     }
   },
@@ -30,6 +30,7 @@
   "_pageTouringcar": {
     "title": "Autocars (Tour Buzz)",
     "titleShort": "Autocars",
+    "reference": "Indication",
     "places": "Place",
     "_legend": {
       "messages": "Messages",

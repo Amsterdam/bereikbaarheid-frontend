@@ -30,6 +30,7 @@
   "_pageTouringcar": {
     "title": "Autocar (Tour Buzz)",
     "titleShort": "Autocar",
+    "reference": "Designación",
     "places": "Estacionamientos",
     "_legend": {
       "messages": "Mensajes",

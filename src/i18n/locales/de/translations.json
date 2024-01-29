@@ -30,6 +30,7 @@
   "_pageTouringcar": {
     "title": "Reisebus (Tour Buzz)",
     "titleShort": "Reisebus",
+    "reference": "Bezeichnung",
     "places": "Platz",
     "_legend": {
       "messages": "Berichten",
