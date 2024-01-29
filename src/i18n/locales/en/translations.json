@@ -4,7 +4,7 @@
     "legend": "Legend",
     "language": "Language",
     "_mapPanel": {
-      "dataSource": "Data source",
+      "dataSource": "Data sources",
       "input": "Input"
     },
     "_dataSources": {
@@ -25,40 +25,40 @@
     "pageCouldNotBeFound": "The page could not be found."
   },
   "_pageLicencePlate": {
-    "title": "Reachability by licence plate",
-    "titleShort": "By licence plate",
+    "title": "Reachability by vehicle registration number",
+    "titleShort": "By vehicle registration number",
     "_mapPanel": {
       "label": "Input vehicle data or view the data sources"
     }
   },
   "_pageRoadObstructions": {
-    "title": "Road obstructions",
-    "roadObstructionsOn": "Road obstructions on",
+    "title": "Road closures",
+    "roadObstructionsOn": "Road closures on",
     "_mapPanel": {
       "label": "Input date and time or view the data sources"
     }
   },
   "_pageLoadUnload": {
-    "title": "Load and unload",
+    "title": "Loading & unloading",
     "_mapPanel": {
       "label": "Input address, date and time or view the data sources"
     }
   },
   "_linkTourBuzz": {
-    "title": "Coach (Tour Buzz)",
-    "titleShort": "Coach"
+    "title": "Coaches (Tour Buzz)",
+    "titleShort": "Coaches"
   },
   "_pageTouringcar": {
-    "title": "Coach (Tour Buzz)",
-    "titleShort": "Coach",
+    "title": "Coaches (Tour Buzz)",
+    "titleShort": "Coaches",
     "reference": "Reference",
     "places": "Places",
     "_mapPanel": {
       "label": "View messages, extra route information or the data sources",
       "messages": "Messages",
       "info": "Information",
-      "recommendedAndMandatoryRoutes": "Recommended and mandatory routes",
-      "displayOfRecommendedAndMandatoryRoutes": "View recommended and mandatory routes for coaches.",
+      "recommendedAndMandatoryRoutes": "New policy in 2024",
+      "displayOfRecommendedAndMandatoryRoutes": "From 1 January 2024, coaches weighing more than 7.5 tonnes without an exemption are allowed to use the S100 and the Weesperstraat - Valkenburgerstraat - Kattenburgerstraat corridor (shown in light green). Coaches weighing more than 7.5 tonnes with an exemption are permitted on the roads shown in dark green. For more information on the traffic order, exemption policy and applying for an exemption: www.amsterdam.nl/touringcar",
       "payAttentionToVerhicleHeights": "Pay attention to vehicle heights.",
       "stops": "Stops",
       "parkingSpaces": "Parking spaces"
@@ -67,20 +67,20 @@
       "messages": "Messages",
       "stops": "Stops",
       "parking": "Parking",
-      "maxVehicleHeight": "Maximum vehicle height",
-      "destinationTraffic": "Destination traffic",
+      "maxVehicleHeight": "Maximum clear heights",
+      "destinationTraffic": "Permitted roads > 7.5 tonnes",
       "recommendedRoutes": "Recommended routes",
-      "mandatoryRoutes": "Mandatory route (> 7.5t)",
-      "environmentalZone": "Environmental zone"
+      "mandatoryRoutes": "> 7.5 tonnes with exemption",
+      "environmentalZone": "Low-emission zone"
     },
     "_dataSources": {
-      "stopsForCoaches": "Stops for coaches",
-      "parkingSpacesForCoaches": "Parking spaces for coaches",
-      "maxVehicleHeight": "Maximum vehicle height for coaches",
-      "destinationTraffic": "Destination traffic",
-      "recommendedRoutes": "Recommended routes for coaches",
-      "mandatoryRoutes": "Mandatory route (> 7.5t) for coaches",
-      "environmentalZone": "Environmental zone"
+      "stopsForCoaches": "Stops",
+      "parkingSpacesForCoaches": "Parking",
+      "maxVehicleHeight": "Maximum clear heights",
+      "destinationTraffic": "Permitted roads > 7.5 tonnes",
+      "recommendedRoutes": "Recommended routes",
+      "mandatoryRoutes": "> 7.5 tonnes with exemption",
+      "environmentalZone": "Low-emission zone"
     }
   },
   "_pageData": {
