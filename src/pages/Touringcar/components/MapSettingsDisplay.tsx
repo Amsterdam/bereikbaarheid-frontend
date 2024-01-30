@@ -24,17 +24,24 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
   const { t } = useTranslation()
 
   return (
+    // @ts-ignore
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label={t('_pageTouringcar._mapPanel.label')} activeTab={activeTab}>
-        {/* TODO: activate once messages feature is implemented. */}
-        {/* <Tab
+        <Tab
           id={MapPanelTab.MESSAGES}
           label={t('_pageTouringcar._mapPanel.messages')}
           onClick={() => setActiveTab(MapPanelTab.MESSAGES)}
         >
-          <br />
-          <Paragraph>Berichten</Paragraph>
-        </Tab> */}
+          <PaddedContent>
+            <Paragraph>
+              Exercitation voluptate officia voluptate commodo ex sit adipisicing ex. Proident sit labore fugiat
+              adipisicing consequat quis anim elit. Veniam occaecat eiusmod eu aliquip nulla Lorem. Adipisicing sit
+              laboris non consequat adipisicing et ea laborum ullamco commodo proident. Commodo pariatur duis Lorem
+              magna excepteur veniam duis ipsum est ex incididunt. Ea quis sint veniam esse do. Irure proident duis amet
+              officia voluptate et nisi deserunt adipisicing tempor.
+            </Paragraph>
+          </PaddedContent>
+        </Tab>
 
         <Tab
           id={MapPanelTab.INFO}

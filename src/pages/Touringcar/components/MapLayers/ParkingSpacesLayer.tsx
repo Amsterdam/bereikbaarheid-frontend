@@ -3,22 +3,14 @@ import { useCallback, useContext } from 'react'
 import { MapPanelContext, mapPanelConstants } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
 import getTouringcarParkingSpaces, { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
-import {
-  MapLayerId,
-  // MapPanelTab,
-  useTouringcarMapContext,
-} from 'pages/Touringcar/contexts/MapContext'
+import { MapLayerId, MapPanelTab, useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
 import { useTranslation } from 'react-i18next'
 import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGroup'
 
 import TouringcarMarker from '../Marker/Marker'
 
 export const ParkingSpacesLayer = () => {
-  const {
-    activeMapLayers,
-    setCurrentParkingSpace,
-    // setActiveTab,
-  } = useTouringcarMapContext()
+  const { activeMapLayers, setCurrentParkingSpace, setActiveTab } = useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
 
   const { t } = useTranslation()
@@ -51,8 +43,7 @@ export const ParkingSpacesLayer = () => {
       marker.bindTooltip(tooltipText)
 
       marker.on('click', () => {
-        // TODO: activate once messages feature is implemented.
-        // setActiveTab(MapPanelTab.MESSAGES)
+        setActiveTab(MapPanelTab.INFO)
         findParkingSpace(item.properties?.id)
         setPositionFromSnapPoint(mapPanelConstants.SnapPoint.Halfway)
       })

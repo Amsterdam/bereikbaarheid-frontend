@@ -923,12 +923,22 @@ FAQ en contactgegevens"
                       role="tablist"
                     >
                       <button
-                        aria-controls="panel-info"
+                        aria-controls="panel-messages"
                         aria-selected="true"
                         class="sc-lbJcrp jfaesJ"
-                        id="tab-info"
+                        id="tab-messages"
                         role="tab"
                         tabindex="0"
+                      >
+                        Berichten
+                      </button>
+                      <button
+                        aria-controls="panel-info"
+                        aria-selected="false"
+                        class="sc-lbJcrp gjLVTq"
+                        id="tab-info"
+                        role="tab"
+                        tabindex="-1"
                       >
                         Informatie
                       </button>
@@ -944,8 +954,26 @@ FAQ en contactgegevens"
                       </button>
                     </div>
                     <div
+                      aria-labelledby="tab-messages"
+                      class="sc-fKWMtX"
+                      id="panel-messages"
+                      role="tabpanel"
+                      tabindex="0"
+                    >
+                      <div
+                        class="sc-jdUcAg hVRYmp"
+                      >
+                        <p
+                          class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+                        >
+                          Exercitation voluptate officia voluptate commodo ex sit adipisicing ex. Proident sit labore fugiat adipisicing consequat quis anim elit. Veniam occaecat eiusmod eu aliquip nulla Lorem. Adipisicing sit laboris non consequat adipisicing et ea laborum ullamco commodo proident. Commodo pariatur duis Lorem magna excepteur veniam duis ipsum est ex incididunt. Ea quis sint veniam esse do. Irure proident duis amet officia voluptate et nisi deserunt adipisicing tempor.
+                        </p>
+                      </div>
+                    </div>
+                    <div
                       aria-labelledby="tab-info"
                       class="sc-fKWMtX"
+                      hidden=""
                       id="panel-info"
                       role="tabpanel"
                       tabindex="0"
@@ -1558,6 +1586,42 @@ FAQ en contactgegevens"
                   <div
                     class="sc-eHsDsR cMemZM"
                   >
+                    <label
+                      class="sc-gFVvzn jmImEg"
+                      for="touringcarMessages"
+                    >
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Berichten
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb sc-jdkBTo kJeTkB"
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarMessages"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
                     <label
                       class="sc-gFVvzn jmImEg"
                       for="touringcarStops"
@@ -2803,12 +2867,22 @@ FAQ en contactgegevens"
                     role="tablist"
                   >
                     <button
-                      aria-controls="panel-info"
+                      aria-controls="panel-messages"
                       aria-selected="true"
                       class="sc-lbJcrp jfaesJ"
-                      id="tab-info"
+                      id="tab-messages"
                       role="tab"
                       tabindex="0"
+                    >
+                      Berichten
+                    </button>
+                    <button
+                      aria-controls="panel-info"
+                      aria-selected="false"
+                      class="sc-lbJcrp gjLVTq"
+                      id="tab-info"
+                      role="tab"
+                      tabindex="-1"
                     >
                       Informatie
                     </button>
@@ -2824,8 +2898,26 @@ FAQ en contactgegevens"
                     </button>
                   </div>
                   <div
+                    aria-labelledby="tab-messages"
+                    class="sc-fKWMtX"
+                    id="panel-messages"
+                    role="tabpanel"
+                    tabindex="0"
+                  >
+                    <div
+                      class="sc-jdUcAg hVRYmp"
+                    >
+                      <p
+                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+                      >
+                        Exercitation voluptate officia voluptate commodo ex sit adipisicing ex. Proident sit labore fugiat adipisicing consequat quis anim elit. Veniam occaecat eiusmod eu aliquip nulla Lorem. Adipisicing sit laboris non consequat adipisicing et ea laborum ullamco commodo proident. Commodo pariatur duis Lorem magna excepteur veniam duis ipsum est ex incididunt. Ea quis sint veniam esse do. Irure proident duis amet officia voluptate et nisi deserunt adipisicing tempor.
+                      </p>
+                    </div>
+                  </div>
+                  <div
                     aria-labelledby="tab-info"
                     class="sc-fKWMtX"
+                    hidden=""
                     id="panel-info"
                     role="tabpanel"
                     tabindex="0"
@@ -3438,6 +3530,42 @@ FAQ en contactgegevens"
                 <div
                   class="sc-eHsDsR cMemZM"
                 >
+                  <label
+                    class="sc-gFVvzn jmImEg"
+                    for="touringcarMessages"
+                  >
+                    <span
+                      class="sc-brPLxw dGBiZJ"
+                    >
+                      Berichten
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb sc-jdkBTo kJeTkB"
+                    >
+                      <span
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
+                      >
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarMessages"
+                        type="checkbox"
+                      />
+                    </span>
+                  </label>
                   <label
                     class="sc-gFVvzn jmImEg"
                     for="touringcarStops"

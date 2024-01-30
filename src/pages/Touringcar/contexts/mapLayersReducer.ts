@@ -6,6 +6,7 @@ type mapLayerActionType = {
 }
 
 const mapLayersInitialState = {
+  [MapLayerId.touringcarMessagesLayerId]: true,
   [MapLayerId.touringcarStopsLayerId]: true,
   [MapLayerId.touringcarParkingSpacesLayerId]: true,
   [MapLayerId.touringcarVehicleHeightsLayerId]: true,
