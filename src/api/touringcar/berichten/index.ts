@@ -1,0 +1,59 @@
+import { Feature, FeatureCollection } from 'geojson'
+import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
+
+// Unlike other Touringcar API endpoints the messages endpoint
+// sits on the "Bereikbaarheid API" and NOT on api.data.amsterdam.nl!
+import { api } from '../../bereikbaarheid/index'
+
+interface TouringcarMessage extends Feature {
+  title: string
+  body: string
+  advice: string
+  title_en: string
+  body_en: string
+  advice_en: string
+  title_fr: string
+  body_fr: string
+  advice_fr: string
+  title_de: string
+  body_de: string
+  advice_de: string
+  title_es: string
+  body_es: string
+  advice_es: string
+  startdate: Date
+  enddate: Date
+  category: string
+  link: URL
+  image_url: string
+  important: boolean
+  is_live: boolean
+}
+
+interface TouringcarMessageCollection extends FeatureCollection {
+  features: [] | TouringcarMessage[]
+}
+
+interface TouringcarMessagesParams {
+  datum: DateHumanReadable_Year_Month_Day
+}
+
+const ENDPOINT = 'v1/touringcar/berichten'
+
+function getTouringcarMessages(
+  params: TouringcarMessagesParams,
+  signal?: AbortSignal
+): Promise<TouringcarMessageCollection> {
+  return api.get(ENDPOINT, { params, signal }).then(response => response.data)
+}
+
+function getUrl(params?: TouringcarMessagesParams) {
+  return api.getUri({
+    params: params,
+    url: ENDPOINT,
+  })
+}
+
+export type { TouringcarMessage, TouringcarMessageCollection }
+export { ENDPOINT, getTouringcarMessages, getUrl }
+export default getTouringcarMessages
