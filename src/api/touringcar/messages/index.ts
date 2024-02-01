@@ -1,4 +1,4 @@
-import { Feature, FeatureCollection } from 'geojson'
+import { Feature, FeatureCollection, Point } from 'geojson'
 import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 
 // Unlike other Touringcar API endpoints the messages endpoint
@@ -6,28 +6,33 @@ import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 import { api } from '../../bereikbaarheid/index'
 
 interface TouringcarMessage extends Feature {
-  title: string
-  body: string
-  advice: string
-  title_en: string
-  body_en: string
-  advice_en: string
-  title_fr: string
-  body_fr: string
-  advice_fr: string
-  title_de: string
-  body_de: string
-  advice_de: string
-  title_es: string
-  body_es: string
-  advice_es: string
-  startdate: Date
-  enddate: Date
-  category: string
-  link: URL
-  image_url: string
-  important: boolean
-  is_live: boolean
+  geometry: Point
+  properties: {
+    title: string
+    body: string
+    advice: string
+    title_en: string
+    body_en: string
+    advice_en: string
+    title_fr: string
+    body_fr: string
+    advice_fr: string
+    title_de: string
+    body_de: string
+    advice_de: string
+    title_es: string
+    body_es: string
+    advice_es: string
+    startdate: Date
+    enddate: Date
+    category: string
+    link: URL
+    image_url: string
+    important: boolean
+    is_live: boolean
+    omschrijving?: string
+    maximaleDoorrijhoogte?: string
+  }
 }
 
 interface TouringcarMessageCollection extends FeatureCollection {

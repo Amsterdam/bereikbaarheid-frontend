@@ -11,11 +11,9 @@ import { createGlobalStyle, useTheme } from 'styled-components'
 
 const Styles = createGlobalStyle`
   .arm__icon--clustergroup-default {
-    background-color: ${themeColor('secondary')};
+    background-color: ${themeColor('primary')};
     background-size: 100%;
     border-radius: 50%;
-    border: 3px solid;
-    box-shadow: 1px 1px 2px black;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -56,8 +54,8 @@ export const MarkerClusterGroup = ({ markers, events, setInstance }: MarkerClust
             </div>
             `,
           className: 'arm__icon--clustergroup-default',
-          iconSize: L.point(39, 39),
-          iconAnchor: L.point(19, 19),
+          iconSize: L.point(24, 24),
+          iconAnchor: L.point(12, 12),
         }),
       spiderLegPolylineOptions: {
         color: theme.colors.primary?.main,

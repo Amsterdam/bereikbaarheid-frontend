@@ -1,5 +1,6 @@
 import { ReactNode, useCallback, useEffect, useReducer, useState } from 'react'
 
+import { TouringcarMessage } from 'api/touringcar/messages'
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 import { TouringcarStop } from 'api/touringcar/stops'
 import { useSearchParams } from 'react-router-dom'
@@ -74,19 +75,29 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
     setBlockURLParamsMutation(false)
   }, [blockURLParamsMutation, queryParams, setQueryParams, activeMapLayers])
 
+  const [currentMessage, doSetCurrentMessage] = useState<TouringcarMessage | undefined>(undefined)
+  const setCurrentMessage = useCallback((message?: TouringcarMessage) => {
+    doSetCurrentParkingSpace(undefined)
+    doSetCurrentStop(undefined)
+    doSetCurrentMessage(message)
+  }, [])
+
   const [currentStop, doSetCurrentStop] = useState<TouringcarStop | undefined>(undefined)
   const setCurrentStop = useCallback((stop?: TouringcarStop) => {
+    doSetCurrentMessage(undefined)
     doSetCurrentParkingSpace(undefined)
     doSetCurrentStop(stop)
   }, [])
 
   const [currentParkingSpace, doSetCurrentParkingSpace] = useState<TouringcarParkingSpace | undefined>(undefined)
   const setCurrentParkingSpace = useCallback((parkingSpace?: TouringcarParkingSpace) => {
+    doSetCurrentMessage(undefined)
     doSetCurrentStop(undefined)
     doSetCurrentParkingSpace(parkingSpace)
   }, [])
 
   const unsetDetailsPane = useCallback(() => {
+    doSetCurrentMessage(undefined)
     doSetCurrentStop(undefined)
     doSetCurrentParkingSpace(undefined)
   }, [])
@@ -101,6 +112,8 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
         activeMapLayers,
         updateActiveMapLayers,
         updateActiveMapLayersWithSearchParams,
+        currentMessage,
+        setCurrentMessage,
         currentStop,
         setCurrentStop,
         currentParkingSpace,

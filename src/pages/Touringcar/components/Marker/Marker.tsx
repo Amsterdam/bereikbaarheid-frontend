@@ -1,3 +1,4 @@
+import { TouringcarMessage } from 'api/touringcar/messages'
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 import { TouringcarStop } from 'api/touringcar/stops'
 import { TouringcarVehicleHeight } from 'api/touringcar/vehicle-heights'
@@ -8,7 +9,7 @@ import SvgTouringcarVehicleHeightMarker from './images/doorrijhoogte.svg'
 import SvgTouringcarStopMarker from './images/halte.svg'
 import SvgTouringcarParkingSpaceMarker from './images/parkeerplaats.svg'
 
-type TouringcarGeometryPoints = TouringcarParkingSpace | TouringcarStop | TouringcarVehicleHeight
+type TouringcarGeometryPoints = TouringcarParkingSpace | TouringcarStop | TouringcarVehicleHeight | TouringcarMessage
 
 const MapLayerIdToImage: Record<string, string> = {
   [MapLayerId.touringcarStopsLayerId]: SvgTouringcarStopMarker,

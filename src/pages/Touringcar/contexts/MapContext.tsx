@@ -1,5 +1,6 @@
 import { createContext, Dispatch, SetStateAction, useContext } from 'react'
 
+import { TouringcarMessage } from 'api/touringcar/messages'
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 import { TouringcarStop } from 'api/touringcar/stops'
 
@@ -59,7 +60,7 @@ const mapLayerIdToMapLayerParam: Record<MapLayerId, MapLayerParam> = {
 
 const layerFeatureProps = {
   [MapLayerId.touringcarMessagesLayerId]: {
-    color: '#ffff84',
+    color: 'fuchsia',
   },
   [MapLayerId.touringcarStopsLayerId]: {
     color: '#009dec',
@@ -92,6 +93,8 @@ interface TouringcarContextProps {
   activeMapLayers: typeof mapLayersInitialState
   updateActiveMapLayers: Dispatch<mapLayerActionType>
   updateActiveMapLayersWithSearchParams: () => void
+  currentMessage: TouringcarMessage | undefined
+  setCurrentMessage: (stop: TouringcarMessage | undefined) => void
   currentStop: TouringcarStop | undefined
   setCurrentStop: (stop: TouringcarStop | undefined) => void
   currentParkingSpace: TouringcarParkingSpace | undefined
