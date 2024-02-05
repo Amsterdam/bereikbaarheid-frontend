@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 
 import { Input, Label, Paragraph } from '@amsterdam/asc-ui'
 import { format, parse } from 'date-fns'
@@ -17,18 +17,21 @@ function MessagesDatePicker() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const formattedDate = useMemo(() => format(messagesDate, DATE_FORMAT_REVERSED), [messagesDate])
+
   return (
     <Paragraph>
+      {/* TODO: i18n */}
       <Label htmlFor="touringcarMessagesDatePicker" label={<strong>Datum</strong>} />
       <Input
         id="touringcarMessagesDatePicker"
         type="date"
-        value={format(messagesDate, DATE_FORMAT_REVERSED)}
+        value={formattedDate}
         onChange={({ target }) => {
           setMessagesDate(parse(target.value, DATE_FORMAT_REVERSED, new Date()))
           setQueryParams({
             ...queryParams,
-            date: format(messagesDate, DATE_FORMAT_REVERSED),
+            date: formattedDate,
           })
         }}
       />

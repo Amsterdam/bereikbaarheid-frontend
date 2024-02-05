@@ -59,8 +59,10 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
     const noLayerIsActive = Object.values(activeMapLayers).every(l => !l)
     const allLayersAreActive = Object.values(activeMapLayers).every(l => l)
 
+    const formattedDate = format(messagesDate, DATE_FORMAT_REVERSED)
+
     if (allLayersAreActive) {
-      setQueryParams({ datum: format(messagesDate, DATE_FORMAT_REVERSED) }, { replace: true })
+      setQueryParams({ datum: formattedDate }, { replace: true })
     } else if (noLayerIsActive) {
       setQueryParams({}, { replace: true })
     } else {
@@ -76,7 +78,7 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
       )
 
       if (fromActiveLayersToParams.includes('berichten')) {
-        setQueryParams(`datum=${format(messagesDate, DATE_FORMAT_REVERSED)}&${fromActiveLayersToParams}`, {
+        setQueryParams(`datum=${formattedDate}&${fromActiveLayersToParams}`, {
           replace: true,
         })
       } else {
