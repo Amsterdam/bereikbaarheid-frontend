@@ -48,7 +48,7 @@ function TouringcarMarker(item: TouringcarGeometryPoints, layerId: MapLayerId) {
   if (item.properties?.maximaleDoorrijhoogte) {
     textContent = item.properties.maximaleDoorrijhoogte
     textColor = 'black'
-  } else {
+  } else if (item.properties?.omschrijving) {
     textContent = item.properties?.omschrijving.split(':')[0]
   }
 

@@ -3,7 +3,7 @@ import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 
 // Unlike other Touringcar API endpoints the messages endpoint
 // sits on the "Bereikbaarheid API" and NOT on api.data.amsterdam.nl!
-import { api } from '../../bereikbaarheid/index'
+import { api } from './api_TEMP'
 
 interface TouringcarMessage extends Feature {
   geometry: Point
@@ -23,10 +23,10 @@ interface TouringcarMessage extends Feature {
     title_es: string
     body_es: string
     advice_es: string
-    startdate: Date
-    enddate: Date
+    startdate: DateHumanReadable_Year_Month_Day
+    enddate: DateHumanReadable_Year_Month_Day
     category: string
-    link: URL
+    link: string
     image_url: string
     important: boolean
     is_live: boolean
@@ -40,13 +40,13 @@ interface TouringcarMessageCollection extends FeatureCollection {
 }
 
 interface TouringcarMessagesParams {
-  datum: DateHumanReadable_Year_Month_Day
+  datum?: DateHumanReadable_Year_Month_Day
 }
 
 const ENDPOINT = 'v1/touringcar/berichten'
 
 function getTouringcarMessages(
-  params: TouringcarMessagesParams,
+  params?: TouringcarMessagesParams,
   signal?: AbortSignal
 ): Promise<TouringcarMessageCollection> {
   return api.get(ENDPOINT, { params, signal }).then(response => response.data)
@@ -54,7 +54,7 @@ function getTouringcarMessages(
 
 function getUrl(params?: TouringcarMessagesParams) {
   return api.getUri({
-    params: params,
+    params,
     url: ENDPOINT,
   })
 }

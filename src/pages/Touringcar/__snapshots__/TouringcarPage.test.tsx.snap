@@ -382,7 +382,7 @@ FAQ en contactgegevens"
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-cspYLC jkpnfb gutwmp leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-BQMaI jkpnfb hRDWhZ leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -528,12 +528,29 @@ FAQ en contactgegevens"
                       tabindex="0"
                     >
                       <div
-                        class="sc-jdUcAg hVRYmp"
+                        class="sc-fyVfxW llgRlv"
                       >
                         <p
                           class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
                         >
-                          Exercitation voluptate officia voluptate commodo ex sit adipisicing ex. Proident sit labore fugiat adipisicing consequat quis anim elit. Veniam occaecat eiusmod eu aliquip nulla Lorem. Adipisicing sit laboris non consequat adipisicing et ea laborum ullamco commodo proident. Commodo pariatur duis Lorem magna excepteur veniam duis ipsum est ex incididunt. Ea quis sint veniam esse do. Irure proident duis amet officia voluptate et nisi deserunt adipisicing tempor.
+                          <label
+                            class="sc-gFVvzn eVvvHs"
+                            for="touringcarMessagesDatePicker"
+                          >
+                            <span
+                              class="sc-brPLxw dGBiZJ"
+                            >
+                              <strong>
+                                Datum
+                              </strong>
+                            </span>
+                          </label>
+                          <input
+                            class="sc-hknOHE joUrDy"
+                            id="touringcarMessagesDatePicker"
+                            type="date"
+                            value="2024-02-05"
+                          />
                         </p>
                       </div>
                     </div>
@@ -546,7 +563,7 @@ FAQ en contactgegevens"
                       tabindex="0"
                     >
                       <div
-                        class="sc-jdUcAg hVRYmp"
+                        class="sc-fyVfxW llgRlv"
                       >
                         <h2
                           class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-camqpD fHdmku"
@@ -567,7 +584,7 @@ FAQ en contactgegevens"
                         </p>
                       </div>
                       <div
-                        class="sc-jdUcAg hVRYmp"
+                        class="sc-fyVfxW llgRlv"
                       >
                         <h2
                           class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-camqpD fHdmku"
@@ -576,7 +593,7 @@ FAQ en contactgegevens"
                         </h2>
                       </div>
                       <div
-                        class="sc-jdUcAg hVRYmp"
+                        class="sc-fyVfxW llgRlv"
                         style="margin-block-end: 3em;"
                       >
                         <h2
@@ -876,7 +893,7 @@ FAQ en contactgegevens"
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-fmzyuX jsRzGG"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-dwalKd AfNxO"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -889,7 +906,7 @@ FAQ en contactgegevens"
               data-testid="topRight"
             >
               <div
-                class="sc-bddgXz iTGqvB"
+                class="sc-eHsDsR gYgznV"
               >
                 <button
                   aria-controls="legend"
@@ -926,7 +943,7 @@ FAQ en contactgegevens"
                   id="legend"
                 >
                   <div
-                    class="sc-eHsDsR cMemZM"
+                    class="sc-fmzyuX jkXEiC"
                   >
                     <label
                       class="sc-gFVvzn jmImEg"
@@ -938,7 +955,7 @@ FAQ en contactgegevens"
                         Berichten
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-jdkBTo gOsiuV"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC bOvWLr"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -974,7 +991,7 @@ FAQ en contactgegevens"
                         Haltes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-jdkBTo eimZYS"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC cAWIhI"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1010,7 +1027,7 @@ FAQ en contactgegevens"
                         Parkeren
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-jdkBTo kVayoN"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC eMzwKL"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1046,7 +1063,7 @@ FAQ en contactgegevens"
                         Maximale doorrijhoogtes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-jdkBTo jIbYkX"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC eoqwAl"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1082,7 +1099,7 @@ FAQ en contactgegevens"
                         Aanbevolen routes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-jdkBTo dLrvfd"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC llTsvz"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1118,7 +1135,7 @@ FAQ en contactgegevens"
                         Toegestane wegen &gt;7,5 ton
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-jdkBTo dwIMVc"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC hIKtue"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1154,7 +1171,7 @@ FAQ en contactgegevens"
                         &gt;7,5 ton mét ontheffing
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-jdkBTo cMZAIw"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC cLdjJi"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1190,7 +1207,7 @@ FAQ en contactgegevens"
                         Milieuzone
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-jdkBTo iuHjNj"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC gjRUbB"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1665,7 +1682,7 @@ FAQ en contactgegevens"
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-cspYLC jkpnfb gutwmp leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-BQMaI jkpnfb hRDWhZ leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1811,12 +1828,29 @@ FAQ en contactgegevens"
                     tabindex="0"
                   >
                     <div
-                      class="sc-jdUcAg hVRYmp"
+                      class="sc-fyVfxW llgRlv"
                     >
                       <p
                         class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
                       >
-                        Exercitation voluptate officia voluptate commodo ex sit adipisicing ex. Proident sit labore fugiat adipisicing consequat quis anim elit. Veniam occaecat eiusmod eu aliquip nulla Lorem. Adipisicing sit laboris non consequat adipisicing et ea laborum ullamco commodo proident. Commodo pariatur duis Lorem magna excepteur veniam duis ipsum est ex incididunt. Ea quis sint veniam esse do. Irure proident duis amet officia voluptate et nisi deserunt adipisicing tempor.
+                        <label
+                          class="sc-gFVvzn eVvvHs"
+                          for="touringcarMessagesDatePicker"
+                        >
+                          <span
+                            class="sc-brPLxw dGBiZJ"
+                          >
+                            <strong>
+                              Datum
+                            </strong>
+                          </span>
+                        </label>
+                        <input
+                          class="sc-hknOHE joUrDy"
+                          id="touringcarMessagesDatePicker"
+                          type="date"
+                          value="2024-02-05"
+                        />
                       </p>
                     </div>
                   </div>
@@ -1829,7 +1863,7 @@ FAQ en contactgegevens"
                     tabindex="0"
                   >
                     <div
-                      class="sc-jdUcAg hVRYmp"
+                      class="sc-fyVfxW llgRlv"
                     >
                       <h2
                         class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-camqpD fHdmku"
@@ -1850,7 +1884,7 @@ FAQ en contactgegevens"
                       </p>
                     </div>
                     <div
-                      class="sc-jdUcAg hVRYmp"
+                      class="sc-fyVfxW llgRlv"
                     >
                       <h2
                         class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-camqpD fHdmku"
@@ -1859,7 +1893,7 @@ FAQ en contactgegevens"
                       </h2>
                     </div>
                     <div
-                      class="sc-jdUcAg hVRYmp"
+                      class="sc-fyVfxW llgRlv"
                       style="margin-block-end: 3em;"
                     >
                       <h2
@@ -2159,7 +2193,7 @@ FAQ en contactgegevens"
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-fmzyuX jsRzGG"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-dwalKd AfNxO"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -2172,7 +2206,7 @@ FAQ en contactgegevens"
             data-testid="topRight"
           >
             <div
-              class="sc-bddgXz iTGqvB"
+              class="sc-eHsDsR gYgznV"
             >
               <button
                 aria-controls="legend"
@@ -2209,7 +2243,7 @@ FAQ en contactgegevens"
                 id="legend"
               >
                 <div
-                  class="sc-eHsDsR cMemZM"
+                  class="sc-fmzyuX jkXEiC"
                 >
                   <label
                     class="sc-gFVvzn jmImEg"
@@ -2221,7 +2255,7 @@ FAQ en contactgegevens"
                       Berichten
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-jdkBTo gOsiuV"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC bOvWLr"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2257,7 +2291,7 @@ FAQ en contactgegevens"
                       Haltes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-jdkBTo eimZYS"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC cAWIhI"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2293,7 +2327,7 @@ FAQ en contactgegevens"
                       Parkeren
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-jdkBTo kVayoN"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC eMzwKL"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2329,7 +2363,7 @@ FAQ en contactgegevens"
                       Maximale doorrijhoogtes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-jdkBTo jIbYkX"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC eoqwAl"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2365,7 +2399,7 @@ FAQ en contactgegevens"
                       Aanbevolen routes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-jdkBTo dLrvfd"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC llTsvz"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2401,7 +2435,7 @@ FAQ en contactgegevens"
                       Toegestane wegen &gt;7,5 ton
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-jdkBTo dwIMVc"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC hIKtue"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2437,7 +2471,7 @@ FAQ en contactgegevens"
                       &gt;7,5 ton mét ontheffing
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-jdkBTo cMZAIw"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC cLdjJi"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2473,7 +2507,7 @@ FAQ en contactgegevens"
                       Milieuzone
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-jdkBTo iuHjNj"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC gjRUbB"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"

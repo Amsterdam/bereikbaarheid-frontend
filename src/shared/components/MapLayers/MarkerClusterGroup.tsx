@@ -66,9 +66,7 @@ export const MarkerClusterGroup = ({ markers, events, setInstance }: MarkerClust
 
   // Call back with the markerClusterGroup
   useEffect(() => {
-    if (!setInstance || !markerClusterGroup) {
-      return undefined
-    }
+    if (!setInstance || !markerClusterGroup) return undefined
 
     setInstance(markerClusterGroup)
 
@@ -79,9 +77,7 @@ export const MarkerClusterGroup = ({ markers, events, setInstance }: MarkerClust
 
   // Add the layer events to markerClusterGroup
   useEffect(() => {
-    if (!markerClusterGroup || !events) {
-      return undefined
-    }
+    if (!markerClusterGroup || !events) return undefined
 
     Object.entries(events).forEach(([event, eventHandler]) => {
       markerClusterGroup.on(event, eventHandler)
@@ -96,11 +92,9 @@ export const MarkerClusterGroup = ({ markers, events, setInstance }: MarkerClust
 
   // Add / Remove Markers to the markerClusterGroup
   useEffect(() => {
-    if (!markerClusterGroup) {
-      return undefined
-    }
+    if (!markerClusterGroup) return undefined
 
-    // Bulk remove all the existing layers
+    // Bulk remove all the existing layers.
     markerClusterGroup.clearLayers()
     markerClusterGroup.addLayers(markers)
 

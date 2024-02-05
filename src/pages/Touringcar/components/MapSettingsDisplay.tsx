@@ -12,6 +12,7 @@ import dataLinks from '../data/dataLinks'
 
 import ParkingSpacesList from './LocationsList/ParkingSpaces'
 import StopsList from './LocationsList/Stops'
+import Messages from './Messages'
 
 const PaddedContent = styled.div`
   padding-top: 1em;
@@ -33,13 +34,7 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
           onClick={() => setActiveTab(MapPanelTab.MESSAGES)}
         >
           <PaddedContent>
-            <Paragraph>
-              Exercitation voluptate officia voluptate commodo ex sit adipisicing ex. Proident sit labore fugiat
-              adipisicing consequat quis anim elit. Veniam occaecat eiusmod eu aliquip nulla Lorem. Adipisicing sit
-              laboris non consequat adipisicing et ea laborum ullamco commodo proident. Commodo pariatur duis Lorem
-              magna excepteur veniam duis ipsum est ex incididunt. Ea quis sint veniam esse do. Irure proident duis amet
-              officia voluptate et nisi deserunt adipisicing tempor.
-            </Paragraph>
+            <Messages />
           </PaddedContent>
         </Tab>
 

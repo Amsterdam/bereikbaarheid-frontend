@@ -1,4 +1,4 @@
-import { useCallback, useContext } from 'react'
+import { useCallback, useContext, useEffect } from 'react'
 
 import { MapPanelContext, mapPanelConstants } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
@@ -9,17 +9,18 @@ import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGro
 import TouringcarMarker from '../Marker/Marker'
 
 export const MessagesLayer = () => {
-  const { activeMapLayers, setCurrentMessage, setActiveTab } = useTouringcarMapContext()
+  const { activeMapLayers, messagesDate, setCurrentMessage, setActiveTab } = useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
 
-  const { isLoading, error, isError, data } = useQuery({
+  const { isLoading, error, isError, data, refetch } = useQuery({
     enabled: true,
     queryKey: ['touringcarMessages'],
-    queryFn: () =>
-      getTouringcarMessages({
-        datum: '2024-02-14',
-      }),
+    queryFn: () => getTouringcarMessages({ datum: messagesDate }),
   })
+
+  useEffect(() => {
+    refetch()
+  }, [refetch, messagesDate])
 
   const findMessage = useCallback(
     (title: string) => {
@@ -33,15 +34,15 @@ export const MessagesLayer = () => {
     return data!.features.map((item: TouringcarMessage) => {
       const marker = TouringcarMarker(item, MapLayerId.touringcarMessagesLayerId)
 
-      let tooltipText = `<p><strong>${item.properties?.title}</strong></p>
-<p>${item.properties?.body}</p>
-Advies: <p>${item.properties?.advice}</p>`
+      let tooltipText = `<p><strong>${item.properties.title}</strong></p>
+      ${item.properties.body ?? `<p>${item.properties.body}</p>`}
+      ${item.properties.advice ?? `<p><strong>Advies:</strong> ${item.properties.advice}</p>`}`
 
       marker.bindTooltip(tooltipText)
 
       marker.on('click', () => {
         setActiveTab(MapPanelTab.MESSAGES)
-        findMessage(item.properties?.title)
+        findMessage(item.properties.title)
         setPositionFromSnapPoint(mapPanelConstants.SnapPoint.Halfway)
       })
 

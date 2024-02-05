@@ -3,6 +3,7 @@ import { createContext, Dispatch, SetStateAction, useContext } from 'react'
 import { TouringcarMessage } from 'api/touringcar/messages'
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 import { TouringcarStop } from 'api/touringcar/stops'
+import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 
@@ -93,12 +94,14 @@ interface TouringcarContextProps {
   activeMapLayers: typeof mapLayersInitialState
   updateActiveMapLayers: Dispatch<mapLayerActionType>
   updateActiveMapLayersWithSearchParams: () => void
+  messagesDate: DateHumanReadable_Year_Month_Day | undefined
+  setMessagesDate: Dispatch<SetStateAction<DateHumanReadable_Year_Month_Day>>
   currentMessage: TouringcarMessage | undefined
-  setCurrentMessage: (stop: TouringcarMessage | undefined) => void
+  setCurrentMessage: (stop?: TouringcarMessage) => void
   currentStop: TouringcarStop | undefined
-  setCurrentStop: (stop: TouringcarStop | undefined) => void
+  setCurrentStop: (stop?: TouringcarStop) => void
   currentParkingSpace: TouringcarParkingSpace | undefined
-  setCurrentParkingSpace: (parkingSpace: TouringcarParkingSpace | undefined) => void
+  setCurrentParkingSpace: (parkingSpace?: TouringcarParkingSpace) => void
   unsetDetailsPane: () => void
   activeTab: MapPanelTab | undefined
   setActiveTab: Dispatch<SetStateAction<MapPanelTab | undefined>>
