@@ -59,7 +59,9 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
     const noLayerIsActive = Object.values(activeMapLayers).every(l => !l)
     const allLayersAreActive = Object.values(activeMapLayers).every(l => l)
 
-    if (noLayerIsActive || allLayersAreActive) {
+    if (allLayersAreActive) {
+      setQueryParams({ datum: format(messagesDate, DATE_FORMAT_REVERSED) }, { replace: true })
+    } else if (noLayerIsActive) {
       setQueryParams({}, { replace: true })
     } else {
       const fromActiveLayersToParams = Object.entries(activeMapLayers).reduce(
