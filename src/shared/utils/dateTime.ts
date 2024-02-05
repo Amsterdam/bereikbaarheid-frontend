@@ -82,4 +82,4 @@ export type {
   DateTimeHumanReadable_dd_MM_yyyy_HH_mm,
   DateTimeISO_UTCString,
 }
-export { formatISODate, stripSecondsFromTime, getDayOfTheWeekInDutch }
+export { DATETIME_FORMAT_DEFAULT, DATE_FORMAT_REVERSED, formatISODate, stripSecondsFromTime, getDayOfTheWeekInDutch }

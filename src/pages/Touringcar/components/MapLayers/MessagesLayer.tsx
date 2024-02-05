@@ -3,8 +3,10 @@ import { useCallback, useContext, useEffect } from 'react'
 import { MapPanelContext, mapPanelConstants } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
 import getTouringcarMessages, { TouringcarMessage } from 'api/touringcar/messages'
+import { format } from 'date-fns'
 import { MapLayerId, MapPanelTab, useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
 import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGroup'
+import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 
 import TouringcarMarker from '../Marker/Marker'
 
@@ -15,7 +17,8 @@ export const MessagesLayer = () => {
   const { isLoading, error, isError, data, refetch } = useQuery({
     enabled: true,
     queryKey: ['touringcarMessages'],
-    queryFn: () => getTouringcarMessages({ datum: messagesDate }),
+    queryFn: () =>
+      getTouringcarMessages({ datum: format(messagesDate, DATE_FORMAT_REVERSED) as DateHumanReadable_Year_Month_Day }),
   })
 
   useEffect(() => {
@@ -34,6 +37,7 @@ export const MessagesLayer = () => {
     return data!.features.map((item: TouringcarMessage) => {
       const marker = TouringcarMarker(item, MapLayerId.touringcarMessagesLayerId)
 
+      // TODO: i18n
       let tooltipText = `<p><strong>${item.properties.title}</strong></p>
       ${item.properties.body ?? `<p>${item.properties.body}</p>`}
       ${item.properties.advice ?? `<p><strong>Advies:</strong> ${item.properties.advice}</p>`}`
