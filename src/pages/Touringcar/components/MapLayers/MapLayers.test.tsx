@@ -8,6 +8,8 @@ import { withApp } from '../../../../../test/utils/withApp'
 
 describe('RoutesLayers', () => {
   jest.setTimeout(15000)
+  jest.useRealTimers()
+  jest.setSystemTime(new Date('2023-10-01T10:00:00.000Z'))
 
   it('renders correctly', async () => {
     await delay(1500)
