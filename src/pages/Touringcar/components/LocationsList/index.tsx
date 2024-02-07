@@ -1,6 +1,7 @@
 import { Fragment, useMemo } from 'react'
 
-import { Table, TableBody, TableCell, TableHeader, TableRow } from '@amsterdam/asc-ui'
+import { useMapInstance } from '@amsterdam/arm-core'
+import { Table, TableBody, TableCell, TableHeader, TableRow, themeColor } from '@amsterdam/asc-ui'
 import { TouringcarStop } from 'api/touringcar/stops'
 import { sortBy } from 'lodash'
 import { useTranslation } from 'react-i18next'
@@ -14,8 +15,18 @@ const TableHeaderStrong = styled(TableHeader)`
   font-weight: 700;
 `
 
+const TableRowClickable = styled(TableRow)`
+  &:hover,
+  &:focus {
+    background-color: ${themeColor('tint', 'level3')};
+    cursor: pointer;
+  }
+`
+
 function LocationsList({ locationItems }: { locationItems: TouringcarStop[] }) {
   const { t } = useTranslation()
+
+  const mapInstance = useMapInstance()
 
   const sortedLocations = useMemo<SortableTouringcarStop[]>(() => {
     const sortableLocations = locationItems.map((item: SortableTouringcarStop) => {
@@ -37,14 +48,21 @@ function LocationsList({ locationItems }: { locationItems: TouringcarStop[] }) {
       </TableHeaderStrong>
 
       <TableBody>
-        {sortedLocations.map(({ properties: item }, index) => {
-          if (!item) return <Fragment key={index}></Fragment>
+        {sortedLocations.map(feature => {
+          const { properties } = feature
+
+          if (!feature || !properties) return <Fragment key={feature.id}></Fragment>
 
           return (
-            <TableRow key={item.omschrijving}>
-              <TableCell>{item.omschrijving}</TableCell>
-              <TableCell width="25%">{item.plaatsen}</TableCell>
-            </TableRow>
+            <TableRowClickable
+              key={feature.id}
+              onClick={() => {
+                mapInstance.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 20)
+              }}
+            >
+              <TableCell>{properties.omschrijving}</TableCell>
+              <TableCell width="25%">{properties.plaatsen}</TableCell>
+            </TableRowClickable>
           )
         })}
       </TableBody>

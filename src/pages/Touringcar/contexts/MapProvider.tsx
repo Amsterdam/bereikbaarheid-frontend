@@ -1,8 +1,11 @@
 import { ReactNode, useCallback, useEffect, useReducer, useState } from 'react'
 
+import { TouringcarMessage } from 'api/touringcar/messages'
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 import { TouringcarStop } from 'api/touringcar/stops'
+import { format } from 'date-fns'
 import { useSearchParams } from 'react-router-dom'
+import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 
 import {
   MapLayerParam,
@@ -74,19 +77,32 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
     setBlockURLParamsMutation(false)
   }, [blockURLParamsMutation, queryParams, setQueryParams, activeMapLayers])
 
+  const [messagesDate, setMessagesDate] = useState<DateHumanReadable_Year_Month_Day>(
+    format(new Date(), 'yyyy-MM-dd') as DateHumanReadable_Year_Month_Day
+  )
+  const [currentMessage, doSetCurrentMessage] = useState<TouringcarMessage | undefined>(undefined)
+  const setCurrentMessage = useCallback((message?: TouringcarMessage) => {
+    doSetCurrentParkingSpace(undefined)
+    doSetCurrentStop(undefined)
+    doSetCurrentMessage(message)
+  }, [])
+
   const [currentStop, doSetCurrentStop] = useState<TouringcarStop | undefined>(undefined)
   const setCurrentStop = useCallback((stop?: TouringcarStop) => {
+    doSetCurrentMessage(undefined)
     doSetCurrentParkingSpace(undefined)
     doSetCurrentStop(stop)
   }, [])
 
   const [currentParkingSpace, doSetCurrentParkingSpace] = useState<TouringcarParkingSpace | undefined>(undefined)
   const setCurrentParkingSpace = useCallback((parkingSpace?: TouringcarParkingSpace) => {
+    doSetCurrentMessage(undefined)
     doSetCurrentStop(undefined)
     doSetCurrentParkingSpace(parkingSpace)
   }, [])
 
   const unsetDetailsPane = useCallback(() => {
+    doSetCurrentMessage(undefined)
     doSetCurrentStop(undefined)
     doSetCurrentParkingSpace(undefined)
   }, [])
@@ -101,6 +117,10 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
         activeMapLayers,
         updateActiveMapLayers,
         updateActiveMapLayersWithSearchParams,
+        messagesDate,
+        setMessagesDate,
+        currentMessage,
+        setCurrentMessage,
         currentStop,
         setCurrentStop,
         currentParkingSpace,
