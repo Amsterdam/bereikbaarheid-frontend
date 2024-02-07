@@ -13,9 +13,6 @@ help:                               ## Show this help.
 build:                              ## Build docker image
 	$(dc) build
 
-push: build                         ## Push docker image to registry
-	$(dc) push
-
 app:                                ## Run app
 	$(run) --service-ports frontend
 

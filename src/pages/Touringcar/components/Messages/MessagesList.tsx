@@ -4,7 +4,9 @@ import { useMapInstance } from '@amsterdam/arm-core'
 import { Accordion, Heading, Image, Link, List, ListItem, Paragraph, themeColor } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import getTouringcarMessages from 'api/touringcar/messages'
+import { format } from 'date-fns'
 import useTouringcarMapContext from 'pages/Touringcar/contexts/MapContext'
+import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
 const StyledAccordion = styled(Accordion)<{ important?: boolean }>`
@@ -29,7 +31,11 @@ function MessagesList() {
   const { isLoading, error, isError, data, refetch } = useQuery({
     enabled: true,
     queryKey: ['touringcarMessages'],
-    queryFn: () => getTouringcarMessages({ datum: messagesDate }),
+    queryFn: () => {
+      return getTouringcarMessages({
+        datum: format(messagesDate, DATE_FORMAT_REVERSED) as DateHumanReadable_Year_Month_Day,
+      })
+    },
   })
 
   useEffect(() => {

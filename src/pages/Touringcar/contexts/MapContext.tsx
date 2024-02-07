@@ -3,7 +3,6 @@ import { createContext, Dispatch, SetStateAction, useContext } from 'react'
 import { TouringcarMessage } from 'api/touringcar/messages'
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 import { TouringcarStop } from 'api/touringcar/stops'
-import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 
@@ -94,8 +93,8 @@ interface TouringcarContextProps {
   activeMapLayers: typeof mapLayersInitialState
   updateActiveMapLayers: Dispatch<mapLayerActionType>
   updateActiveMapLayersWithSearchParams: () => void
-  messagesDate: DateHumanReadable_Year_Month_Day | undefined
-  setMessagesDate: Dispatch<SetStateAction<DateHumanReadable_Year_Month_Day>>
+  messagesDate: Date
+  setMessagesDate: Dispatch<SetStateAction<Date>>
   currentMessage: TouringcarMessage | undefined
   setCurrentMessage: (stop?: TouringcarMessage) => void
   currentStop: TouringcarStop | undefined
