@@ -1,4 +1,5 @@
-import { screen, waitFor } from '@testing-library/react'
+import { act, screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { RouteIds } from 'routes'
 import delay from 'shared/utils/delay'
 import { getGeneratedPath } from 'shared/utils/path'
@@ -7,6 +8,8 @@ import { withApp } from '../../../../../test/utils/withApp'
 
 describe('RoutesLayers', () => {
   jest.setTimeout(15000)
+  jest.useRealTimers()
+  jest.setSystemTime(new Date('2023-10-01T10:00:00.000Z'))
 
   it('renders correctly', async () => {
     await delay(1500)
@@ -49,6 +52,7 @@ describe('RoutesLayers', () => {
   it('has "haltes" layer checked and the layer and the list are visible', async () => {
     const pathToPage = `${getGeneratedPath(RouteIds.TOURINGCAR_PAGE)}?haltes&parkeren`
     const page = withApp(pathToPage)
+    const user = userEvent.setup()
 
     await waitFor(() => page.rerender)
 
@@ -56,6 +60,13 @@ describe('RoutesLayers', () => {
 
     expect(await screen.findByLabelText('Haltes')).toBeChecked()
     expect(await screen.findByTestId('markercluster-stops')).toBeVisible()
+
+    await act(async () => {
+      await user.click(await screen.findByLabelText('Haltes'))
+      await delay(500)
+      await user.click(await screen.findByLabelText('Haltes'))
+    })
+
     expect(await screen.findByTestId('stops-list')).toBeVisible()
   })
 })

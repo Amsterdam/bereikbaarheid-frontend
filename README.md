@@ -11,7 +11,7 @@ Deze folder is als volgt ingedeeld:
 - `public`: bevat static files; worden meegenomen in `npm run build`
 - `src`: bevat de React applicatie.
 - `test`: bevat test utils. Deze worden gebruikt in `npm run test`
-- `.env.*`: env variables voor de diverse omgevingen. Worden ingesteld door `npm run start` of via de `Jenkinsfile` in de root folder.
+- `.env.*`: env variables voor de diverse omgevingen. Worden ingesteld door `npm run start` 
 - `Dockerfile` bevat config voor de Docker omgeving.
 - `nginx.*.conf`; bevat nginx configuraties voor diverse omgevingen.
 
@@ -50,7 +50,7 @@ De frontend is gescaffold met [Create React App](https://github.com/facebook/cre
 
 On every pull request and push to the `main` branch, the application is [linted and tested if it can be build](./.github/workflows/ci.yml).
 
-Additionally, the app is deployed to the acceptance environment on push to the `main` branch, see [the `Jenkinsfile`](./Jenkinsfile).
+Additionally, the app is deployed to the acceptance environment on push to the `main` branch
 
 ## Available Scripts
 
