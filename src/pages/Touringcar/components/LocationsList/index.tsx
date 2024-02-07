@@ -48,14 +48,14 @@ function LocationsList({ locationItems }: { locationItems: TouringcarStop[] }) {
       </TableHeaderStrong>
 
       <TableBody>
-        {sortedLocations.map((feature, index) => {
+        {sortedLocations.map(feature => {
           const { properties } = feature
 
-          if (!feature || !properties) return <Fragment key={index}></Fragment>
+          if (!feature || !properties) return <Fragment key={feature.id}></Fragment>
 
           return (
             <TableRowClickable
-              key={properties.omschrijving}
+              key={feature.id}
               onClick={() => {
                 mapInstance.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 20)
               }}

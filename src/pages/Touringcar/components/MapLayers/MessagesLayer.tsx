@@ -37,7 +37,6 @@ export const MessagesLayer = () => {
     return data!.features.map((item: TouringcarMessage) => {
       const marker = TouringcarMarker(item, MapLayerId.touringcarMessagesLayerId)
 
-      // TODO: i18n
       let tooltipText = `<p><strong>${item.properties.title}</strong></p>
       ${item.properties.body ?? `<p>${item.properties.body}</p>`}
       ${item.properties.advice ?? `<p><strong>Advies:</strong> ${item.properties.advice}</p>`}`

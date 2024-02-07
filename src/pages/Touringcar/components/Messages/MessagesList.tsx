@@ -31,8 +31,11 @@ function MessagesList() {
   const { isLoading, error, isError, data, refetch } = useQuery({
     enabled: true,
     queryKey: ['touringcarMessages'],
-    queryFn: () =>
-      getTouringcarMessages({ datum: format(messagesDate, DATE_FORMAT_REVERSED) as DateHumanReadable_Year_Month_Day }),
+    queryFn: () => {
+      return getTouringcarMessages({
+        datum: format(messagesDate, DATE_FORMAT_REVERSED) as DateHumanReadable_Year_Month_Day,
+      })
+    },
   })
 
   useEffect(() => {
