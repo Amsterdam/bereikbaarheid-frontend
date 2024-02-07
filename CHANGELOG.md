@@ -12,6 +12,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Fixed
 
+## [v3.3.0 - 2024-01-29](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.2.0...v3.3.0)
+
+## Added
+
+- Touringcar: French language support
+
+## Changed
+
+- Touringcar: legend labels
+- Touringcar: text about situation in 2024
+
 ## [v3.2.0 - 2023-12-14](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.1.0...v3.2.0)
 
 ### Changed

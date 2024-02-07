@@ -12,6 +12,7 @@ import dataLinks from '../data/dataLinks'
 
 import ParkingSpacesList from './LocationsList/ParkingSpaces'
 import StopsList from './LocationsList/Stops'
+import Messages from './Messages'
 
 const PaddedContent = styled.div`
   padding-top: 1em;
@@ -24,17 +25,18 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
   const { t } = useTranslation()
 
   return (
+    // @ts-ignore
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label={t('_pageTouringcar._mapPanel.label')} activeTab={activeTab}>
-        {/* TODO: activate once messages feature is implemented. */}
-        {/* <Tab
+        <Tab
           id={MapPanelTab.MESSAGES}
           label={t('_pageTouringcar._mapPanel.messages')}
           onClick={() => setActiveTab(MapPanelTab.MESSAGES)}
         >
-          <br />
-          <Paragraph>Berichten</Paragraph>
-        </Tab> */}
+          <PaddedContent>
+            <Messages />
+          </PaddedContent>
+        </Tab>
 
         <Tab
           id={MapPanelTab.INFO}

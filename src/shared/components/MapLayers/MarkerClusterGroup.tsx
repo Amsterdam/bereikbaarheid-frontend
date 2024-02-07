@@ -11,11 +11,9 @@ import { createGlobalStyle, useTheme } from 'styled-components'
 
 const Styles = createGlobalStyle`
   .arm__icon--clustergroup-default {
-    background-color: ${themeColor('secondary')};
+    background-color: ${themeColor('primary')};
     background-size: 100%;
     border-radius: 50%;
-    border: 3px solid;
-    box-shadow: 1px 1px 2px black;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -56,8 +54,8 @@ export const MarkerClusterGroup = ({ markers, events, setInstance }: MarkerClust
             </div>
             `,
           className: 'arm__icon--clustergroup-default',
-          iconSize: L.point(39, 39),
-          iconAnchor: L.point(19, 19),
+          iconSize: L.point(24, 24),
+          iconAnchor: L.point(12, 12),
         }),
       spiderLegPolylineOptions: {
         color: theme.colors.primary?.main,
@@ -68,9 +66,7 @@ export const MarkerClusterGroup = ({ markers, events, setInstance }: MarkerClust
 
   // Call back with the markerClusterGroup
   useEffect(() => {
-    if (!setInstance || !markerClusterGroup) {
-      return undefined
-    }
+    if (!setInstance || !markerClusterGroup) return undefined
 
     setInstance(markerClusterGroup)
 
@@ -81,9 +77,7 @@ export const MarkerClusterGroup = ({ markers, events, setInstance }: MarkerClust
 
   // Add the layer events to markerClusterGroup
   useEffect(() => {
-    if (!markerClusterGroup || !events) {
-      return undefined
-    }
+    if (!markerClusterGroup || !events) return undefined
 
     Object.entries(events).forEach(([event, eventHandler]) => {
       markerClusterGroup.on(event, eventHandler)
@@ -98,11 +92,9 @@ export const MarkerClusterGroup = ({ markers, events, setInstance }: MarkerClust
 
   // Add / Remove Markers to the markerClusterGroup
   useEffect(() => {
-    if (!markerClusterGroup) {
-      return undefined
-    }
+    if (!markerClusterGroup) return undefined
 
-    // Bulk remove all the existing layers
+    // Bulk remove all the existing layers.
     markerClusterGroup.clearLayers()
     markerClusterGroup.addLayers(markers)
 
