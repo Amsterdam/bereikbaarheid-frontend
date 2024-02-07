@@ -2429,10 +2429,10 @@
     lz-string "^1.5.0"
     pretty-format "^27.0.2"
 
-"@testing-library/jest-dom@^6.3.0":
-  version "6.4.0"
-  resolved "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-6.4.0.tgz"
-  integrity sha512-GgGT3OR8qhIjk2SBMy51AYDWoMnAyR/cwjZO4SttuBmIQ9wWy9QmVOeaSbgT5Bm0J6qLBaf4+dsJWfisvafoaA==
+"@testing-library/jest-dom@^6.4.1":
+  version "6.4.2"
+  resolved "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-6.4.2.tgz"
+  integrity sha512-CzqH0AFymEMG48CpzXFriYYkOjk6ZGPCLMhW9e9jg3KMCn5OfJecF8GtGW7yGfR/IgCe3SX8BSwjdzI6BBbZLw==
   dependencies:
     "@adobe/css-tools" "^4.3.2"
     "@babel/runtime" "^7.9.2"
@@ -2621,7 +2621,7 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
-"@types/geojson@*", "@types/geojson@^7946.0.13":
+"@types/geojson@*", "@types/geojson@^7946.0.14":
   version "7946.0.14"
   resolved "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.14.tgz"
   integrity sha512-WCfD5Ht3ZesJUsONdhvm84dmzWOiOzOAqOncN0++w0lBw1o8OuDNJF2McvvCef/yBqb/HYRahp1BYtODFQ8bRg==
@@ -2741,7 +2741,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*", "@types/node@^18.19.10":
+"@types/node@*", "@types/node@^18.19.12":
   version "18.19.14"
   resolved "https://registry.npmjs.org/@types/node/-/node-18.19.14.tgz"
   integrity sha512-EnQ4Us2rmOS64nHDWr0XqAD8DsO6f3XR6lf9UIIrZQpUzPVdN/oPuEzfDWNHSyXLvoGgjuEm/sPwFGSSs35Wtg==
@@ -6557,7 +6557,7 @@ i18next-browser-languagedetector@^7.2.0:
   dependencies:
     "@babel/runtime" "^7.23.2"
 
-i18next@^23.8.1, "i18next@>= 23.2.3":
+i18next@^23.8.2, "i18next@>= 23.2.3":
   version "23.8.2"
   resolved "https://registry.npmjs.org/i18next/-/i18next-23.8.2.tgz"
   integrity sha512-Z84zyEangrlERm0ZugVy4bIt485e/H8VecGUZkZWrH7BDePG6jT73QdL9EA1tRTTVVMpry/MgWIP1FjEn0DRXA==
