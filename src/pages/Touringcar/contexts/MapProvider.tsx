@@ -5,7 +5,7 @@ import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 import { TouringcarStop } from 'api/touringcar/stops'
 import { format } from 'date-fns'
 import { useSearchParams } from 'react-router-dom'
-import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
+import { DATE_FORMAT_REVERSED } from 'shared/utils/dateTime'
 
 import {
   MapLayerParam,
@@ -22,6 +22,8 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
 
   const [blockURLParamsMutation, setBlockURLParamsMutation] = useState(false)
   const [queryParams, setQueryParams] = useSearchParams()
+
+  const [messagesDate, setMessagesDate] = useState<Date>(new Date())
 
   // Show or hide layers on basis of what parameters are in the URL.
   const updateActiveMapLayersWithSearchParams = useCallback(() => {
@@ -57,7 +59,11 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
     const noLayerIsActive = Object.values(activeMapLayers).every(l => !l)
     const allLayersAreActive = Object.values(activeMapLayers).every(l => l)
 
-    if (noLayerIsActive || allLayersAreActive) {
+    const formattedDate = format(messagesDate, DATE_FORMAT_REVERSED)
+
+    if (allLayersAreActive) {
+      setQueryParams({ datum: formattedDate }, { replace: true })
+    } else if (noLayerIsActive) {
       setQueryParams({}, { replace: true })
     } else {
       const fromActiveLayersToParams = Object.entries(activeMapLayers).reduce(
@@ -71,15 +77,19 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
         ''
       )
 
-      setQueryParams(fromActiveLayersToParams, { replace: true })
+      if (fromActiveLayersToParams.includes('berichten')) {
+        setQueryParams(`datum=${formattedDate}&${fromActiveLayersToParams}`, {
+          replace: true,
+        })
+      } else {
+        setQueryParams(fromActiveLayersToParams, { replace: true })
+      }
     }
 
     setBlockURLParamsMutation(false)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [blockURLParamsMutation, queryParams, setQueryParams, activeMapLayers])
 
-  const [messagesDate, setMessagesDate] = useState<DateHumanReadable_Year_Month_Day>(
-    format(new Date(), 'yyyy-MM-dd') as DateHumanReadable_Year_Month_Day
-  )
   const [currentMessage, doSetCurrentMessage] = useState<TouringcarMessage | undefined>(undefined)
   const setCurrentMessage = useCallback((message?: TouringcarMessage) => {
     doSetCurrentParkingSpace(undefined)
