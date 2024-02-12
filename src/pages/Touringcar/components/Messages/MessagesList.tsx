@@ -5,6 +5,7 @@ import { Accordion, Heading, Image, Link, List, ListItem, Paragraph, themeColor 
 import { useQuery } from '@tanstack/react-query'
 import getTouringcarMessages from 'api/touringcar/messages'
 import { format } from 'date-fns'
+import { t } from 'i18next'
 import useTouringcarMapContext from 'pages/Touringcar/contexts/MapContext'
 import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 import styled from 'styled-components'
@@ -66,34 +67,29 @@ function MessagesList() {
               )}
               {feat.properties.advice ?? (
                 <Paragraph>
-                  {/* TODO: i18n */}
-                  <Heading as="h3">Advies</Heading>
+                  <Heading as="h3">{t('_pageTouringcar._mapPanel._messages.advice')}</Heading>
                   {feat.properties.advice}
                 </Paragraph>
               )}
               {feat.properties.link ?? (
                 <Paragraph>
-                  {/* TODO: i18n */}
-                  <Heading as="h3">Meer informatie</Heading>
+                  <Heading as="h3">{t('_pageTouringcar._mapPanel._messages.moreInfo')}</Heading>
                   <Link to={feat.properties.link}>{feat.properties.link}</Link>
                 </Paragraph>
               )}
               {feat.properties.category ?? (
                 <Paragraph>
-                  {/* TODO: i18n */}
-                  <strong>Categorie:</strong> {feat.properties.category}
+                  <strong>{t('_pageTouringcar._mapPanel._messages.category')}:</strong> {feat.properties.category}
                 </Paragraph>
               )}
               {feat.properties.startdate ?? (
                 <Paragraph style={{ marginBlockEnd: 0 }}>
-                  {/* TODO: i18n */}
-                  <strong>Begindatum:</strong> {feat.properties.startdate}
+                  <strong>{t('_pageTouringcar._mapPanel._messages.startDate')}:</strong> {feat.properties.startdate}
                 </Paragraph>
               )}
               {feat.properties.enddate ?? (
                 <Paragraph>
-                  {/* TODO: i18n */}
-                  <strong>Einddatum:</strong> {feat.properties.enddate}
+                  <strong>{t('_pageTouringcar._mapPanel._messages.endDate')}:</strong> {feat.properties.enddate}
                 </Paragraph>
               )}
             </StyledAccordion>
