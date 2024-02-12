@@ -2,6 +2,7 @@ import { useEffect, useMemo } from 'react'
 
 import { Input, Label, Paragraph } from '@amsterdam/asc-ui'
 import { format, parse } from 'date-fns'
+import { t } from 'i18next'
 import { useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
 import { useSearchParams } from 'react-router-dom'
 import { DATE_FORMAT_REVERSED } from 'shared/utils/dateTime'
@@ -21,8 +22,7 @@ function MessagesDatePicker() {
 
   return (
     <Paragraph>
-      {/* TODO: i18n */}
-      <Label htmlFor="touringcarMessagesDatePicker" label={<strong>Datum</strong>} />
+      <Label htmlFor="touringcarMessagesDatePicker" label={<strong>{t('_generic.date')}</strong>} />
       <Input
         id="touringcarMessagesDatePicker"
         type="date"
