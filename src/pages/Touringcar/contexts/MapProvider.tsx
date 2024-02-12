@@ -1,8 +1,11 @@
 import { ReactNode, useCallback, useEffect, useReducer, useState } from 'react'
 
+import { TouringcarMessage } from 'api/touringcar/messages'
 import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
 import { TouringcarStop } from 'api/touringcar/stops'
+import { format } from 'date-fns'
 import { useSearchParams } from 'react-router-dom'
+import { DATE_FORMAT_REVERSED } from 'shared/utils/dateTime'
 
 import {
   MapLayerParam,
@@ -19,6 +22,8 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
 
   const [blockURLParamsMutation, setBlockURLParamsMutation] = useState(false)
   const [queryParams, setQueryParams] = useSearchParams()
+
+  const [messagesDate, setMessagesDate] = useState<Date>(new Date())
 
   // Show or hide layers on basis of what parameters are in the URL.
   const updateActiveMapLayersWithSearchParams = useCallback(() => {
@@ -54,7 +59,11 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
     const noLayerIsActive = Object.values(activeMapLayers).every(l => !l)
     const allLayersAreActive = Object.values(activeMapLayers).every(l => l)
 
-    if (noLayerIsActive || allLayersAreActive) {
+    const formattedDate = format(messagesDate, DATE_FORMAT_REVERSED)
+
+    if (allLayersAreActive) {
+      setQueryParams({ datum: formattedDate }, { replace: true })
+    } else if (noLayerIsActive) {
       setQueryParams({}, { replace: true })
     } else {
       const fromActiveLayersToParams = Object.entries(activeMapLayers).reduce(
@@ -68,25 +77,42 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
         ''
       )
 
-      setQueryParams(fromActiveLayersToParams, { replace: true })
+      if (fromActiveLayersToParams.includes('berichten')) {
+        setQueryParams(`datum=${formattedDate}&${fromActiveLayersToParams}`, {
+          replace: true,
+        })
+      } else {
+        setQueryParams(fromActiveLayersToParams, { replace: true })
+      }
     }
 
     setBlockURLParamsMutation(false)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [blockURLParamsMutation, queryParams, setQueryParams, activeMapLayers])
+
+  const [currentMessage, doSetCurrentMessage] = useState<TouringcarMessage | undefined>(undefined)
+  const setCurrentMessage = useCallback((message?: TouringcarMessage) => {
+    doSetCurrentParkingSpace(undefined)
+    doSetCurrentStop(undefined)
+    doSetCurrentMessage(message)
+  }, [])
 
   const [currentStop, doSetCurrentStop] = useState<TouringcarStop | undefined>(undefined)
   const setCurrentStop = useCallback((stop?: TouringcarStop) => {
+    doSetCurrentMessage(undefined)
     doSetCurrentParkingSpace(undefined)
     doSetCurrentStop(stop)
   }, [])
 
   const [currentParkingSpace, doSetCurrentParkingSpace] = useState<TouringcarParkingSpace | undefined>(undefined)
   const setCurrentParkingSpace = useCallback((parkingSpace?: TouringcarParkingSpace) => {
+    doSetCurrentMessage(undefined)
     doSetCurrentStop(undefined)
     doSetCurrentParkingSpace(parkingSpace)
   }, [])
 
   const unsetDetailsPane = useCallback(() => {
+    doSetCurrentMessage(undefined)
     doSetCurrentStop(undefined)
     doSetCurrentParkingSpace(undefined)
   }, [])
@@ -101,6 +127,10 @@ function TouringcarMapProvider({ children }: { children: ReactNode }) {
         activeMapLayers,
         updateActiveMapLayers,
         updateActiveMapLayersWithSearchParams,
+        messagesDate,
+        setMessagesDate,
+        currentMessage,
+        setCurrentMessage,
         currentStop,
         setCurrentStop,
         currentParkingSpace,

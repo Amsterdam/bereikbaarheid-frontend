@@ -10,13 +10,8 @@ function ParkingSpacesList() {
     queryFn: () => getTouringcarParkingSpaces(),
   })
 
-  if (isError && error instanceof Error) {
-    console.error(error.message)
-  }
-
-  if (isLoading || !data?.features) {
-    return null
-  }
+  if (isError && error instanceof Error) console.error(error.message)
+  if (isLoading || !data?.features) return null
 
   return (
     <div data-testid="parking-spaces-list">
