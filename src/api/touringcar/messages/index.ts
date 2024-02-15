@@ -1,10 +1,8 @@
 import { Feature, FeatureCollection, Point } from 'geojson'
-
 import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 
-// Unlike other Touringcar API endpoints the messages endpoint
-// sits on the "Bereikbaarheid API" and NOT on api.data.amsterdam.nl!
 import config from '../../../config'
+
 import { api } from './api_TEMP'
 
 interface TouringcarMessage extends Feature {
