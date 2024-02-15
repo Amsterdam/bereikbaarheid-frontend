@@ -1,9 +1,10 @@
 import { Feature, FeatureCollection, LineString, MultiLineString } from 'geojson'
 import { Vehicle } from 'pages/ProhibitorySigns/types/vehicle'
 
+import config from '../../../../config'
 import { api } from '../../index'
 
-export const ENDPOINT = 'v1/roads/prohibitory'
+export const ENDPOINT = `${config.api_root}/roads/prohibitory`
 
 interface ProhibitoryRoad extends Feature {
   geometry: LineString | MultiLineString

@@ -1,6 +1,7 @@
 import { Feature, FeatureCollection, Point } from 'geojson'
 
 import { api } from '..'
+import config from '../../../config'
 
 type DayOfTheWeek = 'ma' | 'di' | 'wo' | 'do' | 'vr' | 'za' | 'zo'
 
@@ -21,7 +22,7 @@ interface BollardCollection extends FeatureCollection {
   features: Bollard[]
 }
 
-const ENDPOINT = 'v1/bollards'
+const ENDPOINT = `${config.api_root}/bollards`
 
 function getBollards(signal?: AbortSignal): Promise<BollardCollection> {
   return api.get(ENDPOINT, { signal }).then(response => response.data)

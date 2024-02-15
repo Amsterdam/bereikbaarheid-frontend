@@ -1,9 +1,10 @@
 import { Feature, FeatureCollection } from 'geojson'
 import { TimeHumanReadable_Hours_Minutes_Seconds } from 'shared/utils/dateTime'
 
+import config from '../../../../config'
 import { api } from '../../index'
 
-export const ENDPOINT = 'v1/road-sections/load-unload/'
+export const ENDPOINT = `${config.api_root}/road-sections/load-unload/`
 
 export interface LoadUnloadRegime {
   additional_info: string
