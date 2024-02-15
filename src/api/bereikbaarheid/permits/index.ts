@@ -2,9 +2,10 @@ import { Point } from 'geojson'
 import { Vehicle } from 'pages/ProhibitorySigns/types/vehicle'
 import { Address } from 'types/address'
 
+import config from '../../../config'
 import { api } from '../index'
 
-const ENDPOINT = 'v1/permits'
+const ENDPOINT = `${config.api_root}/permits`
 
 export interface PermitsByLocationData {
   data: {

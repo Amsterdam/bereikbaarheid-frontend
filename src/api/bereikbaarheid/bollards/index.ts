@@ -1,4 +1,5 @@
 import { Feature, FeatureCollection, Point } from 'geojson'
+
 import { api } from '..'
 import config from '../../../config'
 

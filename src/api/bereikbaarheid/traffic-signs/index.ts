@@ -1,9 +1,10 @@
 import { Feature, FeatureCollection, Point } from 'geojson'
 import { Vehicle } from 'pages/ProhibitorySigns/types/vehicle'
 
+import config from '../../../config'
 import { api } from '../index'
 
-export const ENDPOINT = 'v1/traffic-signs'
+export const ENDPOINT = `${config.api_root}/traffic-signs`
 
 export type TrafficSignCategory = 'verbod' | 'verbod, met uitzondering' | 'vooraankondiging verbod'
 

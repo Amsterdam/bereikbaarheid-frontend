@@ -1,9 +1,10 @@
 import { Feature, FeatureCollection } from 'geojson'
 
+import config from '../../../config'
 import { api } from '../index'
 import { RoadObstruction } from '../road-obstructions'
 
-export const ENDPOINT = 'v1/road-elements/'
+export const ENDPOINT = `${config.api_root}/road-elements/`
 
 interface TrafficCount {
   direction_1: string
