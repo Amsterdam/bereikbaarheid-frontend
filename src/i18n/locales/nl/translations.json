@@ -95,7 +95,8 @@
       "recommendedRoutes": "Aanbevolen routes voor touringcars",
       "destinationTraffic": "Toegestane wegen >7,5 ton voor touringcars",
       "mandatoryRoutes": ">7,5 ton mét ontheffing voor touringcars",
-      "environmentalZone": "Milieuzone"
+      "environmentalZone": "Milieuzone",
+      "csv": "CSV file - Garmin/Mio/Navman format"
     }
   },
   "_pageData": {
