@@ -15,7 +15,7 @@ jobs:
     secrets: inherit  # Inherit secrets from the repository. You need to define "SLACK_TOKEN" in settings -> secrets -> actions!
     with:
       check_diff: false  # Create a list of major upgrades. Requires the Makefile target "diff"
-      slack_channel: '<my-team>-dependabot'  # Slack channel to post release steps to
+      slack_channel: 'opdrachten-dependabot'  # Slack channel to post release steps to
       timetell_code: 00000  # Timetell project id
       acceptance_pipeline: "https://ci.secure.amsterdam.nl/job/Opdrachten/job/Bereikbaarheid/job/main/"
       production_pipeline: "https://ci.secure.amsterdam.nl/job/Opdrachten/job/Bereikbaarheid/job/main/"

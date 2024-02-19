@@ -1,7 +1,7 @@
 import { MapPanelContent, MapPanelContentProps } from '@amsterdam/arm-core'
-import { Paragraph, Tab, Tabs } from '@amsterdam/asc-ui'
+import { Link, Paragraph, Tab, Tabs } from '@amsterdam/asc-ui'
 import parse from 'html-react-parser'
-import { useTranslation } from 'react-i18next'
+import { t } from 'i18next'
 import { PretendHeading } from 'shared/components/CompactElements'
 import styled from 'styled-components'
 
@@ -12,6 +12,7 @@ import dataLinks from '../data/dataLinks'
 
 import ParkingSpacesList from './LocationsList/ParkingSpaces'
 import StopsList from './LocationsList/Stops'
+import Messages from './Messages'
 
 const PaddedContent = styled.div`
   padding-top: 1em;
@@ -21,20 +22,28 @@ interface MapSettingsDisplayProps extends MapPanelContentProps {}
 
 function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps) {
   const { activeMapLayers, activeTab, setActiveTab } = useTouringcarMapContext()
-  const { t } = useTranslation()
 
   return (
+    // @ts-ignore
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label={t('_pageTouringcar._mapPanel.label')} activeTab={activeTab}>
-        {/* TODO: activate once messages feature is implemented. */}
-        {/* <Tab
+        <Tab
           id={MapPanelTab.MESSAGES}
           label={t('_pageTouringcar._mapPanel.messages')}
           onClick={() => setActiveTab(MapPanelTab.MESSAGES)}
         >
-          <br />
-          <Paragraph>Berichten</Paragraph>
-        </Tab> */}
+          <PaddedContent>
+            <Messages />
+
+            <Link
+              href="https://nieuwsbrieven.amsterdam.nl/x/plugin/?pName=subscribe&MIDRID=S7Y1MwYAA87&pLang=nl&Z=-2113214771&pk_vid=906065c3c2209171170125204002d192"
+              target="_blank"
+              inList
+            >
+              {t('_pageTouringcar._mapPanel.signUpForNewsletter')}
+            </Link>
+          </PaddedContent>
+        </Tab>
 
         <Tab
           id={MapPanelTab.INFO}

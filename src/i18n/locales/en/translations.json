@@ -2,6 +2,7 @@
   "appTitle": "Reachability",
   "_generic": {
     "legend": "Legend",
+    "date": "Date",
     "language": "Language",
     "_mapPanel": {
       "dataSource": "Data sources",
@@ -56,6 +57,14 @@
     "_mapPanel": {
       "label": "View messages, extra route information or the data sources",
       "messages": "Messages",
+      "_messages": {
+        "advice": "Advice",
+        "moreInfo": "More information",
+        "category": "Category",
+        "startDate": "Start date",
+        "endDate": "End date"
+      },
+      "signUpForNewsletter": "Sign up for the Touringcar Newsletter",
       "info": "Information",
       "recommendedAndMandatoryRoutes": "New policy in 2024",
       "displayOfRecommendedAndMandatoryRoutes": "From 1 January 2024, coaches weighing more than 7.5 tonnes without an exemption are allowed to use the S100 and the Weesperstraat - Valkenburgerstraat - Kattenburgerstraat corridor (shown in light green). Coaches weighing more than 7.5 tonnes with an exemption are permitted on the roads shown in dark green. For more information on the traffic order, exemption policy and applying for an exemption: www.amsterdam.nl/touringcar",

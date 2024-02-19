@@ -2,6 +2,7 @@
   "appTitle": "Bereikbaarheid",
   "_generic": {
     "legend": "Legenda",
+    "date": "Datum",
     "language": "Taal",
     "_mapPanel": {
       "dataSource": "Brondata",
@@ -72,6 +73,14 @@
     "_mapPanel": {
       "label": "Bekijk de berichten, meer routeinformatie of de dataverantwoording",
       "messages": "Berichten",
+      "_messages": {
+        "advice": "Advies",
+        "moreInfo": "Meer informatie",
+        "category": "Categorie",
+        "startDate": "Begindatum",
+        "endDate": "Einddatum"
+      },
+      "signUpForNewsletter": "Schrijf je in voor de Nieuwsbrief Touringcar",
       "info": "Informatie",
       "recommendedAndMandatoryRoutes": "Nieuw beleid voor 2024",
       "displayOfRecommendedAndMandatoryRoutes": "Vanaf 1 januari 2024 zijn touringcars zwaarder dan 7,5 ton zonder ontheffing toegestaan op de S100 en de corridor Weesperstraat - Valkenburgerstraat – Kattenburgerstraat (lichtgroen weergegeven). Touringcars zwaarder dan 7,5 ton mét ontheffing zijn toegestaan op de in donkergroen weergegeven wegen. Voor meer informatie over het verkeersbesluit, ontheffingenbeleid en het aanvragen van een ontheffing: <a href='https://www.amsterdam.nl/touringcar' target='_blank'>www.amsterdam.nl/touringcar</a>",
