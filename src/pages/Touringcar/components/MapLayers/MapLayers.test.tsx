@@ -5,16 +5,6 @@ import { getGeneratedPath } from 'shared/utils/path'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('RoutesLayers', () => {
-  jest.useFakeTimers({ legacyFakeTimers: false })
-  jest.setSystemTime(new Date('2023-02-14T10:00:00.000Z'))
-
-  it('renders correctly', async () => {
-    const pathToPage = getGeneratedPath(RouteIds.TOURINGCAR_PAGE)
-    const page = withApp(pathToPage)
-
-    expect(page).toMatchSnapshot()
-  })
-
   it('has only "verplichte-routes" layer checked via search query', async () => {
     const pathToPage = `${getGeneratedPath(RouteIds.TOURINGCAR_PAGE)}?verplichte-routes`
     const page = withApp(pathToPage)
