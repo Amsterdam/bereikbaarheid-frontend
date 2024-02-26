@@ -648,7 +648,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="v1/touringcars/haltes"
+                              href="touringcars/haltes"
                               target="_blank"
                             >
                               <span
@@ -681,7 +681,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="v1/touringcars/parkeerplaatsen"
+                              href="/touringcars/parkeerplaatsen"
                               target="_blank"
                             >
                               <span
@@ -714,7 +714,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="v1/touringcars/doorrijhoogtes"
+                              href="touringcars/doorrijhoogtes"
                               target="_blank"
                             >
                               <span
@@ -747,7 +747,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="v1/touringcars/wegwerkzaamheden"
+                              href="touringcars/wegwerkzaamheden"
                               target="_blank"
                             >
                               <span
@@ -780,7 +780,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="v1/touringcars/aanbevolenroutes"
+                              href="touringcars/aanbevolenroutes"
                               target="_blank"
                             >
                               <span
@@ -813,7 +813,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="v1/touringcars/verplichteroutes"
+                              href="touringcars/verplichteroutes"
                               target="_blank"
                             >
                               <span
@@ -846,7 +846,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="v1/milieuzones/touringcar"
+                              href="milieuzones/touringcar"
                               target="_blank"
                             >
                               <span
@@ -1974,7 +1974,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="v1/touringcars/haltes"
+                            href="touringcars/haltes"
                             target="_blank"
                           >
                             <span
@@ -2007,7 +2007,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="v1/touringcars/parkeerplaatsen"
+                            href="/touringcars/parkeerplaatsen"
                             target="_blank"
                           >
                             <span
@@ -2040,7 +2040,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="v1/touringcars/doorrijhoogtes"
+                            href="touringcars/doorrijhoogtes"
                             target="_blank"
                           >
                             <span
@@ -2073,7 +2073,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="v1/touringcars/wegwerkzaamheden"
+                            href="touringcars/wegwerkzaamheden"
                             target="_blank"
                           >
                             <span
@@ -2106,7 +2106,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="v1/touringcars/aanbevolenroutes"
+                            href="touringcars/aanbevolenroutes"
                             target="_blank"
                           >
                             <span
@@ -2139,7 +2139,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="v1/touringcars/verplichteroutes"
+                            href="touringcars/verplichteroutes"
                             target="_blank"
                           >
                             <span
@@ -2172,7 +2172,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="v1/milieuzones/touringcar"
+                            href="milieuzones/touringcar"
                             target="_blank"
                           >
                             <span

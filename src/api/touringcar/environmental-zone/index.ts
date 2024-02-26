@@ -16,7 +16,7 @@ interface TouringcarEnvironmentalZoneParams {
   _format: 'geojson' | 'json' | 'csv'
 }
 
-const ENDPOINT = 'v1/milieuzones/touringcar'
+const ENDPOINT = 'milieuzones/touringcar'
 
 function getTouringcarEnvironmentalZone(
   params: TouringcarEnvironmentalZoneParams = {

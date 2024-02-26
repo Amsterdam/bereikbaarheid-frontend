@@ -4,7 +4,7 @@ import config from '../../../config'
 import { api } from '../index'
 import { RoadObstruction } from '../road-obstructions'
 
-export const ENDPOINT = `${config.api_root}/road-elements/`
+export const ENDPOINT = `${config.API_ROOT}/road-elements/`
 
 interface TrafficCount {
   direction_1: string

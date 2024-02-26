@@ -19,7 +19,7 @@ interface TouringcarStopsParams {
   _format: 'geojson' | 'json' | 'csv'
 }
 
-const ENDPOINT = 'v1/touringcars/haltes'
+const ENDPOINT = 'touringcars/haltes'
 
 function getTouringcarStops(
   params: TouringcarStopsParams = {

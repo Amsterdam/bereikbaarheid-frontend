@@ -22,7 +22,7 @@ interface BollardCollection extends FeatureCollection {
   features: Bollard[]
 }
 
-const ENDPOINT = `${config.api_root}/bollards`
+const ENDPOINT = `${config.API_ROOT}/bollards`
 
 function getBollards(signal?: AbortSignal): Promise<BollardCollection> {
   return api.get(ENDPOINT, { signal }).then(response => response.data)

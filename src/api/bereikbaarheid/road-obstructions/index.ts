@@ -3,7 +3,7 @@ import { Feature, FeatureCollection } from 'geojson'
 import config from '../../../config'
 import { api } from '../index'
 
-export const ENDPOINT = `${config.api_root}/road-obstructions/`
+export const ENDPOINT = `${config.API_ROOT}/road-obstructions/`
 
 export interface RoadObstruction {
   activity: string

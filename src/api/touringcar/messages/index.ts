@@ -1,9 +1,7 @@
 import { Feature, FeatureCollection, Point } from 'geojson'
 import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 
-import config from '../../../config'
-
-import { api } from './api_TEMP'
+import { api } from '../../bereikbaarheid'
 
 interface TouringcarMessage extends Feature {
   geometry: Point
@@ -43,7 +41,7 @@ interface TouringcarMessagesParams {
   datum?: DateHumanReadable_Year_Month_Day
 }
 
-const ENDPOINT = `${config.api_root}/touringcar/berichten`
+const ENDPOINT = '/touringcar/berichten'
 
 function getTouringcarMessages(
   params?: TouringcarMessagesParams,
