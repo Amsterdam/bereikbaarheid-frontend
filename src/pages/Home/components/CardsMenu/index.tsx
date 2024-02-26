@@ -128,7 +128,6 @@ function CardsMenu() {
           key={t(card.title)}
           href={card.path}
           target={card.target}
-          data-testid={card.target && 'card-with-external-link'}
           tabIndex="0"
           onFocus={() => setShowTooltip(card.path)}
           onBlur={() => setShowTooltip('')}

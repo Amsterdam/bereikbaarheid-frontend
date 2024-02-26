@@ -23,12 +23,12 @@
   "_pageLoadUnload": {
     "title": "Be- und Entladen"
   },
-  "_linkTourBuzz": {
-    "title": "Reisebus (Tour Buzz)",
+  "_linkTouringcar": {
+    "title": "Reisebus",
     "titleShort": "Reisebus"
   },
   "_pageTouringcar": {
-    "title": "Reisebus (Tour Buzz)",
+    "title": "Reisebus",
     "titleShort": "Reisebus",
     "reference": "Bezeichnung",
     "places": "Platz",

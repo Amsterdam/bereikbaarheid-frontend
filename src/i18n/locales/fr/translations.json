@@ -23,12 +23,12 @@
   "_pageLoadUnload": {
     "title": "Chargement et déchargement"
   },
-  "_linkTourBuzz": {
-    "title": "Autocars (Tour Buzz)",
+  "_linkTouringcar": {
+    "title": "Autocars",
     "titleShort": "Autocars"
   },
   "_pageTouringcar": {
-    "title": "Autocars (Tour Buzz)",
+    "title": "Autocars",
     "titleShort": "Autocars",
     "reference": "Indication",
     "places": "Place",

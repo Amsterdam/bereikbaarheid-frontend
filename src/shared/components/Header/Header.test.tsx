@@ -43,7 +43,7 @@ describe('Header', () => {
     const user = userEvent.setup()
 
     let pageTitle = screen.getByRole('heading', { level: 1 })
-    expect(pageTitle).toHaveTextContent('Touringcar (Tour Buzz)')
+    expect(pageTitle).toHaveTextContent('Touringcar')
 
     await act(async () => {
       await user.click(await screen.findByTestId('menuFlyoutLanguageSelect'))
@@ -51,6 +51,6 @@ describe('Header', () => {
     })
 
     pageTitle = screen.getByRole('heading', { level: 1 })
-    expect(pageTitle).toHaveTextContent('Autocar (Tour Buzz)')
+    expect(pageTitle).toHaveTextContent('Autocar')
   })
 })

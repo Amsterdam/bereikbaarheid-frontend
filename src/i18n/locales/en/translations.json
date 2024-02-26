@@ -45,12 +45,12 @@
       "label": "Input address, date and time or view the data sources"
     }
   },
-  "_linkTourBuzz": {
-    "title": "Coaches (Tour Buzz)",
+  "_linkTouringcar": {
+    "title": "Coaches",
     "titleShort": "Coaches"
   },
   "_pageTouringcar": {
-    "title": "Coaches (Tour Buzz)",
+    "title": "Coaches",
     "titleShort": "Coaches",
     "reference": "Reference",
     "places": "Places",
