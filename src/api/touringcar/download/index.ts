@@ -1,6 +1,6 @@
 import api from '../../data.amsterdam'
 
-const ENDPOINT = 'v1/touringcar/downloads'
+const ENDPOINT = 'v1/touringcar/downloads/csv'
 
 function getTouringcarCsv(signal?: AbortSignal): Promise<string> {
   return api.get(ENDPOINT, { signal }).then(response => response.data)
