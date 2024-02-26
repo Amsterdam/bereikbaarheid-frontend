@@ -45,4 +45,5 @@ i18n
 
 i18n.languages = LANGUAGES
 
+export { LANGUAGES }
 export default i18n
