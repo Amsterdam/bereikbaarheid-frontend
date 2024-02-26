@@ -4,24 +4,20 @@ import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 
 import { api } from '../../bereikbaarheid'
 
+interface TouringcarMessagePart {
+  title: string
+  body: string
+  advice: string
+}
+
 interface TouringcarMessage extends Feature {
   geometry: Point
   properties: {
-    title: string
-    body: string
-    advice: string
-    title_en: string
-    body_en: string
-    advice_en: string
-    title_fr: string
-    body_fr: string
-    advice_fr: string
-    title_de: string
-    body_de: string
-    advice_de: string
-    title_es: string
-    body_es: string
-    advice_es: string
+    nl: TouringcarMessagePart
+    en: TouringcarMessagePart
+    de: TouringcarMessagePart
+    es: TouringcarMessagePart
+    fr: TouringcarMessagePart
     startdate: DateHumanReadable_Year_Month_Day
     enddate: DateHumanReadable_Year_Month_Day
     category: string
