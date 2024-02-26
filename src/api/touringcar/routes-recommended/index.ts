@@ -16,7 +16,7 @@ interface TouringcarRoutesRecommendedParams {
   _format: 'geojson' | 'json' | 'csv'
 }
 
-const ENDPOINT = 'v1/touringcars/aanbevolenroutes'
+const ENDPOINT = 'touringcars/aanbevolenroutes'
 
 function getTouringcarRoutesRecommended(
   params: TouringcarRoutesRecommendedParams = {

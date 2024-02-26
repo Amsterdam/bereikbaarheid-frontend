@@ -17,7 +17,7 @@ interface TouringcarVehicleHeightsParams {
   _format: 'geojson' | 'json' | 'csv'
 }
 
-const ENDPOINT = 'v1/touringcars/doorrijhoogtes'
+const ENDPOINT = 'touringcars/doorrijhoogtes'
 
 function getTouringcarVehicleHeights(
   params: TouringcarVehicleHeightsParams = {

@@ -1,5 +1,5 @@
 const config = {
-  api_root: 'api/v1',
+  API_ROOT: 'api/v1',
 }
 
 export default config

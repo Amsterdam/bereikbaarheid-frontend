@@ -47,56 +47,54 @@ function MessagesList() {
   if (isLoading || !data?.features) return null
 
   return (
-    <Paragraph>
-      <List>
-        {data?.features.map((feat, index) => (
-          <ListItem>
-            <StyledAccordion
-              title={`(${index + 1}) ${feat.properties.title}`}
-              isOpen={feat.properties.important ?? data?.features.length === 1}
-              important={feat.properties.important}
-              onClick={() => {
-                mapInstance.flyTo([feat.geometry.coordinates[1], feat.geometry.coordinates[0]], 20)
-              }}
-            >
-              <Paragraph>{feat.properties.body}</Paragraph>
-              {feat.properties.image_url ?? (
-                <Paragraph>
-                  <Image src={feat.properties.image_url} alt={feat.properties.title} />
-                </Paragraph>
-              )}
-              {feat.properties.advice ?? (
-                <Paragraph>
-                  <Heading as="h3">{t('_pageTouringcar._mapPanel._messages.advice')}</Heading>
-                  {feat.properties.advice}
-                </Paragraph>
-              )}
-              {feat.properties.link ?? (
-                <Paragraph>
-                  <Heading as="h3">{t('_pageTouringcar._mapPanel._messages.moreInfo')}</Heading>
-                  <Link to={feat.properties.link}>{feat.properties.link}</Link>
-                </Paragraph>
-              )}
-              {feat.properties.category ?? (
-                <Paragraph>
-                  <strong>{t('_pageTouringcar._mapPanel._messages.category')}:</strong> {feat.properties.category}
-                </Paragraph>
-              )}
-              {feat.properties.startdate ?? (
-                <Paragraph style={{ marginBlockEnd: 0 }}>
-                  <strong>{t('_pageTouringcar._mapPanel._messages.startDate')}:</strong> {feat.properties.startdate}
-                </Paragraph>
-              )}
-              {feat.properties.enddate ?? (
-                <Paragraph>
-                  <strong>{t('_pageTouringcar._mapPanel._messages.endDate')}:</strong> {feat.properties.enddate}
-                </Paragraph>
-              )}
-            </StyledAccordion>
-          </ListItem>
-        ))}
-      </List>
-    </Paragraph>
+    <List>
+      {data?.features.map((feat, index) => (
+        <ListItem>
+          <StyledAccordion
+            title={`(${index + 1}) ${feat.properties.title}`}
+            isOpen={feat.properties.important ?? data?.features.length === 1}
+            important={feat.properties.important}
+            onClick={() => {
+              mapInstance.flyTo([feat.geometry.coordinates[1], feat.geometry.coordinates[0]], 20)
+            }}
+          >
+            <Paragraph>{feat.properties.body}</Paragraph>
+            {feat.properties.image_url ?? (
+              <Paragraph>
+                <Image src={feat.properties.image_url} alt={feat.properties.title} />
+              </Paragraph>
+            )}
+            {feat.properties.advice ?? (
+              <Paragraph>
+                <Heading as="h3">{t('_pageTouringcar._mapPanel._messages.advice')}</Heading>
+                {feat.properties.advice}
+              </Paragraph>
+            )}
+            {feat.properties.link ?? (
+              <Paragraph>
+                <Heading as="h3">{t('_pageTouringcar._mapPanel._messages.moreInfo')}</Heading>
+                <Link to={feat.properties.link}>{feat.properties.link}</Link>
+              </Paragraph>
+            )}
+            {feat.properties.category ?? (
+              <Paragraph>
+                <strong>{t('_pageTouringcar._mapPanel._messages.category')}:</strong> {feat.properties.category}
+              </Paragraph>
+            )}
+            {feat.properties.startdate ?? (
+              <Paragraph style={{ marginBlockEnd: 0 }}>
+                <strong>{t('_pageTouringcar._mapPanel._messages.startDate')}:</strong> {feat.properties.startdate}
+              </Paragraph>
+            )}
+            {feat.properties.enddate ?? (
+              <Paragraph>
+                <strong>{t('_pageTouringcar._mapPanel._messages.endDate')}:</strong> {feat.properties.enddate}
+              </Paragraph>
+            )}
+          </StyledAccordion>
+        </ListItem>
+      ))}
+    </List>
   )
 }
 

@@ -5,7 +5,7 @@ import { Address } from 'types/address'
 import config from '../../../config'
 import { api } from '../index'
 
-const ENDPOINT = `${config.api_root}/permits`
+const ENDPOINT = `${config.API_ROOT}/permits`
 
 export interface PermitsByLocationData {
   data: {

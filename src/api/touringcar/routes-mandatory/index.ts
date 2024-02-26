@@ -16,7 +16,7 @@ interface TouringcarRoutesMandatoryParams {
   _format: 'geojson' | 'json' | 'csv'
 }
 
-const ENDPOINT = 'v1/touringcars/verplichteroutes'
+const ENDPOINT = 'touringcars/verplichteroutes'
 
 function getTouringcarRoutesMandatory(
   params: TouringcarRoutesMandatoryParams = {
