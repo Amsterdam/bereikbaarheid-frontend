@@ -879,7 +879,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="v1/touringcar/downloads"
+                              href="v1/touringcar/downloads/csv"
                               target="_blank"
                             >
                               <span
@@ -2238,7 +2238,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="v1/touringcar/downloads"
+                            href="v1/touringcar/downloads/csv"
                             target="_blank"
                           >
                             <span
