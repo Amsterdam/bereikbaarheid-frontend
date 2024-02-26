@@ -571,7 +571,7 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="touringcars/haltes"
+                  href="https://api.data.amsterdam.nl/v1/touringcars/haltes"
                   target="_blank"
                 >
                   <span
@@ -604,7 +604,7 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="/touringcars/parkeerplaatsen"
+                  href="https://api.data.amsterdam.nl/v1/touringcars/parkeerplaatsen"
                   target="_blank"
                 >
                   <span
@@ -637,7 +637,7 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="touringcars/doorrijhoogtes"
+                  href="https://api.data.amsterdam.nl/v1/touringcars/doorrijhoogtes"
                   target="_blank"
                 >
                   <span
@@ -670,7 +670,7 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="touringcars/wegwerkzaamheden"
+                  href="https://api.data.amsterdam.nl/v1/touringcars/wegwerkzaamheden"
                   target="_blank"
                 >
                   <span
@@ -703,7 +703,7 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="touringcars/aanbevolenroutes"
+                  href="https://api.data.amsterdam.nl/v1/touringcars/aanbevolenroutes"
                   target="_blank"
                 >
                   <span
@@ -736,7 +736,7 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="touringcars/verplichteroutes"
+                  href="https://api.data.amsterdam.nl/v1/touringcars/verplichteroutes"
                   target="_blank"
                 >
                   <span
@@ -769,7 +769,7 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="milieuzones/touringcar"
+                  href="https://api.data.amsterdam.nl/v1/milieuzones/touringcar"
                   target="_blank"
                 >
                   <span
@@ -1452,7 +1452,7 @@ FAQ en contactgegevens"
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="touringcars/haltes"
+                href="https://api.data.amsterdam.nl/v1/touringcars/haltes"
                 target="_blank"
               >
                 <span
@@ -1485,7 +1485,7 @@ FAQ en contactgegevens"
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="/touringcars/parkeerplaatsen"
+                href="https://api.data.amsterdam.nl/v1/touringcars/parkeerplaatsen"
                 target="_blank"
               >
                 <span
@@ -1518,7 +1518,7 @@ FAQ en contactgegevens"
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="touringcars/doorrijhoogtes"
+                href="https://api.data.amsterdam.nl/v1/touringcars/doorrijhoogtes"
                 target="_blank"
               >
                 <span
@@ -1551,7 +1551,7 @@ FAQ en contactgegevens"
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="touringcars/wegwerkzaamheden"
+                href="https://api.data.amsterdam.nl/v1/touringcars/wegwerkzaamheden"
                 target="_blank"
               >
                 <span
@@ -1584,7 +1584,7 @@ FAQ en contactgegevens"
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="touringcars/aanbevolenroutes"
+                href="https://api.data.amsterdam.nl/v1/touringcars/aanbevolenroutes"
                 target="_blank"
               >
                 <span
@@ -1617,7 +1617,7 @@ FAQ en contactgegevens"
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="touringcars/verplichteroutes"
+                href="https://api.data.amsterdam.nl/v1/touringcars/verplichteroutes"
                 target="_blank"
               >
                 <span
@@ -1650,7 +1650,7 @@ FAQ en contactgegevens"
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="milieuzones/touringcar"
+                href="https://api.data.amsterdam.nl/v1/milieuzones/touringcar"
                 target="_blank"
               >
                 <span
