@@ -50,6 +50,14 @@ const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
     image: 'laden-en-lossen.webp',
     imageFallback: 'laden-en-lossen.jpg',
   },
+  // {
+  //   title: '_linkTouringcar.title',
+  //   titleShort: '_linkTouringcar.titleShort',
+  //   description: '_linkTouringcar.description',
+  //   route: 'TOURINGCAR_PAGE' as RouteIds,
+  //   image: 'tour-buzz.webp',
+  //   imageFallback: 'tour-buzz.jpg',
+  // },
   {
     title: '_linkTouringcar.title',
     titleShort: '_linkTouringcar.titleShort',
