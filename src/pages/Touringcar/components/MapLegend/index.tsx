@@ -11,10 +11,11 @@ import { LegendItemsWrapper } from 'shared/components/MapLegendStyles'
 import styled from 'styled-components'
 
 const LEGEND_ITEMS = [
-  {
-    id: MapLayerId.touringcarMessagesLayerId,
-    label: '_pageTouringcar._legend.messages',
-  },
+  // TODO: temporarily hide Messages functionality.
+  // {
+  //   id: MapLayerId.touringcarMessagesLayerId,
+  //   label: '_pageTouringcar._legend.messages',
+  // },
   {
     id: MapLayerId.touringcarStopsLayerId,
     label: '_pageTouringcar._legend.stops',

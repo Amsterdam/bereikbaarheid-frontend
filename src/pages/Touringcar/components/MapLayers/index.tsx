@@ -9,7 +9,8 @@ import { oneWayArrows, topoBlackWhite } from 'shared/map/mapLayers'
 import { useTouringcarPageContext } from '../../contexts/PageContext'
 
 import { EnvironmentalZoneLayer } from './EnvironmentalZoneLayer'
-import { MessagesLayer } from './MessagesLayer'
+// TODO: temporarily hide Messages functionality.
+// import { MessagesLayer } from './MessagesLayer'
 import { ParkingSpacesLayer } from './ParkingSpacesLayer'
 import { RoutesDestinationTrafficLayer } from './RoutesDestinationTrafficLayer'
 import { RoutesMandatoryLayer } from './RoutesMandatoryLayer'
@@ -33,14 +34,13 @@ const TouringcarMapLayers = () => {
   return (
     <>
       <BaseLayer baseLayer={topoBlackWhite.url} options={topoBlackWhite.options} />
-
       <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />
 
-      <MessagesLayer />
+      {/* TODO: temporarily hide Messages functionality. */}
+      {/* <MessagesLayer /> */}
       <StopsLayer />
       <ParkingSpacesLayer />
       <VehicleHeightsLayer />
-
       {show && (
         <>
           <RoutesDestinationTrafficLayer />
@@ -49,7 +49,6 @@ const TouringcarMapLayers = () => {
           <EnvironmentalZoneLayer />
         </>
       )}
-
       <AddressMarker address={address} />
     </>
   )
