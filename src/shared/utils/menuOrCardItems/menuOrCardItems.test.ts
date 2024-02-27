@@ -11,10 +11,9 @@ const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
     route: RouteIds.LICENCE_PLATE_PAGE,
   },
   {
-    title: 'Touringcar (Tour Buzz)',
+    title: 'Touringcar',
     titleShort: 'Touringcar',
-    path: 'https://tourbuzz.amsterdam.nl/',
-    target: '_blank',
+    route: RouteIds.TOURINGCAR_PAGE,
   },
   {
     title: 'Contact en uitleg',
@@ -33,8 +32,7 @@ test('give back correct menu or card objects', () => {
     {
       title: 'Touringcar',
       titleShort: 'Touringcar',
-      path: 'https://tourbuzz.amsterdam.nl/',
-      target: '_blank',
+      path: getGeneratedPath(RouteIds.TOURINGCAR_PAGE),
     },
     {
       title: 'Contact en uitleg',
@@ -50,10 +48,9 @@ test('give back correct menu or card objects', () => {
       path: getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE),
     },
     {
-      title: 'Touringcar (Tour Buzz)',
+      title: 'Touringcar',
       titleShort: 'Touringcar',
-      path: 'https://tourbuzz.amsterdam.nl/',
-      target: '_blank',
+      path: getGeneratedPath(RouteIds.TOURINGCAR_PAGE),
     },
     {
       title: 'Contact en uitleg',

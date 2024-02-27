@@ -12,6 +12,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Changed
 
+- Touringcar: as a webpage instead of an external link to tourbuzz.amsterdam.nl
+- Ready for Amsterdam Azure OTAP
+
 ## Fixed
 
 ## [v3.3.0 - 2024-01-29](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.2.0...v3.3.0)
