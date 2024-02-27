@@ -2,7 +2,7 @@ import { useCallback, useContext, useEffect } from 'react'
 
 import { MapPanelContext, mapPanelConstants } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarMessages, { TouringcarMessage } from 'api/touringcar/messages'
+import getTouringcarMessages, { TouringcarMessage, TouringcarMessagePart } from 'api/touringcar/messages'
 import { format } from 'date-fns'
 import i18n from 'i18n'
 import { MapLayerId, MapPanelTab, useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
@@ -10,6 +10,8 @@ import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGro
 import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 
 import TouringcarMarker from '../Marker/Marker'
+
+type Language = 'nl' | 'en' | 'de' | 'es' | 'fr'
 
 export const MessagesLayer = () => {
   const { activeMapLayers, messagesDate, setCurrentMessage, setActiveTab } = useTouringcarMapContext()
@@ -28,19 +30,20 @@ export const MessagesLayer = () => {
 
   const findMessage = useCallback(
     (title: string) => {
-      // @ts-ignore
-      const message = data?.features.find(item => message.properties[i18n.language || 'nl'].title === title)
+      if (!data) return
+      const message: TouringcarMessage | undefined = data.features.find(
+        msg => msg?.properties[(i18n.language || 'nl') as Language].title === title
+      )
       setCurrentMessage(message)
     },
-    [data?.features, setCurrentMessage]
+    [data, setCurrentMessage]
   )
 
   const createClusterMarkers = () => {
-    return data!.features.map((item: TouringcarMessage) => {
-      const marker = TouringcarMarker(item, MapLayerId.touringcarMessagesLayerId)
+    return data!.features.map((message: TouringcarMessage) => {
+      const marker = TouringcarMarker(message, MapLayerId.touringcarMessagesLayerId)
 
-      // @ts-ignore
-      const msgParts = message.properties[i18n.language || 'nl']
+      const msgParts = message.properties[(i18n.language || 'nl') as Language]
 
       let tooltipText = `<p><strong>${msgParts.title}</strong></p>
       ${msgParts.body ?? `<p>${msgParts.body}</p>`}

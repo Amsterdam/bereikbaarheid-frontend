@@ -54,6 +54,6 @@ function getUrl(params?: TouringcarMessagesParams) {
   })
 }
 
-export type { TouringcarMessage, TouringcarMessageCollection }
+export type { TouringcarMessage, TouringcarMessagePart, TouringcarMessageCollection }
 export { ENDPOINT, getTouringcarMessages, getUrl }
 export default getTouringcarMessages
