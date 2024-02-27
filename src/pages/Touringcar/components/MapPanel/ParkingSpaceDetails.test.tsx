@@ -1,16 +1,14 @@
 import { screen, waitFor } from '@testing-library/react'
 import { generatePath } from 'react-router-dom'
 import { RouteIds, getPathTo } from 'routes'
-import delay from 'shared/utils/delay'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ParkingSpaceDetails', () => {
-  jest.setTimeout(15000)
+  jest.useFakeTimers({ legacyFakeTimers: false })
+  jest.setSystemTime(new Date('2024-02-14T10:00:00.000Z'))
 
   it('renders correctly', async () => {
-    await delay(1500)
-
     const pathToPage = generatePath(getPathTo(RouteIds.TOURINGCAR_PAGE), {
       legenda: ['haltes-parkeerplaatsen'],
     })
