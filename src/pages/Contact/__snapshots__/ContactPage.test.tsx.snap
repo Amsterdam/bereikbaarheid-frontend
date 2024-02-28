@@ -38,14 +38,14 @@ Object {
                 <span
                   class="sc-dAlyuH dEvjcu"
                 >
-                  Contact & help
+                  _pageContact.title
                 </span>
               </a>
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-gfoqjT iUsCIO"
                 href="/"
               >
-                Contact & help
+                _pageContact.title
               </a>
             </h1>
             <nav
@@ -87,9 +87,9 @@ Object {
                     <a
                       class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                       href="/op-kenteken"
-                      title="Op kenteken:
+                      title="_pageLicencePlate.titleShort:
 
-Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
+_pageLicencePlate.description"
                       variant="blank"
                     >
                       <span
@@ -98,7 +98,7 @@ Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt
                         <span
                           class="sc-eZYNyq"
                         >
-                          Op kenteken
+                          _pageLicencePlate.titleShort
                         </span>
                       </span>
                     </a>
@@ -109,9 +109,9 @@ Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt
                     <a
                       class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                       href="/stremmingen"
-                      title="Stremmingen:
+                      title="_pageRoadObstructions.title:
 
-Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen."
+_pageRoadObstructions.description"
                       variant="blank"
                     >
                       <span
@@ -120,7 +120,7 @@ Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren
                         <span
                           class="sc-eZYNyq"
                         >
-                          Stremmingen
+                          _pageRoadObstructions.title
                         </span>
                       </span>
                     </a>
@@ -131,9 +131,9 @@ Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren
                     <a
                       class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                       href="/laden-lossen"
-                      title="Laden en lossen:
+                      title="_pageLoadUnload.title:
 
-Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. "
+_pageLoadUnload.description"
                       variant="blank"
                     >
                       <span
@@ -142,7 +142,7 @@ Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad
                         <span
                           class="sc-eZYNyq"
                         >
-                          Laden en lossen
+                          _pageLoadUnload.title
                         </span>
                       </span>
                     </a>
@@ -154,9 +154,9 @@ Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad
                       class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                       href="https://tourbuzz.amsterdam.nl"
                       target="_blank"
-                      title="Touringcar:
+                      title="_linkTourBuzz.titleShort:
 
-Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
+_linkTourBuzz.description"
                       variant="blank"
                     >
                       <span
@@ -165,7 +165,7 @@ Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en par
                         <span
                           class="sc-eZYNyq"
                         >
-                          Touringcar
+                          _linkTourBuzz.titleShort
                         </span>
                       </span>
                       <span
@@ -197,9 +197,9 @@ Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en par
                       class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                       href="/data"
                       style="font-weight: normal;"
-                      title="Databronnen:
+                      title="_pageData.title:
 
-De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
+_pageData.description"
                       variant="blank"
                     >
                       <span
@@ -208,7 +208,7 @@ De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebr
                         <span
                           class="sc-eZYNyq"
                         >
-                          Databronnen
+                          _pageData.title
                         </span>
                       </span>
                     </a>
@@ -221,9 +221,9 @@ De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebr
                       class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
                       href="/contact"
                       style="font-weight: normal;"
-                      title="Contact & help:
+                      title="_pageContact.title:
 
-FAQ en contactgegevens"
+_pageContact.description"
                       variant="blank"
                     >
                       <span
@@ -232,7 +232,7 @@ FAQ en contactgegevens"
                         <span
                           class="sc-eZYNyq"
                         >
-                          Contact & help
+                          _pageContact.title
                         </span>
                       </span>
                     </a>
@@ -255,7 +255,7 @@ FAQ en contactgegevens"
                         <span
                           class="sc-eZYNyq"
                         >
-                          Language / Sprache / Idioma / Langue
+                          Taal / Language / Sprache / Idioma / Langue
                         </span>
                       </span>
                       <span
@@ -282,7 +282,7 @@ FAQ en contactgegevens"
                         class="sc-ejfMa-d fymHSF"
                       >
                         <button
-                          class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
+                          class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                           data-testid="buttonLanguageNederlands"
                         >
                           <span
@@ -452,7 +452,7 @@ FAQ en contactgegevens"
           <h2
             class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM"
           >
-            Veelgestelde vragen
+            _pageContact.faq
           </h2>
           <div>
             <h4
@@ -642,14 +642,14 @@ FAQ en contactgegevens"
               <span
                 class="sc-dAlyuH dEvjcu"
               >
-                Contact & help
+                _pageContact.title
               </span>
             </a>
             <a
               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR sc-gfoqjT iUsCIO"
               href="/"
             >
-              Contact & help
+              _pageContact.title
             </a>
           </h1>
           <nav
@@ -691,9 +691,9 @@ FAQ en contactgegevens"
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/op-kenteken"
-                    title="Op kenteken:
+                    title="_pageLicencePlate.titleShort:
 
-Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt bereiken, rekening gehouden met de lengte, breedte, hoogte, aslast, en het gewicht van het voertuig. Leer ook over milieuzones, de toegankelijkheid via brede wegen, eventuele benodigde ontheffingen en verbodsborden voor specifieke voertuigcategorieën."
+_pageLicencePlate.description"
                     variant="blank"
                   >
                     <span
@@ -702,7 +702,7 @@ Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt
                       <span
                         class="sc-eZYNyq"
                       >
-                        Op kenteken
+                        _pageLicencePlate.titleShort
                       </span>
                     </span>
                   </a>
@@ -713,9 +713,9 @@ Voer uw kenteken in en u ziet direct of u de gewenste bestemming in de stad kunt
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/stremmingen"
-                    title="Stremmingen:
+                    title="_pageRoadObstructions.title:
 
-Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren, worden op deze kaart getoond. Houd er rekening mee dat dit niet alle stremmingen in de stad zijn, maar we tonen hier de belangrijkste en meest invloedrijke wijzigingen."
+_pageRoadObstructions.description"
                     variant="blank"
                   >
                     <span
@@ -724,7 +724,7 @@ Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren
                       <span
                         class="sc-eZYNyq"
                       >
-                        Stremmingen
+                        _pageRoadObstructions.title
                       </span>
                     </span>
                   </a>
@@ -735,9 +735,9 @@ Stremmingen die aanzienlijke invloed hebben op het verkeer en langere tijd duren
                   <a
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/laden-lossen"
-                    title="Laden en lossen:
+                    title="_pageLoadUnload.title:
 
-Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad goederen willen laden en lossen. U vindt de specifieke tijden waarop dit is toegestaan op de wegenkaart van de stad en waar de parkeervakken voor laden en lossen zijn. "
+_pageLoadUnload.description"
                     variant="blank"
                   >
                     <span
@@ -746,7 +746,7 @@ Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad
                       <span
                         class="sc-eZYNyq"
                       >
-                        Laden en lossen
+                        _pageLoadUnload.title
                       </span>
                     </span>
                   </a>
@@ -758,9 +758,9 @@ Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="https://tourbuzz.amsterdam.nl"
                     target="_blank"
-                    title="Touringcar:
+                    title="_linkTourBuzz.titleShort:
 
-Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
+_linkTourBuzz.description"
                     variant="blank"
                   >
                     <span
@@ -769,7 +769,7 @@ Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en par
                       <span
                         class="sc-eZYNyq"
                       >
-                        Touringcar
+                        _linkTourBuzz.titleShort
                       </span>
                     </span>
                     <span
@@ -801,9 +801,9 @@ Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en par
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                     href="/data"
                     style="font-weight: normal;"
-                    title="Databronnen:
+                    title="_pageData.title:
 
-De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebruiken in eigen (plannings) software."
+_pageData.description"
                     variant="blank"
                   >
                     <span
@@ -812,7 +812,7 @@ De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebr
                       <span
                         class="sc-eZYNyq"
                       >
-                        Databronnen
+                        _pageData.title
                       </span>
                     </span>
                   </a>
@@ -825,9 +825,9 @@ De databronnen uit de verschillende kaartlagen kunt u hier downloaden en zo gebr
                     class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
                     href="/contact"
                     style="font-weight: normal;"
-                    title="Contact & help:
+                    title="_pageContact.title:
 
-FAQ en contactgegevens"
+_pageContact.description"
                     variant="blank"
                   >
                     <span
@@ -836,7 +836,7 @@ FAQ en contactgegevens"
                       <span
                         class="sc-eZYNyq"
                       >
-                        Contact & help
+                        _pageContact.title
                       </span>
                     </span>
                   </a>
@@ -859,7 +859,7 @@ FAQ en contactgegevens"
                       <span
                         class="sc-eZYNyq"
                       >
-                        Language / Sprache / Idioma / Langue
+                        Taal / Language / Sprache / Idioma / Langue
                       </span>
                     </span>
                     <span
@@ -886,7 +886,7 @@ FAQ en contactgegevens"
                       class="sc-ejfMa-d fymHSF"
                     >
                       <button
-                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
+                        class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
                         data-testid="buttonLanguageNederlands"
                       >
                         <span
@@ -1056,7 +1056,7 @@ FAQ en contactgegevens"
         <h2
           class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM"
         >
-          Veelgestelde vragen
+          _pageContact.faq
         </h2>
         <div>
           <h4
