@@ -1,3 +1,4 @@
+import { getUrl as getTouringcarCsv } from 'api/touringcar/download'
 import { getUrl as getTouringcarEnvironmentalZoneUrl } from 'api/touringcar/environmental-zone'
 import { getUrl as getTouringcarParkingSpacesUrl } from 'api/touringcar/parking-spaces'
 import { getUrl as getTouringcarRoutesDestinationTrafficUrl } from 'api/touringcar/routes-destination-traffic'
@@ -48,6 +49,12 @@ const touringcarEnvironmentalZoneLink = {
   beta: true,
 }
 
+const touringcarCsvLink = {
+  href: getTouringcarCsv(),
+  title: '_pageTouringcar._dataSources.csv',
+  beta: true,
+}
+
 const dataLinks = [
   touringcarStopsLink,
   touringcarParkingSpacesLink,
@@ -56,6 +63,7 @@ const dataLinks = [
   touringcarRoutesRecommendedLink,
   touringcarRoutesMandatoryLink,
   touringcarEnvironmentalZoneLink,
+  touringcarCsvLink,
 ]
 
 export {
@@ -66,6 +74,7 @@ export {
   touringcarRoutesRecommendedLink,
   touringcarRoutesMandatoryLink,
   touringcarEnvironmentalZoneLink,
+  touringcarCsvLink,
 }
 
 export default dataLinks
