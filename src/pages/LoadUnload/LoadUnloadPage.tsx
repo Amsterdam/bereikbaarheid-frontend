@@ -66,6 +66,7 @@ const LoadUnloadPage = () => {
           <MapStyle />
           <StyledMap options={{ ...defaultMapOptions, maxZoom: 21 }} setInstance={setMapInstance}>
             <LoadUnloadMapProvider>
+              {/* @ts-ignore */}
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}
                 initialPosition={SnapPoint.Halfway}

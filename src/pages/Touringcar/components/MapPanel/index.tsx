@@ -31,6 +31,7 @@ const TouringcarMapPanel = () => {
   if (!stopOrParkingSpace) return null
 
   return (
+    // @ts-ignore
     <StyledMapPanelContent
       animate
       stackOrder={currentOverlay === mapPanelConstants.Overlay.Results ? 2 : 1}

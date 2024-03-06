@@ -44,6 +44,7 @@ const ScenarioDisplay = ({ ...otherProps }: MapPanelContentProps) => {
   }, [setPositionFromSnapPoint, showScenarioWizard])
 
   return (
+    // @ts-ignore
     <MapPanelContent data-testid="scenario-display" {...otherProps}>
       {!showScenarioWizard && (
         <Tabs label={t('_pageLicencePlate._mapPanel.label')}>

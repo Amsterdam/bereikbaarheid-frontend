@@ -29,6 +29,7 @@ export const RoadObstructionsDetailFeatureWior = ({
   setDetailFeature,
 }: RoadObstructionsDetailFeatureWiorProps) => {
   return (
+    // @ts-ignore
     <MapPanelContent
       title={`WIOR ${detailFeature.data.properties.wior_nummer}`}
       data-testid="detail-feature-wior"

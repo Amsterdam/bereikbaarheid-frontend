@@ -36,6 +36,7 @@ const ProhibitorySignsDetailFeature = () => {
   if (!currentTrafficSign && !location) return null
 
   return (
+    // @ts-ignore
     <MapPanelContent
       animate
       stackOrder={currentOverlay === mapPanelConstants.Overlay.Results ? 2 : 1}

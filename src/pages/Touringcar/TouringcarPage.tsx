@@ -58,6 +58,7 @@ const TouringcarPage = () => {
 
           <StyledMap options={{ ...defaultMapOptions, maxZoom: 21, zoom: 14 }} setInstance={setMapInstance}>
             <TouringcarMapProvider>
+              {/* @ts-ignore */}
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}
                 initialPosition={mapPanelConstants.SnapPoint.Halfway}

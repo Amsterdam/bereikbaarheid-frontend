@@ -56,6 +56,7 @@ export const LoadUnloadMapSettingsDisplay = ({
   const showDateTimeModal = () => setShowDateTimeModal(true)
 
   return (
+    // @ts-ignore
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label={t('_pageLoadUnload._mapPanel.label')}>
         <Tab id="input" label={t('_generic._mapPanel.input')}>

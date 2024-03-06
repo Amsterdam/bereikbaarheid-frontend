@@ -87,6 +87,7 @@ function RoadObstructionsPage() {
           <MapStyle />
           <StyledMap options={defaultMapOptions} setInstance={setMapInstance}>
             <RoadObstructionsMapProvider>
+              {/* @ts-ignore */}
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}
                 initialPosition={SnapPoint.Halfway}

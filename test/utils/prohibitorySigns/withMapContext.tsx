@@ -27,6 +27,7 @@ export const withMapContext = (component: ReactNode, mapContextProps?: Partial<P
         ...mapContextProps,
       }}
     >
+      {/* @ts-ignore */}
       <MapPanelProvider initialPosition={SnapPoint.Closed} variant="panel">
         {component}
       </MapPanelProvider>
