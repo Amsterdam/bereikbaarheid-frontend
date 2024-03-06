@@ -1,5 +1,5 @@
 import { MapPanelContent, MapPanelContentProps } from '@amsterdam/arm-core'
-import { Paragraph, Tab, Tabs } from '@amsterdam/asc-ui'
+import { Link, Paragraph, Tab, Tabs } from '@amsterdam/asc-ui'
 import parse from 'html-react-parser'
 import { t } from 'i18next'
 import { PretendHeading } from 'shared/components/CompactElements'
@@ -12,8 +12,7 @@ import dataLinks from '../data/dataLinks'
 
 import ParkingSpacesList from './LocationsList/ParkingSpaces'
 import StopsList from './LocationsList/Stops'
-// TODO: temporarily hide Messages functionality.
-// import Messages from './Messages'
+import Messages from './Messages'
 
 const PaddedContent = styled.div`
   padding-top: 1em;
@@ -28,8 +27,7 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
     // @ts-ignore
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label={t('_pageTouringcar._mapPanel.label')} activeTab={activeTab}>
-        {/* TODO: temporarily hide Messages functionality. */}
-        {/* <Tab
+        <Tab
           id={MapPanelTab.MESSAGES}
           label={t('_pageTouringcar._mapPanel.messages')}
           onClick={() => setActiveTab(MapPanelTab.MESSAGES)}
@@ -45,7 +43,7 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
               {t('_pageTouringcar._mapPanel.signUpForNewsletter')}
             </Link>
           </PaddedContent>
-        </Tab> */}
+        </Tab>
         <Tab
           id={MapPanelTab.INFO}
           label={t('_pageTouringcar._mapPanel.info')}
