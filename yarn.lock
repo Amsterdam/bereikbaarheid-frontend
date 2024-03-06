@@ -2208,7 +2208,7 @@
     lz-string "^1.5.0"
     pretty-format "^27.0.2"
 
-"@testing-library/jest-dom@^6.4.1":
+"@testing-library/jest-dom@^6.4.2":
   version "6.4.2"
   resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-6.4.2.tgz#38949f6b63722900e2d75ba3c6d9bf8cffb3300e"
   integrity sha512-CzqH0AFymEMG48CpzXFriYYkOjk6ZGPCLMhW9e9jg3KMCn5OfJecF8GtGW7yGfR/IgCe3SX8BSwjdzI6BBbZLw==
@@ -2537,7 +2537,7 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.5.1.tgz#178d58ee7e4834152b0e8b4d30cbfab578b9bb30"
   integrity sha512-4tT2UrL5LBqDwoed9wZ6N3umC4Yhz3W3FloMmiiG4JwmUJWpie0c7lcnUNd4gtMKuDEO4wRVS8B6Xa0uMRsMKg==
 
-"@types/node@^18.19.12":
+"@types/node@^18.19.21":
   version "18.19.21"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.21.tgz#f4ca1ac8ffb05ee4b89163c2d6fac9a1a59ee149"
   integrity sha512-2Q2NeB6BmiTFQi4DHBzncSoq/cJMLDdhPaAoJFnFCyD9a8VPZRf7a1GAwp1Edb7ROaZc5Jz/tnZyL6EsWMRaqw==
@@ -5224,7 +5224,7 @@ eslint-webpack-plugin@^3.1.1:
     normalize-path "^3.0.0"
     schema-utils "^4.0.0"
 
-eslint@^8.3.0, eslint@^8.56.0:
+eslint@^8.3.0, eslint@^8.57.0:
   version "8.57.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.57.0.tgz#c786a6fd0e0b68941aaf624596fb987089195668"
   integrity sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==
@@ -6066,7 +6066,7 @@ html-parse-stringify@^3.0.1:
   dependencies:
     void-elements "3.1.0"
 
-html-react-parser@^5.1.1:
+html-react-parser@^5.1.8:
   version "5.1.8"
   resolved "https://registry.yarnpkg.com/html-react-parser/-/html-react-parser-5.1.8.tgz#b8a294854845bce96627aa4f2ba738362c0ebcf8"
   integrity sha512-oAXgUB4JYHFg4le3RQZtoge1TGMkwXSZPiWiexwdx3AuldgG+QEvbwMrscSViu90JNje3V4Zq5gCUSoTxa0W0A==
@@ -6197,7 +6197,7 @@ i18next-browser-languagedetector@^7.2.0:
   dependencies:
     "@babel/runtime" "^7.23.2"
 
-i18next@^23.8.2:
+i18next@^23.10.0:
   version "23.10.0"
   resolved "https://registry.yarnpkg.com/i18next/-/i18next-23.10.0.tgz#fb328794ae692e6fdde0564259e421f4203c4a2c"
   integrity sha512-/TgHOqsa7/9abUKJjdPeydoyDc0oTi/7u9F8lMSj6ufg4cbC1Oj3f/Jja7zj7WRIhEQKB7Q4eN6y68I9RDxxGQ==
@@ -9279,7 +9279,7 @@ react-error-overlay@^6.0.11:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.11.tgz#92835de5841c5cf08ba00ddd2d677b6d17ff9adb"
   integrity sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==
 
-react-hook-form@^7.49.3:
+react-hook-form@^7.50.1:
   version "7.51.0"
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.51.0.tgz#757ae71b37c26e00590bd3788508287dcc5ecdaf"
   integrity sha512-BggOy5j58RdhdMzzRUHGOYhSz1oeylFAv6jUSG86OvCIvlAvS7KvnRY7yoAf2pfEiPN7BesnR0xx73nEk3qIiw==
@@ -9317,7 +9317,7 @@ react-refresh@^0.11.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
-react-router-dom@^6.21.3:
+react-router-dom@^6.22.2:
   version "6.22.2"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.22.2.tgz#8233968a8a576f3006e5549c80f3527d2598fc9c"
   integrity sha512-WgqxD2qySEIBPZ3w0sHH+PUAiamDeszls9tzqMPBDA1YYVucTBXLU7+gtRfcSnhe92A3glPnvSxK2dhNoAVOIQ==
@@ -9325,7 +9325,7 @@ react-router-dom@^6.21.3:
     "@remix-run/router" "1.15.2"
     react-router "6.22.2"
 
-react-router@6.22.2, react-router@^6.21.3:
+react-router@6.22.2, react-router@^6.22.2:
   version "6.22.2"
   resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.22.2.tgz#27e77e4c635a5697693b922d131d773451c98a5b"
   integrity sha512-YD3Dzprzpcq+tBMHBS822tCjnWD3iIZbTeSXMY9LPSG541EfoBGyZ3bS25KEnaZjLcmQpw2AVLkFyfgXY8uvcw==
