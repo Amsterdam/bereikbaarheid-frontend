@@ -57,6 +57,7 @@ function LocationsList({ locationItems }: { locationItems: TouringcarStop[] }) {
             <TableRowClickable
               key={feature.id}
               onClick={() => {
+                if (!feature?.geometry?.coordinates?.[0]) return
                 mapInstance.flyTo([feature.geometry.coordinates[1], feature.geometry.coordinates[0]], 20)
               }}
             >

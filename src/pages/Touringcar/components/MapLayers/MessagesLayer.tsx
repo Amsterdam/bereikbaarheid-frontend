@@ -17,7 +17,13 @@ export const MessagesLayer = () => {
   const { activeMapLayers, messagesDate, setCurrentMessage, setActiveTab } = useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
 
-  const { isLoading, error, isError, data, refetch } = useQuery({
+  const {
+    isLoading,
+    error,
+    isError,
+    data: messages,
+    refetch,
+  } = useQuery({
     enabled: true,
     queryKey: ['touringcarMessages'],
     queryFn: () =>
@@ -30,24 +36,31 @@ export const MessagesLayer = () => {
 
   const findMessage = useCallback(
     (title: string) => {
-      if (!data) return
-      const message: TouringcarMessage | undefined = data.features.find(
-        msg => msg?.properties[(i18n.language || 'nl') as Language].title === title
+      if (!messages) return
+
+      console.log('Messages data:', messages)
+
+      const message: TouringcarMessage | undefined = messages.features.find(
+        msg => msg?.properties[(i18n.language ?? 'nl') as Language].title === title
       )
+
+      console.log('Found message to be set:', message)
+
       setCurrentMessage(message)
     },
-    [data, setCurrentMessage]
+    [messages, setCurrentMessage]
   )
 
   const createClusterMarkers = () => {
-    return data!.features.map((message: TouringcarMessage) => {
+    // Messages should be available once createClusterMarkers is called.
+    return messages!.features.map((message: TouringcarMessage) => {
       const marker = TouringcarMarker(message, MapLayerId.touringcarMessagesLayerId)
 
       const msgParts = message.properties[(i18n.language || 'nl') as Language]
 
       let tooltipText = `<p><strong>${msgParts.title}</strong></p>
-      ${msgParts.body ?? `<p>${msgParts.body}</p>`}
-      ${msgParts.advice ?? `<p><strong>Advies:</strong> ${msgParts.advice}</p>`}`
+${msgParts.body ?? `<p>${msgParts.body}</p>`}
+${msgParts.advice ?? `<p><strong>Advies:</strong> ${msgParts.advice}</p>`}`
 
       marker.bindTooltip(tooltipText)
 
@@ -62,7 +75,7 @@ export const MessagesLayer = () => {
   }
 
   if (isError && error instanceof Error) console.error(error.message)
-  if (isLoading || !data) return null
+  if (isLoading || !messages) return null
   if (!activeMapLayers[MapLayerId.touringcarMessagesLayerId]) return null
 
   return (
