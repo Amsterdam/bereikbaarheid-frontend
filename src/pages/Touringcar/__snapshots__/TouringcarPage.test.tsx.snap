@@ -382,7 +382,7 @@ FAQ en contactgegevens"
           data-testid="load-unload-page"
         >
           <div
-            class="Map--1vuxs00 sc-dwalKd jkpnfb hwMSZC leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+            class="Map--1vuxs00 sc-BQMaI jkpnfb hRDWhZ leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
             style="position: relative;"
             tabindex="0"
           >
@@ -490,12 +490,22 @@ FAQ en contactgegevens"
                       role="tablist"
                     >
                       <button
-                        aria-controls="panel-info"
+                        aria-controls="panel-messages"
                         aria-selected="true"
                         class="sc-lbJcrp jfaesJ"
-                        id="tab-info"
+                        id="tab-messages"
                         role="tab"
                         tabindex="0"
+                      >
+                        Berichten
+                      </button>
+                      <button
+                        aria-controls="panel-info"
+                        aria-selected="false"
+                        class="sc-lbJcrp gjLVTq"
+                        id="tab-info"
+                        role="tab"
+                        tabindex="-1"
                       >
                         Informatie
                       </button>
@@ -511,14 +521,75 @@ FAQ en contactgegevens"
                       </button>
                     </div>
                     <div
+                      aria-labelledby="tab-messages"
+                      class="sc-fKWMtX"
+                      id="panel-messages"
+                      role="tabpanel"
+                      tabindex="0"
+                    >
+                      <div
+                        class="sc-fyVfxW llgRlv"
+                      >
+                        <p
+                          class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+                        >
+                          <label
+                            class="sc-gFVvzn eVvvHs"
+                            for="touringcarMessagesDatePicker"
+                          >
+                            <span
+                              class="sc-brPLxw dGBiZJ"
+                            >
+                              <strong>
+                                Datum
+                              </strong>
+                            </span>
+                          </label>
+                          <input
+                            class="sc-hknOHE joUrDy"
+                            id="touringcarMessagesDatePicker"
+                            type="date"
+                            value="2023-10-01"
+                          />
+                        </p>
+                        <a
+                          class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                          href="https://nieuwsbrieven.amsterdam.nl/x/plugin/?pName=subscribe&MIDRID=S7Y1MwYAA87&pLang=nl&Z=-2113214771&pk_vid=906065c3c2209171170125204002d192"
+                          target="_blank"
+                        >
+                          <span
+                            class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                          >
+                            <svg
+                              focusable="false"
+                              role="img"
+                              viewBox="0 0 32 32"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                                fill-rule="evenodd"
+                              />
+                            </svg>
+                          </span>
+                          <span
+                            class="sc-fhzFiK iRpqvs"
+                          >
+                            Schrijf je in voor de Nieuwsbrief Touringcar
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <div
                       aria-labelledby="tab-info"
                       class="sc-fKWMtX"
+                      hidden=""
                       id="panel-info"
                       role="tabpanel"
                       tabindex="0"
                     >
                       <div
-                        class="sc-bddgXz knyrBA"
+                        class="sc-fyVfxW llgRlv"
                       >
                         <h2
                           class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-camqpD fHdmku"
@@ -539,7 +610,7 @@ FAQ en contactgegevens"
                         </p>
                       </div>
                       <div
-                        class="sc-bddgXz knyrBA"
+                        class="sc-fyVfxW llgRlv"
                       >
                         <h2
                           class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-camqpD fHdmku"
@@ -548,7 +619,7 @@ FAQ en contactgegevens"
                         </h2>
                       </div>
                       <div
-                        class="sc-bddgXz knyrBA"
+                        class="sc-fyVfxW llgRlv"
                         style="margin-block-end: 3em;"
                       >
                         <h2
@@ -848,7 +919,7 @@ FAQ en contactgegevens"
             </button>
           </div>
           <div
-            class="ViewerContainerWrapper--gwszjx kosfnq sc-cspYLC rHOol"
+            class="ViewerContainerWrapper--gwszjx kosfnq sc-dwalKd AfNxO"
             data-testid="container"
             style="width: calc(100% - undefined);"
           >
@@ -861,7 +932,7 @@ FAQ en contactgegevens"
               data-testid="topRight"
             >
               <div
-                class="sc-fyVfxW diUWtC"
+                class="sc-eHsDsR gYgznV"
               >
                 <button
                   aria-controls="legend"
@@ -898,8 +969,44 @@ FAQ en contactgegevens"
                   id="legend"
                 >
                   <div
-                    class="sc-jdkBTo djLAQD"
+                    class="sc-fmzyuX jkXEiC"
                   >
+                    <label
+                      class="sc-gFVvzn jmImEg"
+                      for="touringcarMessages"
+                    >
+                      <span
+                        class="sc-brPLxw dGBiZJ"
+                      >
+                        Berichten
+                      </span>
+                      <span
+                        class="sc-fHjqPf jSNdCb sc-cspYLC bOvWLr"
+                      >
+                        <span
+                          class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                          data-testid="checkboxIcon"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <input
+                          checked=""
+                          class="sc-fUnMCh cQYVve"
+                          id="touringcarMessages"
+                          type="checkbox"
+                        />
+                      </span>
+                    </label>
                     <label
                       class="sc-gFVvzn jmImEg"
                       for="touringcarStops"
@@ -910,7 +1017,7 @@ FAQ en contactgegevens"
                         Haltes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fmzyuX TqRqn"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC cAWIhI"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -946,7 +1053,7 @@ FAQ en contactgegevens"
                         Parkeren
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fmzyuX iBsjyw"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC eMzwKL"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -982,7 +1089,7 @@ FAQ en contactgegevens"
                         Maximale doorrijhoogtes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fmzyuX eVfwxu"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC eoqwAl"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1018,7 +1125,7 @@ FAQ en contactgegevens"
                         Aanbevolen routes
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fmzyuX xMONc"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC llTsvz"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1054,7 +1161,7 @@ FAQ en contactgegevens"
                         Toegestane wegen &gt;7,5 ton
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fmzyuX FRLJR"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC hIKtue"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1090,7 +1197,7 @@ FAQ en contactgegevens"
                         &gt;7,5 ton mét ontheffing
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fmzyuX bzFQHt"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC cLdjJi"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1126,7 +1233,7 @@ FAQ en contactgegevens"
                         Milieuzone
                       </span>
                       <span
-                        class="sc-fHjqPf jSNdCb sc-fmzyuX csAhiS"
+                        class="sc-fHjqPf jSNdCb sc-cspYLC gjRUbB"
                       >
                         <span
                           class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -1601,7 +1708,7 @@ FAQ en contactgegevens"
         data-testid="load-unload-page"
       >
         <div
-          class="Map--1vuxs00 sc-dwalKd jkpnfb hwMSZC leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+          class="Map--1vuxs00 sc-BQMaI jkpnfb hRDWhZ leaflet-container leaflet-touch leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
           style="position: relative;"
           tabindex="0"
         >
@@ -1709,12 +1816,22 @@ FAQ en contactgegevens"
                     role="tablist"
                   >
                     <button
-                      aria-controls="panel-info"
+                      aria-controls="panel-messages"
                       aria-selected="true"
                       class="sc-lbJcrp jfaesJ"
-                      id="tab-info"
+                      id="tab-messages"
                       role="tab"
                       tabindex="0"
+                    >
+                      Berichten
+                    </button>
+                    <button
+                      aria-controls="panel-info"
+                      aria-selected="false"
+                      class="sc-lbJcrp gjLVTq"
+                      id="tab-info"
+                      role="tab"
+                      tabindex="-1"
                     >
                       Informatie
                     </button>
@@ -1730,14 +1847,75 @@ FAQ en contactgegevens"
                     </button>
                   </div>
                   <div
+                    aria-labelledby="tab-messages"
+                    class="sc-fKWMtX"
+                    id="panel-messages"
+                    role="tabpanel"
+                    tabindex="0"
+                  >
+                    <div
+                      class="sc-fyVfxW llgRlv"
+                    >
+                      <p
+                        class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
+                      >
+                        <label
+                          class="sc-gFVvzn eVvvHs"
+                          for="touringcarMessagesDatePicker"
+                        >
+                          <span
+                            class="sc-brPLxw dGBiZJ"
+                          >
+                            <strong>
+                              Datum
+                            </strong>
+                          </span>
+                        </label>
+                        <input
+                          class="sc-hknOHE joUrDy"
+                          id="touringcarMessagesDatePicker"
+                          type="date"
+                          value="2023-10-01"
+                        />
+                      </p>
+                      <a
+                        class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
+                        href="https://nieuwsbrieven.amsterdam.nl/x/plugin/?pName=subscribe&MIDRID=S7Y1MwYAA87&pLang=nl&Z=-2113214771&pk_vid=906065c3c2209171170125204002d192"
+                        target="_blank"
+                      >
+                        <span
+                          class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
+                        >
+                          <svg
+                            focusable="false"
+                            role="img"
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
+                              fill-rule="evenodd"
+                            />
+                          </svg>
+                        </span>
+                        <span
+                          class="sc-fhzFiK iRpqvs"
+                        >
+                          Schrijf je in voor de Nieuwsbrief Touringcar
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                  <div
                     aria-labelledby="tab-info"
                     class="sc-fKWMtX"
+                    hidden=""
                     id="panel-info"
                     role="tabpanel"
                     tabindex="0"
                   >
                     <div
-                      class="sc-bddgXz knyrBA"
+                      class="sc-fyVfxW llgRlv"
                     >
                       <h2
                         class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-camqpD fHdmku"
@@ -1758,7 +1936,7 @@ FAQ en contactgegevens"
                       </p>
                     </div>
                     <div
-                      class="sc-bddgXz knyrBA"
+                      class="sc-fyVfxW llgRlv"
                     >
                       <h2
                         class="sc-jEACwC fAEZmm sc-kOPcWz btvUtM sc-camqpD fHdmku"
@@ -1767,7 +1945,7 @@ FAQ en contactgegevens"
                       </h2>
                     </div>
                     <div
-                      class="sc-bddgXz knyrBA"
+                      class="sc-fyVfxW llgRlv"
                       style="margin-block-end: 3em;"
                     >
                       <h2
@@ -2067,7 +2245,7 @@ FAQ en contactgegevens"
           </button>
         </div>
         <div
-          class="ViewerContainerWrapper--gwszjx kosfnq sc-cspYLC rHOol"
+          class="ViewerContainerWrapper--gwszjx kosfnq sc-dwalKd AfNxO"
           data-testid="container"
           style="width: calc(100% - undefined);"
         >
@@ -2080,7 +2258,7 @@ FAQ en contactgegevens"
             data-testid="topRight"
           >
             <div
-              class="sc-fyVfxW diUWtC"
+              class="sc-eHsDsR gYgznV"
             >
               <button
                 aria-controls="legend"
@@ -2117,8 +2295,44 @@ FAQ en contactgegevens"
                 id="legend"
               >
                 <div
-                  class="sc-jdkBTo djLAQD"
+                  class="sc-fmzyuX jkXEiC"
                 >
+                  <label
+                    class="sc-gFVvzn jmImEg"
+                    for="touringcarMessages"
+                  >
+                    <span
+                      class="sc-brPLxw dGBiZJ"
+                    >
+                      Berichten
+                    </span>
+                    <span
+                      class="sc-fHjqPf jSNdCb sc-cspYLC bOvWLr"
+                    >
+                      <span
+                        class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
+                        data-testid="checkboxIcon"
+                      >
+                        <svg
+                          focusable="false"
+                          role="img"
+                          viewBox="0 0 32 32"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12.216 27.016 0 14.168l2.91-2.77 9.346 9.837L29.129 4 32 6.8z"
+                            fill-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        checked=""
+                        class="sc-fUnMCh cQYVve"
+                        id="touringcarMessages"
+                        type="checkbox"
+                      />
+                    </span>
+                  </label>
                   <label
                     class="sc-gFVvzn jmImEg"
                     for="touringcarStops"
@@ -2129,7 +2343,7 @@ FAQ en contactgegevens"
                       Haltes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fmzyuX TqRqn"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC cAWIhI"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2165,7 +2379,7 @@ FAQ en contactgegevens"
                       Parkeren
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fmzyuX iBsjyw"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC eMzwKL"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2201,7 +2415,7 @@ FAQ en contactgegevens"
                       Maximale doorrijhoogtes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fmzyuX eVfwxu"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC eoqwAl"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2237,7 +2451,7 @@ FAQ en contactgegevens"
                       Aanbevolen routes
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fmzyuX xMONc"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC llTsvz"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2273,7 +2487,7 @@ FAQ en contactgegevens"
                       Toegestane wegen &gt;7,5 ton
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fmzyuX FRLJR"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC hIKtue"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2309,7 +2523,7 @@ FAQ en contactgegevens"
                       &gt;7,5 ton mét ontheffing
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fmzyuX bzFQHt"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC cLdjJi"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"
@@ -2345,7 +2559,7 @@ FAQ en contactgegevens"
                       Milieuzone
                     </span>
                     <span
-                      class="sc-fHjqPf jSNdCb sc-fmzyuX csAhiS"
+                      class="sc-fHjqPf jSNdCb sc-cspYLC gjRUbB"
                     >
                       <span
                         class="sc-aXZVg sc-hzhJZQ MrMbL grJHWT"

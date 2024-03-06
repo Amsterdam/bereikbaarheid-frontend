@@ -2,7 +2,7 @@ import { useCallback, useContext, useEffect } from 'react'
 
 import { MapPanelContext, mapPanelConstants } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarMessages, { TouringcarMessage, TouringcarMessagePart } from 'api/touringcar/messages'
+import getTouringcarMessages, { TouringcarMessage } from 'api/touringcar/messages'
 import { format } from 'date-fns'
 import i18n from 'i18n'
 import { MapLayerId, MapPanelTab, useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
