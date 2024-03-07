@@ -48,6 +48,7 @@ interface RoadSectionInfoProps {
 
 const RoadSectionInfo = ({ currentOverlay, detailFeature, setDetailFeature }: RoadSectionInfoProps) => {
   return (
+    // @ts-ignore
     <MapPanelContent
       title={`Wegvak ${detailFeature.data.properties.road_element_id}`}
       data-testid="detail-feature-road-section"

@@ -61,6 +61,7 @@ const ProhibitorySignsPage = () => {
           <MapStyle />
           <StyledMap options={defaultMapOptions} setInstance={setMapInstance}>
             <ProhibitorySignsMapProvider>
+              {/* @ts-ignore */}
               <MapPanelProvider
                 variant={showDesktopVariant ? 'panel' : 'drawer'}
                 initialPosition={SnapPoint.Closed}

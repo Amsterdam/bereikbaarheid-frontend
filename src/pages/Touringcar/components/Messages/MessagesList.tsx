@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 import { useMapInstance } from '@amsterdam/arm-core'
-import { Accordion, Heading, Image, Link, List, ListItem, Paragraph, themeColor } from '@amsterdam/asc-ui'
+import { Accordion, Button, Heading, Image, Link, List, ListItem, Paragraph, themeColor } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import getTouringcarMessages from 'api/touringcar/messages'
 import { format } from 'date-fns'
@@ -59,10 +59,20 @@ function MessagesList() {
               title={`(${index + 1}) ${msgParts.title}`}
               isOpen={message.properties.important ?? data?.features.length === 1}
               important={message.properties.important}
-              onClick={() => {
-                mapInstance.flyTo([message.geometry.coordinates[1], message.geometry.coordinates[0]], 20)
-              }}
             >
+              <Button
+                forwardedAs={Link}
+                inlist
+                onClick={({ preventDefault }) => {
+                  preventDefault()
+
+                  if (!message?.geometry?.coordinates?.[0]) return
+
+                  mapInstance.flyTo([message.geometry.coordinates[1], message.geometry.coordinates[0]], 20)
+                }}
+              >
+                View on map
+              </Button>
               <Paragraph>{msgParts.body}</Paragraph>
               {message.properties.image_url ?? (
                 <Paragraph>
