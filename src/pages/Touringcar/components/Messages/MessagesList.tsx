@@ -62,11 +62,11 @@ function MessagesList() {
         return (
           <ListItem>
             <StyledAccordion
-              title={`(${index + 1}) ${msgParts.title}`}
+              title={msgParts.title}
               isOpen={message.properties.important ?? messages?.features.length === 1}
               important={message.properties.important}
             >
-              <Paragraph>{msgParts.body}</Paragraph>
+              {msgParts.body && <Paragraph>{msgParts.body}</Paragraph>}
               {message.properties.image_url && (
                 <Paragraph>
                   <Image src={message.properties.image_url} alt={msgParts.title} />
@@ -81,7 +81,9 @@ function MessagesList() {
               {message.properties.link && (
                 <Paragraph>
                   <Heading as="h3">{t('_pageTouringcar._mapPanel._messages.moreInfo')}</Heading>
-                  <Link href={message.properties.link}>{message.properties.link}</Link>
+                  <Link href={message.properties.link} target="_blank">
+                    {message.properties.link}
+                  </Link>
                 </Paragraph>
               )}
               {message.properties.category && (
