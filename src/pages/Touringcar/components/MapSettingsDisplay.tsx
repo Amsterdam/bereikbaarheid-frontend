@@ -6,7 +6,7 @@ import { PretendHeading } from 'shared/components/CompactElements'
 import styled from 'styled-components'
 
 import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
-import { MapPanelTab, useTouringcarMapContext } from '../contexts/MapContext'
+import { MapLayerId, MapPanelTab, useTouringcarMapContext } from '../contexts/MapContext'
 import TouringcarPageProvider from '../contexts/PageProvider'
 import dataLinks from '../data/dataLinks'
 
@@ -31,6 +31,7 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
           id={MapPanelTab.MESSAGES}
           label={t('_pageTouringcar._mapPanel.messages')}
           onClick={() => setActiveTab(MapPanelTab.MESSAGES)}
+          style={{ display: activeMapLayers[MapLayerId.touringcarMessagesLayerId] ? 'initial' : 'none' }}
         >
           <PaddedContent>
             <Messages />

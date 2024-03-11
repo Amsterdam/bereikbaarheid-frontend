@@ -495,6 +495,7 @@ FAQ en contactgegevens"
                         class="sc-lbJcrp jfaesJ"
                         id="tab-messages"
                         role="tab"
+                        style="display: initial;"
                         tabindex="0"
                       >
                         Berichten
@@ -1854,6 +1855,7 @@ FAQ en contactgegevens"
                       class="sc-lbJcrp jfaesJ"
                       id="tab-messages"
                       role="tab"
+                      style="display: initial;"
                       tabindex="0"
                     >
                       Berichten
