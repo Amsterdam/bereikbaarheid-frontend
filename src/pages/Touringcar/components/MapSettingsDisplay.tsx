@@ -24,7 +24,7 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
   const { activeMapLayers, activeTab, setActiveTab } = useTouringcarMapContext()
 
   return (
-    // @ts-ignore
+    // @ts-ignore - Necessary due to upstream issue :-(
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label={t('_pageTouringcar._mapPanel.label')} activeTab={activeTab}>
         <Tab
