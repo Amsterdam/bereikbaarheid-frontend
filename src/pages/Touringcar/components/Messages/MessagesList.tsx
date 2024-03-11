@@ -30,7 +30,13 @@ function MessagesList() {
   const { messagesDate } = useTouringcarMapContext()
   const mapInstance = useMapInstance()
 
-  const { isLoading, error, isError, data, refetch } = useQuery({
+  const {
+    isLoading,
+    error,
+    isError,
+    data: messages,
+    refetch,
+  } = useQuery({
     enabled: true,
     queryKey: ['touringcarMessages'],
     queryFn: () => {
@@ -45,11 +51,11 @@ function MessagesList() {
   }, [refetch, messagesDate])
 
   if (isError && error instanceof Error) console.error(error.message)
-  if (isLoading || !data?.features) return null
+  if (isLoading || !messages?.features.length) return null
 
   return (
     <List>
-      {data?.features.map((message, index) => {
+      {messages?.features.map((message, index) => {
         // @ts-ignore
         const msgParts = message.properties[i18n.language || 'nl']
 
@@ -57,56 +63,56 @@ function MessagesList() {
           <ListItem>
             <StyledAccordion
               title={`(${index + 1}) ${msgParts.title}`}
-              isOpen={message.properties.important ?? data?.features.length === 1}
+              isOpen={message.properties.important ?? messages?.features.length === 1}
               important={message.properties.important}
             >
-              <Button
-                forwardedAs={Link}
-                inlist
-                onClick={({ preventDefault }) => {
-                  preventDefault()
-
-                  if (!message?.geometry?.coordinates?.[0]) return
-
-                  mapInstance.flyTo([message.geometry.coordinates[1], message.geometry.coordinates[0]], 20)
-                }}
-              >
-                View on map
-              </Button>
               <Paragraph>{msgParts.body}</Paragraph>
-              {message.properties.image_url ?? (
+              {message.properties.image_url && (
                 <Paragraph>
                   <Image src={message.properties.image_url} alt={msgParts.title} />
                 </Paragraph>
               )}
-              {msgParts.advice ?? (
+              {msgParts.advice && (
                 <Paragraph>
                   <Heading as="h3">{t('_pageTouringcar._mapPanel._messages.advice')}</Heading>
                   {msgParts.advice}
                 </Paragraph>
               )}
-              {message.properties.link ?? (
+              {message.properties.link && (
                 <Paragraph>
                   <Heading as="h3">{t('_pageTouringcar._mapPanel._messages.moreInfo')}</Heading>
                   <Link to={message.properties.link}>{message.properties.link}</Link>
                 </Paragraph>
               )}
-              {message.properties.category ?? (
+              {message.properties.category && (
                 <Paragraph>
                   <strong>{t('_pageTouringcar._mapPanel._messages.category')}:</strong> {message.properties.category}
                 </Paragraph>
               )}
-              {message.properties.startdate ?? (
+              {message.properties.startdate && (
                 <Paragraph style={{ marginBlockEnd: 0 }}>
                   <strong>{t('_pageTouringcar._mapPanel._messages.startDate')}:</strong> {message.properties.startdate}
                 </Paragraph>
               )}
-              {message.properties.enddate ?? (
+              {message.properties.enddate && (
                 <Paragraph>
                   <strong>{t('_pageTouringcar._mapPanel._messages.endDate')}:</strong> {message.properties.enddate}
                 </Paragraph>
               )}
             </StyledAccordion>
+
+            <Button
+              variant="secondary"
+              onClick={({ preventDefault }) => {
+                preventDefault()
+
+                if (!message?.geometry?.coordinates?.[0]) return
+
+                mapInstance.flyTo([message.geometry.coordinates[1], message.geometry.coordinates[0]], 20)
+              }}
+            >
+              {t('_pageTouringcar._mapPanel._messages.viewOnMap')}
+            </Button>
           </ListItem>
         )
       })}
