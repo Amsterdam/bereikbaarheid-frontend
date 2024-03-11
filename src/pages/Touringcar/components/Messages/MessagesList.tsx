@@ -26,6 +26,8 @@ const StyledAccordion = styled(Accordion)<{ important?: boolean }>`
   }
 `
 
+type MessageLanguage = 'nl' | 'en' | 'de' | 'es' | 'fr'
+
 function MessagesList() {
   const { messagesDate } = useTouringcarMapContext()
   const mapInstance = useMapInstance()
@@ -55,9 +57,8 @@ function MessagesList() {
 
   return (
     <List>
-      {messages?.features.map((message, index) => {
-        // @ts-ignore
-        const msgParts = message.properties[i18n.language || 'nl']
+      {messages?.features.map(message => {
+        const msgParts = message.properties[(i18n.language || i18n.languages[0]) as MessageLanguage]
 
         return (
           <ListItem>
