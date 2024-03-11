@@ -66,6 +66,19 @@ function MessagesList() {
               isOpen={message.properties.important ?? messages?.features.length === 1}
               important={message.properties.important}
             >
+              <Button
+                forwardedAs={Link}
+                inlist
+                onClick={({ preventDefault }) => {
+                  preventDefault()
+
+                  if (!message?.geometry?.coordinates?.[0]) return
+
+                  mapInstance.flyTo([message.geometry.coordinates[1], message.geometry.coordinates[0]], 20)
+                }}
+              >
+                View on map
+              </Button>
               <Paragraph>{msgParts.body}</Paragraph>
               {message.properties.image_url && (
                 <Paragraph>
