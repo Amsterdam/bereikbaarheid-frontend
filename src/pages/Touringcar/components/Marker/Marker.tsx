@@ -52,7 +52,8 @@ function TouringcarMarker(item: TouringcarGeometryPoints, layerId: MapLayerId) {
     textContent = item.properties?.omschrijving.split(':')[0]
   }
 
-  const marker = L.marker(new L.LatLng(item.geometry.coordinates[1], item.geometry.coordinates[0]), {
+  const latLng = new L.LatLng(item.geometry.coordinates[1], item.geometry.coordinates[0])
+  const marker = L.marker(latLng, {
     icon: TouringcarMarkerIcon(layerId, textContent, textColor),
   })
 

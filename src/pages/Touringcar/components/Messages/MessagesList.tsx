@@ -66,19 +66,6 @@ function MessagesList() {
               isOpen={message.properties.important ?? messages?.features.length === 1}
               important={message.properties.important}
             >
-              <Button
-                forwardedAs={Link}
-                inlist
-                onClick={({ preventDefault }) => {
-                  preventDefault()
-
-                  if (!message?.geometry?.coordinates?.[0]) return
-
-                  mapInstance.flyTo([message.geometry.coordinates[1], message.geometry.coordinates[0]], 20)
-                }}
-              >
-                View on map
-              </Button>
               <Paragraph>{msgParts.body}</Paragraph>
               {message.properties.image_url && (
                 <Paragraph>
@@ -94,7 +81,7 @@ function MessagesList() {
               {message.properties.link && (
                 <Paragraph>
                   <Heading as="h3">{t('_pageTouringcar._mapPanel._messages.moreInfo')}</Heading>
-                  <Link to={message.properties.link}>{message.properties.link}</Link>
+                  <Link href={message.properties.link}>{message.properties.link}</Link>
                 </Paragraph>
               )}
               {message.properties.category && (
@@ -112,20 +99,20 @@ function MessagesList() {
                   <strong>{t('_pageTouringcar._mapPanel._messages.endDate')}:</strong> {message.properties.enddate}
                 </Paragraph>
               )}
+
+              <Button
+                variant="secondary"
+                onClick={({ preventDefault }) => {
+                  preventDefault()
+
+                  if (!message?.geometry?.coordinates?.[0]) return
+
+                  mapInstance.flyTo([message.geometry.coordinates[1], message.geometry.coordinates[0]], 20)
+                }}
+              >
+                {t('_pageTouringcar._mapPanel._messages.viewOnMap')}
+              </Button>
             </StyledAccordion>
-
-            <Button
-              variant="secondary"
-              onClick={({ preventDefault }) => {
-                preventDefault()
-
-                if (!message?.geometry?.coordinates?.[0]) return
-
-                mapInstance.flyTo([message.geometry.coordinates[1], message.geometry.coordinates[0]], 20)
-              }}
-            >
-              {t('_pageTouringcar._mapPanel._messages.viewOnMap')}
-            </Button>
           </ListItem>
         )
       })}

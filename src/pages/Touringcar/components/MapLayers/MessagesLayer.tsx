@@ -38,13 +38,9 @@ export const MessagesLayer = () => {
     (title: string) => {
       if (!messages) return
 
-      console.log('Messages data:', messages)
-
       const message: TouringcarMessage | undefined = messages.features.find(
         msg => msg?.properties[(i18n.language ?? 'nl') as Language].title === title
       )
-
-      console.log('Found message to be set:', message)
 
       setCurrentMessage(message)
     },
