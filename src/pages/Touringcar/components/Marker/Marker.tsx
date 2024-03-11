@@ -5,13 +5,15 @@ import { TouringcarVehicleHeight } from 'api/touringcar/vehicle-heights'
 import L from 'leaflet'
 import { MapLayerId } from 'pages/Touringcar/contexts/MapContext'
 
+import SvgTouringcarMessageMarker from './images/bericht.svg'
 import SvgTouringcarVehicleHeightMarker from './images/doorrijhoogte.svg'
 import SvgTouringcarStopMarker from './images/halte.svg'
 import SvgTouringcarParkingSpaceMarker from './images/parkeerplaats.svg'
 
-type TouringcarGeometryPoints = TouringcarParkingSpace | TouringcarStop | TouringcarVehicleHeight | TouringcarMessage
+type TouringcarGeometryPoints = TouringcarMessage | TouringcarParkingSpace | TouringcarStop | TouringcarVehicleHeight
 
 const MapLayerIdToImage: Record<string, string> = {
+  [MapLayerId.touringcarMessagesLayerId]: SvgTouringcarMessageMarker,
   [MapLayerId.touringcarStopsLayerId]: SvgTouringcarStopMarker,
   [MapLayerId.touringcarParkingSpacesLayerId]: SvgTouringcarParkingSpaceMarker,
   [MapLayerId.touringcarVehicleHeightsLayerId]: SvgTouringcarVehicleHeightMarker,
