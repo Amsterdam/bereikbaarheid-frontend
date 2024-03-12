@@ -11,6 +11,8 @@ import useTouringcarMapContext from 'pages/Touringcar/contexts/MapContext'
 import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
+import { MessageLanguage } from '../MapLayers/MessagesLayer'
+
 const StyledAccordion = styled(Accordion)<{ important?: boolean }>`
   border: 2px solid ${props => (props.important ? themeColor('secondary') : themeColor('primary'))};
   border-left: 8px solid ${props => (props.important ? themeColor('secondary') : themeColor('primary'))};
@@ -25,8 +27,6 @@ const StyledAccordion = styled(Accordion)<{ important?: boolean }>`
     cursor: pointer;
   }
 `
-
-type MessageLanguage = 'nl' | 'en' | 'de' | 'es' | 'fr'
 
 function MessagesList() {
   const { messagesDate } = useTouringcarMapContext()
@@ -58,7 +58,7 @@ function MessagesList() {
   return (
     <List>
       {messages?.features.map(message => {
-        const msgParts = message.properties[(i18n.language || i18n.languages[0]) as MessageLanguage]
+        const msgParts = message.properties[(i18n.language || i18n.languages[0] || 'nl') as MessageLanguage]
 
         return (
           <ListItem>

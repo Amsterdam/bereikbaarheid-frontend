@@ -11,7 +11,7 @@ import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from 'shared/u
 
 import TouringcarMarker from '../Marker/Marker'
 
-type Language = 'nl' | 'en' | 'de' | 'es' | 'fr'
+export type MessageLanguage = 'nl' | 'en' | 'de' | 'es' | 'fr'
 
 export const MessagesLayer = () => {
   const { activeMapLayers, messagesDate, setCurrentMessage, setActiveTab } = useTouringcarMapContext()
@@ -39,7 +39,7 @@ export const MessagesLayer = () => {
       if (!messages) return
 
       const message: TouringcarMessage | undefined = messages.features.find(
-        msg => msg?.properties[(i18n.language ?? 'nl') as Language].title === title
+        msg => msg?.properties[(i18n.language || i18n.languages[0] || 'nl') as MessageLanguage]?.title === title
       )
 
       setCurrentMessage(message)
@@ -52,7 +52,7 @@ export const MessagesLayer = () => {
     return messages!.features.map((message: TouringcarMessage) => {
       const marker = TouringcarMarker(message, MapLayerId.touringcarMessagesLayerId)
 
-      const msgParts = message.properties[(i18n.language || 'nl') as Language]
+      const msgParts = message.properties[(i18n.language || 'nl') as MessageLanguage]
 
       let tooltipText = `<p><strong>${msgParts.title}</strong></p>
 ${msgParts.body ?? `<p>${msgParts.body}</p>`}
