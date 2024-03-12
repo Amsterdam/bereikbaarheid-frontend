@@ -33,8 +33,8 @@ function MessagesLayer() {
       const msgParts = getMessagePartsForLanguage(message)
 
       let tooltipText = `<p><strong>${msgParts.title}</strong></p>
-${msgParts.body ?? `<p>${msgParts.body}</p>`}
-${msgParts.advice ?? `<p><strong>Advies:</strong> ${msgParts.advice}</p>`}`
+${msgParts.body ?? `<p style="max-width: 200px;">${msgParts.body}</p>`}
+${msgParts.advice ?? `<p style="max-width: 200px;"><strong>Advies:</strong> ${msgParts.advice}</p>`}`
 
       marker.bindTooltip(tooltipText)
       marker.on('click', () => {
