@@ -39,7 +39,7 @@ function useMessages() {
   })
 
   const sortedMessages = useMemo(() => {
-    return messages?.features.sort((a, b) => Number(a.properties.important) - Number(b.properties.important))
+    return messages?.features.sort((a, b) => Number(a.properties.important) + Number(b.properties.important))
   }, [messages?.features])
 
   useEffect(() => {
