@@ -44,7 +44,7 @@ const TouringcarMarkerIcon = (
   })
 }
 
-function TouringcarMarker(item: TouringcarGeometryPoints, layerId: MapLayerId) {
+function TouringcarMarker(item: TouringcarGeometryPoints, layerId: MapLayerId, number?: number) {
   let textContent, textColor
 
   if (item.properties?.maximaleDoorrijhoogte) {
@@ -52,6 +52,8 @@ function TouringcarMarker(item: TouringcarGeometryPoints, layerId: MapLayerId) {
     textColor = 'black'
   } else if (item.properties?.omschrijving) {
     textContent = item.properties?.omschrijving.split(':')[0]
+  } else if (number) {
+    textContent = `${number}`
   }
 
   const latLng = new L.LatLng(item.geometry.coordinates[1], item.geometry.coordinates[0])
