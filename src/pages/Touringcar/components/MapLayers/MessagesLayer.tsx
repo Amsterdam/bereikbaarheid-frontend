@@ -38,9 +38,11 @@ export const MessagesLayer = () => {
     (title: string) => {
       if (!messages) return
 
-      const message: TouringcarMessage | undefined = messages.features.find(
-        msg => msg?.properties[(i18n.language || i18n.languages[0] || 'nl') as MessageLanguage]?.title === title
-      )
+      const message: TouringcarMessage | undefined = messages.features.find(msg => {
+        const msgParts = msg?.properties[(i18n.language || i18n.languages[0]) as MessageLanguage] ?? msg.properties.nl
+
+        return msgParts.title === title
+      })
 
       setCurrentMessage(message)
     },

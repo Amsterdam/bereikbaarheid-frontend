@@ -58,7 +58,8 @@ function MessagesList() {
   return (
     <List>
       {messages?.features.map(message => {
-        const msgParts = message.properties[(i18n.language || i18n.languages[0] || 'nl') as MessageLanguage]
+        const msgParts =
+          message.properties[(i18n.language || i18n.languages[0]) as MessageLanguage] ?? message.properties.nl
 
         return (
           <ListItem>
