@@ -54,7 +54,8 @@ export const MessagesLayer = () => {
     return messages!.features.map((message: TouringcarMessage) => {
       const marker = TouringcarMarker(message, MapLayerId.touringcarMessagesLayerId)
 
-      const msgParts = message.properties[(i18n.language || 'nl') as MessageLanguage]
+      const msgParts =
+        message.properties[(i18n.language || i18n.languages[0]) as MessageLanguage] ?? message.properties.nl
 
       let tooltipText = `<p><strong>${msgParts.title}</strong></p>
 ${msgParts.body ?? `<p>${msgParts.body}</p>`}
