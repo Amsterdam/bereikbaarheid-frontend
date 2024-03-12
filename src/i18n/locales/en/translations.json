@@ -66,7 +66,8 @@
         "moreInfo": "More information",
         "category": "Category",
         "startDate": "Start date",
-        "endDate": "End date"
+        "endDate": "End date",
+        "viewOnMap": "View on map"
       },
       "signUpForNewsletter": "Sign up for the Touringcar Newsletter",
       "info": "Information",

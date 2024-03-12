@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TouringcarPage renders correctly 1`] = `
+exports[`Touringcar Messages renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -550,7 +550,7 @@ FAQ en contactgegevens"
                             class="sc-hknOHE joUrDy"
                             id="touringcarMessagesDatePicker"
                             type="date"
-                            value="2023-10-01"
+                            value="2024-02-01"
                           />
                         </p>
                         <a
@@ -1910,7 +1910,7 @@ FAQ en contactgegevens"
                           class="sc-hknOHE joUrDy"
                           id="touringcarMessagesDatePicker"
                           type="date"
-                          value="2023-10-01"
+                          value="2024-02-01"
                         />
                       </p>
                       <a

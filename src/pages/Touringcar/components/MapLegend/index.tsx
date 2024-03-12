@@ -71,6 +71,8 @@ function TouringcarMapLegend() {
                     } else {
                       setActiveTab(MapPanelTab.INFO)
                     }
+                  } else if (legendItem.id === MapLayerId.touringcarMessagesLayerId) {
+                    setActiveTab(MapPanelTab.INFO)
                   }
 
                   updateActiveMapLayers({

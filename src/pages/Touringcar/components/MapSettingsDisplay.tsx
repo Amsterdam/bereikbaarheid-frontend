@@ -6,7 +6,7 @@ import { PretendHeading } from 'shared/components/CompactElements'
 import styled from 'styled-components'
 
 import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'
-import { MapPanelTab, useTouringcarMapContext } from '../contexts/MapContext'
+import { MapLayerId, MapPanelTab, useTouringcarMapContext } from '../contexts/MapContext'
 import TouringcarPageProvider from '../contexts/PageProvider'
 import dataLinks from '../data/dataLinks'
 
@@ -24,13 +24,14 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
   const { activeMapLayers, activeTab, setActiveTab } = useTouringcarMapContext()
 
   return (
-    // @ts-ignore
+    // @ts-ignore - Necessary due to upstream issue :-(
     <MapPanelContent data-testid="map-settings" {...otherProps}>
       <Tabs label={t('_pageTouringcar._mapPanel.label')} activeTab={activeTab}>
         <Tab
           id={MapPanelTab.MESSAGES}
           label={t('_pageTouringcar._mapPanel.messages')}
           onClick={() => setActiveTab(MapPanelTab.MESSAGES)}
+          style={{ display: activeMapLayers[MapLayerId.touringcarMessagesLayerId] ? 'initial' : 'none' }}
         >
           <PaddedContent>
             <Messages />

@@ -14,6 +14,7 @@ import { ENDPOINT as ENDPOINT_RDW_FUEL } from '../src/api/rdw/fuel'
 import { ENDPOINT as ENDPOINT_RDW_SUBCATEGORY } from '../src/api/rdw/subcategory'
 import { ENDPOINT as ENDPOINT_RDW_VEHICLE } from '../src/api/rdw/vehicle'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_ENVIRONMENTAL_ZONE } from '../src/api/touringcar/environmental-zone'
+import { ENDPOINT as ENDPOINT_TOURINGCAR_MESSAGES } from '../src/api/touringcar/messages'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_PARKING_SPACES } from '../src/api/touringcar/parking-spaces'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_DESTINATION_TRAFFIC } from '../src/api/touringcar/routes-destination-traffic'
 import { ENDPOINT as ENDPOINT_TOURINGCAR_ROUTES_MANDATORY } from '../src/api/touringcar/routes-mandatory'
@@ -107,6 +108,11 @@ export const handlers = [
     const parkingSpaceMock = require('./mocks/parkingSpace-122028486875.json')
 
     return res(ctx.status(200), ctx.json(parkingSpaceMock))
+  }),
+
+  rest.get(ENDPOINT_TOURINGCAR_MESSAGES, (_req, res, ctx) => {
+    const touringcarMessagesMock = require('./mocks/touringcar/messages/data.json')
+    return res(ctx.status(200), ctx.json(touringcarMessagesMock))
   }),
 
   rest.get(ENDPOINT_TOURINGCAR_STOPS, (_req, res, ctx) => {
