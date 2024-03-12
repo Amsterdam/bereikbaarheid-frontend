@@ -5,13 +5,12 @@ import { Accordion, Button, Heading, Image, Link, List, ListItem, Paragraph, the
 import { useQuery } from '@tanstack/react-query'
 import getTouringcarMessages from 'api/touringcar/messages'
 import { format } from 'date-fns'
-import i18n from 'i18n'
 import { t } from 'i18next'
 import useTouringcarMapContext from 'pages/Touringcar/contexts/MapContext'
 import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
-import { MessageLanguage } from '../MapLayers/MessagesLayer'
+import { getMessagePartsForLanguage } from '../MapLayers/MessagesLayer'
 
 const StyledAccordion = styled(Accordion)<{ important?: boolean }>`
   border: 2px solid ${props => (props.important ? themeColor('secondary') : themeColor('primary'))};
@@ -58,8 +57,7 @@ function MessagesList() {
   return (
     <List>
       {messages?.features.map(message => {
-        const msgParts =
-          message.properties[(i18n.language || i18n.languages[0]) as MessageLanguage] ?? message.properties.nl
+        const msgParts = getMessagePartsForLanguage(message)
 
         return (
           <ListItem>

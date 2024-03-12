@@ -11,9 +11,19 @@ import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from 'shared/u
 
 import TouringcarMarker from '../Marker/Marker'
 
-export type MessageLanguage = 'nl' | 'en' | 'de' | 'es' | 'fr'
+type MessageLanguage = 'nl' | 'en' | 'de' | 'es' | 'fr'
 
-export const MessagesLayer = () => {
+function getMessagePartsForLanguage(message: TouringcarMessage) {
+  let msgParts = message.properties[(i18n.language || i18n.languages[0]) as MessageLanguage]
+
+  if (!msgParts?.title) {
+    msgParts = message.properties.en?.title ? message.properties.en : message.properties.nl
+  }
+
+  return msgParts
+}
+
+function MessagesLayer() {
   const { activeMapLayers, messagesDate, setCurrentMessage, setActiveTab } = useTouringcarMapContext()
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)
 
@@ -39,9 +49,7 @@ export const MessagesLayer = () => {
       if (!messages) return
 
       const message: TouringcarMessage | undefined = messages.features.find(msg => {
-        const msgParts = msg?.properties[(i18n.language || i18n.languages[0]) as MessageLanguage] ?? msg.properties.nl
-
-        return msgParts.title === title
+        return getMessagePartsForLanguage(msg).title === title
       })
 
       setCurrentMessage(message)
@@ -53,9 +61,7 @@ export const MessagesLayer = () => {
     // Messages should be available once createClusterMarkers is called.
     return messages!.features.map((message: TouringcarMessage) => {
       const marker = TouringcarMarker(message, MapLayerId.touringcarMessagesLayerId)
-
-      const msgParts =
-        message.properties[(i18n.language || i18n.languages[0]) as MessageLanguage] ?? message.properties.nl
+      const msgParts = getMessagePartsForLanguage(message)
 
       let tooltipText = `<p><strong>${msgParts.title}</strong></p>
 ${msgParts.body ?? `<p>${msgParts.body}</p>`}
@@ -83,3 +89,7 @@ ${msgParts.advice ?? `<p><strong>Advies:</strong> ${msgParts.advice}</p>`}`
     </div>
   )
 }
+
+export type { MessageLanguage }
+export { getMessagePartsForLanguage, MessagesLayer }
+export default MessagesLayer
