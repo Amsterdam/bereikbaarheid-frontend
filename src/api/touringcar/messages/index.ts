@@ -20,9 +20,9 @@ interface TouringcarMessage extends Feature {
     fr: TouringcarMessagePart
     startdate: DateHumanReadable_Year_Month_Day
     enddate: DateHumanReadable_Year_Month_Day
-    category: string
-    link: string
-    image_url: string
+    category: string | null
+    link: string | null
+    image_url: string | null
     important: boolean
     is_live: boolean
     omschrijving?: string

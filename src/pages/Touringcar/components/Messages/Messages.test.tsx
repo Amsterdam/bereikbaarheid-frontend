@@ -4,8 +4,8 @@ import { getGeneratedPath } from 'shared/utils/path'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('Touringcar Messages', () => {
-  jest.useFakeTimers({ legacyFakeTimers: false })
-  jest.setSystemTime(new Date('2024-02-01T10:00:00.000Z'))
+  jest.useFakeTimers({ legacyFakeTimers: true })
+  jest.setSystemTime(new Date('2024-03-12T10:00:00.000Z'))
 
   it('renders correctly', async () => {
     const pathToPage = getGeneratedPath(RouteIds.TOURINGCAR_PAGE)

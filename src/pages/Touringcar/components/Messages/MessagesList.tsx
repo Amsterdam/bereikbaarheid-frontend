@@ -78,9 +78,7 @@ function MessagesList() {
 
               <Button
                 variant="secondary"
-                onClick={({ preventDefault }) => {
-                  preventDefault()
-
+                onClick={event => {
                   if (!message?.geometry?.coordinates?.[0]) return
 
                   mapInstance.flyTo([message.geometry.coordinates[1], message.geometry.coordinates[0]], 20)
