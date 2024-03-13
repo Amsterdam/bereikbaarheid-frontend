@@ -2,10 +2,11 @@
   "type": "FeatureCollection",
   "features": [
     {
+      "id": 1,
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [122025.7999738284, 488234.4434016554]
+        "coordinates": [4.891490999845163, 52.37308400610972]
       },
       "properties": {
         "nl": {
@@ -14,22 +15,22 @@
           "advice": ""
         },
         "en": {
-          "title": null,
+          "title": "",
           "body": "",
           "advice": ""
         },
         "fr": {
-          "title": null,
+          "title": "",
           "body": "",
           "advice": ""
         },
         "de": {
-          "title": null,
+          "title": "",
           "body": "",
           "advice": ""
         },
         "es": {
-          "title": null,
+          "title": "",
           "body": "",
           "advice": ""
         },
@@ -43,10 +44,53 @@
       }
     },
     {
+      "id": 860,
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [122025.8, 488234.44]
+        "coordinates": [4.9016683532975, 52.38081619605684]
+      },
+      "properties": {
+        "nl": {
+          "title": "Nieuw touringcar beleid voor 2024",
+          "body": "Vanaf 1 januari 2024 zijn touringcars zwaarder dan 7,5 ton zonder ontheffing toegestaan op de S100 en de corridor Weesperstraat - Valkenburgerstraat – Kattenburgerstraat. Touringcars zwaarder dan 7,5 ton hebben wel een ontheffing nodig binnen de ring S100.",
+          "advice": "Voor meer informatie over het verkeersbesluit, ontheffingenbeleid, het aanvragen van een ontheffing kunt u terecht op onze site. https://www.amsterdam.nl/verkeer-vervoer/touringcar\r\n\r\nDe Tour Buzz site wordt vernieuwd en gaat Touringcar heten.  Deze site is bereikbaar via https://bereikbaarheid.amsterdam.nl/touringcar"
+        },
+        "en": {
+          "title": "",
+          "body": "",
+          "advice": ""
+        },
+        "fr": {
+          "title": "",
+          "body": "",
+          "advice": ""
+        },
+        "de": {
+          "title": "",
+          "body": "",
+          "advice": ""
+        },
+        "es": {
+          "title": "",
+          "body": "",
+          "advice": ""
+        },
+        "startdate": "2024-01-24",
+        "enddate": "2024-05-01",
+        "category": null,
+        "link": "https://bereikbaarheid.amsterdam.nl/touringcar",
+        "image_url": null,
+        "important": true,
+        "is_live": true
+      }
+    },
+    {
+      "id": 857,
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [4.877578915671146, 52.37872807666173]
       },
       "properties": {
         "nl": {
@@ -76,100 +120,19 @@
         },
         "startdate": "2023-10-16",
         "enddate": "2024-03-29",
-        "category": "",
-        "link": "",
+        "category": null,
+        "link": null,
         "image_url": null,
         "important": false,
         "is_live": true
       }
     },
     {
+      "id": 861,
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [122025.8, 488234.44]
-      },
-      "properties": {
-        "nl": {
-          "title": "Afsluiting S100 Stadhouderskade thv Amsteldijk",
-          "body": "S100 Stadhouderskade dicht richting Nassaukade van 04-03-2024 t/m 22-03-2024",
-          "advice": "Omleiding via Amsteldijk > Ceintuurbaan > Hobbemakade"
-        },
-        "en": {
-          "title": "",
-          "body": "",
-          "advice": ""
-        },
-        "fr": {
-          "title": "",
-          "body": "",
-          "advice": ""
-        },
-        "de": {
-          "title": "",
-          "body": "",
-          "advice": ""
-        },
-        "es": {
-          "title": "",
-          "body": "",
-          "advice": ""
-        },
-        "startdate": "2024-03-01",
-        "enddate": "2024-03-22",
-        "category": "",
-        "link": "",
-        "image_url": null,
-        "important": false,
-        "is_live": true
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [122025.8, 488234.44]
-      },
-      "properties": {
-        "nl": {
-          "title": "Nieuw touringcar beleid voor 2024 ",
-          "body": "Vanaf 1 januari 2024 zijn touringcars zwaarder dan 7,5 ton zonder ontheffing toegestaan op de S100 en de corridor Weesperstraat - Valkenburgerstraat – Kattenburgerstraat. Touringcars zwaarder dan 7,5 ton hebben wel een ontheffing nodig binnen de ring S100. ",
-          "advice": "Voor meer informatie over het verkeersbesluit, ontheffingenbeleid, het aanvragen van een ontheffing kunt u terecht op onze site. https://www.amsterdam.nl/verkeer-vervoer/touringcar\n\nDe Tour Buzz site wordt vernieuwd en gaat Touringcar heten.  Deze site is bereikbaar via https://bereikbaarheid.amsterdam.nl/touringcar \n"
-        },
-        "en": {
-          "title": "",
-          "body": "",
-          "advice": ""
-        },
-        "fr": {
-          "title": "",
-          "body": "",
-          "advice": ""
-        },
-        "de": {
-          "title": "",
-          "body": "",
-          "advice": ""
-        },
-        "es": {
-          "title": "",
-          "body": "",
-          "advice": ""
-        },
-        "startdate": "2024-01-24",
-        "enddate": "2024-05-01",
-        "category": "",
-        "link": "https://bereikbaarheid.amsterdam.nl/touringcar",
-        "image_url": null,
-        "important": true,
-        "is_live": true
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [122025.8, 488234.44]
+        "coordinates": [4.896354897233798, 52.37898243989375]
       },
       "properties": {
         "nl": {
@@ -199,8 +162,8 @@
         },
         "startdate": "2024-01-24",
         "enddate": "2024-09-01",
-        "category": "",
-        "link": "",
+        "category": null,
+        "link": null,
         "image_url": null,
         "important": false,
         "is_live": true

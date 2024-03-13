@@ -1,16 +1,9 @@
-import { useEffect } from 'react'
-
 import { useMapInstance } from '@amsterdam/arm-core'
 import { Accordion, Button, Heading, Image, Link, List, ListItem, Paragraph, themeColor } from '@amsterdam/asc-ui'
-import { useQuery } from '@tanstack/react-query'
-import getTouringcarMessages from 'api/touringcar/messages'
-import { format } from 'date-fns'
 import { t } from 'i18next'
-import useTouringcarMapContext from 'pages/Touringcar/contexts/MapContext'
-import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
-import { getMessagePartsForLanguage } from '../MapLayers/MessagesLayer'
+import useMessages, { getMessagePartsForLanguage } from './hooks/useMessages'
 
 const StyledAccordion = styled(Accordion)<{ important?: boolean }>`
   border: 2px solid ${props => (props.important ? themeColor('secondary') : themeColor('primary'))};
@@ -28,42 +21,23 @@ const StyledAccordion = styled(Accordion)<{ important?: boolean }>`
 `
 
 function MessagesList() {
-  const { messagesDate } = useTouringcarMapContext()
   const mapInstance = useMapInstance()
 
-  const {
-    isLoading,
-    error,
-    isError,
-    data: messages,
-    refetch,
-  } = useQuery({
-    enabled: true,
-    queryKey: ['touringcarMessages'],
-    queryFn: () => {
-      return getTouringcarMessages({
-        datum: format(messagesDate, DATE_FORMAT_REVERSED) as DateHumanReadable_Year_Month_Day,
-      })
-    },
-  })
-
-  useEffect(() => {
-    refetch()
-  }, [refetch, messagesDate])
+  const { isLoading, isError, error, sortedMessages } = useMessages()
 
   if (isError && error instanceof Error) console.error(error.message)
-  if (isLoading || !messages?.features.length) return null
+  if (isLoading || !sortedMessages?.length) return null
 
   return (
     <List>
-      {messages?.features.map(message => {
+      {sortedMessages?.map(message => {
         const msgParts = getMessagePartsForLanguage(message)
 
         return (
           <ListItem>
             <StyledAccordion
               title={msgParts.title}
-              isOpen={message.properties.important ?? messages?.features.length === 1}
+              isOpen={message.properties.important ?? sortedMessages?.length === 1}
               important={message.properties.important}
             >
               {msgParts.body && <Paragraph>{msgParts.body}</Paragraph>}
@@ -104,9 +78,7 @@ function MessagesList() {
 
               <Button
                 variant="secondary"
-                onClick={({ preventDefault }) => {
-                  preventDefault()
-
+                onClick={event => {
                   if (!message?.geometry?.coordinates?.[0]) return
 
                   mapInstance.flyTo([message.geometry.coordinates[1], message.geometry.coordinates[0]], 20)

@@ -83,7 +83,7 @@
   "scripts": {
     "clean": "rm -Rf build node_modules .yarn .eslintcache",
     "prepare": "husky install",
-    "start": "GENERATE_SOURCEMAP=false react-scripts start",
+    "start": "BROWSER=none GENERATE_SOURCEMAP=false react-scripts start",
     "lint": "eslint --cache .",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --passWithNoTests",
