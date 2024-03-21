@@ -1,6 +1,6 @@
 import config from 'config'
 
-import api from '../../data.amsterdam'
+import { api } from '../../bereikbaarheid/index'
 
 const ENDPOINT = `${config.API_ROOT}/touringcar/downloads/csv`
 

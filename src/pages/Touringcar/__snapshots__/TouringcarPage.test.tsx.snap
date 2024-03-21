@@ -880,7 +880,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="https://api.data.amsterdam.nl/v1/api/v1/touringcar/downloads/csv"
+                              href="api/v1/touringcar/downloads/csv"
                               target="_blank"
                             >
                               <span
@@ -2240,7 +2240,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="https://api.data.amsterdam.nl/v1/api/v1/touringcar/downloads/csv"
+                            href="api/v1/touringcar/downloads/csv"
                             target="_blank"
                           >
                             <span
