@@ -46,8 +46,8 @@ function MessagesList() {
               {message.properties.image_url && (
                 <Paragraph>
                   <Image 
-                  src={ api.getUri({url: `public-storage/${message.properties.image_url}`}) } 
-                  alt={msgParts.title} 
+                  src={api.getUri({ url: `public-storage/${message.properties.image_url}` })}
+                  alt={msgParts.title}
                   />
                 </Paragraph>
               )}
