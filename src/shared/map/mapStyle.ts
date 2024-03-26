@@ -31,5 +31,6 @@ export const MapStyle = createGlobalStyle`
   .leaflet-tooltip {
     color: ${themeColor('tint', 'level7')};
     padding: ${themeSpacing(2)};
+    max-width: 290px;
   }
 `
