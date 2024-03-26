@@ -3,9 +3,9 @@ import { Accordion, Button, Heading, Image, Link, List, ListItem, Paragraph, the
 import { t } from 'i18next'
 import styled from 'styled-components'
 
+import { api } from '../../../../api/bereikbaarheid'
 import useMessages, { getMessagePartsForLanguage } from './hooks/useMessages'
 
-import { api } from '../../../../api/bereikbaarheid'
 
 const StyledAccordion = styled(Accordion)<{ important?: boolean }>`
   border: 2px solid ${props => (props.important ? themeColor('secondary') : themeColor('primary'))};
