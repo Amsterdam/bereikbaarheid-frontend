@@ -4,8 +4,8 @@ import { t } from 'i18next'
 import styled from 'styled-components'
 
 import { api } from '../../../../api/bereikbaarheid'
-import useMessages, { getMessagePartsForLanguage } from './hooks/useMessages'
 
+import useMessages, { getMessagePartsForLanguage } from './hooks/useMessages'
 
 const StyledAccordion = styled(Accordion)<{ important?: boolean }>`
   border: 2px solid ${props => (props.important ? themeColor('secondary') : themeColor('primary'))};
@@ -45,7 +45,10 @@ function MessagesList() {
               {msgParts.body && <Paragraph>{msgParts.body}</Paragraph>}
               {message.properties.image_url && (
                 <Paragraph>
-                  <Image src={ api.getUri({url: `public-storage/${message.properties.image_url}`}) } alt={msgParts.title} />
+                  <Image 
+                  src={ api.getUri({url: `public-storage/${message.properties.image_url}`}) } 
+                  alt={msgParts.title} 
+                  />
                 </Paragraph>
               )}
               {msgParts.advice && (
