@@ -33,4 +33,9 @@ export const MapStyle = createGlobalStyle`
     padding: ${themeSpacing(2)};
     max-width: 290px;
   }
+
+  .leaflet-tooltip > p {
+    white-space: normal;
+    width: 290px;
+  }
 `
