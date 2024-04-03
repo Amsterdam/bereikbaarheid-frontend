@@ -1,6 +1,8 @@
-import api from '../../data.amsterdam'
+import config from 'config'
 
-const ENDPOINT = 'v1/touringcar/downloads/csv'
+import { api } from '../../bereikbaarheid/index'
+
+const ENDPOINT = `${config.API_ROOT}/touringcar/downloads/csv`
 
 function getTouringcarCsv(signal?: AbortSignal): Promise<string> {
   return api.get(ENDPOINT, { signal }).then(response => response.data)

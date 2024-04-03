@@ -32,9 +32,7 @@ function MessagesLayer() {
       const marker = TouringcarMarker(message, MapLayerId.touringcarMessagesLayerId, index + 1)
       const msgParts = getMessagePartsForLanguage(message)
 
-      let tooltipText = `<p><strong>${msgParts.title}</strong></p>
-${msgParts.body ?? `<p style="max-width: 200px;">${msgParts.body}</p>`}
-${msgParts.advice ?? `<p style="max-width: 200px;"><strong>Advies:</strong> ${msgParts.advice}</p>`}`
+      let tooltipText = `<p><strong>${msgParts.title}</strong></p>`
 
       marker.bindTooltip(tooltipText)
       marker.on('click', () => {

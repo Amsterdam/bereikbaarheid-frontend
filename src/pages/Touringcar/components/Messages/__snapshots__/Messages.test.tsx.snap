@@ -151,9 +151,9 @@ Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad
                     class="sc-ejfMa-d fymHSF"
                   >
                     <a
-                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                      href="https://tourbuzz.amsterdam.nl"
-                      target="_blank"
+                      active="true"
+                      class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
+                      href="/touringcar"
                       title="Touringcar:
 
 Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
@@ -166,26 +166,6 @@ Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en par
                           class="sc-eZYNyq"
                         >
                           Touringcar
-                        </span>
-                      </span>
-                      <span
-                        class="sc-aXZVg sc-fqkvVR lauBHv jMALZu"
-                      >
-                        <span
-                          class="sc-aXZVg geoGNn"
-                          style="margin-left: -2px;"
-                        >
-                          <svg
-                            focusable="false"
-                            role="img"
-                            viewBox="0 0 32 32"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M19.006 0H32.01v12.992h-4.002V6.826L14.434 20.417l-2.83-2.818L25.187 3.998h-6.182V0zm7.002 13.991L26.018 32H.01V6.016h17.975l-3.98 3.978.02.02H4.01v17.988h18.006l-.01-10.013 4-3.998z"
-                              fill-rule="evenodd"
-                            />
-                          </svg>
                         </span>
                       </span>
                     </a>
@@ -880,7 +860,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="https://api.data.amsterdam.nl/v1/v1/touringcar/downloads/csv"
+                              href="api/v1/touringcar/downloads/csv"
                               target="_blank"
                             >
                               <span
@@ -1511,9 +1491,9 @@ Deze kaart biedt informatie voor logistiek planners en chauffeurs die in de stad
                   class="sc-ejfMa-d fymHSF"
                 >
                   <a
-                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ jaGJBC"
-                    href="https://tourbuzz.amsterdam.nl"
-                    target="_blank"
+                    active="true"
+                    class="sc-dcJsrY gcSowv sc-hHOBiw sc-kWtpeL fSwEJJ gPUWWI"
+                    href="/touringcar"
                     title="Touringcar:
 
 Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en parkeren, berichten over stremmingen en events, touringcar verbodsborden, doorrijdhoogte, bestemmingsverkeer, verplichte en aanbevolen routes alsook milieuzone informatie."
@@ -1526,26 +1506,6 @@ Overzicht met informatie specifiek voor touringcars, zoals halteerplekken en par
                         class="sc-eZYNyq"
                       >
                         Touringcar
-                      </span>
-                    </span>
-                    <span
-                      class="sc-aXZVg sc-fqkvVR lauBHv jMALZu"
-                    >
-                      <span
-                        class="sc-aXZVg geoGNn"
-                        style="margin-left: -2px;"
-                      >
-                        <svg
-                          focusable="false"
-                          role="img"
-                          viewBox="0 0 32 32"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M19.006 0H32.01v12.992h-4.002V6.826L14.434 20.417l-2.83-2.818L25.187 3.998h-6.182V0zm7.002 13.991L26.018 32H.01V6.016h17.975l-3.98 3.978.02.02H4.01v17.988h18.006l-.01-10.013 4-3.998z"
-                            fill-rule="evenodd"
-                          />
-                        </svg>
                       </span>
                     </span>
                   </a>
@@ -2240,7 +2200,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="https://api.data.amsterdam.nl/v1/v1/touringcar/downloads/csv"
+                            href="api/v1/touringcar/downloads/csv"
                             target="_blank"
                           >
                             <span

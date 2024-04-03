@@ -5,6 +5,8 @@ import { TileLayerOptions, WMSOptions } from 'leaflet'
 // for an explanation of TileLayerOptions type usage see:
 // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/15313#issuecomment-441331339
 
+import { api } from '../../api/bereikbaarheid'
+
 const optionsShared = {
   keepBuffer: 10,
 }
@@ -38,7 +40,7 @@ export const linkIds = {
     pane: 'overlayPane',
     zIndex: 275,
   } as TileLayerOptions,
-  url: 'https://verkeeramsterdam.nl/tiles/vma_latest/id/{z}/{x}/{y}.png',
+  url: api.getUri({ url: 'public-storage/tiles/id/{z}/{x}/{y}.png' }),
 }
 
 export const loadUnloadSpaces = {
@@ -72,7 +74,7 @@ export const oneWayArrows = {
     pane: 'overlayPane',
     zIndex: 250, // the z-index should be > 200 to let it appear on top of SVG layers.
   } as TileLayerOptions,
-  url: 'https://verkeeramsterdam.nl/tiles/vma_latest/pijlen/{z}/{x}/{y}.png',
+  url: api.getUri({ url: 'public-storage/tiles/pijlen/{z}/{x}/{y}.png' }),
 }
 
 export const roadNetworkNoRestrictions = {
@@ -89,7 +91,7 @@ export const roadNetworkNoRestrictions = {
     maxZoom: 18,
     zIndex: 50,
   } as TileLayerOptions,
-  url: 'https://verkeeramsterdam.nl/tiles/vma_latest/normaal/{z}/{x}/{y}.png',
+  url: api.getUri({ url: 'public-storage/tiles/normaal/{z}/{x}/{y}.png' }),
 }
 
 export const roadNetworkHeavyGoodsVehicleZone = {
@@ -106,7 +108,7 @@ export const roadNetworkHeavyGoodsVehicleZone = {
     maxZoom: 18,
     zIndex: 50,
   } as TileLayerOptions,
-  url: 'https://verkeeramsterdam.nl/tiles/vma_latest/zzv/{z}/{x}/{y}.png',
+  url: api.getUri({ url: 'public-storage/tiles/zzv/{z}/{x}/{y}.png' }),
 }
 
 export const roadNetworkLowEmissionZone = {
@@ -123,7 +125,7 @@ export const roadNetworkLowEmissionZone = {
     maxZoom: 18,
     zIndex: 50,
   } as TileLayerOptions,
-  url: 'https://verkeeramsterdam.nl/tiles/vma_latest/milieu/{z}/{x}/{y}.png',
+  url: api.getUri({ url: 'public-storage/tiles/milieu/{z}/{x}/{y}.png' }),
 }
 
 export const roadNetworkHeavyGoodsVehicleAndLowEmissionZone = {
@@ -140,7 +142,7 @@ export const roadNetworkHeavyGoodsVehicleAndLowEmissionZone = {
     maxZoom: 18,
     zIndex: 50,
   } as TileLayerOptions,
-  url: 'https://verkeeramsterdam.nl/tiles/vma_latest/zzv_en_milieu/{z}/{x}/{y}.png',
+  url: api.getUri({ url: 'public-storage/tiles/zzv_en_milieu/{z}/{x}/{y}.png' }),
 }
 
 export const topoBlackWhite = {
@@ -188,5 +190,5 @@ export const wideRoads = {
     maxZoom: 18,
     zIndex: 40,
   } as TileLayerOptions,
-  url: 'https://verkeeramsterdam.nl/tiles/vma_latest/breed_opgezette_wegen/{z}/{x}/{y}.png',
+  url: api.getUri({ url: 'public-storage/tiles/breed_opgezette_wegen/{z}/{x}/{y}.png' }),
 }
