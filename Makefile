@@ -22,8 +22,7 @@ app:                                ## Run app
 	$(run) --service-ports app
 
 dev:                                ## Run app locally for development
-	$(dc) -f compose.yml -f compose.dev.yml build --build-arg BUILD_ENV=local --build-arg NGINX_CONF=nginx.local.conf
-	$(dc) -f compose.yml -f compose.dev.yml up --no-build web-dev
+	$(dc) -f compose.yml -f compose.dev.yml up web-dev
 
 test:                               ## Execute tests
 	$(run) test $(ARGS)

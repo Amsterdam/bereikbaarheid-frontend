@@ -5,8 +5,11 @@ services:
       args:
         BUILD_ENV: local
         NGINX_CONF: nginx.local.conf
+      target: dev
     environment:
-      TZ: Europe/Amsterdam
+      TZ: Europe/amsterdam
+    volumes:
+      - '.:/srv/dev'
     ipc: host
     ports:
-      - '3000:8080'
+      - '3000:3000'

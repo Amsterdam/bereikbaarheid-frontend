@@ -20,7 +20,12 @@ CMD ["ncu", "-u", "--doctor", "--target minor"]
 
 # Test
 FROM base AS test
-CMD [ "npm", "run", "test" ]
+CMD ["npm", "run", "test"]
+
+# Dev
+FROM base AS dev
+WORKDIR /srv/dev
+CMD ["npm", "run", "start"]
 
 # Build the app
 FROM base AS builder
