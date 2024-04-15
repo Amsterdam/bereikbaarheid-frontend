@@ -8,7 +8,6 @@ services:
         BUILD_ENV: prod
         NGINX_CONF: nginx.default.conf
     image: ${REGISTRY:-localhost:5001}/${REPOSITORY:-opdrachten/bereikbaarheid-frontend}:${VERSION:-latest}
-    env_file: .env.prod
     environment: &environment
       TZ: Europe/Amsterdam
     ipc: host
