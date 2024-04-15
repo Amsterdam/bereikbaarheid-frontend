@@ -2,10 +2,12 @@
 # https://github.com/Amsterdam/opdrachten_team_dev/tree/master/dependency_management
 #
 # VERSION = 2020.01.29
-.PHONY: test
 
-dc = docker-compose
+dc = docker compose
 run = $(dc) run --rm
+
+all: help build push app test requirements clean trivy
+.PHONY: all
 
 help:                               ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
@@ -17,7 +19,11 @@ push: build                         ## Push docker image to registry
 	$(dc) push
 
 app:                                ## Run app
-	$(run) --service-ports frontend
+	$(run) --service-ports app
+
+dev:                                ## Run app locally for development
+	$(dc) -f compose.yml -f compose.dev.yml build --build-arg BUILD_ENV=local --build-arg NGINX_CONF=nginx.local.conf
+	$(dc) -f compose.yml -f compose.dev.yml up web-dev
 
 test:                               ## Execute tests
 	$(run) test $(ARGS)

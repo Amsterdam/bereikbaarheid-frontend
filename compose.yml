@@ -1,15 +1,16 @@
-version: '3.7'
+name: amsterdam-bereikbaarheid
 
 services:
-  frontend:
+  app:
     build: &build-config
       context: .
       args:
-        - BUILD_ENV=development
-        - NGINX_CONF=nginx.dockercompose.conf
+        BUILD_ENV: prod
+        NGINX_CONF: nginx.default.conf
     image: ${REGISTRY:-localhost:5001}/${REPOSITORY:-opdrachten/bereikbaarheid-frontend}:${VERSION:-latest}
+    env_file: .env.prod
     environment: &environment
-      - TZ=Europe/Amsterdam
+      TZ: Europe/Amsterdam
     ipc: host
     ports:
       - '5000:8080'
@@ -18,6 +19,7 @@ services:
     build:
       <<: *build-config
       target: test
+    env_file: .env.acc
     environment: *environment
     command: npm run test
 
@@ -25,12 +27,9 @@ services:
     build:
       <<: *build-config
       target: upgrade
+    env_file: .env.dev
     environment: *environment
     volumes:
       - ./package.json:/app/package.json
       - ./package-lock.json:/app/package-lock.json
     command: ncu -u --doctor --target minor
-
-networks:
-  default:
-    name: amsterdam-bereikbaarheid

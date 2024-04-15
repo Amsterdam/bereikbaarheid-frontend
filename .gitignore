@@ -12,7 +12,7 @@
 .pnp.js
 
 # build
-docker-compose.override.yaml
+compose.override.yaml
 
 # linting
 .eslintcache

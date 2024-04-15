@@ -24,7 +24,7 @@ CMD [ "npm", "run", "test" ]
 
 # Build the app
 FROM base AS builder
-ARG BUILD_ENV=prod
+ARG BUILD_ENV=${BUILD_ENV}
 COPY .env.${BUILD_ENV} /app/.env
 RUN npm run build
 
@@ -32,7 +32,7 @@ RUN npm run build
 FROM nginxinc/nginx-unprivileged:mainline-alpine-slim
 COPY --from=builder /app/build/. /var/www/html/
 
-ARG NGINX_CONF=nginx.default.conf
+ARG NGINX_CONF=${NGINX_CONF}
 COPY ${NGINX_CONF} /etc/nginx/conf.d/default.conf
 
 EXPOSE 80

@@ -1,0 +1,13 @@
+services:
+  web-dev:
+    build:
+      context: .
+      args:
+        BUILD_ENV: local
+        NGINX_CONF: nginx.local.conf
+    env_file: .env.local
+    environment:
+      TZ: Europe/Amsterdam
+    ipc: host
+    ports:
+      - '3000:8080'
