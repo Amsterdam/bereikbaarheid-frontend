@@ -40,6 +40,7 @@ function TouringcarMapSettingsDisplay({ ...otherProps }: MapSettingsDisplayProps
               href="https://nieuwsbrieven.amsterdam.nl/x/plugin/?pName=subscribe&MIDRID=S7Y1MwYAA87&pLang=nl&Z=-2113214771&pk_vid=906065c3c2209171170125204002d192"
               target="_blank"
               inList
+              style={{ marginBlockEnd: '3em' }}
             >
               {t('_pageTouringcar._mapPanel.signUpForNewsletter')}
             </Link>
