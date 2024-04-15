@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const headers =
-  process.env.NODE_ENV === 'production' && process.env.REACT_APP_API_DATA_AMS_KEY?.length
+  process.env.NODE_ENV !== 'test' && process.env.REACT_APP_API_DATA_AMS_KEY?.length
     ? {
         'X-Api-Key': process.env.REACT_APP_API_DATA_AMS_KEY,
       }

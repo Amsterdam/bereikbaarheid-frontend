@@ -19,7 +19,7 @@ services:
     build:
       <<: *build-config
       target: test
-    env_file: .env.acc
+    env_file: .env.test
     environment: *environment
     command: npm run test
 
@@ -27,7 +27,7 @@ services:
     build:
       <<: *build-config
       target: upgrade
-    env_file: .env.dev
+    env_file: .env.test
     environment: *environment
     volumes:
       - ./package.json:/app/package.json
