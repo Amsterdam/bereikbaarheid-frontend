@@ -15,7 +15,7 @@ const StyledAccordion = styled(Accordion)<{ important?: boolean }>`
 
   &:hover,
   &:focus,
-  &&:focus {
+  &::focus {
     border: 2px solid ${props => (props.important ? themeColor('secondary') : themeColor('primary'))};
     border-left: 8px solid ${props => (props.important ? themeColor('secondary') : themeColor('primary'))};
     background-color: ${themeColor('bright')};
@@ -34,13 +34,13 @@ function MessagesList() {
 
   return (
     <List>
-      {sortedMessages?.map(message => {
+      {sortedMessages?.map((message, index) => {
         const msgParts = getMessagePartsForLanguage(message)
 
         return (
           <ListItem key={message.id}>
             <StyledAccordion
-              title={msgParts.title}
+              title={`B${index + 1}: ${msgParts.title}`}
               isOpen={
                 currentMessage?.id === message.id ||
                 (!currentMessage && message.properties.important) ||
