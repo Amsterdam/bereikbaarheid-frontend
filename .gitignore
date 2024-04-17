@@ -3,7 +3,6 @@
 # environment
 .env
 .env.local
-.env.*.local
 
 # dependencies
 /node_modules
@@ -12,7 +11,7 @@
 .pnp.js
 
 # build
-compose.override.yaml
+docker-compose.override.y*ml
 
 # linting
 .eslintcache

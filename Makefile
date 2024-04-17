@@ -22,7 +22,7 @@ app:                                ## Run app
 	$(run) --service-ports app
 
 dev:                                ## Run app locally for development
-	$(dc) -f compose.yml -f compose.dev.yml up web-dev
+	$(dc) up web-dev
 
 test:                               ## Execute tests
 	$(run) test $(ARGS)
