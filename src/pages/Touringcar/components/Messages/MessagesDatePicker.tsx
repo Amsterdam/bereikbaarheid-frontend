@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 
 import { Input, Label, Paragraph } from '@amsterdam/asc-ui'
 import { format, parse } from 'date-fns'
@@ -7,16 +7,12 @@ import { useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
 import { useSearchParams } from 'react-router-dom'
 import { DATE_FORMAT_REVERSED } from 'shared/utils/dateTime'
 
+import useMessages from './hooks/useMessages'
+
 function MessagesDatePicker() {
   const [queryParams, setQueryParams] = useSearchParams()
+  const { refetch } = useMessages()
   const { messagesDate, setMessagesDate } = useTouringcarMapContext()
-
-  const queryParamDate = queryParams.get('datum')
-  useEffect(() => {
-    if (!queryParamDate) return
-    setMessagesDate(parse(queryParamDate, DATE_FORMAT_REVERSED, new Date()))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
 
   const formattedDate = useMemo(() => format(messagesDate, DATE_FORMAT_REVERSED), [messagesDate])
 
@@ -26,13 +22,17 @@ function MessagesDatePicker() {
       <Input
         id="touringcarMessagesDatePicker"
         type="date"
-        value={formattedDate}
+        defaultValue={formattedDate}
         onChange={({ target }) => {
           setMessagesDate(parse(target.value, DATE_FORMAT_REVERSED, new Date()))
-          setQueryParams({
-            ...queryParams,
-            date: formattedDate,
-          })
+          setQueryParams(
+            {
+              ...queryParams,
+              date: target.value,
+            },
+            { replace: true }
+          )
+          refetch()
         }}
       />
     </Paragraph>
