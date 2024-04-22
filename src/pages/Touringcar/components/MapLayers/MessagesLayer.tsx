@@ -29,7 +29,7 @@ function MessagesLayer() {
 
   const createClusterMarkers = (msgs: TouringcarMessage[]) => {
     return msgs.map((message: TouringcarMessage, index) => {
-      const marker = TouringcarMarker(message, MapLayerId.touringcarMessagesLayerId, index + 1)
+      const marker = TouringcarMarker(message, MapLayerId.touringcarMessagesLayerId, `B${index + 1}`)
       const msgParts = getMessagePartsForLanguage(message)
 
       let tooltipText = `<p><strong>${msgParts.title}</strong></p>`

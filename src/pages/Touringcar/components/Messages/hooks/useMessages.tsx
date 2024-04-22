@@ -50,6 +50,7 @@ function useMessages() {
     isLoading,
     isError,
     error,
+    refetch,
     sortedMessages,
   }
 }
