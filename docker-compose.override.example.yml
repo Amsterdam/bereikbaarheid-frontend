@@ -1,4 +1,15 @@
+# By default, Compose reads two files, a docker-compose.yml and an
+# optional docker-compose.override.yml file. By convention,
+# the docker-compose.yml contains your base configuration. The
+# override file, as its name implies, can contain configuration
+# overrides for existing services or entirely new services.
+# See https://docs.docker.com/compose/extends/
+#
+# Usage: copy this file, name it ".docker-compose.override.yml" and
+# set your own values.
+
 services:
+  # Add "web" prefix to distinguish it from the "dev" service on the back-end.
   web-dev:
     build:
       context: .
