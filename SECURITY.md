@@ -12,7 +12,7 @@ When contacting us directly via email, we will do our best efforts to respond in
 
 We consider the security of our systems a top priority. But no matter how much effort we put into system security, there can still be vulnerabilities present.
 
-If you discover security issues, we request you to disclose these in a *responsible* way by e-mailing to
+If you discover security issues, we request you to disclose these in a _responsible_ way by e-mailing to
 `b.bussink@amsterdam.nl`.
 
 It is extremely useful if you have a reproducible test case and/or clear steps on how to

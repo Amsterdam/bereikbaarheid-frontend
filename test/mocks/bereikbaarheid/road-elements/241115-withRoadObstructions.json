@@ -1,51 +1,36 @@
 {
-    "features": [
-        {
-            "geometry": {
-                "coordinates": [
-                    [
-                        [
-                            4.890753041291781,
-                            52.37754178024081
-                        ],
-                        [
-                            4.890720051181509,
-                            52.377506252852264
-                        ],
-                        [
-                            4.890317791796489,
-                            52.3770658533919
-                        ],
-                        [
-                            4.890214168812603,
-                            52.37694464627275
-                        ],
-                        [
-                            4.890160639056448,
-                            52.376878699016366
-                        ]
-                    ]
-                ],
-                "type": "MultiLineString"
-            },
-            "properties": {
-                "id": 24115,
-                "length_in_m": 84,
-                "max_speed_in_km": 30,
-                "street_name": "Herengracht",
-                "traffic_counts": [],
-                "traffic_obstructions": [
-                    {
-                        "activity": "Kadevernieuwing",
-                        "end_date": "2023-12-01T23:59:00",
-                        "reference": "",
-                        "start_date": "2022-01-01T00:00:00",
-                        "url": ""
-                    }
-                ]
-            },
-            "type": "Feature"
-        }
-    ],
-    "type": "FeatureCollection"
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          [
+            [4.890753041291781, 52.37754178024081],
+            [4.890720051181509, 52.377506252852264],
+            [4.890317791796489, 52.3770658533919],
+            [4.890214168812603, 52.37694464627275],
+            [4.890160639056448, 52.376878699016366]
+          ]
+        ],
+        "type": "MultiLineString"
+      },
+      "properties": {
+        "id": 24115,
+        "length_in_m": 84,
+        "max_speed_in_km": 30,
+        "street_name": "Herengracht",
+        "traffic_counts": [],
+        "traffic_obstructions": [
+          {
+            "activity": "Kadevernieuwing",
+            "end_date": "2023-12-01T23:59:00",
+            "reference": "",
+            "start_date": "2022-01-01T00:00:00",
+            "url": ""
+          }
+        ]
+      },
+      "type": "Feature"
+    }
+  ],
+  "type": "FeatureCollection"
 }

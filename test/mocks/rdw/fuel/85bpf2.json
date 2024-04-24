@@ -1,9 +1,9 @@
 [
-	{
-		"kenteken": "85BPF2",
-		"brandstof_volgnummer": "1",
-		"brandstof_omschrijving": "Diesel",
-		"emissiecode_omschrijving": "6",
-		"nettomaximumvermogen": "400.00"
-	}
+  {
+    "kenteken": "85BPF2",
+    "brandstof_volgnummer": "1",
+    "brandstof_omschrijving": "Diesel",
+    "emissiecode_omschrijving": "6",
+    "nettomaximumvermogen": "400.00"
+  }
 ]

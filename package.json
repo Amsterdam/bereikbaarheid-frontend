@@ -10,7 +10,7 @@
     "clean": "rm -Rf build node_modules .yarn .eslintcache",
     "prepare": "husky install",
     "start": "BROWSER=none GENERATE_SOURCEMAP=false react-scripts start",
-    "lint": "eslint --cache .",
+    "lint": "eslint --cache . && prettier --write --ignore-unknown .",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "NODE_ENV=test react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --passWithNoTests",
     "test:update": "NODE_ENV=test react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --passWithNoTests --updateSnapshot",
@@ -149,7 +149,7 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
+    "**/*.{json,js,ts,jsx,tsx,html}": [
       "npm run lint",
       "npm run test:staged"
     ]

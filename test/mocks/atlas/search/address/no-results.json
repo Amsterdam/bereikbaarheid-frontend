@@ -1,16 +1,16 @@
 {
-    "_links": {
-        "self": {
-            "href": "https://api.data.amsterdam.nl/atlas/search/adres/?q=havb&page=1"
-        },
-        "next": {
-            "href": null
-        },
-        "prev": {
-            "href": null
-        }
+  "_links": {
+    "self": {
+      "href": "https://api.data.amsterdam.nl/atlas/search/adres/?q=havb&page=1"
     },
-    "count_hits": 0,
-    "count": 0,
-    "results": []
+    "next": {
+      "href": null
+    },
+    "prev": {
+      "href": null
+    }
+  },
+  "count_hits": 0,
+  "count": 0,
+  "results": []
 }

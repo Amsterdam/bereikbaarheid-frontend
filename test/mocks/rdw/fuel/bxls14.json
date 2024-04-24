@@ -1,1 +1,10 @@
-[{"kenteken":"BXLS14","brandstof_volgnummer":"1","brandstof_omschrijving":"Elektriciteit","geluidsniveau_rijdend":"80","emissiecode_omschrijving":"Z","nominaal_continu_maximumvermogen":"150.00"}]
+[
+  {
+    "kenteken": "BXLS14",
+    "brandstof_volgnummer": "1",
+    "brandstof_omschrijving": "Elektriciteit",
+    "geluidsniveau_rijdend": "80",
+    "emissiecode_omschrijving": "Z",
+    "nominaal_continu_maximumvermogen": "150.00"
+  }
+]

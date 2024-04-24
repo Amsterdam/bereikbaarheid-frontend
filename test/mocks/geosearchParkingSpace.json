@@ -1,14 +1,14 @@
 {
-	"type": "FeatureCollection",
-	"features": [
-		{
-			"properties": {
-				"id": "122028486875",
-				"display": "122028486875",
-				"type": "parkeervakken/parkeervakken",
-				"uri": "https://api.data.amsterdam.nl/v1/parkeervakken/parkeervakken/122028486875/",
-				"distance": 0.514807635496615
-			}
-		}
-	]
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "properties": {
+        "id": "122028486875",
+        "display": "122028486875",
+        "type": "parkeervakken/parkeervakken",
+        "uri": "https://api.data.amsterdam.nl/v1/parkeervakken/parkeervakken/122028486875/",
+        "distance": 0.514807635496615
+      }
+    }
+  ]
 }
