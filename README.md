@@ -39,6 +39,10 @@ This folder is organized as follows:
 
 #### In Docker
 
+Duplicate the `docker-compose.override.example.yaml` and rename it to `docker-compose.override.yaml`.
+
+Check what environment variables you want to set to what values in the `docker-compose.override.yaml`.
+
 Below make target will build and run the Docker development container.
 
 ```sh
@@ -49,8 +53,9 @@ make dev
 
 1. Install de app dependencies: `npm install`
 2. Make sure the API is locally or externally available ["bereikbaarheid-backend" repository](https://github.com/Amsterdam/bereikbaarheid-backend).
-3. Add the API base URL (`REACT_APP_API_ROOT`) to `.env.local`.
-4. Start de frontend development server: `npm start`.
+3. Duplicate `.env.example` and rename it to `.env`.
+4. Add the API base URL (`REACT_APP_API_ROOT`) to `.env`.
+5. Start de frontend development server: `npm start`.
 
 A hot-reloaded version of the front-end is available at [http://localhost:3000](http://localhost:3000).
 
