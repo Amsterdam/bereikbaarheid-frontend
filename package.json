@@ -4,13 +4,7 @@
   "private": true,
   "engines": {
     "node": ">=18.19 <19",
-    "npm": ">=9.6",
-    "yarn": ">=1.22"
-  },
-  "volta": {
-    "node": "18.19.0",
-    "npm": "9.6.0",
-    "yarn": "1.22.19"
+    "npm": ">=9.6"
   },
   "scripts": {
     "clean": "rm -Rf build node_modules .yarn .eslintcache",
