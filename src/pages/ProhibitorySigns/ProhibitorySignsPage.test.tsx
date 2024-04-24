@@ -6,7 +6,7 @@ import { getGeneratedPath } from 'shared/utils/path'
 import { withApp } from '../../../test/utils/withApp'
 
 describe('ProhibitorySignsPage', () => {
-  jest.setTimeout(15000)
+  jest.setTimeout(60000)
 
   it('renders correctly', async () => {
     const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)

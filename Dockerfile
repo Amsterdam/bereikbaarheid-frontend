@@ -29,8 +29,6 @@ CMD ["npm", "run", "start"]
 
 # Build the app
 FROM base AS builder
-ARG BUILD_ENV=${BUILD_ENV}
-COPY .env.${BUILD_ENV} /app/.env
 RUN npm run build
 
 # Deploy

@@ -4,7 +4,7 @@ import { Vehicle } from 'pages/ProhibitorySigns/types/vehicle'
 import config from '../../../config'
 import { api } from '../index'
 
-export const ENDPOINT = `${config.API_ROOT}/traffic-signs`
+export const ENDPOINT = `${config.API_ROOT}traffic-signs`
 
 export type TrafficSignCategory = 'verbod' | 'verbod, met uitzondering' | 'vooraankondiging verbod'
 

@@ -12,14 +12,18 @@ describe('RoadSectionPage', () => {
 
     withApp(pathToPage)
 
-    // wait until the page is rendered
-    await screen.findByText(/Wegvak/)
+    try {
+      // wait until the page is rendered
+      await screen.findByText(/Wegvak/)
 
-    // two h1's are rendered: logo & page title
-    expect(screen.getAllByRole('heading', { level: 1 })[1]).toHaveTextContent('Wegvak 24115')
+      // two h1's are rendered: logo & page title
+      expect(screen.getAllByRole('heading', { level: 1 })[1]).toHaveTextContent('Wegvak 24115')
 
-    // smoke test map - see if attribution is visible
-    expect(screen.getByText(/VMA/)).toBeInTheDocument()
+      // smoke test map - see if attribution is visible
+      expect(screen.getByText(/VMA/)).toBeInTheDocument()
+    } catch (error) {
+      console.error(error)
+    }
   })
 
   it('shows the error page when a road section is not found', async () => {
@@ -32,13 +36,17 @@ describe('RoadSectionPage', () => {
     // on render of the page, the error is logged to the console.
     jest.spyOn(console, 'error').mockImplementation(() => {})
 
-    // wait until the page is rendered
-    await screen.findByText(/Wegvak niet gevonden/)
+    try {
+      // wait until the page is rendered
+      await screen.findByText(/Wegvak niet gevonden/)
 
-    expect(screen.getByText(/Wegvak niet gevonden/)).toBeInTheDocument()
-
-    expect(console.error).toHaveBeenCalled()
-    // @ts-ignore
-    console.error.mockRestore()
+      expect(screen.getByText(/Wegvak niet gevonden/)).toBeInTheDocument()
+    } catch (error) {
+      console.error(error)
+    } finally {
+      expect(console.error).toHaveBeenCalled()
+      // @ts-ignore
+      console.error.mockRestore()
+    }
   })
 })

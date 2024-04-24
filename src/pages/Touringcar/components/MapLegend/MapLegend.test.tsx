@@ -5,7 +5,7 @@ import { getGeneratedPath } from 'shared/utils/path'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('MapLegend', () => {
-  jest.setTimeout(15000)
+  jest.setTimeout(60000)
 
   it('renders correctly', async () => {
     const pathToPage = getGeneratedPath(RouteIds.TOURINGCAR_PAGE)

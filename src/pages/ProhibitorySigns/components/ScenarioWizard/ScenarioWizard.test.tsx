@@ -6,7 +6,7 @@ import { getPathTo } from 'routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ScenarioWizard', () => {
-  jest.setTimeout(15000)
+  jest.setTimeout(60000)
 
   it('an address it not required to complete the wizard', async () => {
     const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))

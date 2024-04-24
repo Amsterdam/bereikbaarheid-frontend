@@ -17,7 +17,7 @@ describe('LoadUnloadPageSnapshot', () => {
 })
 
 describe('LoadUnloadPage', () => {
-  // jest.setTimeout(15000)
+  // jest.setTimeout(60000)
 
   // TODO: test keeps getting a timeout no matter how long jest.setTimeout is set, but is very hard to debug. We need to find a robust solution to properly test leaflet.
   // const loadUnloadData = require('../../../test/mocks/bereikbaarheid/road-sections/load-unload/data.json')

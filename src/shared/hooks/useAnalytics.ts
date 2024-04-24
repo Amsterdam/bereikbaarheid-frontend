@@ -2,8 +2,8 @@ import { useCallback, useState } from 'react'
 
 import PiwikPro, { PageViews } from '@piwikpro/react-piwik-pro'
 
-const piwikUrl = process.env.REACT_APP_PIWIK_URL
-const piwikSiteId = process.env.REACT_APP_PIWIK_SITE_ID
+const piwikUrl = process.env.REACT_APP_PIWIK_URL ?? ''
+const piwikSiteId = process.env.REACT_APP_PIWIK_SITE_ID ?? ''
 
 let PiwikInstance = false
 

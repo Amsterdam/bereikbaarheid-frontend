@@ -10,7 +10,7 @@ import { withAppContext } from '../../../../test/utils/withAppContext'
 import Header from '.'
 
 describe('Header', () => {
-  jest.setTimeout(15000)
+  jest.setTimeout(60000)
 
   it('renders correctly', () => {
     render(

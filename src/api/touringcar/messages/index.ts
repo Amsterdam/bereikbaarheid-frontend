@@ -38,7 +38,7 @@ interface TouringcarMessagesParams {
   datum?: DateHumanReadable_Year_Month_Day
 }
 
-const ENDPOINT = `${config.API_ROOT}/touringcar/berichten`
+const ENDPOINT = `${config.API_ROOT}touringcar/berichten`
 
 function getTouringcarMessages(
   params?: TouringcarMessagesParams,

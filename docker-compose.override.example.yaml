@@ -14,11 +14,13 @@ services:
     build:
       context: .
       args:
-        BUILD_ENV: local
         NGINX_CONF: nginx.local.conf
       target: dev
     environment:
-      TZ: Europe/amsterdam
+      NODE_ENV: development
+      # The API root URL, can point to localhost or a remote host.
+      # Should include trailing slash. Is just a "/" if the API has the same base URL.
+      REACT_APP_API_ROOT: https://localhost:8000/
     volumes:
       - '.:/srv/dev'
     ipc: host

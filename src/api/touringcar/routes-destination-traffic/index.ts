@@ -16,7 +16,7 @@ interface TouringcarRoutesDestinationTrafficParams {
   _format: 'geojson' | 'json' | 'csv'
 }
 
-const ENDPOINT = 'touringcars/wegwerkzaamheden'
+const ENDPOINT = 'v1/touringcars/wegwerkzaamheden'
 
 function getTouringcarRoutesDestinationTraffic(
   params: TouringcarRoutesDestinationTrafficParams = {

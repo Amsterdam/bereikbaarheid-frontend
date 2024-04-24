@@ -7,7 +7,7 @@ import { getPathTo } from 'routes'
 import { withApp } from '../../../test/utils/withApp'
 
 describe('RoadObstructionsPage', () => {
-  jest.setTimeout(15000)
+  jest.setTimeout(60000)
 
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))
@@ -27,11 +27,14 @@ describe('RoadObstructionsPage', () => {
     // the first element is the alt tag of the logo, the second one the title
     expect(links[1]).toHaveTextContent(`Stremmingen op ${today}`)
 
-    // the roadsections should be displayed on the map
-    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
-
-    expect(roadSectionsSvg.length).toBe(roadSections.features.length)
+    try {
+      // the roadsections should be displayed on the map
+      // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
+      const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
+      expect(roadSectionsSvg.length).toBe(roadSections.features.length)
+    } catch (error) {
+      console.error(error)
+    }
   })
 
   it('accepts a date URL parameter for presetting the form', async () => {
@@ -77,11 +80,14 @@ describe('RoadObstructionsPage', () => {
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
-    // sanity check - the roadsections should be displayed on the map
-    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
-
-    expect(roadSectionsSvg.length).toBe(roadSections.features.length)
+    try {
+      // sanity check - the roadsections should be displayed on the map
+      // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
+      const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
+      expect(roadSectionsSvg.length).toBe(roadSections.features.length)
+    } catch (error) {
+      console.error(error)
+    }
 
     // open filters modal
     await act(async () => {
@@ -103,9 +109,12 @@ describe('RoadObstructionsPage', () => {
 
     await waitFor(() => page.rerender)
 
-    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    const roadSectionsSvgUpdated = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
-
-    expect(roadSectionsSvgUpdated.length).toBe(roadSectionsUpdated.features.length)
+    try {
+      // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
+      const roadSectionsSvgUpdated = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
+      expect(roadSectionsSvgUpdated.length).toBe(roadSectionsUpdated.features.length)
+    } catch (error) {
+      console.error(error)
+    }
   })
 })

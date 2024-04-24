@@ -5,11 +5,12 @@ services:
     build: &build-config
       context: .
       args:
-        BUILD_ENV: prod
         NGINX_CONF: nginx.default.conf
     image: ${REGISTRY:-localhost:5001}/${REPOSITORY:-opdrachten/bereikbaarheid-frontend}:${VERSION:-latest}
     environment: &environment
+      NODE_ENV: production
       TZ: Europe/Amsterdam
+      REACT_APP_PIWIK_URL: https://dap.amsterdam.nl
     ipc: host
     ports:
       - '5000:8080'
@@ -18,15 +19,15 @@ services:
     build:
       <<: *build-config
       target: test
-    env_file: .env.test
-    environment: *environment
+    environment:
+      <<: *environment
+      NODE_ENV: test
     command: npm run test
 
   upgrade:
     build:
       <<: *build-config
       target: upgrade
-    env_file: .env.test
     environment: *environment
     volumes:
       - ./package.json:/app/package.json

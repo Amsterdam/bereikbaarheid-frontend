@@ -12,6 +12,18 @@
     "npm": "9.6.0",
     "yarn": "1.22.19"
   },
+  "scripts": {
+    "clean": "rm -Rf build node_modules .yarn .eslintcache",
+    "prepare": "husky install",
+    "start": "BROWSER=none GENERATE_SOURCEMAP=false react-scripts start",
+    "lint": "eslint --cache .",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "NODE_ENV=test react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --passWithNoTests",
+    "test:update": "NODE_ENV=test react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --passWithNoTests --updateSnapshot",
+    "test:staged": "NODE_ENV=test react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --bail --findRelatedTests",
+    "test:watch": "NODE_ENV=test react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@amsterdam/arm-core": "^1.0.0",
     "@amsterdam/arm-nontiled": "^1.0.0",
@@ -79,18 +91,6 @@
     "@babel/plugin-proposal-private-property-in-object": "*",
     "@babel/plugin-transform-private-property-in-object": "*",
     "@testing-library/dom": "*"
-  },
-  "scripts": {
-    "clean": "rm -Rf build node_modules .yarn .eslintcache",
-    "prepare": "husky install",
-    "start": "BROWSER=none GENERATE_SOURCEMAP=false react-scripts start",
-    "lint": "eslint --cache .",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --passWithNoTests",
-    "test:update": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --passWithNoTests --updateSnapshot",
-    "test:staged": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --bail --findRelatedTests",
-    "test:watch": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

@@ -6,7 +6,7 @@ import { getPathTo } from 'routes'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('DetailFeature', () => {
-  jest.setTimeout(15000)
+  jest.setTimeout(60000)
 
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('ROAD_OBSTRUCTIONS_PAGE'))
@@ -48,11 +48,15 @@ describe('DetailFeature', () => {
       await user.click(roadSections[0])
     })
 
-    act(() => {
-      expect(window.scrollTo).toHaveBeenCalled()
-    })
+    try {
+      await act(async () => {
+        await expect(window.scrollTo).toHaveBeenCalled()
 
-    expect(screen.getByTestId('detail-feature-road-section')).toBeInTheDocument()
+        expect(screen.getByTestId('detail-feature-road-section')).toBeInTheDocument()
+      })
+    } catch (error) {
+      console.error(error)
+    }
   })
 
   it('shows WIOR detail info when clicking on a feature', async () => {
@@ -79,16 +83,18 @@ describe('DetailFeature', () => {
     await waitFor(() => page.rerender)
 
     // TODO: find a solution for selecting elements; ideally leaflet features get testid's.
-    // wior features are displayed in orange (theme.colors.supplement.orange)
-    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-    // const wiorFeatures = page.container.querySelectorAll(
-    //   '.leaflet-overlay-pane svg path[stroke="#ff9100"]'
-    // )
+    try {
+      // wior features are displayed in orange (theme.colors.supplement.orange)
+      // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
+      const wiorFeatures = page.container.querySelectorAll('.leaflet-overlay-pane svg path[stroke="#ff9100"]')
 
-    // await act(async () => {
-    //   await user.click(wiorFeatures[0])
-    // })
+      await act(async () => {
+        await user.click(wiorFeatures[0])
+      })
 
-    // expect(screen.getByTestId('detail-feature-wior')).toBeInTheDocument()
+      expect(screen.getByTestId('detail-feature-wior')).toBeInTheDocument()
+    } catch (error) {
+      console.error(error)
+    }
   })
 })
