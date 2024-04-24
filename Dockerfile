@@ -13,11 +13,6 @@ RUN git config --global url."https://github.com/".insteadOf git@github.com:
 # install dependencies
 RUN npm ci
 
-# Upgrade dependencies
-FROM base AS upgrade
-RUN npm install -g npm-check-updates
-CMD ["ncu", "-u", "--doctor", "--target minor"]
-
 # Test
 FROM base AS test
 CMD ["npm", "run", "test"]

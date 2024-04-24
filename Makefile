@@ -4,10 +4,9 @@
 # VERSION = 2020.01.29
 
 dc = docker compose
-run = $(dc) run --rm
+run = $(dc) run --remove-orphans --rm
 
-all: help build push app test requirements clean trivy
-.PHONY: all
+.PHONY: help build push app test requirements clean trivy
 
 help:                               ## Show this help.
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
@@ -28,7 +27,7 @@ test:                               ## Execute tests
 	$(run) test $(ARGS)
 
 requirements:                       ## Upgrade dependencies
-	$(run) upgrade $(ARGS)
+	npx npm-check-updates -u --doctor --target minor
 
 clean:                              ## Clean docker stuff
 	$(dc) down -v --remove-orphans

@@ -23,13 +23,3 @@ services:
       <<: *environment
       NODE_ENV: test
     command: npm run test
-
-  upgrade:
-    build:
-      <<: *build-config
-      target: upgrade
-    environment: *environment
-    volumes:
-      - ./package.json:/app/package.json
-      - ./package-lock.json:/app/package-lock.json
-    command: ncu -u --doctor --target minor
