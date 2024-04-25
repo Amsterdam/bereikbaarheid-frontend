@@ -10,7 +10,7 @@
     "clean": "rm -Rf build node_modules .yarn .eslintcache",
     "prepare": "husky install",
     "start": "BROWSER=none react-scripts start",
-    "lint": "eslint --cache . && prettier --write --ignore-unknown .",
+    "lint": "eslint --cache  --fix . && prettier --write --ignore-unknown .",
     "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "NODE_ENV=test react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --passWithNoTests",
     "test:update": "NODE_ENV=test react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\" --watchAll=false --passWithNoTests --updateSnapshot",
@@ -86,13 +86,24 @@
     "@babel/plugin-transform-private-property-in-object": "*",
     "@testing-library/dom": "*"
   },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest",
       "plugin:jest-dom/recommended",
-      "plugin:jsx-a11y/recommended",
-      "plugin:prettier/recommended"
+      "plugin:jsx-a11y/recommended"
     ],
     "overrides": [
       {
@@ -148,6 +159,18 @@
       "nonblock-statement-body-position": "error"
     }
   },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "jsxSingleQuote": false,
+    "quoteProps": "as-needed",
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 120
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --quiet --fix",
@@ -155,26 +178,6 @@
     ],
     "*.{json,html}": [
       "prettier --write --ignore-unknown"
-    ]
-  },
-  "prettier": {
-    "arrowParens": "avoid",
-    "semi": false,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "printWidth": 120
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
   }
 }
