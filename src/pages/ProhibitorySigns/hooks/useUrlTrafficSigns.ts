@@ -16,7 +16,7 @@ const useUrlTrafficSigns = (vehicle: Vehicle) => {
       if (rdwGeneralInfo.isLoading) return ''
 
       if (showScenarioWizard) {
-        return 'https://api.data.amsterdam.nl/bereikbaarheid/v1/traffic-signs'
+        return 'https://bereikbaarheid.amsterdam.nl/api/v1/traffic-signs'
       }
 
       return getUrl({

@@ -21,7 +21,7 @@ interface TouringcarParkingSpacesParams {
   _format: 'geojson' | 'json' | 'csv'
 }
 
-const ENDPOINT = 'touringcars/parkeerplaatsen'
+const ENDPOINT = 'v1/touringcars/parkeerplaatsen'
 
 function getTouringcarParkingSpaces(
   params: TouringcarParkingSpacesParams = {

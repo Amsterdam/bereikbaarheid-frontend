@@ -8,7 +8,7 @@ const headers =
     : undefined
 
 const api = axios.create({
-  baseURL: 'https://api.data.amsterdam.nl/v1',
+  baseURL: 'https://api.data.amsterdam.nl',
 
   headers,
 

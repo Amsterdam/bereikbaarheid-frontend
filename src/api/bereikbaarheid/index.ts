@@ -3,9 +3,10 @@
 //
 
 import axios from 'axios'
+import config from 'config'
 
 export const api = axios.create({
-  baseURL: process.env.REACT_APP_API_ROOT,
+  baseURL: config.API_BASE_URL,
 
   // create an URL with repeated parameters,
   // e.g. ?category=foo&category=bar&category=baz
