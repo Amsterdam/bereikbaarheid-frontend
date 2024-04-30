@@ -137,7 +137,7 @@ function ContactPage() {
         <Heading as="h2">{t('_pageContact.faq')}</Heading>
 
         {FAQs.map(faq => (
-          <div>
+          <div key={faq.q}>
             <Heading as="h4">{faq.q}</Heading>
             <Paragraph>{parse(faq.a)}</Paragraph>
           </div>
