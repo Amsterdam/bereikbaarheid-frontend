@@ -27,14 +27,10 @@ describe('RoadObstructionsPage', () => {
     // the first element is the alt tag of the logo, the second one the title
     expect(links[1]).toHaveTextContent(`Stremmingen op ${today}`)
 
-    try {
-      // the roadsections should be displayed on the map
-      // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-      const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
-      expect(roadSectionsSvg.length).toBe(roadSections.features.length)
-    } catch (error) {
-      console.error(error)
-    }
+    // the roadsections should be displayed on the map
+    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
+    const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
+    expect(roadSectionsSvg.length).toBe(roadSections.features.length)
   })
 
   it('accepts a date URL parameter for presetting the form', async () => {
@@ -80,14 +76,10 @@ describe('RoadObstructionsPage', () => {
     // wait until page is rendered
     await screen.findAllByText(/stremmingen op/i)
 
-    try {
-      // sanity check - the roadsections should be displayed on the map
-      // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-      const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
-      expect(roadSectionsSvg.length).toBe(roadSections.features.length)
-    } catch (error) {
-      console.error(error)
-    }
+    // sanity check - the roadsections should be displayed on the map
+    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
+    const roadSectionsSvg = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
+    expect(roadSectionsSvg.length).toBe(roadSections.features.length)
 
     // open filters modal
     await act(async () => {
@@ -109,12 +101,8 @@ describe('RoadObstructionsPage', () => {
 
     await waitFor(() => page.rerender)
 
-    try {
-      // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-      const roadSectionsSvgUpdated = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
-      expect(roadSectionsSvgUpdated.length).toBe(roadSectionsUpdated.features.length)
-    } catch (error) {
-      console.error(error)
-    }
+    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
+    const roadSectionsSvgUpdated = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
+    expect(roadSectionsSvgUpdated.length).toBe(roadSectionsUpdated.features.length)
   })
 })

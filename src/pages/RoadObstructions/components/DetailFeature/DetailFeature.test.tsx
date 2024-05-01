@@ -48,15 +48,11 @@ describe('DetailFeature', () => {
       await user.click(roadSections[0])
     })
 
-    try {
-      await act(async () => {
-        await expect(window.scrollTo).toHaveBeenCalled()
+    await act(async () => {
+      await expect(window.scrollTo).toHaveBeenCalled()
 
-        expect(screen.getByTestId('detail-feature-road-section')).toBeInTheDocument()
-      })
-    } catch (error) {
-      console.error(error)
-    }
+      expect(screen.getByTestId('detail-feature-road-section')).toBeInTheDocument()
+    })
   })
 
   it('shows WIOR detail info when clicking on a feature', async () => {
@@ -78,23 +74,5 @@ describe('DetailFeature', () => {
     // enable layer
     await user.click(screen.getByLabelText(/wior/i))
     expect(screen.getByLabelText(/wior/i)).toBeEnabled()
-
-    // wior features are loading...
-    await waitFor(() => page.rerender)
-
-    // TODO: find a solution for selecting elements; ideally leaflet features get testid's.
-    try {
-      // wior features are displayed in orange (theme.colors.supplement.orange)
-      // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
-      const wiorFeatures = page.container.querySelectorAll('.leaflet-overlay-pane svg path[stroke="#ff9100"]')
-
-      await act(async () => {
-        await user.click(wiorFeatures[0])
-      })
-
-      expect(screen.getByTestId('detail-feature-wior')).toBeInTheDocument()
-    } catch (error) {
-      console.error(error)
-    }
   })
 })

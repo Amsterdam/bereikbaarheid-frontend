@@ -21,7 +21,7 @@ app:                                ## Run app
 	$(run) --service-ports app
 
 dev:                                ## Run app locally for development
-	$(dc) up web-dev
+	$(dc) up dev
 
 test:                               ## Execute tests
 	$(run) test $(ARGS)

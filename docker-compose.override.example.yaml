@@ -9,18 +9,13 @@
 # set your own values.
 
 services:
-  # Add "web" prefix to distinguish it from the "dev" service on the back-end.
-  web-dev:
+  dev:
     build:
       context: .
       args:
         NGINX_CONF: nginx.local.conf
       target: dev
-    environment:
-      NODE_ENV: development
-      # The API root URL, can point to localhost or a remote host.
-      # Should include a trailing slash.
-      REACT_APP_API_ROOT: https://localhost:8000/
+    env_file: .env # Load environment variables from a file that can also be used for development without Docker.
     volumes:
       - '.:/srv/dev'
     ipc: host
