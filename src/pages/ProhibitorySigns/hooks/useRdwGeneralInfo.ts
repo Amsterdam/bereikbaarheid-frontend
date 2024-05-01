@@ -9,6 +9,7 @@ export interface rdwGeneralInfo {
     buildDate: number
     curbWeight: number
     isBus: boolean
+    isTourBus: boolean
     isCompanyCar: boolean
     isHeavyGoodsVehicle: boolean
     isPrivateCar: boolean
@@ -62,6 +63,7 @@ export const useRdwGeneralInfo = (vehicle: Vehicle = DUMMY_VEHICLE) => {
         buildDate: parseInt(item.datum_eerste_toelating.substring(0, 4)),
         curbWeight: curbWeight,
         isBus: item.voertuigsoort === 'Bus',
+        isTourBus: item.europese_voertuigcategorie === 'M2' || item.europese_voertuigcategorie === 'M3',
         isCompanyCar: item.voertuigsoort === 'Bedrijfsauto',
         isHeavyGoodsVehicle: Boolean(item.voertuigsoort === 'Bedrijfsauto' && maxAllowedWeight > 3500),
         isPrivateCar: item.voertuigsoort === 'Personenauto',
