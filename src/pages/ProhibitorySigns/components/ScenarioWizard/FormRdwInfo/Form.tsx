@@ -1,8 +1,10 @@
 import { ChevronLeft } from '@amsterdam/asc-assets'
-import { Button, Column, CompactThemeProvider, Link, Paragraph } from '@amsterdam/asc-ui'
+import { Alert, Button, Column, CompactThemeProvider, Link, Paragraph } from '@amsterdam/asc-ui'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { DeepMap, FieldError, FieldValues, SubmitHandler, useForm, UseFormRegister } from 'react-hook-form'
+import { RouteIds } from 'routes'
 import LoadingSpinner from 'shared/components/LoadingSpinner'
+import { getGeneratedPath } from 'shared/utils/path'
 import { z } from 'zod'
 
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
@@ -43,7 +45,7 @@ export const ProhibitorySignsFormScenarioRdwInfo = ({
 }: ProhibitorySignsFormScenarioRdwInfoProps) => {
   const { setActiveStepWizard, setShowScenarioWizard, vehicle, setVehicle } = useProhibitorySignsPageContext()
   const previousFormStep = addressInputEnabled ? 1 : 0
-  const { rdwDataIsLoading } = useRdwInfo()
+  const { generalInfo, rdwDataIsLoading } = useRdwInfo()
   const validationSchema = useRdwInfoValidationSchema()
   const {
     register,
@@ -86,6 +88,21 @@ export const ProhibitorySignsFormScenarioRdwInfo = ({
       {!rdwDataIsLoading && (
         <>
           <FormRdwInfoVehicleSummary />
+
+          {generalInfo?.data?.[0].derived.isTourBus && (
+            <Alert
+              level="info"
+              heading="Het ingevoerde kenteken is van een bus of touringcar"
+              style={{ marginBlockEnd: '1em' }}
+              data-testid="alert-touringcar"
+            >
+              <Paragraph style={{ paddingBlockStart: '1em' }}>
+                <Link variant="with-chevron" href={getGeneratedPath(RouteIds.TOURINGCAR_PAGE)}>
+                  Ga naar de Touringcar-pagina
+                </Link>
+              </Paragraph>
+            </Alert>
+          )}
 
           <FormRdwInfoIntroText />
 

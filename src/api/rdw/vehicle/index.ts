@@ -13,6 +13,7 @@ export interface rdwGeneralData {
   taxi_indicator: string
   toegestane_maximum_massa_voertuig: string
   voertuigsoort: string
+  europese_voertuigcategorie: string
 }
 
 export function getVehicle(licensePlate: string): Promise<rdwGeneralData[]> {
