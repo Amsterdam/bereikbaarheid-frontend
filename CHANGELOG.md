@@ -4,11 +4,20 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.1.0...HEAD)
+## [Unreleased](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.4.0...HEAD)
 
 ## Added
 
-- Touringcar: messages
+## Changed
+
+## Fixed
+
+## [v3.4.0 - 2024-05-02](https://github.com/Amsterdam/bereikbaarheid-frontend/compare/v3.3.0...v3.4.0)
+
+## Added
+
+- Touringcar messages
+- Refer users who enter a (tour)bus license number to the Touringcar page
 
 ## Changed
 
