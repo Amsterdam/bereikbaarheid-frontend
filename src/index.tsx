@@ -10,6 +10,7 @@ import { getAppInsights } from './TelemetryService'
 
 createPiwikInstance(isProd)
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 let appInsights = null
 declare global {
   interface Window {
