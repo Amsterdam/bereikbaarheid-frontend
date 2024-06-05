@@ -29,10 +29,21 @@ COPY .env.${BUILD_ENV} /app/.env
 RUN npm run build
 
 # Deploy
-FROM nginxinc/nginx-unprivileged:mainline-alpine-slim
+FROM nginx:stable-alpine-slim
 COPY --from=builder /app/build/. /var/www/html/
 
 ARG NGINX_CONF=nginx.default.conf
 COPY ${NGINX_CONF} /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
+
+WORKDIR /app
+COPY ./env.sh env.sh
+# Add bash
+RUN apk add --no-cache bash
+
+# Make shell script executable
+RUN chmod +x env.sh
+
+# Start Nginx server
+CMD ["/bin/bash", "-c", "/app/env.sh && nginx -g \"daemon off;\""]
