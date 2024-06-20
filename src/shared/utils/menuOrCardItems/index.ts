@@ -39,7 +39,7 @@ const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
   {
     title: '_pageRoadObstructions.title',
     description: '_pageRoadObstructions.description',
-    path: 'https://melvin.ndw.nu/public?areas=%5B227,267%5D&sw=52.323170,%204.863541&ne=52.400478,%204.926076&showHeader=false&branding=ge',
+    path: 'https://melvin.ndw.nu/public?areas=%5B227,267%5D&sw=52.323170,%204.863541&ne=52.400478,%204.926076',
     target: '_blank',
     image: 'stremmingen.webp',
     imageFallback: 'stremmingen.jpg',
