@@ -29,6 +29,8 @@ const StyledMapPanelDrawer = styled(MapPanelDrawer)`
   & > div > div {
     z-index: 1;
   }
+
+  overflow: hidden;
 `
 
 const TouringcarPage = () => {
