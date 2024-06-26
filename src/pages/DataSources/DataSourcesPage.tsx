@@ -12,7 +12,6 @@ import loadUnloadLinks from '../LoadUnload/data/dataLinks'
 import { trafficSignsLink } from '../ProhibitorySigns/data/dataLinks'
 import { DUMMY_VEHICLE } from '../ProhibitorySigns/hooks/useRdwGeneralInfo'
 import useUrlTrafficSigns from '../ProhibitorySigns/hooks/useUrlTrafficSigns'
-import obstructionsLinks from '../RoadObstructions/data/dataLinks'
 import touringcarLinks from '../Touringcar/data/dataLinks'
 
 import DataSourcesBlocks from './components/DataSourcesBlocks'
@@ -32,11 +31,6 @@ function DataSourcesPage() {
   const initialDate = format(new Date(), 'yyyy-MM-dd')
   const dataLinks = [
     trafficSignsLink(urlTrafficSigns()),
-    ...obstructionsLinks({
-      date: initialDate,
-      timeFrom: '00:00',
-      timeTo: '23:59',
-    }),
     ...loadUnloadLinks,
   ]
 

@@ -33,16 +33,7 @@
                 "length_in_m": 84,
                 "max_speed_in_km": 30,
                 "street_name": "Herengracht",
-                "traffic_counts": [],
-                "traffic_obstructions": [
-                    {
-                        "activity": "Kadevernieuwing",
-                        "end_date": "2023-12-01T23:59:00",
-                        "reference": "",
-                        "start_date": "2022-01-01T00:00:00",
-                        "url": ""
-                    }
-                ]
+                "traffic_counts": []
             },
             "type": "Feature"
         }

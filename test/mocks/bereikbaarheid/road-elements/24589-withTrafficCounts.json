@@ -78,8 +78,7 @@
                         "traffic_type": "beide",
                         "year": 2011
                     }
-                ],
-                "traffic_obstructions": []
+                ]
             },
             "type": "Feature"
         }

@@ -2,7 +2,6 @@ import { Feature, FeatureCollection } from 'geojson'
 
 import config from '../../../config'
 import { api } from '../index'
-import { RoadObstruction } from '../road-obstructions'
 
 export const ENDPOINT = `${config.API_ROOT}/road-elements/`
 
@@ -28,7 +27,6 @@ export interface RoadSection extends Feature {
     max_speed_in_km: number | null
     street_name: string
     traffic_counts: TrafficCount[]
-    traffic_obstructions: RoadObstruction[]
   }
 }
 
