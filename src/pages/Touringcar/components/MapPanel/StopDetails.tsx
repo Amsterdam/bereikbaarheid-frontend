@@ -88,6 +88,14 @@ const StopDetails = () => {
           <Heading as="h2">{currentStop?.properties?.omschrijving}</Heading>
         </PaddedContainer>
 
+        <PaddedContainer>
+          <Paragraph>
+            <strong>{t('_pageTouringcar.places')}:</strong> {currentStop?.properties?.plaatsen}
+          </Paragraph>
+
+          <Paragraph>{currentStop?.properties?.bijzonderheden}</Paragraph>
+        </PaddedContainer>
+
         {!isLoading && !error && !isError && panoramaThumbnail && (
           <ImageWithLoading
             loading={isLoading || imageLoading}
@@ -97,14 +105,6 @@ const StopDetails = () => {
             height={PANORAMA_WIDTH_PX / PANORAMA_ASPECT_RATIO}
           />
         )}
-
-        <PaddedContainer>
-          <Paragraph>
-            <strong>{t('_pageTouringcar.places')}:</strong> {currentStop?.properties?.plaatsen}
-          </Paragraph>
-
-          <Paragraph>{currentStop?.properties?.bijzonderheden}</Paragraph>
-        </PaddedContainer>
       </CompactThemeProvider>
     </>
   )
