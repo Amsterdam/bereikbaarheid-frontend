@@ -14,7 +14,6 @@ describe('RoadSectionDetails', () => {
     expect(screen.getAllByRole('heading', { level: 1 })[0]).toHaveTextContent('Wegvak 24115')
   })
 
-
   it('shows traffic counts', () => {
     render(withAppContext(<RoadSectionDetails properties={roadSectionTrafficCounts.features[0].properties} />))
 
@@ -31,7 +30,6 @@ describe('RoadSectionDetails', () => {
 
   it('shows a message if no traffic counts are found', () => {
     render(withAppContext(<RoadSectionDetails properties={roadSectionNoCounts.features[0].properties} />))
-
     expect(screen.getByText('Geen verkeerstellingen gevonden.')).toBeInTheDocument()
   })
 })

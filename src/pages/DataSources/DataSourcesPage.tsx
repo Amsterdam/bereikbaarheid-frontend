@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 
 import { themeSpacing } from '@amsterdam/asc-ui'
-import { format } from 'date-fns'
 import { useTranslation } from 'react-i18next'
 import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
 import Header from 'shared/components/Header'
@@ -28,11 +27,7 @@ function DataSourcesPage() {
 
   const { urlTrafficSigns } = useUrlTrafficSigns(DUMMY_VEHICLE)
 
-  const initialDate = format(new Date(), 'yyyy-MM-dd')
-  const dataLinks = [
-    trafficSignsLink(urlTrafficSigns()),
-    ...loadUnloadLinks,
-  ]
+  const dataLinks = [trafficSignsLink(urlTrafficSigns()), ...loadUnloadLinks]
 
   const { trackPageVisit } = useAnalytics()
   useEffect(trackPageVisit)
