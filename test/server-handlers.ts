@@ -167,6 +167,18 @@ const getParkingSpaceResults = (lat: string | null, lon: string | null) => {
   return console.error('no parking spaces mock found.')
 }
 
+const getRoadSection = (id: string | ReadonlyArray<string>) => {
+  if (id === '24115') {
+    return require('./mocks/bereikbaarheid/road-elements/241115-withoutTrafficCounts.json')
+  }
+
+  if (id === '404404') {
+    return require('./mocks/bereikbaarheid/road-elements/not-found.json')
+  }
+
+  return console.error('no roadSection mock found.')
+}
+
 const getVehicle = (params: URLSearchParams) => {
   const licensePlate = params.get('kenteken')
   const mocks: Record<string, string> = {

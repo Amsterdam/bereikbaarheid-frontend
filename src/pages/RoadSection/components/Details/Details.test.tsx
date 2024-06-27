@@ -18,7 +18,7 @@ describe('RoadSectionDetails', () => {
   it('shows traffic counts', () => {
     render(withAppContext(<RoadSectionDetails properties={roadSectionTrafficCounts.features[0].properties} />))
 
-    expect(screen.getAllByRole('heading', { level: 2 })[1]).toHaveTextContent('Verkeerstellingen')
+    expect(screen.getAllByRole('heading', { level: 2 })[0]).toHaveTextContent('Verkeerstellingen')
 
     expect(screen.getAllByRole('columnheader', { name: 'Jaar' })).toHaveLength(1)
 
