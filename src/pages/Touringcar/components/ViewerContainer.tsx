@@ -42,7 +42,7 @@ export const TouringcarViewerContainer = ({ showDesktopVariant, ...otherProps }:
   return (
     <>
       {!showDesktopVariant ? (
-        <StyledViewerContainer {...otherProps} ignoreTransition={draggable} />
+        <StyledViewerContainer {...otherProps} ignoreTransition={draggable} topRight={<TouringcarMapLegend />} />
       ) : (
         <StyledViewerContainer
           {...otherProps}
