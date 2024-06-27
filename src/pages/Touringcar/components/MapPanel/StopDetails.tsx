@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { CompactThemeProvider, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
+import { CompactThemeProvider, Heading, Link, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import getPanoramaThumbnail from 'api/panorama/thumbnail'
 import { useTranslation } from 'react-i18next'
@@ -88,6 +88,24 @@ const StopDetails = () => {
           <Heading as="h2">{currentStop?.properties?.omschrijving}</Heading>
         </PaddedContainer>
 
+        <PaddedContainer>
+          <Paragraph>
+            <strong>{t('_pageTouringcar.places')}:</strong> {currentStop?.properties?.plaatsen}
+          </Paragraph>
+
+          <Paragraph>{currentStop?.properties?.bijzonderheden}</Paragraph>
+
+          <Paragraph>
+            <Link
+              href={`https://www.google.com/maps?q=${currentStop?.geometry?.coordinates[1]},${currentStop?.geometry?.coordinates[0]}`}
+              target="_blank"
+              variant="inline"
+            >
+              {'Open in Google Maps'}
+            </Link>
+          </Paragraph>
+        </PaddedContainer>
+
         {!isLoading && !error && !isError && panoramaThumbnail && (
           <ImageWithLoading
             loading={isLoading || imageLoading}
@@ -97,14 +115,6 @@ const StopDetails = () => {
             height={PANORAMA_WIDTH_PX / PANORAMA_ASPECT_RATIO}
           />
         )}
-
-        <PaddedContainer>
-          <Paragraph>
-            <strong>{t('_pageTouringcar.places')}:</strong> {currentStop?.properties?.plaatsen}
-          </Paragraph>
-
-          <Paragraph>{currentStop?.properties?.bijzonderheden}</Paragraph>
-        </PaddedContainer>
       </CompactThemeProvider>
     </>
   )
