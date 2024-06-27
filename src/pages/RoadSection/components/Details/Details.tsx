@@ -12,9 +12,7 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import { RoadSection } from 'api/bereikbaarheid/road-elements'
-import { RoadObstruction } from 'api/bereikbaarheid/road-obstructions'
 import LinkInTable from 'shared/components/LinkInTable'
-import { formatISODate } from 'shared/utils/dateTime'
 import styled from 'styled-components'
 
 const StyledH1 = styled(Heading)`
@@ -28,18 +26,6 @@ const StyledH2 = styled(Heading)`
 const StyledDescriptionList = styled(DescriptionList)`
   margin-bottom: 0;
 `
-
-function formatActivity(item: RoadObstruction) {
-  if (!item.url) {
-    return item.activity
-  }
-
-  return (
-    <LinkInTable variant="inline" href={item.url} target="_blank">
-      {item.activity}
-    </LinkInTable>
-  )
-}
 
 export const RoadSectionDetails = ({ properties }: Pick<RoadSection, 'properties'>) => {
   return (
@@ -57,36 +43,6 @@ export const RoadSectionDetails = ({ properties }: Pick<RoadSection, 'properties
           {properties.length_in_m ? `${properties.length_in_m} meter` : 'onbekend'}
         </DescriptionListItem>
       </StyledDescriptionList>
-
-      <StyledH2 forwardedAs="h2">Stremmingen</StyledH2>
-      {properties.traffic_obstructions.length > 0 ? (
-        <TableContainer>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableCell as="th">Werkzaamheden</TableCell>
-                <TableCell as="th">Kenmerk</TableCell>
-                <TableCell as="th">Van</TableCell>
-                <TableCell as="th">Tot</TableCell>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {properties.traffic_obstructions.map((item, index) => {
-                return (
-                  <TableRow key={index}>
-                    <TableCell>{formatActivity(item)}</TableCell>
-                    <TableCell>{item.reference}</TableCell>
-                    <TableCell>{formatISODate(item.start_date)}</TableCell>
-                    <TableCell>{formatISODate(item.end_date)}</TableCell>
-                  </TableRow>
-                )
-              })}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      ) : (
-        <Paragraph gutterBottom={0}>Geen stremmingen gevonden.</Paragraph>
-      )}
 
       <StyledH2 forwardedAs="h2">Verkeerstellingen</StyledH2>
       {properties.traffic_counts.length > 0 ? (

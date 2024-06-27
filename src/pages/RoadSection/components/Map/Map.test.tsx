@@ -5,7 +5,7 @@ import { withAppContext } from '../../../../../test/utils/withAppContext'
 import { RoadSectionMap, RoadSectionMapProps } from './Map'
 
 describe('RoadSectionMap', () => {
-  const roadSection = require('../../../../../test/mocks/bereikbaarheid/road-elements/241115-withRoadObstructions.json')
+  const roadSection = require('../../../../../test/mocks/bereikbaarheid/road-elements/241115-withoutTrafficCounts.json')
   const props: RoadSectionMapProps = {
     roadSection: roadSection.features[0],
   }

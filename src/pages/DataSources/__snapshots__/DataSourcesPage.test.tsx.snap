@@ -445,69 +445,6 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="api/v1/road-obstructions/?date=2023-10-01&timeFrom=00:00&timeTo=23:59"
-                  target="_blank"
-                >
-                  <span
-                    class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
-                  >
-                    <svg
-                      focusable="false"
-                      role="img"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    class="sc-fhzFiK iRpqvs"
-                  >
-                    Stremmingen
-                  </span>
-                </a>
-                <sup>
-                  *
-                </sup>
-              </li>
-              <li
-                class="sc-lcIPJg ddQxr"
-              >
-                <a
-                  class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="https://data.amsterdam.nl/datasets/1KYHXE2VnNZPvA/werkzaamheden-in-de-openbare-ruimte-wior/"
-                  target="_blank"
-                >
-                  <span
-                    class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
-                  >
-                    <svg
-                      focusable="false"
-                      role="img"
-                      viewBox="0 0 32 32"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
-                        fill-rule="evenodd"
-                      />
-                    </svg>
-                  </span>
-                  <span
-                    class="sc-fhzFiK iRpqvs"
-                  >
-                    Werkzaamheden in de Openbare Ruimte (WIOR)
-                  </span>
-                </a>
-              </li>
-              <li
-                class="sc-lcIPJg ddQxr"
-              >
-                <a
-                  class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
                   href="https://data.amsterdam.nl/datasets/D6rMG5CdGBfp2Q/parkeervakken/"
                   target="_blank"
                 >
@@ -1374,69 +1311,6 @@ FAQ en contactgegevens"
               <sup>
                 *
               </sup>
-            </li>
-            <li
-              class="sc-lcIPJg ddQxr"
-            >
-              <a
-                class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="api/v1/road-obstructions/?date=2023-10-01&timeFrom=00:00&timeTo=23:59"
-                target="_blank"
-              >
-                <span
-                  class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
-                >
-                  <svg
-                    focusable="false"
-                    role="img"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-                <span
-                  class="sc-fhzFiK iRpqvs"
-                >
-                  Stremmingen
-                </span>
-              </a>
-              <sup>
-                *
-              </sup>
-            </li>
-            <li
-              class="sc-lcIPJg ddQxr"
-            >
-              <a
-                class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="https://data.amsterdam.nl/datasets/1KYHXE2VnNZPvA/werkzaamheden-in-de-openbare-ruimte-wior/"
-                target="_blank"
-              >
-                <span
-                  class="sc-aXZVg sc-cWSHoV sc-eBMEME fkLQVn haQwBU izdRIm"
-                >
-                  <svg
-                    focusable="false"
-                    role="img"
-                    viewBox="0 0 32 32"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-                <span
-                  class="sc-fhzFiK iRpqvs"
-                >
-                  Werkzaamheden in de Openbare Ruimte (WIOR)
-                </span>
-              </a>
             </li>
             <li
               class="sc-lcIPJg ddQxr"
