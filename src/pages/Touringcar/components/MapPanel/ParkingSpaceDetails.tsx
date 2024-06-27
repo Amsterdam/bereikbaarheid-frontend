@@ -112,7 +112,7 @@ const ParkingSpaceDetails = () => {
 
           <Paragraph>
             <Link
-              href={`https://www.google.com/maps/@${currentParkingSpace?.geometry?.coordinates[1]},${currentParkingSpace?.geometry?.coordinates[0]},17z`}
+              href={`https://www.google.com/maps?q=${currentParkingSpace?.geometry?.coordinates[1]},${currentParkingSpace?.geometry?.coordinates[0]}`}
               target="_blank"
               variant="inline"
             >

@@ -94,17 +94,17 @@ const StopDetails = () => {
           </Paragraph>
 
           <Paragraph>{currentStop?.properties?.bijzonderheden}</Paragraph>
-        </PaddedContainer>
 
-        <Paragraph>
-          <Link
-            href={`https://www.google.com/maps/@${currentStop?.geometry?.coordinates[1]},${currentStop?.geometry?.coordinates[0]},17z`}
-            target="_blank"
-            variant="inline"
-          >
-            {'Open in Google Maps'}
-          </Link>
-        </Paragraph>
+          <Paragraph>
+            <Link
+              href={`https://www.google.com/maps?q=${currentStop?.geometry?.coordinates[1]},${currentStop?.geometry?.coordinates[0]}`}
+              target="_blank"
+              variant="inline"
+            >
+              {'Open in Google Maps'}
+            </Link>
+          </Paragraph>
+        </PaddedContainer>
 
         {!isLoading && !error && !isError && panoramaThumbnail && (
           <ImageWithLoading
