@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { CompactThemeProvider, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
+import { CompactThemeProvider, Heading, Link, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import getPanoramaThumbnail from 'api/panorama/thumbnail'
 import { useTranslation } from 'react-i18next'
@@ -95,6 +95,16 @@ const StopDetails = () => {
 
           <Paragraph>{currentStop?.properties?.bijzonderheden}</Paragraph>
         </PaddedContainer>
+
+        <Paragraph>
+          <Link
+            href={`https://www.google.com/maps/@${currentStop?.geometry?.coordinates[1]},${currentStop?.geometry?.coordinates[0]},17z`}
+            target="_blank"
+            variant="inline"
+          >
+            {'Open in Google Maps'}
+          </Link>
+        </Paragraph>
 
         {!isLoading && !error && !isError && panoramaThumbnail && (
           <ImageWithLoading

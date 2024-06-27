@@ -88,16 +88,6 @@ const ParkingSpaceDetails = () => {
           <Heading as="h2">{currentParkingSpace?.properties?.omschrijving}</Heading>
         </PaddedContainer>
 
-        {!isLoading && !error && !isError && panoramaThumbnail && (
-          <ImageWithLoading
-            loading={isLoading || imageLoading}
-            src={panoramaThumbnail}
-            alt={currentParkingSpace?.properties?.omschrijving}
-            width={PANORAMA_WIDTH_PX}
-            height={PANORAMA_WIDTH_PX / PANORAMA_ASPECT_RATIO}
-          />
-        )}
-
         <PaddedContainer>
           <Paragraph>
             <strong>{t('_pageTouringcar.places')}:</strong> {currentParkingSpace?.properties?.plaatsen}
@@ -119,7 +109,27 @@ const ParkingSpaceDetails = () => {
               )}
             </Paragraph>
           )}
+
+          <Paragraph>
+            <Link
+              href={`https://www.google.com/maps/@${currentParkingSpace?.geometry?.coordinates[1]},${currentParkingSpace?.geometry?.coordinates[0]},17z`}
+              target="_blank"
+              variant="inline"
+            >
+              {'Open in Google Maps'}
+            </Link>
+          </Paragraph>
         </PaddedContainer>
+
+        {!isLoading && !error && !isError && panoramaThumbnail && (
+          <ImageWithLoading
+            loading={isLoading || imageLoading}
+            src={panoramaThumbnail}
+            alt={currentParkingSpace?.properties?.omschrijving}
+            width={PANORAMA_WIDTH_PX}
+            height={PANORAMA_WIDTH_PX / PANORAMA_ASPECT_RATIO}
+          />
+        )}
       </CompactThemeProvider>
     </>
   )
