@@ -3,7 +3,6 @@ import { rest } from 'msw'
 import { ENDPOINT as ENDPOINT_ADDRESS_SEARCH } from '../src/api/atlas/search/address'
 import { ENDPOINT as ENDPOINT_BOLLARDS } from '../src/api/bereikbaarheid/bollards'
 import { ENDPOINT as ENDPOINT_ROAD_SECTION } from '../src/api/bereikbaarheid/road-elements'
-import { ENDPOINT as ENDPOINT_ROAD_OBSTRUCTIONS } from '../src/api/bereikbaarheid/road-obstructions'
 import { ENDPOINT as ENDPOINT_LOAD_UNLOAD } from '../src/api/bereikbaarheid/road-sections/load-unload'
 import { ENDPOINT as ENDPOINT_PROHIBITORY_ROADS } from '../src/api/bereikbaarheid/roads/prohibitory'
 import { ENDPOINT as ENDPOINT_TRAFFIC_SIGNS } from '../src/api/bereikbaarheid/traffic-signs'
@@ -37,11 +36,6 @@ export const handlers = [
   rest.get(ENDPOINT_PROHIBITORY_ROADS, (req, res, ctx) => {
     const roadsMock = require('./mocks/bereikbaarheid/roads/prohibitory/data.json')
     return res(ctx.status(200), ctx.json(roadsMock))
-  }),
-
-  rest.get(`/${ENDPOINT_ROAD_OBSTRUCTIONS}`, (req, res, ctx) => {
-    const roadObstructionsMock = getRoadObstructions(req.url.searchParams)
-    return res(ctx.status(200), ctx.json(roadObstructionsMock))
   }),
 
   rest.get(`/${ENDPOINT_BOLLARDS}`, (_req, res, ctx) => {
@@ -173,19 +167,9 @@ const getParkingSpaceResults = (lat: string | null, lon: string | null) => {
   return console.error('no parking spaces mock found.')
 }
 
-const getRoadObstructions = (params: URLSearchParams) => {
-  let result = require('./mocks/bereikbaarheid/road-obstructions/data.json')
-
-  if (params.get('date') === '2023-06-15') {
-    result = require('./mocks/bereikbaarheid/road-obstructions/data-2023-06-15.json')
-  }
-
-  return result
-}
-
 const getRoadSection = (id: string | ReadonlyArray<string>) => {
   if (id === '24115') {
-    return require('./mocks/bereikbaarheid/road-elements/241115-withRoadObstructions.json')
+    return require('./mocks/bereikbaarheid/road-elements/241115-withoutTrafficCounts.json')
   }
 
   if (id === '404404') {

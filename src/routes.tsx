@@ -7,14 +7,12 @@ import ErrorPage from './pages/ErrorPage'
 import HomePage from './pages/Home/HomePage'
 import LoadUnloadPage from './pages/LoadUnload/LoadUnloadPage'
 import ProhibitorySignsPage from './pages/ProhibitorySigns/ProhibitorySignsPage'
-import RoadObstructionsPage from './pages/RoadObstructions/RoadObstructionsPage'
 import RoadSectionPage from './pages/RoadSection/RoadSectionPage'
 
 enum RouteIds {
   HOME = 'HOME',
   LICENCE_PLATE_PAGE = 'LICENCE_PLATE_PAGE',
   PROHIBITORY_SIGNS_PAGE = 'PROHIBITORY_SIGNS_PAGE',
-  ROAD_OBSTRUCTIONS_PAGE = 'ROAD_OBSTRUCTIONS_PAGE',
   LOAD_UNLOAD_PAGE = 'LOAD_UNLOAD_PAGE',
   TOURINGCAR_PAGE = 'TOURINGCAR_PAGE',
   ROAD_SECTION_DETAIL_PAGE = 'ROAD_SECTION_DETAIL_PAGE',
@@ -40,11 +38,6 @@ const ROUTES: RouteObjectWithPredefinedIds[] = [
     path: '/verbodsborden',
     id: RouteIds.PROHIBITORY_SIGNS_PAGE,
     element: <Navigate replace to="/op-kenteken" />,
-  },
-  {
-    path: '/stremmingen',
-    id: RouteIds.ROAD_OBSTRUCTIONS_PAGE,
-    element: <RoadObstructionsPage />,
   },
   {
     path: '/laden-lossen',
