@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import { Accordion, Divider, styles, svgFill, themeColor, themeSpacing } from '@amsterdam/asc-ui'
+import { Accordion, Divider, styles, svgFill, themeColor, themeSpacing, useMatchMedia } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
@@ -39,9 +39,11 @@ interface MapLegendProps {
 export const MapLegend = ({ children }: MapLegendProps) => {
   const { t } = useTranslation()
 
+  const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'laptop' })
+
   return (
     <MapLegendStyle>
-      <Accordion id="legend" isOpen title={t('_generic.legend')}>
+      <Accordion id="legend" isOpen={showDesktopVariant ? true : false} title={t('_generic.legend')}>
         {children}
       </Accordion>
     </MapLegendStyle>
