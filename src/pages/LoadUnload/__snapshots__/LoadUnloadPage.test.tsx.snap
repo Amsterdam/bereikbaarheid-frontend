@@ -794,7 +794,7 @@ FAQ en contactgegevens"
               data-testid="topRight"
             >
               <div
-                class="sc-eHsDsR gYgznV"
+                class="sc-eHsDsR bYvsro"
               >
                 <button
                   aria-controls="legend"
@@ -1862,7 +1862,7 @@ FAQ en contactgegevens"
             data-testid="topRight"
           >
             <div
-              class="sc-eHsDsR gYgznV"
+              class="sc-eHsDsR bYvsro"
             >
               <button
                 aria-controls="legend"
