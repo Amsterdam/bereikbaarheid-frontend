@@ -7,6 +7,9 @@ import styled from 'styled-components'
 const legendGrey = '#aaa' // @todo refactor to tint level4?
 const MapLegendStyle = styled.div`
   min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 170px);
 
   ${styles.AccordionButton} {
     background: ${legendGrey};
@@ -20,6 +23,7 @@ const MapLegendStyle = styled.div`
   ${styles.AccordionContent} {
     background: ${themeColor('tint', 'level1')};
     border-color: ${legendGrey};
+    overflow: auto;
   }
 
   ${Divider} {
