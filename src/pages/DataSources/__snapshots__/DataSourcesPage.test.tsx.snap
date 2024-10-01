@@ -595,7 +595,7 @@ FAQ en contactgegevens"
               >
                 <a
                   class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                  href="api/v1/touringcar/doorrijhoogtes"
+                  href="api/v1/touringcar/doorrijhoogten"
                   target="_blank"
                 >
                   <span
@@ -1467,7 +1467,7 @@ FAQ en contactgegevens"
             >
               <a
                 class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                href="api/v1/touringcar/doorrijhoogtes"
+                href="api/v1/touringcar/doorrijhoogten"
                 target="_blank"
               >
                 <span
