@@ -457,7 +457,7 @@ FAQ en contactgegevens"
                   >
                     Leaflet
                   </a>
-                   
+
                   <span
                     aria-hidden="true"
                   >
@@ -603,7 +603,7 @@ FAQ en contactgegevens"
                           class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
                           style="margin-block-end: .5em;"
                         >
-                          Vanaf 1 januari 2024 zijn touringcars zwaarder dan 7,5 ton zonder ontheffing toegestaan op de S100 en de corridor Weesperstraat - Valkenburgerstraat – Kattenburgerstraat (lichtgroen weergegeven). Touringcars zwaarder dan 7,5 ton mét ontheffing zijn toegestaan op de in donkergroen weergegeven wegen. Voor meer informatie over het verkeersbesluit, ontheffingenbeleid en het aanvragen van een ontheffing: 
+                          Vanaf 1 januari 2024 zijn touringcars zwaarder dan 7,5 ton zonder ontheffing toegestaan op de S100 en de corridor Weesperstraat - Valkenburgerstraat – Kattenburgerstraat (lichtgroen weergegeven). Touringcars zwaarder dan 7,5 ton mét ontheffing zijn toegestaan op de in donkergroen weergegeven wegen. Voor meer informatie over het verkeersbesluit, ontheffingenbeleid en het aanvragen van een ontheffing:
                           <a
                             href="https://www.amsterdam.nl/touringcar"
                             target="_blank"
@@ -651,7 +651,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="http://localhost:8000/api/v1/touringcar/haltes"
+                              href="api/v1/touringcar/haltes"
                               target="_blank"
                             >
                               <span
@@ -684,7 +684,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="http://localhost:8000/api/v1/touringcar/parkeerplaatsen"
+                              href="api/v1/touringcar/parkeerplaatsen"
                               target="_blank"
                             >
                               <span
@@ -717,7 +717,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="http://localhost:8000/api/v1/touringcar/doorrijhoogtes"
+                              href="api/v1/touringcar/doorrijhoogtes"
                               target="_blank"
                             >
                               <span
@@ -882,7 +882,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="http://localhost:8000/api/v1/touringcar/downloads/csv"
+                              href="api/v1/touringcar/downloads/csv"
                               target="_blank"
                             >
                               <span
@@ -1819,7 +1819,7 @@ FAQ en contactgegevens"
                 >
                   Leaflet
                 </a>
-                 
+
                 <span
                   aria-hidden="true"
                 >
@@ -1965,7 +1965,7 @@ FAQ en contactgegevens"
                         class="sc-jEACwC sc-gFqAkR jiqykX kBZfau"
                         style="margin-block-end: .5em;"
                       >
-                        Vanaf 1 januari 2024 zijn touringcars zwaarder dan 7,5 ton zonder ontheffing toegestaan op de S100 en de corridor Weesperstraat - Valkenburgerstraat – Kattenburgerstraat (lichtgroen weergegeven). Touringcars zwaarder dan 7,5 ton mét ontheffing zijn toegestaan op de in donkergroen weergegeven wegen. Voor meer informatie over het verkeersbesluit, ontheffingenbeleid en het aanvragen van een ontheffing: 
+                        Vanaf 1 januari 2024 zijn touringcars zwaarder dan 7,5 ton zonder ontheffing toegestaan op de S100 en de corridor Weesperstraat - Valkenburgerstraat – Kattenburgerstraat (lichtgroen weergegeven). Touringcars zwaarder dan 7,5 ton mét ontheffing zijn toegestaan op de in donkergroen weergegeven wegen. Voor meer informatie over het verkeersbesluit, ontheffingenbeleid en het aanvragen van een ontheffing:
                         <a
                           href="https://www.amsterdam.nl/touringcar"
                           target="_blank"
@@ -2013,7 +2013,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="http://localhost:8000/api/v1/touringcar/haltes"
+                            href="api/v1/touringcar/haltes"
                             target="_blank"
                           >
                             <span
@@ -2046,7 +2046,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="http://localhost:8000/api/v1/touringcar/parkeerplaatsen"
+                            href="api/v1/touringcar/parkeerplaatsen"
                             target="_blank"
                           >
                             <span
@@ -2079,7 +2079,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="http://localhost:8000/api/v1/touringcar/doorrijhoogtes"
+                            href="api/v1/touringcar/doorrijhoogtes"
                             target="_blank"
                           >
                             <span
@@ -2244,7 +2244,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="http://localhost:8000/api/v1/touringcar/downloads/csv"
+                            href="api/v1/touringcar/downloads/csv"
                             target="_blank"
                           >
                             <span
