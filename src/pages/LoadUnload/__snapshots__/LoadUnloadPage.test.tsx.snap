@@ -708,7 +708,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="/api/v1/road-sections/load-unload/"
+                              href="api/v1/road-sections/load-unload/"
                               target="_blank"
                             >
                               <span
@@ -1776,7 +1776,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="/api/v1/road-sections/load-unload/"
+                            href="api/v1/road-sections/load-unload/"
                             target="_blank"
                           >
                             <span
