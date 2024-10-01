@@ -471,7 +471,7 @@ FAQ en contactgegevens"
                   >
                     Leaflet
                   </a>
-                   
+
                   <span
                     aria-hidden="true"
                   >
@@ -708,7 +708,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="http://localhost:8000/api/v1/road-sections/load-unload/"
+                              href="/api/v1/road-sections/load-unload/"
                               target="_blank"
                             >
                               <span
@@ -964,7 +964,7 @@ FAQ en contactgegevens"
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
                             >
                               <span>
-                                venstertijd tijdens 
+                                venstertijd tijdens
                                 <br />
                                 ingestelde tijdvak
                               </span>
@@ -980,7 +980,7 @@ FAQ en contactgegevens"
                               class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
                             >
                               <span>
-                                venstertijd tijdens een deel 
+                                venstertijd tijdens een deel
                                 <br />
                                 van ingestelde tijdvak
                               </span>
@@ -1539,7 +1539,7 @@ FAQ en contactgegevens"
                 >
                   Leaflet
                 </a>
-                 
+
                 <span
                   aria-hidden="true"
                 >
@@ -1776,7 +1776,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="http://localhost:8000/api/v1/road-sections/load-unload/"
+                            href="/api/v1/road-sections/load-unload/"
                             target="_blank"
                           >
                             <span
@@ -2032,7 +2032,7 @@ FAQ en contactgegevens"
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
                           >
                             <span>
-                              venstertijd tijdens 
+                              venstertijd tijdens
                               <br />
                               ingestelde tijdvak
                             </span>
@@ -2048,7 +2048,7 @@ FAQ en contactgegevens"
                             class="sc-jEACwC sc-gFqAkR eIFIbR kBZfau"
                           >
                             <span>
-                              venstertijd tijdens een deel 
+                              venstertijd tijdens een deel
                               <br />
                               van ingestelde tijdvak
                             </span>
