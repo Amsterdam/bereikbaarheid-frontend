@@ -651,7 +651,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="https://api.data.amsterdam.nl/v1/touringcars/haltes"
+                              href="api/v1/touringcar/haltes"
                               target="_blank"
                             >
                               <span
@@ -684,7 +684,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="https://api.data.amsterdam.nl/v1/touringcars/parkeerplaatsen"
+                              href="api/v1/touringcar/parkeerplaatsen"
                               target="_blank"
                             >
                               <span
@@ -717,7 +717,7 @@ FAQ en contactgegevens"
                           >
                             <a
                               class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                              href="https://api.data.amsterdam.nl/v1/touringcars/doorrijhoogtes"
+                              href="api/v1/touringcar/doorrijhoogten"
                               target="_blank"
                             >
                               <span
@@ -2013,7 +2013,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="https://api.data.amsterdam.nl/v1/touringcars/haltes"
+                            href="api/v1/touringcar/haltes"
                             target="_blank"
                           >
                             <span
@@ -2046,7 +2046,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="https://api.data.amsterdam.nl/v1/touringcars/parkeerplaatsen"
+                            href="api/v1/touringcar/parkeerplaatsen"
                             target="_blank"
                           >
                             <span
@@ -2079,7 +2079,7 @@ FAQ en contactgegevens"
                         >
                           <a
                             class="sc-jEACwC gTqerM sc-jxOSlx lBYNR"
-                            href="https://api.data.amsterdam.nl/v1/touringcars/doorrijhoogtes"
+                            href="api/v1/touringcar/doorrijhoogten"
                             target="_blank"
                           >
                             <span
