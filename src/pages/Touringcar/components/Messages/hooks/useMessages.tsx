@@ -39,8 +39,13 @@ function useMessages() {
   })
 
   const sortedMessages = useMemo(() => {
-    return messages?.features.sort((a, b) => Number(a.properties.important) + Number(b.properties.important))
-  }, [messages?.features])
+    if (!messages?.features) return [];
+    return messages.features.sort((a, b) => {
+      const aIsImportant = a.properties.important ? 1 : 0;
+      const bIsImportant = b.properties.important ? 1 : 0;
+      return bIsImportant - aIsImportant;
+    });
+  }, [messages?.features]);
 
   useEffect(() => {
     refetch()
