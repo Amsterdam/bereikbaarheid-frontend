@@ -1,6 +1,7 @@
+import config from 'config'
 import { Feature, FeatureCollection, Point } from 'geojson'
 
-import api from '../../data.amsterdam'
+import { api } from '../../bereikbaarheid'
 
 interface TouringcarStop extends Feature {
   id: string
@@ -19,7 +20,7 @@ interface TouringcarStopsParams {
   _format: 'geojson' | 'json' | 'csv'
 }
 
-const ENDPOINT = 'v1/touringcars/haltes'
+const ENDPOINT = `${config.API_ROOT}/touringcar/haltes`
 
 function getTouringcarStops(
   params: TouringcarStopsParams = {
