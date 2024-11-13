@@ -50,7 +50,7 @@ export const StopsLayer = () => {
 
       marker.on('click', () => {
         setActiveTab(MapPanelTab.INFO)
-        findStop(item.properties?.id)
+        findStop(item.id)
         setPositionFromSnapPoint(mapPanelConstants.SnapPoint.Halfway)
       })
 

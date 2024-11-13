@@ -44,7 +44,7 @@ export const ParkingSpacesLayer = () => {
 
       marker.on('click', () => {
         setActiveTab(MapPanelTab.INFO)
-        findParkingSpace(item.properties?.id)
+        findParkingSpace(item.id)
         setPositionFromSnapPoint(mapPanelConstants.SnapPoint.Halfway)
       })
 
