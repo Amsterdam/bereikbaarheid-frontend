@@ -35,7 +35,7 @@ export const StopsLayer = () => {
       console.log("Updated currentStop:", stop);
     },
     [data?.features, setCurrentStop]
-  );
+  )
 
 
   const createClusterMarkers = () => {
