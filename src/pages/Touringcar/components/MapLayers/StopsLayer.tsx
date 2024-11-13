@@ -26,11 +26,17 @@ export const StopsLayer = () => {
 
   const findStop = useCallback(
     (id: number) => {
-      const stop = data?.features.find(item => Number(item.id) === id)
-      setCurrentStop(stop)
+      console.log("Searching for ID:", id);
+      const stop = data?.features.find(item => {
+        console.log("Comparing", item.id, "with", id);
+        return Number(item.id) === id;
+      });
+      setCurrentStop(stop);
+      console.log("Updated currentStop:", stop);
     },
     [data?.features, setCurrentStop]
-  )
+  );
+
 
   const createClusterMarkers = () => {
     return data!.features.map((item: TouringcarStop) => {
