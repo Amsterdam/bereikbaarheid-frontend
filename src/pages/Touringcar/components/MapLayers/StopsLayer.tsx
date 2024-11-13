@@ -37,7 +37,6 @@ export const StopsLayer = () => {
     [data?.features, setCurrentStop]
   )
 
-
   const createClusterMarkers = () => {
     return data!.features.map((item: TouringcarStop) => {
       const marker = TouringcarMarker(item, MapLayerId.touringcarStopsLayerId)
