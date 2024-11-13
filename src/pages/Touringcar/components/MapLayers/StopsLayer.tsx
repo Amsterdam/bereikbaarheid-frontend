@@ -26,14 +26,12 @@ export const StopsLayer = () => {
 
   const findStop = useCallback(
     (id: number) => {
-      console.log("Searching for ID:", id);
+      console.log('Searching for ID:', id)
       const stop = data?.features.find(item => {
-        console.log("Comparing", item.id, "with", id);
-        return Number(item.id) === id;
-      });
-      setCurrentStop(stop);
-      console.log("Updated currentStop:", stop);
-    },
+        console.log('Comparing', item.id, 'with', id)
+      })
+      setCurrentStop(stop)
+      console.log('Updated currentStop:', stop)
     [data?.features, setCurrentStop]
   )
 
