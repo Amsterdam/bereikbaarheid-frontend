@@ -26,7 +26,7 @@ export const ParkingSpacesLayer = () => {
 
   const findParkingSpace = useCallback(
     (id: number) => {
-      const parkingSpace = data?.features.find(item => item.id === id)
+      const parkingSpace = data?.features.find(item => Number(item.id) === id)
       setCurrentParkingSpace(parkingSpace)
     },
     [data?.features, setCurrentParkingSpace]
