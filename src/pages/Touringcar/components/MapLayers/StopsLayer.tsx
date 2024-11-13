@@ -26,7 +26,7 @@ export const StopsLayer = () => {
 
   const findStop = useCallback(
     (id: number) => {
-      const stop = data?.features.find(item => item.properties?.id === id)
+      const stop = data?.features.find(item => item.id === id)
       setCurrentStop(stop)
     },
     [data?.features, setCurrentStop]
