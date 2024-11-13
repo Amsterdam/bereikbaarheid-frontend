@@ -26,7 +26,7 @@ export const ParkingSpacesLayer = () => {
 
   const findParkingSpace = useCallback(
     (id: number) => {
-      const parkingSpace = data?.features.find(item => item.properties?.id === id)
+      const parkingSpace = data?.features.find(item => item.id === id)
       setCurrentParkingSpace(parkingSpace)
     },
     [data?.features, setCurrentParkingSpace]
@@ -44,7 +44,7 @@ export const ParkingSpacesLayer = () => {
 
       marker.on('click', () => {
         setActiveTab(MapPanelTab.INFO)
-        findParkingSpace(item.properties?.id)
+        findParkingSpace(item.id)
         setPositionFromSnapPoint(mapPanelConstants.SnapPoint.Halfway)
       })
 

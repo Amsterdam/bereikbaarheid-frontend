@@ -4,7 +4,7 @@ import { Feature, FeatureCollection, Point } from 'geojson'
 import { api } from '../../bereikbaarheid'
 
 interface TouringcarStop extends Feature {
-  id: string
+  id: number
   geometry: Point
   omschrijving: string
   bijzonderheden: string
