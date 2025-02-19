@@ -1,9 +1,8 @@
 import { useState } from 'react'
 
 import { Button, Column, CompactThemeProvider, Link, Row, themeSpacing } from '@amsterdam/asc-ui'
-import { Link as RouterLink } from 'react-router-dom'
-import { RouteIds } from 'routes'
-import { getGeneratedPath } from 'shared/utils/path'
+import { generatePath, Link as RouterLink } from 'react-router-dom'
+import { getPathTo, RouteIds } from 'routes'
 import styled from 'styled-components'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
@@ -90,7 +89,7 @@ const ProhibitorySignsDetailFeatureTrafficSign = () => {
                 <Link
                   variant="inline"
                   as={RouterLink}
-                  to={getGeneratedPath(RouteIds.ROAD_SECTION_DETAIL_PAGE, {
+                  to={generatePath(getPathTo(RouteIds.ROAD_SECTION_DETAIL_PAGE), {
                     id: String(Math.abs(currentTrafficSign!.properties.network_link_id)),
                   })}
                 >
