@@ -48,7 +48,9 @@ const TouringcarPage = () => {
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   const { trackPageVisit } = useAnalytics()
-  useEffect(trackPageVisit)
+  useEffect(() => {
+    trackPageVisit()
+  }, [])
 
   return (
     <TouringcarPageProvider>

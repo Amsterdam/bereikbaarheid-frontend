@@ -30,7 +30,9 @@ function DataSourcesPage() {
   const dataLinks = [trafficSignsLink(urlTrafficSigns()), ...loadUnloadLinks]
 
   const { trackPageVisit } = useAnalytics()
-  useEffect(trackPageVisit)
+  useEffect(() => {
+    trackPageVisit()
+  }, [])
 
   return (
     <PageWrapper>
