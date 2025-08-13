@@ -50,7 +50,7 @@ const TouringcarPage = () => {
   const { trackPageVisit } = useAnalytics()
   useEffect(() => {
     trackPageVisit()
-  }, [])
+  }, [trackPageVisit])
 
   return (
     <TouringcarPageProvider>

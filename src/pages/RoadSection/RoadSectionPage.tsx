@@ -30,7 +30,7 @@ const RoadSectionPage = () => {
   const { trackPageVisit } = useAnalytics()
   useEffect(() => {
     trackPageVisit()
-  }, [])
+  }, [trackPageVisit])
 
   if (roadSection.isLoading) {
     return <LoadingSpinner />

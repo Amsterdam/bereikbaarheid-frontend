@@ -32,7 +32,7 @@ function DataSourcesPage() {
   const { trackPageVisit } = useAnalytics()
   useEffect(() => {
     trackPageVisit()
-  }, [])
+  }, [trackPageVisit])
 
   return (
     <PageWrapper>

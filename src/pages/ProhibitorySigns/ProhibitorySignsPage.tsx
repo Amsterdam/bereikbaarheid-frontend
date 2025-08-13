@@ -50,7 +50,7 @@ const ProhibitorySignsPage = () => {
   const { trackPageVisit } = useAnalytics()
   useEffect(() => {
     trackPageVisit()
-  }, [])
+  }, [trackPageVisit])
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
   return (
