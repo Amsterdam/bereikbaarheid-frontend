@@ -64,7 +64,7 @@ export const oneWayArrows = {
   label: 'Eenrichtingsverkeer',
   options: {
     ...optionsShared,
-    attribution: 'VMA 4.00 2021-03 Arrow',
+    attribution: 'VMA 5.00 2024-07 Arrow',
     bounds: [
       [52.2602, 5.085],
       [52.4496, 4.7205],
