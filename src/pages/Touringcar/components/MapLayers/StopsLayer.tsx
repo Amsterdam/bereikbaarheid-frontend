@@ -28,6 +28,7 @@ export const StopsLayer = () => {
     (id: number) => {
       const stop = data?.features.find(item => item.id === id)
       setCurrentStop(stop)
+      console.log('test')
     },
     [data?.features, setCurrentStop]
   )
