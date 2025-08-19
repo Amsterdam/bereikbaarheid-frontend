@@ -4,7 +4,6 @@ import { themeSpacing } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
 import Header from 'shared/components/Header'
-import useAnalytics from 'shared/hooks/useAnalytics'
 import styled from 'styled-components'
 
 import loadUnloadLinks from '../LoadUnload/data/dataLinks'
@@ -28,11 +27,6 @@ function DataSourcesPage() {
   const { urlTrafficSigns } = useUrlTrafficSigns(DUMMY_VEHICLE)
 
   const dataLinks = [trafficSignsLink(urlTrafficSigns()), ...loadUnloadLinks]
-
-  const { trackPageVisit } = useAnalytics()
-  useEffect(() => {
-    trackPageVisit()
-  }, [trackPageVisit])
 
   return (
     <PageWrapper>

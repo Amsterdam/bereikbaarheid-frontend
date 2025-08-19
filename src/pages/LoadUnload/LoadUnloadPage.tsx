@@ -8,7 +8,6 @@ import { useTranslation } from 'react-i18next'
 import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
 import Header from 'shared/components/Header'
 import { HEADER_HEIGHT, Z_INDEX_MODAL } from 'shared/constants'
-import useAnalytics from 'shared/hooks/useAnalytics'
 import { useDocumentTitle } from 'shared/hooks/useDocumentTitle'
 import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
 import { MapStyle } from 'shared/map/mapStyle'
@@ -51,11 +50,6 @@ const LoadUnloadPage = () => {
 
   const [showAddressForm, setShowAddressForm] = useState(false)
   const [showDateTimeModal, setShowDateTimeModal] = useState(false)
-
-  const { trackPageVisit } = useAnalytics()
-  useEffect(() => {
-    trackPageVisit()
-  }, [trackPageVisit])
 
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
 
