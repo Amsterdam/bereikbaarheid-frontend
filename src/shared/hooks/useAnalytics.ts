@@ -18,17 +18,18 @@ function createPiwikInstance(isEnabled = true) {
 
     return
   }
-
+  console.log('Initializing Piwik')
   PiwikPro.initialize(piwikSiteId, piwikUrl)
   PiwikInstance = true
 }
 
 function useAnalytics() {
   const [prevLocation, setPrevLocation] = useState('')
-
+  console.log('Tracking page visit')
   const trackPageVisit = useCallback(
     (message?: string) => {
       let path = window?.location.href.split(/[?#]/)[0]
+      console.info(`Track page view to: ${message ?? path}`)
 
       if (!path.endsWith('/')) path = `${path}/`
 
@@ -39,7 +40,7 @@ function useAnalytics() {
 
       console.info(`Track page view to: ${message ?? path}`)
 
-      PageViews.trackPageView(message ?? path)
+      // PageViews.trackPageView(message ?? path)
     },
     [prevLocation]
   )
