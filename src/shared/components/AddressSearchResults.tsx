@@ -39,8 +39,8 @@ export const AddressSearchResults = ({ addresses, onClickAddress }: AddressSearc
             {addresses.map((item, index) => (
               <ListItem key={index}>
                 <Link
-                  data-lat={item.centroid[1]}
-                  data-lon={item.centroid[0]}
+                  data-lat={item.centroid[0]}
+                  data-lon={item.centroid[1]}
                   href="#"
                   onClick={onClickAddress}
                   variant="inline"
