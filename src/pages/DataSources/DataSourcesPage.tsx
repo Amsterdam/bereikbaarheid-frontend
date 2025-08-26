@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-
 import { themeSpacing } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 import { MainContent, PageWrapper } from 'shared/components/FullPageSize'

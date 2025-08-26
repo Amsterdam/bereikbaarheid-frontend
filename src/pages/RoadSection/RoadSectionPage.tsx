@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-
 import { Column, Row } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
 import { getRoadSection } from 'api/bereikbaarheid/road-elements'

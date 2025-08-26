@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-
 import { Email } from '@amsterdam/asc-assets'
 import { Button, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import parse from 'html-react-parser'
