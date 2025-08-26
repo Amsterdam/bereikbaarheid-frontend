@@ -8,7 +8,6 @@ import { useTranslation } from 'react-i18next'
 import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
 import Header from 'shared/components/Header'
 import { HEADER_HEIGHT } from 'shared/constants'
-import useAnalytics from 'shared/hooks/useAnalytics'
 import { useDocumentTitle } from 'shared/hooks/useDocumentTitle'
 import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
 import { MapStyle } from 'shared/map/mapStyle'
@@ -46,9 +45,6 @@ const TouringcarPage = () => {
 
   const [showDesktopVariant] = useMatchMedia({ minBreakpoint: 'tabletM' })
   const Element = showDesktopVariant ? MapPanel : StyledMapPanelDrawer
-
-  const { trackPageVisit } = useAnalytics()
-  useEffect(trackPageVisit)
 
   return (
     <TouringcarPageProvider>

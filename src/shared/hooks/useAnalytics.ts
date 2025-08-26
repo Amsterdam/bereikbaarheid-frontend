@@ -1,6 +1,4 @@
-import { useCallback, useState } from 'react'
-
-import PiwikPro, { PageViews } from '@piwikpro/react-piwik-pro'
+import PiwikPro from '@piwikpro/react-piwik-pro'
 
 const piwikUrl = window?._env_?.REACT_APP_PIWIK_URL
 const piwikSiteId = window?._env_?.REACT_APP_PIWIK_SITE_ID
@@ -18,34 +16,8 @@ function createPiwikInstance(isEnabled = true) {
 
     return
   }
-
   PiwikPro.initialize(piwikSiteId, piwikUrl)
   PiwikInstance = true
 }
 
-function useAnalytics() {
-  const [prevLocation, setPrevLocation] = useState('')
-
-  const trackPageVisit = useCallback(
-    (message?: string) => {
-      let path = window?.location.href.split(/[?#]/)[0]
-
-      if (!path.endsWith('/')) path = `${path}/`
-
-      if (!PiwikInstance || !path) return
-      if (prevLocation === path) return
-
-      setPrevLocation(path)
-
-      console.info(`Track page view to: ${message ?? path}`)
-
-      PageViews.trackPageView(message ?? path)
-    },
-    [prevLocation]
-  )
-
-  return { trackPageVisit }
-}
-
 export { createPiwikInstance }
-export default useAnalytics

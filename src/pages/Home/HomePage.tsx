@@ -1,11 +1,8 @@
-import { useEffect } from 'react'
-
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import Header from '../../shared/components/Header'
-import useAnalytics from '../../shared/hooks/useAnalytics'
 
 import CardsMenu, { CARD_WIDTH_PX } from './components/CardsMenu'
 
@@ -26,9 +23,6 @@ const Grid = styled(MainContent)`
 
 function HomePage() {
   const { t } = useTranslation()
-
-  const { trackPageVisit } = useAnalytics()
-  useEffect(trackPageVisit)
 
   return (
     <PageWrapper>

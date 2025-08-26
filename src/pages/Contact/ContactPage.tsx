@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-
 import { Email } from '@amsterdam/asc-assets'
 import { Button, Heading, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import parse from 'html-react-parser'
@@ -8,7 +6,6 @@ import styled from 'styled-components'
 
 import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
 import Header from '../../shared/components/Header'
-import useAnalytics from '../../shared/hooks/useAnalytics'
 import { getMailtoLink } from '../../shared/utils/email'
 
 const FEEDBACK_RECIPIENT = 'stadsloket.centrum.vergunningen.dvl@amsterdam.nl'
@@ -93,9 +90,6 @@ const ContentBlock = styled.div`
 
 function ContactPage() {
   const { t } = useTranslation()
-
-  const { trackPageVisit } = useAnalytics()
-  useEffect(trackPageVisit)
 
   return (
     <PageWrapper>
