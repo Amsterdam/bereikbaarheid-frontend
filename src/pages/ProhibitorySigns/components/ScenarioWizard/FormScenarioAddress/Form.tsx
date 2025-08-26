@@ -50,7 +50,11 @@ export const ProhibitorySignsFormScenarioAddress = () => {
 
     const search = await addressApi(searchString)
 
-    if (search.results.length === 0) {
+    const itemsWithCentroid = search.results.filter(
+      item => item.centroid && Array.isArray(item.centroid) && item.centroid.length === 2
+    )
+
+    if (itemsWithCentroid.length === 0) {
       setError('searchAddress', {
         type: 'custom',
         message: 'Geen adres gevonden',
@@ -58,7 +62,7 @@ export const ProhibitorySignsFormScenarioAddress = () => {
     }
 
     // Take first 11 results, so streetname 1 returns streetname 1 + streetname 10-19
-    setAddressOptions(search.results.slice(0, 11))
+    setAddressOptions(itemsWithCentroid.slice(0, 11))
   }
 
   const onClickAddress = (e: FormEvent) => {
