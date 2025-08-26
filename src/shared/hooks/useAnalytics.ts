@@ -16,7 +16,6 @@ function createPiwikInstance(isEnabled = true) {
 
     return
   }
-  console.log('Initializing Piwik')
   PiwikPro.initialize(piwikSiteId, piwikUrl)
   PiwikInstance = true
 }
