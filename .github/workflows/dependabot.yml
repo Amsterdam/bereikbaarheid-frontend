@@ -7,6 +7,10 @@ on:
     - cron: '0 6 1 * *'
   workflow_dispatch: # Creates button on Github to trigger the workflow manually
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   dependabot:
     name: Dependabot
