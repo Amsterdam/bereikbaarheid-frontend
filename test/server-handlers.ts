@@ -1,6 +1,5 @@
 import { rest } from 'msw'
 
-import { ENDPOINT as ENDPOINT_ADDRESS_SEARCH } from '../src/api/atlas/search/address'
 import { ENDPOINT as ENDPOINT_BOLLARDS } from '../src/api/bereikbaarheid/bollards'
 import { ENDPOINT as ENDPOINT_ROAD_SECTION } from '../src/api/bereikbaarheid/road-elements'
 import { ENDPOINT as ENDPOINT_LOAD_UNLOAD } from '../src/api/bereikbaarheid/road-sections/load-unload'
@@ -8,6 +7,7 @@ import { ENDPOINT as ENDPOINT_PROHIBITORY_ROADS } from '../src/api/bereikbaarhei
 import { ENDPOINT as ENDPOINT_TRAFFIC_SIGNS } from '../src/api/bereikbaarheid/traffic-signs'
 import { API_URL as API_URL_GEOSEARCH } from '../src/api/geosearch'
 import { API_URL as API_URL_PARKEERVAKKEN } from '../src/api/parkeervakken'
+import { ENDPOINT as ENDPOINT_ADDRESS_SEARCH } from '../src/api/pdok/search/address'
 import { ENDPOINT as ENDPOINT_RDW_AXLES } from '../src/api/rdw/axles'
 import { ENDPOINT as ENDPOINT_RDW_FUEL } from '../src/api/rdw/fuel'
 import { ENDPOINT as ENDPOINT_RDW_SUBCATEGORY } from '../src/api/rdw/subcategory'
@@ -146,10 +146,10 @@ export const handlers = [
 ]
 
 const getAddressResults = (params: URLSearchParams) => {
-  let result = require('./mocks/atlas/search/address/groenb.json')
+  let result = require('./mocks/pdok/search/address/groenb.json')
 
-  if (params.get('q') === 'Noresults') {
-    result = require('./mocks/atlas/search/address/no-results.json')
+  if (params.get('q') === '"Noresults"') {
+    result = require('./mocks/pdok/search/address/no-results.json')
   }
 
   return result

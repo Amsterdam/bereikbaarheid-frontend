@@ -24,7 +24,7 @@ COPY .env.${BUILD_ENV} /app/.env
 RUN npm run build
 
 # Deploy
-FROM nginx:stable-alpine-slim
+FROM nginx:stable-alpine-slim AS app
 COPY --from=builder /app/build/. /var/www/html/
 
 COPY nginx.default.conf /etc/nginx/conf.d/default.conf
