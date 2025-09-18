@@ -1,7 +1,7 @@
 import { MouseEventHandler } from 'react'
 
 import { CompactThemeProvider, Link, List, ListItem, styles, themeColor, themeSpacing } from '@amsterdam/asc-ui'
-import { AddressItem } from 'api/atlas/search/address'
+import { AddressItem } from 'api/pdok/search/address'
 import styled from 'styled-components'
 
 const AddressSearchResultsContainer = styled.div`

@@ -19,6 +19,12 @@ push: build                         ## Push docker image to registry
 app:                                ## Run app
 	$(run) --service-ports frontend
 
+dev:                                ## Run the development server
+	$(dc) up -d --remove-orphans fe-dev
+
+down:								## Docker compose down
+	$(dc) down
+
 test:                               ## Execute tests
 	$(run) test $(ARGS)
 

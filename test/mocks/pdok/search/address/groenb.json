@@ -1,0 +1,104 @@
+{
+  "response":{
+    "numFound":182,
+    "start":0,
+    "numFoundExact":true,
+    "docs":[{
+      "weergavenaam":"Groenburgwal 1, 1011HR Amsterdam",
+      "centroide_ll":"POINT(4.89917722 52.36955836)"
+    },{
+      "weergavenaam":"Groenburgwal 2A, 1011HV Amsterdam",
+      "centroide_ll":"POINT(4.89853237 52.36944785)"
+    },{
+      "weergavenaam":"Groenburgwal 2, 1011HV Amsterdam",
+      "centroide_ll":"POINT(4.89857592 52.36949297)"
+    },{
+      "weergavenaam":"Groenburgwal 3B, 1011HR Amsterdam",
+      "centroide_ll":"POINT(4.89913357 52.36952223)"
+    },{
+      "weergavenaam":"Groenburgwal 3C, 1011HR Amsterdam",
+      "centroide_ll":"POINT(4.89913357 52.36952223)"
+    },{
+      "weergavenaam":"Groenburgwal 3A, 1011HR Amsterdam",
+      "centroide_ll":"POINT(4.89913357 52.36952223)"
+    },{
+      "weergavenaam":"Groenburgwal 4-2, 1011HV Amsterdam",
+      "centroide_ll":"POINT(4.89844397 52.36947445)"
+    },{
+      "weergavenaam":"Groenburgwal 4-H, 1011HV Amsterdam",
+      "centroide_ll":"POINT(4.89844397 52.36947445)"
+    },{
+      "weergavenaam":"Groenburgwal 4-1, 1011HV Amsterdam",
+      "centroide_ll":"POINT(4.89844397 52.36947445)"
+    },{
+      "weergavenaam":"Groenburgwal 4-3, 1011HV Amsterdam",
+      "centroide_ll":"POINT(4.89844397 52.36947445)"
+    },{
+      "weergavenaam":"Groenburgwal 5C, 1011HR Amsterdam",
+      "centroide_ll":"POINT(4.89909001 52.36947711)"
+    },{
+      "weergavenaam":"Groenburgwal 5A, 1011HR Amsterdam",
+      "centroide_ll":"POINT(4.89909001 52.36947711)"
+    },{
+      "weergavenaam":"Groenburgwal 5D, 1011HR Amsterdam",
+      "centroide_ll":"POINT(4.89909001 52.36947711)"
+    },{
+      "weergavenaam":"Groenburgwal 5B, 1011HR Amsterdam",
+      "centroide_ll":"POINT(4.89907533 52.36947705)"
+    },{
+      "weergavenaam":"Groenburgwal 7D, 1011HR Amsterdam",
+      "centroide_ll":"POINT(4.89903178 52.36943193)"
+    }]
+  },
+  "highlighting":{
+    "adr-c68b13de9993f232337be5b68f2cd534":{
+      "suggest":["<b>Groenburgwal</b> 1, 1011HR Amsterdam"]
+    },
+    "adr-7ffa328ed5fd5bd0bb25b134acd9cbdb":{
+      "suggest":["<b>Groenburgwal</b> 2A, 1011HV Amsterdam"]
+    },
+    "adr-0db1763f0bb9c0f81a0ecfe66e366207":{
+      "suggest":["<b>Groenburgwal</b> 2, 1011HV Amsterdam"]
+    },
+    "adr-6a4f3b1cf0ea70817bf0c610ff743fb9":{
+      "suggest":["<b>Groenburgwal</b> 3B, 1011HR Amsterdam"]
+    },
+    "adr-29648a11a973bd240a7261c4a07b1f14":{
+      "suggest":["<b>Groenburgwal</b> 3C, 1011HR Amsterdam"]
+    },
+    "adr-49b12f1d240ec0beac06e684d743b596":{
+      "suggest":["<b>Groenburgwal</b> 3A, 1011HR Amsterdam"]
+    },
+    "adr-96360e64ec35fa32faad0fab0e744082":{
+      "suggest":["<b>Groenburgwal</b> 4-2, 1011HV Amsterdam"]
+    },
+    "adr-f28b17a1a1db07c5e46ec607674084b1":{
+      "suggest":["<b>Groenburgwal</b> 4-H, 1011HV Amsterdam"]
+    },
+    "adr-d0d2735a4fd1802685f2cbdf5b8483c6":{
+      "suggest":["<b>Groenburgwal</b> 4-1, 1011HV Amsterdam"]
+    },
+    "adr-75c609a4c392a49202569e69b5db7f4d":{
+      "suggest":["<b>Groenburgwal</b> 4-3, 1011HV Amsterdam"]
+    },
+    "adr-a79fa3f22a860b51c93431d89c4dc3e7":{
+      "suggest":["<b>Groenburgwal</b> 5C, 1011HR Amsterdam"]
+    },
+    "adr-30238351e23c55cf86ce9d66b7b63a7e":{
+      "suggest":["<b>Groenburgwal</b> 5A, 1011HR Amsterdam"]
+    },
+    "adr-d81c787acc63bad9aa230c327c9aff36":{
+      "suggest":["<b>Groenburgwal</b> 5D, 1011HR Amsterdam"]
+    },
+    "adr-2982e8bcfd4e256261b0a7ff42bc79dd":{
+      "suggest":["<b>Groenburgwal</b> 5B, 1011HR Amsterdam"]
+    },
+    "adr-e7f0b33201c7de3c7e149a2798791a04":{
+      "suggest":["<b>Groenburgwal</b> 7D, 1011HR Amsterdam"]
+    }
+  },
+  "spellcheck":{
+    "suggestions":[ ],
+    "collations":[ ]
+  }
+}

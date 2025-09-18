@@ -1,4 +1,4 @@
-FROM node:18 AS base
+FROM node:20-bookworm AS base
 
 ENV BROWSER=none
 
@@ -16,11 +16,6 @@ RUN npm ci
 # Upgrade dependencies
 FROM base AS upgrade
 RUN npm install -g npm-check-updates
-CMD ["ncu", "-u", "--doctor", "--target minor"]
-
-# Test
-FROM base AS test
-CMD [ "npm", "run", "test" ]
 
 # Build the app
 FROM base AS builder
@@ -29,11 +24,10 @@ COPY .env.${BUILD_ENV} /app/.env
 RUN npm run build
 
 # Deploy
-FROM nginx:stable-alpine-slim
+FROM nginx:stable-alpine-slim AS app
 COPY --from=builder /app/build/. /var/www/html/
 
-ARG NGINX_CONF=nginx.default.conf
-COPY ${NGINX_CONF} /etc/nginx/conf.d/default.conf
+COPY nginx.default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 

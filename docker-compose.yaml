@@ -1,31 +1,52 @@
-version: '3.7'
-
 services:
   frontend:
-    build: &build-config
+    build:
       context: .
+      target: app
       args:
         - BUILD_ENV=development
-        - NGINX_CONF=nginx.dockercompose.conf
     image: ${REGISTRY:-localhost:5001}/${REPOSITORY:-opdrachten/bereikbaarheid-frontend}:${VERSION:-latest}
-    environment: &environment
+    environment:
       - TZ=Europe/Amsterdam
     ipc: host
     ports:
       - '5000:8080'
+    volumes:
+      - ./nginx.dockercompose.conf:/etc/nginx/conf.d/default.conf
+
+  fe-dev:
+    build:
+      context: .
+      target: base
+      args:
+        - BUILD_ENV=development
+    environment:
+      - TZ=Europe/Amsterdam
+    ipc: host
+    ports:
+      - '5001:3000'
+    volumes:
+      - ./nginx.dockercompose.conf:/etc/nginx/conf.d/default.conf
+      - ./src:/app/src
+    command: npm start
 
   test:
     build:
-      <<: *build-config
-      target: test
-    environment: *environment
+      context: .
+      target: base
+    environment:
+      - TZ=Europe/Amsterdam
+    volumes:
+      - ./src:/app/src
+      - ./test:/app/test
     command: npm run test
 
   upgrade:
     build:
-      <<: *build-config
+      context: .
       target: upgrade
-    environment: *environment
+    environment:
+      - TZ=Europe/Amsterdam
     volumes:
       - ./package.json:/app/package.json
       - ./package-lock.json:/app/package-lock.json

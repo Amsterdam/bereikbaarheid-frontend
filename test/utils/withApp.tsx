@@ -8,6 +8,9 @@ import { withQueryClient } from './withQueryClient'
 export const withApp = (path: string) => {
   const router = createMemoryRouter(ROUTES, {
     initialEntries: [path],
+    future: {
+      v7_startTransition: true,
+    },
   })
 
   return withQueryClient(withAppContext(<RouterProvider router={router} />))
