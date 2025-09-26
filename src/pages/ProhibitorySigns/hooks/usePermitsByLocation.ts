@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { getPermitsByLocation } from 'api/bereikbaarheid/permits'
+import { getPermitsByLocation } from '../../../api/bereikbaarheid/permits'
 
 import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 

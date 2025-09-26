@@ -5,7 +5,7 @@ import {
   roadNetworkHeavyGoodsVehicleAndLowEmissionZone,
   roadNetworkNoRestrictions,
   wideRoads,
-} from 'shared/map/mapLayers'
+} from '../../../shared/map/mapLayers'
 
 export const prohibitoryRoadsLayerId = 'prohibitoryRoads'
 export const trafficSignsLayerId = 'trafficSigns'

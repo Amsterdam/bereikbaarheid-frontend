@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 
 import { AmsterdamLogo, Header as ASCHeader, MenuInline, MenuToggle, styles, useMatchMedia } from '@amsterdam/asc-ui'
-import i18n from 'i18n'
+import i18n from '../../../i18n'
 import styled from 'styled-components'
 
 import { HEADER_HEIGHT, Z_INDEX_HEADER } from '../../constants'

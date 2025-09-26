@@ -1,5 +1,5 @@
 import { Input, Label, Paragraph } from '@amsterdam/asc-ui'
-import InputWithSuffix from 'shared/components/InputWithSuffix'
+import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
 import styled from 'styled-components'
 
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'

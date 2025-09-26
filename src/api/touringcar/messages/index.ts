@@ -1,6 +1,6 @@
-import config from 'config'
+import config from '../../../config'
 import { Feature, FeatureCollection, Point } from 'geojson'
-import { DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
+import { DateHumanReadable_Year_Month_Day } from '../../../shared/utils/dateTime'
 
 import { api } from '../../bereikbaarheid'
 

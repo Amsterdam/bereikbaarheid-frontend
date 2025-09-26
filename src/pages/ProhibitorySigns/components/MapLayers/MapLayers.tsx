@@ -1,7 +1,7 @@
 import { BaseLayer } from '@amsterdam/arm-core'
 import { TileLayer } from '@amsterdam/react-maps'
-import { AddressMarker } from 'shared/components/MapLayers/AddressMarker'
-import { aerialImages, linkIds, oneWayArrows, topoBlackWhite, topoColorLight } from 'shared/map/mapLayers'
+import { AddressMarker } from '../../../../shared/components/MapLayers/AddressMarker'
+import { aerialImages, linkIds, oneWayArrows, topoBlackWhite, topoColorLight } from '../../../../shared/map/mapLayers'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'

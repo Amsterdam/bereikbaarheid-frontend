@@ -1,5 +1,5 @@
 import { GeoJSON } from '@amsterdam/arm-core'
-import { useSearchAllDataSets } from 'shared/hooks/useSearchAllDataSets'
+import { useSearchAllDataSets } from '../../../../shared/hooks/useSearchAllDataSets'
 import { useTheme } from 'styled-components'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'

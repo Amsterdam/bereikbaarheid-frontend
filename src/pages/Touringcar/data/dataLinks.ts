@@ -1,11 +1,11 @@
-import { getUrl as getTouringcarCsv } from 'api/touringcar/download'
-import { getUrl as getTouringcarEnvironmentalZoneUrl } from 'api/touringcar/environmental-zone'
-import { getUrl as getTouringcarParkingSpacesUrl } from 'api/touringcar/parking-spaces'
-import { getUrl as getTouringcarRoutesDestinationTrafficUrl } from 'api/touringcar/routes-destination-traffic'
-import { getUrl as getTouringcarRoutesMandatoryUrl } from 'api/touringcar/routes-mandatory'
-import { getUrl as getTouringcarRoutesRecommendedUrl } from 'api/touringcar/routes-recommended'
-import { getUrl as getTouringcarStopsUrl } from 'api/touringcar/stops'
-import { getUrl as getTouringcarVehicleHeightsUrl } from 'api/touringcar/vehicle-heights'
+import { getUrl as getTouringcarCsv } from '../../../api/touringcar/download'
+import { getUrl as getTouringcarEnvironmentalZoneUrl } from '../../../api/touringcar/environmental-zone'
+import { getUrl as getTouringcarParkingSpacesUrl } from '../../../api/touringcar/parking-spaces'
+import { getUrl as getTouringcarRoutesDestinationTrafficUrl } from '../../../api/touringcar/routes-destination-traffic'
+import { getUrl as getTouringcarRoutesMandatoryUrl } from '../../../api/touringcar/routes-mandatory'
+import { getUrl as getTouringcarRoutesRecommendedUrl } from '../../../api/touringcar/routes-recommended'
+import { getUrl as getTouringcarStopsUrl } from '../../../api/touringcar/stops'
+import { getUrl as getTouringcarVehicleHeightsUrl } from '../../../api/touringcar/vehicle-heights'
 
 const touringcarStopsLink = {
   href: getTouringcarStopsUrl(),

@@ -1,4 +1,4 @@
-import { zToNumber } from 'shared/utils/zodPreprocess'
+import { zToNumber } from '../../../../../shared/utils/zodPreprocess'
 import { z } from 'zod'
 
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'

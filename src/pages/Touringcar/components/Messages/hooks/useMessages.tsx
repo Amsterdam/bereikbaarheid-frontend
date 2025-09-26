@@ -1,11 +1,11 @@
 import { useEffect, useMemo } from 'react'
 
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarMessages, { TouringcarMessage } from 'api/touringcar/messages'
+import getTouringcarMessages, { TouringcarMessage } from '../../../../../api/touringcar/messages'
 import { format } from 'date-fns'
-import i18n from 'i18n'
-import useTouringcarMapContext from 'pages/Touringcar/contexts/MapContext'
-import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from 'shared/utils/dateTime'
+import i18n from '../../../../../i18n'
+import useTouringcarMapContext from '../../../../../pages/Touringcar/contexts/MapContext'
+import { DATE_FORMAT_REVERSED, DateHumanReadable_Year_Month_Day } from '../../../../../shared/utils/dateTime'
 
 type MessageLanguage = 'nl' | 'en' | 'de' | 'es' | 'fr'
 

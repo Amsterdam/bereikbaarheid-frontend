@@ -1,8 +1,8 @@
 import { Marker } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
-import getBollards, { Bollard } from 'api/bereikbaarheid/bollards'
+import getBollards, { Bollard } from '../../../../api/bereikbaarheid/bollards'
 import L, { LatLngExpression, LatLngTuple } from 'leaflet'
-import { DetailFeatureActionType } from 'pages/LoadUnload/contexts/detailFeatureReducer'
+import { DetailFeatureActionType } from '../../../../pages/LoadUnload/contexts/detailFeatureReducer'
 
 import useLoadUnloadMapContext, { MapLayerId, layerFeatureProps } from '../../contexts/MapContext'
 

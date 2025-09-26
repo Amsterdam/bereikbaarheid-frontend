@@ -1,8 +1,8 @@
 import { createContext, Dispatch, SetStateAction, useContext } from 'react'
 
-import { TouringcarMessage } from 'api/touringcar/messages'
-import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
-import { TouringcarStop } from 'api/touringcar/stops'
+import { TouringcarMessage } from '../../../api/touringcar/messages'
+import { TouringcarParkingSpace } from '../../../api/touringcar/parking-spaces'
+import { TouringcarStop } from '../../../api/touringcar/stops'
 
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'
 

@@ -1,5 +1,5 @@
-import LoadingSpinner from 'shared/components/LoadingSpinner'
-import { useSearchAllDataSets } from 'shared/hooks/useSearchAllDataSets'
+import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
+import { useSearchAllDataSets } from '../../../../shared/hooks/useSearchAllDataSets'
 
 import ProhibitorySignsDetailFeatureParkingSpace from './ParkingSpace'
 

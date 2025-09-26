@@ -1,5 +1,5 @@
-import { RouteIds } from 'routes'
-import { getGeneratedPath } from 'shared/utils/path'
+import { RouteIds } from '../../../../routes'
+import { getGeneratedPath } from '../../../../shared/utils/path'
 
 import { withApp } from '../../../../../test/utils/withApp'
 

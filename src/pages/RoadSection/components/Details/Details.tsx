@@ -11,8 +11,8 @@ import {
   TableRow,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { RoadSection } from 'api/bereikbaarheid/road-elements'
-import LinkInTable from 'shared/components/LinkInTable'
+import { RoadSection } from '../../../../api/bereikbaarheid/road-elements'
+import LinkInTable from '../../../../shared/components/LinkInTable'
 import styled from 'styled-components'
 
 const StyledH1 = styled(Heading)`

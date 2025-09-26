@@ -1,4 +1,4 @@
-import { headers } from 'api/data.amsterdam'
+import { headers } from '../../../api/data.amsterdam'
 import axios from 'axios'
 import { Feature, FeatureCollection } from 'geojson'
 

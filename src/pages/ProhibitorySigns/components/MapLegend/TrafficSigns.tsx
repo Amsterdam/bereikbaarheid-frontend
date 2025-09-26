@@ -1,5 +1,5 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
-import { LegendWrapper, LegendItemsWrapper } from 'shared/components/MapLegendStyles'
+import { LegendWrapper, LegendItemsWrapper } from '../../../../shared/components/MapLegendStyles'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { trafficSignsLayerId } from '../../contexts/mapLayersReducer'

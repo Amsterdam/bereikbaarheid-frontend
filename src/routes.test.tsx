@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { getGeneratedPath } from 'shared/utils/path'
+import { getGeneratedPath } from './shared/utils/path'
 
 import { withApp } from '../test/utils/withApp'
 

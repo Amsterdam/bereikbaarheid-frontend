@@ -2,9 +2,9 @@ import { useLayoutEffect, useState } from 'react'
 
 import { BaseLayer } from '@amsterdam/arm-core'
 import { TileLayer } from '@amsterdam/react-maps'
-import useTouringcarMapContext from 'pages/Touringcar/contexts/MapContext'
-import { AddressMarker } from 'shared/components/MapLayers/AddressMarker'
-import { oneWayArrows, topoBlackWhite } from 'shared/map/mapLayers'
+import useTouringcarMapContext from '../../../../pages/Touringcar/contexts/MapContext'
+import { AddressMarker } from '../../../../shared/components/MapLayers/AddressMarker'
+import { oneWayArrows, topoBlackWhite } from '../../../../shared/map/mapLayers'
 
 import { useTouringcarPageContext } from '../../contexts/PageContext'
 

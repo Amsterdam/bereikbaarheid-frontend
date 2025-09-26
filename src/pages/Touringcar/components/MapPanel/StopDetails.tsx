@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { CompactThemeProvider, Heading, Link, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { useQuery } from '@tanstack/react-query'
-import getPanoramaThumbnail from 'api/panorama/thumbnail'
+import getPanoramaThumbnail from '../../../../api/panorama/thumbnail'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'
 

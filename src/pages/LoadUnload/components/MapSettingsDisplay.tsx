@@ -14,7 +14,7 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
-import { formatISODate } from 'shared/utils/dateTime'
+import { formatISODate } from '../../../shared/utils/dateTime'
 import styled from 'styled-components'
 
 import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'

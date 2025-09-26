@@ -13,8 +13,8 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import { isAfter, parse, startOfYesterday } from 'date-fns'
-import LoadingSpinner from 'shared/components/LoadingSpinner'
-import { formatISODate } from 'shared/utils/dateTime'
+import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
+import { formatISODate } from '../../../../shared/utils/dateTime'
 import styled from 'styled-components'
 
 import { useParkingSpaceInfo } from '../../hooks/useParkingSpaceInfo'

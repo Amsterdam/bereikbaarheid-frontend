@@ -1,11 +1,11 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
-import MapLegendItem from 'shared/components/MapLegendItem'
-import { LegendWrapper, LegendItemsWrapper } from 'shared/components/MapLegendStyles'
+import MapLegendItem from '../../../../shared/components/MapLegendItem'
+import { LegendWrapper, LegendItemsWrapper } from '../../../../shared/components/MapLegendStyles'
 import {
   roadNetworkHeavyGoodsVehicleZone,
   roadNetworkLowEmissionZone,
   roadNetworkHeavyGoodsVehicleAndLowEmissionZone,
-} from 'shared/map/mapLayers'
+} from '../../../../shared/map/mapLayers'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { prohibitoryRoadsLayerId } from '../../contexts/mapLayersReducer'

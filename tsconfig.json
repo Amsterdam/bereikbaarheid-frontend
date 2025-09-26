@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
+    "paths": {
+        "api/*": ["src/api/*"],
+        "pages/*": ["src/pages/*"]
+    },
     "target": "es6",
     "strict": true,
     "allowJs": true,

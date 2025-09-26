@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
 
 import { mapPanelConstants, MapPanelProvider } from '@amsterdam/arm-core'
-import { ProhibitorySignsMapContext, ProhibitorySignsMapContextProps } from 'pages/ProhibitorySigns/contexts/MapContext'
-import { mapLayersInitialState } from 'pages/ProhibitorySigns/contexts/mapLayersReducer'
+import { ProhibitorySignsMapContext, ProhibitorySignsMapContextProps } from '../../../src/pages/ProhibitorySigns/contexts/MapContext'
+import { mapLayersInitialState } from '../../../src/pages/ProhibitorySigns/contexts/mapLayersReducer'
 
 import { withPageContext } from './withPageContext'
 

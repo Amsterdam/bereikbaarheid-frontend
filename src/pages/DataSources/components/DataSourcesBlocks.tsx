@@ -1,9 +1,9 @@
 import { Email } from '@amsterdam/asc-assets'
 import { Heading, Icon, Link, List, ListItem, Paragraph, themeSpacing } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
-import { RouteIds, getPathTo } from 'routes'
-import { ContentBlock, PretendHeading } from 'shared/components/CompactElements'
-import { getMailtoLink } from 'shared/utils/email'
+import { RouteIds, getPathTo } from '../../../routes'
+import { ContentBlock, PretendHeading } from '../../../shared/components/CompactElements'
+import { getMailtoLink } from '../../../shared/utils/email'
 import styled from 'styled-components'
 
 interface DataLink {

@@ -1,14 +1,14 @@
-import { TouringcarMessage } from 'api/touringcar/messages'
-import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
-import { TouringcarStop } from 'api/touringcar/stops'
-import { TouringcarVehicleHeight } from 'api/touringcar/vehicle-heights'
+import { TouringcarMessage } from '../../../../api/touringcar/messages'
+import { TouringcarParkingSpace } from '../../../../api/touringcar/parking-spaces'
+import { TouringcarStop } from '../../../../api/touringcar/stops'
+import { TouringcarVehicleHeight } from '../../../../api/touringcar/vehicle-heights'
 import L from 'leaflet'
-import { MapLayerId } from 'pages/Touringcar/contexts/MapContext'
+import { MapLayerId } from '../../../../pages/Touringcar/contexts/MapContext'
 
-import SvgTouringcarMessageMarker from './images/bericht.svg'
-import SvgTouringcarVehicleHeightMarker from './images/doorrijhoogte.svg'
-import SvgTouringcarStopMarker from './images/halte.svg'
-import SvgTouringcarParkingSpaceMarker from './images/parkeerplaats.svg'
+import SvgTouringcarMessageMarker from './images/bericht.svg?url'
+import SvgTouringcarVehicleHeightMarker from './images/doorrijhoogte.svg?url'
+import SvgTouringcarStopMarker from './images/halte.svg?url'
+import SvgTouringcarParkingSpaceMarker from './images/parkeerplaats.svg?url'
 
 type TouringcarGeometryPoints = TouringcarMessage | TouringcarParkingSpace | TouringcarStop | TouringcarVehicleHeight
 

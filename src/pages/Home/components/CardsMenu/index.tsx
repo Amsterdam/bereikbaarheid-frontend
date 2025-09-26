@@ -18,7 +18,7 @@ import {
   MenuOrCardItemWithPath as CardItemWithPath,
   menuOrCardItems as cardItems,
   mapPathsToMenuOrCardItems,
-} from 'shared/utils/menuOrCardItems'
+} from '../../../../shared/utils/menuOrCardItems'
 import styled from 'styled-components'
 
 const CARD_WIDTH_PX = 300

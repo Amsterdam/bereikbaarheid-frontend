@@ -2,7 +2,7 @@ import { Fragment, useMemo } from 'react'
 
 import { useMapInstance } from '@amsterdam/arm-core'
 import { Table, TableBody, TableCell, TableHeader, TableRow, themeColor } from '@amsterdam/asc-ui'
-import { TouringcarStop } from 'api/touringcar/stops'
+import { TouringcarStop } from '../../../../api/touringcar/stops'
 import { sortBy } from 'lodash'
 import { useTranslation } from 'react-i18next'
 import styled from 'styled-components'

@@ -3,9 +3,9 @@ import { ReactNode } from 'react'
 import {
   ProhibitorySignsPageContext,
   ProhibitorySignsPageContextProps,
-} from 'pages/ProhibitorySigns/contexts/PageContext'
-import { Vehicle } from 'pages/ProhibitorySigns/types/vehicle'
-import { Address } from 'types/address'
+} from '../../../src/pages/ProhibitorySigns/contexts/PageContext'
+import { Vehicle } from '../../../src/pages/ProhibitorySigns/types/vehicle'
+import { Address } from '../../../src/types/address'
 
 import { withAppContext } from '../withAppContext'
 

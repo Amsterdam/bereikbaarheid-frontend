@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { Marker, useMapInstance } from '@amsterdam/arm-core'
 import L from 'leaflet'
-import DistanceToDestinationIconImage from 'shared/icons/bootstrap-icon-flag-fill.svg'
+import DistanceToDestinationIconImage from '../../../../shared/icons/bootstrap-icon-flag-fill.svg?url'
 
 import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
 

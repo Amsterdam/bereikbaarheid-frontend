@@ -1,11 +1,11 @@
 import { ReactNode, useCallback, useEffect, useReducer, useState } from 'react'
 
-import { TouringcarMessage } from 'api/touringcar/messages'
-import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
-import { TouringcarStop } from 'api/touringcar/stops'
+import { TouringcarMessage } from '../../../api/touringcar/messages'
+import { TouringcarParkingSpace } from '../../../api/touringcar/parking-spaces'
+import { TouringcarStop } from '../../../api/touringcar/stops'
 import { format } from 'date-fns'
 import { useSearchParams } from 'react-router-dom'
-import { DATE_FORMAT_REVERSED } from 'shared/utils/dateTime'
+import { DATE_FORMAT_REVERSED } from '../../../shared/utils/dateTime'
 
 import {
   MapLayerParam,

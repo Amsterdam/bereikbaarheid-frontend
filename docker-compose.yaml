@@ -28,6 +28,9 @@ services:
     volumes:
       - ./nginx.dockercompose.conf:/etc/nginx/conf.d/default.conf
       - ./src:/app/src
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./vite.config.js:/app/vite.config.js
+      - ./index.html:/app/index.html
     command: npm start
 
   test:

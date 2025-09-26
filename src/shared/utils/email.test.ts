@@ -1,4 +1,4 @@
-import { QUESTION_BODY, QUESTION_RECIPIENT, QUESTION_SUBJECT } from 'pages/Contact/ContactPage'
+import { QUESTION_BODY, QUESTION_RECIPIENT, QUESTION_SUBJECT } from '../../pages/Contact/ContactPage'
 
 import { getMailtoLink } from './email'
 

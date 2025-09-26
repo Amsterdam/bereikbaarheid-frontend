@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
 import { useQuery } from '@tanstack/react-query'
-import { getTrafficSigns, TrafficSign } from 'api/bereikbaarheid/traffic-signs'
+import { getTrafficSigns, TrafficSign } from '../../../../api/bereikbaarheid/traffic-signs'
 
 import { MarkerClusterGroup } from '../../../../shared/components/MapLayers/MarkerClusterGroup'
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'

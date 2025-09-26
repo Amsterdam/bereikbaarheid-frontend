@@ -1,9 +1,9 @@
 import { Dispatch, SetStateAction } from 'react'
 
 import { Divider, Heading, Modal, TopBar } from '@amsterdam/asc-ui'
-import { FormDateTime, FormDateTimeValues } from 'shared/components/FormDateTime'
-import ModalBlock from 'shared/components/ModalBlock'
-import { Z_INDEX_MODAL } from 'shared/constants'
+import { FormDateTime, FormDateTimeValues } from '../../../shared/components/FormDateTime'
+import ModalBlock from '../../../shared/components/ModalBlock'
+import { Z_INDEX_MODAL } from '../../../shared/constants'
 
 import { useLoadUnloadPageContext } from '../contexts/PageContext'
 

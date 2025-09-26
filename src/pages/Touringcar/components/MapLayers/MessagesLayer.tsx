@@ -1,9 +1,9 @@
 import { useCallback, useContext } from 'react'
 
 import { MapPanelContext, mapPanelConstants } from '@amsterdam/arm-core'
-import { TouringcarMessage } from 'api/touringcar/messages'
-import { MapLayerId, MapPanelTab, useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
-import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGroup'
+import { TouringcarMessage } from '../../../../api/touringcar/messages'
+import { MapLayerId, MapPanelTab, useTouringcarMapContext } from '../../../../pages/Touringcar/contexts/MapContext'
+import { MarkerClusterGroup } from '../../../../shared/components/MapLayers/MarkerClusterGroup'
 
 import TouringcarMarker from '../Marker/Marker'
 import useMessages, { getMessagePartsForLanguage } from '../Messages/hooks/useMessages'

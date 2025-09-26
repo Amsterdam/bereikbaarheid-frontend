@@ -1,5 +1,5 @@
-import { RoadSectionLoadUnload } from 'api/bereikbaarheid/road-sections/load-unload'
-import { ParkingSpace } from 'api/parkeervakken'
+import { RoadSectionLoadUnload } from '../../../api/bereikbaarheid/road-sections/load-unload'
+import { ParkingSpace } from '../../../api/parkeervakken'
 
 export type DetailFeatureParkingSpace = {
   id: string

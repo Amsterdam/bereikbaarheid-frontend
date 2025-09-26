@@ -1,6 +1,6 @@
 import { useCallback } from 'react'
 
-import { getUrl } from 'api/bereikbaarheid/traffic-signs'
+import { getUrl } from '../../../api/bereikbaarheid/traffic-signs'
 
 import { Vehicle } from '../types/vehicle'
 

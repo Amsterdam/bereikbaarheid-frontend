@@ -1,6 +1,6 @@
 import { createContext, Dispatch, useContext } from 'react'
 
-import { Bollard } from 'api/bereikbaarheid/bollards'
+import { Bollard } from '../../../api/bereikbaarheid/bollards'
 
 import { DetailFeatureAction, DetailFeatureState } from './detailFeatureReducer'
 import { mapLayerActionType, mapLayersInitialState } from './mapLayersReducer'

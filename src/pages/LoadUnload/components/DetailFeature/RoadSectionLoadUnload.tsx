@@ -14,14 +14,14 @@ import {
   TableRow,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { LoadUnloadRegime, RoadSectionLoadUnload } from 'api/bereikbaarheid/road-sections/load-unload'
+import { LoadUnloadRegime, RoadSectionLoadUnload } from '../../../../api/bereikbaarheid/road-sections/load-unload'
 import groupBy from 'lodash/groupBy'
-import { ImageContainer, Image, PropertiesContainer } from 'shared/components/DetailFeature/DetailFeatureStyles'
-import { stripSecondsFromTime } from 'shared/utils/dateTime'
+import { ImageContainer, Image, PropertiesContainer } from '../../../../shared/components/DetailFeature/DetailFeatureStyles'
+import { stripSecondsFromTime } from '../../../../shared/utils/dateTime'
 import styled from 'styled-components'
 
-import E01 from './images/E01.svg'
-import E02 from './images/E02.svg'
+import E01 from './images/E01.svg?url'
+import E02 from './images/E02.svg?url'
 
 const PaddedImageContainer = styled(ImageContainer)`
   display: flex;

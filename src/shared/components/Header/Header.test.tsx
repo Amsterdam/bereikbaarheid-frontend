@@ -1,8 +1,8 @@
 import { act, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { BrowserRouter } from 'react-router-dom'
-import { RouteIds } from 'routes'
-import { getGeneratedPath } from 'shared/utils/path'
+import { RouteIds } from '../../../routes'
+import { getGeneratedPath } from '../../../shared/utils/path'
 
 import { withApp } from '../../../../test/utils/withApp'
 import { withAppContext } from '../../../../test/utils/withAppContext'

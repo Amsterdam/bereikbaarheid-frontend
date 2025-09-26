@@ -1,8 +1,8 @@
 import { ReactNode, useState } from 'react'
 
 import { format } from 'date-fns'
-import type { FormDateTimeValues } from 'shared/components/FormDateTime'
-import { DATE_FORMAT_REVERSED } from 'shared/utils/dateTime'
+import type { FormDateTimeValues } from '../../../shared/components/FormDateTime'
+import { DATE_FORMAT_REVERSED } from '../../../shared/utils/dateTime'
 import { Address } from 'types/address'
 
 import { TouringcarPageContext } from './PageContext'

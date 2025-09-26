@@ -1,4 +1,4 @@
-import config from 'config'
+import config from '../../../config'
 import { Feature, FeatureCollection, Point } from 'geojson'
 
 import { api } from '../../bereikbaarheid'

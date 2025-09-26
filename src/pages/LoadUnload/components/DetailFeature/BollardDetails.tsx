@@ -1,8 +1,8 @@
 import { Column, CompactThemeProvider, Row } from '@amsterdam/asc-ui'
-import { Bollard } from 'api/bereikbaarheid/bollards'
-import useLoadUnloadMapContext from 'pages/LoadUnload/contexts/MapContext'
+import { Bollard } from '../../../../api/bereikbaarheid/bollards'
+import useLoadUnloadMapContext from '../../../../pages/LoadUnload/contexts/MapContext'
 import { useTranslation } from 'react-i18next'
-import { PropertiesContainer } from 'shared/components/DetailFeature/DetailFeatureStyles'
+import { PropertiesContainer } from '../../../../shared/components/DetailFeature/DetailFeatureStyles'
 import styled from 'styled-components'
 
 const PropContainer = styled(PropertiesContainer)`

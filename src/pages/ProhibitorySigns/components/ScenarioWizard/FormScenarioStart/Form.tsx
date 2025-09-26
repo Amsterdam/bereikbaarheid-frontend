@@ -4,8 +4,8 @@ import { breakpoint, Button, Checkbox, ErrorMessage, Input, Label, Paragraph, th
 import { zodResolver } from '@hookform/resolvers/zod'
 import debounce from 'lodash/debounce'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
-import { FormLabel } from 'shared/components/FormLabel'
-import InputWithSuffix from 'shared/components/InputWithSuffix'
+import { FormLabel } from '../../../../../shared/components/FormLabel'
+import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
 import styled from 'styled-components'
 import { z } from 'zod'
 

@@ -1,6 +1,20 @@
-import { RouteIds } from 'routes'
+import { RouteIds } from '../../../routes'
 
 import { getGeneratedPath } from '../path'
+
+// Import all images at the top
+import bereikbaarheidOpKenteken from './images/bereikbaarheid-op-kenteken.webp'
+import bereikbaarheidOpKentekenJpg from './images/bereikbaarheid-op-kenteken.jpg'
+import stremmingen from './images/stremmingen.webp'
+import stremmingenJpg from './images/stremmingen.jpg'
+import ladenEnLossen from './images/laden-en-lossen.webp'
+import ladenEnLossenJpg from './images/laden-en-lossen.jpg'
+import tourBuzz from './images/tour-buzz.webp'
+import tourBuzzJpg from './images/tour-buzz.jpg'
+import json from './images/json.webp'
+import jsonJpg from './images/json.jpg'
+import contact from './images/contact.webp'
+import contactJpg from './images/contact.jpg'
 
 interface MenuItemObj {
   title: string
@@ -26,6 +40,22 @@ interface MenuOrCardItemWithRoute extends MenuOrCardItem {
 }
 
 type MenuOrCardItemWithPathOrRoute = MenuOrCardItemWithPath | MenuOrCardItemWithRoute
+
+// Create a mapping object for image lookups
+const imageMap: Record<string, string> = {
+  'bereikbaarheid-op-kenteken.webp': bereikbaarheidOpKenteken,
+  'bereikbaarheid-op-kenteken.jpg': bereikbaarheidOpKentekenJpg,
+  'stremmingen.webp': stremmingen,
+  'stremmingen.jpg': stremmingenJpg,
+  'laden-en-lossen.webp': ladenEnLossen,
+  'laden-en-lossen.jpg': ladenEnLossenJpg,
+  'tour-buzz.webp': tourBuzz,
+  'tour-buzz.jpg': tourBuzzJpg,
+  'json.webp': json,
+  'json.jpg': jsonJpg,
+  'contact.webp': contact,
+  'contact.jpg': contactJpg,
+}
 
 const menuOrCardItems: MenuOrCardItemWithPathOrRoute[] = [
   {
@@ -105,15 +135,17 @@ function mapPathsToMenuOrCardItems(
       throw new Error('Menu items should have a path')
     }
 
-    try {
-      if (item.image) {
-        itemWithPath.image = require(`./images/${item.image}`)
-      }
-      if (item.imageFallback) {
-        itemWithPath.imageFallback = require(`./images/${item.imageFallback}`)
-      }
-    } catch (error) {
-      console.error('Requested image could not be loaded. Does it exist at "./images/"?', error)
+    // Use static imports from the imageMap
+    if (item.image && imageMap[item.image]) {
+      itemWithPath.image = imageMap[item.image]
+    } else if (item.image) {
+      console.error(`Image not found in imageMap: ${item.image}. Available images:`, Object.keys(imageMap))
+    }
+
+    if (item.imageFallback && imageMap[item.imageFallback]) {
+      itemWithPath.imageFallback = imageMap[item.imageFallback]
+    } else if (item.imageFallback) {
+      console.error(`Fallback image not found in imageMap: ${item.imageFallback}. Available images:`, Object.keys(imageMap))
     }
 
     return itemWithPath as MenuOrCardItemWithPath

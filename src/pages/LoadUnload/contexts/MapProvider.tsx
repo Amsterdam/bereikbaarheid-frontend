@@ -1,6 +1,6 @@
 import { ReactNode, useEffect, useReducer, useState } from 'react'
 
-import { Bollard } from 'api/bereikbaarheid/bollards'
+import { Bollard } from '../../../api/bereikbaarheid/bollards'
 
 import { detailFeatureReducer, detailFeatureInitialState } from './detailFeatureReducer'
 import { LoadUnloadMapContext } from './MapContext'
