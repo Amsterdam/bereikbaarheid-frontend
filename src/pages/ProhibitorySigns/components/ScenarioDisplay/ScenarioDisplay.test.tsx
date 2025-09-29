@@ -1,13 +1,12 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { RouteIds } from '../../../../routes'
+import { describe, it, expect } from 'vitest'
 import { getGeneratedPath } from '../../../../shared/utils/path'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ScenarioDisplay', () => {
-  jest.setTimeout(15000)
-
   it('displays the result after finishing the scenario wizard', async () => {
     const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
     const user = userEvent.setup()
@@ -96,4 +95,4 @@ describe('ScenarioDisplay', () => {
     // and check if vehicle length has changed
     expect(within(screen.getByTestId('scenario-display')).getByText('10.56 m')).toBeVisible() // vehicle length
   })
-})
+}, 15000)

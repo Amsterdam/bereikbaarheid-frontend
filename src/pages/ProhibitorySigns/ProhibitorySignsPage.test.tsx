@@ -1,13 +1,12 @@
 import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { RouteIds } from '../../../routes'
+import { vi, describe, it, expect } from 'vitest'
+import { RouteIds } from '../../routes'
 import { getGeneratedPath } from '../../shared/utils/path'
 
 import { withApp } from '../../../test/utils/withApp'
 
-describe('ProhibitorySignsPage', () => {
-  jest.setTimeout(15000)
-
+describe('ProhibitorySignsPage', { timeout: 15000 }, () => {
   it('renders correctly', async () => {
     const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
 

@@ -1,14 +1,7 @@
-// jest-dom adds custom jest matchers for asserting on DOM nodes.
-// allows you to do things like:
-// expect(element).toHaveTextContent(/react/i)
-// learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom'
-// @ts-ignore
-import matchMediaPolyfill from 'mq-polyfill'
 
+import { beforeAll, afterEach, afterAll, vi } from 'vitest'
 import { server } from './../test/server'
-
-require('jest-canvas-mock')
 
 let createElementNSOrig = global.document.createElementNS
 
@@ -24,6 +17,21 @@ global.document.createElementNS = function (namespaceURI: string, qualifiedName:
   return createElementNSOrig.apply(this, [namespaceURI, qualifiedName])
 }
 
+// Ensure matchMedia is available
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: vi.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: vi.fn(), // Deprecated
+    removeListener: vi.fn(), // Deprecated
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    dispatchEvent: vi.fn(),
+  }))
+});
+
 beforeAll(() => {
   // Establish API mocking before all tests.
   server.listen({
@@ -32,8 +40,7 @@ beforeAll(() => {
     },
   })
 
-  // default viewport is 1024x768
-  matchMediaPolyfill(window)
+  // Resize functionality
   window.resizeTo = function resizeTo(width, height) {
     Object.assign(this, {
       innerWidth: width,

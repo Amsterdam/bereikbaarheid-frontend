@@ -1,4 +1,4 @@
-import { rest } from 'msw'
+import { http, HttpResponse } from 'msw'
 
 import { ENDPOINT as ENDPOINT_BOLLARDS } from '../src/api/bereikbaarheid/bollards'
 import { ENDPOINT as ENDPOINT_ROAD_SECTION } from '../src/api/bereikbaarheid/road-elements'
@@ -23,125 +23,127 @@ import { ENDPOINT as ENDPOINT_TOURINGCAR_VEHICLE_HEIGHTS } from '../src/api/tour
 import { ENDPOINT as ENDPOINT_WFS_WIOR } from '../src/api/wfs/wior'
 
 export const handlers = [
-  rest.get(ENDPOINT_ADDRESS_SEARCH, (req, res, ctx) => {
-    const searchResultsMock = getAddressResults(req.url.searchParams)
-    return res(ctx.status(200), ctx.json(searchResultsMock))
+  http.get(ENDPOINT_ADDRESS_SEARCH, ({ request }) => {
+    const url = new URL(request.url)
+    const searchResultsMock = getAddressResults(url.searchParams)
+    return HttpResponse.json(searchResultsMock)
   }),
 
-  rest.get(`/${ENDPOINT_LOAD_UNLOAD}`, (req, res, ctx) => {
+  http.get(`/${ENDPOINT_LOAD_UNLOAD}`, () => {
     const loadUnloadMock = require('./mocks/bereikbaarheid/road-sections/load-unload/data.json')
-    return res(ctx.status(200), ctx.json(loadUnloadMock))
+    return HttpResponse.json(loadUnloadMock)
   }),
 
-  rest.get(ENDPOINT_PROHIBITORY_ROADS, (req, res, ctx) => {
+  http.get(ENDPOINT_PROHIBITORY_ROADS, () => {
     const roadsMock = require('./mocks/bereikbaarheid/roads/prohibitory/data.json')
-    return res(ctx.status(200), ctx.json(roadsMock))
+    return HttpResponse.json(roadsMock)
   }),
 
-  rest.get(`/${ENDPOINT_BOLLARDS}`, (_req, res, ctx) => {
+  http.get(`/${ENDPOINT_BOLLARDS}`, () => {
     const bollardsMock = require('./mocks/bereikbaarheid/stops/data.json')
-    return res(ctx.status(200), ctx.json(bollardsMock))
+    return HttpResponse.json(bollardsMock)
   }),
 
-  rest.get(`/${ENDPOINT_ROAD_SECTION}:roadSectionId`, (req, res, ctx) => {
-    const { roadSectionId } = req.params
+  http.get(`/${ENDPOINT_ROAD_SECTION}:roadSectionId`, ({ params }) => {
+    const { roadSectionId } = params
     const roadSectionMock = getRoadSection(roadSectionId)
-    return res(ctx.status(200), ctx.json(roadSectionMock))
+    return HttpResponse.json(roadSectionMock)
   }),
 
-  rest.get(ENDPOINT_TRAFFIC_SIGNS, (req, res, ctx) => {
+  http.get(ENDPOINT_TRAFFIC_SIGNS, () => {
     const trafficSignsMock = require('./mocks/bereikbaarheid/traffic-signs/data.json')
-    return res(ctx.status(200), ctx.json(trafficSignsMock))
+    return HttpResponse.json(trafficSignsMock)
   }),
 
-  rest.get(ENDPOINT_RDW_AXLES, (req, res, ctx) => {
-    const licensePlate = req.url.searchParams.get('kenteken')
+  http.get(ENDPOINT_RDW_AXLES, ({ request }) => {
+    const url = new URL(request.url)
+    const licensePlate = url.searchParams.get('kenteken')
     const axlesMock = !licensePlate ? [] : require(`./mocks/rdw/axles/${licensePlate.toLowerCase()}.json`)
-
-    return res(ctx.status(200), ctx.json(axlesMock))
+    return HttpResponse.json(axlesMock)
   }),
 
-  rest.get(ENDPOINT_RDW_FUEL, (req, res, ctx) => {
-    const licensePlate = req.url.searchParams.get('kenteken')
+  http.get(ENDPOINT_RDW_FUEL, ({ request }) => {
+    const url = new URL(request.url)
+    const licensePlate = url.searchParams.get('kenteken')
     const fuelMock = !licensePlate ? [] : require(`./mocks/rdw/fuel/${licensePlate.toLowerCase()}.json`)
-
-    return res(ctx.status(200), ctx.json(fuelMock))
+    return HttpResponse.json(fuelMock)
   }),
 
-  rest.get(ENDPOINT_RDW_SUBCATEGORY, (req, res, ctx) => {
-    const licensePlate = req.url.searchParams.get('kenteken')
+  http.get(ENDPOINT_RDW_SUBCATEGORY, ({ request }) => {
+    const url = new URL(request.url)
+    const licensePlate = url.searchParams.get('kenteken')
     const subcategoryMock = !licensePlate ? [] : require(`./mocks/rdw/subcategory/${licensePlate.toLowerCase()}.json`)
-
-    return res(ctx.status(200), ctx.json(subcategoryMock))
+    return HttpResponse.json(subcategoryMock)
   }),
 
-  rest.get(ENDPOINT_RDW_VEHICLE, (req, res, ctx) => {
-    const vehicleMock = getVehicle(req.url.searchParams)
-    return res(ctx.status(vehicleMock.status), ctx.json(vehicleMock.body))
+  http.get(ENDPOINT_RDW_VEHICLE, ({ request }) => {
+    const url = new URL(request.url)
+    const vehicleMock = getVehicle(url.searchParams)
+    return HttpResponse.json(vehicleMock.body, { status: vehicleMock.status })
   }),
 
-  rest.get(ENDPOINT_WFS_WIOR, (req, res, ctx) => {
+  http.get(ENDPOINT_WFS_WIOR, () => {
     const wiorFeaturesMock = require('./mocks/wfs/wior/data.json')
-    return res(ctx.status(200), ctx.json(wiorFeaturesMock))
+    return HttpResponse.json(wiorFeaturesMock)
   }),
 
-  rest.get(API_URL_GEOSEARCH, (req, res, ctx) => {
-    const datasets = req.url.searchParams.get('datasets')
-    const lat = req.url.searchParams.get('lat')
-    const lon = req.url.searchParams.get('lon')
+  http.get(API_URL_GEOSEARCH, ({ request }) => {
+    const url = new URL(request.url)
+    const datasets = url.searchParams.get('datasets')
+    const lat = url.searchParams.get('lat')
+    const lon = url.searchParams.get('lon')
 
     let searchResultMock
     if (datasets === 'parkeervakken') {
       searchResultMock = getParkingSpaceResults(lat, lon)
     }
 
-    return res(ctx.status(200), ctx.json(searchResultMock))
+    return HttpResponse.json(searchResultMock)
   }),
 
-  rest.get(`${API_URL_PARKEERVAKKEN}/122028486875/`, (req, res, ctx) => {
+  http.get(`${API_URL_PARKEERVAKKEN}/122028486875/`, () => {
     const parkingSpaceMock = require('./mocks/parkingSpace-122028486875.json')
-
-    return res(ctx.status(200), ctx.json(parkingSpaceMock))
+    return HttpResponse.json(parkingSpaceMock)
   }),
 
-  rest.get(ENDPOINT_TOURINGCAR_MESSAGES, (_req, res, ctx) => {
+  http.get(ENDPOINT_TOURINGCAR_MESSAGES, () => {
     const touringcarMessagesMock = require('./mocks/touringcar/messages/data.json')
-    return res(ctx.status(200), ctx.json(touringcarMessagesMock))
+    return HttpResponse.json(touringcarMessagesMock)
   }),
 
-  rest.get(ENDPOINT_TOURINGCAR_STOPS, (_req, res, ctx) => {
+  http.get(ENDPOINT_TOURINGCAR_STOPS, () => {
     const touringcarStopsMock = require('./mocks/touringcar/stops/data.json')
-    return res(ctx.status(200), ctx.json(touringcarStopsMock))
+    return HttpResponse.json(touringcarStopsMock)
   }),
 
-  rest.get(ENDPOINT_TOURINGCAR_PARKING_SPACES, (_req, res, ctx) => {
+  http.get(ENDPOINT_TOURINGCAR_PARKING_SPACES, () => {
     const touringcarParkingSpacesMock = require('./mocks/touringcar/parking-signs/data.json')
-    return res(ctx.status(200), ctx.json(touringcarParkingSpacesMock))
+    return HttpResponse.json(touringcarParkingSpacesMock)
   }),
 
-  rest.get(ENDPOINT_TOURINGCAR_VEHICLE_HEIGHTS, (_req, res, ctx) => {
+  http.get(ENDPOINT_TOURINGCAR_VEHICLE_HEIGHTS, () => {
     const touringcarVehicleHeightsMock = require('./mocks/touringcar/vehicle-heights/data.json')
-    return res(ctx.status(200), ctx.json(touringcarVehicleHeightsMock))
+    return HttpResponse.json(touringcarVehicleHeightsMock)
   }),
 
-  rest.get(ENDPOINT_TOURINGCAR_ENVIRONMENTAL_ZONE, (_req, res, ctx) => {
+  http.get(ENDPOINT_TOURINGCAR_ENVIRONMENTAL_ZONE, () => {
     const touringcarEnvironmentalZoneMock = require('./mocks/touringcar/environmental-zone/data.json')
-    return res(ctx.status(200), ctx.json(touringcarEnvironmentalZoneMock))
+    return HttpResponse.json(touringcarEnvironmentalZoneMock)
   }),
 
-  rest.get(ENDPOINT_TOURINGCAR_ROUTES_DESTINATION_TRAFFIC, (_req, res, ctx) => {
+  http.get(ENDPOINT_TOURINGCAR_ROUTES_DESTINATION_TRAFFIC, () => {
     const touringcarRoutesDestinationTrafficMock = require('./mocks/touringcar/routes-destination-traffic/data.json')
-    return res(ctx.status(200), ctx.json(touringcarRoutesDestinationTrafficMock))
+    return HttpResponse.json(touringcarRoutesDestinationTrafficMock)
   }),
 
-  rest.get(ENDPOINT_TOURINGCAR_ROUTES_MANDATORY, (_req, res, ctx) => {
+  http.get(ENDPOINT_TOURINGCAR_ROUTES_MANDATORY, () => {
     const touringcarRoutesMandatoryMock = require('./mocks/touringcar/routes-mandatory/data.json')
-    return res(ctx.status(200), ctx.json(touringcarRoutesMandatoryMock))
+    return HttpResponse.json(touringcarRoutesMandatoryMock)
   }),
 
-  rest.get(ENDPOINT_TOURINGCAR_ROUTES_RECOMMENDED, (_req, res, ctx) => {
+  http.get(ENDPOINT_TOURINGCAR_ROUTES_RECOMMENDED, () => {
     const touringcarRoutesRecommendedMock = require('./mocks/touringcar/routes-recommended/data.json')
-    return res(ctx.status(200), ctx.json(touringcarRoutesRecommendedMock))
+    return HttpResponse.json(touringcarRoutesRecommendedMock)
   }),
 ]
 
@@ -185,8 +187,8 @@ const getVehicle = (params: URLSearchParams) => {
     '24BJL7': require('./mocks/rdw/vehicle/24bjl7.json'), // vehicle + trailer use case
     '65JRDP': require('./mocks/rdw/vehicle/65jrdp.json'), // no maximum allowed weight
     '85BPF2': require('./mocks/rdw/vehicle/85bpf2.json'), // mobile crane
-    BXLS14: require('./mocks/rdw/vehicle/bxls14.json'), // valid vehicle
-    OT77FJ: require('./mocks/rdw/vehicle/ot77fj.json'), // trailer
+    'BXLS14': require('./mocks/rdw/vehicle/bxls14.json'), // valid vehicle
+    'OT77FJ': require('./mocks/rdw/vehicle/ot77fj.json'), // trailer
   }
 
   if (licensePlate === 'API429') {

@@ -1,12 +1,11 @@
 import { screen, waitFor } from '@testing-library/react'
+import { describe, it, expect } from 'vitest'
 import { RouteIds } from '../../../../routes'
 import { getGeneratedPath } from '../../../../shared/utils/path'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
-describe('MapLegend', () => {
-  jest.setTimeout(15000)
-
+describe('MapLegend', { timeout: 15000 }, () => {
   it('renders correctly', async () => {
     const pathToPage = getGeneratedPath(RouteIds.TOURINGCAR_PAGE)
     const page = withApp(pathToPage)

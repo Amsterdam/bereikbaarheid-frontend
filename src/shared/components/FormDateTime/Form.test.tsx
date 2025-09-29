@@ -1,5 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { format } from 'date-fns'
+import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest'
 
 import { withAppContext } from '../../../../test/utils/withAppContext'
 
@@ -18,7 +19,7 @@ describe('FormDateTime', () => {
       timeFrom: '',
       timeTo: '',
     },
-    onSubmitForm: jest.fn(),
+    onSubmitForm: vi.fn(),
   }
 
   it('should display error messages when no input is provided', async () => {

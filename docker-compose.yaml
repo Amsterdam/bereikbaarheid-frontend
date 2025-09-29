@@ -42,6 +42,9 @@ services:
     volumes:
       - ./src:/app/src
       - ./test:/app/test
+      - ./package.json:/app/package.json
+      - ./vite.config.js:/app/vite.config.js
+      - ./tsconfig.json:/app/tsconfig.json
     command: npm run test
 
   upgrade:

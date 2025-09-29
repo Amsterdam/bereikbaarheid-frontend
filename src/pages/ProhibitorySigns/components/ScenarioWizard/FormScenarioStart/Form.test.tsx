@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
+import { vi, describe, it, expect } from 'vitest'
 
 import { withAppContext } from '../../../../../../test/utils/withAppContext'
 import { withQueryClient } from '../../../../../../test/utils/withQueryClient'
@@ -13,7 +14,7 @@ import { ProhibitorySignsFormScenarioStart, ProhibitorySignsFormScenarioStartPro
 describe('ProhibitorySignsFormScenarioStart', () => {
   const props: ProhibitorySignsFormScenarioStartProps = {
     addressInputEnabled: true,
-    setAddressInputEnabled: jest.fn(),
+    setAddressInputEnabled: vi.fn(),
   }
 
   const setup = (children: ReactNode) => {
@@ -198,7 +199,7 @@ describe('ProhibitorySignsFormScenarioStart', () => {
       await user.click(screen.getByRole('button'))
     })
 
-    expect(await screen.findAllByRole('alert')).toHaveLength(1)
-    expect(screen.getByText('De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.')).toBeVisible()
+    expect(await screen.getAllByRole('alert')).toHaveLength(1)
+    expect(await screen.findByText('De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.')).toBeVisible()
   })
 })

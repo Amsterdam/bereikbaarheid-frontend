@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["node", "vitest/globals", "@testing-library/jest-dom"],
     "baseUrl": "src",
     "paths": {
         "api/*": ["src/api/*"],
@@ -19,8 +20,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["node", "@testing-library/jest-dom"]
+    "lib": ["dom", "dom.iterable", "esnext"]
   },
   "include": ["src", "src/setupTests.ts"]
 }
