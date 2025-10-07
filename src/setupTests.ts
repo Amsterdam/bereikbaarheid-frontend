@@ -2,6 +2,8 @@ import '@testing-library/jest-dom'
 
 import { beforeAll, afterEach, afterAll, vi } from 'vitest'
 import { server } from './../test/server'
+// @ts-ignore
+import matchMediaPolyfill from 'mq-polyfill'
 
 let createElementNSOrig = global.document.createElementNS
 
@@ -17,20 +19,8 @@ global.document.createElementNS = function (namespaceURI: string, qualifiedName:
   return createElementNSOrig.apply(this, [namespaceURI, qualifiedName])
 }
 
-// Ensure matchMedia is available
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: vi.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: vi.fn(), // Deprecated
-    removeListener: vi.fn(), // Deprecated
-    addEventListener: vi.fn(),
-    removeEventListener: vi.fn(),
-    dispatchEvent: vi.fn(),
-  }))
-});
+// Use mq-polyfill for proper matchMedia support
+matchMediaPolyfill(window)
 
 beforeAll(() => {
   // Establish API mocking before all tests.

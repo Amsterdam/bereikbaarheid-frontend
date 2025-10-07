@@ -8,7 +8,7 @@ describe('Touringcar Messages', () => {
   vi.useFakeTimers()
   vi.setSystemTime(new Date('2024-03-12T10:00:00.000Z'))
 
-  it('renders correctly', async () => {
+  it('renders correctly', () => {
     const pathToPage = getGeneratedPath(RouteIds.TOURINGCAR_PAGE)
     const page = withApp(pathToPage)
 

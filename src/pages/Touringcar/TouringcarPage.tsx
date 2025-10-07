@@ -51,7 +51,7 @@ const TouringcarPage = () => {
       <PageWrapper>
         <Header title={t('_pageTouringcar.title')} />
 
-        <MainContent data-testid="load-unload-page">
+        <MainContent data-testid="touringcar-page">
           <MapStyle />
 
           <StyledMap options={{ ...defaultMapOptions, maxZoom: 21, zoom: 14 }} setInstance={setMapInstance}>

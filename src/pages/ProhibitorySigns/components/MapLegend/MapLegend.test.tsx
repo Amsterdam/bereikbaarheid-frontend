@@ -1,7 +1,7 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { getPathTo } from '../../../../routes'
 
 import { withApp } from '../../../../../test/utils/withApp'
@@ -39,13 +39,18 @@ describe('MapLegend', () => {
       document.querySelectorAll('.leaflet-overlay-pane svg path')
     })
 
-    expect(await screen.findByText(/breed opgezette wegen/i)).toBeEnabled()
+    // Wait for the MapLegend to be rendered
+    await waitFor(() => {
+      expect(screen.getByLabelText(/breed opgezette wegen/i)).toBeInTheDocument()
+    })
+
+    expect(screen.getByLabelText(/breed opgezette wegen/i)).toBeEnabled()
 
     // loadUnloadSpaces layer is disabled on initial render due to zoom level restriction
-    expect(await screen.findByText(/laad- en losplekken/i)).toBeDisabled()
+    expect(screen.getByLabelText(/laad- en losplekken/i)).toBeDisabled()
 
-    expect(await screen.findByText(/benodigde ontheffingen/i)).toBeChecked()
-    expect(await screen.findByText(/verbodsborden/i)).toBeChecked()
+    expect(screen.getByLabelText(/benodigde ontheffingen/i)).toBeChecked()
+    expect(screen.getByLabelText(/verbodsborden/i)).toBeChecked()
   })
 
   // jsdom does not provide any visual output, which makes it hard to properly

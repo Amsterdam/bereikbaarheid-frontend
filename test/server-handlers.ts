@@ -117,7 +117,7 @@ export const handlers = [
   }),
 
   http.get(ENDPOINT_TOURINGCAR_PARKING_SPACES, () => {
-    const touringcarParkingSpacesMock = require('./mocks/touringcar/parking-signs/data.json')
+    const touringcarParkingSpacesMock = require('./mocks/touringcar/parking-spaces/data.json')
     return HttpResponse.json(touringcarParkingSpacesMock)
   }),
 
