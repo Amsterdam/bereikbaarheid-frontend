@@ -40,7 +40,7 @@ export const handlers = [
   }),
 
   http.get(`/${ENDPOINT_BOLLARDS}`, () => {
-    const bollardsMock = require('./mocks/bereikbaarheid/stops/data.json')
+    const bollardsMock = require('./mocks/bereikbaarheid/bollards/data.json')
     return HttpResponse.json(bollardsMock)
   }),
 

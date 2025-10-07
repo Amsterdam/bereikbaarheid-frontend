@@ -9,9 +9,9 @@ describe('LoadUnloadPageSnapshot', () => {
   vi.useFakeTimers()
   vi.setSystemTime(new Date('2023-10-01T10:00:00.000Z'))
 
-  it('renders correctly', async () => {
+  it('renders correctly', () => {
     const pathToPage = generatePath(getPathTo('LOAD_UNLOAD_PAGE'))
-    const page = await withApp(pathToPage)
+    const page = withApp(pathToPage)
 
     expect(page).toMatchSnapshot()
   })
@@ -144,6 +144,4 @@ describe('LoadUnloadPage', () => {
 
     // expect(await screen.findByAltText('Marker')).toBeVisible()
   })
-}, {
-  // timeout: 15000
 })

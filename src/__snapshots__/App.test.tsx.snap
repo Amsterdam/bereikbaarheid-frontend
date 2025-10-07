@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`renders the app correctly 1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>
@@ -397,7 +397,7 @@ FAQ en contactgegevens"
                 >
                   <picture>
                     <source
-                      srcset="bereikbaarheid-op-kenteken.webp"
+                      srcset="/src/shared/utils/menuOrCardItems/images/bereikbaarheid-op-kenteken.webp"
                       type="image/webp"
                     />
                     <img
@@ -405,7 +405,7 @@ FAQ en contactgegevens"
                       class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                       data-testid="card-with-image"
                       height="200"
-                      src="bereikbaarheid-op-kenteken.jpg"
+                      src="/src/shared/utils/menuOrCardItems/images/bereikbaarheid-op-kenteken.jpg"
                       width="300"
                     />
                   </picture>
@@ -472,7 +472,7 @@ FAQ en contactgegevens"
                 >
                   <picture>
                     <source
-                      srcset="stremmingen.webp"
+                      srcset="/src/shared/utils/menuOrCardItems/images/stremmingen.webp"
                       type="image/webp"
                     />
                     <img
@@ -480,7 +480,7 @@ FAQ en contactgegevens"
                       class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                       data-testid="card-with-image"
                       height="200"
-                      src="stremmingen.jpg"
+                      src="/src/shared/utils/menuOrCardItems/images/stremmingen.jpg"
                       width="300"
                     />
                   </picture>
@@ -561,7 +561,7 @@ FAQ en contactgegevens"
                 >
                   <picture>
                     <source
-                      srcset="laden-en-lossen.webp"
+                      srcset="/src/shared/utils/menuOrCardItems/images/laden-en-lossen.webp"
                       type="image/webp"
                     />
                     <img
@@ -569,7 +569,7 @@ FAQ en contactgegevens"
                       class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                       data-testid="card-with-image"
                       height="200"
-                      src="laden-en-lossen.jpg"
+                      src="/src/shared/utils/menuOrCardItems/images/laden-en-lossen.jpg"
                       width="300"
                     />
                   </picture>
@@ -635,7 +635,7 @@ FAQ en contactgegevens"
                 >
                   <picture>
                     <source
-                      srcset="tour-buzz.webp"
+                      srcset="/src/shared/utils/menuOrCardItems/images/tour-buzz.webp"
                       type="image/webp"
                     />
                     <img
@@ -643,7 +643,7 @@ FAQ en contactgegevens"
                       class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                       data-testid="card-with-image"
                       height="200"
-                      src="tour-buzz.jpg"
+                      src="/src/shared/utils/menuOrCardItems/images/tour-buzz.jpg"
                       width="300"
                     />
                   </picture>
@@ -709,7 +709,7 @@ FAQ en contactgegevens"
                 >
                   <picture>
                     <source
-                      srcset="json.webp"
+                      srcset="/src/shared/utils/menuOrCardItems/images/json.webp"
                       type="image/webp"
                     />
                     <img
@@ -717,7 +717,7 @@ FAQ en contactgegevens"
                       class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                       data-testid="card-with-image"
                       height="200"
-                      src="json.jpg"
+                      src="/src/shared/utils/menuOrCardItems/images/json.jpg"
                       width="300"
                     />
                   </picture>
@@ -783,7 +783,7 @@ FAQ en contactgegevens"
                 >
                   <picture>
                     <source
-                      srcset="contact.webp"
+                      srcset="/src/shared/utils/menuOrCardItems/images/contact.webp"
                       type="image/webp"
                     />
                     <img
@@ -791,7 +791,7 @@ FAQ en contactgegevens"
                       class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                       data-testid="card-with-image"
                       height="200"
-                      src="contact.jpg"
+                      src="/src/shared/utils/menuOrCardItems/images/contact.jpg"
                       width="300"
                     />
                   </picture>
@@ -1298,7 +1298,7 @@ FAQ en contactgegevens"
               >
                 <picture>
                   <source
-                    srcset="bereikbaarheid-op-kenteken.webp"
+                    srcset="/src/shared/utils/menuOrCardItems/images/bereikbaarheid-op-kenteken.webp"
                     type="image/webp"
                   />
                   <img
@@ -1306,7 +1306,7 @@ FAQ en contactgegevens"
                     class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                     data-testid="card-with-image"
                     height="200"
-                    src="bereikbaarheid-op-kenteken.jpg"
+                    src="/src/shared/utils/menuOrCardItems/images/bereikbaarheid-op-kenteken.jpg"
                     width="300"
                   />
                 </picture>
@@ -1373,7 +1373,7 @@ FAQ en contactgegevens"
               >
                 <picture>
                   <source
-                    srcset="stremmingen.webp"
+                    srcset="/src/shared/utils/menuOrCardItems/images/stremmingen.webp"
                     type="image/webp"
                   />
                   <img
@@ -1381,7 +1381,7 @@ FAQ en contactgegevens"
                     class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                     data-testid="card-with-image"
                     height="200"
-                    src="stremmingen.jpg"
+                    src="/src/shared/utils/menuOrCardItems/images/stremmingen.jpg"
                     width="300"
                   />
                 </picture>
@@ -1462,7 +1462,7 @@ FAQ en contactgegevens"
               >
                 <picture>
                   <source
-                    srcset="laden-en-lossen.webp"
+                    srcset="/src/shared/utils/menuOrCardItems/images/laden-en-lossen.webp"
                     type="image/webp"
                   />
                   <img
@@ -1470,7 +1470,7 @@ FAQ en contactgegevens"
                     class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                     data-testid="card-with-image"
                     height="200"
-                    src="laden-en-lossen.jpg"
+                    src="/src/shared/utils/menuOrCardItems/images/laden-en-lossen.jpg"
                     width="300"
                   />
                 </picture>
@@ -1536,7 +1536,7 @@ FAQ en contactgegevens"
               >
                 <picture>
                   <source
-                    srcset="tour-buzz.webp"
+                    srcset="/src/shared/utils/menuOrCardItems/images/tour-buzz.webp"
                     type="image/webp"
                   />
                   <img
@@ -1544,7 +1544,7 @@ FAQ en contactgegevens"
                     class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                     data-testid="card-with-image"
                     height="200"
-                    src="tour-buzz.jpg"
+                    src="/src/shared/utils/menuOrCardItems/images/tour-buzz.jpg"
                     width="300"
                   />
                 </picture>
@@ -1610,7 +1610,7 @@ FAQ en contactgegevens"
               >
                 <picture>
                   <source
-                    srcset="json.webp"
+                    srcset="/src/shared/utils/menuOrCardItems/images/json.webp"
                     type="image/webp"
                   />
                   <img
@@ -1618,7 +1618,7 @@ FAQ en contactgegevens"
                     class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                     data-testid="card-with-image"
                     height="200"
-                    src="json.jpg"
+                    src="/src/shared/utils/menuOrCardItems/images/json.jpg"
                     width="300"
                   />
                 </picture>
@@ -1684,7 +1684,7 @@ FAQ en contactgegevens"
               >
                 <picture>
                   <source
-                    srcset="contact.webp"
+                    srcset="/src/shared/utils/menuOrCardItems/images/contact.webp"
                     type="image/webp"
                   />
                   <img
@@ -1692,7 +1692,7 @@ FAQ en contactgegevens"
                     class="sc-JrDLc hYVxgF sc-cezyBN hZGcWF"
                     data-testid="card-with-image"
                     height="200"
-                    src="contact.jpg"
+                    src="/src/shared/utils/menuOrCardItems/images/contact.jpg"
                     width="300"
                   />
                 </picture>
