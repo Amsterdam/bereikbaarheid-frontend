@@ -10,7 +10,7 @@ async function loadTranslations() {
   for (const lang of LANGUAGES) {
     const translations = await import(`./locales/${lang}/translations.json`)
     resources[lang] = {
-      translations: translations.default || translations
+      translations: translations.default || translations,
     }
   }
 
@@ -40,7 +40,7 @@ async function initI18n() {
         lookupSessionStorage: 'i18nextLng',
         caches: ['localStorage'],
         excludeCacheFor: ['cimode'],
-      }
+      },
     })
   return i18n
 }

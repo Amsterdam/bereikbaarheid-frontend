@@ -1,7 +1,12 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import svgr from 'vite-plugin-svgr'
 import path from 'path'
+import { fileURLToPath } from 'url'
+
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import svgr from 'vite-plugin-svgr'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 export default defineConfig(() => {
   return {
@@ -10,9 +15,9 @@ export default defineConfig(() => {
     },
     resolve: {
       alias: {
-        'api': path.resolve(__dirname, 'src/api'),
-        'pages': path.resolve(__dirname, 'src/pages'),
-      }
+        api: path.resolve(__dirname, 'src/api'),
+        pages: path.resolve(__dirname, 'src/pages'),
+      },
     },
     plugins: [
       react(),
@@ -24,7 +29,7 @@ export default defineConfig(() => {
           titleProp: true,
         },
         include: '**/*.svg',
-      })
+      }),
     ],
     server: {
       host: '0.0.0.0',
@@ -36,5 +41,5 @@ export default defineConfig(() => {
       environment: 'jsdom',
       setupFiles: ['./src/setupTests.ts'],
     },
-  };
-});
+  }
+})
