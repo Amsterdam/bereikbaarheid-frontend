@@ -1,13 +1,13 @@
 import TouringcarPage from 'pages/Touringcar/TouringcarPage'
 import { Navigate, RouteObject } from 'react-router-dom'
 
-import ContactPage from './pages/Contact/ContactPage'
-import DataSourcesPage from './pages/DataSources/DataSourcesPage'
-import ErrorPage from './pages/ErrorPage'
-import HomePage from './pages/Home/HomePage'
-import LoadUnloadPage from './pages/LoadUnload/LoadUnloadPage'
-import ProhibitorySignsPage from './pages/ProhibitorySigns/ProhibitorySignsPage'
-import RoadSectionPage from './pages/RoadSection/RoadSectionPage'
+import ContactPage from 'pages/Contact/ContactPage'
+import DataSourcesPage from 'pages/DataSources/DataSourcesPage'
+import ErrorPage from 'pages/ErrorPage'
+import HomePage from 'pages/Home/HomePage'
+import LoadUnloadPage from 'pages/LoadUnload/LoadUnloadPage'
+import ProhibitorySignsPage from 'pages/ProhibitorySigns/ProhibitorySignsPage'
+import RoadSectionPage from 'pages/RoadSection/RoadSectionPage'
 
 enum RouteIds {
   HOME = 'HOME',

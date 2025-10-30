@@ -6,7 +6,7 @@ import {
   roadNetworkLowEmissionZone,
   roadNetworkHeavyGoodsVehicleAndLowEmissionZone,
   roadNetworkNoRestrictions,
-} from 'shared/map/mapLayers'
+} from '../../../../shared/map/mapLayers'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'

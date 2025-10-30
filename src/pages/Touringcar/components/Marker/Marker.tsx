@@ -1,14 +1,14 @@
-import { TouringcarMessage } from 'api/touringcar/messages'
-import { TouringcarParkingSpace } from 'api/touringcar/parking-spaces'
-import { TouringcarStop } from 'api/touringcar/stops'
-import { TouringcarVehicleHeight } from 'api/touringcar/vehicle-heights'
+import { TouringcarMessage } from '../../../../api/touringcar/messages'
+import { TouringcarParkingSpace } from '../../../../api/touringcar/parking-spaces'
+import { TouringcarStop } from '../../../../api/touringcar/stops'
+import { TouringcarVehicleHeight } from '../../../../api/touringcar/vehicle-heights'
 import L from 'leaflet'
-import { MapLayerId } from 'pages/Touringcar/contexts/MapContext'
+import { MapLayerId } from '../../../../pages/Touringcar/contexts/MapContext'
 
-import SvgTouringcarMessageMarker from './images/bericht.svg'
-import SvgTouringcarVehicleHeightMarker from './images/doorrijhoogte.svg'
-import SvgTouringcarStopMarker from './images/halte.svg'
-import SvgTouringcarParkingSpaceMarker from './images/parkeerplaats.svg'
+import SvgTouringcarMessageMarker from './images/bericht.svg?url'
+import SvgTouringcarVehicleHeightMarker from './images/doorrijhoogte.svg?url'
+import SvgTouringcarStopMarker from './images/halte.svg?url'
+import SvgTouringcarParkingSpaceMarker from './images/parkeerplaats.svg?url'
 
 type TouringcarGeometryPoints = TouringcarMessage | TouringcarParkingSpace | TouringcarStop | TouringcarVehicleHeight
 
@@ -25,19 +25,20 @@ const TouringcarMarkerIcon = (
   textColor: string = 'white'
 ) => {
   return L.divIcon({
-    html: `<div style="
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-image: url(${MapLayerIdToImage[layerId]});
-      background-position: center;
-      background-repeat: no-repeat;
-      width: 100%;
-      height: 100%;
-      color: ${textColor};
-      font-family: sans-serif;
-      font-size: 12px;
-    ">${textContent}</div>`,
+    html: `<div style="position: relative; width: 36px; height: 39px;">
+      <img src="${MapLayerIdToImage[layerId]}" style="width: 36px; height: 39px; display: block;" alt="" />
+      <div style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: ${textColor};
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        pointer-events: none;
+      ">${textContent || ''}</div>
+    </div>`,
     iconSize: [36, 39],
     iconAnchor: [18, 39],
     tooltipAnchor: [18, -19.5],

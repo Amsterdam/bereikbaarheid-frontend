@@ -4,10 +4,10 @@ import {
   MapPanelTab,
   layerFeatureProps,
   useTouringcarMapContext,
-} from 'pages/Touringcar/contexts/MapContext'
+} from '../../../../pages/Touringcar/contexts/MapContext'
 import { useTranslation } from 'react-i18next'
-import { MapLegend } from 'shared/components/MapLegend'
-import { LegendItemsWrapper } from 'shared/components/MapLegendStyles'
+import { MapLegend } from '../../../../shared/components/MapLegend'
+import { LegendItemsWrapper } from '../../../../shared/components/MapLegendStyles'
 import styled from 'styled-components'
 
 const LEGEND_ITEMS = [

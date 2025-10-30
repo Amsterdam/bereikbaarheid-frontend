@@ -1,6 +1,6 @@
 import { Checkbox, CompactThemeProvider, Label } from '@amsterdam/asc-ui'
-import MapLegendItem from 'shared/components/MapLegendItem'
-import { LegendItemsWrapper, LegendWrapper } from 'shared/components/MapLegendStyles'
+import MapLegendItem from '../../../../shared/components/MapLegendItem'
+import { LegendItemsWrapper, LegendWrapper } from '../../../../shared/components/MapLegendStyles'
 import { useTheme } from 'styled-components'
 
 import useLoadUnloadMapContext, { MapLayerId } from '../../contexts/MapContext'

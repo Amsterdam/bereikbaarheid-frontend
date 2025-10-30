@@ -2,13 +2,12 @@ import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { act } from 'react-dom/test-utils'
 import { generatePath } from 'react-router-dom'
-import { getPathTo } from 'routes'
+import { describe, it, expect } from 'vitest'
+import { getPathTo } from '../../../../routes'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
-describe('MapLegend', () => {
-  jest.setTimeout(15000)
-
+describe('MapLegend', { timeout: 15000 }, () => {
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('LOAD_UNLOAD_PAGE'))
     const page = withApp(pathToPage)

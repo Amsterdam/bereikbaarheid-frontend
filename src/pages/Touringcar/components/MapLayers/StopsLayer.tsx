@@ -2,10 +2,10 @@ import { useCallback, useContext } from 'react'
 
 import { MapPanelContext, mapPanelConstants } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarStops, { TouringcarStop } from 'api/touringcar/stops'
-import { MapLayerId, MapPanelTab, useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
+import getTouringcarStops, { TouringcarStop } from '../../../../api/touringcar/stops'
+import { MapLayerId, MapPanelTab, useTouringcarMapContext } from '../../../../pages/Touringcar/contexts/MapContext'
 import { useTranslation } from 'react-i18next'
-import { MarkerClusterGroup } from 'shared/components/MapLayers/MarkerClusterGroup'
+import { MarkerClusterGroup } from '../../../../shared/components/MapLayers/MarkerClusterGroup'
 
 import TouringcarMarker from '../Marker/Marker'
 

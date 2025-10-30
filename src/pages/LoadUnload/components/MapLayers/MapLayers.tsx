@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 
 import { BaseLayer } from '@amsterdam/arm-core'
 import { TileLayer, useMapInstance } from '@amsterdam/react-maps'
-import { HighlightedFeatureLayer } from 'shared/components/HighlightedFeatureLayer'
-import { AddressMarker } from 'shared/components/MapLayers/AddressMarker'
-import { oneWayArrows, topoBlackWhite } from 'shared/map/mapLayers'
+import { HighlightedFeatureLayer } from '../../../../shared/components/HighlightedFeatureLayer'
+import { AddressMarker } from '../../../../shared/components/MapLayers/AddressMarker'
+import { oneWayArrows, topoBlackWhite } from '../../../../shared/map/mapLayers'
 
 import useLoadUnloadMapContext, { MapLayerId } from '../../contexts/MapContext'
 import { useLoadUnloadPageContext } from '../../contexts/PageContext'

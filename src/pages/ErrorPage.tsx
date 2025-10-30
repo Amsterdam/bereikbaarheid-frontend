@@ -1,7 +1,7 @@
 import { Column, Heading, Paragraph, Row } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
 import { useRouteError } from 'react-router-dom'
-import Header from 'shared/components/Header'
+import Header from '../shared/components/Header'
 import styled from 'styled-components'
 
 const Container = styled.main`

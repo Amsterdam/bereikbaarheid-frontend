@@ -1,6 +1,7 @@
 import { screen } from '@testing-library/react'
 import { generatePath } from 'react-router-dom'
-import { getPathTo } from 'routes'
+import { describe, it, expect, vi } from 'vitest'
+import { getPathTo } from '../../routes'
 
 import { withApp } from '../../../test/utils/withApp'
 
@@ -30,7 +31,7 @@ describe('RoadSectionPage', () => {
     withApp(pathToPage)
 
     // on render of the page, the error is logged to the console.
-    jest.spyOn(console, 'error').mockImplementation(() => {})
+    vi.spyOn(console, 'error').mockImplementation(() => {})
 
     // wait until the page is rendered
     await screen.findByText(/Wegvak niet gevonden/)

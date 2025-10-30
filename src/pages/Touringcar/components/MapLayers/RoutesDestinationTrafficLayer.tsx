@@ -3,14 +3,14 @@ import { useContext } from 'react'
 import { GeoJSON, MapPanelContext } from '@amsterdam/arm-core'
 import { SnapPoint } from '@amsterdam/arm-core/lib/components/MapPanel/constants'
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarRoutesDestinationTraffic from 'api/touringcar/routes-destination-traffic'
+import getTouringcarRoutesDestinationTraffic from '../../../../api/touringcar/routes-destination-traffic'
 import { DomEvent } from 'leaflet'
 import {
   MapLayerId,
   MapPanelTab,
   layerFeatureProps,
   useTouringcarMapContext,
-} from 'pages/Touringcar/contexts/MapContext'
+} from '../../../../pages/Touringcar/contexts/MapContext'
 
 export const RoutesDestinationTrafficLayer = () => {
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)

@@ -1,7 +1,7 @@
 import { themeSpacing } from '@amsterdam/asc-ui'
 import { useTranslation } from 'react-i18next'
-import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
-import Header from 'shared/components/Header'
+import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
+import Header from '../../shared/components/Header'
 import styled from 'styled-components'
 
 import loadUnloadLinks from '../LoadUnload/data/dataLinks'

@@ -3,9 +3,9 @@ import { useMemo } from 'react'
 import { Input, Label, Paragraph } from '@amsterdam/asc-ui'
 import { format, parse } from 'date-fns'
 import { t } from 'i18next'
-import { useTouringcarMapContext } from 'pages/Touringcar/contexts/MapContext'
+import { useTouringcarMapContext } from '../../../../pages/Touringcar/contexts/MapContext'
 import { useSearchParams } from 'react-router-dom'
-import { DATE_FORMAT_REVERSED } from 'shared/utils/dateTime'
+import { DATE_FORMAT_REVERSED } from '../../../../shared/utils/dateTime'
 
 import useMessages from './hooks/useMessages'
 

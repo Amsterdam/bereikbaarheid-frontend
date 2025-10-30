@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { getTouringcarParkingSpaces } from 'api/touringcar/parking-spaces'
+import { getTouringcarParkingSpaces } from '../../../../api/touringcar/parking-spaces'
 
 import LocationsList from '.'
 

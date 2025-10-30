@@ -3,7 +3,7 @@ import { useCallback, useEffect } from 'react'
 import { useMapInstance } from '@amsterdam/arm-core'
 import { NonTiledLayer } from '@amsterdam/arm-nontiled'
 import { LeafletMouseEvent } from 'leaflet'
-import { loadUnloadSpaces } from 'shared/map/mapLayers'
+import { loadUnloadSpaces } from '../../../../shared/map/mapLayers'
 
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
 import useLoadUnloadMapContext, { MapLayerId } from '../../contexts/MapContext'

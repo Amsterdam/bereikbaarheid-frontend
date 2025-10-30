@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { useMapInstance } from '@amsterdam/arm-core'
 import { Checkbox, Label, themeSpacing } from '@amsterdam/asc-ui'
-import { loadUnloadSpaces } from 'shared/map/mapLayers'
+import { loadUnloadSpaces } from '../../../../shared/map/mapLayers'
 import styled from 'styled-components'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'

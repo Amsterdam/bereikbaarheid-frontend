@@ -3,7 +3,7 @@
 // https://api.data.amsterdam.nl/v1/parkeervakken/
 //
 
-import { headers } from 'api/data.amsterdam'
+import { headers } from '../../api/data.amsterdam'
 import axios from 'axios'
 import { Polygon } from 'geojson'
 

@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from 'react'
 
 import { mapPanelConstants, MapPanelContent, MapPanelContext } from '@amsterdam/arm-core'
-import { DetailFeatureLoadUnloadSpace } from 'shared/components/DetailFeature/LoadUnloadSpace'
-import LoadingSpinner from 'shared/components/LoadingSpinner'
+import { DetailFeatureLoadUnloadSpace } from '../../../../shared/components/DetailFeature/LoadUnloadSpace'
+import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
 
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'
 import useLoadUnloadMapContext from '../../contexts/MapContext'

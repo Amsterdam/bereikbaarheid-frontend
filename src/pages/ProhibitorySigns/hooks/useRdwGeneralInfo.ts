@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { getVehicle, rdwGeneralData } from 'api/rdw/vehicle'
+import { getVehicle, rdwGeneralData } from '../../../api/rdw/vehicle'
 
 import { Vehicle } from '../types/vehicle'
 

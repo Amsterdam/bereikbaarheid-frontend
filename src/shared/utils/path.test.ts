@@ -1,4 +1,4 @@
-import { RouteIds } from 'routes'
+import { RouteIds } from '../../routes'
 
 import { getGeneratedPath } from './path'
 

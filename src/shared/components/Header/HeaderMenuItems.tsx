@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 
 import { ExternalLink } from '@amsterdam/asc-assets'
 import { Icon, MenuButton, MenuFlyOut, MenuItem, themeColor } from '@amsterdam/asc-ui'
-import i18n from 'i18n'
+import i18n from '../../../i18n'
 import { useTranslation } from 'react-i18next'
 import { Link, matchPath, useLocation } from 'react-router-dom'
 import styled from 'styled-components'

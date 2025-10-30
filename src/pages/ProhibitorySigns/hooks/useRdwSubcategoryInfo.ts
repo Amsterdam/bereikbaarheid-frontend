@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { getVehicleSubcategory, rdwSubcategoryData } from 'api/rdw/subcategory'
+import { getVehicleSubcategory, rdwSubcategoryData } from '../../../api/rdw/subcategory'
 
 import { useProhibitorySignsPageContext } from '../contexts/PageContext'
 

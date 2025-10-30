@@ -1,7 +1,7 @@
 import { useMapInstance } from '@amsterdam/arm-core'
 import { Accordion, Button, Heading, Image, Link, List, ListItem, Paragraph, themeColor } from '@amsterdam/asc-ui'
 import { t } from 'i18next'
-import useTouringcarMapContext from 'pages/Touringcar/contexts/MapContext'
+import useTouringcarMapContext from '../../../../pages/Touringcar/contexts/MapContext'
 import styled from 'styled-components'
 
 import { api } from '../../../../api/bereikbaarheid'

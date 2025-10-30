@@ -2,10 +2,10 @@ import { useCallback, useEffect, useState } from 'react'
 
 import { GeoJSON } from '@amsterdam/arm-core'
 import { useQuery } from '@tanstack/react-query'
-import { getRoadSectionsLoadUnload, RoadSectionLoadUnload } from 'api/bereikbaarheid/road-sections/load-unload'
+import { getRoadSectionsLoadUnload, RoadSectionLoadUnload } from '../../../../api/bereikbaarheid/road-sections/load-unload'
 import { DomEvent, PathOptions } from 'leaflet'
 import type L from 'leaflet'
-import { getDayOfTheWeekInDutch } from 'shared/utils/dateTime'
+import { getDayOfTheWeekInDutch } from '../../../../shared/utils/dateTime'
 import { useTheme } from 'styled-components'
 
 import { DetailFeatureActionType } from '../../contexts/detailFeatureReducer'

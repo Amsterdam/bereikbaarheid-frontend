@@ -1,13 +1,12 @@
 import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
-import { getPathTo } from 'routes'
+import { describe, it, expect, vi } from 'vitest'
+import { getPathTo } from '../../../../routes'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
-describe('DetailFeature', () => {
-  jest.setTimeout(15000)
-
+describe('DetailFeature', { timeout: 15000 }, () => {
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('LOAD_UNLOAD_PAGE'))
     const page = withApp(pathToPage)
@@ -29,7 +28,7 @@ describe('DetailFeature', () => {
     const page = withApp(pathToPage)
     const user = userEvent.setup()
 
-    jest.spyOn(window, 'scrollTo').mockImplementation(() => {})
+    vi.spyOn(console, 'error').mockImplementation(() => {})
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered
@@ -50,7 +49,7 @@ describe('DetailFeature', () => {
     const page = withApp(pathToPage)
     const user = userEvent.setup()
 
-    jest.spyOn(window, 'scrollTo').mockImplementation(() => {})
+    vi.spyOn(console, 'error').mockImplementation(() => {})
 
     // unfortunately both await's are needed, otherwise the road sections fail to load in time
     // wait until road sections are rendered

@@ -1,13 +1,12 @@
 import { screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
-import { getPathTo } from 'routes'
+import { describe, it, expect } from 'vitest'
+import { getPathTo } from '../../../../routes'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
-describe('ScenarioWizard', () => {
-  jest.setTimeout(15000)
-
+describe('ScenarioWizard', { timeout: 15000 }, () => {
   it('an address it not required to complete the wizard', async () => {
     const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()

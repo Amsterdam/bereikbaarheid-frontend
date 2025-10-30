@@ -1,5 +1,5 @@
 import { ErrorMessage, Input, Label, Paragraph } from '@amsterdam/asc-ui'
-import InputWithSuffix from 'shared/components/InputWithSuffix'
+import InputWithSuffix from '../../../../../shared/components/InputWithSuffix'
 
 import { useProhibitorySignsPageContext } from '../../../contexts/PageContext'
 import { useRdwInfo } from '../../../hooks/useRdwInfo'

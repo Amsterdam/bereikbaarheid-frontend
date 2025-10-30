@@ -1,24 +1,23 @@
 import { screen } from '@testing-library/react'
 import { generatePath } from 'react-router-dom'
-import { getPathTo } from 'routes'
+import { vi, describe, it, expect } from 'vitest'
+import { getPathTo } from '../../routes'
 
 import { withApp } from '../../../test/utils/withApp'
 
 describe('LoadUnloadPageSnapshot', () => {
-  jest.useFakeTimers({ legacyFakeTimers: false })
-  jest.setSystemTime(new Date('2023-10-01T10:00:00.000Z'))
+  vi.useFakeTimers()
+  vi.setSystemTime(new Date('2023-10-01T10:00:00.000Z'))
 
-  it('renders correctly', async () => {
+  it('renders correctly', () => {
     const pathToPage = generatePath(getPathTo('LOAD_UNLOAD_PAGE'))
-    const page = await withApp(pathToPage)
+    const page = withApp(pathToPage)
 
     expect(page).toMatchSnapshot()
   })
 })
 
 describe('LoadUnloadPage', () => {
-  // jest.setTimeout(15000)
-
   // TODO: test keeps getting a timeout no matter how long jest.setTimeout is set, but is very hard to debug. We need to find a robust solution to properly test leaflet.
   // const loadUnloadData = require('../../../test/mocks/bereikbaarheid/road-sections/load-unload/data.json')
 

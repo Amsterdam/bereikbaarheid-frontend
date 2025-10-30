@@ -12,7 +12,7 @@ import {
   TableRow,
   themeSpacing,
 } from '@amsterdam/asc-ui'
-import { ParkingSpace } from 'api/parkeervakken'
+import { ParkingSpace } from '../../../api/parkeervakken'
 import { format, isAfter, parse, startOfYesterday } from 'date-fns'
 import styled from 'styled-components'
 

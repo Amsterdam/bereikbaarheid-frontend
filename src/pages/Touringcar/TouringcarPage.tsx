@@ -5,12 +5,12 @@ import { useMatchMedia } from '@amsterdam/asc-ui'
 import type L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { useTranslation } from 'react-i18next'
-import { MainContent, PageWrapper } from 'shared/components/FullPageSize'
-import Header from 'shared/components/Header'
-import { HEADER_HEIGHT } from 'shared/constants'
-import { useDocumentTitle } from 'shared/hooks/useDocumentTitle'
-import { defaultMapOptions, setMapDefaults } from 'shared/map/mapDefaults'
-import { MapStyle } from 'shared/map/mapStyle'
+import { MainContent, PageWrapper } from '../../shared/components/FullPageSize'
+import Header from '../../shared/components/Header'
+import { HEADER_HEIGHT } from '../../shared/constants'
+import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
+import { defaultMapOptions, setMapDefaults } from '../../shared/map/mapDefaults'
+import { MapStyle } from '../../shared/map/mapStyle'
 import styled from 'styled-components'
 
 import TouringcarMapLayers from './components/MapLayers'
@@ -51,7 +51,7 @@ const TouringcarPage = () => {
       <PageWrapper>
         <Header title={t('_pageTouringcar.title')} />
 
-        <MainContent data-testid="load-unload-page">
+        <MainContent data-testid="touringcar-page">
           <MapStyle />
 
           <StyledMap options={{ ...defaultMapOptions, maxZoom: 21, zoom: 14 }} setInstance={setMapInstance}>

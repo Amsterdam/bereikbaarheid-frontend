@@ -2,7 +2,7 @@ import { MapPanelContent, MapPanelContentProps } from '@amsterdam/arm-core'
 import { Link, Paragraph, Tab, Tabs } from '@amsterdam/asc-ui'
 import parse from 'html-react-parser'
 import { t } from 'i18next'
-import { PretendHeading } from 'shared/components/CompactElements'
+import { PretendHeading } from '../../../shared/components/CompactElements'
 import styled from 'styled-components'
 
 import { DataSourcesAside } from '../../DataSources/components/DataSourcesBlocks'

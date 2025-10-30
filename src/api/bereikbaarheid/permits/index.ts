@@ -1,5 +1,5 @@
 import { Point } from 'geojson'
-import { Vehicle } from 'pages/ProhibitorySigns/types/vehicle'
+import { Vehicle } from '../../../pages/ProhibitorySigns/types/vehicle'
 import { Address } from 'types/address'
 
 import config from '../../../config'

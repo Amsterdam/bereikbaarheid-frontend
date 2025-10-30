@@ -3,14 +3,14 @@ import { useContext } from 'react'
 import { GeoJSON, MapPanelContext } from '@amsterdam/arm-core'
 import { SnapPoint } from '@amsterdam/arm-core/lib/components/MapPanel/constants'
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarEnvironmentalZone from 'api/touringcar/environmental-zone'
+import getTouringcarEnvironmentalZone from '../../../../api/touringcar/environmental-zone'
 import { DomEvent } from 'leaflet'
 import {
   MapLayerId,
   MapPanelTab,
   layerFeatureProps,
   useTouringcarMapContext,
-} from 'pages/Touringcar/contexts/MapContext'
+} from '../../../../pages/Touringcar/contexts/MapContext'
 
 export const EnvironmentalZoneLayer = () => {
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)

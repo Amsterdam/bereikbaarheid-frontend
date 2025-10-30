@@ -28,6 +28,9 @@ services:
     volumes:
       - ./nginx.dockercompose.conf:/etc/nginx/conf.d/default.conf
       - ./src:/app/src
+      - ./tsconfig.json:/app/tsconfig.json
+      - ./vite.config.js:/app/vite.config.js
+      - ./index.html:/app/index.html
     command: npm start
 
   test:
@@ -39,6 +42,9 @@ services:
     volumes:
       - ./src:/app/src
       - ./test:/app/test
+      - ./package.json:/app/package.json
+      - ./vite.config.js:/app/vite.config.js
+      - ./tsconfig.json:/app/tsconfig.json
     command: npm run test
 
   upgrade:

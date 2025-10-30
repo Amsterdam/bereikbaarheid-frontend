@@ -1,5 +1,5 @@
 import { generatePath } from 'react-router'
-import { RouteIds, getPathTo } from 'routes'
+import { RouteIds, getPathTo } from '../../routes'
 
 function getGeneratedPath(route: RouteIds, params?: Record<string, string> | undefined) {
   return generatePath(

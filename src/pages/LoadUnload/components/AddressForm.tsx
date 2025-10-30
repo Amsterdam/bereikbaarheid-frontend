@@ -11,12 +11,12 @@ import {
   themeSpacing,
   TopBar,
 } from '@amsterdam/asc-ui'
-import { address as addressApi, AddressItem } from 'api/pdok/search/address'
+import { address as addressApi, AddressItem } from '../../../api/pdok/search/address'
 import debounce from 'lodash/debounce'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { AddressSearchResults } from 'shared/components/AddressSearchResults'
-import { FormLabel } from 'shared/components/FormLabel'
-import ModalBlock from 'shared/components/ModalBlock'
+import { AddressSearchResults } from '../../../shared/components/AddressSearchResults'
+import { FormLabel } from '../../../shared/components/FormLabel'
+import ModalBlock from '../../../shared/components/ModalBlock'
 import styled from 'styled-components'
 import { Address } from 'types/address'
 

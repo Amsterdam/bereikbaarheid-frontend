@@ -1,4 +1,4 @@
-import { TrafficSignCategory } from 'api/bereikbaarheid/traffic-signs'
+import { TrafficSignCategory } from '../../../../api/bereikbaarheid/traffic-signs'
 
 import c01ProhibitionException from './images/C01--verbod-met-uitzondering.png'
 import c01Prohibition from './images/C01--verbod.png'

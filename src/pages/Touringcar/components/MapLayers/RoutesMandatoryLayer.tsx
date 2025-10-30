@@ -3,14 +3,14 @@ import { useContext } from 'react'
 import { GeoJSON, MapPanelContext } from '@amsterdam/arm-core'
 import { SnapPoint } from '@amsterdam/arm-core/lib/components/MapPanel/constants'
 import { useQuery } from '@tanstack/react-query'
-import getTouringcarRoutesMandatory from 'api/touringcar/routes-mandatory'
+import getTouringcarRoutesMandatory from '../../../../api/touringcar/routes-mandatory'
 import { DomEvent } from 'leaflet'
 import {
   MapLayerId,
   MapPanelTab,
   layerFeatureProps,
   useTouringcarMapContext,
-} from 'pages/Touringcar/contexts/MapContext'
+} from '../../../../pages/Touringcar/contexts/MapContext'
 
 export const RoutesMandatoryLayer = () => {
   const { setPositionFromSnapPoint } = useContext(MapPanelContext)

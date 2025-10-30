@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { Button, Column, CompactThemeProvider, Link, Row, themeSpacing } from '@amsterdam/asc-ui'
 import { generatePath, Link as RouterLink } from 'react-router-dom'
-import { getPathTo, RouteIds } from 'routes'
+import { getPathTo, RouteIds } from '../../../../routes'
 import styled from 'styled-components'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'

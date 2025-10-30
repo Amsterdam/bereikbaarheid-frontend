@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 import { useMapInstance } from '@amsterdam/arm-core'
 import { NonTiledLayer } from '@amsterdam/arm-nontiled'
-import { loadUnloadSpaces } from 'shared/map/mapLayers'
+import { loadUnloadSpaces } from '../../../../shared/map/mapLayers'
 
 import { useProhibitorySignsMapContext } from '../../contexts/MapContext'
 import { useProhibitorySignsPageContext } from '../../contexts/PageContext'

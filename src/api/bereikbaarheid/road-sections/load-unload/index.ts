@@ -1,5 +1,5 @@
 import { Feature, FeatureCollection } from 'geojson'
-import { TimeHumanReadable_Hours_Minutes_Seconds } from 'shared/utils/dateTime'
+import { TimeHumanReadable_Hours_Minutes_Seconds } from '../../../../shared/utils/dateTime'
 
 import config from '../../../../config'
 import { api } from '../../index'

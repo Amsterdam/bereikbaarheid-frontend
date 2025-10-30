@@ -1,6 +1,6 @@
 import { createContext, Dispatch, SetStateAction, useContext } from 'react'
 
-import type { FormDateTimeValues } from 'shared/components/FormDateTime'
+import type { FormDateTimeValues } from '../../../shared/components/FormDateTime'
 import { Address } from 'types/address'
 
 export type TouringcarPageContextProps = {

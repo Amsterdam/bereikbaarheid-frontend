@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import { Column, CompactThemeProvider, Heading, Link, Paragraph, Row, themeSpacing } from '@amsterdam/asc-ui'
-import LoadingSpinner from 'shared/components/LoadingSpinner'
-import { ReactComponent as DistanceToDestinationIcon } from 'shared/icons/bootstrap-icon-flag-fill.svg'
+import LoadingSpinner from '../../../../shared/components/LoadingSpinner'
+import { ReactComponent as DistanceToDestinationIcon } from '../../../../shared/icons/bootstrap-icon-flag-fill.svg'
 import styled from 'styled-components'
 
 import { usePermitsByLocation } from '../../hooks/usePermitsByLocation'
