@@ -29,6 +29,7 @@ export default defineConfig(() => {
           titleProp: true,
         },
         include: '**/*.svg',
+        exclude: '**/components/Marker/images/**/*.svg',
       }),
     ],
     server: {
