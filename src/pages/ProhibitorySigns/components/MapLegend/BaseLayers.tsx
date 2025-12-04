@@ -16,9 +16,9 @@ const ProhibitorySignsMapLegendBaseLayers = () => {
     },
   ]
 
-  if (expertMode) {
-    baseLayers.push(topoColorLight)
-  }
+  // if (expertMode) {
+  //   baseLayers.push(topoColorLight)
+  // }
 
   return (
     <RadioGroup name="group">
