@@ -21,7 +21,7 @@ function selectedBaseLayer(id: string) {
 
 const ProhibitorySignsMapLayers = () => {
   const { activeBaseLayer } = useProhibitorySignsMapContext()
-  const { address } = useProhibitorySignsPageContext()
+  const { address, expertMode } = useProhibitorySignsPageContext()
 
   return (
     <>
@@ -42,8 +42,6 @@ const ProhibitorySignsMapLayers = () => {
       <ProhibitorySignsLoadUnloadSpacesLayer />
 
       <ProhibitorySignsParkingSpaceHighlight />
-
-      {/* {expertMode && <TileLayer options={linkIds.options} args={[linkIds.url]} />} */}
 
       <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />
 
