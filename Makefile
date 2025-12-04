@@ -25,8 +25,8 @@ dev:                                ## Run the development server
 down:								## Docker compose down
 	$(dc) down
 
-test:
-	@echo "Skipping tests..."
+test:                               ## Execute tests
+	$(run) test $(ARGS)
 
 requirements:                       ## Upgrade dependencies
 	$(run) upgrade $(ARGS)
