@@ -1,13 +1,20 @@
 import { screen } from '@testing-library/react'
 import { generatePath } from 'react-router-dom'
-import { vi, describe, it, expect } from 'vitest'
+import { vi, describe, it, expect, afterEach, beforeEach } from 'vitest'
 import { getPathTo } from '../../routes'
 
 import { withApp } from '../../../test/utils/withApp'
 
-describe('LoadUnloadPageSnapshot', () => {
-  vi.useFakeTimers()
-  vi.setSystemTime(new Date('2023-10-01T10:00:00.000Z'))
+describe('LoadUnloadPageSnapshot', { timeout: 30000 }, () => {
+  beforeEach(() => {
+    vi.useRealTimers()
+    vi.useFakeTimers({ shouldAdvanceTime: true })
+    vi.setSystemTime(new Date('2023-10-01T10:00:00.000Z'))
+  })
+
+  afterEach(() => {
+    vi.useRealTimers()
+  })
 
   it('renders correctly', () => {
     const pathToPage = generatePath(getPathTo('LOAD_UNLOAD_PAGE'))

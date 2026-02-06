@@ -45,6 +45,8 @@ afterEach(() => {
   // Reset any request handlers that we may add during the tests,
   // so they don't affect other tests.
   server.resetHandlers()
+  // Restore real timers so fake timers from one test don't pollute others
+  vi.useRealTimers()
 })
 
 // Clean up after the tests are finished.

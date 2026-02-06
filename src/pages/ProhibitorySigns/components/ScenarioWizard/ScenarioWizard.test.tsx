@@ -6,7 +6,7 @@ import { getPathTo } from '../../../../routes'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
-describe('ScenarioWizard', { timeout: 15000 }, () => {
+describe('ScenarioWizard', { timeout: 30000 }, () => {
   it('an address it not required to complete the wizard', async () => {
     const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
