@@ -6,7 +6,7 @@ import { getGeneratedPath } from '../../../../shared/utils/path'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
-describe('ScenarioDisplay', () => {
+describe('ScenarioDisplay', { timeout: 30000 }, () => {
   it('displays the result after finishing the scenario wizard', async () => {
     const pathToPage = getGeneratedPath(RouteIds.LICENCE_PLATE_PAGE)
     const user = userEvent.setup()

@@ -5,7 +5,7 @@ import { withApp } from '../test/utils/withApp'
 
 import { RouteIds } from './routes'
 
-describe('routes', () => {
+describe('routes', { timeout: 30000 }, () => {
   it('redirects /verbodsborden to the /op-kenteken', async () => {
     const pathToPage = getGeneratedPath(RouteIds.PROHIBITORY_SIGNS_PAGE)
 

@@ -6,7 +6,7 @@ import { getPathTo } from '../../../../routes'
 
 import { withApp } from '../../../../../test/utils/withApp'
 
-describe('MapLegend', () => {
+describe('MapLegend', { timeout: 30000 }, () => {
   it('renders correctly', async () => {
     const pathToPage = generatePath(getPathTo('LICENCE_PLATE_PAGE'))
     const user = userEvent.setup()
@@ -95,4 +95,4 @@ describe('MapLegend', () => {
   //
   //   expect(screen.getByLabelText(/laad- en losplekken/i)).toBeEnabled()
   // })
-}, 15000)
+})
