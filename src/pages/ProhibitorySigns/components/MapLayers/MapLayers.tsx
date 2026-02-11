@@ -43,8 +43,6 @@ const ProhibitorySignsMapLayers = () => {
 
       <ProhibitorySignsParkingSpaceHighlight />
 
-      {expertMode && <TileLayer options={linkIds.options} args={[linkIds.url]} />}
-
       <TileLayer options={oneWayArrows.options} args={[oneWayArrows.url]} />
 
       <BaseLayer
