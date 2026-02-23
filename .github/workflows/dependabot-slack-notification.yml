@@ -1,0 +1,158 @@
+name: Dependabot slack notification
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+permissions:
+  actions: write
+
+defaults:
+  run:
+    shell: bash -euxo pipefail {0}
+
+jobs:
+  pr-slack-notification:
+    runs-on: ubuntu-latest
+    name: Sends a message to Slack when a PR is opened
+    if: |
+      github.actor == 'dependabot[bot]' &&
+      contains(github.event.pull_request.labels.*.name, 'dependencies') &&
+      !contains(github.event.pull_request.labels.*.name, 'github-actions')
+    steps:
+      - name: Restore cached Slack message timestamp
+        id: slack-message-timestamp-cache
+        uses: actions/cache/restore@v5
+        with:
+          path: slack-ts.txt
+          key: slack-ts-pr-${{ github.event.pull_request.number }}
+
+      - name: Post PR summary message to slack
+        if: github.event.action == 'opened'
+        id: message
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_BOT_TOKEN }}
+          payload: |
+            channel: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_CHANNEL_ID }}
+            username: "Bereikbaarheid Frontend"
+            text: "A PR has been created in repository ${{ github.repository }}: #${{ github.event.pull_request.number }} - ${{ github.event.pull_request.title }}"
+
+      - name: Save Slack message timestamp to file
+        if: github.event.action == 'opened'
+        run: echo "${{ steps.message.outputs.ts }}" > slack-ts.txt
+
+      - name: Cache Slack message timestamp
+        if: github.event.action == 'opened'
+        uses: actions/cache/save@v5
+        with:
+          path: slack-ts.txt
+          key: slack-ts-pr-${{ github.event.pull_request.number }}
+
+      - name: Post a detailed message in a thread
+        if: github.event.action == 'opened'
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_BOT_TOKEN }}
+          payload: |
+            channel: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_CHANNEL_ID }}
+            username: "Bereikbaarheid Frontend"
+            thread_ts: "${{ steps.message.outputs.ts }}"
+            unfurl_links: false
+            unfurl_media: false
+            "blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":eyes: *1. Review the PR*\nAssign <${{ github.event.pull_request.html_url }}|PR #${{ github.event.pull_request.number }}> to yourself"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":seedling: *2. Deploy the PR on dev/acc*\nDeploy the branch to dev and/or acc"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":bulb: *3. Check the Trivy output*\nCheck if there are any vunerable packages in reported by Trivy that can be fixed"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":mag: *4. Check dev/acc*\nCheck if dev and/or acc are still working\n${{ vars.DEV_ACC_ADDITIONAL_INFO }}"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":twisted_rightwards_arrows: *5. Merge the PR*\nMerge the PR to main"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":label: *6. Create a new release*\nCreate a new release"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":rocket: *7. Deploy the new release to prod*\nDeploy the release to prod"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":mag_right: *8. Check prod*\nCheck if prod is still working\n${{ vars.PROD_ADDITIONAL_INFO }}"
+                }
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":clock1: *9. Timetell code*\nCode: *${{ secrets.TIMETELL_CODE }}*"
+                }
+              }
+            ]
+
+      - name: Read cached Slack timestamp
+        if: github.event.action == 'synchronize' && steps.slack-message-timestamp-cache.outputs.cache-hit == 'true'
+        id: read-ts
+        run: echo "ts=$(cat slack-ts.txt)" >> $GITHUB_OUTPUT
+
+      - name: Post update message to thread
+        if: github.event.action == 'synchronize' && steps.slack-message-timestamp-cache.outputs.cache-hit == 'true'
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_BOT_TOKEN }}
+          payload: |
+            channel: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_CHANNEL_ID }}
+            username: "Bereikbaarheid Frontend"
+            thread_ts: "${{ steps.read-ts.outputs.ts }}"
+            unfurl_links: false
+            unfurl_media: false
+            "blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":robot_face: *X. Dependabot update the PR*\nXPR <${{ github.event.pull_request.html_url }}|#${{ github.event.pull_request.number }}> has been updated by Dependabot"
+                }
+              }
+            ]
