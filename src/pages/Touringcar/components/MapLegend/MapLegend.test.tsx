@@ -7,9 +7,7 @@ import { withApp } from '../../../../../test/utils/withApp'
 
 describe('MapLegend', { timeout: 15000 }, () => {
   beforeEach(() => {
-    vi.stubGlobal('XMLHttpRequest', class {
-      open = vi.fn()
-    })
+    vi.stubGlobal('XMLHttpRequest', class {})
   })
 
   afterEach(() => vi.restoreAllMocks())
