@@ -21,7 +21,7 @@ updates:
 
     labels:
       - "dependencies"
-      - "javascript"
+      - "typescript"
 
     commit-message:
       prefix: "chore(deps)"
