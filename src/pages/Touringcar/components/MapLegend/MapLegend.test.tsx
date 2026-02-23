@@ -6,6 +6,14 @@ import { getGeneratedPath } from '../../../../shared/utils/path'
 import { withApp } from '../../../../../test/utils/withApp'
 
 describe('MapLegend', { timeout: 15000 }, () => {
+  beforeEach(() => {
+    vi.stubGlobal('XMLHttpRequest', class {
+      open = vi.fn()
+    })
+  })
+
+  afterEach(() => vi.restoreAllMocks())
+
   it('renders correctly', async () => {
     const pathToPage = getGeneratedPath(RouteIds.TOURINGCAR_PAGE)
     const page = withApp(pathToPage)
