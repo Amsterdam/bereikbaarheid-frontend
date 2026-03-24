@@ -122,8 +122,8 @@ export const DetailFeatureLoadUnloadSpace = ({ parkingSpace }: DetailFeatureLoad
                       return (
                         <TableRow key={index}>
                           <TableCell>{item.dagen.join(', ')}</TableCell>
-                          <TableCell>{parseTime(item.beginTijd)}</TableCell>
-                          <TableCell>{parseTime(item.eindTijd)}</TableCell>
+                          {item.beginTijd && <TableCell>{parseTime(item.beginTijd)}</TableCell>}
+                          {item.eindTijd && <TableCell>{parseTime(item.eindTijd)}</TableCell>}
                         </TableRow>
                       )
                     })}
