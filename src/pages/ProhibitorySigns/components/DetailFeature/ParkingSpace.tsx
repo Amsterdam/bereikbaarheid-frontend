@@ -75,6 +75,7 @@ const ProhibitorySignsDetailFeatureParkingSpace = ({ id }: DetailFeatureParkingS
           </Row>
 
           {exceptionsToParkingRegimes().map((item, index) => {
+            console.log("item2", item)
             return (
               <div key={index}>
                 <TableTitle as="h3">
