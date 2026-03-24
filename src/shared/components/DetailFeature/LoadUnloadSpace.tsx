@@ -32,7 +32,10 @@ interface DetailFeatureLoadUnloadSpaceProps {
 
 export const DetailFeatureLoadUnloadSpace = ({ parkingSpace }: DetailFeatureLoadUnloadSpaceProps) => {
   const parseDate = (date: string) => parse(date, 'yyyy-MM-dd', new Date())
-  const parseTime = (time: string) => format(parse(time, 'HH:mm:ss', new Date()), 'HH:mm')
+  const parseTime = (time: string) => {
+    console.log("time3", time)
+    return format(parse(time, 'HH:mm:ss', new Date()), 'HH:mm')
+  }
   const yesterday = startOfYesterday()
 
   const exceptionsToParkingRegimes = () => {
@@ -72,7 +75,6 @@ export const DetailFeatureLoadUnloadSpace = ({ parkingSpace }: DetailFeatureLoad
           </Row>
 
           {exceptionsToParkingRegimes().map((item, index) => {
-            console.log("item", item)
             return (
               <div key={index}>
                 <TableTitle as="h3">
