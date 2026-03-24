@@ -13,7 +13,7 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import { ParkingSpace } from '../../../api/parkeervakken'
-import { format, isAfter, parse, startOfYesterday } from 'date-fns'
+import { format, isAfter, isValid, parse, startOfYesterday } from 'date-fns'
 import styled from 'styled-components'
 
 import { formatISODate } from '../../utils/dateTime'
@@ -32,9 +32,11 @@ interface DetailFeatureLoadUnloadSpaceProps {
 
 export const DetailFeatureLoadUnloadSpace = ({ parkingSpace }: DetailFeatureLoadUnloadSpaceProps) => {
   const parseDate = (date: string) => parse(date, 'yyyy-MM-dd', new Date())
-  const parseTime = (time: string) => {
-    console.log("time3", time)
-    return format(parse(time, 'HH:mm:ss', new Date()), 'HH:mm')
+  const parseTime = (time?: string | null) => {
+    if (!time) return '-'
+
+    const parsedTime = parse(time, 'HH:mm:ss', new Date())
+    return isValid(parsedTime) ? format(parsedTime, 'HH:mm') : '-'
   }
   const yesterday = startOfYesterday()
 
@@ -122,8 +124,8 @@ export const DetailFeatureLoadUnloadSpace = ({ parkingSpace }: DetailFeatureLoad
                       return (
                         <TableRow key={index}>
                           <TableCell>{item.dagen.join(', ')}</TableCell>
-                          {item.beginTijd && <TableCell>{parseTime(item.beginTijd)}</TableCell>}
-                          {item.eindTijd && <TableCell>{parseTime(item.eindTijd)}</TableCell>}
+                          <TableCell>{parseTime(item.beginTijd)}</TableCell>
+                          <TableCell>{parseTime(item.eindTijd)}</TableCell>
                         </TableRow>
                       )
                     })}
