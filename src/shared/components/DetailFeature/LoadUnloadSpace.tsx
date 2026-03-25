@@ -13,7 +13,7 @@ import {
   themeSpacing,
 } from '@amsterdam/asc-ui'
 import { ParkingSpace } from '../../../api/parkeervakken'
-import { format, isAfter, parse, startOfYesterday } from 'date-fns'
+import { format, isAfter, isValid, parse, startOfYesterday } from 'date-fns'
 import styled from 'styled-components'
 
 import { formatISODate } from '../../utils/dateTime'
@@ -32,7 +32,12 @@ interface DetailFeatureLoadUnloadSpaceProps {
 
 export const DetailFeatureLoadUnloadSpace = ({ parkingSpace }: DetailFeatureLoadUnloadSpaceProps) => {
   const parseDate = (date: string) => parse(date, 'yyyy-MM-dd', new Date())
-  const parseTime = (time: string) => format(parse(time, 'HH:mm:ss', new Date()), 'HH:mm')
+  const parseTime = (time?: string | null) => {
+    if (!time) return '-'
+
+    const parsedTime = parse(time, 'HH:mm:ss', new Date())
+    return isValid(parsedTime) ? format(parsedTime, 'HH:mm') : '-'
+  }
   const yesterday = startOfYesterday()
 
   const exceptionsToParkingRegimes = () => {
