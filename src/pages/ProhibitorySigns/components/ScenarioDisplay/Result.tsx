@@ -82,7 +82,7 @@ const ScenarioDisplayResult = () => {
             <Row halign="flex-start" hasMargin={false} valign="center">
               <Column span={6}>
                 <Link
-                  href="https://www.amsterdam.nl/veelgevraagd/?caseid=%7B839DEE65-CD24-4567-84A5-8DF665BC6384%7D"
+                  href="https://bereikbaarheid.amsterdam.nl/laden-lossen"
                   target="_blank"
                   variant="inline"
                 >
