@@ -38,6 +38,7 @@ function formatISODate(
   formatString = DATETIME_FORMAT_DEFAULT
 ): DateTimeHumanReadable_dd_MM_yyyy_HH_mm {
   const dateTimeISO = dateTimeString as DateTimeISO_UTCString
+
   return format(parseISO(dateTimeISO), formatString, DATE_FNS_OPTIONS) as DateTimeHumanReadable_dd_MM_yyyy_HH_mm
 }
 
