@@ -32,7 +32,7 @@ jobs:
       - name: Post PR summary message to slack
         if: github.event.action == 'opened'
         id: message
-        uses: slackapi/slack-github-action@v2.1.1
+        uses: slackapi/slack-github-action@v3.0.1
         with:
           method: chat.postMessage
           token: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_BOT_TOKEN }}
@@ -54,7 +54,7 @@ jobs:
 
       - name: Post a detailed message in a thread
         if: github.event.action == 'opened'
-        uses: slackapi/slack-github-action@v2.1.1
+        uses: slackapi/slack-github-action@v3.0.1
         with:
           method: chat.postMessage
           token: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_BOT_TOKEN }}
@@ -137,7 +137,7 @@ jobs:
 
       - name: Post update message to thread
         if: github.event.action == 'synchronize' && steps.slack-message-timestamp-cache.outputs.cache-hit == 'true'
-        uses: slackapi/slack-github-action@v2.1.1
+        uses: slackapi/slack-github-action@v3.0.1
         with:
           method: chat.postMessage
           token: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_BOT_TOKEN }}
