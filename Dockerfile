@@ -1,4 +1,4 @@
-FROM node:20-bookworm AS base
+FROM node:20.19-bookworm AS base
 
 ENV BROWSER=none
 
