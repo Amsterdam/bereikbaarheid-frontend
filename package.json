@@ -97,6 +97,7 @@
     "start": "BROWSER=none GENERATE_SOURCEMAP=false vite",
     "build": "GENERATE_SOURCEMAP=false vite build",
     "lint": "eslint --cache .",
+    "lint:fix": "eslint --fix .",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
