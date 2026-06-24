@@ -3,10 +3,9 @@ import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
 import { describe, it, expect } from 'vitest'
 
+import { withApp } from '../../../../../test/utils/withApp'
 import { RouteIds, getPathTo } from '../../../../routes'
 import { getGeneratedPath } from '../../../../shared/utils/path'
-
-import { withApp } from '../../../../../test/utils/withApp'
 
 describe('ProhibitorySignsWideRoads', { timeout: 15000 }, () => {
   it('"Breed opgezette wegen" layer is enabled in map legend', async () => {

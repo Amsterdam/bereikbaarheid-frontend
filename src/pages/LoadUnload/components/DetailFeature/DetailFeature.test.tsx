@@ -2,9 +2,9 @@ import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
 import { describe, it, expect, vi } from 'vitest'
-import { getPathTo } from '../../../../routes'
 
 import { withApp } from '../../../../../test/utils/withApp'
+import { getPathTo } from '../../../../routes'
 
 describe('DetailFeature', { timeout: 15000 }, () => {
   it('renders correctly', async () => {

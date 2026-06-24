@@ -1,10 +1,10 @@
 import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { vi, describe, it, expect } from 'vitest'
-import { RouteIds } from '../../routes'
-import { getGeneratedPath } from '../../shared/utils/path'
 
 import { withApp } from '../../../test/utils/withApp'
+import { RouteIds } from '../../routes'
+import { getGeneratedPath } from '../../shared/utils/path'
 
 describe('ProhibitorySignsPage', { timeout: 15000 }, () => {
   it('renders correctly', async () => {
