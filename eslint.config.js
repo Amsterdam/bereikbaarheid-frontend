@@ -15,7 +15,7 @@ const compat = new FlatCompat({
 })
 
 export default defineConfig([
-  globalIgnores(['build/', 'node_modules/', 'coverage/', 'public/']),
+  globalIgnores(['build/', 'node_modules/', 'coverage/', 'public/', '**/__snapshots__/']),
   ...compat.config({
     parser: '@typescript-eslint/parser',
     extends: [
