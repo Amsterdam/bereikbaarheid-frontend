@@ -1,5 +1,5 @@
 import { screen, waitFor } from '@testing-library/react'
-import { describe, it, expect } from 'vitest'
+import { vi, describe, it, expect } from 'vitest'
 
 import { withApp } from '../../../../../test/utils/withApp'
 import { RouteIds } from '../../../../routes'

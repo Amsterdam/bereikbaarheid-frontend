@@ -49,7 +49,6 @@ describe('ProhibitorySignsWideRoads', { timeout: 15000 }, () => {
     await screen.findAllByText(/uw invoer/i)
 
     // the wide roads layer should be enabled
-    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
     const wideRoadsMapTiles = container.querySelectorAll('.leaflet-tile[src*="breed_opgezette_wegen"]')
 
     expect(wideRoadsMapTiles.length).toBeGreaterThanOrEqual(1)

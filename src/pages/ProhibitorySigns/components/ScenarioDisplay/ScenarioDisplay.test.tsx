@@ -35,10 +35,7 @@ describe(
       await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
 
       // wait for render of the results
-      await waitFor(() =>
-        // eslint-disable-next-line testing-library/no-node-access
-        document.querySelectorAll('.leaflet-overlay-pane svg path')
-      )
+      await waitFor(() => document.querySelectorAll('.leaflet-overlay-pane svg path'))
 
       const scenarioDisplay = screen.getByTestId('scenario-display')
 
@@ -72,10 +69,7 @@ describe(
       await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
 
       // wait for render of the results
-      await waitFor(() =>
-        // eslint-disable-next-line testing-library/no-node-access
-        document.querySelectorAll('.leaflet-overlay-pane svg path')
-      )
+      await waitFor(() => document.querySelectorAll('.leaflet-overlay-pane svg path'))
 
       expect(within(screen.getByTestId('scenario-display')).getByText('8.23 m')).toBeVisible() // vehicle length
 
@@ -90,10 +84,7 @@ describe(
       await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
 
       // wait for render of the results
-      await waitFor(() =>
-        // eslint-disable-next-line testing-library/no-node-access
-        document.querySelectorAll('.leaflet-overlay-pane svg path')
-      )
+      await waitFor(() => document.querySelectorAll('.leaflet-overlay-pane svg path'))
 
       // and check if vehicle length has changed
       expect(within(screen.getByTestId('scenario-display')).getByText('10.56 m')).toBeVisible() // vehicle length
