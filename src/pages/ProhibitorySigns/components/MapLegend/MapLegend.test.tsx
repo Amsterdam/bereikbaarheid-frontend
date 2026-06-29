@@ -1,10 +1,10 @@
 import { screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
-import { describe, it, expect, vi } from 'vitest'
-import { getPathTo } from '../../../../routes'
+import { describe, it, expect } from 'vitest'
 
 import { withApp } from '../../../../../test/utils/withApp'
+import { getPathTo } from '../../../../routes'
 
 describe('MapLegend', { timeout: 30000 }, () => {
   it('renders correctly', async () => {
@@ -35,7 +35,6 @@ describe('MapLegend', { timeout: 30000 }, () => {
     await user.click(await screen.getByText('Kaart bekijken', { selector: 'button' }))
 
     await waitFor(() => {
-      // eslint-disable-next-line testing-library/no-node-access
       document.querySelectorAll('.leaflet-overlay-pane svg path')
     })
 

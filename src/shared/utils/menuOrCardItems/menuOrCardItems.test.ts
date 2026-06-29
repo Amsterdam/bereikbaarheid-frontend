@@ -1,5 +1,4 @@
 import { RouteIds } from '../../../routes'
-
 import { getGeneratedPath } from '../path'
 
 import { MenuOrCardItemWithPathOrRoute, mapPathsToMenuOrCardItems } from '.'

@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, vi, describe, it, expect } from 'vitest'
-import { RouteIds } from '../../../../routes'
-import { getGeneratedPath } from '../../../../shared/utils/path'
 
 import { withApp } from '../../../../../test/utils/withApp'
+import { RouteIds } from '../../../../routes'
+import { getGeneratedPath } from '../../../../shared/utils/path'
 
 describe('Touringcar Messages', { timeout: 30000 }, () => {
   beforeEach(() => {

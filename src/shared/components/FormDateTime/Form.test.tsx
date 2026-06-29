@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { format } from 'date-fns'
-import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest'
+import { vi, describe, it, expect } from 'vitest'
 
 import { withAppContext } from '../../../../test/utils/withAppContext'
 

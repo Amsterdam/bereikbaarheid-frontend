@@ -2,9 +2,9 @@ import { screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
 import { describe, it, expect } from 'vitest'
-import { getPathTo } from '../../../../routes'
 
 import { withApp } from '../../../../../test/utils/withApp'
+import { getPathTo } from '../../../../routes'
 
 describe('ScenarioWizard', { timeout: 30000 }, () => {
   it('an address it not required to complete the wizard', async () => {

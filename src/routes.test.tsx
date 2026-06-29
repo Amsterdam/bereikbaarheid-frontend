@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react'
-import { getGeneratedPath } from './shared/utils/path'
 
 import { withApp } from '../test/utils/withApp'
 
 import { RouteIds } from './routes'
+import { getGeneratedPath } from './shared/utils/path'
 
 describe('routes', { timeout: 30000 }, () => {
   it('redirects /verbodsborden to the /op-kenteken', async () => {

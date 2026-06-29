@@ -2,9 +2,9 @@ import { screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { generatePath } from 'react-router-dom'
 import { describe, it, expect, vi } from 'vitest'
-import { getPathTo } from '../../../../routes'
 
 import { withApp } from '../../../../../test/utils/withApp'
+import { getPathTo } from '../../../../routes'
 
 describe('DetailFeature', { timeout: 15000 }, () => {
   it('renders correctly', async () => {
@@ -36,7 +36,6 @@ describe('DetailFeature', { timeout: 15000 }, () => {
     // wait until page is rendered
     await screen.findAllByText(/laden en lossen/i)
 
-    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
     const roadSections = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
 
     await user.click(roadSections[0])
@@ -57,7 +56,6 @@ describe('DetailFeature', { timeout: 15000 }, () => {
     // wait until page is rendered
     await screen.findAllByText(/laden en lossen/i)
 
-    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
     const roadSections = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
 
     // TODO: this may fail when the API data changes. We need to attach traffic sign data on the leaflet elements that have them.

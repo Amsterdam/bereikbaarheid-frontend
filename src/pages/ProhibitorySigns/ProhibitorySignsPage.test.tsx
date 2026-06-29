@@ -1,10 +1,10 @@
 import { act, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { vi, describe, it, expect } from 'vitest'
-import { RouteIds } from '../../routes'
-import { getGeneratedPath } from '../../shared/utils/path'
+import { describe, it, expect } from 'vitest'
 
 import { withApp } from '../../../test/utils/withApp'
+import { RouteIds } from '../../routes'
+import { getGeneratedPath } from '../../shared/utils/path'
 
 describe('ProhibitorySignsPage', { timeout: 15000 }, () => {
   it('renders correctly', async () => {
@@ -59,18 +59,13 @@ describe('ProhibitorySignsPage', { timeout: 15000 }, () => {
       await user.click(screen.getByText('Kaart bekijken', { selector: 'button' }))
     })
 
-    await waitFor(() =>
-      // eslint-disable-next-line testing-library/no-node-access
-      document.querySelectorAll('.leaflet-overlay-pane svg path')
-    )
+    await waitFor(() => document.querySelectorAll('.leaflet-overlay-pane svg path'))
 
     // heavy goods vehicle zone (zone zwaar verkeer) applies to the vehicle
-    // eslint-disable-next-line testing-library/no-container,testing-library/no-node-access
     const zoneZzvMapTiles = page.container.querySelectorAll('.leaflet-tile[src*="zzv"]')
 
     expect(zoneZzvMapTiles.length).toBeGreaterThanOrEqual(1)
 
-    // eslint-disable-next-line testing-library/no-node-access
     const prohibitoryRoadSections = page.container.querySelectorAll('.leaflet-overlay-pane svg path')
 
     expect(prohibitoryRoadSections.length).toBe(prohibitoryRoadSectionsData.features.length)
@@ -112,10 +107,7 @@ describe('ProhibitorySignsPage', { timeout: 15000 }, () => {
     })
 
     // wait for the map to load
-    await waitFor(() =>
-      // eslint-disable-next-line testing-library/no-node-access
-      document.querySelectorAll('.leaflet-overlay-pane svg path')
-    )
+    await waitFor(() => document.querySelectorAll('.leaflet-overlay-pane svg path'))
 
     // an extra baselayer - topography with color style - is available
     expect(screen.getByLabelText(/topografie kleur/i)).toBeVisible()

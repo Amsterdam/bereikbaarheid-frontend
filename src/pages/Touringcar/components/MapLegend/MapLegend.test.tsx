@@ -1,9 +1,9 @@
 import { screen, waitFor } from '@testing-library/react'
-import { describe, it, expect } from 'vitest'
-import { RouteIds } from '../../../../routes'
-import { getGeneratedPath } from '../../../../shared/utils/path'
+import { vi, describe, it, expect } from 'vitest'
 
 import { withApp } from '../../../../../test/utils/withApp'
+import { RouteIds } from '../../../../routes'
+import { getGeneratedPath } from '../../../../shared/utils/path'
 
 describe('MapLegend', { timeout: 15000 }, () => {
   beforeEach(() => {

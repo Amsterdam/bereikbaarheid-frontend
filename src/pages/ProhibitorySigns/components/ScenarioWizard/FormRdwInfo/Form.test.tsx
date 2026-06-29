@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 import { act, screen } from '@testing-library/react'
 import userEvent, { UserEvent } from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
-import { vi, describe, it, expect } from 'vitest'
+import { describe, it, expect } from 'vitest'
 
 import { withPageContext } from '../../../../../../test/utils/prohibitorySigns/withPageContext'
 import { withQueryClient } from '../../../../../../test/utils/withQueryClient'

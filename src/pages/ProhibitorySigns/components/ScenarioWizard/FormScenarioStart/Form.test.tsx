@@ -200,6 +200,8 @@ describe('ProhibitorySignsFormScenarioStart', () => {
     })
 
     expect(await screen.getAllByRole('alert')).toHaveLength(1)
-    expect(await screen.findByText('De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.')).toBeVisible()
+    expect(
+      await screen.findByText('De RDW API is momenteel niet beschikbaar. Probeer het later nog een keer.')
+    ).toBeVisible()
   })
 })

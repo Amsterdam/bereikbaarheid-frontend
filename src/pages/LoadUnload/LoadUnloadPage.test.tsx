@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react'
 import { generatePath } from 'react-router-dom'
 import { vi, describe, it, expect, afterEach, beforeEach } from 'vitest'
-import { getPathTo } from '../../routes'
 
 import { withApp } from '../../../test/utils/withApp'
+import { getPathTo } from '../../routes'
 
 describe('LoadUnloadPageSnapshot', { timeout: 30000 }, () => {
   beforeEach(() => {
