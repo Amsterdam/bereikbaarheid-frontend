@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Restore cached Slack message timestamp
         id: slack-message-timestamp-cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: slack-ts.txt
           key: slack-ts-pr-${{ github.event.pull_request.number }}
@@ -47,7 +47,7 @@ jobs:
 
       - name: Cache Slack message timestamp
         if: github.event.action == 'opened'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: slack-ts.txt
           key: slack-ts-pr-${{ github.event.pull_request.number }}
