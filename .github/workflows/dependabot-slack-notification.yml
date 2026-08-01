@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Restore cached Slack message timestamp
         id: slack-message-timestamp-cache
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: slack-ts.txt
           key: slack-ts-pr-${{ github.event.pull_request.number }}
@@ -32,7 +32,7 @@ jobs:
       - name: Post PR summary message to slack
         if: github.event.action == 'opened'
         id: message
-        uses: slackapi/slack-github-action@v3.0.3
+        uses: slackapi/slack-github-action@v4.0.0
         with:
           method: chat.postMessage
           token: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_BOT_TOKEN }}
@@ -47,14 +47,14 @@ jobs:
 
       - name: Cache Slack message timestamp
         if: github.event.action == 'opened'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           path: slack-ts.txt
           key: slack-ts-pr-${{ github.event.pull_request.number }}
 
       - name: Post a detailed message in a thread
         if: github.event.action == 'opened'
-        uses: slackapi/slack-github-action@v3.0.3
+        uses: slackapi/slack-github-action@v4.0.0
         with:
           method: chat.postMessage
           token: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_BOT_TOKEN }}
@@ -137,7 +137,7 @@ jobs:
 
       - name: Post update message to thread
         if: github.event.action == 'synchronize' && steps.slack-message-timestamp-cache.outputs.cache-hit == 'true'
-        uses: slackapi/slack-github-action@v3.0.3
+        uses: slackapi/slack-github-action@v4.0.0
         with:
           method: chat.postMessage
           token: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_BOT_TOKEN }}
