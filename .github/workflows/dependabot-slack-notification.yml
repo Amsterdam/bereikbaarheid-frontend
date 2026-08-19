@@ -39,7 +39,8 @@ jobs:
           payload: |
             channel: ${{ secrets.VAKGROEP_DEPENDABOT_SLACK_CHANNEL_ID }}
             username: "Bereikbaarheid Frontend"
-            text: "A PR has been created in repository ${{ github.repository }}: #${{ github.event.pull_request.number }} - ${{ github.event.pull_request.title }}"
+            text: >-
+              A PR has been created in repository ${{ github.repository }}: #${{ github.event.pull_request.number }} - ${{ github.event.pull_request.title }}
 
       - name: Save Slack message timestamp to file
         if: github.event.action == 'opened'
@@ -147,12 +148,8 @@ jobs:
             thread_ts: "${{ steps.read-ts.outputs.ts }}"
             unfurl_links: false
             unfurl_media: false
-            "blocks": [
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": ":robot_face: *X. Dependabot update the PR*\nXPR <${{ github.event.pull_request.html_url }}|#${{ github.event.pull_request.number }}> has been updated by Dependabot"
-                }
-              }
-            ]
+            blocks:
+              - type: section
+                text:
+                  type: mrkdwn
+                  text: ":robot_face: *X. Dependabot updated the PR*\nXPR <${{ github.event.pull_request.html_url }}|#${{ github.event.pull_request.number }}> has been updated by Dependabot"
