@@ -1,4 +1,8 @@
-FROM node:20.19-bookworm AS base
+FROM node:24.19.0-alpine AS base
+
+RUN npm install -g npm@12.0.2
+
+RUN apk add --no-cache git
 
 ENV BROWSER=none
 
