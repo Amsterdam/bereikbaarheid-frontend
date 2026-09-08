@@ -1,4 +1,4 @@
-FROM node:24.19.0-alpine AS base
+FROM node:24.20.0-alpine AS base
 
 RUN npm install -g npm@12.0.2
 
