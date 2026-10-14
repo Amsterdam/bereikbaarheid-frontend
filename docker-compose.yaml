@@ -5,7 +5,7 @@ services:
       target: app
       args:
         - BUILD_ENV=development
-    image: ${REGISTRY:-localhost:5001}/${REPOSITORY:-opdrachten/bereikbaarheid-frontend}:${VERSION:-latest}
+    image: ${REGISTRY:-localhost:5001}/${REPOSITORY:-ams-opdr/bereikbaarheid-frontend}:${VERSION:-latest}
     environment:
       - TZ=Europe/Amsterdam
     ipc: host
